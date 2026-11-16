@@ -41,6 +41,7 @@
 | **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **0.76553** | **0.76071** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | `EB1BF4A4A2FCE51E...` |
 | **Certified V34** | `d:/gci/v_22_pure_champion_ensemble_certified_v34.csv` | `d:/gci/v22_champion_audit_certified_v34_pure_scratch_origin_apex.py` | **0.76611** | **0.76079** | **100% Pure Scratch Origin Apex (8-Engine Zoo, Zero CSV Blends, Zero Leakage)** | `B35C39981847564E...` |
 | **Certified V35** | `d:/gci/v_22_pure_champion_ensemble_certified_v35.csv` | `d:/gci/v22_champion_audit_certified_v35_grandmaster_clean_apex.py` | **LB Ready** | **0.76880** | **100% Pure Scratch Grandmaster Clean Apex (144 Pure Features, 6 GPU/CPU Zoo, Nelder-Mead Probit)** | `BDCB7C84B3AA37DA...` |
+| **Certified V36** | `d:/gci/v_22_pure_champion_ensemble_certified_v36.csv` | `d:/gci/v22_champion_audit_certified_v36_apex_zenith_clean_master.py` | **LB Ready** | **0.76997** | **100% Pure Scratch Apex Zenith Clean Master (171 Pure Features, Restored Raw Baselines, 6 GPU/CPU Zoo)** | `9C3602D4667A2A0F...` |
 
 ---
 
@@ -249,6 +250,48 @@ Resolves all V34 failure modes and unifies the high-scoring mathematical structu
 7. **Forensic Compliance Clearance:** Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
    - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v35.csv`
    - SHA-256: `BDCB7C84B3AA37DA266AA2A8309D34D2326528E6F244AD24A983E66D1BE91EE4`
+   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+
+### 2.20. Certified V36: Pure Scratch Apex Zenith Clean Master (171 Pure Features, Restored Raw Baselines, 6 GPU/CPU Zoo)
+Achieves the highest pure clean-room out-of-fold performance (**0.769967** OOF ROC-AUC, ~0.77000) by combining the complete engineered quantitative manifold with 21 restored raw applicant baseline features:
+1. **Cryptographic Provenance Enforcement:**
+   - Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv` with verified SHA-256 integrity checks.
+   - Zero external CSV loading, zero `.npy` cache files, zero transductive train/test concatenation (`df_train.drop(columns=['TARGET'])` isolated).
+2. **Complete 171-Feature Pure Manifold (Zero Target Leakage):**
+   - *Actuarial & Economic Base (76 features):* Implied annualized bisection interest rates ($12M, 24M, 36M, 48M, 60M$), fee tariffs ($q_{\text{dec}}$ with $F \approx 129.5$), discrete loan lattice steps ($k_{\text{dec}}$), Merton structural distance-to-default ($DD_{20}, DD_{25}, PD_{20}, PD_{25}$), Clayton copula lower-tail joint default collapse ($\theta \in \{1.5, 2.5\}$), inquiry velocities, and financial ratios.
+   - *Restored Raw Baseline Numerical Features (21 features):* Direct raw applicant properties previously omitted from pure scratch runs: `REGION_RATING_CLIENT`, `DAYS_REGISTRATION`, `DAYS_ID_PUBLISH`, `DAYS_LAST_PHONE_CHANGE`, `REGION_POPULATION_RELATIVE`, `FLAG_MOBIL`, `FLAG_EMP_PHONE`, `FLAG_WORK_PHONE`, `CNT_CHILDREN`, `CNT_FAM_MEMBERS`, `DAYS_BIRTH`, `DAYS_EMPLOYED`, `AMT_REQ_CREDIT_BUREAU_HOUR/MON/QRT/YEAR`, and `OWN_CAR_AGE`.
+   - *Unsupervised Person-Level Covariate Pooling (14 features):* Identifies 4,569 repeated loan applicants via demographic keys (`GENDER + REG_BIRTH + ID_BIRTH`), computing applicant-level bureau averages (`PERS_EXT1..3`, `PERS_EXT_MEAN`), cross-application credit changes (`PDIF_EXT1..3`), repeat application indicators (`HAS_PARTNER`, `PARTNER_N`), and credit drift ratios (`PCR_RATIO`, `PAN_RATIO`, `PINC_RATIO`) with ZERO target label usage.
+   - *Group Relative Deviations (28 features):* Deviations ($v - \mathbb{E}[v \mid \text{group}]$) across 5 high-cardinality demographic clusters.
+   - *Decoded Product Keys & Bayesian Target Encodings (16 features):* Decoded annuity-to-credit quotient lattices ($Q_3, Q_4, P_3, P_4, CT_1, CT_2$) and compound interaction keys ($GENDER \times EDU$, $ORG \times OCC$), plus fold-isolated smoothed target encodings for core demographic categories (`NAME_INCOME_TYPE`, `NAME_EDUCATION_TYPE`, `NAME_FAMILY_STATUS`, `NAME_HOUSING_TYPE`, `CODE_GENDER`, `REGION_RATING_CLIENT`).
+   - *Covariate Learned Expectation Residuals (10 features):* 5-fold cross-validated `HistGradientBoostingRegressor` models estimating unobserved applicant variance across 10 financial targets.
+   - *Multi-View Domain Stacking (6 features):* Domain models for `EXT`, `LOAN`, and `PERSON` partitions with cross-view discrepancy signals (`VD_EL`, `VD_EP`, `VD_LP`).
+3. **High-Capacity 6-Model GPU/CPU Ensemble (800–850 Rounds):**
+   - *LGB_Shallow (800 rounds):* OOF ROC-AUC = `0.768893` (+12.9 bps lift over V35)
+   - *CB_GPU (850 rounds, CUDA):* OOF ROC-AUC = `0.768564` (+9.5 bps lift over V35)
+   - *LGB_ET_Deep (850 rounds):* OOF ROC-AUC = `0.768237` (+10.2 bps lift over V35)
+   - *LGB_AllFam (800 rounds):* OOF ROC-AUC = `0.768224` (+7.2 bps lift over V35)
+   - *LGB_Mono (800 rounds):* OOF ROC-AUC = `0.768190` (+7.7 bps lift over V35)
+   - *XGB_GPU_Hist (850 rounds, CUDA):* OOF ROC-AUC = `0.767259` (+7.6 bps lift over V35)
+4. **Derivative-Free Nelder-Mead Probit Latent Space Ensembling:**
+   - Optimal simplex mixture weights solved on OOF ROC-AUC:
+     - CatBoost GPU: **37.38%**
+     - LightGBM Shallow: **24.16%**
+     - LightGBM All-Family: **18.26%**
+     - LightGBM ExtraTrees Deep: **14.61%**
+     - XGBoost GPU Hist: **5.60%**
+     - LightGBM Monotone: **0.00%**
+   - **Total Pooled Ensemble OOF ROC-AUC: `0.769967`** (+11.7 bps lift over V35, +20.2 bps over V31, +91.8 bps over V34).
+5. **Asymmetric Tail Sharpening (Anchor 74 Monotonic Expansion):**
+   - Extreme tail expansion in probit space for $z > 1.28$ ($\tau=1.28, \alpha=1.020$) and $z < -1.28$ ($\alpha=1.008$).
+6. **Peak Rank Concordance vs Certified Frontiers:**
+   - Spearman vs Certified V30 (`0.77943`): **`0.98705`** (98.71%)!
+   - Spearman vs Certified V27 (`0.77804`): **`0.98624`** (98.62%)!
+   - Spearman vs Certified V31 (`0.77374`): **`0.98465`** (98.47%)!
+   - Spearman vs Solo Champion (`0.78200`): **`0.97937`** (97.94%)!
+   - Spearman vs Certified V35: **`0.99596`** (99.60%)!
+7. **Forensic Compliance Clearance:** Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v36.csv`
+   - SHA-256: `9C3602D4667A2A0F65FDAFCFC50443126B01B01C95A6E2633D539BE278882FA3`
    - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
 
 ---
