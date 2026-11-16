@@ -44,7 +44,8 @@
 | **Certified V36** | `d:/gci/v_22_pure_champion_ensemble_certified_v36.csv` | `d:/gci/v22_champion_audit_certified_v36_apex_zenith_clean_master.py` | **0.77496** | **0.76997** | **100% Pure Scratch Apex Zenith Clean Master (171 Pure Features, Restored Raw Baselines, 6 GPU/CPU Zoo)** | `9C3602D4667A2A0F...` |
 | **Certified V37** | `d:/gci/v_22_pure_champion_ensemble_certified_v37.csv` | `d:/gci/v22_champion_audit_certified_v37_apex_zenith_grandmaster.py` | **0.77696** | **0.77239** | **100% Pure Scratch Apex Zenith Grandmaster (311 Pure Features, 6 GPU/CPU Zoo, Full-Train Re-Fit)** | `A5475965C748BD19...` |
 | **Certified V38** | `d:/gci/v_22_pure_champion_ensemble_certified_v38.csv` | `d:/gci/v22_champion_audit_certified_v38_continuous_regime_apex.py` | **0.77712** | **0.77273** | **100% Pure Scratch Continuous Regime Apex (313 Pure Features, 8 Grandmaster Engines, Continuous Solvency Routing)** | `D292230F3857D912...` |
-| **Certified V39** | `d:/gci/v_22_pure_champion_ensemble_certified_v39.csv` | `d:/gci/v22_champion_audit_certified_v39_sovereign_apex_zenith.py` | **LB Ready** | **0.77290** | **100% Pure Scratch Sovereign Apex Zenith (376 Pure Features, Hierarchical Tariff Exceptions, Hasan Standards, 8-Engine Zoo)** | `1CDE95DCA4AFE060...` |
+| **Certified V39** | `d:/gci/v_22_pure_champion_ensemble_certified_v39.csv` | `d:/gci/v22_champion_audit_certified_v39_sovereign_apex_zenith.py` | **0.77740** | **0.77290** | **100% Pure Scratch Sovereign Apex Zenith (376 Pure Features, Hierarchical Tariff Exceptions, Hasan Standards, 8-Engine Zoo)** | `1CDE95DCA4AFE060...` |
+| **Certified V40** | `d:/gci/v_22_pure_champion_ensemble_certified_v40.csv` | `d:/gci/v22_champion_audit_certified_v40_imperium_apex_zenith.py` | **LB Ready** | **0.77257** | **100% Pure Scratch Imperium Apex Zenith (389 Pure Features, Q4 Hierarchical TEs, 6-View Stacking, 8-Engine Zoo)** | `1CA66EA4972BB4E5...` |
 
 ---
 
@@ -424,6 +425,45 @@ Deploys the complete quantitative banking architecture into a single 100% self-c
    - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v39.csv`
    - SHA-256: `1CDE95DCA4AFE060BE352553C2FDE3009B7816F5589267EFAC3732C5EA6CEDF2`
    - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+   - Public Leaderboard Validation Score: **`0.77740`** (+2.8 bps over V38 `0.77712`, +4.4 bps over V37 `0.77696`).
+
+### 2.24. Certified V40: Pure Scratch Imperium Apex Zenith Master (389 Pure Features, Q4 Hierarchical TEs, 6-View Stacking, 8-Engine Zoo)
+Unifies the complete quantitative feature manifold and incorporates the decisive community-verified hierarchical pricing interaction signals and multi-view discrepancy margins into a 100% self-contained Python script:
+1. **Cryptographic Provenance Enforcement:**
+   - Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv` with verified SHA-256 hashes.
+   - 100% independent, zero external file dependencies, zero label leakage.
+2. **Complete 389-Feature Imperium Quantitative Manifold:**
+   - *Hierarchical $Q_4$ Product-Demographic Interaction Target Encodings (8 features, Zero Leakage):* Discrete tariff lattice steps crossed with applicant demographic tiers (`HQ4_INCOME`, `HQ4_OCC`, `HQ4_EDU`, `HQ4_BURDEN`, `HQ4_GENDER`, `HQ4_CONTRACT`, `HQ3_CONTRACT`, `HQ4_ORG`) computed strictly fold-isolated inside 5-fold CV with $m=250.0$ Laplace smoothing.
+   - *Expanded 6-View Multi-Domain Stacking & Contradiction Margins (13 features):* `VIEW_EXT`, `VIEW_LOAN`, `VIEW_PERSON`, `VIEW_EXTAGE`, `VIEW_NOEXT` (intrinsic cash-flow model without bureau scores), `VIEW_GROUPS`, and discrepancy margins `VD_EL`, `VD_EP`, `VD_LP`, `VD_EXT_NOEXT`, `VD_EXTAGE_NOEXT`, `VD_GROUPS_LOAN`, `VD_EXT_GROUPS`.
+   - *Full Restored Sovereign Foundation (368 features):* All 76 base actuarial features (implied bisection rates $12M..60M$, fee tariffs $q_{\text{dec}}$, Merton distances, Clayton copula tail collapses), 21 restored raw baselines, 15 hierarchical tariff decoders & exception subsidies, 25 Hasan Mazi banking standards, 14 temporal stability & inquiry dynamics, 6 non-linear external credit powers, 3 unsupervised timeline tracking, 16 unsupervised person pooling, 28 group relative deviations, 23 fold-isolated Bayesian TEs, 20 covariate expectations & residuals, 6 continuous loan frequencies, 115 one-hot categoricals.
+3. **8-Engine Sovereign Grandmaster Suite (Pooled Out-of-Fold Performance):**
+   - `LGB_Shallow`: **0.771370** (num_leaves=15, max_depth=4)
+   - `LGB_ET_E1`: **0.771230** (ExtraTrees max_depth=5)
+   - `LGB_ET_Deep`: **0.771065** (num_leaves=35, max_depth=7)
+   - `LGB_Solvency`: **0.770670** (num_leaves=22, max_depth=5)
+   - `CB_GPU`: **0.770315** (depth=6, l2_leaf_reg=25.0)
+   - `LGB_Wide`: **0.770281** (num_leaves=63, max_depth=8, lambda_l2=50.0)
+   - `XGB_GPU_Hist`: **0.769391** (max_depth=6, max_bin=512)
+   - `LGB_Conservative`: **0.769261** (num_leaves=45, max_depth=7)
+4. **Universal Full-Train Re-Fit Multi-Seed Calibration:**
+   - All 8 models re-fitted on 100% of training data across seeds `[42, 7]` with `feature_pre_filter=False` (completed in 474.5s), blending 50% K-fold CV test predictions + 50% full-train re-fit predictions.
+5. **Continuous Solvency & Contract Regime Routing (Solved via Nelder-Mead):**
+   - Soft distress gating $g_{\text{distress}}(x)$ and contract regime routing solving continuous triple-simplex weights via Nelder-Mead on OOF ROC-AUC:
+     - **Prime Loans:** `LGB_Conservative` (25.45%), `CB_GPU` (23.08%), `LGB_ET_Deep` (15.27%), `LGB_Shallow` (13.44%), `LGB_ET_E1` (11.48%), `LGB_Wide` (6.13%), `LGB_Solvency` (5.15%).
+     - **Distress Cohort:** `LGB_ET_E1` (26.87%), `CB_GPU` (25.59%), `LGB_Shallow` (22.00%), `LGB_Wide` (13.80%), `LGB_ET_Deep` (11.74%).
+     - **Revolving Loans:** `LGB_ET_Deep` (45.35%), `LGB_Shallow` (28.77%), `CB_GPU` (19.81%), `LGB_Solvency` (6.07%).
+   - **Total Pooled Ensemble OOF ROC-AUC: `0.772565`**.
+6. **Peak Historical Rank Concordance vs Certified Frontiers:**
+   - Spearman vs Certified V39 (`0.77740`): **`0.99756`** (99.76%)!
+   - Spearman vs Certified V38 (`0.77712`): **`0.99570`** (99.57%)!
+   - Spearman vs Certified V37 (`0.77696`): **`0.99580`** (99.58%)!
+   - Spearman vs Certified V30 (`0.77943`): **`0.99123`** (99.12%)!
+   - Spearman vs Solo Champion (`0.78200`): **`0.98636`** (98.64%)!
+7. **Forensic Compliance Clearance:** Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v40.csv`
+   - SHA-256: `1CA66EA4972BB4E5C4D50C4850A96BA997C8863F4270EF728E693C874F6A39CD`
+   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+   - Total Pipeline Runtime: 29.09 minutes.
 
 ---
 
