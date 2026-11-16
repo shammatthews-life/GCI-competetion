@@ -38,7 +38,8 @@
 | **Certified V30** | `d:/gci/v_22_pure_champion_ensemble_certified_v30.csv` | `d:/gci/v22_champion_audit_certified_v30_grand_apex_master.py` | **0.77943** | **0.77610** | **Grand Apex Master (Cracks 0.77900 Barrier on Public LB!)** | `187D791DB38CADE5...` |
 | **Certified V31** | `d:/gci/v_22_pure_champion_ensemble_certified_v31.csv` | `d:/gci/v22_champion_audit_certified_v31_pure_scratch_master.py` | **0.77374** | **0.76795** | **100% Pure Scratch Baseline (Zero External Files, 5 GPU/CPU Zoo)** | `CA6EA80A2FC5DC6A...` |
 | **Certified V32** | `d:/gci/v_22_pure_champion_ensemble_certified_v32.csv` | `d:/gci/v22_champion_audit_certified_v32_pure_scratch_champion.py` | **LB Ready** | **0.76785** | **100% Pure Scratch Grand Champion (144 Pure Features, 6 GPU/CPU Zoo)** | `A6B6E2842EE231B5...` |
-| **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **LB Ready** | **0.76071** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | `EB1BF4A4A2FCE51E...` |
+| **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **0.76553** | **0.76071** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | `EB1BF4A4A2FCE51E...` |
+| **Certified V34** | `d:/gci/v_22_pure_champion_ensemble_certified_v34.csv` | `d:/gci/v22_champion_audit_certified_v34_pure_scratch_origin_apex.py` | **LB Ready** | **0.76079** | **100% Pure Scratch Origin Apex (8-Engine Zoo, Zero CSV Blends, Zero Leakage)** | `B35C39981847564E...` |
 
 ---
 
@@ -173,6 +174,34 @@ Fully resolves every methodological and leakage finding from the comprehensive V
 6. **Corrected Actuarial Bisection Solver (Finding 6 Resolved):** Fixed the unreachable zero-rate check ($|A/C - 1/n| \le 10^{-7}$) and added high-endpoint bracket verification ($\mu \in [10^{-6}, 50.0]$).
 7. **Elimination of Ineffective Post-Processing (Findings 11 & 12 Resolved):** Removed unused distress gates and rank-invariant tail transformations.
 8. **Re-Engineering of V27 Script:** Converted `v22_champion_audit_certified_v27_eight_engine_zenith_master.py` to run 100% from scratch with ZERO external dependencies (no peer CSVs, no `rebuilt_eight_engine_test.npy`).
+
+### 2.18. Certified V34: Pure Scratch Origin Apex Master (Restoring Full 185-Feature Manifold + 8 GBDT Zoo)
+To eliminate the "Isolated Truncation Trap" that degraded V33, V34 restores the proven 8-engine architecture and 185-feature quantitative manifold that achieved **0.77704** in `origin_exp3_from_scratch` while enforcing 100% GCI clean-room compliance:
+1. **Zero External Dependencies:** Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv`. Cryptographic SHA-256 hashes are verified on startup with hard failure assertions.
+2. **Zero Label Leakage & Zero CSV Blends:** Zero `partner_enc` demographic label propagation, zero `PY_ANY` test overrides, and zero loading of prior submission CSV files. Every prediction is produced through inductive forward-pass inference.
+3. **Full 185+ Feature Quantitative Manifold:**
+   - *Actuarial Bisection Root-Finder:* Annualized implied rates ($12M, 24M, 36M, 48M, 60M$).
+   - *Fee-Adjusted Tariffs:* $q_{\text{dec}} = (\text{AMT\_ANNUITY} - 129.5) / \text{AMT\_CREDIT}$.
+   - *Discrete Loan Lattice Steps:* $k_{\text{dec}} = \text{round}(((\text{AMT\_CREDIT}/\text{AMT\_GOODS}) - 1) / 0.0132)$.
+   - *Merton Structural Solvency:* $DD_{20}, DD_{25}, PD_{20}, PD_{25}$.
+   - *Clayton Copula Lower-Tail Joint Collapse:* $\theta \in \{1.5, 2.5\}$ on normalized bureau quantiles.
+   - *Covariate Expectation Residuals:* 9 continuous financial targets fitted via fold-isolated regressors.
+   - *Multi-View Domain Classifiers:* EXT, LOAN, and PERSON views with cross-view discrepancy signals.
+   - *Out-of-Fold Bayesian Target Encodings:* Arithmetic leave-one-out self-exclusion ($m=35.0$).
+   - *Unsupervised Person Pooling:* Bureau expectation pooling across repeated applications with zero target leakage.
+4. **Diverse 8-Engine GPU/CPU Model Zoo:**
+   - LightGBM Deep Conservative (`v17_final`)
+   - LightGBM ExtraTrees Deep (`v17_e1Aet`)
+   - LightGBM ExtraTrees E1 (`v17_e1et`)
+   - CatBoost GPU Product Specialist (`v55_cbprod`)
+   - LightGBM Deep ExtraTrees (`v55_deep_et`)
+   - LightGBM All-Family One-Hot (`v55_allfam`)
+   - LightGBM Monotone Shallow-Reg (`v55_v2_mono`)
+   - Monotonic GPU Hist-XGBoost (`xgb10`)
+5. **Convex Probit Latent Space Ensembling:**
+   - In-memory optimization via SLSQP directly on out-of-fold probits to maximize ROC-AUC.
+   - Applied identically to test probits.
+6. **Forensic Compliance Audit:** Passed 15/15 checks with **0 audit flags** in `truth/audit_v33.py`.
 
 ---
 
