@@ -38,7 +38,7 @@
 | **Certified V30** | `d:/gci/v_22_pure_champion_ensemble_certified_v30.csv` | `d:/gci/v22_champion_audit_certified_v30_grand_apex_master.py` | **0.77943** | **0.77610** | **Grand Apex Master (Cracks 0.77900 Barrier on Public LB!)** | `187D791DB38CADE5...` |
 | **Certified V31** | `d:/gci/v_22_pure_champion_ensemble_certified_v31.csv` | `d:/gci/v22_champion_audit_certified_v31_pure_scratch_master.py` | **0.77374** | **0.76795** | **100% Pure Scratch Baseline (Zero External Files, 5 GPU/CPU Zoo)** | `CA6EA80A2FC5DC6A...` |
 | **Certified V32** | `d:/gci/v_22_pure_champion_ensemble_certified_v32.csv` | `d:/gci/v22_champion_audit_certified_v32_pure_scratch_champion.py` | **LB Ready** | **0.76785** | **100% Pure Scratch Grand Champion (144 Pure Features, 6 GPU/CPU Zoo)** | `A6B6E2842EE231B5...` |
-| **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **Training** | **0.77000+** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | *Executing* |
+| **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **LB Ready** | **0.76071** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | `EB1BF4A4A2FCE51E...` |
 
 ---
 
