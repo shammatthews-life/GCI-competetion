@@ -39,7 +39,8 @@
 | **Certified V31** | `d:/gci/v_22_pure_champion_ensemble_certified_v31.csv` | `d:/gci/v22_champion_audit_certified_v31_pure_scratch_master.py` | **0.77374** | **0.76795** | **100% Pure Scratch Baseline (Zero External Files, 5 GPU/CPU Zoo)** | `CA6EA80A2FC5DC6A...` |
 | **Certified V32** | `d:/gci/v_22_pure_champion_ensemble_certified_v32.csv` | `d:/gci/v22_champion_audit_certified_v32_pure_scratch_champion.py` | **LB Ready** | **0.76785** | **100% Pure Scratch Grand Champion (144 Pure Features, 6 GPU/CPU Zoo)** | `A6B6E2842EE231B5...` |
 | **Certified V33** | `d:/gci/v_22_pure_champion_ensemble_certified_v33.csv` | `d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py` | **0.76553** | **0.76071** | **100% Pure Scratch Grand Zenith (Truly Nested CV, Zero Pooling, 5-Model Zoo)** | `EB1BF4A4A2FCE51E...` |
-| **Certified V34** | `d:/gci/v_22_pure_champion_ensemble_certified_v34.csv` | `d:/gci/v22_champion_audit_certified_v34_pure_scratch_origin_apex.py` | **LB Ready** | **0.76079** | **100% Pure Scratch Origin Apex (8-Engine Zoo, Zero CSV Blends, Zero Leakage)** | `B35C39981847564E...` |
+| **Certified V34** | `d:/gci/v_22_pure_champion_ensemble_certified_v34.csv` | `d:/gci/v22_champion_audit_certified_v34_pure_scratch_origin_apex.py` | **0.76611** | **0.76079** | **100% Pure Scratch Origin Apex (8-Engine Zoo, Zero CSV Blends, Zero Leakage)** | `B35C39981847564E...` |
+| **Certified V35** | `d:/gci/v_22_pure_champion_ensemble_certified_v35.csv` | `d:/gci/v22_champion_audit_certified_v35_grandmaster_clean_apex.py` | **LB Ready** | **0.76880** | **100% Pure Scratch Grandmaster Clean Apex (144 Pure Features, 6 GPU/CPU Zoo, Nelder-Mead Probit)** | `BDCB7C84B3AA37DA...` |
 
 ---
 
@@ -202,6 +203,53 @@ To eliminate the "Isolated Truncation Trap" that degraded V33, V34 restores the 
    - In-memory optimization via SLSQP directly on out-of-fold probits to maximize ROC-AUC.
    - Applied identically to test probits.
 6. **Forensic Compliance Audit:** Passed 15/15 checks with **0 audit flags** in `truth/audit_v33.py`.
+7. **Public Leaderboard Result & Forensic Post-Mortem (0.76611):**
+   - *Result:* Scored **`0.76611`** on the Public Leaderboard.
+   - *Root-Cause Forensic:*
+     a. *Omission of Core Base Ratios:* In attempting to match `origin_exp3`, V34 inadvertently omitted 57 base continuous interaction and ratio features present in V31 (including `BUR_SUM`, `BUR_RECENT`, `TERM`, `CREDIT_INC`, `ANN_INC`, `E12`, `E13`, `E23`, `D12`, `D13`, `D23`).
+     b. *Model Under-Training:* Models were constrained to only 500–650 boosting rounds (vs 800–850 in V31), leaving decision trees under-fitted on the deep manifold.
+     c. *SLSQP Optimization Failure on Non-Differentiable AUC:* `scipy.optimize.minimize(method='SLSQP')` on `roc_auc_score` encountered flat zero gradients everywhere, returning degenerate equal 12.5% weights across all 8 models rather than an optimal risk weighting.
+     d. *Absence of Tail Sharpening:* Did not apply the monotonic Anchor 74 extreme decile power expansion.
+
+### 2.19. Certified V35: Pure Scratch Grandmaster Clean Apex Master (144 Pure Features, 6 GPU/CPU Zoo, Nelder-Mead Probit Ensembling)
+Resolves all V34 failure modes and unifies the high-scoring mathematical structures of V31 (`0.77374`), V27 (`0.77804`), V30 (`0.77943`), and Solo V23 (`0.78200`) into a 100% self-contained, clean-room Python pipeline:
+1. **Cryptographic Provenance Enforcement:**
+   - Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv` with verified SHA-256 integrity checks.
+   - Zero external CSV loading, zero `.npy` cache files, zero transductive train/test concatenation (`df_train.drop(columns=['TARGET'])` isolated).
+2. **Complete 144-Feature Pure Manifold (Zero Target Leakage):**
+   - *Actuarial & Economic Base (76 features):* Implied annualized bisection interest rates ($12M, 24M, 36M, 48M, 60M$), fee tariffs ($q_{\text{dec}}$ with $F \approx 129.5$), discrete loan lattice steps ($k_{\text{dec}}$), Merton structural distance-to-default ($DD_{20}, DD_{25}, PD_{20}, PD_{25}$), Clayton copula lower-tail joint default collapse ($\theta \in \{1.5, 2.5\}$), inquiry velocities, and financial ratios.
+   - *Unsupervised Person-Level Covariate Pooling (14 features):* Re-engineered from Solo V23 with ZERO target leakage. Identifies 4,569 repeated loan applicants via demographic keys (`GENDER + REG_BIRTH + ID_BIRTH`), computing applicant-level bureau averages (`PERS_EXT1..3`, `PERS_EXT_MEAN`), cross-application credit changes (`PDIF_EXT1..3`), repeat application indicators (`HAS_PARTNER`, `PARTNER_N`), and credit drift ratios (`PCR_RATIO`, `PAN_RATIO`, `PINC_RATIO`).
+   - *Group Relative Deviations (28 features):* Deviations ($v - \mathbb{E}[v \mid \text{group}]$) across 5 high-cardinality demographic clusters (`ORGANIZATION_TYPE`, `OCCUPATION_TYPE`, `NAME_INCOME_TYPE`, `NAME_EDUCATION_TYPE`, `REGION_POPULATION_RELATIVE`).
+   - *Decoded Product Keys & Bayesian Target Encodings (10 features):* Decoded annuity-to-credit quotient lattices ($Q_3, Q_4, P_3, P_4, CT_1, CT_2$) and compound interaction keys ($GENDER \times EDU$, $ORG \times OCC$) with fold-isolated smoothing ($m=35.0$).
+   - *Covariate Learned Expectation Residuals (10 features):* 5-fold cross-validated `HistGradientBoostingRegressor` models estimating unobserved applicant variance across 10 financial targets.
+   - *Multi-View Domain Stacking (6 features):* Domain models for `EXT`, `LOAN`, and `PERSON` partitions with cross-view discrepancy signals (`VD_EL`, `VD_EP`, `VD_LP`).
+3. **High-Capacity 6-Model GPU/CPU Ensemble (800–850 Rounds):**
+   - *LGB_ET_Deep (850 rounds):* OOF ROC-AUC = `0.767221`
+   - *LGB_Shallow (800 rounds):* OOF ROC-AUC = `0.767607`
+   - *LGB_Mono (800 rounds):* OOF ROC-AUC = `0.767420` (enforces strict monotonic penalties on risk factors)
+   - *LGB_AllFam (800 rounds):* OOF ROC-AUC = `0.767500`
+   - *XGB_GPU_Hist (850 rounds, CUDA):* OOF ROC-AUC = `0.766500`
+   - *CB_GPU (850 rounds, CUDA):* OOF ROC-AUC = `0.767615`
+4. **Derivative-Free Nelder-Mead Probit Latent Space Ensembling:**
+   - Eliminates SLSQP gradient failures by solving optimal mixture weights via simplex direct search on OOF ROC-AUC:
+     - CatBoost GPU: **38.75%**
+     - LightGBM All-Family: **15.98%**
+     - LightGBM ExtraTrees Deep: **15.06%**
+     - XGBoost GPU Hist: **15.04%**
+     - LightGBM Shallow: **13.12%**
+     - LightGBM Monotone: **2.05%**
+   - **Total Pooled Ensemble OOF ROC-AUC: `0.768802`** (+80.1 bps over V34's 0.76079, +8.5 bps over V31's 0.76795).
+5. **Asymmetric Tail Sharpening (Anchor 74 Monotonic Expansion):**
+   - Expands extreme probability tail resolution in probit latent space for $z > 1.28$ ($\tau=1.28, \alpha=1.020$) and $z < -1.28$ ($\alpha=1.008$).
+6. **High Rank Concordance vs Certified Frontiers:**
+   - Spearman vs Certified V30 (`0.77943`): **`0.98374`**
+   - Spearman vs Certified V27 (`0.77804`): **`0.98286`**
+   - Spearman vs Certified V31 (`0.77374`): **`0.98391`**
+   - Spearman vs Solo Champion (`0.78200`): **`0.97446`**
+7. **Forensic Compliance Clearance:** Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v35.csv`
+   - SHA-256: `BDCB7C84B3AA37DA266AA2A8309D34D2326528E6F244AD24A983E66D1BE91EE4`
+   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
 
 ---
 
