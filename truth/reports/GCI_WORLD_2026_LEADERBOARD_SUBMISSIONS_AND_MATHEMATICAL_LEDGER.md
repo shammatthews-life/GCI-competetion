@@ -31,8 +31,10 @@
 | **Certified V23** | `d:/gci/v_22_pure_champion_ensemble_certified_v23.csv` | `d:/gci/v22_champion_audit_certified_v23_10fold_gpu_master.py` | **0.77795** | **0.77371** | **All-Time Record 10-Fold Tri-Engine Master (90% Fold Mass)** | `C6A54C425EC85D08...` |
 | **Certified V24** | `d:/gci/v_22_pure_champion_ensemble_certified_v24.csv` | `d:/gci/v22_champion_audit_certified_v24_regime_routing_apex.py` | **0.77801** | **0.77371** | **Regime-Routing Apex Champion (Cracks 0.77800 Barrier!)** | `44E47314961B75E5...` |
 | **Certified V25** | `d:/gci/v_22_pure_champion_ensemble_certified_v25.csv` | `d:/gci/v22_champion_audit_certified_v25_dual_stream_regime_master.py` | **0.77795** | **0.77371** | **Tripartite Split-Regime Master (Peak Rank Correlation 0.99064)** | `19BC5B12EED6CFB7...` |
-| **Certified V26** | `d:/gci/v_22_pure_champion_ensemble_certified_v26.csv` | `d:/gci/v22_champion_audit_certified_v26_continuous_solvency_master.py` | *Target: 0.785+* | **0.77371** | **Continuous Solvency & Asymmetric Tail Master (0.99062 Concordance)** | `7F23BBFBA5D670CC...` |
-| **Certified V27** | `d:/gci/v_22_pure_champion_ensemble_certified_v27.csv` | `d:/gci/v22_champion_audit_certified_v27_eight_engine_zenith_master.py` | *Target: 0.785+* | **0.77371** | **Eight-Engine Meta-Suite Zenith (All-Time Record 0.99087 Concordance)** | `0EF9183321A4C153...` |
+| **Certified V26** | `d:/gci/v_22_pure_champion_ensemble_certified_v26.csv` | `d:/gci/v22_champion_audit_certified_v26_continuous_solvency_master.py` | **0.77798** | **0.77371** | **Continuous Solvency & Asymmetric Tail Master (0.99062 Concordance)** | `7F23BBFBA5D670CC...` |
+| **Certified V27** | `d:/gci/v_22_pure_champion_ensemble_certified_v27.csv` | `d:/gci/v22_champion_audit_certified_v27_eight_engine_zenith_master.py` | **0.77804** | **0.77371** | **Eight-Engine Meta-Suite Zenith (All-Time Record 0.99087 Concordance)** | `0EF9183321A4C153...` |
+| **Certified V28** | `d:/gci/v_22_pure_champion_ensemble_certified_v28.csv` | `d:/gci/v22_champion_audit_certified_v28_scratch_master.py` | *LB Ready* | **0.76171** | **Pure Scratch Independent Master (100% Raw Data, 4-Model 10-Fold Zoo)** | `71D9C4BFCCF93A14...` |
+| **Certified V29** | `d:/gci/v_22_pure_champion_ensemble_certified_v29.csv` | `d:/gci/v22_champion_audit_certified_v29_scratch_apex_master.py` | *LB Ready* | **0.76789** | **Pure Scratch Deep Actuarial Apex (+61.8 bps Lift, Decoded Q-Tariffs)** | `E18EC3586E02D596...` |
 
 ---
 
@@ -95,6 +97,29 @@ An exhaustive mathematical audit across all 27 versions demonstrates the exact m
 - **Harmonic Synthesis with 8 Diverse GBDT Foundations:** Ingested the structurally diverse Eight-Engine Meta-Suite (`v17_e1Aet`, `xgb10`, `v17_final`, `v55_cbprod`, `v17_e1et`, `v55_deep_et`, `v55_allfam`, `v55_v2_mono`) with optimal simplex weights:
   $$P_{\text{V27}}(x) = \mathcal{R}_{\text{norm}}\left(0.54 \cdot P_{\text{routed}}(x) + 0.36 \cdot V_{24}(x) + 0.10 \cdot P_{\text{eight}}(x)\right)_{\text{sharpened}}$$
 - **Concordance Breakthrough:** Surpassed all prior models, reaching an all-time record Spearman rank correlation of **`0.990869`** (99.087%) vs Solo Champion and **`0.989324`** vs V22 Pure Champion!
+
+### 2.11. Certified V28: Pure Scratch Independent Architecture (0.76171 OOF AUC)
+- **Mathematical Design:** Built 100% from scratch, reading solely raw `train.csv` and `test.csv`. Zero precomputed caches, zero pipeline dependencies.
+- **Components:** In-domain missing bureau score reconstruction ($g_1, g_3$ GBDT regressors fitted inside CV folds), unobserved expectation residual $\text{RR\_EXT}_2 = \text{EXT}_2 - \widehat{\text{EXT}}_2$, Merton distance-to-default ($\text{DD}_{20}, \text{DD}_{25}$), Clayton copula ($\theta=1.5, 2.5$), and 100% fold-isolated LOO target encodings with arithmetic self-exclusion ($m=30$).
+- **Multi-Family 10-Fold GPU Zoo:** LightGBM ExtraTrees (`0.75790`), LightGBM Deep (`0.76174`), XGBoost GPU Hist (`0.76059`), CatBoost GPU (`0.75870`).
+- **Pooled Optimal OOF AUC:** Reached **`0.761714`** entirely from scratch.
+
+### 2.12. Certified V29: Deep Actuarial Apex Scratch Master (0.76789 OOF AUC, +61.8 bps Lift)
+- **Mathematical Breakthrough (+61.8 bps):** Elevated the scratch engine by incorporating the lender's discrete product lattice:
+  1. *Actuarial Implied Interest Rates via Bisection Search:* Exact numerical root-finding across standard loan terms $n \in \{12, 24, 36, 48, 60\}$:
+     $$f(\mu) = \frac{\mu}{1 - (1 + \mu)^{-n}} - \frac{\text{AMT\_ANNUITY}}{\text{AMT\_CREDIT}} = 0 \implies \text{IMPLIED\_RATE}_n = 12 \cdot \mu^*$$
+  2. *Fee-Adjusted Tariff Decoder ($q_{\text{dec}}$):* Isolates the lender's fixed origination fee ($\approx 129.5$ currency units):
+     $$q_{\text{dec}} = \begin{cases} \frac{\text{AMT\_ANNUITY} - 129.5}{\text{AMT\_CREDIT}} & \text{if Cash Loan} \\ \frac{\text{AMT\_ANNUITY}}{\text{AMT\_CREDIT}} & \text{otherwise} \end{cases}$$
+  3. *Pricing Lattice Clustering & Residuals:* Computes distance to nearest discrete tariff cluster center and unobserved loan pricing margin $\text{HQ\_ANN\_RESID}$.
+  4. *High-Order Compound Target Encodings:* Fold-isolated smoothed target mappings on `GENDER_x_EDU`, `ORG_x_OCC`, and `Q4_x_INC` ($m=35$).
+  5. *Peer-Relative Divergence:* Measures applicant credit, income, and bureau divergence relative to occupation and organization group means.
+- **Empirical 10-Fold CV Surge:** Every model family surged:
+  - LightGBM ExtraTrees: `0.75790` $\to$ **`0.76644`** (+85.4 bps)
+  - LightGBM Deep Tree : `0.76174` $\to$ **`0.76727`** (+55.3 bps)
+  - XGBoost GPU Hist   : `0.76059` $\to$ **`0.76655`** (+59.6 bps)
+  - CatBoost GPU       : `0.75870` $\to$ **`0.76582`** (+71.2 bps)
+  - **Total Pooled OOF ROC-AUC: `0.767892` (+0.006178 / +61.8 bps net lift from scratch!)**
+- **Rank Concordance:** Achieved **`0.970423`** Spearman correlation with Certified V27.
 
 ---
 
