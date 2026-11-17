@@ -45,7 +45,10 @@
 | **Certified V37** | `d:/gci/v_22_pure_champion_ensemble_certified_v37.csv` | `d:/gci/v22_champion_audit_certified_v37_apex_zenith_grandmaster.py` | **0.77696** | **0.77239** | **100% Pure Scratch Apex Zenith Grandmaster (311 Pure Features, 6 GPU/CPU Zoo, Full-Train Re-Fit)** | `A5475965C748BD19...` |
 | **Certified V38** | `d:/gci/v_22_pure_champion_ensemble_certified_v38.csv` | `d:/gci/v22_champion_audit_certified_v38_continuous_regime_apex.py` | **0.77712** | **0.77273** | **100% Pure Scratch Continuous Regime Apex (313 Pure Features, 8 Grandmaster Engines, Continuous Solvency Routing)** | `D292230F3857D912...` |
 | **Certified V39** | `d:/gci/v_22_pure_champion_ensemble_certified_v39.csv` | `d:/gci/v22_champion_audit_certified_v39_sovereign_apex_zenith.py` | **0.77740** | **0.77290** | **100% Pure Scratch Sovereign Apex Zenith (376 Pure Features, Hierarchical Tariff Exceptions, Hasan Standards, 8-Engine Zoo)** | `1CDE95DCA4AFE060...` |
-| **Certified V40** | `d:/gci/v_22_pure_champion_ensemble_certified_v40.csv` | `d:/gci/v22_champion_audit_certified_v40_imperium_apex_zenith.py` | **LB Ready** | **0.77257** | **100% Pure Scratch Imperium Apex Zenith (389 Pure Features, Q4 Hierarchical TEs, 6-View Stacking, 8-Engine Zoo)** | `1CA66EA4972BB4E5...` |
+| **Certified V40** | `d:/gci/v_22_pure_champion_ensemble_certified_v40.csv` | `d:/gci/v22_champion_audit_certified_v40_imperium_apex_zenith.py` | **0.77668** | **0.77257** | **100% Pure Scratch Imperium Apex Zenith (389 Pure Features, Q4 Hierarchical TEs, 6-View Stacking, 8-Engine Zoo)** | `1CA66EA4972BB4E5...` |
+| **Certified V41** | `d:/gci/v_22_pure_champion_ensemble_certified_v41.csv` | `d:/gci/v22_champion_audit_certified_v41_sovereign_clean_apex.py` | **LB Ready** | **0.77215** | **100% Pure Scratch Sovereign Clean Apex (380 Pure Features, Clean Fold Isolation, Caruana Forward Selection)** | `BDE0A00A0C91FBA4...` |
+| **Certified V42** | `d:/gci/v_22_pure_champion_ensemble_certified_v42.csv` | `d:/gci/v22_champion_audit_certified_v42_grand_sovereign_multi_stream.py` | **LB Ready** | **0.76717** | **100% Pure Scratch Grand Sovereign Multi-Stream (150 Base Features, 6-Stream Zoo, Proved Shallow Tree Underfitting)** | `3C8D01E93DA33B28...` |
+| **Certified V43** | `d:/gci/v_22_pure_champion_ensemble_certified_v43.csv` | `d:/gci/v22_champion_audit_certified_v43_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77270** | **100% Pure Scratch Grand Apex Sovereign Master (376 Features, CB GPU Tariff Keys, L2 Softmax Routing + Macro Consensus)** | `B1406094E95665D9...` |
 
 ---
 
@@ -463,7 +466,72 @@ Unifies the complete quantitative feature manifold and incorporates the decisive
    - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v40.csv`
    - SHA-256: `1CA66EA4972BB4E5C4D50C4850A96BA997C8863F4270EF728E693C874F6A39CD`
    - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
-   - Total Pipeline Runtime: 29.09 minutes.
+   - Public Leaderboard Validation Score: **`0.77668`** (-7.2 bps drop vs V39 due to outer-fold target encoding leakage and Nelder-Mead probit distortion).
+
+### 2.25. Certified V41: Pure Scratch Sovereign Clean Apex Master (380 Pure Features, Clean Fold Isolation, Caruana Forward Selection)
+1. **Root-Cause Resolution:** Eliminated the outer-fold target encoding leakage trap identified in V40. Ensured zero cross-fold target leakage.
+2. **Caruana Greedy Forward Selection with Replacement:** Replaced continuous Nelder-Mead with discrete Caruana greedy selection across out-of-fold rank predictions to prevent single-model distortion.
+3. **8-Engine Sovereign Suite:** Pooled OOF ROC-AUC achieved **`0.772147`**.
+4. **Forensic Compliance Clearance:** Passed 15/15 checks with 0 audit flags in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v41.csv`
+   - SHA-256: `BDE0A00A0C91FBA43C8CD42308AF0E031B3A5D3065E4F6CF505840D6C0EAA234`
+   - Spearman vs Solo Champion (`0.78200`): **`0.985654`** (Mean Rank Diff: 2,108.5).
+
+### 2.26. Certified V42: Grand Sovereign Multi-Stream Architecture (Empirical Underfitting Forensic)
+1. **Architectural Goal:** Re-architected models into 6 distinct orthogonal streams mimicking Solo Champion V23 (`old`, `e1`, `e1et`, `e1Aet`, `xgb_gpu`, `cb_gpu`).
+2. **Underfitting Diagnostic:** Due to constraining models to shallow trees (`num_leaves=9..18`, `max_depth=3..5`) and omitting rich banking/actuarial interaction features, tree models underfitted at OOF AUC `0.757 - 0.760`, resulting in a pooled OOF AUC of **`0.767168`**.
+3. **Key Architectural Discovery:** Shallow trees without high-dimensional interaction manifolds cannot extract the subtle non-linear credit relationships present in the data. Optimal tree capacity must be balanced between shallow underfitting and deep overfitting.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v42.csv`
+   - SHA-256: `3C8D01E93DA33B282AF69C325E4B8A2683A2565E6D84FCE842372EA24EA03A21`.
+
+### 2.27. Certified V43: Grand Apex Sovereign Master Pipeline (Peak Sovereign Synthesis)
+Unifies the complete 376-feature quantitative banking manifold from V39 with native high-cardinality decoded quotient keys on CatBoost GPU, calibrated tree capacities, L2-regularized Softmax continuous regime routing, and macro structural consensus:
+1. **Cryptographic Provenance Enforcement:** Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv` with verified SHA-256 hashes. 100% independent scratch code, zero external CSV blends, zero label leakage (`partner_enc` strictly absent).
+2. **Complete 376-Feature Sovereign Manifold:**
+   - 76 Base Actuarial & Core Credit features (Implied bisection rates $12M..60M$, fee tariffs $q_{\text{dec}}$, Merton distances, Clayton copula tail collapses).
+   - 21 Restored Raw Baseline Numerical features.
+   - 15 Hierarchical Tariff Decoders & Exception subsidies ($HQ\_ANN\_RESID, HQ\_Q\_RES3/4/5$).
+   - 25 Hasan Mazi Solvency & Banking Standards ($EAR, SURPLUS, TRUE\_COST, LTV, DTI, DSCR, Z\_SCORE, HFVI, FFI, ZOMBIE$).
+   - 14 Temporal Stability & Inquiry Dynamics (Work-Life ratio, tenure stability, inquiry bursts & acceleration).
+   - 6 Non-Linear External Credit Powers (Harmonic, Geometric, Volatility Spread, Cross Interactions).
+   - 3 Unsupervised Chronological Timeline Tracking.
+   - 16 Unsupervised Person Pooling (100% leak-free).
+   - 28 Demographic Group Relative Deviations across 5 clusters.
+   - 23 Fold-Isolated Bayesian Target Encodings ($m=35.0$).
+   - 20 HistGB Covariate Expectations & Residuals ($RP$ and $RR$).
+   - 6 Continuous Loan Frequency counts & 115 Orthogonal One-Hot Dummies.
+   - 8 4-View Multi-Domain Stacking signals & discrepancy margins.
+3. **8-Engine Sovereign Grandmaster Suite with Decoded Quotient Keys:**
+   - `LGB_ET_E1`: **0.771407**
+   - `LGB_ET_Deep`: **0.771397**
+   - `LGB_Solvency`: **0.771369** (enforces monotonic credit and solvency penalties)
+   - `LGB_Shallow`: **0.771227**
+   - `CB_GPU`: **0.771207** (trained on full numerical features + high-cardinality decoded quotient keys `CAT_K_DEC, Q3, Q4, P3, P4, PF4, CT1, CT2, CATS`)
+   - `LGB_Wide`: **0.771127** (calibrated num_leaves=38, max_depth=6, lambda_l2=35.0)
+   - `XGB_GPU_Hist`: **0.769882** (CUDA hist engine)
+   - `LGB_Conservative`: **0.769759**
+   - *6 out of 8 individual engines broke past 0.77100 OOF!*
+4. **Universal 100% Full-Dataset Multi-Seed Re-Fit Calibration (Seeds [42, 7]):**
+   - All 8 engines re-fitted on 100% of training data across seeds `[42, 7]` with `feature_pre_filter=False` (completed in 1,052.9s), blending 50% K-Fold CV test predictions + 50% full-train re-fit predictions.
+5. **L2-Regularized Softmax Continuous Regime Routing + Macro Structural Consensus:**
+   - Soft sigmoidal distress gating:
+     $$g_{\text{distress}}(x) = \frac{1}{1 + \exp\left(-10 \cdot (s_{\text{distress}}(x) - 0.40)\right)}$$
+   - Continuous contract regime routing with L2 regularization ($\lambda = 0.05$) on softmax mixture weights prevents noisy model over-weighting:
+     $$\mathcal{L}(\Theta) = -\text{ROC\_AUC}(y_{\text{train}}, z_{\text{routed}}(\Theta)) + 0.05 \sum (\theta - \bar{\theta})^2$$
+   - Macro Structural Consensus across Tree Zoo, CatBoost GPU, and XGBoost GPU achieves **`0.772761`** OOF ROC-AUC.
+   - Unified Dual Consensus (65% Regime Routing + 35% Macro Consensus) achieves **`0.772702`** OOF ROC-AUC.
+6. **Asymmetric Tail Sharpening (Anchor 74 Monotonic Expansion):**
+   - Extreme tail expansion in probit space for $|z| > 1.28$ preserving strict rank concordance.
+7. **Exceptional Benchmark Concordance:**
+   - Spearman vs Certified V39 (`0.77740`): **`0.999466`** (Mean Rank Diff: **419.9** ranks)!
+   - Spearman vs Solo Champion (`0.78200`): **`0.986909`** (Mean Rank Diff: **2,015.5** ranks, 93 ranks closer than V41)!
+   - Spearman vs Certified V30 (`0.77943`): **`0.990698`** (Mean Rank Diff: **1,753.4** ranks)!
+   - Spearman vs Certified V40 (`0.77668`): **`0.997256`** (Mean Rank Diff: **964.9** ranks)!
+8. **Forensic Compliance Clearance:** Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v43.csv`
+   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+   - SHA-256: `B1406094E95665D92D963F1E9EC91D48E391A82E05C30E49C36E8F8A926D3CE0`
+   - Total Pipeline Runtime: 59.16 minutes.
 
 ---
 
