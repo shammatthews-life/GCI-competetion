@@ -49,6 +49,7 @@
 | **Certified V41** | `d:/gci/v_22_pure_champion_ensemble_certified_v41.csv` | `d:/gci/v22_champion_audit_certified_v41_sovereign_clean_apex.py` | **LB Ready** | **0.77215** | **100% Pure Scratch Sovereign Clean Apex (380 Pure Features, Clean Fold Isolation, Caruana Forward Selection)** | `BDE0A00A0C91FBA4...` |
 | **Certified V42** | `d:/gci/v_22_pure_champion_ensemble_certified_v42.csv` | `d:/gci/v22_champion_audit_certified_v42_grand_sovereign_multi_stream.py` | **LB Ready** | **0.76717** | **100% Pure Scratch Grand Sovereign Multi-Stream (150 Base Features, 6-Stream Zoo, Proved Shallow Tree Underfitting)** | `3C8D01E93DA33B28...` |
 | **Certified V43** | `d:/gci/v_22_pure_champion_ensemble_certified_v43.csv` | `d:/gci/v22_champion_audit_certified_v43_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77270** | **100% Pure Scratch Grand Apex Sovereign Master (376 Features, CB GPU Tariff Keys, L2 Softmax Routing + Macro Consensus)** | `B1406094E95665D9...` |
+| **Certified V44** | `d:/gci/v_22_pure_champion_ensemble_certified_v44.csv` | `d:/gci/v22_champion_audit_certified_v44_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77019** | **100% Pure Scratch Grand Apex Sovereign Master (362 Features, OOF Bureau Imputation, Russian Delays, Tri-Consensus)** | `77A6BC141BB08259...` |
 
 ---
 
@@ -532,6 +533,54 @@ Unifies the complete 376-feature quantitative banking manifold from V39 with nat
    - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
    - SHA-256: `B1406094E95665D92D963F1E9EC91D48E391A82E05C30E49C36E8F8A926D3CE0`
    - Total Pipeline Runtime: 59.16 minutes.
+
+### 2.28. Certified V44: Grand Apex Sovereign Master Pipeline (OOF Bureau Imputation, Milestone Delays, Tri-Consensus Synthesis)
+Unifies the 362-feature sovereign quantitative banking manifold with supervised out-of-fold external bureau score expectation imputation, Russian passport milestone renewal delays, Alexander_L catalog peak pricing metrics, applicant timeline covariate trajectories, and a unified Tri-Consensus ensemble:
+1. **Cryptographic Provenance Enforcement:**
+   - Reads ONLY official `train.csv`, `test.csv`, and `sample_submission.csv` with cryptographically verified SHA-256 hashes (`B8DD5A61...`, `DFB7AEB9...`, `6E5AD587...`).
+   - 100% independent scratch code, zero external CSV blends, zero label leakage (`partner_enc`, `PY_ANY` strictly absent).
+2. **Complete 362-Feature Sovereign Quantitative Manifold:**
+   - *Supervised Out-of-Fold Bureau Expectation Imputation (10 features):* Trains a 5-fold CV `HistGradientBoostingRegressor` to predict expected credit scores (`EXT1_PRED`, `EXT2_PRED`, `EXT3_PRED`) from demographic, employment, and income covariates, computing the credit deviation residual $\text{EXT\_RESID}_k = \text{EXT\_SOURCE}_k - \text{EXT\_PRED}_k$, fully populated scores `EXTF_1..3`, and `EXTF_MEAN`.
+   - *Russian Milestone Passport Renewal Delays & Administrative Friction (9 features):* Under Russian Federation law (Decree No. 828), internal passports must be renewed within 30 days after turning 20 and 45. Delays indicate administrative negligence or civic friction (`ID_LATE_20`, `ID_LATE_45`, `ID_DELAY_AFTER_MILESTONE`, `REG_MINUS_ID`, `EMP_MINUS_ID`, `EMP_MINUS_REG`).
+   - *Catalog Peak Clustering & Alexander_L Implied Interest Benchmark (9 features):* Top 20 promotional pricing peaks in loan catalog space ($C / A$), distance to catalog peak (`W_PEAK_DIST`), residual (`W_PEAK_RES`), catalog density (`W_PROD_FREQ`), and Alexander_L implied interest rate closest to the 25% commercial benchmark.
+   - *Applicant Longitudinal Covariate Trajectories (8 features):* Tracks multi-application credit drift across time without labels (`DAYS_TO_NEXT_APP`, `TL_D_CRED_PREV`, `TL_D_ANN_PREV`, `TL_D_INC_PREV`, `TL_D_EXT_PREV`).
+   - *Group-Level Bureau Deviances (4 features):* Deviation of applicant bureau ratings from socioeconomic peer group averages across `ORGANIZATION_TYPE`, `OCCUPATION_TYPE`, `NAME_EDUCATION_TYPE`, and `NAME_INCOME_TYPE`.
+   - *Restored Core Sovereign Manifold (312 features):* All 76 base actuarial features, 17 raw baseline numericals, 15 hierarchical tariff decoders & exception subsidies, 25 Hasan Mazi banking standards, 14 temporal stability & inquiry dynamics, 6 non-linear external credit powers, 16 unsupervised person pooling, 30 group relative deviations, 19 fold-isolated Bayesian TEs, 20 HistGB covariate expectations & residuals, 6 continuous loan frequencies, 99 orthogonal one-hot categoricals, 8 4-view multi-domain stacking signals.
+3. **8-Engine Sovereign Grandmaster Suite (5-Fold CV Performance):**
+   - `CB_GPU`: **`0.769911`** (CatBoost GPU with decoded tariff keys `CAT_K_DEC, Q3, Q4, P3, P4, PF4, CT1, CT2, CATS`)
+   - `LGB_ET_E1`: **`0.768393`** (ExtraTrees max_depth=5, num_leaves=25)
+   - `LGB_ET_Deep`: **`0.768104`** (num_leaves=35, max_depth=7)
+   - `LGB_Wide`: **`0.767041`** (num_leaves=38, max_depth=6, lambda_l2=35.0)
+   - `LGB_Shallow`: **`0.767002`** (num_leaves=15, max_depth=4)
+   - `LGB_Solvency`: **`0.766778`** (num_leaves=22, max_depth=5)
+   - `LGB_Conservative`: **`0.766063`** (num_leaves=36, max_depth=6, lambda_l2=25.0)
+   - `XGB_GPU_Hist`: **`0.765371`** (CUDA Hist engine, max_depth=6, max_bin=512)
+4. **Universal 100% Full-Dataset Multi-Seed Re-Fit Calibration (Seeds [42, 7]):**
+   - All 8 engines re-fitted on 100% of training data across seeds `[42, 7]` in 499.5s, blending 50% K-Fold CV test predictions + 50% full-train re-fit predictions.
+5. **Tri-Consensus Ensembling Formulation:**
+   - *Stream 1 (Regime Routing):* Soft distress gating and continuous contract regime routing solving L2-regularized Softmax mixture weights (`0.769122` OOF).
+   - *Stream 2 (Caruana Greedy Rank Selection):* Direct non-parametric hill climbing on out-of-fold ranks solving optimal integer mixture weights (`0.770734` OOF): CatBoost GPU (66.67%) + ExtraTrees E1 (33.33%).
+   - *Stream 3 (Macro Structural Consensus):* Broad balance across Tree Zoo, GPU Hist-XGBoost, and GPU CatBoost (`0.769473` OOF).
+   - **Unified Tri-Consensus Formulation:**
+     $$P_{\text{Tri-Consensus}} = 0.45 \cdot P_{\text{Regime}} + 0.35 \cdot P_{\text{Caruana}} + 0.20 \cdot P_{\text{Macro}}$$
+     achieves **`0.770188`** OOF ROC-AUC.
+6. **Asymmetric Tail Sharpening (Anchor 74 Monotonic Expansion):**
+   - Extreme tail expansion in probit space for $|z| > 1.28$ strictly preserving rank ordering.
+7. **Exceptional Benchmark Concordance:**
+   - Spearman vs Certified V30 (`0.77943`): **`0.982198`** (Mean Absolute Rank Diff: 2,387.3 ranks)!
+   - Spearman vs Certified V27 (`0.77804`): **`0.980866`** (Mean Absolute Rank Diff: 2,484.4 ranks)!
+   - Spearman vs Certified V39 (`0.77740`): **`0.980059`** (Mean Absolute Rank Diff: 2,551.7 ranks)!
+   - Spearman vs Certified V38 (`0.77712`): **`0.978894`** (Mean Absolute Rank Diff: 2,619.4 ranks)!
+   - Spearman vs Certified V43: **`0.978726`** (Mean Absolute Rank Diff: 2,631.9 ranks)!
+   - Spearman vs Solo Champion (`0.78200`): **`0.975884`** (Mean Absolute Rank Diff: 2,720.0 ranks)!
+   - Spearman vs Pure Champion V22 (`0.78239`): **`0.974481`** (Mean Absolute Rank Diff: 2,785.4 ranks)!
+   - Unique Predicted Quantiles: **61,500 / 61,500** (100% full ranking resolution).
+8. **Forensic Compliance Clearance:**
+   - Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+   - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v44.csv`
+   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+   - SHA-256: `77A6BC141BB08259960FB053BD5D4AD0922F865A980DD43632A3906908814FD8`
+   - Total Pipeline Runtime: 70.29 minutes.
 
 ---
 
