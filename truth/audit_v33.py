@@ -87,7 +87,8 @@ def main():
     f7 = audit_script(r"d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v48.csv")
     f8 = audit_script(r"d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v49.csv")
     f9 = audit_script(r"d:/gci/v22_champion_audit_certified_v50_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v50.csv")
-    if f1 == 0 and f2 == 0 and f3 == 0 and f4 == 0 and f5 == 0 and f6 == 0 and f7 == 0 and f8 == 0 and f9 == 0:
+    f10 = audit_script(r"d:/gci/v22_champion_audit_certified_v51_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v51.csv")
+    if f1 == 0 and f2 == 0 and f3 == 0 and f4 == 0 and f5 == 0 and f6 == 0 and f7 == 0 and f8 == 0 and f9 == 0 and f10 == 0:
         print("\n" + "=" * 80)
         print("[ALL SCRIPT PURITY AUDITS PASSED 100% - ZERO EXTERNAL DEPENDENCIES]")
         print("=" * 80)
