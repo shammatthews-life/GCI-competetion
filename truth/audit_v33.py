@@ -75,7 +75,9 @@ def main():
     f1 = audit_script(r"d:/gci/v22_champion_audit_certified_v27_eight_engine_zenith_master.py", "v_22_pure_champion_ensemble_certified_v27.csv")
     f2 = audit_script(r"d:/gci/v22_champion_audit_certified_v33_pure_scratch_zenith.py", "v_22_pure_champion_ensemble_certified_v33.csv")
     f3 = audit_script(r"d:/gci/v22_champion_audit_certified_v44_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v44.csv")
-    if f1 == 0 and f2 == 0 and f3 == 0:
+    f4 = audit_script(r"d:/gci/v22_champion_audit_certified_v45_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v45.csv")
+    f5 = audit_script(r"d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v46.csv")
+    if f1 == 0 and f2 == 0 and f3 == 0 and f4 == 0 and f5 == 0:
         print("\n" + "=" * 80)
         print("[ALL SCRIPT PURITY AUDITS PASSED 100% - ZERO EXTERNAL DEPENDENCIES]")
         print("=" * 80)
