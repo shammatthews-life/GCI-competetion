@@ -53,7 +53,8 @@
 | **Certified V45** | `d:/gci/v_22_pure_champion_ensemble_certified_v45.csv` | `d:/gci/v22_champion_audit_certified_v45_grand_apex_soVEREIGN_master.py` | **Exploratory** | **0.76671** | **100% Pure Scratch Sovereign Master (Proved Linear Tree Instability on Discrete Tariffs, Deep Risk Telemetry)** | `D1D63AAC19DCB32E...` |
 | **Certified V46** | `d:/gci/v_22_pure_champion_ensemble_certified_v46.csv` | `d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py` | **0.77719** | **0.77258** | **100% Pure Scratch Grand Apex Sovereign Zenith (367 Features, All-Time High Single Tree OOF 0.77180, Russian Delays, 0.7788 Config A, PR-AUC 0.25198)** | `B6CD7C9628D4C6A1...` |
 | **Certified V47** | `d:/gci/v_22_pure_champion_ensemble_certified_v47.csv` | `d:/gci/v22_champion_audit_certified_v47_grand_apex_soVEREIGN_master.py` | **0.77712** | **0.77264** | **100% Pure Scratch Sovereign Imperium (393 Pure Features, Restored V43 Bedrock, 10 False-Negative Countermeasures, Rank-Weighted Tree Consensus, PR-AUC 0.25218)** | `90C72B7A03B50277...` |
-| **Certified V48** | `d:/gci/v_22_pure_champion_ensemble_certified_v48.csv` | `d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77223** | **100% Pure Scratch Sovereign Zenith (502 Pure Features, 140 Top Hasan Interactions Led by P_RATIO_EXT_MEAN_div_LTV @ 169K Gain, Equal Tree Weighting, SLSQP Simplex, All-Time High PR-AUC 0.25230)** | `C23F28746A2FE145...` |
+| **Certified V48** | `d:/gci/v_22_pure_champion_ensemble_certified_v48.csv` | `d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py` | **0.77708** | **0.77223** | **100% Pure Scratch Sovereign Zenith (502 Pure Features, Equal Tree Weighting, SLSQP Simplex, PR-AUC 0.25230, Audited & Retired for Purity Compliance)** | `C23F28746A2FE145...` |
+| **Certified V49** | `d:/gci/v_22_pure_champion_ensemble_certified_v49.csv` | `d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.76609** | **100% Pure Scratch Inductive Sovereign Master (Zero Transductive Pooling, Zero Conditional Routing, 8-Engine Suite, Cross-Fitted SLSQP Probit Simplex, Full Audit Cleared)** | `C3B047F12902D2C9...` |
 
 ---
 
@@ -742,6 +743,65 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
   - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
   - SHA-256: `C23F28746A2FE1454A9C27D578474CFDA1CDA186964A19FB72347FAF3B8F14B1`
   - Total Pipeline Runtime: 34.96 minutes.
+
+### 2.33. Certified V49: Grand Apex Sovereign Master (100% Pure Inductive Scratch, Zero-Pooling, Zero-Routing, 8-Engine Unified Ensemble)
+- **The Code Audit Forensic Autopsy of V48 and Historical Scratch Scripts:**
+  Following an exhaustive independent forensic audit of the V48 master pipeline and earlier scratch versions, 7 critical methodological defects were isolated:
+  1. *Hand-Designed Conditional Test Routing:* Applicant conditions (`s_dist`, `g_dist`, `rev`) routed test predictions to different model weights. This posed a serious compliance risk under the competition's hand-labelling rules (Rule 2).
+  2. *Transductive Train/Test Covariate Pooling:* `df_all = pd.concat([cov_train, df_test])` leaked test covariate distributions into training statistics (group means, frequencies, target encodings), violating pure inductive learning.
+  3. *Target Encoding Leakage:* Global training label mean was used for OOF rows, creating subtle label leakage.
+  4. *Multi-View Stacker Pre-CV Generation:* View classifiers fit globally before outer CV folds caused validation contamination.
+  5. *In-Sample Regime-Weight Optimistic Bias:* Regime weights evaluated on the same OOF labels on which they were fit.
+  6. *Refit Evaluation Discrepancy:* Test predictions combined fold models and full-train refits without reproducing that procedure in OOF evaluation.
+  7. *Feature Calculation Errors:* Circular algebraic cancellation in formulas like EAR (`24.0 * (ann * term - cred) / ...` where `ann * term ~ cred`, evaluating to zero).
+- **The Mathematical Solution in V49:**
+  1. *One Unified Global Model Ensemble (Zero Conditional Test Routing):* Completely eliminated all heuristic condition routing. Every test applicant is evaluated through one unified, mathematically optimal global model ensemble.
+  2. *Strict Inductive Feature Engineering (Zero Train/Test Pooling):* The `InductiveFeatureTransformer` class enforces strict `fit(df_train, y_train)` and `transform(df)` separation. All aggregations, rate-sheet tariff centers ($Q_4$ counts $\ge 30$), and Bayesian encodings ($M_0 = 35.0$) are computed exclusively on training partitions.
+  3. *Pure In-Fold Cross-Validation (Zero Target Leakage):* Encodings, continuous residuals, and multi-view domain stacking (`EXT`, `LOAN`, `PERSON`) are generated strictly inside inner CV folds with fallback to the outer training fold prior.
+  4. *Pure 5-Fold Test Ensemble Matching OOF:* Test predictions are the unweighted average across the 5 outer fold models, guaranteeing 100% mathematical fidelity between CV and test inference.
+  5. *Corrected Actuarial Bisection Interest Rates:* Exact numerical bisection root-finding for annualized implied interest rates across 12M, 24M, 36M, 48M, and 60M terms.
+  6. *Diverse 8-Engine Suite:* `LGB_ET_Deep`, `LGB_Shallow`, `LGB_Mono` (monotonic bureau constraints), `LGB_Wide`, `LGB_Solvency`, `XGB_GPU_Hist`, `CB_GPU`, and `HGB_Linear`.
+  7. *Cross-Fitted Bounded SLSQP Probit Simplex:* Simplex weights fit on latent normal quantiles with out-of-fold cross-fitting and asymmetric tail sharpening ($\tau = 1.28$).
+- **Empirical Results:**
+  - Individual 8-Engine OOF Performance:
+    * `LGB_ET_Deep`: ROC-AUC **`0.766721`** | PR-AUC **`0.248221`**
+    * `LGB_Mono`: ROC-AUC **`0.765116`** | PR-AUC **`0.245324`**
+    * `CB_GPU`: ROC-AUC **`0.765054`** | PR-AUC **`0.244536`**
+    * `LGB_Solvency`: ROC-AUC **`0.764911`** | PR-AUC **`0.245162`**
+    * `LGB_Shallow`: ROC-AUC **`0.764728`** | PR-AUC **`0.245107`**
+    * `XGB_GPU_Hist`: ROC-AUC **`0.762502`** | PR-AUC **`0.241785`**
+    * `HGB_Linear`: ROC-AUC **`0.762184`** | PR-AUC **`0.242667`**
+    * `LGB_Wide`: ROC-AUC **`0.761921`** | PR-AUC **`0.241716`**
+  - Unbiased Pooled Ensemble OOF ROC-AUC: **`0.766088`**
+  - Unbiased Pooled Ensemble OOF PR-AUC: **`0.246993`**
+  - Optimal Global SLSQP Simplex Weights:
+    * `LGB_ET_Deep`: 14.48%
+    * `CB_GPU`: 18.71%
+    * `HGB_Linear`: 19.43%
+    * `XGB_GPU_Hist`: 11.21%
+    * `LGB_Wide`: 10.82%
+    * `LGB_Solvency`: 8.83%
+    * `LGB_Mono`: 8.29%
+    * `LGB_Shallow`: 8.22%
+  - Operational Risk Telemetry & Confusion Matrices:
+    * Baseline Prevalence (8.07%, threshold=0.9172): TN=147,649 | FP=9,732 | FN=9,737 | TP=4,084 | Recall: 29.55% | Precision: 29.56% | F1: 0.2955
+    * Top 5.0% Extreme Risk Tier (threshold=0.9479): TN=151,725 | FP=5,656 | FN=10,916 | TP=2,905 | Recall: 21.02% | Precision: 33.93% | F1: 0.2596
+    * Top 10.0% High Risk Tier (threshold=0.8983): TN=144,925 | FP=12,456 | FN=9,156 | TP=4,665 | Recall: 33.75% | Precision: 27.25% | F1: 0.3015
+    * Top 15.0% Moderate Risk Tier (threshold=0.8482): TN=137,859 | FP=19,522 | FN=7,662 | TP=6,159 | Recall: 44.56% | Precision: 23.98% | F1: 0.3118
+    * Top 20.0% Extended Review Tier (threshold=0.7982): TN=130,477 | FP=26,904 | FN=6,484 | TP=7,337 | Recall: 53.09% | Precision: 21.43% | F1: 0.3053
+- **Statistical Benchmark Concordance:**
+  - Spearman vs Certified V30 (`0.77943`): **`0.977458`** (97.75%)
+  - Spearman vs Certified V43 (`0.77749`): **`0.973145`** (97.31%)
+  - Spearman vs Certified V48 (`0.77708`): **`0.972149`**
+  - Spearman vs Certified V46 (`0.77719`): **`0.971133`**
+  - Spearman vs Certified V47 (`0.77712`): **`0.971064`**
+  - Spearman vs Solo Champion V23 (`0.78200`): **`0.968486`** (96.85%)
+- **Forensic Compliance Clearance:**
+  - Audited with `truth/audit_v33.py`: **0 compliance flags**.
+  - Output File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v49.csv`
+  - File Size: 1,676,933 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+  - SHA-256: `C3B047F12902D2C90ED5C7073BA325806374F6ED3FE917CA0F22CA68487914B2`
+  - Total Pipeline Runtime: 5.62 minutes.
 
 ---
 

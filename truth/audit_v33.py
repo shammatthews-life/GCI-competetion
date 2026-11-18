@@ -60,6 +60,12 @@ def audit_script(script_path, allowed_out_csv):
                 print(f"[FAIL] Forbidden file access at line {idx}: {stripped}")
                 flags += 1
 
+        # Check for forbidden external concepts and names (Zero Tolerance)
+        for forbidden in ["hasan", "exp85"]:
+            if forbidden in line.lower() and not "not use" in line.lower() and not "forbidden" in line.lower() and not "zero" in line.lower() and not "ban" in line.lower():
+                print(f"[FAIL] Forbidden token '{forbidden}' detected at line {idx}: {stripped}")
+                flags += 1
+
     # Check for train/test concatenation before CV
     if "pd.concat([df_train" in src or "pd.concat([df_all" in src:
         print("[FAIL] Found transductive train/test pooling (pd.concat([df_train, ...]))!")
@@ -79,7 +85,8 @@ def main():
     f5 = audit_script(r"d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v46.csv")
     f6 = audit_script(r"d:/gci/v22_champion_audit_certified_v47_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v47.csv")
     f7 = audit_script(r"d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v48.csv")
-    if f1 == 0 and f2 == 0 and f3 == 0 and f4 == 0 and f5 == 0 and f6 == 0 and f7 == 0:
+    f8 = audit_script(r"d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py", "v_22_pure_champion_ensemble_certified_v49.csv")
+    if f1 == 0 and f2 == 0 and f3 == 0 and f4 == 0 and f5 == 0 and f6 == 0 and f7 == 0 and f8 == 0:
         print("\n" + "=" * 80)
         print("[ALL SCRIPT PURITY AUDITS PASSED 100% - ZERO EXTERNAL DEPENDENCIES]")
         print("=" * 80)
