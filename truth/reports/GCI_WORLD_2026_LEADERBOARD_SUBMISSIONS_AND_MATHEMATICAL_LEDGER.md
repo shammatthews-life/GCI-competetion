@@ -54,7 +54,8 @@
 | **Certified V46** | `d:/gci/v_22_pure_champion_ensemble_certified_v46.csv` | `d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py` | **0.77719** | **0.77258** | **100% Pure Scratch Grand Apex Sovereign Zenith (367 Features, All-Time High Single Tree OOF 0.77180, Russian Delays, 0.7788 Config A, PR-AUC 0.25198)** | `B6CD7C9628D4C6A1...` |
 | **Certified V47** | `d:/gci/v_22_pure_champion_ensemble_certified_v47.csv` | `d:/gci/v22_champion_audit_certified_v47_grand_apex_soVEREIGN_master.py` | **0.77712** | **0.77264** | **100% Pure Scratch Sovereign Imperium (393 Pure Features, Restored V43 Bedrock, 10 False-Negative Countermeasures, Rank-Weighted Tree Consensus, PR-AUC 0.25218)** | `90C72B7A03B50277...` |
 | **Certified V48** | `d:/gci/v_22_pure_champion_ensemble_certified_v48.csv` | `d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py` | **0.77708** | **0.77223** | **100% Pure Scratch Sovereign Zenith (502 Pure Features, Equal Tree Weighting, SLSQP Simplex, PR-AUC 0.25230, Audited & Retired for Purity Compliance)** | `C23F28746A2FE145...` |
-| **Certified V49** | `d:/gci/v_22_pure_champion_ensemble_certified_v49.csv` | `d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.76609** | **100% Pure Scratch Inductive Sovereign Master (Zero Transductive Pooling, Zero Conditional Routing, 8-Engine Suite, Cross-Fitted SLSQP Probit Simplex, Full Audit Cleared)** | `C3B047F12902D2C9...` |
+| **Certified V49** | `d:/gci/v_22_pure_champion_ensemble_certified_v49.csv` | `d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py` | **0.77267** | **0.76609** | **100% Pure Scratch Inductive Sovereign Master (Zero Transductive Pooling, Zero Conditional Routing, 8-Engine Suite, Cross-Fitted SLSQP Probit Simplex, Full Audit Cleared)** | `C3B047F12902D2C9...` |
+| **Certified V50** | `d:/gci/v_22_pure_champion_ensemble_certified_v50.csv` | `d:/gci/v22_champion_audit_certified_v50_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.76706** | **100% Pure Scratch Sovereign Master (Multi-Scale KNN Target Smoothing k=500/250 from Kaggle 1st Place Solution, Direct Nelder-Mead ROC-AUC Optimization, XGBoost Zero-Missing Fixed, Full Audit Cleared)** | `547E4DCA8387DA2F...` |
 
 ---
 
@@ -802,6 +803,64 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
   - File Size: 1,676,933 bytes (61,500 rows, strictly matching `sample_submission.csv`).
   - SHA-256: `C3B047F12902D2C90ED5C7073BA325806374F6ED3FE917CA0F22CA68487914B2`
   - Total Pipeline Runtime: 5.62 minutes.
+
+### 2.34. Certified V50: Grand Apex Sovereign Master (Multi-Scale KNN Target Smoothing + Direct Nelder-Mead ROC-AUC Optimization)
+- **The Mathematical Forensic Autopsy of V49 (0.77267):**
+  Following public leaderboard evaluation of V49 (`0.77267`), an exhaustive analysis revealed two primary factors:
+  1. *Negative Transfer from Probit Cross-Entropy Stacking:* In V49, SLSQP optimized cross-entropy on probit latent space. Because cross-entropy measures logarithmic calibration rather than pairwise ranking order (Wilcoxon-Mann-Whitney U statistic), it allocated 19.43% weight to `HGB_Linear` (OOF AUC 0.76218) and 10.82% to `LGB_Wide` (0.76192). This dragged down the ensemble OOF ROC-AUC to `0.766088`, lower than `LGB_ET_Deep` alone (`0.766721`).
+  2. *Feature Space Dimensionality Under-Representation:* By removing all 140 interaction terms and reducing features to 117 variables, the model lacked non-linear spatial cluster awareness of default density.
+- **The Mathematical Solution in V50:**
+  1. *Multi-Scale K-Nearest Neighbors Target Smoothing (1st Place Kaggle Discovery):*
+     - Incorporated the single most important engineered feature from the 1st place Home Credit winning solution (Silogram / Bojan Tunguz / Olivier Grellier / Michael Jahrer): `NEIGHBORS_TARGET_MEAN_500` and `NEIGHBORS_TARGET_MEAN_250`.
+     - Built across the 6-dimensional core financial manifold: `[EXT_SOURCE_1, EXT_SOURCE_2, EXT_SOURCE_3, CREDIT_TERM_MONTHS, PAYMENT_RATE, LTV]`.
+     - *Zero Leakage Implementation:* For outer training rows, the sample itself is strictly excluded (querying neighbors $1 \dots k+1$). For validation and test rows, predictions query the outer training fold points only.
+  2. *Direct Nelder-Mead ROC-AUC Simplex Optimization:*
+     - Replaced cross-entropy probit fitting with Nelder-Mead optimization directly maximizing empirical ROC-AUC on rank-normalized model outputs ($u = \mathcal{R}_{\text{norm}}(P)$).
+     - Cross-fitted across the 5 outer folds to guarantee 100% honest out-of-fold evaluation.
+     - The optimizer successfully identified and pruned zero-benefit models (`LGB_Wide`, `LGB_Solvency`, `XGB_GPU_Hist` $\to 0.00\%$), allocating 53.02% to `LGB_ET_Deep`, 27.61% to `CB_GPU`, and 17.15% to `LGB_Mono`.
+  3. *Elimination of XGBoost Zero-Missing Collision Defect:*
+     - Preserved raw `NaN` representations in XGBoost DMatrix, avoiding the `missing=0.0` defect where legitimate zeros (indicators, differences) were treated as missing values.
+  4. *Input Validation & Reproducibility Safeguards:*
+     - Replaced bare `assert` statements with explicit `ValueError` exceptions for hashes and ID uniqueness. Verified binary targets in $\{0, 1\}$.
+- **Empirical Results:**
+  - Individual 8-Engine OOF Performance:
+    * `LGB_ET_Deep`: ROC-AUC **`0.766728`** | PR-AUC **`0.247442`**
+    * `LGB_Mono`: ROC-AUC **`0.765351`** | PR-AUC **`0.245880`**
+    * `CB_GPU`: ROC-AUC **`0.765196`** | PR-AUC **`0.243894`**
+    * `LGB_Shallow`: ROC-AUC **`0.764404`** | PR-AUC **`0.244149`**
+    * `LGB_Solvency`: ROC-AUC **`0.763926`** | PR-AUC **`0.243633`**
+    * `HGB_Linear`: ROC-AUC **`0.762234`** | PR-AUC **`0.244023`**
+    * `XGB_GPU_Hist`: ROC-AUC **`0.761994`** | PR-AUC **`0.240956`**
+    * `LGB_Wide`: ROC-AUC **`0.761635`** | PR-AUC **`0.240664`**
+  - Unbiased Pooled Ensemble OOF ROC-AUC: **`0.767058`** (+9.7 bps over V49, and strictly exceeding the best individual model!)
+  - Unbiased Pooled Ensemble OOF PR-AUC: **`0.247720`**
+  - Optimal Direct ROC-AUC Simplex Weights:
+    * `LGB_ET_Deep`: 53.02%
+    * `CB_GPU`: 27.61%
+    * `LGB_Mono`: 17.15%
+    * `HGB_Linear`: 1.19%
+    * `LGB_Shallow`: 1.03%
+    * `LGB_Wide`, `LGB_Solvency`, `XGB_GPU_Hist`: 0.00%
+  - Operational Risk Telemetry & Confusion Matrices:
+    * Baseline Prevalence (8.07%, threshold=0.9193): TN=147,655 | FP=9,726 | FN=9,731 | TP=4,090 | Recall: 29.59% | Precision: 29.60% | F1: 0.2960
+    * Top 5.0% Extreme Risk Tier (threshold=0.9500): TN=151,712 | FP=5,669 | FN=10,929 | TP=2,892 | Recall: 20.92% | Precision: 33.78% | F1: 0.2584
+    * Top 10.0% High Risk Tier (threshold=0.9000): TN=144,953 | FP=12,428 | FN=9,128 | TP=4,693 | Recall: 33.96% | Precision: 27.41% | F1: 0.3033
+    * Top 15.0% Moderate Risk Tier (threshold=0.8500): TN=137,851 | FP=19,530 | FN=7,670 | TP=6,151 | Recall: 44.50% | Precision: 23.95% | F1: 0.3114
+    * Top 20.0% Extended Review Tier (threshold=0.8000): TN=130,484 | FP=26,897 | FN=6,477 | TP=7,344 | Recall: 53.14% | Precision: 21.45% | F1: 0.3056
+- **Statistical Benchmark Concordance:**
+  - Spearman vs Certified V30 (`0.77943`): **`0.978765`** (97.88%)
+  - Spearman vs Certified V43 (`0.77749`): **`0.973957`** (97.40%)
+  - Spearman vs Certified V48 (`0.77708`): **`0.972978`**
+  - Spearman vs Certified V46 (`0.77719`): **`0.971574`**
+  - Spearman vs Certified V47 (`0.77712`): **`0.971586`**
+  - Spearman vs Solo Champion V23 (`0.78200`): **`0.969989`** (97.00%)
+  - Spearman vs Certified V49 (`0.77267`): **`0.996360`**
+- **Forensic Compliance Clearance:**
+  - Audited with `truth/audit_v33.py`: **0 compliance flags**.
+  - Output File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v50.csv`
+  - File Size: 1,677,103 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+  - SHA-256: `547E4DCA8387DA2F58F6EEF46CA7B10D818A6A3BBA6D50847AA6A7BD3B2CA0E6`
+  - Total Pipeline Runtime: 13.00 minutes.
 
 ---
 
