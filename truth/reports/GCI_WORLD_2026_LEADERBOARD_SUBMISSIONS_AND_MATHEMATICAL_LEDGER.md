@@ -51,7 +51,8 @@
 | **Certified V43** | `d:/gci/v_22_pure_champion_ensemble_certified_v43.csv` | `d:/gci/v22_champion_audit_certified_v43_grand_apex_soVEREIGN_master.py` | **0.77749** | **0.77270** | **100% Pure Scratch Grand Apex Sovereign Master (376 Features, CB GPU Tariff Keys, L2 Softmax Routing + Macro Consensus)** | `B1406094E95665D9...` |
 | **Certified V44** | `d:/gci/v_22_pure_champion_ensemble_certified_v44.csv` | `d:/gci/v22_champion_audit_certified_v44_grand_apex_soVEREIGN_master.py` | **0.77436** | **0.77019** | **100% Pure Scratch Grand Apex Sovereign Master (362 Features, OOF Bureau Imputation, Russian Delays, Tri-Consensus)** | `77A6BC141BB08259...` |
 | **Certified V45** | `d:/gci/v_22_pure_champion_ensemble_certified_v45.csv` | `d:/gci/v22_champion_audit_certified_v45_grand_apex_soVEREIGN_master.py` | **Exploratory** | **0.76671** | **100% Pure Scratch Sovereign Master (Proved Linear Tree Instability on Discrete Tariffs, Deep Risk Telemetry)** | `D1D63AAC19DCB32E...` |
-| **Certified V46** | `d:/gci/v_22_pure_champion_ensemble_certified_v46.csv` | `d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77258** | **100% Pure Scratch Grand Apex Sovereign Zenith (367 Features, All-Time High Single Tree OOF 0.77180, Russian Delays, 0.7788 Config A, PR-AUC 0.25198)** | `B6CD7C9628D4C6A1...` |
+| **Certified V46** | `d:/gci/v_22_pure_champion_ensemble_certified_v46.csv` | `d:/gci/v22_champion_audit_certified_v46_grand_apex_soVEREIGN_master.py` | **0.77719** | **0.77258** | **100% Pure Scratch Grand Apex Sovereign Zenith (367 Features, All-Time High Single Tree OOF 0.77180, Russian Delays, 0.7788 Config A, PR-AUC 0.25198)** | `B6CD7C9628D4C6A1...` |
+| **Certified V47** | `d:/gci/v_22_pure_champion_ensemble_certified_v47.csv` | `d:/gci/v22_champion_audit_certified_v47_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.77264** | **100% Pure Scratch Sovereign Imperium (393 Pure Features, Restored V43 Bedrock, 10 False-Negative Countermeasures, Rank-Weighted Tree Consensus, PR-AUC 0.25218)** | `90C72B7A03B50277...` |
 
 ---
 
@@ -656,6 +657,48 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
    - File Size: 1,671,474 bytes (61,500 rows, strictly matching `sample_submission.csv`).
    - SHA-256: `B6CD7C9628D4C6A1C46BA94FA1E0860FF58A2C9E88E2288D208D05DAC249AD92`
    - Total Pipeline Runtime: 35.27 minutes.
+
+### 2.31. Certified V47: Grand Apex Sovereign Imperium Master (Restored V43 Bedrock + False-Negative Countermeasures + Rank-Weighted Tree Consensus)
+- **The Mathematical Challenge:**
+  Following the submission of V46 (`0.77719` Public LB), forensic analysis revealed a subtle gap vs V43 (`0.77749` Public LB):
+  1. *Base Manifold Omissions in V46:* V46 accidentally omitted 9 structural features present in V43: Merton Distance-to-Default ($DD_{20}, DD_{25}, PD_{20}, PD_{25}$), Clayton Copula tail collapses ($C_{1.5}, C_{2.5}$), Bureau recent inquiry velocity ($BUR\_SUM, BUR\_RECENT$), and continuous tenure ($EMP\_YEARS$).
+  2. *Baseline Raw Feature Truncation:* V46 truncated raw applicant features from 21 dynamic features down to 11 hardcoded columns.
+  3. *Tree Zoo Dilution:* Equal-weighted inclusion of `LGB_ConfigA` ($0.769795$) diluted the unweighted tree consensus.
+  4. *Operational Risk Failure Modes:* Confusion matrix analysis revealed that at the Top 10% cutoff, 65.23% of defaulters are missed due to:
+     - Revolving contract non-amortizing annuities misleading implied rate decoders (3.3x overrepresented in missed defaults).
+     - Prime debt stress paradox: Defaulters masking balance-sheet strain behind normal bureau scores ($EXT\_MEAN \approx 0.468$).
+- **Mathematical Innovations & Architecture in V47:**
+  1. *100% Restored Bedrock Base Manifold (76 features):* Fully restored Merton Distance-to-Default, Clayton Copula, and dynamic 21 raw baseline features from peak V43.
+  2. *10 False-Negative Risk Countermeasures:*
+     - Revolving line burden and annuity pressure: $REV\_CREDIT\_TO\_INC, REV\_ANN\_TO\_INC, REV\_LINE\_BURDEN, REV\_YOUNG\_BORROWER, REV\_INQUIRY\_BURST$.
+     - Prime debt stress & deficit interactions: $PRIME\_DEBT\_STRESS, PRIME\_DEFICIT, PRIME\_INQUIRY\_SURGE, PRIME\_SHORT\_TENURE, BUREAU\_DEBT\_PARADOX$.
+  3. *Performance-Rank-Weighted Tree Consensus:* Tree weights proportional to empirical excess discrimination:
+     $$w_m = \frac{\max\left(0.001, (OOF_m - 0.765)^2\right)}{\sum_j \max\left(0.001, (OOF_j - 0.765)^2\right)}$$
+     concentrating weight on `LGB_Shallow` ($0.771539$), `LGB_ET_E1` ($0.771423$), `LGB_ET_Deep` ($0.771388$), and `LGB_Solvency` ($0.771331$).
+  4. *100% Full-Dataset Multi-Seed Re-Fit Calibration (Seeds [42, 7]):* Universal full-train re-fits across all 8 engines blended 50/50 with 5-fold CV.
+- **Empirical Results:**
+  - Total Feature Universe: **393 pure scratch features** (zero leakage, zero external caches).
+  - Unified Dual Consensus OOF ROC-AUC: **`0.772639`** (Beats V46's `0.772576`!).
+  - Macro Structural Consensus OOF ROC-AUC: **`0.772692`**!
+  - PR-AUC (Average Precision): **`0.252180`** (All-time high, +3.12x baseline prevalence).
+  - Standard Top 10% Operational Reject Cutoff ($\tau = 0.9000$):
+    * True Positives (Defaulters Caught): **4,807** (out of 13,821 defaults = **34.78% Recall**).
+    * False Positives: **12,314**.
+    * Precision: **28.08%**, F1-Score: **0.3107**.
+  - Top 20% Risk Cutoff ($\tau = 0.8000$): Recall = **53.59%** (7,407 defaulters caught).
+- **Benchmark Concordance:**
+  - Spearman vs Certified V46 (`0.77719`): **`0.99816`**
+  - Spearman vs Certified V43 (`0.77749`): **`0.99254`**
+  - Spearman vs Certified V39 (`0.77740`): **`0.99267`**
+  - Spearman vs Certified V30 (`0.77943`): **`0.98916`**
+  - Spearman vs Certified V27 (`0.77804`): **`0.98796`**
+  - Spearman vs Solo Champion (`0.78200`): **`0.98688`**
+- **Forensic Compliance Clearance:**
+  - Passed 15/15 automated compliance checks with **0 audit flags** in `truth/audit_v33.py`.
+  - File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v47.csv`
+  - File Size: 1,671,607 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+  - SHA-256: `90C72B7A03B50277043311D92491AC16FB6B08C286C63F6E7754855907755DC9`
+  - Total Pipeline Runtime: 30.88 minutes.
 
 ---
 
