@@ -56,7 +56,7 @@
 | **Certified V48** | `d:/gci/v_22_pure_champion_ensemble_certified_v48.csv` | `d:/gci/v22_champion_audit_certified_v48_grand_apex_soVEREIGN_master.py` | **0.77708** | **0.77223** | **100% Pure Scratch Sovereign Zenith (502 Pure Features, Equal Tree Weighting, SLSQP Simplex, PR-AUC 0.25230, Audited & Retired for Purity Compliance)** | `C23F28746A2FE145...` |
 | **Certified V49** | `d:/gci/v_22_pure_champion_ensemble_certified_v49.csv` | `d:/gci/v22_champion_audit_certified_v49_grand_apex_soVEREIGN_master.py` | **0.77267** | **0.76609** | **100% Pure Scratch Inductive Sovereign Master (Zero Transductive Pooling, Zero Conditional Routing, 8-Engine Suite, Cross-Fitted SLSQP Probit Simplex, Full Audit Cleared)** | `C3B047F12902D2C9...` |
 | **Certified V50** | `d:/gci/v_22_pure_champion_ensemble_certified_v50.csv` | `d:/gci/v22_champion_audit_certified_v50_grand_apex_soVEREIGN_master.py` | **0.77374** | **0.76706** | **100% Pure Scratch Sovereign Master (Multi-Scale KNN Target Smoothing k=500/250 from Kaggle 1st Place Solution, Direct Nelder-Mead ROC-AUC Optimization, XGBoost Zero-Missing Fixed, Full Audit Cleared)** | `547E4DCA8387DA2F...` |
-| **Certified V51** | `d:/gci/v_22_pure_champion_ensemble_certified_v51.csv` | `d:/gci/v22_champion_audit_certified_v51_grand_apex_soVEREIGN_master.py` | **Executing** | **TBD** | **100% Pure Scratch Grand Apex Sovereign Master (300+ Inductive Features, Econometric Peer Deviations, Multi-Scale KNN k=500/250/100, CatBoost GPU Native Categoricals, 7-Engine Suite, Direct ROC-AUC Simplex Optimization, Full Audit Cleared)** | `TBD...` |
+| **Certified V51** | `d:/gci/v_22_pure_champion_ensemble_certified_v51.csv` | `d:/gci/v22_champion_audit_certified_v51_grand_apex_soVEREIGN_master.py` | **LB Ready** | **0.76746** | **100% Pure Scratch Grand Apex Sovereign Master (259 Inductive Features, Econometric Peer Deviations, Multi-Scale KNN k=500/250/100, CatBoost GPU Native Categoricals, 7-Engine Suite, Direct ROC-AUC Simplex Optimization, Full Audit Cleared)** | `999123D539F4F47E...` |
 
 ---
 
@@ -862,6 +862,51 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
   - File Size: 1,677,103 bytes (61,500 rows, strictly matching `sample_submission.csv`).
   - SHA-256: `547E4DCA8387DA2F58F6EEF46CA7B10D818A6A3BBA6D50847AA6A7BD3B2CA0E6`
   - Total Pipeline Runtime: 13.00 minutes.
+
+### 2.35. Certified V51: Grand Apex Sovereign Master (259-Feature Inductive Universe + Native GPU Categoricals + Econometric Peer Deviations)
+- **The Mathematical Solution in V51:**
+  1. *Expansion of Honest Inductive Feature Space:*
+     - Increased inductive features from 128 (in V50) to **259 features**, incorporating econometric peer group deviations with exact leave-one-out arithmetic self-exclusion ($\text{loo\_mean} = \frac{\text{sum} - x}{\text{count} - 1}$) across 5 industry and regional clusters.
+     - Restored aligned orthogonal one-hot indicators for nominal variables.
+     - Incorporated multi-scale KNN target smoothing ($k=500, 250, 100$) on the 6D underwriting manifold.
+  2. *CatBoost GPU Native Categorical Enhancement:*
+     - Rather than passing integer factors, passed true native categorical features (`cat_features=cb_cats`) into `CatBoostClassifier` on NVIDIA CUDA GPU.
+     - Enabled CatBoost's proprietary online target statistics algorithm to discover multi-way interaction splits.
+  3. *Elimination of Weak Base Estimators:*
+     - Removed `HGB_Linear` from the candidate pool, focusing capacity on 7 diverse GBDT engines (5 LightGBM + 1 XGBoost GPU + 1 CatBoost GPU).
+  4. *Direct Nelder-Mead ROC-AUC Simplex Optimization:*
+     - Solved optimal non-negative convex weights ($\sum w_i = 1, w_i \ge 0$) on out-of-fold rank predictions:
+       * `LGB_ET_Deep`: **63.26%**
+       * `CB_GPU`: **31.38%**
+       * `LGB_Mono`: **5.14%**
+       * `XGB_GPU_Hist`: **0.19%**
+       * `LGB_Solvency`: **0.03%**
+       * `LGB_Shallow`, `LGB_Wide`: **0.00%**
+- **Empirical Validation Results:**
+  - Individual 7-Engine OOF Performance:
+    * `LGB_ET_Deep`: ROC-AUC **`0.767028`** | PR-AUC **`0.246853`**
+    * `CB_GPU`: ROC-AUC **`0.765426`** | PR-AUC **`0.244270`**
+    * `LGB_Mono`: ROC-AUC **`0.765162`** | PR-AUC **`0.245649`**
+    * `LGB_Solvency`: ROC-AUC **`0.764577`** | PR-AUC **`0.244228`**
+    * `LGB_Shallow`: ROC-AUC **`0.764462`** | PR-AUC **`0.244562`**
+    * `XGB_GPU_Hist`: ROC-AUC **`0.762237`** | PR-AUC **`0.241652`**
+    * `LGB_Wide`: ROC-AUC **`0.761605`** | PR-AUC **`0.240027`**
+  - Cross-Fitted Honest Nested Out-Of-Fold ROC-AUC: **`0.767460`** (+4.0 bps over V50's 0.767058!)
+  - Cross-Fitted Honest Nested Out-Of-Fold PR-AUC: **`0.247393`**
+  - Operational Risk Forensics (Confusion Matrix & Cutoff Diagnostics):
+    * Baseline Prevalence (8.07%, threshold=0.0807): TP=13,704 | FP=144,135 | TN=13,246 | FN=117 | Recall: 99.15% | Precision: 8.68% | F1: 0.1597
+    * Top 5.0% Highest Risk Tier (threshold=0.9485): TP=2,901 | FP=5,660 | TN=151,721 | FN=10,920 | Recall: 20.99% | Precision: 33.89% | F1: 0.2592
+    * Top 10.0% High Risk Tier (threshold=0.8981): TP=4,727 | FP=12,394 | TN=144,987 | FN=9,094 | Recall: 34.20% | Precision: 27.61% | F1: 0.3055
+    * Top 15.0% Moderate Risk Tier (threshold=0.8478): TP=6,169 | FP=19,512 | TN=137,869 | FN=7,652 | Recall: 44.63% | Precision: 24.02% | F1: 0.3123
+    * Top 20.0% Extended Review Tier (threshold=0.7979): TP=7,352 | FP=26,889 | TN=130,492 | FN=6,469 | Recall: 53.19% | Precision: 21.47% | F1: 0.3059
+- **Statistical Benchmark Concordance:**
+  - Spearman vs Certified V50 (`0.77374`): **`0.99412`**
+- **Forensic Compliance Clearance:**
+  - Audited with `truth/audit_v33.py`: **0 compliance flags**.
+  - Output File Path: `d:/gci/v_22_pure_champion_ensemble_certified_v51.csv`
+  - File Size: 1,677,103 bytes (61,500 rows, strictly matching `sample_submission.csv`).
+  - SHA-256: `999123D539F4F47EA2EC01A0AB2F2A28BCC307BEAD1BED1FE6EB83C910039BFF`
+  - Total Pipeline Runtime: 18.33 minutes.
 
 ---
 
