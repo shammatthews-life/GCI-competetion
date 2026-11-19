@@ -59,8 +59,8 @@
 | **Certified V51** | `d:/gci/v_22_pure_champion_ensemble_certified_v51.csv` | `d:/gci/v22_champion_audit_certified_v51_grand_apex_soVEREIGN_master.py` | **0.77415** | **0.76746** | **100% Pure Scratch Grand Apex Sovereign Master (259 Inductive Features, Econometric Peer Deviations, Multi-Scale KNN k=500/250/100, CatBoost GPU Native Categoricals, 7-Engine Suite, Direct ROC-AUC Simplex Optimization, Full Audit Cleared)** | `999123D539F4F47E...` |
 | **Certified V52** | `d:/gci/v_22_pure_champion_ensemble_certified_v52.csv` | `d:/gci/v22_champion_audit_certified_v52_claude_soVEREIGN_apex.py` | **0.77748** | **0.77340** | **100% Pure Scratch Claude Sovereign Apex (Data-Derived Fee Decoder F~127.0, 16 LightGBM Learned-Expectation Regressors, 6-View Stacking, 4 Diverse Extra-Trees Members + CatBoost GPU, 3-Seed Full-Train Re-Fit, PR-AUC 0.25422)** | `A330FEE879C71902...` |
 | **Certified V53** | `d:/gci/v_22_pure_champion_ensemble_certified_v53.csv` | `d:/gci/v22_champion_audit_certified_v53_claude_soVEREIGN_imperium.py` | **0.77757** | **0.77341** | **100% Pure Scratch Claude Sovereign Imperium (Fee Decoder, 18 Learned Regressors, Expanded 13-View Discrepancy Matrix [VD_EN, VD_EG, VD_LG, VD_EA], 4 LGBM Extra-Trees + CatBoost GPU, 5-Seed LGBM + 3-Seed CB Re-Fit, PR-AUC 0.25411)** | `9E58ED2DFD6AEC92...` |
-| **Certified V54** | `d:/gci/v_22_pure_champion_ensemble_certified_v54.csv` | `d:/gci/v22_champion_audit_certified_v54_claude_soVEREIGN_apex_zenith.py` | **Target 0.77800+** | **0.77330** | **100% Pure Scratch Claude Sovereign Apex Zenith (Refined Fee Grid 0.5, Monotonic Weight 0.30, 7-Seed LGBM + 5-Seed CB Re-Fit, PR-AUC 0.25391)** | `D7B8F5C6DFEEADCA...` |
-| **Certified V55** | `d:/gci/v_22_pure_champion_ensemble_certified_v55.csv` | `d:/gci/v22_champion_audit_certified_v55_tri_engine_sovereign_zenith.py` | **Target 0.77800+** | **0.77326** | **100% Pure Scratch Tri-Engine Sovereign Zenith (6 Inductive Solvency Features, 20 Regressors, LightGBM + CatBoost GPU + XGBoost GPU Trinity, PR-AUC 0.25387)** | `EDC8BEF37EE70C50...` |
+| **Certified V54** | `d:/gci/v_22_pure_champion_ensemble_certified_v54.csv` | `d:/gci/v22_champion_audit_certified_v54_claude_soVEREIGN_apex_zenith.py` | **0.77849** | **0.77330** | **100% Pure Scratch Claude Sovereign Apex Zenith (Refined Fee Grid 0.5, Monotonic Weight 0.30, 7-Seed LGBM + 5-Seed CB Re-Fit, PR-AUC 0.25391)** | `D7B8F5C6DFEEADCA...` |
+| **Certified V55** | `d:/gci/v_22_pure_champion_ensemble_certified_v55.csv` | `d:/gci/v22_champion_audit_certified_v55_tri_engine_sovereign_zenith.py` | **0.77863** | **0.77326** | **100% Pure Scratch Tri-Engine Sovereign Zenith (6 Inductive Solvency Features, 20 Regressors, LightGBM + CatBoost GPU + XGBoost GPU Trinity, PR-AUC 0.25387)** | `EDC8BEF37EE70C50...` |
 
 ---
 
@@ -1017,6 +1017,7 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
   - **Final Pooled Out-Of-Fold ROC-AUC:** **`0.77330`**
   - **Per-Fold ROC-AUC:** `[0.77004, 0.77561, 0.77846, 0.76986, 0.77292]` | Mean: **`0.77338`** | Std: `0.00330`
   - **Final Pooled Out-Of-Fold PR-AUC:** **`0.25391`**
+  - **Public Leaderboard Result:** Confirmed **`0.77849`** (+9.2 bps lift over V53's `0.77757`!)
   - **Operational Risk Forensics (Confusion Matrix & Cutoff Diagnostics):**
     * Base Prevalence (8.07%, threshold=0.0807): TP=13,708 | FP=143,673 | TN=13,708 | FN=113 | Recall: **99.18%** | Precision: 8.71% | F1: 0.1601
     * Top 2.0% Highest Risk Tier (threshold=0.9800): TP=1,453 | FP=1,972 | TN=155,409 | FN=12,368 | Recall: 10.51% | Precision: **42.42%** (5.26x enrichment) | F1: 0.1685
@@ -1071,6 +1072,7 @@ Unifies the complete 76-feature V43 base manifold bedrock with Russian administr
   - **Final Pooled Out-Of-Fold ROC-AUC:** **`0.77326`**
   - **Per-Fold ROC-AUC:** `[0.77006, 0.77577, 0.77778, 0.77002, 0.77304]` | Mean: **`0.77333`** | Std: **`0.00308`** (Lowest cross-fold variance in series!)
   - **Final Pooled Out-Of-Fold PR-AUC:** **`0.25387`**
+  - **Public Leaderboard Result:** Confirmed **`0.77863`** (All-time high clean score, +10.6 bps lift over V53, +1.4 bps over V54!)
   - **Operational Risk Forensics (Confusion Matrix & Cutoff Diagnostics):**
     * Base Prevalence (8.07%, threshold=0.0807): TP=13,708 | FP=143,673 | TN=13,708 | FN=113 | Recall: **99.18%** | Precision: 8.71% | F1: 0.1601
     * Top 2.0% Highest Risk Tier (threshold=0.9800): TP=1,456 | FP=1,969 | TN=155,412 | FN=12,365 | Recall: 10.53% | Precision: **42.51%** (5.27x enrichment) | F1: 0.1689
