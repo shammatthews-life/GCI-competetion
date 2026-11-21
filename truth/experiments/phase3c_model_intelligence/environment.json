@@ -1,0 +1,10 @@
+{
+  "finalized_utc": "2026-11-03T17:07:23.431226+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "target_auc": 0.79,
+  "best_model_variant": "lightgbm__raw_plus_product",
+  "best_pooled_oof_auc": 0.7624913575377017,
+  "best_fixed_blend_auc": 0.7639571328803725,
+  "initial_phase_only": false
+}

@@ -1,0 +1,169 @@
+{
+  "incomplete_runs_without_manifests": 1,
+  "independently_recomputed_auc_rows": [
+    {
+      "recomputed_pooled_auc": 0.7713230945692687,
+      "rows": 34241,
+      "run": "phase15_native_catboost_preflight_20261105T124003Z",
+      "status": "pass",
+      "variant": "native_catboost_base_all8"
+    },
+    {
+      "recomputed_pooled_auc": 0.7725778296670065,
+      "rows": 34241,
+      "run": "phase15_native_catboost_preflight_20261105T124003Z",
+      "status": "pass",
+      "variant": "native_catboost_phase14_numeric"
+    },
+    {
+      "recomputed_pooled_auc": 0.7726281960774706,
+      "rows": 34241,
+      "run": "phase15_native_catboost_preflight_20261105T124003Z",
+      "status": "pass",
+      "variant": "native_catboost_phase14_plus_time"
+    },
+    {
+      "recomputed_pooled_auc": 0.7670043192780769,
+      "rows": 171202,
+      "run": "phase15_native_catboost_oof_20261105T124238Z",
+      "status": "pass",
+      "variant": "native_catboost_base_all8"
+    },
+    {
+      "recomputed_pooled_auc": 0.7672312903350355,
+      "rows": 171202,
+      "run": "phase15_native_catboost_oof_20261105T124238Z",
+      "status": "pass",
+      "variant": "native_catboost_phase14_numeric"
+    },
+    {
+      "recomputed_pooled_auc": 0.767510927794687,
+      "rows": 171202,
+      "run": "phase15_native_catboost_oof_20261105T124238Z",
+      "status": "pass",
+      "variant": "native_catboost_phase14_plus_time"
+    },
+    {
+      "recomputed_pooled_auc": 0.767510927794687,
+      "rows": 171202,
+      "run": "phase15_native_catboost_multiseed_20261105T125826Z",
+      "status": "pass",
+      "variant": "phase15_primary_seed_20261113"
+    },
+    {
+      "recomputed_pooled_auc": 0.7679460554548165,
+      "rows": 171202,
+      "run": "phase15_native_catboost_multiseed_20261105T125826Z",
+      "status": "pass",
+      "variant": "phase15_secondary_seed_20261114"
+    },
+    {
+      "recomputed_pooled_auc": 0.7670810696251881,
+      "rows": 171202,
+      "run": "phase15_native_catboost_multiseed_20261105T125826Z",
+      "status": "pass",
+      "variant": "phase15_secondary_seed_20261115"
+    },
+    {
+      "recomputed_pooled_auc": 0.7688247083074312,
+      "rows": 171202,
+      "run": "phase15_native_catboost_multiseed_20261105T125826Z",
+      "status": "pass",
+      "variant": "phase15_three_seed_average"
+    },
+    {
+      "recomputed_pooled_auc": 0.7376579926764515,
+      "rows": 6000,
+      "run": "phase15_xgboost_category_preflight_20261105T125653Z",
+      "status": "pass",
+      "variant": "xgboost_native_categories_no_product_keys"
+    },
+    {
+      "recomputed_pooled_auc": 0.7230698898471165,
+      "rows": 6000,
+      "run": "phase15_xgboost_category_preflight_20261105T125653Z",
+      "status": "pass",
+      "variant": "xgboost_native_categories_four_constant_free_keys"
+    },
+    {
+      "recomputed_pooled_auc": 0.7728747811497858,
+      "rows": 34241,
+      "run": "phase15_ctr2_preflight_20261105T130340Z",
+      "status": "pass",
+      "variant": "ctr_complexity_1"
+    },
+    {
+      "recomputed_pooled_auc": 0.7725442443974092,
+      "rows": 34241,
+      "run": "phase15_ctr2_preflight_20261105T130340Z",
+      "status": "pass",
+      "variant": "ctr_complexity_2"
+    },
+    {
+      "recomputed_pooled_auc": 0.7727711576049348,
+      "rows": 34241,
+      "run": "phase15_org_ext_cross_preflight_20261105T130627Z",
+      "status": "pass",
+      "variant": "catboost_ctr1_time_base"
+    },
+    {
+      "recomputed_pooled_auc": 0.773673833562438,
+      "rows": 34241,
+      "run": "phase15_org_ext_cross_preflight_20261105T130627Z",
+      "status": "pass",
+      "variant": "catboost_ctr1_time_plus_org_external_cross"
+    },
+    {
+      "recomputed_pooled_auc": 0.7728747811497858,
+      "rows": 34241,
+      "run": "phase15_org_ext_cross_preflight_20261105T130627Z",
+      "status": "pass",
+      "variant": "stored_primary"
+    },
+    {
+      "recomputed_pooled_auc": 0.7675963430104651,
+      "rows": 171202,
+      "run": "phase15_org_ext_cross_oof_20261105T130802Z",
+      "status": "pass",
+      "variant": "catboost_ctr1_time_base"
+    },
+    {
+      "recomputed_pooled_auc": 0.7676417467383859,
+      "rows": 171202,
+      "run": "phase15_org_ext_cross_oof_20261105T130802Z",
+      "status": "pass",
+      "variant": "catboost_ctr1_time_plus_org_external_cross"
+    }
+  ],
+  "manifest_corrections": [
+    {
+      "actual_sha256": "c8796fca164964aa78b06480caff0133e10dfab1fe70448650fead437cada737",
+      "bytes": 1246,
+      "declared_sha256": "a281db1c89eab28f76f633e6e6e6ce0167416887262ed40ae5f47b953bb438d9",
+      "file": "EXECUTION_LOG.txt",
+      "reason": "The run logger wrote its final completion line after the original SHA256_MANIFEST.csv was generated. The original manifest is preserved; this supplemental entry provides the actual final-file hash.",
+      "run": "phase15_native_catboost_preflight_20261105T124003Z"
+    },
+    {
+      "actual_sha256": "e4de77fab78be4d9e541c7aff0dfa9f1c8bf3b6feaefa4c8b28e95a40b2d6fbd",
+      "bytes": 2916,
+      "declared_sha256": "d0be435c5230e0a7c0bd121bb7919576a47f69c42b334e06cd4c49a6c0805aa7",
+      "file": "EXECUTION_LOG.txt",
+      "reason": "The run logger wrote its final completion line after the original SHA256_MANIFEST.csv was generated. The original manifest is preserved; this supplemental entry provides the actual final-file hash.",
+      "run": "phase15_native_catboost_oof_20261105T124238Z"
+    }
+  ],
+  "output_artifact_sha256": {
+    "PHASE15_ARTIFACT_REGISTRY.csv": "d8219ba1b25d1f011b53de1aaecd1f13d32715d4decb9a68b6c787c484c9e251",
+    "PHASE15_INDEPENDENT_AUC_VERIFICATION.csv": "77dc9af629c5e6b1e463cdf7a3eeb5ccb8d009a6c3fc44a1368c6dced0073e56",
+    "PHASE15_MANIFEST_CORRECTIONS.csv": "2a1d81303d776328789d53db10b0b0551d5435e93dc3429397cf167640c04d8b"
+  },
+  "phase13_reference_sha256": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+  "registry_entries": 95,
+  "registry_mismatch_count": 2,
+  "registry_pass_count": 92,
+  "status": "independent file/hash/OOF audit completed",
+  "training_ids_unique": 171202,
+  "training_rows": 171202,
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

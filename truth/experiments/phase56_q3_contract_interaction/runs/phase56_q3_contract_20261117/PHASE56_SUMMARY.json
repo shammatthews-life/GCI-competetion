@@ -1,0 +1,191 @@
+{
+  "experiment": "Phase 56 coarse q3 by contract interaction",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "fold_records": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7630263491037286,
+      "q3_auc": 0.765563887481393,
+      "q3_contract_auc": 0.7648568727300344,
+      "q3_delta_vs_baseline": 0.002537538377664461,
+      "interaction_delta_vs_q3": -0.0007070147513585923,
+      "q3_category_cardinality_fit_only": 96,
+      "joint_category_cardinality_fit_only": 99
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7647071956083765,
+      "q3_auc": 0.7693502693403764,
+      "q3_contract_auc": 0.7677409373242727,
+      "q3_delta_vs_baseline": 0.004643073731999903,
+      "interaction_delta_vs_q3": -0.0016093320161036928,
+      "q3_category_cardinality_fit_only": 94,
+      "joint_category_cardinality_fit_only": 97
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7563791280849084,
+      "q3_auc": 0.7583062044929277,
+      "q3_contract_auc": 0.7562606448686975,
+      "q3_delta_vs_baseline": 0.001927076408019368,
+      "interaction_delta_vs_q3": -0.002045559624230253,
+      "q3_category_cardinality_fit_only": 96,
+      "joint_category_cardinality_fit_only": 99
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7560451727721615,
+      "q3_auc": 0.758863310092784,
+      "q3_contract_auc": 0.7583688943902128,
+      "q3_delta_vs_baseline": 0.002818137320622416,
+      "interaction_delta_vs_q3": -0.0004944157025711382,
+      "q3_category_cardinality_fit_only": 96,
+      "joint_category_cardinality_fit_only": 99
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.755550216837619,
+      "q3_auc": 0.7588804251014118,
+      "q3_contract_auc": 0.7590230463418801,
+      "q3_delta_vs_baseline": 0.003330208263792822,
+      "interaction_delta_vs_q3": 0.00014262124046826585,
+      "q3_category_cardinality_fit_only": 96,
+      "joint_category_cardinality_fit_only": 99
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "pooled_auc": 0.7591055148795735,
+      "fold_auc": [
+        0.7630263491037286,
+        0.7647071956083765,
+        0.7563791280849084,
+        0.7560451727721615,
+        0.755550216837619
+      ],
+      "mean_fold_auc": 0.7591416124813588,
+      "std_fold_auc": 0.003903441449596087,
+      "log_loss": 0.2457855423340148
+    },
+    "q3": {
+      "pooled_auc": 0.7621438561922151,
+      "fold_auc": [
+        0.765563887481393,
+        0.7693502693403764,
+        0.7583062044929277,
+        0.758863310092784,
+        0.7588804251014118
+      ],
+      "mean_fold_auc": 0.7621928193017786,
+      "std_fold_auc": 0.004466689004406177,
+      "log_loss": 0.24502956526116312
+    },
+    "q3_contract": {
+      "pooled_auc": 0.7612231343046032,
+      "fold_auc": [
+        0.7648568727300344,
+        0.7677409373242727,
+        0.7562606448686975,
+        0.7583688943902128,
+        0.7590230463418801
+      ],
+      "mean_fold_auc": 0.7612500791310195,
+      "std_fold_auc": 0.004319619311083091,
+      "log_loss": 0.24539757568689163
+    }
+  },
+  "deltas": {
+    "q3_vs_baseline": {
+      "pooled_auc": 0.0030383413126416903,
+      "log_loss": -0.0007559770728516879,
+      "positive_folds": 5,
+      "bootstrap": {
+        "replicates": 200,
+        "mean_delta": 0.0031526201012850087,
+        "ci_2_5": 0.0016637708788216716,
+        "ci_97_5": 0.004534587386040745,
+        "fraction_positive": 1.0,
+        "conditional_on_oof_vectors": true
+      }
+    },
+    "q3_contract_vs_q3": {
+      "pooled_auc": -0.0009207218876119416,
+      "log_loss": 0.00036801042572850995,
+      "positive_folds": 1,
+      "bootstrap": {
+        "replicates": 200,
+        "mean_delta": -0.0009979197345606,
+        "ci_2_5": -0.0016568604075718307,
+        "ci_97_5": -0.0003534674161615207,
+        "fraction_positive": 0.0,
+        "conditional_on_oof_vectors": true
+      }
+    },
+    "q3_contract_vs_baseline": {
+      "pooled_auc": 0.0021176194250297486,
+      "log_loss": -0.00038796664712317797,
+      "positive_folds": 4,
+      "bootstrap": {
+        "replicates": 200,
+        "mean_delta": 0.0020951456083677256,
+        "ci_2_5": 0.0007638736738400626,
+        "ci_97_5": 0.0035267362040548506,
+        "fraction_positive": 0.995,
+        "conditional_on_oof_vectors": true
+      }
+    }
+  },
+  "model": {
+    "library": "LightGBM",
+    "version": "4.7.0",
+    "device": "CPU",
+    "iterations": 900,
+    "learning_rate": 0.04,
+    "num_leaves": 15,
+    "min_child_samples": 150,
+    "threads": 4,
+    "early_stopping": false
+  },
+  "feature_scope": {
+    "baseline": "official predictors plus deterministic row-local ratios/logs/age/external geometry",
+    "q3": "baseline plus q=AMT_ANNUITY/AMT_CREDIT rounded to 3 decimals",
+    "q3_contract": "q3 model plus row-local joint key NAME_CONTRACT_TYPE|Q3",
+    "category_maps": "fit on each model training fold only; unseen validation/test keys map to missing",
+    "target_encoding": "none",
+    "support_count": "none",
+    "train_test_pooling": "none",
+    "external_data": "none",
+    "prior_predictions_or_cache": "none",
+    "manual_prediction_edits": "none"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "4712cdf54048965457a5cbf711e447a8996f7b43f08a10c5c4f78d21b40c04c0",
+  "runtime_seconds": 419.65994109999156,
+  "artifacts": {
+    "oof_predictions": "PHASE56_OOF_PREDICTIONS.csv",
+    "submission": "submission.csv"
+  },
+  "caveats": [
+    "All labeled rows and these folds have prior project exposure; this result is exploratory.",
+    "The bootstrap intervals are conditional on saved OOF vectors and do not account for model or research-selection uncertainty.",
+    "This test asks whether contract type modifies the q3 grouping; it does not reproduce the archived target-encoded pipeline.",
+    "The submission is an experiment artifact, not a confirmed champion or a guaranteed leaderboard score."
+  ]
+}

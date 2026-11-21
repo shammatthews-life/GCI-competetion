@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-11-03T15:06:38.608727+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit_learn": "1.9.1",
+  "lightgbm": "4.7.0",
+  "validation": "saved 5 folds; inner raw-only stratified 10% stopping split",
+  "outer_validation_used_for_early_stopping": false,
+  "target_encoding": false,
+  "pooled_train_test_statistics": false,
+  "test_data_used": false
+}

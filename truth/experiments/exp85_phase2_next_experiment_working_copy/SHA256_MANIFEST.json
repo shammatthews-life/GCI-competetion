@@ -1,0 +1,14 @@
+{
+  "algorithm": "SHA-256",
+  "manifest_excludes_itself": true,
+  "files": {
+    "EXP85_PHASE2_NEXT_EXPERIMENT_WORKING_COPY.ipynb": {
+      "sha256": "ab73f6f39a0fee803fc946de5bd64a4219f9b59a35663c8510b9c002570069f0",
+      "size_bytes": 6706327
+    },
+    "FEATURE_MANIFEST.csv": {
+      "sha256": "3d588dc32c5f9194ae6ef5cb26278ccba5ff30b4d8463cdc02a2245cdaae5e5f",
+      "size_bytes": 9154
+    }
+  }
+}

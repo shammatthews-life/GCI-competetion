@@ -1,0 +1,200 @@
+{
+  "seed": 314159,
+  "folds": 5,
+  "n_train": 171202,
+  "candidate_runs": [
+    "v01_clean_raw",
+    "v02_rowwise_features"
+  ],
+  "paired_fold_deltas": {
+    "v02_rowwise_features:catboost_gpu-vs-v01_clean_raw:catboost_gpu": {
+      "fold_delta_auc": [
+        0.007352944218981916,
+        0.005164197550440064,
+        0.006309357700507778,
+        0.005456469349123028,
+        0.007090751522902505
+      ],
+      "mean_fold_delta_auc": 0.006274744068391058,
+      "folds_improved": 5,
+      "folds_tied": 0
+    },
+    "v02_rowwise_features:lightgbm_cpu-vs-v01_clean_raw:lightgbm_cpu": {
+      "fold_delta_auc": [
+        0.009810760683598319,
+        0.0067621543277499585,
+        0.00879059716828312,
+        0.006913681873530031,
+        0.007809949702794139
+      ],
+      "mean_fold_delta_auc": 0.008017428751191113,
+      "folds_improved": 5,
+      "folds_tied": 0
+    },
+    "v02_rowwise_features:xgboost_gpu-vs-v01_clean_raw:xgboost_gpu": {
+      "fold_delta_auc": [
+        0.007982133556088788,
+        0.005690204678463484,
+        0.008138037176787294,
+        0.006122035137974824,
+        0.008168600513215885
+      ],
+      "mean_fold_delta_auc": 0.007220202212506055,
+      "folds_improved": 5,
+      "folds_tied": 0
+    }
+  },
+  "within_fold_spearman": {
+    "v01_clean_raw:catboost_gpu|v01_clean_raw:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9474010862812738,
+      "fold_spearman": [
+        0.9476648733750151,
+        0.9475390921675296,
+        0.9464343989951195,
+        0.9475766767809708,
+        0.9477903900877344
+      ]
+    },
+    "v01_clean_raw:catboost_gpu|v01_clean_raw:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9754974632243091,
+      "fold_spearman": [
+        0.9761733570454696,
+        0.9766212217234272,
+        0.9753863667622112,
+        0.9752002057798524,
+        0.9741061648105853
+      ]
+    },
+    "v01_clean_raw:catboost_gpu|v02_rowwise_features:catboost_gpu": {
+      "mean_within_fold_spearman": 0.9616124161591234,
+      "fold_spearman": [
+        0.9652520817344293,
+        0.9616797200892766,
+        0.9615154727301108,
+        0.9602899562371706,
+        0.9593248500046293
+      ]
+    },
+    "v01_clean_raw:catboost_gpu|v02_rowwise_features:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9209328018144951,
+      "fold_spearman": [
+        0.9243864572611843,
+        0.9217805865994619,
+        0.9196405671257682,
+        0.9183201604117897,
+        0.9205362376742716
+      ]
+    },
+    "v01_clean_raw:catboost_gpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9429088146407179,
+      "fold_spearman": [
+        0.946505194145225,
+        0.9432441569230834,
+        0.9420573810825011,
+        0.9404357426109488,
+        0.9423015984418304
+      ]
+    },
+    "v01_clean_raw:lightgbm_cpu|v01_clean_raw:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9624882755606773,
+      "fold_spearman": [
+        0.9633580362620164,
+        0.9620170145369957,
+        0.9611525949554368,
+        0.9626436820020953,
+        0.9632700500468423
+      ]
+    },
+    "v01_clean_raw:lightgbm_cpu|v02_rowwise_features:catboost_gpu": {
+      "mean_within_fold_spearman": 0.9251745285773876,
+      "fold_spearman": [
+        0.9267648215150579,
+        0.9250406529996952,
+        0.9242312050369754,
+        0.9261654100255402,
+        0.9236705533096691
+      ]
+    },
+    "v01_clean_raw:lightgbm_cpu|v02_rowwise_features:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9498734653862935,
+      "fold_spearman": [
+        0.9526999999678109,
+        0.9497382192451312,
+        0.9494000469655731,
+        0.9489772121582427,
+        0.948551848594709
+      ]
+    },
+    "v01_clean_raw:lightgbm_cpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9286182727691985,
+      "fold_spearman": [
+        0.9327859665622767,
+        0.9278371292017387,
+        0.9264472514284621,
+        0.9269410266425325,
+        0.9290799900109825
+      ]
+    },
+    "v01_clean_raw:xgboost_gpu|v02_rowwise_features:catboost_gpu": {
+      "mean_within_fold_spearman": 0.9536071893346959,
+      "fold_spearman": [
+        0.9548901175232836,
+        0.9540163567143778,
+        0.9542701501358333,
+        0.9536955347050998,
+        0.9511637875948853
+      ]
+    },
+    "v01_clean_raw:xgboost_gpu|v02_rowwise_features:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9343297210878992,
+      "fold_spearman": [
+        0.9376912212148282,
+        0.9348055250623487,
+        0.9336133594181982,
+        0.9321396388161737,
+        0.9333988609279475
+      ]
+    },
+    "v01_clean_raw:xgboost_gpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9575570317681509,
+      "fold_spearman": [
+        0.9604383994798207,
+        0.9573815330363019,
+        0.957773211369679,
+        0.9556092446613335,
+        0.9565827702936195
+      ]
+    },
+    "v02_rowwise_features:catboost_gpu|v02_rowwise_features:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9467036232920234,
+      "fold_spearman": [
+        0.9466370272082665,
+        0.9477418453313988,
+        0.9458660225784201,
+        0.9469880961464067,
+        0.9462851251956252
+      ]
+    },
+    "v02_rowwise_features:catboost_gpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9722595762687132,
+      "fold_spearman": [
+        0.9719749290328368,
+        0.9724905885162228,
+        0.9717374819115593,
+        0.9729129378038308,
+        0.9721819440791166
+      ]
+    },
+    "v02_rowwise_features:lightgbm_cpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9662756995166031,
+      "fold_spearman": [
+        0.9671252786096773,
+        0.9667578845221432,
+        0.9650175143090903,
+        0.9656874337294322,
+        0.9667903864126721
+      ]
+    }
+  },
+  "interpretation": "Fold means and paired fold deltas are primary. Pooled OOF AUC is also reported but can reflect score-scale differences across folds. The ensemble is a fixed equal-probability diagnostic, not a tuned blend."
+}

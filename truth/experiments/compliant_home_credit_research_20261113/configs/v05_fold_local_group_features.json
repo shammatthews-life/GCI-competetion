@@ -1,0 +1,28 @@
+{
+  "candidate_id": "v05_fold_local_group_features",
+  "feature_set": "rowwise_v1",
+  "models": ["xgboost_gpu"],
+  "group_features": true,
+  "group_columns": [
+    "ORGANIZATION_TYPE",
+    "OCCUPATION_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "REGION_RATING_CLIENT",
+    "NAME_INCOME_TYPE"
+  ],
+  "group_values": [
+    "AMT_INCOME_TOTAL",
+    "AMT_CREDIT",
+    "AMT_ANNUITY",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3"
+  ],
+  "inner_folds": 5,
+  "seed": 314159,
+  "outer_folds": 5,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false,
+  "feature_generation": "Each training row's group statistics are fitted on other inner-fold rows; validation/test rows use only the active outer training partition."
+}

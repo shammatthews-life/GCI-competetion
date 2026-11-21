@@ -1,0 +1,66 @@
+{
+  "phase": "Phase 45 nested cross-fitted contract-expert calibration",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "inner_calibration_folds": 3,
+  "model": "Phase 38 XGBoost configuration; inner 12% stopping split; outer-fit refit",
+  "key_min_frequency": 50,
+  "gate": "NAME_CONTRACT_TYPE: cash=0, revolving=1",
+  "fixed_mixture_weight": 0.5,
+  "calibration": {
+    "method": "per-contract-group Platt logistic regression on inner out-of-fold expert logits",
+    "input_prediction_folds": 3,
+    "regularization_C": 10000.0,
+    "validation_labels_used": false
+  },
+  "metrics": {
+    "global": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "contract_type_hard": {
+      "pooled_auc": 0.7640162654657314,
+      "pooled_log_loss": 0.24459077417850494,
+      "mean_fold_auc": 0.7640701420142851
+    },
+    "contract_type_mixture_50_50": {
+      "pooled_auc": 0.7651924668511284,
+      "pooled_log_loss": 0.2442401796579361,
+      "mean_fold_auc": 0.7652305624106586
+    },
+    "contract_type_platt_mixture_50_50": {
+      "pooled_auc": 0.7651977416287196,
+      "pooled_log_loss": 0.24424517154693604,
+      "mean_fold_auc": 0.765221077697652
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "gate_membership": "deterministic supplied covariate only",
+    "expert_training": "each expert fit only on its outer-training subgroup",
+    "calibrator_training": "inner OOF expert predictions and labels within outer-training subgroup",
+    "outer_validation": "never used for fitting, early stopping, gate selection, or calibration",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none"
+  },
+  "caveats": [
+    "The calibrator can change cross-group ordering but is not expected to improve within-group ranking; judge only pooled outer OOF AUC and log-loss.",
+    "Repeated reuse of the training labels creates selection bias; this is not independent confirmation or a leaderboard guarantee."
+  ],
+  "runtime_seconds": 246.66002260000096,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase45_nested_expert_calibration\\run_phase45_nested_expert_calibration.py": "b16578b6ed2449b11209174e6c01eddadd9e1f2fada2c8cf9772a120b90b7925",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase45_nested_expert_calibration\\runs\\phase45_calibrated_20261108T095905Z\\PHASE45_FOLD_RESULTS.csv": "147a1ba7bba537b52b6a93110e80fb8f1338b5f6aeb4748f621f1ccbc3cf39d7",
+    "D:\\gci\\truth\\experiments\\phase45_nested_expert_calibration\\runs\\phase45_calibrated_20261108T095905Z\\PHASE45_CALIBRATION_RESULTS.csv": "97c5a052c3ea969a81e66e55688f7a950201d0c23418a9b5c77a1e5c939447e0",
+    "D:\\gci\\truth\\experiments\\phase45_nested_expert_calibration\\runs\\phase45_calibrated_20261108T095905Z\\PHASE45_OOF_PREDICTIONS.csv": "02a50012df2c60dc38cfd7712fedebedd59dc60aa6780ddf2d2fd1ebcc00bdc0"
+  }
+}

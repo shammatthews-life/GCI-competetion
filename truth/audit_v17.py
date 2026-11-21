@@ -69,3 +69,4 @@ if "np.isfinite" in content and "equals(sample_sub[\"SK_ID_CURR\"])" in content:
     print("[PASS] Finite Predictions & Exact ID Order Assertions Verified.")
 else:
     print("[FAIL] Missing schema assertions!")
+

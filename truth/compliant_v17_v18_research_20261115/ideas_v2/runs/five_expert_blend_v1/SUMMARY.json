@@ -1,0 +1,111 @@
+{
+  "status": "fixed post-hoc ensemble of five fold-isolated OOF experts; exploratory",
+  "formula": "0.90*rank(TE20) + 0.02*sum(rank(group-conditional, covariate-residual, model-view, category-TE, XGBoost-pairwise)); all ranks within outer fold",
+  "fixed_weights": {
+    "baseline": 0.9,
+    "each_expert": 0.02,
+    "expert_count": 5
+  },
+  "outer_folds": 5,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "five_expert_blend_mean_fold_auc": 0.768048314657271,
+  "five_expert_blend_mean_fold_gain": 0.0002927385000688343,
+  "positive_folds": 5,
+  "minimum_promotion_gain": 0.005,
+  "promotion_gate_passed": false,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "fixed_five_expert_blend_auc": 0.772508607460932,
+      "blend_delta": 0.00013286410811419458,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.7658051106343836,
+      "covariate_residual_expert_auc": 0.7659451584500608,
+      "crossfit_model_view_expert_auc": 0.7649847427246512,
+      "fold_local_category_te_expert_auc": 0.7664393055789201,
+      "xgboost_rank_pairwise_expert_auc": 0.7634245966101084
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "fixed_five_expert_blend_auc": 0.7749946455946688,
+      "blend_delta": 0.00013905942171965613,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.768536888060986,
+      "covariate_residual_expert_auc": 0.7692598419370353,
+      "crossfit_model_view_expert_auc": 0.7668697778749077,
+      "fold_local_category_te_expert_auc": 0.7679049935459882,
+      "xgboost_rank_pairwise_expert_auc": 0.7641931669515072
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "fixed_five_expert_blend_auc": 0.7627376526419689,
+      "blend_delta": 0.00027655853935260044,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7581977730396752,
+      "covariate_residual_expert_auc": 0.7567880204686768,
+      "crossfit_model_view_expert_auc": 0.7559804024070713,
+      "fold_local_category_te_expert_auc": 0.7578172313401119,
+      "xgboost_rank_pairwise_expert_auc": 0.7560630061743687
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "fixed_five_expert_blend_auc": 0.7653666110710496,
+      "blend_delta": 0.00047467999416650475,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7610735427667858,
+      "covariate_residual_expert_auc": 0.764060295681142,
+      "crossfit_model_view_expert_auc": 0.7588405858670904,
+      "fold_local_category_te_expert_auc": 0.761881620600282,
+      "xgboost_rank_pairwise_expert_auc": 0.7604115861872754
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "fixed_five_expert_blend_auc": 0.7646340565177354,
+      "blend_delta": 0.0004405304369911045,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7596638534144224,
+      "covariate_residual_expert_auc": 0.7628067046327902,
+      "crossfit_model_view_expert_auc": 0.759689675353229,
+      "fold_local_category_te_expert_auc": 0.7602188555578789,
+      "xgboost_rank_pairwise_expert_auc": 0.7600116823439685
+    }
+  ],
+  "input_oof_files": {
+    "group_conditional_rank_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv",
+    "covariate_residual_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv",
+    "crossfit_model_view_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv",
+    "fold_local_category_te_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv",
+    "xgboost_rank_pairwise_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\xgboost_rank_pairwise_v1\\OOF_PREDICTIONS.csv"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "official_train": "read only to verify ID/label alignment and calculate OOF metrics",
+    "expert_outputs": "pre-existing outer-fold OOF predictions; no test prediction or training-row label transfer",
+    "weights": "fixed equal 2% rank share per expert; not optimized",
+    "external_data": "none",
+    "manual_row_edits": "none",
+    "test_predictions_or_submission": "none",
+    "validation_caveat": "post-hoc combination on repeatedly examined OOF folds; not an independent generalization estimate"
+  },
+  "runtime_seconds": 3.116535000008298,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv": "f1f00dce743bd24d9fb66e0af24986bab351a36eeecd04f51558c852a4e1b2c0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv": "4e31bb89637a6d2f09122ab42acc6a27b915e42113fcffe8496260b1ecc3f4c4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv": "4ad7bfc5e9e04457279b33c927a3a5007df9ec99ab17965b6f9a957c68163afb",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv": "70d9a69f735d88841f1fa2d40df88e2ce73291f24a844a68694561bde64a8332",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\xgboost_rank_pairwise_v1\\OOF_PREDICTIONS.csv": "85c0d4a655ff6a28449ec05e64d71cb27cb20f09eba5934c9ace059dd7509074",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\five_expert_blend_v1.py": "1d08be93b7381fb6130ec2360fb66f1cefc0a3a57458a631e3db3fed7c239f44",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\five_expert_blend_v1\\OOF_PREDICTIONS.csv": "6e66bb0f6bacf425a7c6ff6637cb4dfb81b256a604b574f7c789d07c019ec2f6",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\five_expert_blend_v1\\FOLD_METRICS.csv": "ede054f71bf2dbecdb720ba024806d22bdbb8fe6ab7df3019e4c14f93d8cdf97"
+  }
+}

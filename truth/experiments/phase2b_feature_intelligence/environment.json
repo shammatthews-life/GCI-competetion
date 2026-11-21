@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-11-03T09:58:03Z",
+  "train_shape": [
+    171202,
+    34
+  ],
+  "test_shape": [
+    61500,
+    33
+  ],
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "test_sha256": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+  "baseline_source": "D:\\gci\\truth\\research_archive\\exp85_phase2_source_snapshot\\project\\source\\run_independent_baseline.py",
+  "baseline_source_sha256": "c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe",
+  "validation_source": "D:\\gci\\truth\\experiments\\phase2_advanced_feature_engineering\\run_corrected_validation.py",
+  "folds": 5,
+  "outer_seed": 42,
+  "early_stopping": "inner 10% stratified split of outer-training partition",
+  "peer_group_statistics": "fit on inner-fit or outer-fit rows only; min group size 30; global fit-only median/IQR fallback",
+  "rules": "provided train.csv/test.csv only; no test-label or external-data use",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "lightgbm": "4.7.0",
+  "runtime_seconds": 4157.9
+}

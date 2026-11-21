@@ -1,0 +1,47 @@
+{
+  "phase": "Phase 36 extended constant-free ratio categories",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "new_features": {
+    "EXT_KEY_CREDIT_INCOME_3": "round(rowwise ratio, 3 decimals), sourced only from supplied amount columns",
+    "EXT_KEY_ANNUITY_INCOME_3": "round(rowwise ratio, 3 decimals), sourced only from supplied amount columns",
+    "EXT_KEY_GOODS_CREDIT_3": "round(rowwise ratio, 3 decimals), sourced only from supplied amount columns",
+    "EXT_KEY_GOODS_INCOME_3": "round(rowwise ratio, 3 decimals), sourced only from supplied amount columns"
+  },
+  "feature_processing": {
+    "one_hot": "vocabulary and minimum-frequency grouping fit on each training partition only",
+    "frequency": "category counts fit on each training partition only; unseen values map to zero"
+  },
+  "metrics": {
+    "extended_ratio_keys": {
+      "pooled_auc": 0.7641537878157193,
+      "mean_fold_auc": 0.76423789995783,
+      "log_loss": 0.24453774094581604
+    },
+    "fixed_equal_blend_base_extended": {
+      "pooled_auc": 0.7648938639145106,
+      "mean_fold_auc": 0.7649435136348469,
+      "log_loss": 0.24432222545146942
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "comparison": "same seed and five outer folds as Phase 34"
+  },
+  "runtime_seconds": 111.7540377000114,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_OOF_PREDICTIONS.csv": "7e6ece0db0c6c28f2c8d8b237413c8c96fa7ad1c1d6b56417d63f7c508367073",
+    "D:\\gci\\truth\\experiments\\phase36_extended_ratio_keys\\run_phase36_extended_ratio_keys.py": "5b9a200e5dae778d119322e5d15dd7ca95fb22813f3ec65906f0eb708778f372",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase36_extended_ratio_keys\\runs\\phase36_ratio_keys_20261107T172834Z\\PHASE36_FOLD_RESULTS.csv": "a81f58c8f5fe123df9955701a0c3d97ca33c8bb97b03ef10a7a5c27befe84414",
+    "D:\\gci\\truth\\experiments\\phase36_extended_ratio_keys\\runs\\phase36_ratio_keys_20261107T172834Z\\PHASE36_OOF_PREDICTIONS.csv": "bafebcdf8109df281e32cff37a11117057e5952f1f1c9874ed3d73068371471f"
+  }
+}

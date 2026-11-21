@@ -1,0 +1,58 @@
+{
+  "phase": "Phase 40 XGBoost depth and leaf regularization screen",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "key_min_frequency": 50,
+  "configs": {
+    "depth3_child20": {
+      "max_depth": 3,
+      "min_child_weight": 20,
+      "learning_rate": 0.035,
+      "reg_lambda": 5.0
+    },
+    "depth5_child60": {
+      "max_depth": 5,
+      "min_child_weight": 60,
+      "learning_rate": 0.03,
+      "reg_lambda": 8.0
+    }
+  },
+  "metrics": {
+    "depth4_min_frequency_50_reference": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "depth3_child20": {
+      "pooled_auc": 0.7645197542158593,
+      "pooled_log_loss": 0.24445414543151855,
+      "mean_fold_auc": 0.7645784041036021
+    },
+    "depth5_child60": {
+      "pooled_auc": 0.7644800427055483,
+      "pooled_log_loss": 0.24451062083244324,
+      "mean_fold_auc": 0.7645358193604421
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "category_vocabularies_and_frequencies": "fit on each model training partition only"
+  },
+  "runtime_seconds": 140.93069439998362,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\runs\\phase38_thresholds_20261107T173546Z\\PHASE38_OOF_PREDICTIONS.csv": "b7dd64efa160bec9ab3c99a01cd1597a12a673cf37a76a24abda25f4eafa7c76",
+    "D:\\gci\\truth\\experiments\\phase40_xgb_depth_screen\\run_phase40_xgb_depth_screen.py": "d534b6f009d66ca0d8f9cc4cf358039f44910c5d0438f9ab389ad8d5b3f7a48e",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase40_xgb_depth_screen\\runs\\phase40_xgb_depth_20261107T174314Z\\PHASE40_FOLD_RESULTS.csv": "5b14103f51918bf521fa198947b21d8edd926e5c950e9eeb4e1d5e869b217dbe",
+    "D:\\gci\\truth\\experiments\\phase40_xgb_depth_screen\\runs\\phase40_xgb_depth_20261107T174314Z\\PHASE40_OOF_PREDICTIONS.csv": "bd6ea9f18f98223086714a551c851f8c19e3ceb1de038e76d7baafe60120ea84"
+  }
+}

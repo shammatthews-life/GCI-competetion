@@ -1,0 +1,76 @@
+{
+  "status": "exploratory rules-conscious OOF; repeated-label development",
+  "inputs": "official train.csv and row-alignment metadata from prior OOF; test.csv not read",
+  "feature_hypothesis": "same feature/model configuration as the first clean CatBoost run with an independent fixed seed",
+  "outer_folds": 5,
+  "seed": 20261113,
+  "seed_offset": 50000,
+  "feature_count": 77,
+  "categorical_feature_count": 13,
+  "gpu": "CatBoost CUDA; no CPU fallback",
+  "versions": {
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "auc": 0.7692946109503979,
+      "iterations": 700,
+      "model_seed": 20311114
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "auc": 0.7742561110885138,
+      "iterations": 700,
+      "model_seed": 20311115
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7608230188107393,
+      "iterations": 700,
+      "model_seed": 20311116
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7634307760085144,
+      "iterations": 700,
+      "model_seed": 20311117
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7608725937148447,
+      "iterations": 700,
+      "model_seed": 20311118
+    }
+  ],
+  "pooled_auc": 0.7656670819004135,
+  "mean_fold_auc": 0.765735422114602,
+  "rule_controls": {
+    "label_transfer": "none",
+    "train_test_pooling": "none",
+    "external_data": "none",
+    "test_rows": "not read",
+    "manual_prediction_changes": "none",
+    "cross_row_feature_fitting": "none; row-wise features and model-internal categorical statistics fit on each training fold"
+  },
+  "runtime_seconds": 88.4601582000032,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_clean_catboost_second_seed.py": "86c451c1aac2499e7cd6e2593c236842e6ed73a55e6b3fe964b2a63357bef556",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_second_seed_v1\\OOF_PREDICTIONS.csv": "fb87444d343cdaeb6507e258121ab2b4cd01b7edc8c3d7e6c7f46d35d0dcf929",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_second_seed_v1\\FOLD_METRICS.csv": "5ca1d644f022c3ae40a0e2da8de6f236df2f7e06f6e82704c4bf46272d7d032b"
+  }
+}

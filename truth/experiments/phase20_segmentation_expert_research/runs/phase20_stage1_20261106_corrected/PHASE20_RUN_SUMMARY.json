@@ -1,0 +1,21 @@
+{
+  "all_registry_rows_completed": 180,
+  "confirm_evaluated_once": true,
+  "confirm_positive_rows": 5528,
+  "confirm_rows": 68481,
+  "discovery_positive_rows": 8293,
+  "discovery_rows": 102721,
+  "discovery_seed": 20261106,
+  "first_attempt_completed_registry_rows": 177,
+  "full_workflow_wall_seconds_approx": 5065.0,
+  "gpu_telemetry_scope": "Telemetry JSON samples the final resume/finalization process only; first-attempt samples were not persisted after its exception.",
+  "initial_attempt_terminated_after_id_parity_placebo_parser_error": true,
+  "outer_seed": 20261113,
+  "registry_sha256": "361ea70d6fd9b522b08126b2b6c59f0f775dd870ea6abdb99d625c8fdb82732f",
+  "resume_process_runtime_seconds": 226.38781590000144,
+  "resumed_attempt_completed_registry_rows": 3,
+  "runtime_method": "Approximate corrected-grid first launch (13:50:51) to final report timestamp (15:15:16), local filesystem timestamps; excludes preflight and pilot runs.",
+  "runtime_seconds": 5065.0,
+  "train_rows": 171202,
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

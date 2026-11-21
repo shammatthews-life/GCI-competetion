@@ -1,0 +1,15 @@
+{
+  "candidate_id": "v06_nested_te_xgboost",
+  "feature_set": "rowwise_v1",
+  "models": ["xgboost_gpu"],
+  "target_encoding": true,
+  "target_encoding_inner_folds": 5,
+  "target_encoding_smoothing": 30.0,
+  "seed": 314159,
+  "outer_folds": 5,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false,
+  "notes": "Focused GPU ablation after the multi-engine attempt exited before fold 2 completed; this version isolates TE on XGBoost."
+}

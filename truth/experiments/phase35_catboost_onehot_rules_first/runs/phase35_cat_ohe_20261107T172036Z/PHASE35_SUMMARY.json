@@ -1,0 +1,52 @@
+{
+  "phase": "Phase 35 one-hot CatBoost and fixed-blend screen",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "feature_set": "Phase 33 constant-free ratio keys and fit-fold frequencies",
+  "parameters": {
+    "depth": 6,
+    "learning_rate": 0.04,
+    "max_iterations": 2400,
+    "early_stopping_rounds": 120,
+    "categorical_target_statistics": "none; dense numerical one-hot matrix only",
+    "task_type": "GPU"
+  },
+  "metrics": {
+    "catboost_onehot": {
+      "pooled_auc": 0.759857420437745,
+      "mean_fold_auc": 0.7599349902342033,
+      "log_loss": 0.24584057927131653
+    },
+    "equal_catboost_xgboost": {
+      "pooled_auc": 0.7642506286130626,
+      "mean_fold_auc": 0.7643048758290741,
+      "log_loss": 0.24452781677246094
+    },
+    "equal_three_model_blend": {
+      "pooled_auc": 0.7651522604353327,
+      "mean_fold_auc": 0.7651923505931182,
+      "log_loss": 0.2443009614944458
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; CatBoost receives only numerical one-hot columns",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "blends": "fixed equal weights; OOF diagnostics only, no weights fitted"
+  },
+  "runtime_seconds": 400.34095250000246,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_OOF_PREDICTIONS.csv": "adc206e9a2743627cfd5675e0f97ada1190e10a202bd2e0657238d3816cbb90a",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_OOF_PREDICTIONS.csv": "7e6ece0db0c6c28f2c8d8b237413c8c96fa7ad1c1d6b56417d63f7c508367073",
+    "D:\\gci\\truth\\experiments\\phase35_catboost_onehot_rules_first\\run_phase35_catboost_onehot_rules_first.py": "a1710ac6d1a4b6ecf4198cf010491602c40f26e1058d317f294682114f5ee287",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase35_catboost_onehot_rules_first\\runs\\phase35_cat_ohe_20261107T172036Z\\PHASE35_FOLD_RESULTS.csv": "4962f062a3cfe5bd85447e3a6cf4b771ee91ea12d7687b54be80b935e63336be",
+    "D:\\gci\\truth\\experiments\\phase35_catboost_onehot_rules_first\\runs\\phase35_cat_ohe_20261107T172036Z\\PHASE35_OOF_PREDICTIONS.csv": "580eec0f016212b65f6d2f629847157891f586761bd71f7f850aab2ce345ecdf"
+  }
+}

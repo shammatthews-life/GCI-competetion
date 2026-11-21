@@ -1,0 +1,128 @@
+{
+  "all_new_oof_predictions_finite": true,
+  "completed_folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "feature_schema": {
+    "categorical_columns": [
+      "NAME_CONTRACT_TYPE",
+      "CODE_GENDER",
+      "NAME_INCOME_TYPE",
+      "NAME_EDUCATION_TYPE",
+      "NAME_FAMILY_STATUS",
+      "NAME_HOUSING_TYPE",
+      "OCCUPATION_TYPE",
+      "ORGANIZATION_TYPE",
+      "PRODUCT_KEY_Q3",
+      "PRODUCT_KEY_Q4",
+      "PRODUCT_KEY_Q5",
+      "PRODUCT_KEY_KQ3",
+      "PRODUCT_KEY_KQ4",
+      "PRODUCT_KEY_P4",
+      "PRODUCT_KEY_P5",
+      "PRODUCT_KEY_AG3"
+    ],
+    "categorical_count": 16,
+    "document_flag_columns_present": [],
+    "feature_count": 99,
+    "predictors": 32,
+    "rows": 171202,
+    "support": {
+      "contract_type": {
+        "0": {
+          "positives": 900,
+          "rows": 16214
+        },
+        "1": {
+          "positives": 12921,
+          "rows": 154988
+        }
+      },
+      "contract_x_external": {
+        "0": {
+          "positives": 735,
+          "rows": 12567
+        },
+        "1": {
+          "positives": 165,
+          "rows": 3647
+        },
+        "2": {
+          "positives": 10516,
+          "rows": 122471
+        },
+        "3": {
+          "positives": 2405,
+          "rows": 32517
+        }
+      },
+      "external_completeness": {
+        "0": {
+          "positives": 11251,
+          "rows": 135038
+        },
+        "1": {
+          "positives": 2570,
+          "rows": 36164
+        }
+      }
+    }
+  },
+  "fit_count_excluding_smoke": 240,
+  "fit_count_including_smoke": 241,
+  "fold_seed": 20261113,
+  "fold_sizes": {
+    "1": 34241,
+    "2": 34241,
+    "3": 34240,
+    "4": 34240,
+    "5": 34240
+  },
+  "gpu_preflight": {
+    "apply_rows": 2000,
+    "categorical_features": 16,
+    "features": 99,
+    "finite_predictions": true,
+    "fit_rows": 10000,
+    "fit_seconds": 42.63774179999018,
+    "gpu_catboost_smoke": "passed"
+  },
+  "gpu_telemetry_history_complete": false,
+  "gpu_telemetry_sample_count": 2382,
+  "historical_phase15_reference": {
+    "folds_match_this_run": false,
+    "meaning": "Historical rowwise mean of three OOF vectors with different fold assignments; contextual only, not a fold-matched comparison.",
+    "phase15_three_seed_average_correlation_with_single_seed": 0.9915660074505853,
+    "phase15_three_seed_average_pooled_auc": 0.7688247083074312
+  },
+  "id_alignment": true,
+  "no_test_or_external_data_read": true,
+  "phase15_multiseed_oof_sha256": "14e92b323a7c5255b506a33c0f8b3925e5f9d110d388c44becf0612aec37a2d6",
+  "phase15_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "prediction_cache_path": "PHASE21_OOF_PREDICTIONS.csv",
+  "prediction_cache_written": true,
+  "ranker_screening_pilot": {
+    "gpu_auc": 0.7102218572566733,
+    "objective": "YetiRankPairwise",
+    "outer_fold": 1,
+    "reason": "Weak one-fold result; CatBoost's default PFound metric is computed on CPU, so this is not GPU-only end to end.",
+    "status": "excluded_from_full_suite"
+  },
+  "resume_session_count": 2,
+  "runtime_seconds": 5040.969007899999,
+  "target_alignment": true,
+  "train_rows": 171202,
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "unique_ids": 171202,
+  "unsupported_or_deferred": {
+    "document_flags": "No FLAG_DOCUMENT_* columns exist in supplied train schema.",
+    "hierarchical_target_encoding": "Deferred pending organizer guidance on nested target statistics; not mixed into Track A.",
+    "logistic_stack": "No CUDA logistic-regression package or CUDA-enabled PyTorch is installed; not silently run on CPU.",
+    "monotone_constraints": "GPU CatBoost preflight rejected monotone_constraints as unimplemented.",
+    "test_key_coverage": "Not inspected by this training run; any separate test-feature diagnostic must be documented independently."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "run_id": "financial_ratios_seed20261105",
+  "notebook_source_sha256": "d4f7c502d88e90f71b5875a46d3a1767b5c73083eec1ecee67b5f469b9cec9a3",
+  "raw_input_sha256": {
+    "train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db"
+  },
+  "root_artifact_sha256": {
+    "EXPERIMENT_PROTOCOL.md": "c33c8006bf3628f80484c2ec0c520ba65ca9559177639851b74480464b908bb6",
+    "RESULTS.json": "e4d64933544921bc7ccc14e0dd2f7d305d856190229340b64d8d48a62756a926",
+    "FOLD_METRICS.csv": "ff37b05da54153c812470c7b5a67b28c500c3544c0e40e8e3293d7011f09271c",
+    "FEATURE_MANIFEST.json": "b475f76e051d0343b1bc2f7bd7268396552ef546c06630cf5465e1bf34726b82",
+    "EXP02_REPORT.md": "c2b5ed09a68d92e81d09c754839e68968b800c22d4ab34fe46cd88dd5b70a8b7"
+  },
+  "run_artifact_sha256": {
+    "feature_manifest.json": "b475f76e051d0343b1bc2f7bd7268396552ef546c06630cf5465e1bf34726b82",
+    "fold_ids.npy": "2da4e794357bc3d3428e57bf27238a6afdf258b0b792782928472bbdf57683eb",
+    "fold_metrics.csv": "ff37b05da54153c812470c7b5a67b28c500c3544c0e40e8e3293d7011f09271c",
+    "oof_financial_features.npy": "aa6f398657d22bf99b2aadf7344bc2c6b5106de338f6f8891473971990da8bcc",
+    "oof_raw_baseline.npy": "43d7c652d1043bb5eb30e950cbf21269f32913b142df409a80b5b66fda479381",
+    "results.json": "e4d64933544921bc7ccc14e0dd2f7d305d856190229340b64d8d48a62756a926",
+    "run_manifest.json": "1b92ade246d17b080844aae0e6753cfe378b4fa647e8d05ac4fd040be826749b",
+    "test_financial_features.npy": "de111200cea25c1a51bdf1938d45749f682c96a9bfbc32b8a92e8300a885448c",
+    "test_ids.npy": "02324e097159ac5b382a79b33321dc0e997b77c761379e6e0f285228549b0c09",
+    "test_raw_baseline.npy": "ddc63cd403fe0895d714ff2ae8387e7cfa386c7f25cddb4032a47c3fad081748"
+  },
+  "note": "Run arrays are local research artifacts ignored by Git; no submission CSV was created."
+}

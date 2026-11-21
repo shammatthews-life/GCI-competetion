@@ -1,0 +1,48 @@
+{
+  "phase": "Phase 41 employment trajectory feature ablation",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "key_min_frequency": 50,
+  "added_features": [
+    "SAFE_EXT_EMPLOYMENT_AGE_RATIO",
+    "SAFE_EXT_ESTIMATED_PREEMPLOYMENT_AGE"
+  ],
+  "feature_definition": {
+    "SAFE_EXT_EMPLOYMENT_AGE_RATIO": "(-DAYS_EMPLOYED / 365.25) / (-DAYS_BIRTH / 365.25); sentinel employment values become missing",
+    "SAFE_EXT_ESTIMATED_PREEMPLOYMENT_AGE": "(-DAYS_BIRTH / 365.25) - (-DAYS_EMPLOYED / 365.25); sentinel employment values become missing",
+    "interpretation": "Derived covariates only; estimated gap is not asserted to be actual age at first employment"
+  },
+  "metrics": {
+    "keys_frequency_50_baseline": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "keys_frequency_50_plus_employment": {
+      "pooled_auc": 0.7648087358036793,
+      "pooled_log_loss": 0.24436187744140625,
+      "mean_fold_auc": 0.7648351756748422
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "category_vocabularies_and_frequencies": "fit on each model training partition only"
+  },
+  "runtime_seconds": 77.1463721000182,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\runs\\phase38_thresholds_20261107T173546Z\\PHASE38_OOF_PREDICTIONS.csv": "b7dd64efa160bec9ab3c99a01cd1597a12a673cf37a76a24abda25f4eafa7c76",
+    "D:\\gci\\truth\\experiments\\phase41_employment_trajectory_xgb\\run_phase41_employment_trajectory_xgb.py": "3e5f02ecb0aa9de084e895d5ce6e191b44b103178051c455300d4690ce0f2455",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase41_employment_trajectory_xgb\\runs\\phase41_employment_20261107T175029Z\\PHASE41_FOLD_RESULTS.csv": "cc8f42a94d44379dc23d504d0b681291d94fa7e8d5a52490f23aec664e79b52b",
+    "D:\\gci\\truth\\experiments\\phase41_employment_trajectory_xgb\\runs\\phase41_employment_20261107T175029Z\\PHASE41_OOF_PREDICTIONS.csv": "bd1ba26e3945d7bad26464a5228e458b6b787f429cc68f1d0ce444ebd49e597e"
+  }
+}

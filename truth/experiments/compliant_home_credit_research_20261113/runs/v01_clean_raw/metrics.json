@@ -1,0 +1,127 @@
+{
+  "candidate_id": "v01_clean_raw",
+  "feature_set": "raw",
+  "seed": 314159,
+  "folds": 5,
+  "models": [
+    "catboost_gpu",
+    "lightgbm_cpu",
+    "xgboost_gpu"
+  ],
+  "fold_results": [
+    {
+      "fold": 1,
+      "n_fit": 136961,
+      "n_valid": 34241,
+      "catboost_gpu_auc": 0.7472088365166085,
+      "catboost_gpu_seconds": 48.576,
+      "lightgbm_cpu_auc": 0.743312795822204,
+      "lightgbm_cpu_seconds": 11.35,
+      "xgboost_gpu_auc": 0.7478786051809956,
+      "xgboost_gpu_seconds": 8.206
+    },
+    {
+      "fold": 2,
+      "n_fit": 136961,
+      "n_valid": 34241,
+      "catboost_gpu_auc": 0.7534310822540069,
+      "catboost_gpu_seconds": 57.142,
+      "lightgbm_cpu_auc": 0.7510362612738383,
+      "lightgbm_cpu_seconds": 10.566,
+      "xgboost_gpu_auc": 0.7549417771615998,
+      "xgboost_gpu_seconds": 7.799
+    },
+    {
+      "fold": 3,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "catboost_gpu_auc": 0.7605458913036722,
+      "catboost_gpu_seconds": 59.141,
+      "lightgbm_cpu_auc": 0.7541141653144776,
+      "lightgbm_cpu_seconds": 11.229,
+      "xgboost_gpu_auc": 0.7615323204006856,
+      "xgboost_gpu_seconds": 7.269
+    },
+    {
+      "fold": 4,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "catboost_gpu_auc": 0.7502424147293258,
+      "catboost_gpu_seconds": 54.44,
+      "lightgbm_cpu_auc": 0.7476751864237084,
+      "lightgbm_cpu_seconds": 13.539,
+      "xgboost_gpu_auc": 0.7509108368510481,
+      "xgboost_gpu_seconds": 8.171
+    },
+    {
+      "fold": 5,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "catboost_gpu_auc": 0.7510027050219412,
+      "catboost_gpu_seconds": 64.091,
+      "lightgbm_cpu_auc": 0.748405844417974,
+      "lightgbm_cpu_seconds": 24.414,
+      "xgboost_gpu_auc": 0.751577730231234,
+      "xgboost_gpu_seconds": 11.449
+    }
+  ],
+  "model_summary": {
+    "catboost_gpu": {
+      "pooled_oof_auc": 0.7524328304288612,
+      "mean_fold_auc": 0.7524861859651109,
+      "std_fold_auc": 0.005023378380385449,
+      "fold_auc": [
+        0.7472088365166085,
+        0.7534310822540069,
+        0.7605458913036722,
+        0.7502424147293258,
+        0.7510027050219412
+      ]
+    },
+    "lightgbm_cpu": {
+      "pooled_oof_auc": 0.7488920356908955,
+      "mean_fold_auc": 0.7489088506504405,
+      "std_fold_auc": 0.004022186875539012,
+      "fold_auc": [
+        0.743312795822204,
+        0.7510362612738383,
+        0.7541141653144776,
+        0.7476751864237084,
+        0.748405844417974
+      ]
+    },
+    "xgboost_gpu": {
+      "pooled_oof_auc": 0.7533352580536339,
+      "mean_fold_auc": 0.7533682539651126,
+      "std_fold_auc": 0.0052083844400488254,
+      "fold_auc": [
+        0.7478786051809956,
+        0.7549417771615998,
+        0.7615323204006856,
+        0.7509108368510481,
+        0.751577730231234
+      ]
+    }
+  },
+  "input_sha256": {
+    "train.csv": "B8DD5A61771D8EB2821972C1B7D3F2F747CC66471F4D34153036D2D9C458ECF1",
+    "test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
+    "sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "torch": "2.14.1+cu130",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "torch_cuda_runtime": "13.0"
+  },
+  "seconds": 398.516,
+  "oof_sha256": "BB22589B8634D8BFA1BE607724E2BFB210A0E9F301D9F6EBC83F4152FBA682A0"
+}

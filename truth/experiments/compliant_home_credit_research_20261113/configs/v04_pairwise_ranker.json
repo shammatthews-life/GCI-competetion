@@ -1,0 +1,15 @@
+{
+  "candidate_id": "v04_pairwise_ranker",
+  "feature_set": "rowwise_v1",
+  "model": "xgboost_ranker_gpu",
+  "objective": "rank:pairwise",
+  "pair_method": "topk",
+  "pairs_per_sample": 8,
+  "seed": 314159,
+  "folds": 5,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false,
+  "interpretation": "Ranking objective is an AUC-motivated candidate, but top-k pair sampling optimizes a ranking surrogate rather than exact ROC-AUC."
+}

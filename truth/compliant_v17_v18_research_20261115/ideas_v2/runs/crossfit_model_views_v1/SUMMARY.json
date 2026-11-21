@@ -1,0 +1,127 @@
+{
+  "status": "fold-isolated exploratory model-view stack; not an independent estimate",
+  "hypothesis": "Cross-fitted supervised scores from distinct rule-first feature views may provide complementary ranking information to a fold-safe all-feature meta learner.",
+  "view_variants": [
+    "base",
+    "financial",
+    "peer",
+    "keys_frequency"
+  ],
+  "meta_variant": "all_safe",
+  "inner_crossfit_folds": 3,
+  "outer_folds": 5,
+  "seed": 20261113,
+  "model": {
+    "family": "LightGBM",
+    "trees": 600,
+    "num_leaves": 63,
+    "learning_rate": 0.03,
+    "max_bin": 127
+  },
+  "fixed_blend": "0.90 candidate TE20 within-fold rank + 0.10 model-view expert within-fold rank",
+  "minimum_promotion_gain": 0.005,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "expert_mean_fold_auc": 0.7612730356960332,
+  "blend_mean_fold_auc": 0.7679190379357179,
+  "blend_mean_fold_gain": 0.00016346177851578325,
+  "positive_blend_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "model_view_expert_auc": 0.7649847312307191,
+      "fixed_90_10_rank_blend_auc": 0.7724604881141939,
+      "expert_delta": -0.007391012122098695,
+      "blend_delta": 8.474476137609877e-05,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "view_variants": "base|financial|peer|keys_frequency",
+      "meta_variant": "all_safe",
+      "feature_count": 5172,
+      "runtime_seconds": 169.40706020002835
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "model_view_expert_auc": 0.7668697778749077,
+      "fixed_90_10_rank_blend_auc": 0.7748926533652207,
+      "expert_delta": -0.007985808298041408,
+      "blend_delta": 3.706719227158928e-05,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "view_variants": "base|financial|peer|keys_frequency",
+      "meta_variant": "all_safe",
+      "feature_count": 5174,
+      "runtime_seconds": 198.2488905999926
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "model_view_expert_auc": 0.7559804024070713,
+      "fixed_90_10_rank_blend_auc": 0.7626128762980051,
+      "expert_delta": -0.006480691695544993,
+      "blend_delta": 0.00015178219538880544,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "view_variants": "base|financial|peer|keys_frequency",
+      "meta_variant": "all_safe",
+      "feature_count": 5170,
+      "runtime_seconds": 148.05266330001177
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "model_view_expert_auc": 0.7588405858670904,
+      "fixed_90_10_rank_blend_auc": 0.7651066675383941,
+      "expert_delta": -0.00605134520979278,
+      "blend_delta": 0.00021473646151093373,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "view_variants": "base|financial|peer|keys_frequency",
+      "meta_variant": "all_safe",
+      "feature_count": 5138,
+      "runtime_seconds": 186.1743492000096
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "model_view_expert_auc": 0.7596896811003776,
+      "fixed_90_10_rank_blend_auc": 0.7645225043627755,
+      "expert_delta": -0.004503844980366711,
+      "blend_delta": 0.000328978282031156,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "view_variants": "base|financial|peer|keys_frequency",
+      "meta_variant": "all_safe",
+      "feature_count": 5153,
+      "runtime_seconds": 184.85744759999216
+    }
+  ],
+  "promotion_gate_passed": false,
+  "submission_generated": false,
+  "versions": {
+    "python": "3.12.10",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "model_data": "official train.csv only; test.csv not read",
+    "training_labels": "used only for supervised model fitting within the relevant inner/outer training partitions",
+    "view_scores": "training-row view scores are inner out-of-fold; outer-validation view scores use models trained only on outer-fit rows",
+    "feature_views": "existing phase33 base, standard financial ratios, peer features, rounded ratio keys/frequencies, and all_safe meta features",
+    "external_data": "none",
+    "label_transfer": "none",
+    "manual_test_adjustments": "none",
+    "test_covariate_pooling": "none",
+    "baseline_oof": "read only for alignment, fold checks, and benchmark comparison"
+  },
+  "runtime_seconds": 889.066539499996,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\crossfit_model_views_v1.py": "719d2ba7b774eedb6ba6aff90820f8176be9cd24f30e55862721dd8756b55fec",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv": "4ad7bfc5e9e04457279b33c927a3a5007df9ec99ab17965b6f9a957c68163afb",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\FOLD_METRICS.csv": "48614d0eb43c9d2d6b208fa19fbb575d9885d8f2b81181606d9868979a901e04"
+  }
+}

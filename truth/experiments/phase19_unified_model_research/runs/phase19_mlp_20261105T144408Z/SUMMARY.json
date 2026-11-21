@@ -1,0 +1,45 @@
+{
+  "batch_size": 2048,
+  "categorical_columns": [
+    "NAME_CONTRACT_TYPE",
+    "CODE_GENDER",
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "PRODUCT_KEY_Q3",
+    "PRODUCT_KEY_Q4",
+    "PRODUCT_KEY_Q5",
+    "PRODUCT_KEY_AG3"
+  ],
+  "categorical_feature_count": 12,
+  "constant_free_keys_only": [
+    "PRODUCT_KEY_Q3",
+    "PRODUCT_KEY_Q4",
+    "PRODUCT_KEY_Q5",
+    "PRODUCT_KEY_AG3"
+  ],
+  "cpu_threads": 4,
+  "eligibility": "Track A candidate: supplied columns, fold-fitted numeric imputation/scaling and category vocabularies, no target encoding or test data. Derived constant-free keys still need organizer-rule interpretation.",
+  "fold_aucs": [
+    0.7422124242325743,
+    0.7517293350403086,
+    0.7397196844346434,
+    0.7441596383636607,
+    0.7362617285510437
+  ],
+  "gpu_available": false,
+  "max_epochs": 40,
+  "numeric_feature_count": 38,
+  "outer_folds": 5,
+  "outer_seed": 20261113,
+  "patience": 6,
+  "pooled_oof_auc": 0.7426943812009408,
+  "rows": 171202,
+  "run_id": "phase19_mlp_20261105T144408Z",
+  "runtime_seconds": 493.02575250004884,
+  "status": "completed, five-fold label-free neural-family research candidate",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

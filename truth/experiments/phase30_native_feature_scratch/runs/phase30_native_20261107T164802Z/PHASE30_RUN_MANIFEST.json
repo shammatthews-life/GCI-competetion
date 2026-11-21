@@ -1,0 +1,72 @@
+{
+  "categorical_features": [
+    "NAME_CONTRACT_TYPE",
+    "CODE_GENDER",
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "P30_KEY_ANNUITY_CREDIT_3",
+    "P30_KEY_ANNUITY_CREDIT_4",
+    "P30_KEY_ANNUITY_CREDIT_5",
+    "P30_KEY_ANNUITY_GOODS_3"
+  ],
+  "competition_note": "The local rule text does not expressly adjudicate native categorical target-statistic internals. This pipeline does not construct target-encoded features or use manual test edits; seek organizer clarification if their interpretation must be certain.",
+  "metrics": [
+    {
+      "log_loss": 0.2440759837627411,
+      "mean_fold_auc": 0.7660527939232465,
+      "model": "catboost_native",
+      "pooled_auc": 0.7659781190787291,
+      "std_fold_auc": 0.0052121131129691314
+    },
+    {
+      "log_loss": 0.24963735044002533,
+      "mean_fold_auc": 0.7462308700286328,
+      "model": "lightgbm_native",
+      "pooled_auc": 0.7461449151088162,
+      "std_fold_auc": 0.004814109729000714
+    },
+    {
+      "log_loss": 0.24526454508304596,
+      "mean_fold_auc": NaN,
+      "model": "equal_blend",
+      "pooled_auc": 0.76223176478458,
+      "std_fold_auc": NaN
+    }
+  ],
+  "phase": "Phase 30 native-category scratch research",
+  "rule_controls": {
+    "ID_feature": "excluded",
+    "custom_target_encoding_feature": "none",
+    "external_data": "none",
+    "feature_engineering": "deterministic transformations of provided row values; rounded ratio categories use only decimal-place precision, no empirical fee or tariff constants",
+    "manual_or_rowwise_prediction_override": "none",
+    "model_target_usage": "training labels are used only by the fitted supervised models; native categorical model processing is not a custom encoding",
+    "test_statistics": "no category statistics fit on test rows"
+  },
+  "runtime_seconds": 205.2836127000046,
+  "sha256": {
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\run_phase30_native_feature_scratch.py": "e650aeee3b4c1c809d3f78620c45de060feee01414b2e011417e786a3ed93be0",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\PHASE30_FOLD_RESULTS.csv": "3c564f5a2af1b4bd6703a177e9c0457ba51b5f04c48cc2b50dd672d3449dd1e5",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\PHASE30_OOF_PREDICTIONS.csv": "c180fc87f02771efc24b16b1aecf311879dd77308be4ac306eb89b8aefd6b335",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\PHASE30_SUMMARY.csv": "fdfb305ec27d9e55fa5a59cbad3416565d07674a22bc3a262be5e171aebba1a3",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\submission_catboost_native.csv": "a369cf51036eef89aee6c56812bf49d697eeefd077aedcdb2418b10b5a61139e",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\submission_equal_blend.csv": "cc8cc94e7f3d93daff77355f5151f80daadedd712d78d2557de9e81a79da7b66",
+    "D:\\gci\\truth\\experiments\\phase30_native_feature_scratch\\runs\\phase30_native_20261107T164802Z\\submission_lightgbm_native.csv": "b61fbdf8604fb428e085c21aded20b6accce6bad49a7e4c60fccd8f20bf13b9c"
+  },
+  "status": "local reproducibility record; not organizer-certified",
+  "test_rows": 61500,
+  "train_rows": 171202,
+  "validation": {
+    "blend": "predeclared equal 50/50 probability average",
+    "early_stopping": "inner 12% of outer training fold",
+    "folds": 5,
+    "seed": 20261113
+  }
+}

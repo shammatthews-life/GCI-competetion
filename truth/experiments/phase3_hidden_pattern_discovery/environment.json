@@ -1,0 +1,12 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "scikit_learn": "1.9.1",
+  "lightgbm": "4.7.0",
+  "cpu_threads": 8,
+  "execution_started_utc": "2026-11-03T13:57:44.871820+00:00",
+  "execution_finished_utc": "2026-11-03T13:59:27.328469+00:00",
+  "runtime_seconds": 102.45664834976196
+}

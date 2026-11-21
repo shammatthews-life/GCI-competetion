@@ -1,0 +1,3573 @@
+[
+  {
+    "index": 1,
+    "name": "GCI_FINAL_v15_end_to_end_colab.ipynb",
+    "rel_path": "zip\\GCI_FINAL_v15_end_to_end_colab.ipynb",
+    "size": 29292,
+    "total_cells": 8,
+    "code_cells": 7,
+    "code_lines": 286,
+    "headers": [
+      "# GCI World 2026 - FINAL END-TO-END notebook for the v15 champion (public AUC 0.77891): `GCI_submission_v15_rankspace_consistent_view.csv`"
+    ],
+    "aucs": [
+      "AUC 0.77891",
+      "0.77404",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 2,
+    "name": "GCI_catboost_product_step_colab.ipynb",
+    "rel_path": "zip\\GCI_catboost_product_step_colab.ipynb",
+    "size": 25125,
+    "total_cells": 5,
+    "code_cells": 4,
+    "code_lines": 248,
+    "headers": [
+      "# GCI World 2026 - CatBoost product-member step (reproduction of the 10% rank blend on top of the verified v9 ensemble)"
+    ],
+    "aucs": [
+      "0.76969",
+      "0.77330",
+      "0.77353",
+      "0.7787"
+    ],
+    "models": [
+      "catboost",
+      "lgb",
+      "CatBoost",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = False, False, False",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 3,
+    "name": "GCI_final_pick_bootstrap_colab (1).ipynb",
+    "rel_path": "zip\\GCI_final_pick_bootstrap_colab (1).ipynb",
+    "size": 4479,
+    "total_cells": 2,
+    "code_cells": 1,
+    "code_lines": 42,
+    "headers": [
+      "# Final pick: paired bootstrap of every v9 candidate vs v6_B"
+    ],
+    "aucs": [],
+    "models": [],
+    "features": [],
+    "first_code_snippet": [
+      "# ===== FINAL PICK: paired stratified bootstrap of every v9 candidate vs v6_B on the pooled held-out predictions =====",
+      "# Paste into a fresh Colab cell (Drive mounted). Needs the Drive folders gci_cache_repro, gci_cache_v6, gci_cache_v9 and train.csv.",
+      "import os, glob, numpy as np, pandas as pd",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted:\", e)",
+      "base_dir = \"/content/drive/MyDrive\" if os.path.isdir(\"/content/drive/MyDrive\") else \"/content\"",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\")):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 4,
+    "name": "GCI_final_pick_bootstrap_colab.ipynb",
+    "rel_path": "zip\\GCI_final_pick_bootstrap_colab.ipynb",
+    "size": 4479,
+    "total_cells": 2,
+    "code_cells": 1,
+    "code_lines": 42,
+    "headers": [
+      "# Final pick: paired bootstrap of every v9 candidate vs v6_B"
+    ],
+    "aucs": [],
+    "models": [],
+    "features": [],
+    "first_code_snippet": [
+      "# ===== FINAL PICK: paired stratified bootstrap of every v9 candidate vs v6_B on the pooled held-out predictions =====",
+      "# Paste into a fresh Colab cell (Drive mounted). Needs the Drive folders gci_cache_repro, gci_cache_v6, gci_cache_v9 and train.csv.",
+      "import os, glob, numpy as np, pandas as pd",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted:\", e)",
+      "base_dir = \"/content/drive/MyDrive\" if os.path.isdir(\"/content/drive/MyDrive\") else \"/content\"",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\")):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 5,
+    "name": "GCI_final_reproduction.ipynb",
+    "rel_path": "zip\\GCI_final_reproduction.ipynb",
+    "size": 17288,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 171,
+    "headers": [
+      "# GCI World 2026 - Reproduction notebook for the submitted file (v3_A, public AUC 0.77746)"
+    ],
+    "aucs": [
+      "AUC 0.77746",
+      "0.77746"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 6,
+    "name": "GCI_final_reproduction_v9.ipynb",
+    "rel_path": "zip\\GCI_final_reproduction_v9.ipynb",
+    "size": 25246,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 254,
+    "headers": [
+      "# GCI World 2026 - FINAL reproduction notebook: rebuilds the submitted file `v9_E1_multiview_swap_old_new.csv` (public AUC 0.77865)"
+    ],
+    "aucs": [
+      "AUC 0.77865",
+      "0.77865"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 7,
+    "name": "GCI_product_decode_colab.ipynb",
+    "rel_path": "zip\\GCI_product_decode_colab.ipynb",
+    "size": 14766,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 155,
+    "headers": [
+      "# GCI World 2026 - product-decode LightGBM models (Colab)"
+    ],
+    "aucs": [
+      "0.76713",
+      "0.76678",
+      "0.76746",
+      "0.76843"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 8,
+    "name": "GCI_product_decode_colab_v2.ipynb",
+    "rel_path": "zip\\GCI_product_decode_colab_v2.ipynb",
+    "size": 15387,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 159,
+    "headers": [
+      "# GCI World 2026 - product-decode LightGBM models v2 (adds decoded k = credit/goods tariff tier)"
+    ],
+    "aucs": [
+      "0.77715",
+      "0.76992",
+      "0.77070",
+      "0.77035",
+      "0.77158"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 9,
+    "name": "GCI_q_fingerprint_colab.ipynb",
+    "rel_path": "zip\\GCI_q_fingerprint_colab.ipynb",
+    "size": 22603,
+    "total_cells": 15,
+    "code_cells": 8,
+    "code_lines": 223,
+    "headers": [
+      "# GCI World 2026 - q-fingerprint pipeline (Colab)",
+      "## 1. Feature builder (67 core features + 130 all-family features)",
+      "## 2. Data, the q-fingerprint encodings and the three LightGBM models",
+      "## 3. Train the members: 5-fold out-of-fold (honest AUC) + 5 fold-models + full-data refits",
+      "## 4. Optional: RealMLP on the same folds (GPU, **untested by the author**)"
+    ],
+    "aucs": [
+      "0.77283",
+      "0.76843",
+      "0.76458",
+      "0.76815",
+      "0.76713"
+    ],
+    "models": [
+      "lightgbm",
+      "lgb",
+      "LightGBM",
+      "RealMLP"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "Q5",
+      "Q3",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3"
+    ],
+    "first_code_snippet": [
+      "import os, sys, subprocess",
+      "subprocess.run([sys.executable, \"-m\", \"pip\", \"install\", \"-q\", \"lightgbm\"], check=False)",
+      "try:",
+      "    from google.colab import files",
+      "    IN_COLAB = True",
+      "except Exception:",
+      "    IN_COLAB = False",
+      "import glob",
+      "def ensure_data():",
+      "    if glob.glob(os.path.join(os.getcwd(), \"**\", \"train.csv\"), recursive=True): return",
+      "    if IN_COLAB:",
+      "        print(\"Upload train.csv, test.csv and sample_submission.csv (and optionally your champion CSV)\"); files.upload()",
+      "ensure_data()",
+      "# ---------------- CONFIG ----------------",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"      # tiny quick test of the code path"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 10,
+    "name": "GCI_qfingerprint_product_colab (1).ipynb",
+    "rel_path": "zip\\GCI_qfingerprint_product_colab (1).ipynb",
+    "size": 16707,
+    "total_cells": 1,
+    "code_cells": 1,
+    "code_lines": 199,
+    "headers": [],
+    "aucs": [
+      "AUC: 0.76713",
+      "0.76678",
+      "0.76746",
+      "0.76843",
+      "0.76458",
+      "0.76815"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "\"\"\"",
+      "GCI World 2026 - q-fingerprint submission (single file).    python GCI_qfingerprint_submission.py [champion.csv] [weight]",
+      " ->  output/GCI_submission_qfingerprint_product.csv",
+      "",
+      "KEY FINDING: every \"rate-curve shape\" feature (rate_std, rate_range, r24, curvatures...) is a function of ONE number, q = AMT_ANNUITY / AMT_CREDIT.",
+      "The real signal is risk as a function of q at FINE resolution (about 800-1500 distinct values = lender loan products), which tree models cannot resolve.",
+      "Leak-safe target encodings of q rounded to 3, 4 and 5 decimals (smoothed, nested out-of-fold for training rows) are given to three LightGBM models:",
+      "   qf_onehot (core features, one-hot categories) | qf_allfam_oh (130 features, one-hot) | qf_mono (core features, monotone EXT_SOURCE constraint).",
+      "Held-out (5-fold) AUC: 0.76713 / 0.76678 / 0.76746; their average 0.76843 vs 0.76458 for the previous best recipe.",
+      "Final = (1 - W) * champion + W * average of the three models' ranks (W = 0.7; held-out evidence: +0.0040 over the recipe, 5/5 folds positive).",
+      "The champion CSV (default: GCI_submission_residual.csv, public 0.76815, made by GCI_solution_final.py + GCI_residual_submission.py) can be replaced by any 61,500-row champion file.",
+      "Only train.csv labels and test.csv features are used. No external data, no test labels.",
+      "\"\"\"",
+      "import os, sys, glob, time",
+      "import numpy as np, pandas as pd, lightgbm as lgb"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 11,
+    "name": "GCI_qfingerprint_product_colab.ipynb",
+    "rel_path": "zip\\GCI_qfingerprint_product_colab.ipynb",
+    "size": 16049,
+    "total_cells": 1,
+    "code_cells": 1,
+    "code_lines": 190,
+    "headers": [],
+    "aucs": [
+      "AUC: 0.76713",
+      "0.76678",
+      "0.76746",
+      "0.76843",
+      "0.76458",
+      "0.76815"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "\"\"\"",
+      "GCI World 2026 - q-fingerprint submission (single file).    python GCI_qfingerprint_submission.py [champion.csv] [weight]",
+      " ->  output/GCI_submission_qfingerprint_product.csv",
+      "",
+      "KEY FINDING: every \"rate-curve shape\" feature (rate_std, rate_range, r24, curvatures...) is a function of ONE number, q = AMT_ANNUITY / AMT_CREDIT.",
+      "The real signal is risk as a function of q at FINE resolution (about 800-1500 distinct values = lender loan products), which tree models cannot resolve.",
+      "Leak-safe target encodings of q rounded to 3, 4 and 5 decimals (smoothed, nested out-of-fold for training rows) are given to three LightGBM models:",
+      "   qf_onehot (core features, one-hot categories) | qf_allfam_oh (130 features, one-hot) | qf_mono (core features, monotone EXT_SOURCE constraint).",
+      "Held-out (5-fold) AUC: 0.76713 / 0.76678 / 0.76746; their average 0.76843 vs 0.76458 for the previous best recipe.",
+      "Final = (1 - W) * champion + W * average of the three models' ranks (W = 0.7; held-out evidence: +0.0040 over the recipe, 5/5 folds positive).",
+      "The champion CSV (default: GCI_submission_residual.csv, public 0.76815, made by GCI_solution_final.py + GCI_residual_submission.py) can be replaced by any 61,500-row champion file.",
+      "Only train.csv labels and test.csv features are used. No external data, no test labels.",
+      "\"\"\"",
+      "import os, sys, glob, time",
+      "import numpy as np, pandas as pd, lightgbm as lgb"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 12,
+    "name": "GCI_qfingerprint_product_colab_top_24.ipynb",
+    "rel_path": "zip\\GCI_qfingerprint_product_colab_top_24.ipynb",
+    "size": 23660,
+    "total_cells": 6,
+    "code_cells": 6,
+    "code_lines": 155,
+    "headers": [],
+    "aucs": [
+      "0.76713",
+      "0.76678",
+      "0.76746",
+      "0.76843",
+      "AUC 0.76804",
+      "AUC 0.77217",
+      "AUC 0.77470",
+      "AUC 0.76703",
+      "AUC 0.76792",
+      "AUC 0.76992"
+    ],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": [
+      "  qf_onehot fold 1/5: AUC 0.76804 (71s)",
+      "  qf_onehot fold 2/5: AUC 0.77217 (118s)",
+      "  qf_onehot fold 3/5: AUC 0.77470 (165s)",
+      "  qf_onehot fold 4/5: AUC 0.76703 (234s)",
+      "  qf_onehot fold 5/5: AUC 0.76792 (303s)",
+      "qf_onehot: held-out AUC 0.76992  vs reference without product keys 0.76713  -> change +0.00279",
+      "  qf_allfam_oh fold 1/5: AUC 0.76748 (30s)",
+      "  qf_allfam_oh fold 2/5: AUC 0.77272 (60s)"
+    ]
+  },
+  {
+    "index": 13,
+    "name": "GCI_v10_candidate_blocks_colab.ipynb",
+    "rel_path": "zip\\GCI_v10_candidate_blocks_colab.ipynb",
+    "size": 11181,
+    "total_cells": 5,
+    "code_cells": 4,
+    "code_lines": 80,
+    "headers": [
+      "# GCI World 2026 - v10: two gated candidate blocks on top of v6 (run AFTER cell 2 of the v6 notebook, same Colab session)",
+      "## What was kept from the pasted research and what was dropped (checked against your files)",
+      "## Gate (fixed before running, no public-leaderboard use)"
+    ],
+    "aucs": [],
+    "models": [
+      "TabM",
+      "lgb"
+    ],
+    "features": [
+      "EXT_SOURCE_3",
+      "Q0",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_1"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - candidate blocks + paired single-member harness",
+      "import datetime",
+      "FEEC = 129.5",
+      "def block_A(al, FEE, Q0):          # contract affordability + inquiry burst (annuity is not monthly here -> no 12x)",
+      "    inc, an, fam = al.AMT_INCOME_TOTAL, al.AMT_ANNUITY, al.CNT_FAM_MEMBERS.clip(lower=1)",
+      "    fee = pd.Series(np.asarray(FEE) * FEEC, index=al.index)",
+      "    d = {\"AF_Q0\": pd.Series(np.asarray(Q0), index=al.index), \"AF_RESID_INC\": inc - an, \"AF_RESID_INC_FAM\": (inc - an) / fam,",
+      "         \"AF_PRIN_DSR\": (an - fee) / inc, \"AF_FEE_BURDEN\": fee / inc, \"AF_FEE_SHARE\": fee / an}",
+      "    for nm, col, days in [(\"MON\", \"AMT_REQ_CREDIT_BUREAU_MON\", 30), (\"QRT\", \"AMT_REQ_CREDIT_BUREAU_QRT\", 90)]:",
+      "        d[f\"BURST_{nm}\"] = np.log((al[col] + 0.5) / (al.AMT_REQ_CREDIT_BUREAU_YEAR * days / 365 + 0.5))",
+      "    d[\"BURST_HOUR_MON\"] = np.log((al.AMT_REQ_CREDIT_BUREAU_HOUR + 0.5) / (al.AMT_REQ_CREDIT_BUREAU_MON + 0.5))",
+      "    return pd.DataFrame(d, index=al.index).replace([np.inf, -np.inf], np.nan)",
+      "RES2_PATH = os.path.join(CACHE_DIR, \"resid_extra.pkl\")",
+      "def block_B():                     # extra learned-expectation targets, same recipe as v6 compute_resid (label-free, train+test, 5-fold OOF)",
+      "    raw = al.drop(columns=[\"SK_ID_CURR\"]).copy()"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 14,
+    "name": "GCI_v10_standalone_colab (1).ipynb",
+    "rel_path": "zip\\GCI_v10_standalone_colab (1).ipynb",
+    "size": 31414,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 284,
+    "headers": [
+      "# GCI World 2026 - v10 (STANDALONE): v6 + two gated candidate blocks"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 15,
+    "name": "GCI_v10_standalone_colab.ipynb",
+    "rel_path": "zip\\GCI_v10_standalone_colab.ipynb",
+    "size": 31414,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 284,
+    "headers": [
+      "# GCI World 2026 - v10 (STANDALONE): v6 + two gated candidate blocks"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 16,
+    "name": "GCI_v11_family_bagging_colab (1).ipynb",
+    "rel_path": "zip\\GCI_v11_family_bagging_colab (1).ipynb",
+    "size": 24165,
+    "total_cells": 6,
+    "code_cells": 5,
+    "code_lines": 238,
+    "headers": [
+      "# GCI World 2026 - v11: feature-family-bagged members (E4)"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 17,
+    "name": "GCI_v11_family_bagging_colab.ipynb",
+    "rel_path": "zip\\GCI_v11_family_bagging_colab.ipynb",
+    "size": 22997,
+    "total_cells": 6,
+    "code_cells": 5,
+    "code_lines": 226,
+    "headers": [
+      "# GCI World 2026 - v11: feature-family-bagged members (E4)"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 18,
+    "name": "GCI_v12_product_aware_AB_colab.ipynb",
+    "rel_path": "zip\\GCI_v12_product_aware_AB_colab.ipynb",
+    "size": 24830,
+    "total_cells": 6,
+    "code_cells": 5,
+    "code_lines": 238,
+    "headers": [
+      "# GCI World 2026 - v12: product-aware learned expectations (A/B test on two members)"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = False, False, False",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 19,
+    "name": "GCI_v13_reweight_and_ET_colab_cc.ipynb",
+    "rel_path": "zip\\GCI_v13_reweight_and_ET_colab_cc.ipynb",
+    "size": 32422,
+    "total_cells": 10,
+    "code_cells": 8,
+    "code_lines": 291,
+    "headers": [
+      "# GCI World 2026 - v13 = your reproduction of the 0.77865 file + two evidence-based next steps",
+      "# GCI World 2026 - FINAL reproduction notebook: rebuilds the submitted file `v9_E1_multiview_swap_old_new.csv` (public AUC 0.77865)"
+    ],
+    "aucs": [
+      "0.77865",
+      "0.77258",
+      "0.77202",
+      "0.77330",
+      "AUC 0.77865"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 20,
+    "name": "GCI_v14_ET_deepening_colab.ipynb",
+    "rel_path": "zip\\GCI_v14_ET_deepening_colab.ipynb",
+    "size": 25214,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 240,
+    "headers": [
+      "# GCI World 2026 - v14: deepening the extra_trees finding (+0.0010 to +0.0015 per member in v13)"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "CatBoost",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 21,
+    "name": "GCI_v15_consistent_views_ET_colab.ipynb",
+    "rel_path": "zip\\GCI_v15_consistent_views_ET_colab.ipynb",
+    "size": 26611,
+    "total_cells": 6,
+    "code_cells": 5,
+    "code_lines": 258,
+    "headers": [
+      "# GCI World 2026 - v15: consistent multi-view features (variant A) + extra_trees"
+    ],
+    "aucs": [
+      "0.77884"
+    ],
+    "models": [
+      "lgb",
+      "CatBoost",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 22,
+    "name": "GCI_v16_everything_merged.ipynb",
+    "rel_path": "zip\\GCI_v16_everything_merged.ipynb",
+    "size": 46731,
+    "total_cells": 12,
+    "code_cells": 11,
+    "code_lines": 413,
+    "headers": [
+      "# GCI World 2026 - v16: everything merged (v15 pipeline + every research/community idea + repeat-applicant features)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 23,
+    "name": "GCI_v16_everything_merged_o.ipynb",
+    "rel_path": "zip\\GCI_v16_everything_merged_o.ipynb",
+    "size": 87903,
+    "total_cells": 22,
+    "code_cells": 11,
+    "code_lines": 413,
+    "headers": [
+      "# GCI World 2026 - v16: everything merged (v15 pipeline + every research/community idea + repeat-applicant features)"
+    ],
+    "aucs": [
+      "0.77404",
+      "AUC 0.77027",
+      "AUC 0.77318",
+      "AUC 0.77620",
+      "AUC 0.76980",
+      "AUC 0.77341",
+      "AUC 0.77252",
+      "AUC 0.76994",
+      "AUC 0.77380",
+      "AUC 0.77646"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": [
+      "  old_qf_shallow fold 1/5: AUC 0.77027 (61s)",
+      "  old_qf_shallow fold 2/5: AUC 0.77318 (122s)",
+      "  old_qf_shallow fold 3/5: AUC 0.77620 (181s)",
+      "  old_qf_shallow fold 4/5: AUC 0.76980 (241s)",
+      "  old_qf_shallow fold 5/5: AUC 0.77341 (279s)",
+      "old_qf_shallow: held-out AUC 0.77252",
+      "  old_qf_reg fold 1/5: AUC 0.76994 (91s)",
+      "  old_qf_reg fold 2/5: AUC 0.77380 (150s)"
+    ]
+  },
+  {
+    "index": 24,
+    "name": "GCI_v16_regulariser_screen_colab.ipynb",
+    "rel_path": "zip\\GCI_v16_regulariser_screen_colab.ipynb",
+    "size": 29020,
+    "total_cells": 8,
+    "code_cells": 7,
+    "code_lines": 280,
+    "headers": [
+      "# GCI World 2026 - v16: noise-damping regularisers on top of extra_trees (screen on ONE member, then retrain only if it clearly wins)"
+    ],
+    "aucs": [
+      "0.77891"
+    ],
+    "models": [
+      "lgb",
+      "CatBoost",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 25,
+    "name": "GCI_v17_catboost_E1_stack_colab.ipynb",
+    "rel_path": "zip\\GCI_v17_catboost_E1_stack_colab.ipynb",
+    "size": 29338,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 280,
+    "headers": [
+      "# GCI World 2026 - v17: CatBoost on the E1 feature stack (residual + consistent-view features)"
+    ],
+    "aucs": [
+      "0.77891",
+      "0.76943"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "lightgbm",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 26,
+    "name": "GCI_v17_optimised.ipynb",
+    "rel_path": "zip\\GCI_v17_optimised.ipynb",
+    "size": 52657,
+    "total_cells": 13,
+    "code_cells": 12,
+    "code_lines": 454,
+    "headers": [
+      "# GCI World 2026 - v17: everything merged and optimised (v15 pipeline + every research/community idea + repeat-applicant features)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 27,
+    "name": "GCI_v17_optimised_O.ipynb",
+    "rel_path": "zip\\GCI_v17_optimised_O.ipynb",
+    "size": 95828,
+    "total_cells": 24,
+    "code_cells": 12,
+    "code_lines": 454,
+    "headers": [
+      "# GCI World 2026 - v17: everything merged and optimised (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "#leaderboard Score"
+    ],
+    "aucs": [
+      "0.77404",
+      "AUC 0.77019",
+      "AUC 0.77391",
+      "AUC 0.77507",
+      "AUC 0.77062",
+      "AUC 0.77300",
+      "AUC 0.77250",
+      "AUC 0.76931",
+      "AUC 0.77327",
+      "AUC 0.77559"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": [
+      "  old_qf_shallow fold 1/5: AUC 0.77019 (60s)",
+      "  old_qf_shallow fold 2/5: AUC 0.77391 (119s)",
+      "  old_qf_shallow fold 3/5: AUC 0.77507 (177s)",
+      "  old_qf_shallow fold 4/5: AUC 0.77062 (235s)",
+      "  old_qf_shallow fold 5/5: AUC 0.77300 (296s)",
+      "old_qf_shallow: held-out AUC 0.77250",
+      "  old_qf_reg fold 1/5: AUC 0.76931 (96s)",
+      "  old_qf_reg fold 2/5: AUC 0.77327 (188s)"
+    ]
+  },
+  {
+    "index": 28,
+    "name": "GCI_v18_ExtraTrees_diversity_colab.ipynb",
+    "rel_path": "zip\\GCI_v18_ExtraTrees_diversity_colab.ipynb",
+    "size": 28003,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 270,
+    "headers": [
+      "# GCI World 2026 - v18: a genuinely different learner (random-split forest) as a blend component"
+    ],
+    "aucs": [
+      "0.76344",
+      "0.76840",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "ExtraTrees",
+      "CatBoost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 29,
+    "name": "GCI_v18_alt_direction_probe.ipynb",
+    "rel_path": "zip\\GCI_v18_alt_direction_probe.ipynb",
+    "size": 10117,
+    "total_cells": 4,
+    "code_cells": 1,
+    "code_lines": 94,
+    "headers": [
+      "# GCI v18 \u2014 Alternative Direction Rank-Blend Probe",
+      "## What was tested",
+      "## Inputs",
+      "## Build two complementary LightGBM models and write the candidate",
+      "## Acceptance rule"
+    ],
+    "aucs": [
+      "0.756907",
+      "0.756371",
+      "0.756086",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "EXT_PRODUCT",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "EXT_SOURCE_1"
+    ],
+    "first_code_snippet": [
+      "import os, warnings, time",
+      "import numpy as np, pandas as pd",
+      "from scipy.stats import rankdata",
+      "from lightgbm import LGBMClassifier",
+      "warnings.filterwarnings('ignore')",
+      "ROOT='/content' if os.path.exists('/content/train.csv') else '/mnt/data'",
+      "OUT=os.path.join(ROOT,'GCI_v18_alt_direction')",
+      "os.makedirs(OUT,exist_ok=True)",
+      "start=time.time()",
+      "print('Loading supplied data...',flush=True)",
+      "tr=pd.read_csv(ROOT+'/train.csv'); te=pd.read_csv(ROOT+'/test.csv')",
+      "y=tr.TARGET.to_numpy()",
+      "",
+      "def build(df):",
+      "    X=df.drop(columns=['TARGET','SK_ID_CURR'],errors='ignore').copy()"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 30,
+    "name": "GCI_v18_evidence_driven (1).ipynb",
+    "rel_path": "zip\\GCI_v18_evidence_driven (1).ipynb",
+    "size": 62146,
+    "total_cells": 16,
+    "code_cells": 15,
+    "code_lines": 507,
+    "headers": [
+      "# GCI World 2026 - v18: evidence-driven upgrade of the 0.78222 run (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)"
+    ],
+    "aucs": [
+      "0.78222",
+      "0.77404",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 31,
+    "name": "GCI_v18_evidence_driven.ipynb",
+    "rel_path": "zip\\GCI_v18_evidence_driven.ipynb",
+    "size": 62146,
+    "total_cells": 16,
+    "code_cells": 15,
+    "code_lines": 507,
+    "headers": [
+      "# GCI World 2026 - v18: evidence-driven upgrade of the 0.78222 run (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)"
+    ],
+    "aucs": [
+      "0.78222",
+      "0.77404",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 32,
+    "name": "GCI_v18_evidence_driven_o.ipynb",
+    "rel_path": "zip\\GCI_v18_evidence_driven_o.ipynb",
+    "size": 111224,
+    "total_cells": 31,
+    "code_cells": 15,
+    "code_lines": 507,
+    "headers": [
+      "# GCI World 2026 - v18: evidence-driven upgrade of the 0.78222 run (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)"
+    ],
+    "aucs": [
+      "0.78222",
+      "0.77404",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "AUC 0.77019",
+      "AUC 0.77391",
+      "AUC 0.77507",
+      "AUC 0.77062"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "VIEW_A",
+      "VIEW_EXTAGE",
+      "P3",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "Q4",
+      "VIEW_GROUPS",
+      "Q0",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": [
+      "top single-feature train-vs-test AUC: [(np.float64(0.5193), 'EXT_MEAN'), (np.float64(0.5174), 'EXT_MIN'), (np.float64(0.5165), 'EXT_MAX'), (np.float64(0.5156), 'EXT_SOURCE_2'), (np.float64(0.5153), 'G_ORGANI_URCE_2_DIFF'), (np.float64(0.5152), 'G_NAME_I_URCE_2_DIFF'), (np.float64(0.5152), 'RP_EXT3'), (np.float64(0.5149), 'EXT_PROD'), (np.float64(0.5149), 'G_OCCUPA_URCE_2_DIFF'), (np.float64(0.5148), 'G_NAME_E_URCE_2_DIFF')]",
+      "adversarial AUC | all features 0.6868 | without RP_/RR_ residual columns 0.5140 | residual columns only 0.6868",
+      "=> if 'all' is high and 'without residuals' is ~0.51: set REUSE_RESID=False (recompute residuals) and re-run from cell 3; keep the fresh version only if held-out AUC does not drop.",
+      "  views fold 1/5 (148s)",
+      "  views fold 2/5 (300s)",
+      "  views fold 3/5 (455s)",
+      "  views fold 4/5 (605s)",
+      "  views fold 5/5 (754s)"
+    ]
+  },
+  {
+    "index": 33,
+    "name": "GCI_v19_NN_entity_embeddings_colab.ipynb",
+    "rel_path": "zip\\GCI_v19_NN_entity_embeddings_colab.ipynb",
+    "size": 28832,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 283,
+    "headers": [
+      "# GCI World 2026 - v19: neural network with ENTITY EMBEDDINGS for the decoded product (a structurally different use of the product information)"
+    ],
+    "aucs": [
+      "0.736",
+      "0.745",
+      "0.77891"
+    ],
+    "models": [
+      "lgb",
+      "neural",
+      "mlp",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 34,
+    "name": "GCI_v19_NN_entity_embeddings_colab_0.ipynb",
+    "rel_path": "zip\\GCI_v19_NN_entity_embeddings_colab_0.ipynb",
+    "size": 40241,
+    "total_cells": 10,
+    "code_cells": 6,
+    "code_lines": 283,
+    "headers": [
+      "# GCI World 2026 - v19: neural network with ENTITY EMBEDDINGS for the decoded product (a structurally different use of the product information)"
+    ],
+    "aucs": [
+      "0.736",
+      "0.745",
+      "AUC 0.736",
+      "0.7623",
+      "0.7725",
+      "0.7639",
+      "AUC 0.76419",
+      "0.754",
+      "0.7554",
+      "0.7537"
+    ],
+    "models": [
+      "lgb",
+      "neural",
+      "mlp",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, False, False   # only the final pipeline's parts are used here",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": [
+      "self-test OK: inner-val AUC 0.736 after 2 epochs, output shapes (2000,) (2000,) (AUC near 0.55-0.65 is normal for 6,000 rows)",
+      "   seeds: inner-val AUC [np.float64(0.7623), np.float64(0.7725), np.float64(0.7639)], epochs [11, 9, 9]",
+      "NN fold 1/5: AUC 0.76419 (13s)",
+      "   seeds: inner-val AUC [np.float64(0.754), np.float64(0.7554), np.float64(0.7537)], epochs [12, 12, 11]",
+      "NN fold 2/5: AUC 0.76999 (29s)",
+      "   seeds: inner-val AUC [np.float64(0.7555), np.float64(0.7567), np.float64(0.7584)], epochs [10, 15, 12]",
+      "NN fold 3/5: AUC 0.77389 (46s)",
+      "   seeds: inner-val AUC [np.float64(0.7688), np.float64(0.7673), np.float64(0.7633)], epochs [10, 11, 7]"
+    ]
+  },
+  {
+    "index": 35,
+    "name": "GCI_v19_research_candidate.ipynb",
+    "rel_path": "zip\\GCI_v19_research_candidate.ipynb",
+    "size": 88007,
+    "total_cells": 23,
+    "code_cells": 11,
+    "code_lines": 482,
+    "headers": [
+      "# GCI World 2026 - v19: research features + strict validation (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "## v19 candidate protocol (read before running)"
+    ],
+    "aucs": [
+      "0.77404",
+      "AUC 0.77027",
+      "AUC 0.77318",
+      "AUC 0.77620",
+      "AUC 0.76980",
+      "AUC 0.77341",
+      "AUC 0.77252",
+      "AUC 0.76994",
+      "AUC 0.77380",
+      "AUC 0.77646"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": [
+      "  old_qf_shallow fold 1/5: AUC 0.77027 (61s)",
+      "  old_qf_shallow fold 2/5: AUC 0.77318 (122s)",
+      "  old_qf_shallow fold 3/5: AUC 0.77620 (181s)",
+      "  old_qf_shallow fold 4/5: AUC 0.76980 (241s)",
+      "  old_qf_shallow fold 5/5: AUC 0.77341 (279s)",
+      "old_qf_shallow: held-out AUC 0.77252",
+      "  old_qf_reg fold 1/5: AUC 0.76994 (91s)",
+      "  old_qf_reg fold 2/5: AUC 0.77380 (150s)"
+    ]
+  },
+  {
+    "index": 36,
+    "name": "GCI_v19_research_rebuilt.ipynb",
+    "rel_path": "zip\\GCI_v19_research_rebuilt.ipynb",
+    "size": 74471,
+    "total_cells": 33,
+    "code_cells": 16,
+    "code_lines": 603,
+    "headers": [
+      "# GCI World 2026 \u2014 v19 research rebuild (based on v18 + verified research notes)",
+      "## Evidence and safeguards",
+      "## Run",
+      "## New research block",
+      "## Required fair experiment after the full run"
+    ],
+    "aucs": [
+      "0.78222",
+      "0.77649",
+      "0.77404",
+      "0.77891"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 37,
+    "name": "GCI_v20_evidence_driven_candidate.ipynb",
+    "rel_path": "zip\\GCI_v20_evidence_driven_candidate.ipynb",
+    "size": 94957,
+    "total_cells": 33,
+    "code_cells": 16,
+    "code_lines": 600,
+    "headers": [
+      "# GCI World 2026 - v18: evidence-driven upgrade of the 0.78222 run (v15 pipeline + every research/community idea + repeat-applicant features)",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)",
+      "## V20 acceptance protocol"
+    ],
+    "aucs": [
+      "0.78222",
+      "0.77649",
+      "0.77648",
+      "0.77404",
+      "0.77891",
+      "0.75871",
+      "0.76896",
+      "0.77028",
+      "0.77085",
+      "0.76157"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "VIEW_A",
+      "VIEW_EXTAGE",
+      "P3",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "Q4",
+      "VIEW_GROUPS",
+      "Q0",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v20 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 38,
+    "name": "GCI_v21_gated_research_candidate.ipynb",
+    "rel_path": "zip\\GCI_v21_gated_research_candidate.ipynb",
+    "size": 78079,
+    "total_cells": 32,
+    "code_cells": 16,
+    "code_lines": 621,
+    "headers": [
+      "# GCI World 2026 - v21: research candidate with a pre-training evidence gate",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)",
+      "## V21 decision rule (read before running)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.78222",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "0.77891",
+      "AUC 0.77666",
+      "0.77663",
+      "0.77652"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 39,
+    "name": "GCI_v21_gated_research_candidate_o.ipynb",
+    "rel_path": "zip\\GCI_v21_gated_research_candidate_o.ipynb",
+    "size": 99217,
+    "total_cells": 35,
+    "code_cells": 17,
+    "code_lines": 637,
+    "headers": [
+      "# GCI World 2026 - v21: research candidate with a pre-training evidence gate",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)",
+      "## V21 decision rule (read before running)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.78222",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "0.754881",
+      "0.757324",
+      "0.758358",
+      "0.760309"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 40,
+    "name": "GCI_v22_research_expansion_gated.ipynb",
+    "rel_path": "zip\\GCI_v22_research_expansion_gated.ipynb",
+    "size": 80894,
+    "total_cells": 32,
+    "code_cells": 16,
+    "code_lines": 659,
+    "headers": [
+      "# GCI World 2026 - v22: expanded research candidate with a pre-training evidence gate",
+      "## v18 - what changed and why (evidence from your v16 run, public 0.78222, held-out 0.77649)",
+      "## V21 decision rule (read before running)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.78222",
+      "0.77649",
+      "0.77512",
+      "0.77608",
+      "0.77648",
+      "0.77891",
+      "AUC 0.77666",
+      "0.77663",
+      "0.77652"
+    ],
+    "models": [
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup: LightGBM/CatBoost",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 41,
+    "name": "GCI_v24_evidence_lab.ipynb",
+    "rel_path": "zip\\GCI_v24_evidence_lab.ipynb",
+    "size": 71084,
+    "total_cells": 19,
+    "code_cells": 18,
+    "code_lines": 610,
+    "headers": [
+      "# GCI World 2026 - v24 EVIDENCE LAB (new methods, each earns its place before it gets compute)"
+    ],
+    "aucs": [
+      "0.77666",
+      "0.78235",
+      "0.755",
+      "0.77404",
+      "0.77891"
+    ],
+    "models": [
+      "neural",
+      "extratrees",
+      "mlp",
+      "MLP",
+      "ExtraTrees",
+      "LightGBM",
+      "CatBoost",
+      "lightgbm",
+      "LogisticRegression",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup (lightgbm, catboost, optuna; torch is preinstalled on Colab)",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\", \"optuna\", \"psutil\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 42,
+    "name": "GCI_v25_block_tester.ipynb",
+    "rel_path": "zip\\GCI_v25_block_tester.ipynb",
+    "size": 60400,
+    "total_cells": 13,
+    "code_cells": 12,
+    "code_lines": 535,
+    "headers": [
+      "# GCI v25 - BLOCK TESTER (real LightGBM, same-run baseline, paired folds)"
+    ],
+    "aucs": [
+      "0.77404",
+      "0.77891",
+      "0.755",
+      "0.77666"
+    ],
+    "models": [
+      "extratrees",
+      "mlp",
+      "LightGBM",
+      "lightgbm",
+      "CatBoost",
+      "HistGradientBoosting",
+      "LogisticRegression",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "CREDIT_TERM",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "TE_k",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "VIEW_O",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "VIEW_A",
+      "EXT_SOURCE_2"
+    ],
+    "first_code_snippet": [
+      "# Colab setup (lightgbm, catboost, optuna; torch is preinstalled on Colab)",
+      "import subprocess, sys",
+      "for p_ in (\"lightgbm\", \"catboost\", \"optuna\", \"psutil\"):",
+      "    try: __import__(p_)",
+      "    except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"-q\", \"install\", p_])",
+      "# cell 1 - setup (same input discovery as v15: finds train/test/sample in /content, Drive or cwd)",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "# ---- v16 switches ----"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 43,
+    "name": "GCI_v3_blend_colab.ipynb",
+    "rel_path": "zip\\GCI_v3_blend_colab.ipynb",
+    "size": 17683,
+    "total_cells": 7,
+    "code_cells": 6,
+    "code_lines": 182,
+    "headers": [
+      "# GCI World 2026 - v3: variance reduction + OOF-selected blend (built from the weakness analysis)"
+    ],
+    "aucs": [
+      "0.77035",
+      "0.77070"
+    ],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 44,
+    "name": "GCI_v4_diversity_colab.ipynb",
+    "rel_path": "zip\\GCI_v4_diversity_colab.ipynb",
+    "size": 21244,
+    "total_cells": 8,
+    "code_cells": 7,
+    "code_lines": 206,
+    "headers": [
+      "# GCI World 2026 - v4: new algorithm diversity (CatBoost, XGBoost, all-families LightGBM variants) + OOF-selected blend"
+    ],
+    "aucs": [
+      "0.77715",
+      "0.77035",
+      "0.77070",
+      "0.77746"
+    ],
+    "models": [
+      "xgb",
+      "LightGBM",
+      "CatBoost",
+      "lightgbm",
+      "xgboost",
+      "XGBoost",
+      "catboost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 45,
+    "name": "GCI_v5_dropPF4_colab.ipynb",
+    "rel_path": "zip\\GCI_v5_dropPF4_colab.ipynb",
+    "size": 17948,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 185,
+    "headers": [
+      "# GCI World 2026 - v5 test: same 5 members and SAME weights, product x fee key removed"
+    ],
+    "aucs": [
+      "0.77746"
+    ],
+    "models": [
+      "lgb",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "PF4",
+      "Q4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 46,
+    "name": "GCI_v6_residual_features_colab.ipynb",
+    "rel_path": "zip\\GCI_v6_residual_features_colab.ipynb",
+    "size": 21482,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 217,
+    "headers": [
+      "# GCI World 2026 - v6: learned-expectation (residual) features in every member"
+    ],
+    "aucs": [
+      "0.77746"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 47,
+    "name": "GCI_v7_extra_trees_colab.ipynb",
+    "rel_path": "zip\\GCI_v7_extra_trees_colab.ipynb",
+    "size": 24376,
+    "total_cells": 9,
+    "code_cells": 8,
+    "code_lines": 219,
+    "headers": [
+      "# GCI World 2026 - v7: extra_trees in every member (on top of v6's learned-expectation features)"
+    ],
+    "aucs": [
+      "0.76987",
+      "0.77065",
+      "0.76960",
+      "0.77037",
+      "0.76966",
+      "0.77105",
+      "0.76942",
+      "0.778"
+    ],
+    "models": [
+      "lgb",
+      "LightGBM",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 48,
+    "name": "GCI_v8_pairwise_ranker_colab.ipynb",
+    "rel_path": "zip\\GCI_v8_pairwise_ranker_colab.ipynb",
+    "size": 20865,
+    "total_cells": 5,
+    "code_cells": 4,
+    "code_lines": 213,
+    "headers": [
+      "# GCI World 2026 - v8: global-group pairwise ranker (XGBoost rank:pairwise) as one extra blend member"
+    ],
+    "aucs": [
+      "0.77836"
+    ],
+    "models": [
+      "xgboost",
+      "lgb",
+      "XGBoost",
+      "lightgbm"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 49,
+    "name": "GCI_v9_all_experiments_colab.ipynb",
+    "rel_path": "zip\\GCI_v9_all_experiments_colab.ipynb",
+    "size": 28764,
+    "total_cells": 8,
+    "code_cells": 7,
+    "code_lines": 287,
+    "headers": [
+      "# GCI World 2026 - v9: one notebook, three candidate improvements, one shared decision rule"
+    ],
+    "aucs": [
+      "0.77836"
+    ],
+    "models": [
+      "CatBoost",
+      "lightgbm",
+      "xgboost",
+      "XGBoost",
+      "lgb"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "VIEW_PERSON",
+      "VIEW_LOAN",
+      "Q4",
+      "PF4",
+      "Q5",
+      "Q0",
+      "Q3",
+      "P4",
+      "EXT_SOURCE_2",
+      "VIEW_EXT",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup",
+      "import os, sys, glob, time, warnings; warnings.filterwarnings(\"ignore\")",
+      "try:",
+      "    from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd, lightgbm as lgb",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "RUN_E1, RUN_E2, RUN_E3 = True, True, True     # <- switches",
+      "SMOKE = os.environ.get(\"SMOKE\") == \"1\"                   # SMOKE=1 -> tiny quick test of the code path only",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 50,
+    "name": "GCI_v9_tabicl_context_colab.ipynb",
+    "rel_path": "zip\\GCI_v9_tabicl_context_colab.ipynb",
+    "size": 12645,
+    "total_cells": 6,
+    "code_cells": 5,
+    "code_lines": 79,
+    "headers": [
+      "# GCI World 2026 - v9: TabICLv2 with class-balanced context (a gated experiment, NOT a promised gain)",
+      "## The idea",
+      "## What the literature does and does not say (checked against the primary sources)",
+      "## Hard gate before running",
+      "## Protocol (frozen before running)"
+    ],
+    "aucs": [
+      "0.772"
+    ],
+    "models": [
+      "LightGBM"
+    ],
+    "features": [
+      "TE_P5",
+      "TE_P4",
+      "TE_PF4"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup and configuration (run after cell 2 of the v6 notebook, same session, GPU runtime)",
+      "import subprocess, sys, json, datetime",
+      "RULES_CONFIRMED = False    # <- set True ONLY after the organizers confirm pretrained model weights (TabICLv2) are allowed",
+      "assert RULES_CONFIRMED, \"Stop: confirm with the organizers that a pretrained model is allowed. If it is not, do not run this notebook.\"",
+      "INC_DIRS = [\"gci_cache_repro\", \"gci_cache_v6new\"]   # <- EDIT: folders holding the 5 incumbent member .npz files. Two folders = 50/50 mix like v6_B, one folder = single blend",
+      "BAGS, N_EST, QCHUNK = 2, 8, 25000                   # contexts per strategy, TabICL ensemble size, query rows per predict call (lower QCHUNK if the GPU runs out of memory)",
+      "STRATS = [\"natural\", \"balanced\", \"enriched\"]",
+      "NAT_N, BAL_N, ENR_NEG_MULT = 18000, 18000, 3",
+      "BAGS_FINAL = 5",
+      "try: import tabicl",
+      "except ImportError: subprocess.run([sys.executable, \"-m\", \"pip\", \"install\", \"-q\", \"tabicl\"], check=True)",
+      "from tabicl import TabICLClassifier",
+      "try:",
+      "    import torch; print(\"torch\", torch.__version__, \"| GPU:\", torch.cuda.get_device_name(0) if torch.cuda.is_available() else \"NONE (CPU will be very slow)\")",
+      "except ImportError: pass"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 51,
+    "name": "GCI_v9_tabicl_standalone_colab.ipynb",
+    "rel_path": "zip\\GCI_v9_tabicl_standalone_colab.ipynb",
+    "size": 33640,
+    "total_cells": 8,
+    "code_cells": 7,
+    "code_lines": 290,
+    "headers": [
+      "# GCI World 2026 - v9 (standalone): TabICLv2 with class-balanced context - a gated experiment, not a promised gain",
+      "## Idea",
+      "## Evidence status (checked against the primary sources)",
+      "## Rules",
+      "## Frozen gate (no public-leaderboard use)"
+    ],
+    "aucs": [],
+    "models": [
+      "lgb",
+      "LightGBM"
+    ],
+    "features": [
+      "DE_SENT",
+      "EXT_SOURCE_1",
+      "Q4",
+      "PF4",
+      "Q5",
+      "TE_P5",
+      "Q0",
+      "Q3",
+      "TE_PF4",
+      "P4",
+      "EXT_SOURCE_2",
+      "TE_P4",
+      "EXT_SOURCE_3",
+      "P3"
+    ],
+    "first_code_snippet": [
+      "# cell 1 - setup (standalone; fresh GPU runtime is fine)",
+      "import os, sys, glob, time, json, datetime, subprocess, warnings; warnings.filterwarnings(\"ignore\")",
+      "try: from google.colab import drive; drive.mount(\"/content/drive\")",
+      "except Exception as e: print(\"Drive not mounted (ok if files are in /content):\", e)",
+      "import numpy as np, pandas as pd",
+      "from scipy.stats import rankdata",
+      "from sklearn.model_selection import StratifiedKFold",
+      "from sklearn.metrics import roc_auc_score",
+      "SMOKE = False",
+      "def find(name, roots=(\"/content\", \"/content/drive/MyDrive\", os.getcwd())):",
+      "    for r in roots:",
+      "        for pat in (name, \"*/\"+name, \"*/*/\"+name, \"*/*/*/\"+name, \"*/*/*/*/\"+name):",
+      "            hit = glob.glob(os.path.join(r, pat))",
+      "            if hit: return hit[0]",
+      "    return None"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 52,
+    "name": "Right_Customer_Right_Offer_Right_Time.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time.ipynb",
+    "size": 70070,
+    "total_cells": 35,
+    "code_cells": 23,
+    "code_lines": 708,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [],
+    "models": [
+      "xgboost",
+      "HistGradientBoosting",
+      "XGBoost",
+      "LogisticRegression"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 53,
+    "name": "Right_Customer_Right_Offer_Right_Time_v10.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v10.ipynb",
+    "size": 125470,
+    "total_cells": 47,
+    "code_cells": 32,
+    "code_lines": 1240,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "0.7104",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [
+      "Q4",
+      "Q3",
+      "VIEW_COLS"
+    ],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "from datetime import datetime",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 54,
+    "name": "Right_Customer_Right_Offer_Right_Time_v11.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v11.ipynb",
+    "size": 128582,
+    "total_cells": 47,
+    "code_cells": 32,
+    "code_lines": 1259,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "0.7104",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [
+      "Q4",
+      "Q3",
+      "VIEW_COLS"
+    ],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "from datetime import datetime",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 55,
+    "name": "Right_Customer_Right_Offer_Right_Time_v12.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v12.ipynb",
+    "size": 138324,
+    "total_cells": 50,
+    "code_cells": 35,
+    "code_lines": 1341,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "0.7104",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [
+      "Q4",
+      "Q3",
+      "VIEW_COLS"
+    ],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "from datetime import datetime",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 56,
+    "name": "Right_Customer_Right_Offer_Right_Time_v13_Optimized.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v13_Optimized.ipynb",
+    "size": 140893,
+    "total_cells": 51,
+    "code_cells": 35,
+    "code_lines": 1346,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "0.7104",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [
+      "Q4",
+      "Q3",
+      "VIEW_COLS"
+    ],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "from datetime import datetime",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 57,
+    "name": "Right_Customer_Right_Offer_Right_Time_v2.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v2.ipynb",
+    "size": 88239,
+    "total_cells": 38,
+    "code_cells": 25,
+    "code_lines": 911,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 58,
+    "name": "Right_Customer_Right_Offer_Right_Time_v3.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v3.ipynb",
+    "size": 94162,
+    "total_cells": 40,
+    "code_cells": 27,
+    "code_lines": 952,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 59,
+    "name": "Right_Customer_Right_Offer_Right_Time_v4.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v4.ipynb",
+    "size": 97390,
+    "total_cells": 41,
+    "code_cells": 28,
+    "code_lines": 980,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 60,
+    "name": "Right_Customer_Right_Offer_Right_Time_v5.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v5.ipynb",
+    "size": 97722,
+    "total_cells": 41,
+    "code_cells": 28,
+    "code_lines": 983,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 61,
+    "name": "Right_Customer_Right_Offer_Right_Time_v6.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v6.ipynb",
+    "size": 99266,
+    "total_cells": 41,
+    "code_cells": 28,
+    "code_lines": 995,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 62,
+    "name": "Right_Customer_Right_Offer_Right_Time_v7.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v7.ipynb",
+    "size": 100606,
+    "total_cells": 41,
+    "code_cells": 28,
+    "code_lines": 1008,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules",
+      "if IN_COLAB:                         # shap is optional; everything else ships with Colab"
+    ],
+    "output_samples": []
+  },
+  {
+    "index": 63,
+    "name": "Right_Customer_Right_Offer_Right_Time_v9.ipynb",
+    "rel_path": "zip\\Right_Customer_Right_Offer_Right_Time_v9.ipynb",
+    "size": 115341,
+    "total_cells": 43,
+    "code_cells": 29,
+    "code_lines": 1170,
+    "headers": [
+      "# Right Customer, Right Offer, Right Time",
+      "### Targeted churn prevention for Company A \u2014 GCI World 2026 Final Assignment",
+      "## 1. Market analysis: what billion-dollar operators do, and why it matters for Company A",
+      "### 1.1 Market facts (India, as of 2025-26 / mid-2026)",
+      "### 1.2 Retention playbook used by large operators and consultants"
+    ],
+    "aucs": [
+      "0.702",
+      "0.704",
+      "0.709",
+      "0.7104",
+      "AUC 0.703"
+    ],
+    "models": [
+      "LightGBM",
+      "CatBoost",
+      "xgboost",
+      "lightgbm",
+      "HistGradientBoosting",
+      "XGB",
+      "XGBoost",
+      "LogisticRegression",
+      "catboost"
+    ],
+    "features": [
+      "Q4",
+      "Q3",
+      "VIEW_COLS"
+    ],
+    "first_code_snippet": [
+      "import os, sys, json, math, warnings, subprocess, zipfile",
+      "from datetime import datetime",
+      "warnings.filterwarnings(\"ignore\")",
+      "from pathlib import Path",
+      "",
+      "import numpy as np",
+      "import pandas as pd",
+      "import matplotlib",
+      "if \"google.colab\" not in sys.modules and not os.environ.get(\"DISPLAY\"):",
+      "    matplotlib.use(\"Agg\")           # headless environments",
+      "import matplotlib.pyplot as plt",
+      "import seaborn as sns",
+      "from scipy import stats",
+      "",
+      "IN_COLAB = \"google.colab\" in sys.modules"
+    ],
+    "output_samples": []
+  }
+]

@@ -1,0 +1,199 @@
+{
+  "status": "exploratory fixed-weight blend screen on repeatedly examined labels; not independent confirmation",
+  "folds": "all candidate OOF rows, IDs, labels, and outer-fold IDs aligned",
+  "blend_rule": "within-fold average ranks; weights fixed as listed, no row-specific routing",
+  "reference_mean_fold_auc": 0.7674919876117505,
+  "candidate_results": [
+    {
+      "candidate": "previous_aligned_blend",
+      "pooled_auc": 0.7674924744632943,
+      "mean_fold_auc": 0.7674919876117505,
+      "delta_vs_previous_aligned_blend": 0.0,
+      "positive_fold_delta_count": 0,
+      "fold_auc": [
+        0.7721275031542798,
+        0.7743237707790568,
+        0.7622172770690241,
+        0.7649573681112148,
+        0.7638340189451767
+      ]
+    },
+    {
+      "candidate": "two_seed_catboost_50_50",
+      "pooled_auc": 0.7664003603470966,
+      "mean_fold_auc": 0.7663983203334978,
+      "delta_vs_previous_aligned_blend": -0.0010936672782527745,
+      "positive_fold_delta_count": 1,
+      "fold_auc": [
+        0.7703175881482296,
+        0.7747981412170402,
+        0.7612035375217081,
+        0.7640830601368759,
+        0.7615892746436353
+      ]
+    },
+    {
+      "candidate": "previous_plus_clean_catboost_seed2_0.10",
+      "pooled_auc": 0.7675840882955594,
+      "mean_fold_auc": 0.7675839306857148,
+      "delta_vs_previous_aligned_blend": 9.194307396431789e-05,
+      "positive_fold_delta_count": 3,
+      "fold_auc": [
+        0.7721151126954755,
+        0.7746081632390429,
+        0.7623340821178344,
+        0.7650572478073019,
+        0.7638050475689194
+      ]
+    },
+    {
+      "candidate": "previous_plus_clean_catboost_seed2_0.20",
+      "pooled_auc": 0.767616097393898,
+      "mean_fold_auc": 0.7676188451653891,
+      "delta_vs_previous_aligned_blend": 0.00012685755363861517,
+      "positive_fold_delta_count": 3,
+      "fold_auc": [
+        0.7720558902103284,
+        0.7748281304829512,
+        0.7624017777815786,
+        0.7650953628970337,
+        0.7637130644550536
+      ]
+    },
+    {
+      "candidate": "previous_plus_clean_catboost_seed2_0.50",
+      "pooled_auc": 0.7673595078642576,
+      "mean_fold_auc": 0.7673639323190702,
+      "delta_vs_previous_aligned_blend": -0.00012805529268034022,
+      "positive_fold_delta_count": 2,
+      "fold_auc": [
+        0.7714807625828557,
+        0.775106105699638,
+        0.7622468059186988,
+        0.7649014368607217,
+        0.7630845505334365
+      ]
+    },
+    {
+      "candidate": "previous_plus_external_geometry_catboost_0.10",
+      "pooled_auc": 0.7675620016729038,
+      "mean_fold_auc": 0.7675617230374956,
+      "delta_vs_previous_aligned_blend": 6.973542574506553e-05,
+      "positive_fold_delta_count": 3,
+      "fold_auc": [
+        0.7721116357810153,
+        0.7744747052606686,
+        0.7623180303317034,
+        0.7651238400185086,
+        0.7637804037955824
+      ]
+    },
+    {
+      "candidate": "previous_plus_external_geometry_catboost_0.20",
+      "pooled_auc": 0.7675774453445151,
+      "mean_fold_auc": 0.7675796810081031,
+      "delta_vs_previous_aligned_blend": 8.769339635261719e-05,
+      "positive_fold_delta_count": 3,
+      "fold_auc": [
+        0.7720446836265306,
+        0.7745699527778218,
+        0.762353582193145,
+        0.7652538577620254,
+        0.7636763286809936
+      ]
+    },
+    {
+      "candidate": "previous_plus_external_geometry_catboost_0.50",
+      "pooled_auc": 0.7673053958226458,
+      "mean_fold_auc": 0.7673030236049687,
+      "delta_vs_previous_aligned_blend": -0.00018896400678181102,
+      "positive_fold_delta_count": 2,
+      "fold_auc": [
+        0.7715221982080777,
+        0.7745207002918726,
+        0.7621572825844477,
+        0.7652771394611362,
+        0.7630377974793097
+      ]
+    },
+    {
+      "candidate": "previous_plus_nested_product_te_lgbm_0.10",
+      "pooled_auc": 0.7676911860263098,
+      "mean_fold_auc": 0.7676929553106497,
+      "delta_vs_previous_aligned_blend": 0.00020096769889921262,
+      "positive_fold_delta_count": 5,
+      "fold_auc": [
+        0.7723034924956348,
+        0.7746383650725477,
+        0.7623906513018257,
+        0.7650709719982366,
+        0.764061295685004
+      ]
+    },
+    {
+      "candidate": "previous_plus_nested_product_te_lgbm_0.20",
+      "pooled_auc": 0.7677876229458376,
+      "mean_fold_auc": 0.7677897693551644,
+      "delta_vs_previous_aligned_blend": 0.00029778174341388297,
+      "positive_fold_delta_count": 5,
+      "fold_auc": [
+        0.7723755019802436,
+        0.7748561262095384,
+        0.7624609791596437,
+        0.7650629030015564,
+        0.7641933364248394
+      ]
+    },
+    {
+      "candidate": "previous_plus_nested_product_te_lgbm_0.50",
+      "pooled_auc": 0.7674606547760652,
+      "mean_fold_auc": 0.7674607876834397,
+      "delta_vs_previous_aligned_blend": -3.1199928310798875e-05,
+      "positive_fold_delta_count": 2,
+      "fold_auc": [
+        0.772030655282402,
+        0.7748855984191405,
+        0.7620417304140393,
+        0.764344951952918,
+        0.7640010023486987
+      ]
+    },
+    {
+      "candidate": "previous_plus_three_new_views_10pct_total",
+      "pooled_auc": 0.767629047459055,
+      "mean_fold_auc": 0.76763054610208,
+      "delta_vs_previous_aligned_blend": 0.00013855849032951006,
+      "positive_fold_delta_count": 5,
+      "fold_auc": [
+        0.7721945530071874,
+        0.774597126959385,
+        0.7623644500512095,
+        0.7650999663630884,
+        0.7638966341295297
+      ]
+    }
+  ],
+  "spearman_rank_correlation_to_previous_blend": {
+    "same_fold_general_baseline": 0.9910675779000754,
+    "clean_catboost_seed1": 0.9910688826106241,
+    "clean_catboost_seed2": 0.9863178970568229,
+    "external_geometry_catboost": 0.9877995773679282,
+    "nested_product_te_lgbm": 0.9744340999653431
+  },
+  "rule_controls": {
+    "test_rows": "not read",
+    "training_labels": "used only for fold AUC reporting; no model fit or test prediction in this script",
+    "manual_row_edits": "none",
+    "weight_search": "no continuous or per-row weight optimization; documented fixed-weight screen only"
+  },
+  "sha256": {
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\OOF_PREDICTIONS.csv": "960aeae7a02b56cd326b7c39d32f3b49424b3f7c509500acc043485be8e2023d",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_second_seed_v1\\OOF_PREDICTIONS.csv": "fb87444d343cdaeb6507e258121ab2b4cd01b7edc8c3d7e6c7f46d35d0dcf929",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_external_geometry_catboost_v1\\OOF_PREDICTIONS.csv": "dd765e8ab9ad3f59312398f3d3161a85e01f60b746384347a06ebf33ab48c123",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\nested_product_te_lgbm_v1\\OOF_PREDICTIONS.csv": "18f41d94d87f13b6fd51b3111bf209343edbaa18b42076b11646cc5c4dff62e5",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\analyze_ideas_v1.py": "ed6bc82e59c44e2622488abda2b61e9026941ac65a73c1132b977b04ddf0c777",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\ideas_v1_blend_screen\\CANDIDATE_METRICS.csv": "c58d5f6f19092c8f7aa92c4e0ee191719c59f3f1b5e94ec649d8d58981cbfe80",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\ideas_v1_blend_screen\\FOLD_METRICS.csv": "e34d678953b8f74ef7f01e9d558079e93232a24e336eaf749c918b1bf6271b9d"
+  }
+}

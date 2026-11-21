@@ -1,0 +1,22 @@
+{
+  "PHASE57_OOF.csv": {
+    "bytes": 8839187,
+    "sha256": "08ef1e7be1eff98365ed834e9477fbe4377e265b52b5de960f695114a5b9fe6d"
+  },
+  "submission.csv": {
+    "bytes": 1728570,
+    "sha256": "aceca1809a082d20ff7daa4a4621cdfe8a551d8bd5136a1749d72f42f4d8745b"
+  },
+  "PHASE57_SUMMARY.json": {
+    "bytes": 5238,
+    "sha256": "c468bac7edd0b647ef110c1da9825c36fe99d5895814e024a71e6cd15fd7ccdc"
+  },
+  "PHASE57_REPORT.md": {
+    "bytes": 1974,
+    "sha256": "7a65384013987daefde403e47fe84612be1acf0b5ec294a56119361f6fde0900"
+  },
+  "phase57_rowwise_catboost.py": {
+    "bytes": 27132,
+    "sha256": "29d3823e7f11ba5ba80906bc19b763f62a5665132bda406a2f7b43e2d9773940"
+  }
+}

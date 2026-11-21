@@ -1,0 +1,37 @@
+{
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "python": "3.12.10",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "xgboost_device": "cuda"
+  },
+  "log_loss": 0.24542663991451263,
+  "mean_fold_auc": 0.760324207110327,
+  "outer_folds": 5,
+  "phase": "V22 compliance rework v1 - no label transfer",
+  "pooled_auc": 0.7603149266527016,
+  "rows": 171202,
+  "rule_controls": {
+    "custom_target_encoding": "none",
+    "external_data": "none",
+    "id_predictor": "excluded",
+    "manual_prediction_edits": "none",
+    "test_statistics": "none; only rowwise transforms and fold-fit one-hot vocabularies"
+  },
+  "runtime_seconds": 81.72577149999779,
+  "seed": 20261113,
+  "sha256": {
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\run_clean_v1.py": "3b33edaff438f3546ad975a02f61f42da7a758344f7c4bea2f918318e5705bad",
+    "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\run_phase29_clean_scratch.py": "534e97bc76cc0679aacd9f95da56ff57c0622b06d161169553625e871e50ee56",
+    "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\runs\\v1_gpu_final_20261114T2112\\V1_FOLD_RESULTS.csv": "fd944abcfc654fddf7c81258b9dcbb1dcddda24823acbe7a61a06a29525f5fe3",
+    "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\runs\\v1_gpu_final_20261114T2112\\V1_OOF_PREDICTIONS.csv": "8a91f67fc534e7d0bb9b09d8810c687db39d9004425e167011b918191ced87a7",
+    "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\runs\\v1_gpu_final_20261114T2112\\submission_clean_v1.csv": "d5c6fb00732d2fbde150667eb6846c51ab74a5c552bca9c8f8920bdad1d7f5d0"
+  },
+  "status": "exploratory; no external or label-derived features",
+  "std_fold_auc": 0.004429921742352252
+}

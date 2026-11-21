@@ -1,0 +1,38 @@
+{
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "python": "3.12.10",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "xgboost_device": "cuda"
+  },
+  "log_loss": 0.24536453187465668,
+  "mean_fold_auc": 0.7605606104154164,
+  "outer_folds": 5,
+  "phase": "V22 compliance rework v2 - fold-independent feature schema",
+  "pooled_auc": 0.7605472669629385,
+  "rows": 171202,
+  "rule_controls": {
+    "custom_target_encoding": "none",
+    "external_data": "none",
+    "id_predictor": "excluded",
+    "manual_prediction_edits": "none",
+    "missingness_schema": "fixed to all raw predictor columns; no dataset-wide missingness scan",
+    "test_statistics": "none; rowwise transforms and fold-fit one-hot vocabularies"
+  },
+  "runtime_seconds": 105.36617610000394,
+  "seed": 20261113,
+  "sha256": {
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\v22_compliance_rework\\v2_fold_independent_schema\\run_clean_v2.py": "a5a33f32cb7498fb32bdda253d4352accfbc9bd6eb83cb115b55617f0bcf39ad",
+    "D:\\gci\\truth\\v22_compliance_rework\\v2_fold_independent_schema\\run_phase29_clean_scratch.py": "534e97bc76cc0679aacd9f95da56ff57c0622b06d161169553625e871e50ee56",
+    "D:\\gci\\truth\\v22_compliance_rework\\v2_fold_independent_schema\\runs\\v2_gpu_repeat_verified_20261114T2250\\V2_FOLD_RESULTS.csv": "8bd38f07d556385ddd0ea5fc1fd650476e19c64d87f9415eb71703b8ec825e95",
+    "D:\\gci\\truth\\v22_compliance_rework\\v2_fold_independent_schema\\runs\\v2_gpu_repeat_verified_20261114T2250\\V2_OOF_PREDICTIONS.csv": "356ed34457d00f8e9724e9ccc43499187eec3417302c8f2f3d4a766852adf28e",
+    "D:\\gci\\truth\\v22_compliance_rework\\v2_fold_independent_schema\\runs\\v2_gpu_repeat_verified_20261114T2250\\submission_clean_v2.csv": "9bbae927a2dd080602b98791739fefacc389ce8a65da8d130f0270b0b2d72809"
+  },
+  "status": "exploratory; no external or label-derived features",
+  "std_fold_auc": 0.003963727906609454
+}

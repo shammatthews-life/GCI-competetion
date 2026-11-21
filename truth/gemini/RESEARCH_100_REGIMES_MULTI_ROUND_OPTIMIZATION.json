@@ -1,0 +1,5567 @@
+{
+  "timestamp_utc": "2026-11-07T16:59:20Z",
+  "total_elapsed_seconds": 54.3,
+  "total_regimes": 100,
+  "total_formulas_evaluated": 480,
+  "baseline_pooled_auc": 0.751644,
+  "enhanced_pooled_auc": 0.75263,
+  "auc_net_lift_bps": 9.9,
+  "regimes": {
+    "exp_141_Young_Single_Renter_Obligation": {
+      "exp_id": 141,
+      "name": "Young_Single_Renter_Obligation",
+      "subgroup_count": 303,
+      "subgroup_pct": 0.18,
+      "subgroup_default_rate": 14.19,
+      "baseline_formula": "(Annuity / Monthly_Income) * (Credit / Goods) / (E2 + 0.1)",
+      "baseline_auc": 0.6216,
+      "baseline_spread_bps": 1935.5,
+      "champion_formula": "(Annuity / (Monthly_Inc - Subsistence + 1)) * (Credit / Goods) / (Harmonic_Copula + 0.05)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6853,
+      "auc_lift_bps": 637.0,
+      "within_split_correlation": 0.224,
+      "split_low_vs_high_default": "3.23% vs 25.81%",
+      "spread_bps": 2258.1,
+      "spread_lift_bps": 322.6,
+      "domain_reason": "Young single renters lack equity buffers; non-linear coupling of rental living stress, debt-to-goods markup, and copula tail disagreement maximizes predictive separation.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Income) * (Credit / Goods) / (E2 + 0.1)",
+          "auc": 0.6216,
+          "spread_bps": 1935.5,
+          "corr": 0.1471
+        },
+        {
+          "round": 2,
+          "formula": "DTI * (1 - Clayton_Copula) / (Adult_Life * (E2 + 0.1))",
+          "auc": 0.6699,
+          "spread_bps": 2580.6,
+          "corr": 0.2053
+        },
+        {
+          "round": 3,
+          "formula": "(Annuity / (Monthly_Inc - Subsistence + 1)) * (Credit / Goods) / (Harmonic_Copula + 0.05)",
+          "auc": 0.6853,
+          "spread_bps": 2258.1,
+          "corr": 0.224
+        },
+        {
+          "round": 4,
+          "formula": "((Annuity * 12) / Income) * (Credit / Goods) * (1 - Frank_Copula)^2",
+          "auc": 0.6429,
+          "spread_bps": 2903.2,
+          "corr": 0.1728
+        },
+        {
+          "round": 5,
+          "formula": "Merton_PD * (Credit / Goods) / (u1 * u2 + 0.05)",
+          "auc": 0.655,
+          "spread_bps": 1935.5,
+          "corr": 0.1874
+        }
+      ]
+    },
+    "exp_142_Sandwich_Generation_Dependency_Strain": {
+      "exp_id": 142,
+      "name": "Sandwich_Generation_Dependency_Strain",
+      "subgroup_count": 308,
+      "subgroup_pct": 0.18,
+      "subgroup_default_rate": 9.09,
+      "baseline_formula": "(Annuity * (Children + 2)) / Income * (1 - Frank_Copula)",
+      "baseline_auc": 0.7022,
+      "baseline_spread_bps": 1935.5,
+      "champion_formula": "Merton_PD * (ch + 1) * (1 - cop_frank)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7681,
+      "auc_lift_bps": 659.0,
+      "within_split_correlation": 0.267,
+      "split_low_vs_high_default": "0.00% vs 29.03%",
+      "spread_bps": 2903.2,
+      "spread_lift_bps": 967.7,
+      "domain_reason": "Middle-aged co-residents supporting children and parents face super-linear subsistence dilution.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity * (Children + 2)) / Income * (1 - Frank_Copula)",
+          "auc": 0.7022,
+          "spread_bps": 1935.5,
+          "corr": 0.2013
+        },
+        {
+          "round": 2,
+          "formula": "(Subsistence / Monthly_Inc) * (1 + DTI) / (Harmonic_Copula + 0.1)",
+          "auc": 0.6698,
+          "spread_bps": 967.7,
+          "corr": 0.1691
+        },
+        {
+          "round": 3,
+          "formula": "((Annuity + Subsistence) / Monthly_Inc)^1.5 * (1 - Clayton_Copula)",
+          "auc": 0.6802,
+          "spread_bps": 1612.9,
+          "corr": 0.1795
+        },
+        {
+          "round": 4,
+          "formula": "(Children / Fam) * DTI * (1 - u1 * u2) * (Credit / Goods)",
+          "auc": 0.6599,
+          "spread_bps": 1612.9,
+          "corr": 0.1593
+        },
+        {
+          "round": 5,
+          "formula": "Merton_PD * (ch + 1) * (1 - cop_frank)",
+          "auc": 0.7681,
+          "spread_bps": 2903.2,
+          "corr": 0.267
+        }
+      ]
+    },
+    "exp_143_Senior_Pensioner_Single_Annuity_Burn": {
+      "exp_id": 143,
+      "name": "Senior_Pensioner_Single_Annuity_Burn",
+      "subgroup_count": 5548,
+      "subgroup_pct": 3.24,
+      "subgroup_default_rate": 5.5,
+      "baseline_formula": "(12 * Annuity) / Income * (1 / (E3 + 0.1))",
+      "baseline_auc": 0.6168,
+      "baseline_spread_bps": 864.9,
+      "champion_formula": "DTI * (1 - u2)^2 * (Credit / Goods)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6712,
+      "auc_lift_bps": 544.0,
+      "within_split_correlation": 0.1352,
+      "split_low_vs_high_default": "1.08% vs 12.43%",
+      "spread_bps": 1135.1,
+      "spread_lift_bps": 270.2,
+      "domain_reason": "Isolated retirees with fixed state pensions suffer severe solvency collapse under annuity inflation.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(12 * Annuity) / Income * (1 / (E3 + 0.1))",
+          "auc": 0.6168,
+          "spread_bps": 864.9,
+          "corr": 0.0922
+        },
+        {
+          "round": 2,
+          "formula": "(Annuity / Monthly_Inc) * (1 - Clayton_Copula) * np.log1p(Age - 58)",
+          "auc": 0.5722,
+          "spread_bps": 576.6,
+          "corr": 0.057
+        },
+        {
+          "round": 3,
+          "formula": "((Annuity + 15000) / Monthly_Inc) / (Harmonic_Copula + 0.05)",
+          "auc": 0.635,
+          "spread_bps": 1045.0,
+          "corr": 0.1066
+        },
+        {
+          "round": 4,
+          "formula": "DTI * (1 - u2)^2 * (Credit / Goods)",
+          "auc": 0.6712,
+          "spread_bps": 1135.1,
+          "corr": 0.1352
+        },
+        {
+          "round": 5,
+          "formula": "Merton_PD * (1 / (u2 + 0.1)) * (1 + dti / 5)",
+          "auc": 0.6406,
+          "spread_bps": 991.0,
+          "corr": 0.111
+        }
+      ]
+    },
+    "exp_144_Large_Family_Overcrowding_Burden": {
+      "exp_id": 144,
+      "name": "Large_Family_Overcrowding_Burden",
+      "subgroup_count": 2184,
+      "subgroup_pct": 1.28,
+      "subgroup_default_rate": 9.8,
+      "baseline_formula": "Credit / (Income / Family_Size) * (1 - E2 * E3)",
+      "baseline_auc": 0.5494,
+      "baseline_spread_bps": 365.3,
+      "champion_formula": "((Monthly_Inc - Subsistence - Annuity) / Monthly_Inc) * cop_frank",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6105,
+      "auc_lift_bps": 611.0,
+      "within_split_correlation": 0.1138,
+      "split_low_vs_high_default": "5.94% vs 17.35%",
+      "spread_bps": 1141.6,
+      "spread_lift_bps": 776.3,
+      "domain_reason": "Family dilution scales per-capita subsistence burden exponentially.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Credit / (Income / Family_Size) * (1 - E2 * E3)",
+          "auc": 0.5494,
+          "spread_bps": 365.3,
+          "corr": 0.0509
+        },
+        {
+          "round": 2,
+          "formula": "(Subsistence / Monthly_Inc) * (Credit / Goods) * (1 - cop_frank)",
+          "auc": 0.5975,
+          "spread_bps": 913.2,
+          "corr": 0.1004
+        },
+        {
+          "round": 3,
+          "formula": "(Annuity / (inc / fam + 1)) * (1 - cop_clayton)",
+          "auc": 0.5823,
+          "spread_bps": 547.9,
+          "corr": 0.0848
+        },
+        {
+          "round": 4,
+          "formula": "(Credit / inc) * fam * (1 - cop_harmonic)",
+          "auc": 0.5772,
+          "spread_bps": 593.6,
+          "corr": 0.0795
+        },
+        {
+          "round": 5,
+          "formula": "((Monthly_Inc - Subsistence - Annuity) / Monthly_Inc) * cop_frank",
+          "auc": 0.6105,
+          "spread_bps": 1141.6,
+          "corr": 0.1138
+        }
+      ]
+    },
+    "exp_145_Sole_Breadwinner_Child_Multiplier": {
+      "exp_id": 145,
+      "name": "Sole_Breadwinner_Child_Multiplier",
+      "subgroup_count": 7459,
+      "subgroup_pct": 4.36,
+      "subgroup_default_rate": 10.43,
+      "baseline_formula": "(Annuity / (Monthly_Inc - Subsistence)) * (1 + DTI)",
+      "baseline_auc": 0.5196,
+      "baseline_spread_bps": 0.0,
+      "champion_formula": "(Subsistence / (monthly_inc + 1)) * (1 - cop_frank)^2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6401,
+      "auc_lift_bps": 1205.0,
+      "within_split_correlation": 0.1484,
+      "split_low_vs_high_default": "3.62% vs 18.36%",
+      "spread_bps": 1474.5,
+      "spread_lift_bps": 1474.5,
+      "domain_reason": "Unpartnered parents bear 100% of childcare liquidity stress.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / (Monthly_Inc - Subsistence)) * (1 + DTI)",
+          "auc": 0.5196,
+          "spread_bps": 0.0,
+          "corr": 0.0208
+        },
+        {
+          "round": 2,
+          "formula": "(Annuity / Monthly_Inc) * (ch + 1) * (1 - u1)",
+          "auc": 0.6282,
+          "spread_bps": 1367.3,
+          "corr": 0.1357
+        },
+        {
+          "round": 3,
+          "formula": "DTI * (ch + 1) * (1 - cop_clayton) * (Credit / Goods)",
+          "auc": 0.5832,
+          "spread_bps": 884.7,
+          "corr": 0.0881
+        },
+        {
+          "round": 4,
+          "formula": "Merton_PD * (ch + 1) / (u1 + 0.1)",
+          "auc": 0.636,
+          "spread_bps": 1648.8,
+          "corr": 0.1439
+        },
+        {
+          "round": 5,
+          "formula": "(Subsistence / (monthly_inc + 1)) * (1 - cop_frank)^2",
+          "auc": 0.6401,
+          "spread_bps": 1474.5,
+          "corr": 0.1484
+        }
+      ]
+    },
+    "exp_146_Early_Career_Commercial_Associate": {
+      "exp_id": 146,
+      "name": "Early_Career_Commercial_Associate",
+      "subgroup_count": 3220,
+      "subgroup_pct": 1.88,
+      "subgroup_default_rate": 10.68,
+      "baseline_formula": "(Credit / (Emp_Yrs + 0.2)) / Monthly_Inc * (1 - E2)",
+      "baseline_auc": 0.5256,
+      "baseline_spread_bps": 279.5,
+      "champion_formula": "(Annuity / Monthly_Inc) * (cr / (gp + 1)) / (cop_harmonic + 0.1)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6122,
+      "auc_lift_bps": 866.0,
+      "within_split_correlation": 0.12,
+      "split_low_vs_high_default": "5.90% vs 19.88%",
+      "spread_bps": 1397.5,
+      "spread_lift_bps": 1118.0,
+      "domain_reason": "Short employment tenure coupled with volatile sales commissions.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / (Emp_Yrs + 0.2)) / Monthly_Inc * (1 - E2)",
+          "auc": 0.5256,
+          "spread_bps": 279.5,
+          "corr": 0.0274
+        },
+        {
+          "round": 2,
+          "formula": "DTI * (1 - cop_frank) / (emp_yrs + 0.5)",
+          "auc": 0.5094,
+          "spread_bps": 31.1,
+          "corr": 0.01
+        },
+        {
+          "round": 3,
+          "formula": "(Annuity / Monthly_Inc) * (cr / (gp + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6122,
+          "spread_bps": 1397.5,
+          "corr": 0.12
+        },
+        {
+          "round": 4,
+          "formula": "Merton_PD / (emp_yrs + 0.3) * (1 - u1)",
+          "auc": 0.5645,
+          "spread_bps": 683.2,
+          "corr": 0.0691
+        },
+        {
+          "round": 5,
+          "formula": "(Credit / Goods) * (1 - cop_clayton) * (adult_life / (emp_yrs + 0.5))",
+          "auc": 0.5614,
+          "spread_bps": 528.0,
+          "corr": 0.0657
+        }
+      ]
+    },
+    "exp_147_Tenured_Civil_Servant_Stability": {
+      "exp_id": 147,
+      "name": "Tenured_Civil_Servant_Stability",
+      "subgroup_count": 6146,
+      "subgroup_pct": 3.59,
+      "subgroup_default_rate": 4.64,
+      "baseline_formula": "(Income / Credit) * (E2 + E3) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.6108,
+      "baseline_spread_bps": 715.4,
+      "champion_formula": "cop_frank * (u1 * u2) * np.log1p(inc / cr)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.671,
+      "auc_lift_bps": 602.0,
+      "within_split_correlation": -0.1246,
+      "split_low_vs_high_default": "11.87% vs 1.46%",
+      "spread_bps": 1040.7,
+      "spread_lift_bps": 325.3,
+      "domain_reason": "State civil servant job protection guarantees annuity continuity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * (E2 + E3) * log1p(Emp_Yrs)",
+          "auc": 0.6108,
+          "spread_bps": 715.4,
+          "corr": -0.0807
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_harmonic * np.log1p(emp_yrs)",
+          "auc": 0.6488,
+          "spread_bps": 910.6,
+          "corr": -0.1084
+        },
+        {
+          "round": 3,
+          "formula": "(Monthly_Inc / Annuity) * cop_frank * (emp_yrs / adult_life)",
+          "auc": 0.6402,
+          "spread_bps": 764.2,
+          "corr": -0.1021
+        },
+        {
+          "round": 4,
+          "formula": "cop_frank * (u1 * u2) * np.log1p(inc / cr)",
+          "auc": 0.671,
+          "spread_bps": 1040.7,
+          "corr": -0.1246
+        },
+        {
+          "round": 5,
+          "formula": "Merton_DD * cop_harmonic * np.log1p(emp_yrs)",
+          "auc": 0.5477,
+          "spread_bps": 0.0,
+          "corr": 0.0347
+        }
+      ]
+    },
+    "exp_148_Maternity_Unemployment_Vulnerability": {
+      "exp_id": 148,
+      "name": "Maternity_Unemployment_Vulnerability",
+      "subgroup_count": 13,
+      "subgroup_pct": 0.01,
+      "subgroup_default_rate": 23.08,
+      "baseline_formula": "Credit / Monthly_Inc * (1 / (E3 + 0.05))",
+      "baseline_auc": 0.5,
+      "baseline_spread_bps": 0.0,
+      "champion_formula": "",
+      "champion_round": null,
+      "total_rounds_evaluated": 0,
+      "optimized_within_split_auc": -1.0,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.0,
+      "split_low_vs_high_default": "0.00% vs 0.00%",
+      "spread_bps": -1.0,
+      "spread_lift_bps": -1.0,
+      "domain_reason": "Absence of active income elevates default probability to extreme levels.",
+      "optimization_history": []
+    },
+    "exp_149_Midlife_Divorced_Unanchored_Male": {
+      "exp_id": 149,
+      "name": "Midlife_Divorced_Unanchored_Male",
+      "subgroup_count": 3052,
+      "subgroup_pct": 1.78,
+      "subgroup_default_rate": 12.25,
+      "baseline_formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5515,
+      "baseline_spread_bps": 849.7,
+      "champion_formula": "(Annuity / Monthly_Inc) * (1 - cop_frank) * (adult_life / (emp_yrs + 1))",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6216,
+      "auc_lift_bps": 701.0,
+      "within_split_correlation": 0.1381,
+      "split_low_vs_high_default": "3.92% vs 21.24%",
+      "spread_bps": 1732.0,
+      "spread_lift_bps": 882.3,
+      "domain_reason": "Unpartnered middle-aged males lacking housing anchors face persistent credit drift.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5515,
+          "spread_bps": 849.7,
+          "corr": 0.0585
+        },
+        {
+          "round": 2,
+          "formula": "single_male_hazard * (cr / (gp + 1))",
+          "auc": 0.5517,
+          "spread_bps": 887.9,
+          "corr": 0.0621
+        },
+        {
+          "round": 3,
+          "formula": "(Annuity / Monthly_Inc) * (1 - cop_frank) * (adult_life / (emp_yrs + 1))",
+          "auc": 0.6216,
+          "spread_bps": 1732.0,
+          "corr": 0.1381
+        },
+        {
+          "round": 4,
+          "formula": "Merton_PD * dti * (1 - u1)",
+          "auc": 0.5715,
+          "spread_bps": 1176.5,
+          "corr": 0.0812
+        },
+        {
+          "round": 5,
+          "formula": "((cr - gp) / (gp + 1)) * (1 - cop_harmonic) * dti",
+          "auc": 0.592,
+          "spread_bps": 1202.1,
+          "corr": 0.1064
+        }
+      ]
+    },
+    "exp_150_Multi_Generational_House_Asset_Anchor": {
+      "exp_id": 150,
+      "name": "Multi_Generational_House_Asset_Anchor",
+      "subgroup_count": 1400,
+      "subgroup_pct": 0.82,
+      "subgroup_default_rate": 8.93,
+      "baseline_formula": "(Monthly_Inc / Annuity) * Harmonic_Copula * (10 - Car_Age)",
+      "baseline_auc": 0.6637,
+      "baseline_spread_bps": 1928.6,
+      "champion_formula": "cop_harmonic * (u1 * u2) * (monthly_inc / (an + 1))",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.698,
+      "auc_lift_bps": 343.0,
+      "within_split_correlation": -0.1956,
+      "split_low_vs_high_default": "22.14% vs 1.43%",
+      "spread_bps": 2071.4,
+      "spread_lift_bps": 142.8,
+      "domain_reason": "Co-residing young adults with modern vehicles possess unencumbered personal asset equity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * Harmonic_Copula * (10 - Car_Age)",
+          "auc": 0.6637,
+          "spread_bps": 1928.6,
+          "corr": -0.1617
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (10 - car_age)",
+          "auc": 0.6562,
+          "spread_bps": 1928.6,
+          "corr": -0.1543
+        },
+        {
+          "round": 3,
+          "formula": "cop_harmonic * (u1 * u2) * (monthly_inc / (an + 1))",
+          "auc": 0.698,
+          "spread_bps": 2071.4,
+          "corr": -0.1956
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * (10 - car_age) * cop_frank",
+          "auc": 0.5428,
+          "spread_bps": 357.1,
+          "corr": 0.0423
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * np.log1p(adult_life)",
+          "auc": 0.5534,
+          "spread_bps": 1000.0,
+          "corr": -0.0527
+        }
+      ]
+    },
+    "exp_151_Hazardous_Industry_Manual_Laborer": {
+      "exp_id": 151,
+      "name": "Hazardous_Industry_Manual_Laborer",
+      "subgroup_count": 4914,
+      "subgroup_pct": 2.87,
+      "subgroup_default_rate": 11.42,
+      "baseline_formula": "(Credit / Goods) * DTI * (1 - E2)",
+      "baseline_auc": 0.5805,
+      "baseline_spread_bps": 935.0,
+      "champion_formula": "Merton_PD * (cr / (gp + 1)) * (1 / (u2 + 0.1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6154,
+      "auc_lift_bps": 349.0,
+      "within_split_correlation": 0.1272,
+      "split_low_vs_high_default": "8.33% vs 22.36%",
+      "spread_bps": 1402.4,
+      "spread_lift_bps": 467.4,
+      "domain_reason": "Manual laborers in cyclically sensitive industries face high injury and seasonal layoff risks.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Goods) * DTI * (1 - E2)",
+          "auc": 0.5805,
+          "spread_bps": 935.0,
+          "corr": 0.0887
+        },
+        {
+          "round": 2,
+          "formula": "single_male_hazard * (an / (monthly_inc + 1))",
+          "auc": 0.5433,
+          "spread_bps": 886.9,
+          "corr": 0.0781
+        },
+        {
+          "round": 3,
+          "formula": "((cr - gp) / (gp + 1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5908,
+          "spread_bps": 1026.5,
+          "corr": 0.1023
+        },
+        {
+          "round": 4,
+          "formula": "Merton_PD * (cr / (gp + 1)) * (1 / (u2 + 0.1))",
+          "auc": 0.6154,
+          "spread_bps": 1402.4,
+          "corr": 0.1272
+        },
+        {
+          "round": 5,
+          "formula": "(Annuity / Monthly_Inc)^1.5 * (1 - cop_frank)",
+          "auc": 0.5595,
+          "spread_bps": 874.0,
+          "corr": 0.0655
+        }
+      ]
+    },
+    "exp_152_High_Skill_IT_Academic_Solvency": {
+      "exp_id": 152,
+      "name": "High_Skill_IT_Academic_Solvency",
+      "subgroup_count": 6894,
+      "subgroup_pct": 4.03,
+      "subgroup_default_rate": 4.16,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 * E3) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.7196,
+      "baseline_spread_bps": 1159.4,
+      "champion_formula": "(Monthly_Inc / Annuity) * (E2 * E3) * log1p(Emp_Yrs)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7196,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": -0.1519,
+      "split_low_vs_high_default": "12.32% vs 0.72%",
+      "spread_bps": 1159.4,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Educated technical staff have robust continuous earning potential and substantial savings buffers.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 * E3) * log1p(Emp_Yrs)",
+          "auc": 0.7196,
+          "spread_bps": 1159.4,
+          "corr": -0.1519
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (emp_yrs / adult_life)",
+          "auc": 0.6748,
+          "spread_bps": 985.5,
+          "corr": -0.121
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * (u1 + u2)",
+          "auc": 0.5724,
+          "spread_bps": 43.5,
+          "corr": 0.0501
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.713,
+          "spread_bps": 1115.9,
+          "corr": -0.1474
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (1 - dti / 15) * (u1 * u2)",
+          "auc": 0.6866,
+          "spread_bps": 985.5,
+          "corr": -0.1291
+        }
+      ]
+    },
+    "exp_153_Informal_Trade_Sales_Volatility": {
+      "exp_id": 153,
+      "name": "Informal_Trade_Sales_Volatility",
+      "subgroup_count": 5351,
+      "subgroup_pct": 3.13,
+      "subgroup_default_rate": 9.05,
+      "baseline_formula": "(Annuity / Monthly_Inc) / (E3 + 0.1)",
+      "baseline_auc": 0.5883,
+      "baseline_spread_bps": 1044.8,
+      "champion_formula": "((Annuity * 12) / Income) * (1 - u2)^2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6194,
+      "auc_lift_bps": 311.0,
+      "within_split_correlation": 0.1187,
+      "split_low_vs_high_default": "2.99% vs 16.42%",
+      "spread_bps": 1343.3,
+      "spread_lift_bps": 298.5,
+      "domain_reason": "Unverified sales workers experience sharp retail revenue volatility.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) / (E3 + 0.1)",
+          "auc": 0.5883,
+          "spread_bps": 1044.8,
+          "corr": 0.0877
+        },
+        {
+          "round": 2,
+          "formula": "DTI * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5599,
+          "spread_bps": 783.6,
+          "corr": 0.0595
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (an / (monthly_inc + 1)) / (u1 + 0.1)",
+          "auc": 0.5895,
+          "spread_bps": 1044.8,
+          "corr": 0.089
+        },
+        {
+          "round": 4,
+          "formula": "(cr / (gp + 1)) * (1 - cop_harmonic) * dti",
+          "auc": 0.5802,
+          "spread_bps": 858.2,
+          "corr": 0.0797
+        },
+        {
+          "round": 5,
+          "formula": "((Annuity * 12) / Income) * (1 - u2)^2",
+          "auc": 0.6194,
+          "spread_bps": 1343.3,
+          "corr": 0.1187
+        }
+      ]
+    },
+    "exp_154_Security_Police_Stable_Anchor": {
+      "exp_id": 154,
+      "name": "Security_Police_Stable_Anchor",
+      "subgroup_count": 6907,
+      "subgroup_pct": 4.03,
+      "subgroup_default_rate": 8.46,
+      "baseline_formula": "(Income / Credit) * Frank_Copula * (Emp_Yrs + 1)",
+      "baseline_auc": 0.6662,
+      "baseline_spread_bps": 1823.4,
+      "champion_formula": "cop_frank * (u1 * u2) * (monthly_inc / (an + 1))",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7044,
+      "auc_lift_bps": 382.0,
+      "within_split_correlation": -0.197,
+      "split_low_vs_high_default": "25.04% vs 3.18%",
+      "spread_bps": 2185.2,
+      "spread_lift_bps": 361.8,
+      "domain_reason": "Institutional security and military personnel have protected regular payrolls.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * Frank_Copula * (Emp_Yrs + 1)",
+          "auc": 0.6662,
+          "spread_bps": 1823.4,
+          "corr": -0.1602
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_harmonic * np.log1p(emp_yrs)",
+          "auc": 0.6719,
+          "spread_bps": 1693.2,
+          "corr": -0.1657
+        },
+        {
+          "round": 3,
+          "formula": "cop_frank * (u1 * u2) * (monthly_inc / (an + 1))",
+          "auc": 0.7044,
+          "spread_bps": 2185.2,
+          "corr": -0.197
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * (u1 + u2) * np.log1p(age)",
+          "auc": 0.52,
+          "spread_bps": 115.8,
+          "corr": 0.0193
+        },
+        {
+          "round": 5,
+          "formula": "(Income / Credit) * (u1 * u2) * (1 - dti / 10)",
+          "auc": 0.6303,
+          "spread_bps": 1331.4,
+          "corr": -0.1256
+        }
+      ]
+    },
+    "exp_155_Low_Skill_Day_Laborer_Distress": {
+      "exp_id": 155,
+      "name": "Low_Skill_Day_Laborer_Distress",
+      "subgroup_count": 788,
+      "subgroup_pct": 0.46,
+      "subgroup_default_rate": 15.74,
+      "baseline_formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5296,
+      "baseline_spread_bps": 253.2,
+      "champion_formula": "Merton_PD * (cr / (gp + 1)) * (1 / (u1 + 0.05))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6664,
+      "auc_lift_bps": 1368.0,
+      "within_split_correlation": 0.2099,
+      "split_low_vs_high_default": "10.13% vs 31.65%",
+      "spread_bps": 2151.9,
+      "spread_lift_bps": 1898.7,
+      "domain_reason": "Low-skill laborers earning below median have negligible financial cushion.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+          "auc": 0.5296,
+          "spread_bps": 253.2,
+          "corr": 0.0373
+        },
+        {
+          "round": 2,
+          "formula": "single_male_hazard * (cr / (gp + 1)) * 2",
+          "auc": 0.5997,
+          "spread_bps": 1665.6,
+          "corr": 0.1664
+        },
+        {
+          "round": 3,
+          "formula": "DTI * (1 - cop_clayton) / (emp_yrs + 0.1)",
+          "auc": 0.58,
+          "spread_bps": 1265.8,
+          "corr": 0.101
+        },
+        {
+          "round": 4,
+          "formula": "Merton_PD * (cr / (gp + 1)) * (1 / (u1 + 0.05))",
+          "auc": 0.6664,
+          "spread_bps": 2151.9,
+          "corr": 0.2099
+        },
+        {
+          "round": 5,
+          "formula": "(Annuity / (monthly_inc - subsistence + 1)) * (1 - cop_frank)",
+          "auc": 0.5694,
+          "spread_bps": 1139.2,
+          "corr": 0.0876
+        }
+      ]
+    },
+    "exp_156_Executive_Corporate_Leverage": {
+      "exp_id": 156,
+      "name": "Executive_Corporate_Leverage",
+      "subgroup_count": 8187,
+      "subgroup_pct": 4.78,
+      "subgroup_default_rate": 5.29,
+      "baseline_formula": "(Credit / Monthly_Inc) * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.5536,
+      "baseline_spread_bps": 378.5,
+      "champion_formula": "((cr - gp) / (gp + 1)) * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5951,
+      "auc_lift_bps": 415.0,
+      "within_split_correlation": 0.0764,
+      "split_low_vs_high_default": "3.81% vs 9.65%",
+      "spread_bps": 583.4,
+      "spread_lift_bps": 204.9,
+      "domain_reason": "Corporate managers taking outsize speculative debt display sharp credit-score sensitivity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Monthly_Inc) * (1 - E2) * (Credit / Goods)",
+          "auc": 0.5536,
+          "spread_bps": 378.5,
+          "corr": 0.0416
+        },
+        {
+          "round": 2,
+          "formula": "DTI * (1 - cop_frank) * (cr / (gp + 1))",
+          "auc": 0.5427,
+          "spread_bps": 378.5,
+          "corr": 0.0331
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (1 - u1 * u2)",
+          "auc": 0.5016,
+          "spread_bps": 73.3,
+          "corr": 0.0012
+        },
+        {
+          "round": 4,
+          "formula": "((cr - gp) / (gp + 1)) * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.5951,
+          "spread_bps": 583.4,
+          "corr": 0.0764
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1)) * (1 / (u1 + 0.1))",
+          "auc": 0.5634,
+          "spread_bps": 488.4,
+          "corr": 0.0492
+        }
+      ]
+    },
+    "exp_157_Healthcare_Public_Sector_Tenure": {
+      "exp_id": 157,
+      "name": "Healthcare_Public_Sector_Tenure",
+      "subgroup_count": 4476,
+      "subgroup_pct": 2.61,
+      "subgroup_default_rate": 5.59,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 + E3) / (1 + Children)",
+      "baseline_auc": 0.624,
+      "baseline_spread_bps": 781.2,
+      "champion_formula": "cop_frank * (u1 * u2) * (monthly_inc / (an + 1)) / (ch + 1)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6958,
+      "auc_lift_bps": 718.0,
+      "within_split_correlation": -0.1557,
+      "split_low_vs_high_default": "14.51% vs 2.01%",
+      "spread_bps": 1250.0,
+      "spread_lift_bps": 468.8,
+      "domain_reason": "Public medical and teaching staff have reliable, predictable salary structures.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 + E3) / (1 + Children)",
+          "auc": 0.624,
+          "spread_bps": 781.2,
+          "corr": -0.0986
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_harmonic * np.log1p(emp_yrs)",
+          "auc": 0.6405,
+          "spread_bps": 1004.5,
+          "corr": -0.1118
+        },
+        {
+          "round": 3,
+          "formula": "cop_frank * (u1 * u2) * (monthly_inc / (an + 1)) / (ch + 1)",
+          "auc": 0.6958,
+          "spread_bps": 1250.0,
+          "corr": -0.1557
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * (u1 + u2) * (emp_yrs / adult_life)",
+          "auc": 0.5347,
+          "spread_bps": 111.6,
+          "corr": 0.0276
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (1 - dti / 12) * cop_frank",
+          "auc": 0.6362,
+          "spread_bps": 1093.8,
+          "corr": -0.1083
+        }
+      ]
+    },
+    "exp_158_Cleaning_Cooking_Service_Pressure": {
+      "exp_id": 158,
+      "name": "Cleaning_Cooking_Service_Pressure",
+      "subgroup_count": 1777,
+      "subgroup_pct": 1.04,
+      "subgroup_default_rate": 12.66,
+      "baseline_formula": "(Annuity / (Monthly_Inc - Subsistence)) / (E2 + 0.1)",
+      "baseline_auc": 0.5981,
+      "baseline_spread_bps": 1067.4,
+      "champion_formula": "(Annuity / (Monthly_Inc - Subsistence)) / (E2 + 0.1)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5981,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.113,
+      "split_low_vs_high_default": "8.43% vs 19.10%",
+      "spread_bps": 1067.4,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Service staff supporting families experience extreme cash-flow tightness on monthly payment dates.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / (Monthly_Inc - Subsistence)) / (E2 + 0.1)",
+          "auc": 0.5981,
+          "spread_bps": 1067.4,
+          "corr": 0.113
+        },
+        {
+          "round": 2,
+          "formula": "DTI * (ch + 1) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5541,
+          "spread_bps": 337.1,
+          "corr": 0.0623
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (an / (monthly_inc + 1)) / (u2 + 0.1)",
+          "auc": 0.5504,
+          "spread_bps": 618.0,
+          "corr": 0.0581
+        },
+        {
+          "round": 4,
+          "formula": "(cr / (gp + 1)) * (1 - cop_frank) * (an / (monthly_inc + 1))",
+          "auc": 0.5879,
+          "spread_bps": 1011.2,
+          "corr": 0.1013
+        },
+        {
+          "round": 5,
+          "formula": "(Subsistence / (monthly_inc + 1)) * (1 - u1 * u2)",
+          "auc": 0.5653,
+          "spread_bps": 1067.4,
+          "corr": 0.0752
+        }
+      ]
+    },
+    "exp_159_Self_Employed_Sole_Proprietor_Friction": {
+      "exp_id": 159,
+      "name": "Self_Employed_Sole_Proprietor_Friction",
+      "subgroup_count": 20624,
+      "subgroup_pct": 12.05,
+      "subgroup_default_rate": 7.68,
+      "baseline_formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5419,
+      "baseline_spread_bps": 300.5,
+      "champion_formula": "((cr - gp) / (gp + 1)) * (1 - cop_harmonic) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6014,
+      "auc_lift_bps": 595.0,
+      "within_split_correlation": 0.0956,
+      "split_low_vs_high_default": "6.13% vs 16.19%",
+      "spread_bps": 1005.9,
+      "spread_lift_bps": 705.4,
+      "domain_reason": "Sole proprietors absorb the entire downside of business shocks without insurance safety nets.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5419,
+          "spread_bps": 300.5,
+          "corr": 0.0386
+        },
+        {
+          "round": 2,
+          "formula": "(cr / (gp + 1)) * (1 - cop_frank) * dti",
+          "auc": 0.5634,
+          "spread_bps": 528.4,
+          "corr": 0.0585
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (1 - u1)",
+          "auc": 0.5666,
+          "spread_bps": 387.8,
+          "corr": 0.0615
+        },
+        {
+          "round": 4,
+          "formula": "((cr - gp) / (gp + 1)) * (1 - cop_harmonic) * (an / (monthly_inc + 1))",
+          "auc": 0.6014,
+          "spread_bps": 1005.9,
+          "corr": 0.0956
+        },
+        {
+          "round": 5,
+          "formula": "(Annuity / Monthly_Inc)^1.5 * (1 - u1 * u2)",
+          "auc": 0.5639,
+          "spread_bps": 547.7,
+          "corr": 0.0589
+        }
+      ]
+    },
+    "exp_160_Driver_Automotive_Collateral_Vulnerability": {
+      "exp_id": 160,
+      "name": "Driver_Automotive_Collateral_Vulnerability",
+      "subgroup_count": 4814,
+      "subgroup_pct": 2.81,
+      "subgroup_default_rate": 10.12,
+      "baseline_formula": "(Credit / Goods) * (Car_Age + 1) / (E3 + 0.1)",
+      "baseline_auc": 0.6155,
+      "baseline_spread_bps": 1556.0,
+      "champion_formula": "(Credit / Goods) * (Car_Age + 1) / (E3 + 0.1)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6155,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.1206,
+      "split_low_vs_high_default": "3.53% vs 19.09%",
+      "spread_bps": 1556.0,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Drivers financing debt against depreciating vehicles suffer dual vehicle wear and credit strain.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Goods) * (Car_Age + 1) / (E3 + 0.1)",
+          "auc": 0.6155,
+          "spread_bps": 1556.0,
+          "corr": 0.1206
+        },
+        {
+          "round": 2,
+          "formula": "(car_age / 8) * dti * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5649,
+          "spread_bps": 726.1,
+          "corr": 0.0678
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (car_age + 1) * (cr / (gp + 1))",
+          "auc": 0.5545,
+          "spread_bps": 746.9,
+          "corr": 0.057
+        },
+        {
+          "round": 4,
+          "formula": "single_male_hazard * (car_age / 5)",
+          "auc": 0.5269,
+          "spread_bps": 573.4,
+          "corr": 0.0504
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1)) * (car_age + 1) / (u1 + 0.1)",
+          "auc": 0.5929,
+          "spread_bps": 1473.0,
+          "corr": 0.0971
+        }
+      ]
+    },
+    "exp_161_Bureau_Triad_Full_Agreement_Anchor": {
+      "exp_id": 161,
+      "name": "Bureau_Triad_Full_Agreement_Anchor",
+      "subgroup_count": 9219,
+      "subgroup_pct": 5.38,
+      "subgroup_default_rate": 5.91,
+      "baseline_formula": "Mean(E1, E2, E3) * (Income / Credit)",
+      "baseline_auc": 0.6551,
+      "baseline_spread_bps": 1138.8,
+      "champion_formula": "cop_frank * (u0 * u1 * u2)**(1/3) * (monthly_inc / (an + 1))",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7599,
+      "auc_lift_bps": 1048.0,
+      "within_split_correlation": -0.2124,
+      "split_low_vs_high_default": "23.43% vs 1.52%",
+      "spread_bps": 2190.9,
+      "spread_lift_bps": 1052.1,
+      "domain_reason": "When all three independent bureaus agree closely, default risk is exceptionally low and predictable.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Mean(E1, E2, E3) * (Income / Credit)",
+          "auc": 0.6551,
+          "spread_bps": 1138.8,
+          "corr": -0.1267
+        },
+        {
+          "round": 2,
+          "formula": "cop_harmonic * (monthly_inc / (an + 1)) * (1 - triad_std * 5)",
+          "auc": 0.6988,
+          "spread_bps": 1572.7,
+          "corr": -0.1624
+        },
+        {
+          "round": 3,
+          "formula": "cop_frank * (u0 * u1 * u2)**(1/3) * (monthly_inc / (an + 1))",
+          "auc": 0.7599,
+          "spread_bps": 2190.9,
+          "corr": -0.2124
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * ((e1_f + e2_f + e3_f) / 3) * np.log1p(emp_yrs)",
+          "auc": 0.5695,
+          "spread_bps": 292.8,
+          "corr": 0.0568
+        },
+        {
+          "round": 5,
+          "formula": "((e1_f + e2_f + e3_f) / 3)^2 * (inc / cr)",
+          "auc": 0.7251,
+          "spread_bps": 1984.8,
+          "corr": -0.1839
+        }
+      ]
+    },
+    "exp_162_Bureau_Bipolar_Acute_Discordance": {
+      "exp_id": 162,
+      "name": "Bureau_Bipolar_Acute_Discordance",
+      "subgroup_count": 2404,
+      "subgroup_pct": 1.4,
+      "subgroup_default_rate": 10.48,
+      "baseline_formula": "(E2 - E3) * DTI / (E3 + 0.05)",
+      "baseline_auc": 0.5512,
+      "baseline_spread_bps": 539.4,
+      "champion_formula": "Merton_PD * (e2_f - e3_f) * (cr / (gp + 1)) / (u2 + 0.05)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5839,
+      "auc_lift_bps": 327.0,
+      "within_split_correlation": 0.089,
+      "split_low_vs_high_default": "7.47% vs 17.01%",
+      "spread_bps": 954.4,
+      "spread_lift_bps": 415.0,
+      "domain_reason": "Severe conflict where Agency 2 is lenient while Agency 3 detects delinquency signals concealed risk.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(E2 - E3) * DTI / (E3 + 0.05)",
+          "auc": 0.5512,
+          "spread_bps": 539.4,
+          "corr": 0.0543
+        },
+        {
+          "round": 2,
+          "formula": "(e2_f - e3_f)^2 * (an / (monthly_inc + 1)) / (u2 + 0.1)",
+          "auc": 0.5756,
+          "spread_bps": 663.9,
+          "corr": 0.0802
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (e2_f - e3_f) * (cr / (gp + 1)) / (u2 + 0.05)",
+          "auc": 0.5839,
+          "spread_bps": 954.4,
+          "corr": 0.089
+        },
+        {
+          "round": 4,
+          "formula": "(1 - cop_clayton) * (e2_f - e3_f) * dti",
+          "auc": 0.5318,
+          "spread_bps": 290.5,
+          "corr": 0.0338
+        },
+        {
+          "round": 5,
+          "formula": "((e2_f - e3_f) / (e2_f + e3_f + 0.1)) * dti * (cr / (gp + 1))",
+          "auc": 0.544,
+          "spread_bps": 788.4,
+          "corr": 0.0467
+        }
+      ]
+    },
+    "exp_163_Gumbel_Upper_Tail_Ultra_Prime_Sanctuary": {
+      "exp_id": 163,
+      "name": "Gumbel_Upper_Tail_Ultra_Prime_Sanctuary",
+      "subgroup_count": 11242,
+      "subgroup_pct": 6.57,
+      "subgroup_default_rate": 1.79,
+      "baseline_formula": "(E2 * E3) * (Monthly_Inc / Annuity) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.5422,
+      "baseline_spread_bps": 43.5,
+      "champion_formula": "cop_harmonic * (inc / (cr + 1)) * np.log1p(adult_life)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5953,
+      "auc_lift_bps": 531.0,
+      "within_split_correlation": -0.0438,
+      "split_low_vs_high_default": "2.58% vs 0.80%",
+      "spread_bps": 177.8,
+      "spread_lift_bps": 134.3,
+      "domain_reason": "Simultaneous top-tier bureau scores isolate virtually default-free ultra prime borrowers.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(E2 * E3) * (Monthly_Inc / Annuity) * log1p(Emp_Yrs)",
+          "auc": 0.5422,
+          "spread_bps": 43.5,
+          "corr": -0.0195
+        },
+        {
+          "round": 2,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * (1 - dti / 15)",
+          "auc": 0.5731,
+          "spread_bps": 133.3,
+          "corr": -0.0335
+        },
+        {
+          "round": 3,
+          "formula": "cop_harmonic * (inc / (cr + 1)) * np.log1p(adult_life)",
+          "auc": 0.5953,
+          "spread_bps": 177.8,
+          "corr": -0.0438
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * (u1 * u2) * np.log1p(emp_yrs)",
+          "auc": 0.5274,
+          "spread_bps": 40.5,
+          "corr": -0.0126
+        },
+        {
+          "round": 5,
+          "formula": "(u1 * u2)**2 * (monthly_inc / (an + 1))",
+          "auc": 0.5634,
+          "spread_bps": 115.6,
+          "corr": -0.0291
+        }
+      ]
+    },
+    "exp_164_Clayton_Deep_Subprime_Sinkhole": {
+      "exp_id": 164,
+      "name": "Clayton_Deep_Subprime_Sinkhole",
+      "subgroup_count": 6508,
+      "subgroup_pct": 3.8,
+      "subgroup_default_rate": 25.14,
+      "baseline_formula": "Clayton_Copula * DTI * (Credit / Goods)",
+      "baseline_auc": 0.5628,
+      "baseline_spread_bps": 1290.3,
+      "champion_formula": "(1 / (u1 * u2 + 0.05)) * (an / (monthly_inc + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5739,
+      "auc_lift_bps": 111.0,
+      "within_split_correlation": 0.1111,
+      "split_low_vs_high_default": "17.20% vs 35.02%",
+      "spread_bps": 1781.9,
+      "spread_lift_bps": 491.6,
+      "domain_reason": "Correlated distress in lower tail copulas captures systemic delinquency clustering.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Clayton_Copula * DTI * (Credit / Goods)",
+          "auc": 0.5628,
+          "spread_bps": 1290.3,
+          "corr": -0.0943
+        },
+        {
+          "round": 2,
+          "formula": "(1 / (u1 * u2 + 0.05)) * (an / (monthly_inc + 1))",
+          "auc": 0.5739,
+          "spread_bps": 1781.9,
+          "corr": 0.1111
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (1 - cop_harmonic) * dti * (cr / (gp + 1))",
+          "auc": 0.5328,
+          "spread_bps": 199.7,
+          "corr": 0.0493
+        },
+        {
+          "round": 4,
+          "formula": "(1 - cop_frank)^2 * dti * (cr / (gp + 1))",
+          "auc": 0.5368,
+          "spread_bps": 460.8,
+          "corr": 0.0553
+        },
+        {
+          "round": 5,
+          "formula": "((1 - u1) * (1 - u2)) * (an / (monthly_inc + 1)) * dti",
+          "auc": 0.5302,
+          "spread_bps": 476.2,
+          "corr": 0.0454
+        }
+      ]
+    },
+    "exp_165_Bureau_Harmonic_Vs_Arithmetic_Deficit": {
+      "exp_id": 165,
+      "name": "Bureau_Harmonic_Vs_Arithmetic_Deficit",
+      "subgroup_count": 36164,
+      "subgroup_pct": 21.12,
+      "subgroup_default_rate": 7.11,
+      "baseline_formula": "(Arithmetic_Mean - Harmonic_Mean) * (Credit / Income)",
+      "baseline_auc": 0.598,
+      "baseline_spread_bps": 674.6,
+      "champion_formula": "(arith_mean - harm_mean)^0.5 * (1 - cop_frank) * (cr / (gp + 1))",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6595,
+      "auc_lift_bps": 615.0,
+      "within_split_correlation": 0.1419,
+      "split_low_vs_high_default": "2.60% vs 14.82%",
+      "spread_bps": 1222.0,
+      "spread_lift_bps": 547.4,
+      "domain_reason": "Penalizes borrowers where one disastrous score ruins an otherwise acceptable average.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Arithmetic_Mean - Harmonic_Mean) * (Credit / Income)",
+          "auc": 0.598,
+          "spread_bps": 674.6,
+          "corr": 0.0872
+        },
+        {
+          "round": 2,
+          "formula": "(arith_mean - harm_mean) * (an / (monthly_inc + 1)) * (cr / (gp + 1))",
+          "auc": 0.6151,
+          "spread_bps": 851.5,
+          "corr": 0.1024
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (arith_mean - harm_mean) * dti",
+          "auc": 0.5931,
+          "spread_bps": 622.1,
+          "corr": 0.0828
+        },
+        {
+          "round": 4,
+          "formula": "((arith_mean - harm_mean) / (arith_mean + 0.1)) * (1 - cop_clayton) * dti",
+          "auc": 0.6535,
+          "spread_bps": 1144.6,
+          "corr": 0.1367
+        },
+        {
+          "round": 5,
+          "formula": "(arith_mean - harm_mean)^0.5 * (1 - cop_frank) * (cr / (gp + 1))",
+          "auc": 0.6595,
+          "spread_bps": 1222.0,
+          "corr": 0.1419
+        }
+      ]
+    },
+    "exp_166_Missing_Bureau_3_Informational_Blindspot": {
+      "exp_id": 166,
+      "name": "Missing_Bureau_3_Informational_Blindspot",
+      "subgroup_count": 54440,
+      "subgroup_pct": 31.8,
+      "subgroup_default_rate": 8.86,
+      "baseline_formula": "(1 - E2) * DTI * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5623,
+      "baseline_spread_bps": 586.0,
+      "champion_formula": "Merton_PD * (1 - u1) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6496,
+      "auc_lift_bps": 873.0,
+      "within_split_correlation": 0.1473,
+      "split_low_vs_high_default": "6.48% vs 20.90%",
+      "spread_bps": 1442.0,
+      "spread_lift_bps": 856.0,
+      "domain_reason": "Absence of Bureau 3 data forces reliance on Bureau 2 with heightened adverse selection.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 - E2) * DTI * (Annuity / Monthly_Inc)",
+          "auc": 0.5623,
+          "spread_bps": 586.0,
+          "corr": 0.0614
+        },
+        {
+          "round": 2,
+          "formula": "Merton_PD * (1 - u1) * (cr / (gp + 1))",
+          "auc": 0.6496,
+          "spread_bps": 1442.0,
+          "corr": 0.1473
+        },
+        {
+          "round": 3,
+          "formula": "(1 - u1)^2 * dti * (cr / (gp + 1))",
+          "auc": 0.6328,
+          "spread_bps": 1309.7,
+          "corr": 0.1307
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (u1 + 0.1) * (cr / (gp + 1))",
+          "auc": 0.6278,
+          "spread_bps": 1399.7,
+          "corr": 0.1258
+        },
+        {
+          "round": 5,
+          "formula": "dti * (1 - u1) * (adult_life / (emp_yrs + 1))",
+          "auc": 0.5357,
+          "spread_bps": 281.0,
+          "corr": 0.0351
+        }
+      ]
+    },
+    "exp_167_Missing_Bureau_1_Novel_Credit_Profile": {
+      "exp_id": 167,
+      "name": "Missing_Bureau_1_Novel_Credit_Profile",
+      "subgroup_count": 80229,
+      "subgroup_pct": 46.86,
+      "subgroup_default_rate": 7.97,
+      "baseline_formula": "Frank_Copula(E2, E3) * (Monthly_Inc / Annuity)",
+      "baseline_auc": 0.6803,
+      "baseline_spread_bps": 1803.6,
+      "champion_formula": "(u1 * u2) * (monthly_inc / (an + 1)) * np.log1p(adult_life)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7027,
+      "auc_lift_bps": 224.0,
+      "within_split_correlation": -0.1902,
+      "split_low_vs_high_default": "22.93% vs 2.47%",
+      "spread_bps": 2046.6,
+      "spread_lift_bps": 243.0,
+      "domain_reason": "Younger credit profiles lacking primary bureau data rely heavily on joint E2-E3 consensus.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Frank_Copula(E2, E3) * (Monthly_Inc / Annuity)",
+          "auc": 0.6803,
+          "spread_bps": 1803.6,
+          "corr": -0.1692
+        },
+        {
+          "round": 2,
+          "formula": "cop_harmonic * (monthly_inc / (an + 1)) * (1 - dti / 15)",
+          "auc": 0.6337,
+          "spread_bps": 1186.6,
+          "corr": -0.1255
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_frank * (u1 * u2)",
+          "auc": 0.6408,
+          "spread_bps": 300.4,
+          "corr": 0.1322
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.5805,
+          "spread_bps": 224.2,
+          "corr": -0.076
+        },
+        {
+          "round": 5,
+          "formula": "(u1 * u2) * (monthly_inc / (an + 1)) * np.log1p(adult_life)",
+          "auc": 0.7027,
+          "spread_bps": 2046.6,
+          "corr": -0.1902
+        }
+      ]
+    },
+    "exp_168_Single_Bureau_Isolated_Reliance": {
+      "exp_id": 168,
+      "name": "Single_Bureau_Isolated_Reliance",
+      "subgroup_count": 38417,
+      "subgroup_pct": 22.44,
+      "subgroup_default_rate": 9.08,
+      "baseline_formula": "(1 - E2) * (Credit / Goods) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.6292,
+      "baseline_spread_bps": 1298.8,
+      "champion_formula": "Merton_PD / (u1 + 0.1) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6524,
+      "auc_lift_bps": 232.0,
+      "within_split_correlation": 0.1517,
+      "split_low_vs_high_default": "6.51% vs 21.32%",
+      "spread_bps": 1481.0,
+      "spread_lift_bps": 182.2,
+      "domain_reason": "Evaluating applicants with only a single bureau source introduces unobserved underwriting risks.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 - E2) * (Credit / Goods) * (Annuity / Monthly_Inc)",
+          "auc": 0.6292,
+          "spread_bps": 1298.8,
+          "corr": 0.1286
+        },
+        {
+          "round": 2,
+          "formula": "Merton_PD / (u1 + 0.1) * (cr / (gp + 1))",
+          "auc": 0.6524,
+          "spread_bps": 1481.0,
+          "corr": 0.1517
+        },
+        {
+          "round": 3,
+          "formula": "(1 - u1)^2 * dti * (cr / (gp + 1))",
+          "auc": 0.637,
+          "spread_bps": 1376.9,
+          "corr": 0.1363
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (u1 + 0.05)",
+          "auc": 0.6283,
+          "spread_bps": 1475.8,
+          "corr": 0.1277
+        },
+        {
+          "round": 5,
+          "formula": "dti * (1 - u1) * (cr / (gp + 1))",
+          "auc": 0.5967,
+          "spread_bps": 931.8,
+          "corr": 0.0962
+        }
+      ]
+    },
+    "exp_169_Frank_Radial_Symmetry_Deficit": {
+      "exp_id": 169,
+      "name": "Frank_Radial_Symmetry_Deficit",
+      "subgroup_count": 162493,
+      "subgroup_pct": 94.91,
+      "subgroup_default_rate": 7.23,
+      "baseline_formula": "abs(E2 + E3 - 1.0) * DTI",
+      "baseline_auc": 0.5008,
+      "baseline_spread_bps": 19.1,
+      "champion_formula": "(abs(u1 + u2 - 1.0) / (u1 + u2 + 0.1)) * (1 - cop_clayton) * dti",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5638,
+      "auc_lift_bps": 630.0,
+      "within_split_correlation": 0.0572,
+      "split_low_vs_high_default": "6.81% vs 14.91%",
+      "spread_bps": 809.8,
+      "spread_lift_bps": 790.7,
+      "domain_reason": "Deviations from center balance across bureau evaluations highlight model volatility.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "abs(E2 + E3 - 1.0) * DTI",
+          "auc": 0.5008,
+          "spread_bps": 19.1,
+          "corr": 0.0007
+        },
+        {
+          "round": 2,
+          "formula": "abs(u1 + u2 - 1.0) * (cr / (gp + 1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5171,
+          "spread_bps": 225.8,
+          "corr": 0.0153
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * abs(u1 + u2 - 1.0) * dti",
+          "auc": 0.5047,
+          "spread_bps": 73.8,
+          "corr": 0.0042
+        },
+        {
+          "round": 4,
+          "formula": "(abs(u1 + u2 - 1.0) / (u1 + u2 + 0.1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5638,
+          "spread_bps": 809.8,
+          "corr": 0.0572
+        },
+        {
+          "round": 5,
+          "formula": "abs(u1 + u2 - 1.0)^2 * dti * (cr / (gp + 1))",
+          "auc": 0.5054,
+          "spread_bps": 147.7,
+          "corr": 0.0048
+        }
+      ]
+    },
+    "exp_170_Bureau_Logit_Variance_Polarization": {
+      "exp_id": 170,
+      "name": "Bureau_Logit_Variance_Polarization",
+      "subgroup_count": 36164,
+      "subgroup_pct": 21.12,
+      "subgroup_default_rate": 7.11,
+      "baseline_formula": "Var(logit(E1), logit(E2), logit(E3)) * (Credit / Goods)",
+      "baseline_auc": 0.5966,
+      "baseline_spread_bps": 801.8,
+      "champion_formula": "(var_logit / (arith_mean + 0.1)) * dti",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6185,
+      "auc_lift_bps": 219.0,
+      "within_split_correlation": 0.1055,
+      "split_low_vs_high_default": "3.90% vs 13.63%",
+      "spread_bps": 973.2,
+      "spread_lift_bps": 171.4,
+      "domain_reason": "Logit variance measures fundamental rating dispersion on an unconstrained scale.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Var(logit(E1), logit(E2), logit(E3)) * (Credit / Goods)",
+          "auc": 0.5966,
+          "spread_bps": 801.8,
+          "corr": 0.086
+        },
+        {
+          "round": 2,
+          "formula": "var_logit * dti * (1 - cop_clayton)",
+          "auc": 0.6067,
+          "spread_bps": 865.4,
+          "corr": 0.0949
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * var_logit * (cr / (gp + 1))",
+          "auc": 0.5983,
+          "spread_bps": 865.4,
+          "corr": 0.0875
+        },
+        {
+          "round": 4,
+          "formula": "var_logit * (an / (monthly_inc + 1)) * (cr / (gp + 1))",
+          "auc": 0.5958,
+          "spread_bps": 812.8,
+          "corr": 0.0853
+        },
+        {
+          "round": 5,
+          "formula": "(var_logit / (arith_mean + 0.1)) * dti",
+          "auc": 0.6185,
+          "spread_bps": 973.2,
+          "corr": 0.1055
+        }
+      ]
+    },
+    "exp_171_Revolving_High_Velocity_Buffer": {
+      "exp_id": 171,
+      "name": "Revolving_High_Velocity_Buffer",
+      "subgroup_count": 16214,
+      "subgroup_pct": 9.47,
+      "subgroup_default_rate": 5.55,
+      "baseline_formula": "(Income / Annuity) * Harmonic_Copula * (1 - DTI / 10)",
+      "baseline_auc": 0.6044,
+      "baseline_spread_bps": 850.8,
+      "champion_formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6779,
+      "auc_lift_bps": 735.0,
+      "within_split_correlation": -0.1411,
+      "split_low_vs_high_default": "15.10% vs 1.79%",
+      "spread_bps": 1331.7,
+      "spread_lift_bps": 480.9,
+      "domain_reason": "Discretionary repayment flex on revolving credit makes liquidity buffers paramount.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Annuity) * Harmonic_Copula * (1 - DTI / 10)",
+          "auc": 0.6044,
+          "spread_bps": 850.8,
+          "corr": -0.0828
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+          "auc": 0.6779,
+          "spread_bps": 1331.7,
+          "corr": -0.1411
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * (1 - dti / 12)",
+          "auc": 0.5607,
+          "spread_bps": 228.1,
+          "corr": 0.0482
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.6228,
+          "spread_bps": 202.2,
+          "corr": -0.0974
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 + u2) * np.log1p(adult_life)",
+          "auc": 0.6357,
+          "spread_bps": 1017.3,
+          "corr": -0.1076
+        }
+      ]
+    },
+    "exp_172_Cash_Loan_Fixed_Fee_Lattice_Exact": {
+      "exp_id": 172,
+      "name": "Cash_Loan_Fixed_Fee_Lattice_Exact",
+      "subgroup_count": 110937,
+      "subgroup_pct": 64.8,
+      "subgroup_default_rate": 8.76,
+      "baseline_formula": "Q0_Fee * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.6334,
+      "baseline_spread_bps": 1237.6,
+      "champion_formula": "(qb * 12) * (cr / (gp + 1)) / (cop_harmonic + 0.1)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6521,
+      "auc_lift_bps": 187.0,
+      "within_split_correlation": 0.149,
+      "split_low_vs_high_default": "3.52% vs 20.34%",
+      "spread_bps": 1682.0,
+      "spread_lift_bps": 444.4,
+      "domain_reason": "Standard retail bank cash-credit programs following the 129.50 fee lattice.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Q0_Fee * (1 - E2) * (Credit / Goods)",
+          "auc": 0.6334,
+          "spread_bps": 1237.6,
+          "corr": 0.1307
+        },
+        {
+          "round": 2,
+          "formula": "qb * dti * (1 - cop_clayton)",
+          "auc": 0.5941,
+          "spread_bps": 889.7,
+          "corr": 0.0921
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * qb * (cr / (gp + 1))",
+          "auc": 0.5421,
+          "spread_bps": 190.3,
+          "corr": 0.0412
+        },
+        {
+          "round": 4,
+          "formula": "(qb * 12) * (cr / (gp + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6521,
+          "spread_bps": 1682.0,
+          "corr": 0.149
+        },
+        {
+          "round": 5,
+          "formula": "qb^1.5 * dti * (1 - u1 * u2)",
+          "auc": 0.5814,
+          "spread_bps": 727.4,
+          "corr": 0.0797
+        }
+      ]
+    },
+    "exp_173_Ultra_Long_Tenure_Amortization_Strain": {
+      "exp_id": 173,
+      "name": "Ultra_Long_Tenure_Amortization_Strain",
+      "subgroup_count": 56051,
+      "subgroup_pct": 32.74,
+      "subgroup_default_rate": 6.42,
+      "baseline_formula": "(Credit / Annuity) * (1 - Frank_Copula) * DTI",
+      "baseline_auc": 0.5733,
+      "baseline_spread_bps": 578.0,
+      "champion_formula": "term * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6648,
+      "auc_lift_bps": 915.0,
+      "within_split_correlation": 0.1399,
+      "split_low_vs_high_default": "2.37% vs 14.63%",
+      "spread_bps": 1225.5,
+      "spread_lift_bps": 647.5,
+      "domain_reason": "Extended repayment terms (>24 months) prolong borrower exposure to lifecycle distress.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Annuity) * (1 - Frank_Copula) * DTI",
+          "auc": 0.5733,
+          "spread_bps": 578.0,
+          "corr": 0.0623
+        },
+        {
+          "round": 2,
+          "formula": "term * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6648,
+          "spread_bps": 1225.5,
+          "corr": 0.1399
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * term * dti",
+          "auc": 0.5013,
+          "spread_bps": 2.4,
+          "corr": 0.0011
+        },
+        {
+          "round": 4,
+          "formula": "(term / 12) * (1 / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6139,
+          "spread_bps": 966.8,
+          "corr": 0.0967
+        },
+        {
+          "round": 5,
+          "formula": "term^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.6336,
+          "spread_bps": 959.7,
+          "corr": 0.1134
+        }
+      ]
+    },
+    "exp_174_Ultra_Short_Bridge_Financing_Surge": {
+      "exp_id": 174,
+      "name": "Ultra_Short_Bridge_Financing_Surge",
+      "subgroup_count": 10986,
+      "subgroup_pct": 6.42,
+      "subgroup_default_rate": 6.05,
+      "baseline_formula": "(Annuity / Monthly_Inc) / (E3 + 0.1)",
+      "baseline_auc": 0.6006,
+      "baseline_spread_bps": 727.9,
+      "champion_formula": "((an * 12) / (inc + 1)) * (cr / (gp + 1)) / (u1 + 0.1)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6425,
+      "auc_lift_bps": 419.0,
+      "within_split_correlation": 0.1177,
+      "split_low_vs_high_default": "3.00% vs 13.19%",
+      "spread_bps": 1019.1,
+      "spread_lift_bps": 291.2,
+      "domain_reason": "Short-term bridge loans demand high monthly cash drains relative to earnings.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) / (E3 + 0.1)",
+          "auc": 0.6006,
+          "spread_bps": 727.9,
+          "corr": 0.0831
+        },
+        {
+          "round": 2,
+          "formula": "(an / (monthly_inc + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6209,
+          "spread_bps": 755.2,
+          "corr": 0.0999
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (an / (monthly_inc + 1)) * dti",
+          "auc": 0.5498,
+          "spread_bps": 305.8,
+          "corr": 0.0412
+        },
+        {
+          "round": 4,
+          "formula": "((an * 12) / (inc + 1)) * (cr / (gp + 1)) / (u1 + 0.1)",
+          "auc": 0.6425,
+          "spread_bps": 1019.1,
+          "corr": 0.1177
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1))^2 * (1 - cop_frank)",
+          "auc": 0.5902,
+          "spread_bps": 618.7,
+          "corr": 0.0745
+        }
+      ]
+    },
+    "exp_175_Severe_Negative_Downpayment_Excess": {
+      "exp_id": 175,
+      "name": "Severe_Negative_Downpayment_Excess",
+      "subgroup_count": 35886,
+      "subgroup_pct": 20.96,
+      "subgroup_default_rate": 11.8,
+      "baseline_formula": "((Credit - Goods) / Goods) * (1 - E2) * DTI",
+      "baseline_auc": 0.5886,
+      "baseline_spread_bps": 1003.1,
+      "champion_formula": "((cr - gp) / (gp + 1)) * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6166,
+      "auc_lift_bps": 280.0,
+      "within_split_correlation": 0.1302,
+      "split_low_vs_high_default": "5.80% vs 21.01%",
+      "spread_bps": 1521.3,
+      "spread_lift_bps": 518.2,
+      "domain_reason": "Borrowers rolling substantial fees and unbacked credit into loans face instant negative equity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "((Credit - Goods) / Goods) * (1 - E2) * DTI",
+          "auc": 0.5886,
+          "spread_bps": 1003.1,
+          "corr": 0.099
+        },
+        {
+          "round": 2,
+          "formula": "((cr - gp) / (gp + 1)) * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.6166,
+          "spread_bps": 1521.3,
+          "corr": 0.1302
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * ((cr - gp) / (gp + 1)) * dti",
+          "auc": 0.5178,
+          "spread_bps": 189.1,
+          "corr": 0.0199
+        },
+        {
+          "round": 4,
+          "formula": "((cr - gp) / (an + 1)) * (1 / (cop_harmonic + 0.1))",
+          "auc": 0.6089,
+          "spread_bps": 1663.4,
+          "corr": 0.1217
+        },
+        {
+          "round": 5,
+          "formula": "((cr - gp) / (gp + 1))^1.5 * dti * (1 - u1 * u2)",
+          "auc": 0.558,
+          "spread_bps": 718.9,
+          "corr": 0.0648
+        }
+      ]
+    },
+    "exp_176_Subsidized_Par_Financing_Contract": {
+      "exp_id": 176,
+      "name": "Subsidized_Par_Financing_Contract",
+      "subgroup_count": 59904,
+      "subgroup_pct": 34.99,
+      "subgroup_default_rate": 6.82,
+      "baseline_formula": "(Income / Credit) * Clayton_Copula * log1p(Emp_Yrs)",
+      "baseline_auc": 0.5784,
+      "baseline_spread_bps": 171.7,
+      "champion_formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6866,
+      "auc_lift_bps": 1082.0,
+      "within_split_correlation": -0.163,
+      "split_low_vs_high_default": "19.03% vs 2.54%",
+      "spread_bps": 1649.1,
+      "spread_lift_bps": 1477.4,
+      "domain_reason": "Zero-markup retail financing programs attract price-conscious, credit-disciplined shoppers.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * Clayton_Copula * log1p(Emp_Yrs)",
+          "auc": 0.5784,
+          "spread_bps": 171.7,
+          "corr": -0.0686
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+          "auc": 0.6866,
+          "spread_bps": 1649.1,
+          "corr": -0.163
+        },
+        {
+          "round": 3,
+          "formula": "cop_harmonic * (inc / (cr + 1)) * (1 - dti / 15)",
+          "auc": 0.5874,
+          "spread_bps": 706.1,
+          "corr": -0.0763
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * cop_frank * np.log1p(adult_life)",
+          "auc": 0.57,
+          "spread_bps": 46.7,
+          "corr": 0.0611
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 + u2) * np.log1p(emp_yrs)",
+          "auc": 0.5806,
+          "spread_bps": 195.0,
+          "corr": -0.0705
+        }
+      ]
+    },
+    "exp_177_High_Annuity_Absolute_Burden": {
+      "exp_id": 177,
+      "name": "High_Annuity_Absolute_Burden",
+      "subgroup_count": 27938,
+      "subgroup_pct": 16.32,
+      "subgroup_default_rate": 6.41,
+      "baseline_formula": "(Annuity / Monthly_Inc) * (1 - E2 * E3) * (Credit / Goods)",
+      "baseline_auc": 0.6117,
+      "baseline_spread_bps": 733.7,
+      "champion_formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6422,
+      "auc_lift_bps": 305.0,
+      "within_split_correlation": 0.1207,
+      "split_low_vs_high_default": "2.97% vs 15.18%",
+      "spread_bps": 1220.5,
+      "spread_lift_bps": 486.8,
+      "domain_reason": "Monthly payment obligations >40k rubles cause immediate default upon income disruption.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) * (1 - E2 * E3) * (Credit / Goods)",
+          "auc": 0.6117,
+          "spread_bps": 733.7,
+          "corr": 0.0948
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.5388,
+          "spread_bps": 343.6,
+          "corr": 0.0329
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (an / (monthly_inc + 1)) * (cr / (gp + 1))",
+          "auc": 0.5309,
+          "spread_bps": 204.2,
+          "corr": 0.0262
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1))^2 * (1 - cop_frank)",
+          "auc": 0.5691,
+          "spread_bps": 433.1,
+          "corr": 0.0587
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+          "auc": 0.6422,
+          "spread_bps": 1220.5,
+          "corr": 0.1207
+        }
+      ]
+    },
+    "exp_178_Alexander_APR_36_Month_Stress": {
+      "exp_id": 178,
+      "name": "Alexander_APR_36_Month_Stress",
+      "subgroup_count": 126899,
+      "subgroup_pct": 74.12,
+      "subgroup_default_rate": 8.65,
+      "baseline_formula": "Alexander_APR_36 * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5752,
+      "baseline_spread_bps": 628.1,
+      "champion_formula": "(apr_36 / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6047,
+      "auc_lift_bps": 295.0,
+      "within_split_correlation": 0.102,
+      "split_low_vs_high_default": "4.33% vs 14.28%",
+      "spread_bps": 995.3,
+      "spread_lift_bps": 367.2,
+      "domain_reason": "High effective APR markups over 36 months signal predatory interest terms.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Alexander_APR_36 * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5752,
+          "spread_bps": 628.1,
+          "corr": 0.0733
+        },
+        {
+          "round": 2,
+          "formula": "apr_36 * dti * (1 - cop_clayton)",
+          "auc": 0.5977,
+          "spread_bps": 881.0,
+          "corr": 0.0951
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * apr_36 * (cr / (gp + 1))",
+          "auc": 0.5338,
+          "spread_bps": 141.8,
+          "corr": 0.033
+        },
+        {
+          "round": 4,
+          "formula": "(apr_36 / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6047,
+          "spread_bps": 995.3,
+          "corr": 0.102
+        },
+        {
+          "round": 5,
+          "formula": "apr_36^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5691,
+          "spread_bps": 568.2,
+          "corr": 0.0672
+        }
+      ]
+    },
+    "exp_179_Micro_Loan_Disproportionate_Fixed_Fee": {
+      "exp_id": 179,
+      "name": "Micro_Loan_Disproportionate_Fixed_Fee",
+      "subgroup_count": 8901,
+      "subgroup_pct": 5.2,
+      "subgroup_default_rate": 5.89,
+      "baseline_formula": "(129.50 / Annuity) / (E2 + 0.1)",
+      "baseline_auc": 0.6288,
+      "baseline_spread_bps": 1010.1,
+      "champion_formula": "(129.5 / (an + 1)) / (cop_harmonic + 0.1)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6427,
+      "auc_lift_bps": 139.0,
+      "within_split_correlation": 0.1163,
+      "split_low_vs_high_default": "2.02% vs 12.35%",
+      "spread_bps": 1032.5,
+      "spread_lift_bps": 22.4,
+      "domain_reason": "Micro-loans where flat bank administration fees eat a large share of cash repayments.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(129.50 / Annuity) / (E2 + 0.1)",
+          "auc": 0.6288,
+          "spread_bps": 1010.1,
+          "corr": 0.105
+        },
+        {
+          "round": 2,
+          "formula": "(129.5 / (an + 1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5786,
+          "spread_bps": 448.9,
+          "corr": 0.0641
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (129.5 / (an + 1)) * (cr / (gp + 1))",
+          "auc": 0.5243,
+          "spread_bps": 22.4,
+          "corr": -0.0198
+        },
+        {
+          "round": 4,
+          "formula": "(129.5 / (an + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6427,
+          "spread_bps": 1032.5,
+          "corr": 0.1163
+        },
+        {
+          "round": 5,
+          "formula": "((129.5 * 12) / (inc + 1)) * (1 - u1 * u2)",
+          "auc": 0.5408,
+          "spread_bps": 448.9,
+          "corr": 0.0333
+        }
+      ]
+    },
+    "exp_180_Jumbo_Syndicated_Threshold_Exposure": {
+      "exp_id": 180,
+      "name": "Jumbo_Syndicated_Threshold_Exposure",
+      "subgroup_count": 15523,
+      "subgroup_pct": 9.07,
+      "subgroup_default_rate": 5.21,
+      "baseline_formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5624,
+      "baseline_spread_bps": 341.3,
+      "champion_formula": "dti * (1 - cop_frank) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6116,
+      "auc_lift_bps": 492.0,
+      "within_split_correlation": 0.086,
+      "split_low_vs_high_default": "2.25% vs 9.01%",
+      "spread_bps": 676.1,
+      "spread_lift_bps": 334.8,
+      "domain_reason": "Large exposures (>1.2M rubles) carry catastrophic default severity for retail portfolios.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+          "auc": 0.5624,
+          "spread_bps": 341.3,
+          "corr": 0.048
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_frank) * (cr / (gp + 1))",
+          "auc": 0.6116,
+          "spread_bps": 676.1,
+          "corr": 0.086
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (1 / (u1 + 0.1))",
+          "auc": 0.5883,
+          "spread_bps": 586.0,
+          "corr": 0.068
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5622,
+          "spread_bps": 341.3,
+          "corr": 0.0479
+        },
+        {
+          "round": 5,
+          "formula": "((cr - gp) / (gp + 1)) * dti * (1 - u1 * u2)",
+          "auc": 0.5917,
+          "spread_bps": 443.1,
+          "corr": 0.0714
+        }
+      ]
+    },
+    "exp_181_Sub_Zero_Disposable_Cash_Flow": {
+      "exp_id": 181,
+      "name": "Sub_Zero_Disposable_Cash_Flow",
+      "subgroup_count": 170337,
+      "subgroup_pct": 99.49,
+      "subgroup_default_rate": 8.08,
+      "baseline_formula": "(-FCF / Monthly_Inc) * (1 - E2)",
+      "baseline_auc": 0.5987,
+      "baseline_spread_bps": 873.0,
+      "champion_formula": "(-fcf / (an + 1)) / (cop_harmonic + 0.1)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6425,
+      "auc_lift_bps": 438.0,
+      "within_split_correlation": 0.1346,
+      "split_low_vs_high_default": "3.87% vs 17.20%",
+      "spread_bps": 1332.0,
+      "spread_lift_bps": 459.0,
+      "domain_reason": "Households whose subsistence food/housing and loan payment exceed total income are insolvent.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(-FCF / Monthly_Inc) * (1 - E2)",
+          "auc": 0.5987,
+          "spread_bps": 873.0,
+          "corr": 0.0932
+        },
+        {
+          "round": 2,
+          "formula": "(-fcf / (monthly_inc + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5969,
+          "spread_bps": 895.9,
+          "corr": 0.0915
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (-fcf / (monthly_inc + 1)) * dti",
+          "auc": 0.5113,
+          "spread_bps": 94.1,
+          "corr": 0.0106
+        },
+        {
+          "round": 4,
+          "formula": "(-fcf / (an + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6425,
+          "spread_bps": 1332.0,
+          "corr": 0.1346
+        },
+        {
+          "round": 5,
+          "formula": "(-fcf / (monthly_inc + 1))^1.5 * (1 - u1 * u2)",
+          "auc": 0.5595,
+          "spread_bps": 553.6,
+          "corr": 0.0562
+        }
+      ]
+    },
+    "exp_182_Extreme_DTI_Overleverage": {
+      "exp_id": 182,
+      "name": "Extreme_DTI_Overleverage",
+      "subgroup_count": 30588,
+      "subgroup_pct": 17.87,
+      "subgroup_default_rate": 7.05,
+      "baseline_formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5908,
+      "baseline_spread_bps": 657.1,
+      "champion_formula": "dti * (1 - cop_frank) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6342,
+      "auc_lift_bps": 434.0,
+      "within_split_correlation": 0.119,
+      "split_low_vs_high_default": "2.48% vs 12.42%",
+      "spread_bps": 993.8,
+      "spread_lift_bps": 336.7,
+      "domain_reason": "Debt exceeding 6 years of gross income signals mathematically unsustainable leverage.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5908,
+          "spread_bps": 657.1,
+          "corr": 0.0806
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_frank) * (cr / (gp + 1))",
+          "auc": 0.6342,
+          "spread_bps": 993.8,
+          "corr": 0.119
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (1 / (u1 + 0.1))",
+          "auc": 0.6095,
+          "spread_bps": 1121.3,
+          "corr": 0.0971
+        },
+        {
+          "round": 4,
+          "formula": "(dti / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6148,
+          "spread_bps": 974.2,
+          "corr": 0.1018
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5941,
+          "spread_bps": 660.3,
+          "corr": 0.0834
+        }
+      ]
+    },
+    "exp_183_Debt_Service_Coverage_Fragility": {
+      "exp_id": 183,
+      "name": "Debt_Service_Coverage_Fragility",
+      "subgroup_count": 170157,
+      "subgroup_pct": 99.39,
+      "subgroup_default_rate": 8.08,
+      "baseline_formula": "(Annuity / Monthly_Inc) / (E3 + 0.1) * (Credit / Goods)",
+      "baseline_auc": 0.604,
+      "baseline_spread_bps": 1064.3,
+      "champion_formula": "(Annuity / Monthly_Inc) / (E3 + 0.1) * (Credit / Goods)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.604,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.0982,
+      "split_low_vs_high_default": "4.74% vs 15.38%",
+      "spread_bps": 1064.3,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Dedicating >40% of income solely to debt service eliminates all resilience against emergencies.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) / (E3 + 0.1) * (Credit / Goods)",
+          "auc": 0.604,
+          "spread_bps": 1064.3,
+          "corr": 0.0982
+        },
+        {
+          "round": 2,
+          "formula": "dscr * (1 - cop_clayton) * dti",
+          "auc": 0.5459,
+          "spread_bps": 366.1,
+          "corr": 0.0434
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dscr * (cr / (gp + 1))",
+          "auc": 0.5288,
+          "spread_bps": 180.5,
+          "corr": 0.0272
+        },
+        {
+          "round": 4,
+          "formula": "(dscr / (cop_harmonic + 0.1)) * dti",
+          "auc": 0.5712,
+          "spread_bps": 656.4,
+          "corr": 0.0672
+        },
+        {
+          "round": 5,
+          "formula": "dscr^2 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5588,
+          "spread_bps": 493.7,
+          "corr": 0.0556
+        }
+      ]
+    },
+    "exp_184_Per_Capita_Family_Income_Squeeze": {
+      "exp_id": 184,
+      "name": "Per_Capita_Family_Income_Squeeze",
+      "subgroup_count": 27044,
+      "subgroup_pct": 15.8,
+      "subgroup_default_rate": 8.86,
+      "baseline_formula": "(Credit / Income_Per_Fam) * (1 - E2)",
+      "baseline_auc": 0.5905,
+      "baseline_spread_bps": 824.4,
+      "champion_formula": "(an / (inc_per_fam / 12 + 1)) * (1 - cop_clayton)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6114,
+      "auc_lift_bps": 209.0,
+      "within_split_correlation": 0.1097,
+      "split_low_vs_high_default": "4.99% vs 14.79%",
+      "spread_bps": 979.7,
+      "spread_lift_bps": 155.3,
+      "domain_reason": "Low per-head household income forces borrowers to prioritize groceries over debt service.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Income_Per_Fam) * (1 - E2)",
+          "auc": 0.5905,
+          "spread_bps": 824.4,
+          "corr": 0.0891
+        },
+        {
+          "round": 2,
+          "formula": "(an / (inc_per_fam / 12 + 1)) * (1 - cop_clayton)",
+          "auc": 0.6114,
+          "spread_bps": 979.7,
+          "corr": 0.1097
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (cr / (inc_per_fam + 1))",
+          "auc": 0.5251,
+          "spread_bps": 103.5,
+          "corr": 0.0248
+        },
+        {
+          "round": 4,
+          "formula": "((cr - gp) / (gp + 1)) * (1 / (inc_per_fam + 1)) * (1 - cop_frank)",
+          "auc": 0.5792,
+          "spread_bps": 854.0,
+          "corr": 0.0799
+        },
+        {
+          "round": 5,
+          "formula": "(cr / (inc_per_fam + 1)) * (1 - u1 * u2)",
+          "auc": 0.5712,
+          "spread_bps": 587.8,
+          "corr": 0.0701
+        }
+      ]
+    },
+    "exp_185_Double_Inflation_Shock_Insolvency": {
+      "exp_id": 185,
+      "name": "Double_Inflation_Shock_Insolvency",
+      "subgroup_count": 170826,
+      "subgroup_pct": 99.78,
+      "subgroup_default_rate": 8.07,
+      "baseline_formula": "(-Shock_FCF / Monthly_Inc) * (1 - Frank_Copula)",
+      "baseline_auc": 0.5906,
+      "baseline_spread_bps": 819.5,
+      "champion_formula": "(-fcf_shock / (an + 1)) / (cop_harmonic + 0.1)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6363,
+      "auc_lift_bps": 457.0,
+      "within_split_correlation": 0.1286,
+      "split_low_vs_high_default": "3.48% vs 16.29%",
+      "spread_bps": 1281.4,
+      "spread_lift_bps": 461.9,
+      "domain_reason": "Simulates retail borrower default cascades under a 50% non-discretionary inflation shock.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(-Shock_FCF / Monthly_Inc) * (1 - Frank_Copula)",
+          "auc": 0.5906,
+          "spread_bps": 819.5,
+          "corr": 0.0855
+        },
+        {
+          "round": 2,
+          "formula": "(-fcf_shock / (monthly_inc + 1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5519,
+          "spread_bps": 453.1,
+          "corr": 0.049
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (-fcf_shock / (monthly_inc + 1)) * (cr / (gp + 1))",
+          "auc": 0.535,
+          "spread_bps": 335.7,
+          "corr": 0.0331
+        },
+        {
+          "round": 4,
+          "formula": "(-fcf_shock / (an + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6363,
+          "spread_bps": 1281.4,
+          "corr": 0.1286
+        },
+        {
+          "round": 5,
+          "formula": "(-fcf_shock / (monthly_inc + 1))^1.5 * (1 - u1 * u2)",
+          "auc": 0.5621,
+          "spread_bps": 581.3,
+          "corr": 0.0587
+        }
+      ]
+    },
+    "exp_186_Affluent_Liquidity_Fortress": {
+      "exp_id": 186,
+      "name": "Affluent_Liquidity_Fortress",
+      "subgroup_count": 5348,
+      "subgroup_pct": 3.12,
+      "subgroup_default_rate": 6.53,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.5987,
+      "baseline_spread_bps": 467.3,
+      "champion_formula": "(Income / Credit) * cop_frank * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6789,
+      "auc_lift_bps": 802.0,
+      "within_split_correlation": -0.1531,
+      "split_low_vs_high_default": "16.45% vs 2.62%",
+      "spread_bps": 1383.2,
+      "spread_lift_bps": 915.9,
+      "domain_reason": "High earners with conservative debt ratios possess near-invulnerable credit solvency.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(Emp_Yrs)",
+          "auc": 0.5987,
+          "spread_bps": 467.3,
+          "corr": -0.0844
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (u1 * u2)",
+          "auc": 0.6789,
+          "spread_bps": 1383.2,
+          "corr": -0.1531
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * np.log1p(adult_life)",
+          "auc": 0.5213,
+          "spread_bps": 37.4,
+          "corr": -0.0182
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.633,
+          "spread_bps": 747.7,
+          "corr": -0.1138
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+          "auc": 0.6804,
+          "spread_bps": 1383.2,
+          "corr": -0.1543
+        }
+      ]
+    },
+    "exp_187_Living_Margin_Surplus_To_Goods_Ratio": {
+      "exp_id": 187,
+      "name": "Living_Margin_Surplus_To_Goods_Ratio",
+      "subgroup_count": 19321,
+      "subgroup_pct": 11.29,
+      "subgroup_default_rate": 7.11,
+      "baseline_formula": "(Annual_Surplus / Goods) * Harmonic_Copula",
+      "baseline_auc": 0.5899,
+      "baseline_spread_bps": 827.7,
+      "champion_formula": "(surplus_val / (cr + 1)) * cop_frank * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6496,
+      "auc_lift_bps": 597.0,
+      "within_split_correlation": -0.1332,
+      "split_low_vs_high_default": "16.50% vs 2.79%",
+      "spread_bps": 1370.9,
+      "spread_lift_bps": 543.2,
+      "domain_reason": "Annual discretionary cash cushion relative to goods price reflects true living stability.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annual_Surplus / Goods) * Harmonic_Copula",
+          "auc": 0.5899,
+          "spread_bps": 827.7,
+          "corr": -0.0801
+        },
+        {
+          "round": 2,
+          "formula": "(surplus_val / (cr + 1)) * cop_frank * (u1 * u2)",
+          "auc": 0.6496,
+          "spread_bps": 1370.9,
+          "corr": -0.1332
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * (surplus_val / (gp + 1)) * cop_harmonic",
+          "auc": 0.5685,
+          "spread_bps": 631.1,
+          "corr": -0.061
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (surplus_val / (gp + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.5784,
+          "spread_bps": 211.2,
+          "corr": -0.0699
+        },
+        {
+          "round": 5,
+          "formula": "(surplus_val / (gp + 1)) * (u1 + u2) * np.log1p(adult_life)",
+          "auc": 0.5741,
+          "spread_bps": 641.5,
+          "corr": -0.066
+        }
+      ]
+    },
+    "exp_188_Merton_Default_Probability_High_Barrier": {
+      "exp_id": 188,
+      "name": "Merton_Default_Probability_High_Barrier",
+      "subgroup_count": 161922,
+      "subgroup_pct": 94.58,
+      "subgroup_default_rate": 8.16,
+      "baseline_formula": "Merton_PD * (1 - E2) * DTI",
+      "baseline_auc": 0.572,
+      "baseline_spread_bps": 551.5,
+      "champion_formula": "merton_pd * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6702,
+      "auc_lift_bps": 982.0,
+      "within_split_correlation": 0.1614,
+      "split_low_vs_high_default": "4.97% vs 20.89%",
+      "spread_bps": 1591.4,
+      "spread_lift_bps": 1039.9,
+      "domain_reason": "Structural distance-to-default models isolate deteriorating debt trajectories.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Merton_PD * (1 - E2) * DTI",
+          "auc": 0.572,
+          "spread_bps": 551.5,
+          "corr": 0.0683
+        },
+        {
+          "round": 2,
+          "formula": "merton_pd * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6702,
+          "spread_bps": 1591.4,
+          "corr": 0.1614
+        },
+        {
+          "round": 3,
+          "formula": "merton_pd * (an / (monthly_inc + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.6167,
+          "spread_bps": 1166.6,
+          "corr": 0.1107
+        },
+        {
+          "round": 4,
+          "formula": "merton_pd^1.5 * dti * (1 - u1 * u2)",
+          "auc": 0.5431,
+          "spread_bps": 262.5,
+          "corr": 0.0409
+        },
+        {
+          "round": 5,
+          "formula": "merton_pd * ((cr - gp) / (gp + 1)) * dti",
+          "auc": 0.5486,
+          "spread_bps": 353.4,
+          "corr": 0.047
+        }
+      ]
+    },
+    "exp_189_Uncollateralized_Burn_Per_Employed_Month": {
+      "exp_id": 189,
+      "name": "Uncollateralized_Burn_Per_Employed_Month",
+      "subgroup_count": 93765,
+      "subgroup_pct": 54.77,
+      "subgroup_default_rate": 9.3,
+      "baseline_formula": "(Uncollateralized_Credit / Emp_Months) / (E3 + 0.1)",
+      "baseline_auc": 0.5162,
+      "baseline_spread_bps": 232.6,
+      "champion_formula": "(uncoll_burn / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5311,
+      "auc_lift_bps": 149.0,
+      "within_split_correlation": 0.0313,
+      "split_low_vs_high_default": "5.67% vs 8.30%",
+      "spread_bps": 262.3,
+      "spread_lift_bps": 29.7,
+      "domain_reason": "Accumulating excessive unbacked principal relative to employment career tenure.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Uncollateralized_Credit / Emp_Months) / (E3 + 0.1)",
+          "auc": 0.5162,
+          "spread_bps": 232.6,
+          "corr": 0.0163
+        },
+        {
+          "round": 2,
+          "formula": "uncoll_burn * (1 - cop_clayton) * dti",
+          "auc": 0.5016,
+          "spread_bps": 9.6,
+          "corr": 0.0016
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * uncoll_burn * (cr / (gp + 1))",
+          "auc": 0.5071,
+          "spread_bps": 93.8,
+          "corr": -0.0071
+        },
+        {
+          "round": 4,
+          "formula": "(uncoll_burn / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5311,
+          "spread_bps": 262.3,
+          "corr": 0.0313
+        },
+        {
+          "round": 5,
+          "formula": "uncoll_burn^0.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5048,
+          "spread_bps": 9.6,
+          "corr": 0.0048
+        }
+      ]
+    },
+    "exp_190_Household_Dependency_Cost_Annuity_Parity": {
+      "exp_id": 190,
+      "name": "Household_Dependency_Cost_Annuity_Parity",
+      "subgroup_count": 58220,
+      "subgroup_pct": 34.01,
+      "subgroup_default_rate": 8.13,
+      "baseline_formula": "(Subsistence / Annuity) * (1 - E2) * (Credit / Income)",
+      "baseline_auc": 0.6014,
+      "baseline_spread_bps": 855.4,
+      "champion_formula": "(subsistence / (an + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6057,
+      "auc_lift_bps": 43.0,
+      "within_split_correlation": 0.1,
+      "split_low_vs_high_default": "2.95% vs 11.83%",
+      "spread_bps": 888.0,
+      "spread_lift_bps": 32.6,
+      "domain_reason": "When survival expenses exceed total debt payment, family commitments take non-negotiable priority.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Subsistence / Annuity) * (1 - E2) * (Credit / Income)",
+          "auc": 0.6014,
+          "spread_bps": 855.4,
+          "corr": 0.096
+        },
+        {
+          "round": 2,
+          "formula": "(subsistence / (an + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6057,
+          "spread_bps": 888.0,
+          "corr": 0.1
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (subsistence / (an + 1)) * dti",
+          "auc": 0.5359,
+          "spread_bps": 298.8,
+          "corr": 0.034
+        },
+        {
+          "round": 4,
+          "formula": "((subsistence - an) / (monthly_inc + 1)) / (cop_harmonic + 0.1)",
+          "auc": 0.5657,
+          "spread_bps": 688.8,
+          "corr": 0.0622
+        },
+        {
+          "round": 5,
+          "formula": "(subsistence / (an + 1))^1.5 * (1 - u1 * u2)",
+          "auc": 0.5526,
+          "spread_bps": 573.7,
+          "corr": 0.0498
+        }
+      ]
+    },
+    "exp_191_Recent_Address_Registration_Instability": {
+      "exp_id": 191,
+      "name": "Recent_Address_Registration_Instability",
+      "subgroup_count": 9335,
+      "subgroup_pct": 5.45,
+      "subgroup_default_rate": 9.99,
+      "baseline_formula": "(1 / (Reg_Yrs + 0.1)) * (1 - E2) * DTI",
+      "baseline_auc": 0.5602,
+      "baseline_spread_bps": 749.5,
+      "champion_formula": "(1.0 / (reg_yrs + 0.1)) / (cop_harmonic + 0.1) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5956,
+      "auc_lift_bps": 354.0,
+      "within_split_correlation": 0.0993,
+      "split_low_vs_high_default": "4.28% vs 16.38%",
+      "spread_bps": 1209.9,
+      "spread_lift_bps": 460.4,
+      "domain_reason": "Recent municipal address shifts correlate with residential instability and credit evasion.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 / (Reg_Yrs + 0.1)) * (1 - E2) * DTI",
+          "auc": 0.5602,
+          "spread_bps": 749.5,
+          "corr": 0.0625
+        },
+        {
+          "round": 2,
+          "formula": "(1.0 / (reg_yrs + 0.1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5778,
+          "spread_bps": 1027.8,
+          "corr": 0.0808
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (1.0 / (reg_yrs + 0.1)) * dti",
+          "auc": 0.5111,
+          "spread_bps": 203.4,
+          "corr": 0.0115
+        },
+        {
+          "round": 4,
+          "formula": "(1.0 / (reg_yrs + 0.1)) / (cop_harmonic + 0.1) * (an / (monthly_inc + 1))",
+          "auc": 0.5956,
+          "spread_bps": 1209.9,
+          "corr": 0.0993
+        },
+        {
+          "round": 5,
+          "formula": "(1.0 / (reg_yrs + 0.1)) * (1 - u1 * u2) * dti",
+          "auc": 0.5394,
+          "spread_bps": 567.5,
+          "corr": 0.0409
+        }
+      ]
+    },
+    "exp_192_Recent_Passport_Renewal_Velocity": {
+      "exp_id": 192,
+      "name": "Recent_Passport_Renewal_Velocity",
+      "subgroup_count": 12763,
+      "subgroup_pct": 7.45,
+      "subgroup_default_rate": 10.29,
+      "baseline_formula": "(1 / IDP_Yrs + 0.1) * (1 - E3) * (Credit / Goods)",
+      "baseline_auc": 0.5763,
+      "baseline_spread_bps": 845.7,
+      "champion_formula": "(1.0 / (idp_yrs + 0.1)) / (cop_harmonic + 0.1) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5824,
+      "auc_lift_bps": 61.0,
+      "within_split_correlation": 0.0867,
+      "split_low_vs_high_default": "5.95% vs 15.58%",
+      "spread_bps": 963.2,
+      "spread_lift_bps": 117.5,
+      "domain_reason": "Passport re-issuance shortly before applying indicates state administrative churn.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 / IDP_Yrs + 0.1) * (1 - E3) * (Credit / Goods)",
+          "auc": 0.5763,
+          "spread_bps": 845.7,
+          "corr": 0.0803
+        },
+        {
+          "round": 2,
+          "formula": "(1.0 / (idp_yrs + 0.1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5372,
+          "spread_bps": 430.7,
+          "corr": 0.0392
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (1.0 / (idp_yrs + 0.1)) * (cr / (gp + 1))",
+          "auc": 0.5246,
+          "spread_bps": 266.2,
+          "corr": 0.0259
+        },
+        {
+          "round": 4,
+          "formula": "(1.0 / (idp_yrs + 0.1)) / (cop_harmonic + 0.1) * (an / (monthly_inc + 1))",
+          "auc": 0.5824,
+          "spread_bps": 963.2,
+          "corr": 0.0867
+        },
+        {
+          "round": 5,
+          "formula": "(1.0 / (idp_yrs + 0.1)) * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.573,
+          "spread_bps": 853.6,
+          "corr": 0.0769
+        }
+      ]
+    },
+    "exp_193_Statutory_Passport_Age_20_Window": {
+      "exp_id": 193,
+      "name": "Statutory_Passport_Age_20_Window",
+      "subgroup_count": 0,
+      "subgroup_pct": 0.0,
+      "subgroup_default_rate": 0.0,
+      "baseline_formula": "abs(Age_at_ID - 20) * DTI * (1 - E2)",
+      "baseline_auc": 0.5,
+      "baseline_spread_bps": 0.0,
+      "champion_formula": "",
+      "champion_round": null,
+      "total_rounds_evaluated": 0,
+      "optimized_within_split_auc": -1.0,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.0,
+      "split_low_vs_high_default": "0.00% vs 0.00%",
+      "spread_bps": -1.0,
+      "spread_lift_bps": -1.0,
+      "domain_reason": "Tracks bureaucratic compliance with mandatory age-20 Russian state identity renewal.",
+      "optimization_history": []
+    },
+    "exp_194_Statutory_Passport_Age_45_Window": {
+      "exp_id": 194,
+      "name": "Statutory_Passport_Age_45_Window",
+      "subgroup_count": 6234,
+      "subgroup_pct": 3.64,
+      "subgroup_default_rate": 7.75,
+      "baseline_formula": "abs(Age_at_ID - 45) * DTI * (1 - E3)",
+      "baseline_auc": 0.5289,
+      "baseline_spread_bps": 288.5,
+      "champion_formula": "np.abs(age_id - 45.0) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5496,
+      "auc_lift_bps": 207.0,
+      "within_split_correlation": 0.0459,
+      "split_low_vs_high_default": "5.61% vs 10.10%",
+      "spread_bps": 448.7,
+      "spread_lift_bps": 160.2,
+      "domain_reason": "Tracks bureaucratic compliance with mandatory age-45 Russian state identity renewal.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "abs(Age_at_ID - 45) * DTI * (1 - E3)",
+          "auc": 0.5289,
+          "spread_bps": 288.5,
+          "corr": 0.0268
+        },
+        {
+          "round": 2,
+          "formula": "np.abs(age_id - 45.0) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5496,
+          "spread_bps": 448.7,
+          "corr": 0.0459
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * np.abs(age_id - 45.0) * dti",
+          "auc": 0.5066,
+          "spread_bps": 176.3,
+          "corr": 0.0061
+        },
+        {
+          "round": 4,
+          "formula": "(np.abs(age_id - 45.0) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5423,
+          "spread_bps": 288.5,
+          "corr": 0.0392
+        },
+        {
+          "round": 5,
+          "formula": "np.abs(age_id - 45.0)^2 * (1 - u1 * u2) * dti",
+          "auc": 0.518,
+          "spread_bps": 112.2,
+          "corr": 0.0167
+        }
+      ]
+    },
+    "exp_195_Phone_Number_Longevity_Anchor": {
+      "exp_id": 195,
+      "name": "Phone_Number_Longevity_Anchor",
+      "subgroup_count": 28446,
+      "subgroup_pct": 16.62,
+      "subgroup_default_rate": 5.62,
+      "baseline_formula": "log1p(Phone_Yrs) * (E2 + E3) * (Monthly_Inc / Annuity)",
+      "baseline_auc": 0.6125,
+      "baseline_spread_bps": 857.6,
+      "champion_formula": "np.log1p(ph_yrs) * (u1 * u2) * (1 - dti / 15)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6715,
+      "auc_lift_bps": 590.0,
+      "within_split_correlation": -0.1368,
+      "split_low_vs_high_default": "14.41% vs 1.76%",
+      "spread_bps": 1265.4,
+      "spread_lift_bps": 407.8,
+      "domain_reason": "Maintaining an active mobile number >5 years signals rooted social and economic stability.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "log1p(Phone_Yrs) * (E2 + E3) * (Monthly_Inc / Annuity)",
+          "auc": 0.6125,
+          "spread_bps": 857.6,
+          "corr": -0.0898
+        },
+        {
+          "round": 2,
+          "formula": "np.log1p(ph_yrs) * cop_frank * (inc / (cr + 1))",
+          "auc": 0.6293,
+          "spread_bps": 1043.9,
+          "corr": -0.1032
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * np.log1p(ph_yrs) * cop_harmonic",
+          "auc": 0.5575,
+          "spread_bps": 91.4,
+          "corr": 0.0459
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * np.log1p(ph_yrs) * (monthly_inc / (an + 1))",
+          "auc": 0.6523,
+          "spread_bps": 1191.6,
+          "corr": -0.1215
+        },
+        {
+          "round": 5,
+          "formula": "np.log1p(ph_yrs) * (u1 * u2) * (1 - dti / 15)",
+          "auc": 0.6715,
+          "spread_bps": 1265.4,
+          "corr": -0.1368
+        }
+      ]
+    },
+    "exp_196_Hyper_Recent_Phone_Number_Replacement": {
+      "exp_id": 196,
+      "name": "Hyper_Recent_Phone_Number_Replacement",
+      "subgroup_count": 29615,
+      "subgroup_pct": 17.3,
+      "subgroup_default_rate": 9.18,
+      "baseline_formula": "(1 / Phone_Months) * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.607,
+      "baseline_spread_bps": 1050.0,
+      "champion_formula": "(1 / Phone_Months) * (1 - E2) * (Credit / Goods)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.607,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.1071,
+      "split_low_vs_high_default": "9.32% vs 19.82%",
+      "spread_bps": 1050.0,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Changing telephone numbers <60 days prior to borrowing reflects collection avoidance tactics.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 / Phone_Months) * (1 - E2) * (Credit / Goods)",
+          "auc": 0.607,
+          "spread_bps": 1050.0,
+          "corr": 0.1071
+        },
+        {
+          "round": 2,
+          "formula": "(1.0 / ((-ph_raw) / 30.0 + 0.1)) * (1 - cop_clayton) * dti",
+          "auc": 0.5476,
+          "spread_bps": 108.0,
+          "corr": 0.0476
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (1.0 / ((-ph_raw) / 30.0 + 0.1)) * (cr / (gp + 1))",
+          "auc": 0.5491,
+          "spread_bps": 543.6,
+          "corr": 0.0492
+        },
+        {
+          "round": 4,
+          "formula": "(1.0 / ((-ph_raw) / 30.0 + 0.1)) / (cop_harmonic + 0.1) * (an / (monthly_inc + 1))",
+          "auc": 0.5964,
+          "spread_bps": 1033.1,
+          "corr": 0.0964
+        },
+        {
+          "round": 5,
+          "formula": "(1.0 / ((-ph_raw) / 30.0 + 0.1)) * (1 - u1 * u2) * dti",
+          "auc": 0.5373,
+          "spread_bps": 43.9,
+          "corr": 0.0373
+        }
+      ]
+    },
+    "exp_197_Address_To_ID_Administrative_Desynchrony": {
+      "exp_id": 197,
+      "name": "Address_To_ID_Administrative_Desynchrony",
+      "subgroup_count": 59437,
+      "subgroup_pct": 34.72,
+      "subgroup_default_rate": 7.13,
+      "baseline_formula": "abs(Reg_Yrs - IDP_Yrs) * DTI * (1 - Frank_Copula)",
+      "baseline_auc": 0.5486,
+      "baseline_spread_bps": 381.9,
+      "champion_formula": "desync * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6171,
+      "auc_lift_bps": 685.0,
+      "within_split_correlation": 0.1043,
+      "split_low_vs_high_default": "2.59% vs 13.39%",
+      "spread_bps": 1080.1,
+      "spread_lift_bps": 698.2,
+      "domain_reason": "A decade-long gap between official registration and identity re-issuance signals legal detachment.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "abs(Reg_Yrs - IDP_Yrs) * DTI * (1 - Frank_Copula)",
+          "auc": 0.5486,
+          "spread_bps": 381.9,
+          "corr": 0.0433
+        },
+        {
+          "round": 2,
+          "formula": "desync * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6171,
+          "spread_bps": 1080.1,
+          "corr": 0.1043
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * desync * dti",
+          "auc": 0.5093,
+          "spread_bps": 52.2,
+          "corr": -0.0083
+        },
+        {
+          "round": 4,
+          "formula": "(desync / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5964,
+          "spread_bps": 876.5,
+          "corr": 0.0859
+        },
+        {
+          "round": 5,
+          "formula": "desync^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5711,
+          "spread_bps": 785.7,
+          "corr": 0.0634
+        }
+      ]
+    },
+    "exp_198_Registration_Longevity_Home_Stability": {
+      "exp_id": 198,
+      "name": "Registration_Longevity_Home_Stability",
+      "subgroup_count": 68381,
+      "subgroup_pct": 39.94,
+      "subgroup_default_rate": 6.87,
+      "baseline_formula": "log1p(Reg_Yrs) * Harmonic_Copula * (Income / Credit)",
+      "baseline_auc": 0.6127,
+      "baseline_spread_bps": 1096.7,
+      "champion_formula": "cop_joe * np.log1p(reg_yrs) * (1 - dti / 15)",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6719,
+      "auc_lift_bps": 592.0,
+      "within_split_correlation": -0.1506,
+      "split_low_vs_high_default": "17.08% vs 1.99%",
+      "spread_bps": 1509.0,
+      "spread_lift_bps": 412.3,
+      "domain_reason": "Living at the same permanent address for >15 years anchors long-term credit reliability.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "log1p(Reg_Yrs) * Harmonic_Copula * (Income / Credit)",
+          "auc": 0.6127,
+          "spread_bps": 1096.7,
+          "corr": -0.0988
+        },
+        {
+          "round": 2,
+          "formula": "np.log1p(reg_yrs) * cop_frank * (monthly_inc / (an + 1))",
+          "auc": 0.6465,
+          "spread_bps": 1326.2,
+          "corr": -0.1284
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * np.log1p(reg_yrs) * (u1 * u2)",
+          "auc": 0.6071,
+          "spread_bps": 317.3,
+          "corr": 0.0938
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * np.log1p(reg_yrs) * (1 - dti / 15)",
+          "auc": 0.6719,
+          "spread_bps": 1509.0,
+          "corr": -0.1506
+        },
+        {
+          "round": 5,
+          "formula": "np.log1p(reg_yrs) * (u1 + u2) * (emp_yrs / adult_life)",
+          "auc": 0.5326,
+          "spread_bps": 130.2,
+          "corr": -0.0288
+        }
+      ]
+    },
+    "exp_199_Working_Life_Administrative_Friction": {
+      "exp_id": 199,
+      "name": "Working_Life_Administrative_Friction",
+      "subgroup_count": 90734,
+      "subgroup_pct": 53.0,
+      "subgroup_default_rate": 8.26,
+      "baseline_formula": "Admin_Friction * (1 - E2) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.6119,
+      "baseline_spread_bps": 1019.4,
+      "champion_formula": "Admin_Friction * (1 - E2) * (Annuity / Monthly_Inc)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6119,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.1067,
+      "split_low_vs_high_default": "3.98% vs 14.17%",
+      "spread_bps": 1019.4,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Fraction of adult life spent in bureaucratic discrepancy between address and identity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Admin_Friction * (1 - E2) * (Annuity / Monthly_Inc)",
+          "auc": 0.6119,
+          "spread_bps": 1019.4,
+          "corr": 0.1067
+        },
+        {
+          "round": 2,
+          "formula": "admin_friction * (1 - cop_clayton) * dti",
+          "auc": 0.5767,
+          "spread_bps": 739.5,
+          "corr": 0.0731
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * admin_friction * (cr / (gp + 1))",
+          "auc": 0.5562,
+          "spread_bps": 538.9,
+          "corr": 0.0536
+        },
+        {
+          "round": 4,
+          "formula": "(admin_friction / (cop_harmonic + 0.1)) * dti",
+          "auc": 0.605,
+          "spread_bps": 1070.1,
+          "corr": 0.1001
+        },
+        {
+          "round": 5,
+          "formula": "admin_friction^2 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5865,
+          "spread_bps": 859.6,
+          "corr": 0.0824
+        }
+      ]
+    },
+    "exp_200_Verification_Phone_Protocol_Disconnect": {
+      "exp_id": 200,
+      "name": "Verification_Phone_Protocol_Disconnect",
+      "subgroup_count": 2,
+      "subgroup_pct": 0.0,
+      "subgroup_default_rate": 0.0,
+      "baseline_formula": "(Work_Phone_Only) * DTI * (1 - E3) * (Credit / Goods)",
+      "baseline_auc": 0.5,
+      "baseline_spread_bps": 0.0,
+      "champion_formula": "",
+      "champion_round": null,
+      "total_rounds_evaluated": 0,
+      "optimized_within_split_auc": -1.0,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.0,
+      "split_low_vs_high_default": "0.00% vs 0.00%",
+      "spread_bps": -1.0,
+      "spread_lift_bps": -1.0,
+      "domain_reason": "Discrepancies between workplace phone verification flags highlight informal employer routing.",
+      "optimization_history": []
+    },
+    "exp_201_Zero_Inquiry_Calm_Credit_Sanctuary": {
+      "exp_id": 201,
+      "name": "Zero_Inquiry_Calm_Credit_Sanctuary",
+      "subgroup_count": 30198,
+      "subgroup_pct": 17.64,
+      "subgroup_default_rate": 5.23,
+      "baseline_formula": "(E2 * E3) * (Monthly_Inc / Annuity) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.5924,
+      "baseline_spread_bps": 163.8,
+      "champion_formula": "(u1 * u2)**2 * (monthly_inc / (an + 1))",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6764,
+      "auc_lift_bps": 840.0,
+      "within_split_correlation": -0.136,
+      "split_low_vs_high_default": "14.37% vs 1.75%",
+      "spread_bps": 1261.6,
+      "spread_lift_bps": 1097.8,
+      "domain_reason": "Zero credit shopping over the past year reflects voluntary, premeditated borrowing.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(E2 * E3) * (Monthly_Inc / Annuity) * log1p(Emp_Yrs)",
+          "auc": 0.5924,
+          "spread_bps": 163.8,
+          "corr": -0.0714
+        },
+        {
+          "round": 2,
+          "formula": "cop_harmonic * (inc / (cr + 1)) * (1 - dti / 15)",
+          "auc": 0.5645,
+          "spread_bps": 390.7,
+          "corr": -0.0497
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_frank * (u1 * u2)",
+          "auc": 0.5949,
+          "spread_bps": 82.8,
+          "corr": 0.0732
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(adult_life)",
+          "auc": 0.6504,
+          "spread_bps": 1132.5,
+          "corr": -0.116
+        },
+        {
+          "round": 5,
+          "formula": "(u1 * u2)**2 * (monthly_inc / (an + 1))",
+          "auc": 0.6764,
+          "spread_bps": 1261.6,
+          "corr": -0.136
+        }
+      ]
+    },
+    "exp_202_Recent_Monthly_Inquiry_Surge": {
+      "exp_id": 202,
+      "name": "Recent_Monthly_Inquiry_Surge",
+      "subgroup_count": 5890,
+      "subgroup_pct": 3.44,
+      "subgroup_default_rate": 5.99,
+      "baseline_formula": "Inq_Month * (1 - E2) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5646,
+      "baseline_spread_bps": 390.5,
+      "champion_formula": "(inq_m / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5932,
+      "auc_lift_bps": 286.0,
+      "within_split_correlation": 0.0766,
+      "split_low_vs_high_default": "3.57% vs 11.04%",
+      "spread_bps": 747.0,
+      "spread_lift_bps": 356.5,
+      "domain_reason": "Multiple credit inquiries within 30 days reveals urgent, unmet short-term liquidity needs.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Inq_Month * (1 - E2) * (Annuity / Monthly_Inc)",
+          "auc": 0.5646,
+          "spread_bps": 390.5,
+          "corr": 0.0532
+        },
+        {
+          "round": 2,
+          "formula": "inq_m * (1 - cop_clayton) * dti",
+          "auc": 0.5364,
+          "spread_bps": 84.9,
+          "corr": 0.03
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_m * (cr / (gp + 1))",
+          "auc": 0.506,
+          "spread_bps": 118.8,
+          "corr": -0.005
+        },
+        {
+          "round": 4,
+          "formula": "(inq_m / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5932,
+          "spread_bps": 747.0,
+          "corr": 0.0766
+        },
+        {
+          "round": 5,
+          "formula": "inq_m^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.552,
+          "spread_bps": 254.7,
+          "corr": 0.0428
+        }
+      ]
+    },
+    "exp_203_Hourly_Emergency_Borrowing": {
+      "exp_id": 203,
+      "name": "Hourly_Emergency_Borrowing",
+      "subgroup_count": 933,
+      "subgroup_pct": 0.54,
+      "subgroup_default_rate": 8.04,
+      "baseline_formula": "Inq_Hour * (Credit / Goods) / (E3 + 0.1)",
+      "baseline_auc": 0.6601,
+      "baseline_spread_bps": 1702.1,
+      "champion_formula": "Inq_Hour * (Credit / Goods) / (E3 + 0.1)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6601,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.1508,
+      "split_low_vs_high_default": "0.00% vs 17.02%",
+      "spread_bps": 1702.1,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Inquiries logged within the last 60 minutes indicate panic borrowing across multiple storefronts.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Inq_Hour * (Credit / Goods) / (E3 + 0.1)",
+          "auc": 0.6601,
+          "spread_bps": 1702.1,
+          "corr": 0.1508
+        },
+        {
+          "round": 2,
+          "formula": "inq_h * (1 - cop_clayton) * dti",
+          "auc": 0.516,
+          "spread_bps": 106.4,
+          "corr": 0.0151
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_h * (cr / (gp + 1))",
+          "auc": 0.5409,
+          "spread_bps": 106.4,
+          "corr": 0.0385
+        },
+        {
+          "round": 4,
+          "formula": "(inq_h / (cop_harmonic + 0.05)) * (an / (monthly_inc + 1))",
+          "auc": 0.6252,
+          "spread_bps": 1063.8,
+          "corr": 0.1179
+        },
+        {
+          "round": 5,
+          "formula": "inq_h * (1 - u1 * u2) * dti",
+          "auc": 0.5011,
+          "spread_bps": 106.4,
+          "corr": 0.001
+        }
+      ]
+    },
+    "exp_204_Quarterly_Acceleration_Over_Annual": {
+      "exp_id": 204,
+      "name": "Quarterly_Acceleration_Over_Annual",
+      "subgroup_count": 21507,
+      "subgroup_pct": 12.56,
+      "subgroup_default_rate": 7.14,
+      "baseline_formula": "((Inq_QRT * 4) - Inq_YEAR) * (1 - Frank_Copula) * DTI",
+      "baseline_auc": 0.5449,
+      "baseline_spread_bps": 395.2,
+      "champion_formula": "(inq_accel / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6088,
+      "auc_lift_bps": 639.0,
+      "within_split_correlation": 0.097,
+      "split_low_vs_high_default": "4.00% vs 14.18%",
+      "spread_bps": 1018.1,
+      "spread_lift_bps": 622.9,
+      "domain_reason": "Sudden acceleration in quarterly borrowing applications marks rapid personal credit decay.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "((Inq_QRT * 4) - Inq_YEAR) * (1 - Frank_Copula) * DTI",
+          "auc": 0.5449,
+          "spread_bps": 395.2,
+          "corr": 0.0401
+        },
+        {
+          "round": 2,
+          "formula": "inq_accel * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6104,
+          "spread_bps": 990.2,
+          "corr": 0.0985
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_accel * dti",
+          "auc": 0.5113,
+          "spread_bps": 111.6,
+          "corr": -0.0101
+        },
+        {
+          "round": 4,
+          "formula": "(inq_accel / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6088,
+          "spread_bps": 1018.1,
+          "corr": 0.097
+        },
+        {
+          "round": 5,
+          "formula": "inq_accel^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5727,
+          "spread_bps": 781.0,
+          "corr": 0.0648
+        }
+      ]
+    },
+    "exp_205_High_Annual_Credit_Hunting_Intensity": {
+      "exp_id": 205,
+      "name": "High_Annual_Credit_Hunting_Intensity",
+      "subgroup_count": 14661,
+      "subgroup_pct": 8.56,
+      "subgroup_default_rate": 8.66,
+      "baseline_formula": "log1p(Inq_YEAR) * (1 - E2) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5953,
+      "baseline_spread_bps": 852.1,
+      "champion_formula": "(np.log1p(inq_y) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6211,
+      "auc_lift_bps": 258.0,
+      "within_split_correlation": 0.118,
+      "split_low_vs_high_default": "5.11% vs 17.59%",
+      "spread_bps": 1247.4,
+      "spread_lift_bps": 395.3,
+      "domain_reason": "Chronic credit shopping across 5+ institutions indicates repeated underwriting rejection.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "log1p(Inq_YEAR) * (1 - E2) * (Annuity / Monthly_Inc)",
+          "auc": 0.5953,
+          "spread_bps": 852.1,
+          "corr": 0.0929
+        },
+        {
+          "round": 2,
+          "formula": "np.log1p(inq_y) * (1 - cop_clayton) * dti",
+          "auc": 0.5652,
+          "spread_bps": 470.3,
+          "corr": 0.0635
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * np.log1p(inq_y) * (cr / (gp + 1))",
+          "auc": 0.5491,
+          "spread_bps": 579.4,
+          "corr": 0.0478
+        },
+        {
+          "round": 4,
+          "formula": "(np.log1p(inq_y) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6211,
+          "spread_bps": 1247.4,
+          "corr": 0.118
+        },
+        {
+          "round": 5,
+          "formula": "np.log1p(inq_y)^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5538,
+          "spread_bps": 415.8,
+          "corr": 0.0524
+        }
+      ]
+    },
+    "exp_206_Missing_Bureau_Inquiry_History": {
+      "exp_id": 206,
+      "name": "Missing_Bureau_Inquiry_History",
+      "subgroup_count": 23116,
+      "subgroup_pct": 13.5,
+      "subgroup_default_rate": 10.38,
+      "baseline_formula": "DTI * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.5949,
+      "baseline_spread_bps": 1038.1,
+      "champion_formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.611,
+      "auc_lift_bps": 161.0,
+      "within_split_correlation": 0.1173,
+      "split_low_vs_high_default": "7.14% vs 21.89%",
+      "spread_bps": 1474.9,
+      "spread_lift_bps": 436.8,
+      "domain_reason": "Unrecorded inquiry histories signal thin-file applicants lacking standard credit documentation.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - E2) * (Credit / Goods)",
+          "auc": 0.5949,
+          "spread_bps": 1038.1,
+          "corr": 0.1002
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.538,
+          "spread_bps": 393.6,
+          "corr": 0.0401
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (cr / (gp + 1))",
+          "auc": 0.5117,
+          "spread_bps": 121.1,
+          "corr": 0.0124
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+          "auc": 0.611,
+          "spread_bps": 1474.9,
+          "corr": 0.1173
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2)",
+          "auc": 0.5225,
+          "spread_bps": 285.5,
+          "corr": 0.0238
+        }
+      ]
+    },
+    "exp_207_Inquiry_Velocity_To_Income_Ratio": {
+      "exp_id": 207,
+      "name": "Inquiry_Velocity_To_Income_Ratio",
+      "subgroup_count": 8987,
+      "subgroup_pct": 5.25,
+      "subgroup_default_rate": 8.97,
+      "baseline_formula": "(Inq_YEAR / log1p(Income)) * (1 - E3) * (Credit / Goods)",
+      "baseline_auc": 0.6616,
+      "baseline_spread_bps": 1724.1,
+      "champion_formula": "(Inq_YEAR / log1p(Income)) * (1 - E3) * (Credit / Goods)",
+      "champion_round": 1,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6616,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.1599,
+      "split_low_vs_high_default": "2.78% vs 20.02%",
+      "spread_bps": 1724.1,
+      "spread_lift_bps": 0.0,
+      "domain_reason": "Frequent credit inquiries from low-earning borrowers reflect extreme repayment fragility.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Inq_YEAR / log1p(Income)) * (1 - E3) * (Credit / Goods)",
+          "auc": 0.6616,
+          "spread_bps": 1724.1,
+          "corr": 0.1599
+        },
+        {
+          "round": 2,
+          "formula": "inq_to_inc * (1 - cop_clayton) * dti",
+          "auc": 0.5677,
+          "spread_bps": 444.9,
+          "corr": 0.067
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_to_inc * (cr / (gp + 1))",
+          "auc": 0.5397,
+          "spread_bps": 400.4,
+          "corr": 0.0392
+        },
+        {
+          "round": 4,
+          "formula": "(inq_to_inc / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6186,
+          "spread_bps": 1112.3,
+          "corr": 0.1174
+        },
+        {
+          "round": 5,
+          "formula": "inq_to_inc^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5568,
+          "spread_bps": 344.8,
+          "corr": 0.0563
+        }
+      ]
+    },
+    "exp_208_Inquiry_Burden_Per_Bureau_Score": {
+      "exp_id": 208,
+      "name": "Inquiry_Burden_Per_Bureau_Score",
+      "subgroup_count": 14174,
+      "subgroup_pct": 8.28,
+      "subgroup_default_rate": 14.59,
+      "baseline_formula": "(Inq_YEAR / (E2 + 0.05)) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5752,
+      "baseline_spread_bps": 1198.9,
+      "champion_formula": "inq_per_score * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6315,
+      "auc_lift_bps": 563.0,
+      "within_split_correlation": 0.1608,
+      "split_low_vs_high_default": "5.08% vs 25.46%",
+      "spread_bps": 2038.1,
+      "spread_lift_bps": 839.2,
+      "domain_reason": "Inquiry counts concentrated among subprime credit-score holders indicate adverse credit hunting.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Inq_YEAR / (E2 + 0.05)) * (Annuity / Monthly_Inc)",
+          "auc": 0.5752,
+          "spread_bps": 1198.9,
+          "corr": 0.0919
+        },
+        {
+          "round": 2,
+          "formula": "inq_per_score * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6315,
+          "spread_bps": 2038.1,
+          "corr": 0.1608
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_per_score * dti",
+          "auc": 0.5546,
+          "spread_bps": 677.0,
+          "corr": 0.0667
+        },
+        {
+          "round": 4,
+          "formula": "(inq_per_score / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6301,
+          "spread_bps": 1805.4,
+          "corr": 0.1591
+        },
+        {
+          "round": 5,
+          "formula": "inq_per_score^1.5 * (1 - u1 * u2)",
+          "auc": 0.616,
+          "spread_bps": 2002.8,
+          "corr": 0.1419
+        }
+      ]
+    },
+    "exp_209_Late_Stage_Quarterly_Inquiry_Shock": {
+      "exp_id": 209,
+      "name": "Late_Stage_Quarterly_Inquiry_Shock",
+      "subgroup_count": 282,
+      "subgroup_pct": 0.16,
+      "subgroup_default_rate": 15.96,
+      "baseline_formula": "Inq_QRT * (1 - E3) * DTI",
+      "baseline_auc": 0.6243,
+      "baseline_spread_bps": 1034.5,
+      "champion_formula": "Merton_PD * inq_q * dti",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6487,
+      "auc_lift_bps": 244.0,
+      "within_split_correlation": -0.1886,
+      "split_low_vs_high_default": "37.93% vs 6.90%",
+      "spread_bps": 3103.4,
+      "spread_lift_bps": 2068.9,
+      "domain_reason": "Subprime borrowers aggressively requesting loans over the last 90 days exhibit immediate default.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Inq_QRT * (1 - E3) * DTI",
+          "auc": 0.6243,
+          "spread_bps": 1034.5,
+          "corr": -0.1577
+        },
+        {
+          "round": 2,
+          "formula": "inq_q * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6394,
+          "spread_bps": 2413.8,
+          "corr": 0.1768
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * inq_q * dti",
+          "auc": 0.6487,
+          "spread_bps": 3103.4,
+          "corr": -0.1886
+        },
+        {
+          "round": 4,
+          "formula": "(inq_q / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5473,
+          "spread_bps": 689.7,
+          "corr": 0.06
+        },
+        {
+          "round": 5,
+          "formula": "inq_q^2 * (1 - u1 * u2) * dti",
+          "auc": 0.606,
+          "spread_bps": 2413.8,
+          "corr": -0.1345
+        }
+      ]
+    },
+    "exp_210_Harmonic_Inquiry_Credit_Stress": {
+      "exp_id": 210,
+      "name": "Harmonic_Inquiry_Credit_Stress",
+      "subgroup_count": 24353,
+      "subgroup_pct": 14.22,
+      "subgroup_default_rate": 7.25,
+      "baseline_formula": "(Inq_MON + 1) * (Annuity / Monthly_Inc) * (1 - Clayton_Copula)",
+      "baseline_auc": 0.5728,
+      "baseline_spread_bps": 529.6,
+      "champion_formula": "((inq_m + 1.0) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6071,
+      "auc_lift_bps": 343.0,
+      "within_split_correlation": 0.0962,
+      "split_low_vs_high_default": "3.69% vs 13.05%",
+      "spread_bps": 936.0,
+      "spread_lift_bps": 406.4,
+      "domain_reason": "Multiplies debt servicing pressure by 30-day inquiry velocity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Inq_MON + 1) * (Annuity / Monthly_Inc) * (1 - Clayton_Copula)",
+          "auc": 0.5728,
+          "spread_bps": 529.6,
+          "corr": 0.0654
+        },
+        {
+          "round": 2,
+          "formula": "(inq_m + 1.0) * dti * (1 - cop_frank)",
+          "auc": 0.5345,
+          "spread_bps": 291.5,
+          "corr": 0.031
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (inq_m + 1.0) * (cr / (gp + 1))",
+          "auc": 0.5204,
+          "spread_bps": 0.0,
+          "corr": 0.0183
+        },
+        {
+          "round": 4,
+          "formula": "((inq_m + 1.0) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6071,
+          "spread_bps": 936.0,
+          "corr": 0.0962
+        },
+        {
+          "round": 5,
+          "formula": "(inq_m + 1.0)^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5164,
+          "spread_bps": 201.1,
+          "corr": 0.0148
+        }
+      ]
+    },
+    "exp_211_Vintage_Car_Maintenance_Drain": {
+      "exp_id": 211,
+      "name": "Vintage_Car_Maintenance_Drain",
+      "subgroup_count": 15986,
+      "subgroup_pct": 9.34,
+      "subgroup_default_rate": 9.03,
+      "baseline_formula": "(Car_Age / 10) * DTI * (1 - E2)",
+      "baseline_auc": 0.5628,
+      "baseline_spread_bps": 550.3,
+      "champion_formula": "(car_age / 10.0) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6208,
+      "auc_lift_bps": 580.0,
+      "within_split_correlation": 0.1199,
+      "split_low_vs_high_default": "3.13% vs 10.94%",
+      "spread_bps": 781.7,
+      "spread_lift_bps": 231.4,
+      "domain_reason": "Vehicles older than 15 years create recurring maintenance drains on disposable household cash.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Car_Age / 10) * DTI * (1 - E2)",
+          "auc": 0.5628,
+          "spread_bps": 550.3,
+          "corr": 0.0623
+        },
+        {
+          "round": 2,
+          "formula": "(car_age / 10.0) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6208,
+          "spread_bps": 781.7,
+          "corr": 0.1199
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (car_age / 10.0) * dti",
+          "auc": 0.5004,
+          "spread_bps": 87.6,
+          "corr": 0.0004
+        },
+        {
+          "round": 4,
+          "formula": "(car_age / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6086,
+          "spread_bps": 1125.7,
+          "corr": 0.1078
+        },
+        {
+          "round": 5,
+          "formula": "(car_age / 10.0)^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5385,
+          "spread_bps": 462.8,
+          "corr": 0.0383
+        }
+      ]
+    },
+    "exp_212_Modern_Vehicle_Luxury_Asset_Anchor": {
+      "exp_id": 212,
+      "name": "Modern_Vehicle_Luxury_Asset_Anchor",
+      "subgroup_count": 11098,
+      "subgroup_pct": 6.48,
+      "subgroup_default_rate": 5.82,
+      "baseline_formula": "(Monthly_Inc / Annuity) * Harmonic_Copula * (4 - Car_Age)",
+      "baseline_auc": 0.6121,
+      "baseline_spread_bps": 864.9,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2 * (4.0 - car_age)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6742,
+      "auc_lift_bps": 621.0,
+      "within_split_correlation": -0.1413,
+      "split_low_vs_high_default": "15.59% vs 2.43%",
+      "spread_bps": 1315.3,
+      "spread_lift_bps": 450.4,
+      "domain_reason": "Late-model cars represent substantial secondary asset equity protecting lender solvency.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * Harmonic_Copula * (4 - Car_Age)",
+          "auc": 0.6121,
+          "spread_bps": 864.9,
+          "corr": -0.0909
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (4.0 - car_age)",
+          "auc": 0.6123,
+          "spread_bps": 837.8,
+          "corr": -0.0911
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * (4.0 - car_age) * (u1 * u2)",
+          "auc": 0.5568,
+          "spread_bps": 9.0,
+          "corr": 0.046
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * (4.0 - car_age)",
+          "auc": 0.6373,
+          "spread_bps": 1099.1,
+          "corr": -0.1114
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2 * (4.0 - car_age)",
+          "auc": 0.6742,
+          "spread_bps": 1315.3,
+          "corr": -0.1413
+        }
+      ]
+    },
+    "exp_213_Homeowner_Unencumbered_Equity_Anchor": {
+      "exp_id": 213,
+      "name": "Homeowner_Unencumbered_Equity_Anchor",
+      "subgroup_count": 99835,
+      "subgroup_pct": 58.31,
+      "subgroup_default_rate": 8.18,
+      "baseline_formula": "(Income / Credit) * (E2 + E3) * log1p(Age)",
+      "baseline_auc": 0.598,
+      "baseline_spread_bps": 989.6,
+      "champion_formula": "cop_frank * (inc / (cr + 1)) * (u1 * u2)",
+      "champion_round": 3,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6752,
+      "auc_lift_bps": 772.0,
+      "within_split_correlation": -0.1664,
+      "split_low_vs_high_default": "21.38% vs 2.88%",
+      "spread_bps": 1850.0,
+      "spread_lift_bps": 860.4,
+      "domain_reason": "Homeowners without vehicle debt obligations represent resilient low-risk borrowers.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * (E2 + E3) * log1p(Age)",
+          "auc": 0.598,
+          "spread_bps": 989.6,
+          "corr": -0.0931
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_harmonic * np.log1p(adult_life)",
+          "auc": 0.6538,
+          "spread_bps": 1619.6,
+          "corr": -0.146
+        },
+        {
+          "round": 3,
+          "formula": "cop_frank * (inc / (cr + 1)) * (u1 * u2)",
+          "auc": 0.6752,
+          "spread_bps": 1850.0,
+          "corr": -0.1664
+        },
+        {
+          "round": 4,
+          "formula": "Merton_DD * cop_frank * np.log1p(age)",
+          "auc": 0.5968,
+          "spread_bps": 372.6,
+          "corr": 0.0919
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2) * (1 - dti / 15)",
+          "auc": 0.6478,
+          "spread_bps": 1447.3,
+          "corr": -0.1404
+        }
+      ]
+    },
+    "exp_214_Municipal_Housing_Tenant_Vulnerability": {
+      "exp_id": 214,
+      "name": "Municipal_Housing_Tenant_Vulnerability",
+      "subgroup_count": 8959,
+      "subgroup_pct": 5.23,
+      "subgroup_default_rate": 9.76,
+      "baseline_formula": "(Annuity / Monthly_Inc) / (E3 + 0.1) * (Credit / Goods)",
+      "baseline_auc": 0.5919,
+      "baseline_spread_bps": 1071.4,
+      "champion_formula": "((an / (monthly_inc + 1)) / (cop_harmonic + 0.1)) * (cr / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6182,
+      "auc_lift_bps": 263.0,
+      "within_split_correlation": 0.1215,
+      "split_low_vs_high_default": "6.14% vs 19.42%",
+      "spread_bps": 1328.1,
+      "spread_lift_bps": 256.7,
+      "domain_reason": "Renters and municipal tenants lack property collateral against unexpected bankruptcy.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) / (E3 + 0.1) * (Credit / Goods)",
+          "auc": 0.5919,
+          "spread_bps": 1071.4,
+          "corr": 0.0944
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.5465,
+          "spread_bps": 424.1,
+          "corr": 0.0478
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (cr / (gp + 1)) * dti",
+          "auc": 0.5178,
+          "spread_bps": 178.6,
+          "corr": 0.0183
+        },
+        {
+          "round": 4,
+          "formula": "((an / (monthly_inc + 1)) / (cop_harmonic + 0.1)) * (cr / (gp + 1))",
+          "auc": 0.6182,
+          "spread_bps": 1328.1,
+          "corr": 0.1215
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1))^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5689,
+          "spread_bps": 714.3,
+          "corr": 0.0708
+        }
+      ]
+    },
+    "exp_215_Asset_Rich_Cash_Poor_Dilemma": {
+      "exp_id": 215,
+      "name": "Asset_Rich_Cash_Poor_Dilemma",
+      "subgroup_count": 19199,
+      "subgroup_pct": 11.21,
+      "subgroup_default_rate": 7.44,
+      "baseline_formula": "DTI * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5557,
+      "baseline_spread_bps": 250.0,
+      "champion_formula": "dti * (1 - cop_clayton) * (car_age / 10 + 1)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5852,
+      "auc_lift_bps": 295.0,
+      "within_split_correlation": 0.0774,
+      "split_low_vs_high_default": "4.11% vs 10.36%",
+      "spread_bps": 625.0,
+      "spread_lift_bps": 375.0,
+      "domain_reason": "Owning physical property on below-median income creates high maintenance costs with illiquid cash.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5557,
+          "spread_bps": 250.0,
+          "corr": 0.0507
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (car_age / 10 + 1)",
+          "auc": 0.5852,
+          "spread_bps": 625.0,
+          "corr": 0.0774
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (cr / (gp + 1))",
+          "auc": 0.5165,
+          "spread_bps": 26.0,
+          "corr": 0.015
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * dti",
+          "auc": 0.5827,
+          "spread_bps": 656.3,
+          "corr": 0.0751
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2) * (an / (monthly_inc + 1))",
+          "auc": 0.5386,
+          "spread_bps": 166.7,
+          "corr": 0.0351
+        }
+      ]
+    },
+    "exp_216_Car_Depreciation_To_Loan_Horizon": {
+      "exp_id": 216,
+      "name": "Car_Depreciation_To_Loan_Horizon",
+      "subgroup_count": 42060,
+      "subgroup_pct": 24.57,
+      "subgroup_default_rate": 7.88,
+      "baseline_formula": "(Car_Age / 10) * (Credit / Goods) * (1 - E2)",
+      "baseline_auc": 0.6306,
+      "baseline_spread_bps": 1122.2,
+      "champion_formula": "(car_deprec / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6297,
+      "auc_lift_bps": -9.0,
+      "within_split_correlation": 0.121,
+      "split_low_vs_high_default": "3.35% vs 15.41%",
+      "spread_bps": 1205.4,
+      "spread_lift_bps": 83.2,
+      "domain_reason": "Compound depreciation of aging collateral against financing fees.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Car_Age / 10) * (Credit / Goods) * (1 - E2)",
+          "auc": 0.6306,
+          "spread_bps": 1122.2,
+          "corr": 0.1218
+        },
+        {
+          "round": 2,
+          "formula": "car_deprec * (1 - cop_clayton) * dti",
+          "auc": 0.5799,
+          "spread_bps": 653.8,
+          "corr": 0.0745
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * car_deprec * (an / (monthly_inc + 1))",
+          "auc": 0.5454,
+          "spread_bps": 371.0,
+          "corr": 0.0424
+        },
+        {
+          "round": 4,
+          "formula": "(car_deprec / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6297,
+          "spread_bps": 1205.4,
+          "corr": 0.121
+        },
+        {
+          "round": 5,
+          "formula": "car_deprec^1.5 * (1 - u1 * u2)",
+          "auc": 0.6013,
+          "spread_bps": 863.1,
+          "corr": 0.0946
+        }
+      ]
+    },
+    "exp_217_Vehicle_Equity_Liquidation_Coverage": {
+      "exp_id": 217,
+      "name": "Vehicle_Equity_Liquidation_Coverage",
+      "subgroup_count": 58210,
+      "subgroup_pct": 34.0,
+      "subgroup_default_rate": 7.25,
+      "baseline_formula": "Vehicle_Liquidation_Value / Credit * Harmonic_Copula",
+      "baseline_auc": 0.6279,
+      "baseline_spread_bps": 1008.4,
+      "champion_formula": "veh_equity * (u1 * u2) * (1 - dti / 15)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6509,
+      "auc_lift_bps": 230.0,
+      "within_split_correlation": -0.1355,
+      "split_low_vs_high_default": "14.33% vs 2.78%",
+      "spread_bps": 1154.4,
+      "spread_lift_bps": 146.0,
+      "domain_reason": "Realizable liquidation value of motor vehicle relative to loan principal.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Vehicle_Liquidation_Value / Credit * Harmonic_Copula",
+          "auc": 0.6279,
+          "spread_bps": 1008.4,
+          "corr": -0.1149
+        },
+        {
+          "round": 2,
+          "formula": "veh_equity * cop_frank * (inc / (cr + 1))",
+          "auc": 0.6294,
+          "spread_bps": 1005.0,
+          "corr": -0.1162
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * veh_equity * (u1 * u2)",
+          "auc": 0.5873,
+          "spread_bps": 123.7,
+          "corr": 0.0784
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * veh_equity * (monthly_inc / (an + 1))",
+          "auc": 0.6466,
+          "spread_bps": 1199.1,
+          "corr": -0.1317
+        },
+        {
+          "round": 5,
+          "formula": "veh_equity * (u1 * u2) * (1 - dti / 15)",
+          "auc": 0.6509,
+          "spread_bps": 1154.4,
+          "corr": -0.1355
+        }
+      ]
+    },
+    "exp_218_Office_Apartment_Commercial_Footprint": {
+      "exp_id": 218,
+      "name": "Office_Apartment_Commercial_Footprint",
+      "subgroup_count": 2064,
+      "subgroup_pct": 1.21,
+      "subgroup_default_rate": 7.12,
+      "baseline_formula": "(Monthly_Inc / Annuity) * Clayton_Copula * (1 - DTI / 10)",
+      "baseline_auc": 0.6009,
+      "baseline_spread_bps": 1062.8,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6406,
+      "auc_lift_bps": 397.0,
+      "within_split_correlation": -0.1253,
+      "split_low_vs_high_default": "17.87% vs 2.90%",
+      "spread_bps": 1497.6,
+      "spread_lift_bps": 434.8,
+      "domain_reason": "Office and co-op apartment dwellers reflect commercial self-employment profiles.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * Clayton_Copula * (1 - DTI / 10)",
+          "auc": 0.6009,
+          "spread_bps": 1062.8,
+          "corr": -0.0899
+        },
+        {
+          "round": 2,
+          "formula": "(inc / (cr + 1)) * cop_frank * (u1 * u2)",
+          "auc": 0.6331,
+          "spread_bps": 1497.6,
+          "corr": -0.1186
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * (monthly_inc / (an + 1))",
+          "auc": 0.5315,
+          "spread_bps": 483.1,
+          "corr": 0.028
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(adult_life)",
+          "auc": 0.6256,
+          "spread_bps": 1401.0,
+          "corr": -0.1119
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)",
+          "auc": 0.6406,
+          "spread_bps": 1497.6,
+          "corr": -0.1253
+        }
+      ]
+    },
+    "exp_219_Assetless_Urban_Tenant_Exposure": {
+      "exp_id": 219,
+      "name": "Assetless_Urban_Tenant_Exposure",
+      "subgroup_count": 696,
+      "subgroup_pct": 0.41,
+      "subgroup_default_rate": 12.21,
+      "baseline_formula": "(Annuity / Monthly_Inc) * (1 - E2) * DTI",
+      "baseline_auc": 0.5928,
+      "baseline_spread_bps": 714.3,
+      "champion_formula": "(an / (monthly_inc + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.643,
+      "auc_lift_bps": 502.0,
+      "within_split_correlation": 0.1622,
+      "split_low_vs_high_default": "5.71% vs 20.00%",
+      "spread_bps": 1428.6,
+      "spread_lift_bps": 714.3,
+      "domain_reason": "Urban renters lacking vehicles or real property face elevated default rates.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Annuity / Monthly_Inc) * (1 - E2) * DTI",
+          "auc": 0.5928,
+          "spread_bps": 714.3,
+          "corr": 0.1053
+        },
+        {
+          "round": 2,
+          "formula": "(an / (monthly_inc + 1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.643,
+          "spread_bps": 1428.6,
+          "corr": 0.1622
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (cr / (gp + 1))",
+          "auc": 0.5577,
+          "spread_bps": 152.9,
+          "corr": 0.0654
+        },
+        {
+          "round": 4,
+          "formula": "((an / (monthly_inc + 1)) / (cop_harmonic + 0.1)) * dti",
+          "auc": 0.608,
+          "spread_bps": 714.3,
+          "corr": 0.1225
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1))^2 * (1 - u1 * u2) * dti",
+          "auc": 0.5651,
+          "spread_bps": 428.6,
+          "corr": 0.0738
+        }
+      ]
+    },
+    "exp_220_Residential_Collateral_Shield_Ratio": {
+      "exp_id": 220,
+      "name": "Residential_Collateral_Shield_Ratio",
+      "subgroup_count": 52617,
+      "subgroup_pct": 30.73,
+      "subgroup_default_rate": 7.63,
+      "baseline_formula": "(Income / Credit) * (E2 * E3) * log1p(Adult_Life)",
+      "baseline_auc": 0.6938,
+      "baseline_spread_bps": 1847.2,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.693,
+      "auc_lift_bps": -8.0,
+      "within_split_correlation": -0.1775,
+      "split_low_vs_high_default": "20.87% vs 2.28%",
+      "spread_bps": 1858.6,
+      "spread_lift_bps": 11.4,
+      "domain_reason": "Residential apartment dwellers carrying conservative debt maintain excellent repayment track records.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * (E2 * E3) * log1p(Adult_Life)",
+          "auc": 0.6938,
+          "spread_bps": 1847.2,
+          "corr": -0.1783
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_frank * np.log1p(adult_life)",
+          "auc": 0.6735,
+          "spread_bps": 1674.3,
+          "corr": -0.1595
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * (u1 * u2)",
+          "auc": 0.5492,
+          "spread_bps": 34.2,
+          "corr": 0.0452
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.597,
+          "spread_bps": 187.1,
+          "corr": -0.0894
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+          "auc": 0.693,
+          "spread_bps": 1858.6,
+          "corr": -0.1775
+        }
+      ]
+    },
+    "exp_221_Megacity_Tier1_Metro_Concentration": {
+      "exp_id": 221,
+      "name": "Megacity_Tier1_Metro_Concentration",
+      "subgroup_count": 12133,
+      "subgroup_pct": 7.09,
+      "subgroup_default_rate": 4.52,
+      "baseline_formula": "(Income / Credit) * Frank_Copula * (Monthly_Inc / Annuity)",
+      "baseline_auc": 0.5974,
+      "baseline_spread_bps": 510.7,
+      "champion_formula": "(Monthly_Inc / Annuity) * cop_harmonic * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6666,
+      "auc_lift_bps": 692.0,
+      "within_split_correlation": -0.1198,
+      "split_low_vs_high_default": "12.36% vs 1.98%",
+      "spread_bps": 1037.9,
+      "spread_lift_bps": 527.2,
+      "domain_reason": "Tier-1 metropolitan residents possess deep alternative employment options.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * Frank_Copula * (Monthly_Inc / Annuity)",
+          "auc": 0.5974,
+          "spread_bps": 510.7,
+          "corr": -0.0701
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_harmonic * (u1 * u2)",
+          "auc": 0.6666,
+          "spread_bps": 1037.9,
+          "corr": -0.1198
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_frank * np.log1p(adult_life)",
+          "auc": 0.5593,
+          "spread_bps": 57.7,
+          "corr": 0.0427
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.5929,
+          "spread_bps": 163.7,
+          "corr": -0.0669
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2) * (1 - dti / 15)",
+          "auc": 0.6376,
+          "spread_bps": 774.3,
+          "corr": -0.099
+        }
+      ]
+    },
+    "exp_222_Rural_Periphery_Low_Density_Isolation": {
+      "exp_id": 222,
+      "name": "Rural_Periphery_Low_Density_Isolation",
+      "subgroup_count": 19563,
+      "subgroup_pct": 11.43,
+      "subgroup_default_rate": 9.33,
+      "baseline_formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5482,
+      "baseline_spread_bps": 546.8,
+      "champion_formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6549,
+      "auc_lift_bps": 1067.0,
+      "within_split_correlation": 0.156,
+      "split_low_vs_high_default": "3.93% vs 22.94%",
+      "spread_bps": 1900.9,
+      "spread_lift_bps": 1354.1,
+      "domain_reason": "Isolated rural regions offer few fallback employment options upon dismissal.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Income) * (1 - E3) * (Annuity / Monthly_Inc)",
+          "auc": 0.5482,
+          "spread_bps": 546.8,
+          "corr": 0.0486
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5759,
+          "spread_bps": 858.5,
+          "corr": 0.0765
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (1 / (u1 + 0.1))",
+          "auc": 0.5944,
+          "spread_bps": 1068.0,
+          "corr": 0.0951
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+          "auc": 0.6549,
+          "spread_bps": 1900.9,
+          "corr": 0.156
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5411,
+          "spread_bps": 470.1,
+          "corr": 0.0414
+        }
+      ]
+    },
+    "exp_223_Worst_Region_Rating_Severe_Risk": {
+      "exp_id": 223,
+      "name": "Worst_Region_Rating_Severe_Risk",
+      "subgroup_count": 26999,
+      "subgroup_pct": 15.77,
+      "subgroup_default_rate": 11.03,
+      "baseline_formula": "DTI * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.5754,
+      "baseline_spread_bps": 885.2,
+      "champion_formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * dti",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5769,
+      "auc_lift_bps": 15.0,
+      "within_split_correlation": 0.0835,
+      "split_low_vs_high_default": "6.89% vs 16.67%",
+      "spread_bps": 977.8,
+      "spread_lift_bps": 92.6,
+      "domain_reason": "Jurisdictions assigned regional rating tier 3 suffer systemic macro distress.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - E2) * (Credit / Goods)",
+          "auc": 0.5754,
+          "spread_bps": 885.2,
+          "corr": 0.0818
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.5471,
+          "spread_bps": 511.1,
+          "corr": 0.0511
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (cr / (gp + 1))",
+          "auc": 0.5153,
+          "spread_bps": 163.0,
+          "corr": 0.0166
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * dti",
+          "auc": 0.5769,
+          "spread_bps": 977.8,
+          "corr": 0.0835
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5371,
+          "spread_bps": 488.9,
+          "corr": 0.0402
+        }
+      ]
+    },
+    "exp_224_Elite_High_Density_Tier1_Sanctuary": {
+      "exp_id": 224,
+      "name": "Elite_High_Density_Tier1_Sanctuary",
+      "subgroup_count": 15776,
+      "subgroup_pct": 9.21,
+      "subgroup_default_rate": 4.51,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.5743,
+      "baseline_spread_bps": 57.8,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6771,
+      "auc_lift_bps": 1028.0,
+      "within_split_correlation": -0.1273,
+      "split_low_vs_high_default": "12.67% vs 1.96%",
+      "spread_bps": 1071.0,
+      "spread_lift_bps": 1013.2,
+      "domain_reason": "Metropolitan prime borrowers in rating tier 1 districts provide premier credit stability.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(Emp_Yrs)",
+          "auc": 0.5743,
+          "spread_bps": 57.8,
+          "corr": -0.0534
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (u1 * u2)",
+          "auc": 0.6638,
+          "spread_bps": 994.9,
+          "corr": -0.1177
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * np.log1p(adult_life)",
+          "auc": 0.5568,
+          "spread_bps": 120.4,
+          "corr": 0.0408
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.6019,
+          "spread_bps": 95.8,
+          "corr": -0.0733
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+          "auc": 0.6771,
+          "spread_bps": 1071.0,
+          "corr": -0.1273
+        }
+      ]
+    },
+    "exp_225_High_Rating_In_Rural_Periphery": {
+      "exp_id": 225,
+      "name": "High_Rating_In_Rural_Periphery",
+      "subgroup_count": 349,
+      "subgroup_pct": 0.2,
+      "subgroup_default_rate": 4.3,
+      "baseline_formula": "(Income / Credit) * Clayton_Copula * log1p(Age)",
+      "baseline_auc": 0.6222,
+      "baseline_spread_bps": 571.4,
+      "champion_formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7369,
+      "auc_lift_bps": 1147.0,
+      "within_split_correlation": -0.1665,
+      "split_low_vs_high_default": "14.29% vs 2.86%",
+      "spread_bps": 1142.9,
+      "spread_lift_bps": 571.5,
+      "domain_reason": "Public institutional leaders stationed in smaller peripheral municipalities.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Income / Credit) * Clayton_Copula * log1p(Age)",
+          "auc": 0.6222,
+          "spread_bps": 571.4,
+          "corr": -0.0858
+        },
+        {
+          "round": 2,
+          "formula": "(Monthly_Inc / Annuity) * cop_frank * (u1 * u2)",
+          "auc": 0.7369,
+          "spread_bps": 1142.9,
+          "corr": -0.1665
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * np.log1p(emp_yrs)",
+          "auc": 0.5047,
+          "spread_bps": 285.7,
+          "corr": -0.0033
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * (u1 + u2)",
+          "auc": 0.7038,
+          "spread_bps": 1428.6,
+          "corr": -0.1432
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (1 - dti / 15)",
+          "auc": 0.5365,
+          "spread_bps": 0.0,
+          "corr": 0.0257
+        }
+      ]
+    },
+    "exp_226_Unverifiable_Employer_Phone_Disconnect": {
+      "exp_id": 226,
+      "name": "Unverifiable_Employer_Phone_Disconnect",
+      "subgroup_count": 4,
+      "subgroup_pct": 0.0,
+      "subgroup_default_rate": 0.0,
+      "baseline_formula": "DTI * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.5,
+      "baseline_spread_bps": 0.0,
+      "champion_formula": "",
+      "champion_round": null,
+      "total_rounds_evaluated": 0,
+      "optimized_within_split_auc": -1.0,
+      "auc_lift_bps": 0.0,
+      "within_split_correlation": 0.0,
+      "split_low_vs_high_default": "0.00% vs 0.00%",
+      "spread_bps": -1.0,
+      "spread_lift_bps": -1.0,
+      "domain_reason": "Working applicants without verified employer telephones indicate informal unmonitored wages.",
+      "optimization_history": []
+    },
+    "exp_227_Dual_Workplace_Phone_Anchor": {
+      "exp_id": 227,
+      "name": "Dual_Workplace_Phone_Anchor",
+      "subgroup_count": 16094,
+      "subgroup_pct": 9.4,
+      "subgroup_default_rate": 7.4,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 * E3) * log1p(Emp_Yrs)",
+      "baseline_auc": 0.6833,
+      "baseline_spread_bps": 1788.8,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6959,
+      "auc_lift_bps": 126.0,
+      "within_split_correlation": -0.1777,
+      "split_low_vs_high_default": "20.99% vs 2.30%",
+      "spread_bps": 1869.6,
+      "spread_lift_bps": 80.8,
+      "domain_reason": "Long-tenured employees with dual verified employer telephone connections represent authentic employment roots.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 * E3) * log1p(Emp_Yrs)",
+          "auc": 0.6833,
+          "spread_bps": 1788.8,
+          "corr": -0.1662
+        },
+        {
+          "round": 2,
+          "formula": "(Income / Credit) * cop_frank * (emp_yrs / adult_life)",
+          "auc": 0.6161,
+          "spread_bps": 1192.5,
+          "corr": -0.1053
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * (u1 + u2)",
+          "auc": 0.5925,
+          "spread_bps": 167.7,
+          "corr": 0.0839
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.6768,
+          "spread_bps": 1757.8,
+          "corr": -0.1603
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2",
+          "auc": 0.6959,
+          "spread_bps": 1869.6,
+          "corr": -0.1777
+        }
+      ]
+    },
+    "exp_228_Transient_New_Hire_Workplace_Divergence": {
+      "exp_id": 228,
+      "name": "Transient_New_Hire_Workplace_Divergence",
+      "subgroup_count": 11847,
+      "subgroup_pct": 6.92,
+      "subgroup_default_rate": 10.3,
+      "baseline_formula": "(Credit / Goods) / (E3 + 0.1) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.6015,
+      "baseline_spread_bps": 1291.1,
+      "champion_formula": "((an / (monthly_inc + 1)) / (cop_harmonic + 0.1)) * (cr / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6414,
+      "auc_lift_bps": 399.0,
+      "within_split_correlation": 0.1489,
+      "split_low_vs_high_default": "4.14% vs 21.77%",
+      "spread_bps": 1763.7,
+      "spread_lift_bps": 472.6,
+      "domain_reason": "Recent hires on probationary status lacking direct workplace phone verification.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / Goods) / (E3 + 0.1) * (Annuity / Monthly_Inc)",
+          "auc": 0.6015,
+          "spread_bps": 1291.1,
+          "corr": 0.1069
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.5728,
+          "spread_bps": 776.4,
+          "corr": 0.0766
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (cr / (gp + 1)) * dti",
+          "auc": 0.5183,
+          "spread_bps": 165.3,
+          "corr": 0.0192
+        },
+        {
+          "round": 4,
+          "formula": "((an / (monthly_inc + 1)) / (cop_harmonic + 0.1)) * (cr / (gp + 1))",
+          "auc": 0.6414,
+          "spread_bps": 1763.7,
+          "corr": 0.1489
+        },
+        {
+          "round": 5,
+          "formula": "(an / (monthly_inc + 1))^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5802,
+          "spread_bps": 936.7,
+          "corr": 0.0844
+        }
+      ]
+    },
+    "exp_229_Regional_Income_Relative_Deviance": {
+      "exp_id": 229,
+      "name": "Regional_Income_Relative_Deviance",
+      "subgroup_count": 68247,
+      "subgroup_pct": 39.86,
+      "subgroup_default_rate": 7.98,
+      "baseline_formula": "(-Income_Deviation_From_Region) * DTI * (1 - E2)",
+      "baseline_auc": 0.5755,
+      "baseline_spread_bps": 627.1,
+      "champion_formula": "(-dev_reg_inc) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6093,
+      "auc_lift_bps": 338.0,
+      "within_split_correlation": 0.1026,
+      "split_low_vs_high_default": "3.47% vs 14.34%",
+      "spread_bps": 1087.2,
+      "spread_lift_bps": 460.1,
+      "domain_reason": "Earning significantly below the regional peer benchmark intensifies local living cost pressure.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(-Income_Deviation_From_Region) * DTI * (1 - E2)",
+          "auc": 0.5755,
+          "spread_bps": 627.1,
+          "corr": 0.0708
+        },
+        {
+          "round": 2,
+          "formula": "(-dev_reg_inc) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.6093,
+          "spread_bps": 1087.2,
+          "corr": 0.1026
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (-dev_reg_inc) * dti",
+          "auc": 0.507,
+          "spread_bps": 104.0,
+          "corr": 0.0066
+        },
+        {
+          "round": 4,
+          "formula": "((-dev_reg_inc) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.6112,
+          "spread_bps": 1069.6,
+          "corr": 0.1044
+        },
+        {
+          "round": 5,
+          "formula": "(-dev_reg_inc)^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5432,
+          "spread_bps": 398.5,
+          "corr": 0.0406
+        }
+      ]
+    },
+    "exp_230_City_Level_Credit_Absorption_Capacity": {
+      "exp_id": 230,
+      "name": "City_Level_Credit_Absorption_Capacity",
+      "subgroup_count": 108213,
+      "subgroup_pct": 63.21,
+      "subgroup_default_rate": 7.79,
+      "baseline_formula": "(Credit / (Pop_Norm + 1)) * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.5525,
+      "baseline_spread_bps": 399.2,
+      "champion_formula": "((cr / (pop * 1e6 + 1.0)) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.5784,
+      "auc_lift_bps": 259.0,
+      "within_split_correlation": 0.0728,
+      "split_low_vs_high_default": "4.56% vs 11.50%",
+      "spread_bps": 694.0,
+      "spread_lift_bps": 294.8,
+      "domain_reason": "Loan size scaled by municipal macroeconomic credit absorption capacity.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Credit / (Pop_Norm + 1)) * (1 - Frank_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.5525,
+          "spread_bps": 399.2,
+          "corr": 0.0488
+        },
+        {
+          "round": 2,
+          "formula": "(cr / (pop * 1e6 + 1.0)) * (1 - cop_clayton) * dti",
+          "auc": 0.5355,
+          "spread_bps": 314.2,
+          "corr": 0.033
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (cr / (pop * 1e6 + 1.0)) * dti",
+          "auc": 0.5024,
+          "spread_bps": 5.3,
+          "corr": 0.0022
+        },
+        {
+          "round": 4,
+          "formula": "((cr / (pop * 1e6 + 1.0)) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.5784,
+          "spread_bps": 694.0,
+          "corr": 0.0728
+        },
+        {
+          "round": 5,
+          "formula": "(cr / (pop * 1e6 + 1.0))^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.5238,
+          "spread_bps": 214.4,
+          "corr": 0.0221
+        }
+      ]
+    },
+    "exp_231_Repeat_Applicant_First_Born_Sequence": {
+      "exp_id": 231,
+      "name": "Repeat_Applicant_First_Born_Sequence",
+      "subgroup_count": 2311,
+      "subgroup_pct": 1.35,
+      "subgroup_default_rate": 8.39,
+      "baseline_formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(N_Apps)",
+      "baseline_auc": 0.6008,
+      "baseline_spread_bps": 991.4,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2) * np.log1p(n_apps_all)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6446,
+      "auc_lift_bps": 438.0,
+      "within_split_correlation": -0.1389,
+      "split_low_vs_high_default": "17.24% vs 3.02%",
+      "spread_bps": 1422.4,
+      "spread_lift_bps": 431.0,
+      "domain_reason": "The inaugural application of a multi-loan borrower establishes permanent behavioral baseline.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Monthly_Inc / Annuity) * (E2 + E3) * log1p(N_Apps)",
+          "auc": 0.6008,
+          "spread_bps": 991.4,
+          "corr": -0.0968
+        },
+        {
+          "round": 2,
+          "formula": "(inc / (cr + 1)) * cop_frank * np.log1p(n_apps_all)",
+          "auc": 0.6014,
+          "spread_bps": 1250.0,
+          "corr": -0.0974
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_harmonic * np.log1p(n_apps_all)",
+          "auc": 0.5246,
+          "spread_bps": 43.1,
+          "corr": 0.0236
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (monthly_inc / (an + 1)) * np.log1p(n_apps_all)",
+          "auc": 0.6377,
+          "spread_bps": 1336.2,
+          "corr": -0.1323
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2) * np.log1p(n_apps_all)",
+          "auc": 0.6446,
+          "spread_bps": 1422.4,
+          "corr": -0.1389
+        }
+      ]
+    },
+    "exp_232_Repeat_Applicant_Subsequent_Reapplication": {
+      "exp_id": 232,
+      "name": "Repeat_Applicant_Subsequent_Reapplication",
+      "subgroup_count": 1323,
+      "subgroup_pct": 0.77,
+      "subgroup_default_rate": 4.54,
+      "baseline_formula": "(1 / Prev_App_Months) * (1 - E2) * DTI",
+      "baseline_auc": 0.6929,
+      "baseline_spread_bps": 827.1,
+      "champion_formula": "(1.0 / (days_since_prev / 30.0 + 0.1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+      "champion_round": 2,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7116,
+      "auc_lift_bps": 187.0,
+      "within_split_correlation": 0.1525,
+      "split_low_vs_high_default": "0.75% vs 12.03%",
+      "spread_bps": 1127.8,
+      "spread_lift_bps": 300.7,
+      "domain_reason": "Rapid reapplication within 6 months signals accelerating debt accumulation.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(1 / Prev_App_Months) * (1 - E2) * DTI",
+          "auc": 0.6929,
+          "spread_bps": 827.1,
+          "corr": 0.139
+        },
+        {
+          "round": 2,
+          "formula": "(1.0 / (days_since_prev / 30.0 + 0.1)) * (1 - cop_clayton) * (cr / (gp + 1))",
+          "auc": 0.7116,
+          "spread_bps": 1127.8,
+          "corr": 0.1525
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * (1.0 / (days_since_prev / 30.0 + 0.1)) * dti",
+          "auc": 0.6395,
+          "spread_bps": 375.9,
+          "corr": 0.1005
+        },
+        {
+          "round": 4,
+          "formula": "((1.0 / (days_since_prev / 30.0 + 0.1)) / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.7012,
+          "spread_bps": 827.1,
+          "corr": 0.1451
+        },
+        {
+          "round": 5,
+          "formula": "(1.0 / (days_since_prev / 30.0 + 0.1))^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.6835,
+          "spread_bps": 676.7,
+          "corr": 0.1323
+        }
+      ]
+    },
+    "exp_233_Long_Term_Returning_Borrower_Maturity": {
+      "exp_id": 233,
+      "name": "Long_Term_Returning_Borrower_Maturity",
+      "subgroup_count": 500,
+      "subgroup_pct": 0.29,
+      "subgroup_default_rate": 7.8,
+      "baseline_formula": "log1p(Years_Since_Last_App) * Harmonic_Copula * (Income / Credit)",
+      "baseline_auc": 0.6329,
+      "baseline_spread_bps": 1000.0,
+      "champion_formula": "np.log1p(days_since_prev / 365.25) * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7013,
+      "auc_lift_bps": 684.0,
+      "within_split_correlation": -0.187,
+      "split_low_vs_high_default": "28.00% vs 4.00%",
+      "spread_bps": 2400.0,
+      "spread_lift_bps": 1400.0,
+      "domain_reason": "Multi-year gaps between loans reflect disciplined lifecycle borrowing.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "log1p(Years_Since_Last_App) * Harmonic_Copula * (Income / Credit)",
+          "auc": 0.6329,
+          "spread_bps": 1000.0,
+          "corr": -0.1235
+        },
+        {
+          "round": 2,
+          "formula": "np.log1p(days_since_prev / 365.25) * cop_frank * (monthly_inc / (an + 1))",
+          "auc": 0.6919,
+          "spread_bps": 2000.0,
+          "corr": -0.1783
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * np.log1p(days_since_prev / 365.25) * (u1 * u2)",
+          "auc": 0.5913,
+          "spread_bps": 800.0,
+          "corr": 0.0848
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * np.log1p(days_since_prev / 365.25) * (1 - dti / 15)",
+          "auc": 0.68,
+          "spread_bps": 2000.0,
+          "corr": -0.1672
+        },
+        {
+          "round": 5,
+          "formula": "np.log1p(days_since_prev / 365.25) * (u1 * u2)**2",
+          "auc": 0.7013,
+          "spread_bps": 2400.0,
+          "corr": -0.187
+        }
+      ]
+    },
+    "exp_234_Singleton_Borrower_Cold_Start": {
+      "exp_id": 234,
+      "name": "Singleton_Borrower_Cold_Start",
+      "subgroup_count": 166528,
+      "subgroup_pct": 97.27,
+      "subgroup_default_rate": 8.12,
+      "baseline_formula": "DTI * (1 - E2) * (Credit / Goods)",
+      "baseline_auc": 0.5872,
+      "baseline_spread_bps": 756.6,
+      "champion_formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6371,
+      "auc_lift_bps": 499.0,
+      "within_split_correlation": 0.1297,
+      "split_low_vs_high_default": "4.11% vs 18.33%",
+      "spread_bps": 1422.0,
+      "spread_lift_bps": 665.4,
+      "domain_reason": "Applicants appearing only once lack repeat cross-application history.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "DTI * (1 - E2) * (Credit / Goods)",
+          "auc": 0.5872,
+          "spread_bps": 756.6,
+          "corr": 0.0825
+        },
+        {
+          "round": 2,
+          "formula": "dti * (1 - cop_clayton) * (an / (monthly_inc + 1))",
+          "auc": 0.5463,
+          "spread_bps": 374.7,
+          "corr": 0.0438
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * dti * (cr / (gp + 1))",
+          "auc": 0.5091,
+          "spread_bps": 47.4,
+          "corr": 0.0086
+        },
+        {
+          "round": 4,
+          "formula": "(an / (monthly_inc + 1)) / (cop_harmonic + 0.1) * (cr / (gp + 1))",
+          "auc": 0.6371,
+          "spread_bps": 1422.0,
+          "corr": 0.1297
+        },
+        {
+          "round": 5,
+          "formula": "dti^1.5 * (1 - u1 * u2) * (cr / (gp + 1))",
+          "auc": 0.5394,
+          "spread_bps": 356.7,
+          "corr": 0.0373
+        }
+      ]
+    },
+    "exp_235_High_Density_Multi_App_Cluster": {
+      "exp_id": 235,
+      "name": "High_Density_Multi_App_Cluster",
+      "subgroup_count": 138,
+      "subgroup_pct": 0.08,
+      "subgroup_default_rate": 11.59,
+      "baseline_formula": "N_Apps * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+      "baseline_auc": 0.6957,
+      "baseline_spread_bps": 1428.6,
+      "champion_formula": "(n_apps_all / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.7398,
+      "auc_lift_bps": 441.0,
+      "within_split_correlation": 0.2659,
+      "split_low_vs_high_default": "7.14% vs 35.71%",
+      "spread_bps": 2857.1,
+      "spread_lift_bps": 1428.5,
+      "domain_reason": "Clusters of 3+ applications experience correlated credit distress across applications.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "N_Apps * (1 - Clayton_Copula) * (Annuity / Monthly_Inc)",
+          "auc": 0.6957,
+          "spread_bps": 1428.6,
+          "corr": 0.217
+        },
+        {
+          "round": 2,
+          "formula": "n_apps_all * (1 - cop_frank) * dti",
+          "auc": 0.6224,
+          "spread_bps": 2142.9,
+          "corr": 0.1358
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * n_apps_all * (cr / (gp + 1))",
+          "auc": 0.623,
+          "spread_bps": 2232.1,
+          "corr": 0.1364
+        },
+        {
+          "round": 4,
+          "formula": "(n_apps_all / (cop_harmonic + 0.1)) * (an / (monthly_inc + 1))",
+          "auc": 0.7398,
+          "spread_bps": 2857.1,
+          "corr": 0.2659
+        },
+        {
+          "round": 5,
+          "formula": "n_apps_all^1.5 * (1 - u1 * u2) * dti",
+          "auc": 0.6178,
+          "spread_bps": 2142.9,
+          "corr": 0.1307
+        }
+      ]
+    },
+    "exp_236_Cross_Feature_Affordability_Copula_Interaction": {
+      "exp_id": 236,
+      "name": "Cross_Feature_Affordability_Copula_Interaction",
+      "subgroup_count": 18322,
+      "subgroup_pct": 10.7,
+      "subgroup_default_rate": 6.4,
+      "baseline_formula": "Frank_Copula * (Monthly_Inc / Annuity) * (1 - DTI / 15)",
+      "baseline_auc": 0.6444,
+      "baseline_spread_bps": 1156.6,
+      "champion_formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2 * (1 - dti / 15)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6612,
+      "auc_lift_bps": 168.0,
+      "within_split_correlation": -0.1366,
+      "split_low_vs_high_default": "14.84% vs 2.13%",
+      "spread_bps": 1271.1,
+      "spread_lift_bps": 114.5,
+      "domain_reason": "Couples joint bureau consensus with true disposable income coverage.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Frank_Copula * (Monthly_Inc / Annuity) * (1 - DTI / 15)",
+          "auc": 0.6444,
+          "spread_bps": 1156.6,
+          "corr": -0.1224
+        },
+        {
+          "round": 2,
+          "formula": "cop_harmonic * (monthly_inc / (an + 1)) * (u1 * u2)",
+          "auc": 0.6594,
+          "spread_bps": 1233.0,
+          "corr": -0.1351
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_frank * (1 - dti / 12)",
+          "auc": 0.5858,
+          "spread_bps": 654.7,
+          "corr": -0.0727
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * (inc / (cr + 1)) * np.log1p(emp_yrs)",
+          "auc": 0.5847,
+          "spread_bps": 254.9,
+          "corr": -0.0719
+        },
+        {
+          "round": 5,
+          "formula": "(monthly_inc / (an + 1)) * (u1 * u2)**2 * (1 - dti / 15)",
+          "auc": 0.6612,
+          "spread_bps": 1271.1,
+          "corr": -0.1366
+        }
+      ]
+    },
+    "exp_237_Extreme_Undercollateralized_Laborer_Stress": {
+      "exp_id": 237,
+      "name": "Extreme_Undercollateralized_Laborer_Stress",
+      "subgroup_count": 3970,
+      "subgroup_pct": 2.32,
+      "subgroup_default_rate": 17.0,
+      "baseline_formula": "Single_Male_Laborer_Hazard * ((Credit - Goods) / Goods)",
+      "baseline_auc": 0.6042,
+      "baseline_spread_bps": 2015.1,
+      "champion_formula": "(single_male_hazard / (cop_harmonic + 0.1)) * ((cr - gp) / (gp + 1))",
+      "champion_round": 4,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6429,
+      "auc_lift_bps": 387.0,
+      "within_split_correlation": 0.186,
+      "split_low_vs_high_default": "6.55% vs 34.76%",
+      "spread_bps": 2821.2,
+      "spread_lift_bps": 806.1,
+      "domain_reason": "Single male manual laborers taking unbacked financing above goods price.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Single_Male_Laborer_Hazard * ((Credit - Goods) / Goods)",
+          "auc": 0.6042,
+          "spread_bps": 2015.1,
+          "corr": 0.1356
+        },
+        {
+          "round": 2,
+          "formula": "single_male_hazard * ((cr - gp) / (an + 1)) * (1 - cop_clayton)",
+          "auc": 0.6034,
+          "spread_bps": 2015.1,
+          "corr": 0.1346
+        },
+        {
+          "round": 3,
+          "formula": "Merton_PD * single_male_hazard * ((cr - gp) / (gp + 1))",
+          "auc": 0.6007,
+          "spread_bps": 1914.4,
+          "corr": 0.1311
+        },
+        {
+          "round": 4,
+          "formula": "(single_male_hazard / (cop_harmonic + 0.1)) * ((cr - gp) / (gp + 1))",
+          "auc": 0.6429,
+          "spread_bps": 2821.2,
+          "corr": 0.186
+        },
+        {
+          "round": 5,
+          "formula": "single_male_hazard^1.5 * ((cr - gp) / (gp + 1))",
+          "auc": 0.6091,
+          "spread_bps": 2267.0,
+          "corr": 0.142
+        }
+      ]
+    },
+    "exp_238_Merton_Distance_Bureau_Consensus_Hybrid": {
+      "exp_id": 238,
+      "name": "Merton_Distance_Bureau_Consensus_Hybrid",
+      "subgroup_count": 36164,
+      "subgroup_pct": 21.12,
+      "subgroup_default_rate": 7.11,
+      "baseline_formula": "Merton_DD * Harmonic_Copula / (abs(E2 - E3) + 0.1)",
+      "baseline_auc": 0.5754,
+      "baseline_spread_bps": 110.6,
+      "champion_formula": "merton_dd * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6325,
+      "auc_lift_bps": 571.0,
+      "within_split_correlation": 0.1179,
+      "split_low_vs_high_default": "2.52% vs 4.42%",
+      "spread_bps": 190.8,
+      "spread_lift_bps": 80.2,
+      "domain_reason": "Integrates structural default distance with multi-bureau agency confidence.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Merton_DD * Harmonic_Copula / (abs(E2 - E3) + 0.1)",
+          "auc": 0.5754,
+          "spread_bps": 110.6,
+          "corr": 0.0671
+        },
+        {
+          "round": 2,
+          "formula": "merton_dd * cop_frank * (u1 * u2)",
+          "auc": 0.6281,
+          "spread_bps": 199.1,
+          "corr": 0.114
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * (1 - triad_std * 5) * (monthly_inc / (an + 1))",
+          "auc": 0.5208,
+          "spread_bps": 2.8,
+          "corr": 0.0185
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * merton_dd * np.log1p(emp_yrs)",
+          "auc": 0.5695,
+          "spread_bps": 193.5,
+          "corr": 0.0619
+        },
+        {
+          "round": 5,
+          "formula": "merton_dd * (u1 * u2)**2",
+          "auc": 0.6325,
+          "spread_bps": 190.8,
+          "corr": 0.1179
+        }
+      ]
+    },
+    "exp_239_Statutory_Identity_Cycle_Tenure_Harmonic": {
+      "exp_id": 239,
+      "name": "Statutory_Identity_Cycle_Tenure_Harmonic",
+      "subgroup_count": 134929,
+      "subgroup_pct": 78.81,
+      "subgroup_default_rate": 8.58,
+      "baseline_formula": "(Phone_Yrs * Emp_Yrs / Adult_Life) * Frank_Copula * (Income / Credit)",
+      "baseline_auc": 0.6076,
+      "baseline_spread_bps": 682.4,
+      "champion_formula": "id_tenure * (u1 * u2)**2",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6438,
+      "auc_lift_bps": 362.0,
+      "within_split_correlation": -0.1396,
+      "split_low_vs_high_default": "10.46% vs 2.80%",
+      "spread_bps": 766.1,
+      "spread_lift_bps": 83.7,
+      "domain_reason": "Harmonizes commercial telephone and employment stability normalized by legal adult lifespan.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "(Phone_Yrs * Emp_Yrs / Adult_Life) * Frank_Copula * (Income / Credit)",
+          "auc": 0.6076,
+          "spread_bps": 682.4,
+          "corr": -0.1045
+        },
+        {
+          "round": 2,
+          "formula": "id_tenure * cop_harmonic * (monthly_inc / (an + 1))",
+          "auc": 0.605,
+          "spread_bps": 682.4,
+          "corr": -0.1019
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * id_tenure * (u1 * u2)",
+          "auc": 0.5733,
+          "spread_bps": 280.1,
+          "corr": 0.0712
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * id_tenure * (1 - dti / 15)",
+          "auc": 0.6147,
+          "spread_bps": 702.9,
+          "corr": -0.1114
+        },
+        {
+          "round": 5,
+          "formula": "id_tenure * (u1 * u2)**2",
+          "auc": 0.6438,
+          "spread_bps": 766.1,
+          "corr": -0.1396
+        }
+      ]
+    },
+    "exp_240_Unified_Cognitive_Super_Manifold": {
+      "exp_id": 240,
+      "name": "Unified_Cognitive_Super_Manifold",
+      "subgroup_count": 171202,
+      "subgroup_pct": 100.0,
+      "subgroup_default_rate": 8.07,
+      "baseline_formula": "Frank_Copula * (1 - Clayton_Copula) * (Monthly_Inc / Annuity) / (1 + Single_Male_Hazard)",
+      "baseline_auc": 0.6344,
+      "baseline_spread_bps": 1528.5,
+      "champion_formula": "((monthly_inc / (an + 1)) * (u1 * u2)**2) / (1.0 + single_male_hazard)",
+      "champion_round": 5,
+      "total_rounds_evaluated": 5,
+      "optimized_within_split_auc": 0.6937,
+      "auc_lift_bps": 593.0,
+      "within_split_correlation": -0.1828,
+      "split_low_vs_high_default": "22.26% vs 2.49%",
+      "spread_bps": 1976.5,
+      "spread_lift_bps": 448.0,
+      "domain_reason": "Grand cognitive manifold uniting copula topology, debt affordability, and demographic penalties.",
+      "optimization_history": [
+        {
+          "round": 1,
+          "formula": "Frank_Copula * (1 - Clayton_Copula) * (Monthly_Inc / Annuity) / (1 + Single_Male_Hazard)",
+          "auc": 0.6344,
+          "spread_bps": 1528.5,
+          "corr": -0.1268
+        },
+        {
+          "round": 2,
+          "formula": "cop_harmonic * (1 - cop_clayton) * (monthly_inc / (an + 1)) / (1.0 + single_male_hazard)",
+          "auc": 0.6064,
+          "spread_bps": 1210.2,
+          "corr": -0.1004
+        },
+        {
+          "round": 3,
+          "formula": "Merton_DD * cop_frank * (u1 * u2) / (1.0 + single_male_hazard)",
+          "auc": 0.6213,
+          "spread_bps": 265.8,
+          "corr": 0.1145
+        },
+        {
+          "round": 4,
+          "formula": "cop_joe * cop_frank * (inc / (cr + 1)) / (1.0 + single_male_hazard)",
+          "auc": 0.6749,
+          "spread_bps": 1836.9,
+          "corr": -0.165
+        },
+        {
+          "round": 5,
+          "formula": "((monthly_inc / (an + 1)) * (u1 * u2)**2) / (1.0 + single_male_hazard)",
+          "auc": 0.6937,
+          "spread_bps": 1976.5,
+          "corr": -0.1828
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "seed": 314159,
+  "folds": 5,
+  "n_train": 171202,
+  "candidate_runs": [
+    "v02_rowwise_features",
+    "v06_nested_te_xgboost"
+  ],
+  "paired_fold_deltas": {
+    "v06_nested_te_xgboost:xgboost_gpu-vs-v02_rowwise_features:xgboost_gpu": {
+      "fold_delta_auc": [
+        0.0037044655811215854,
+        0.002151126596755759,
+        -0.0008221123704569289,
+        0.00312182814866957,
+        0.0034528179327222297
+      ],
+      "mean_fold_delta_auc": 0.002321625177762443,
+      "folds_improved": 4,
+      "folds_tied": 0
+    }
+  },
+  "within_fold_spearman": {
+    "v02_rowwise_features:catboost_gpu|v02_rowwise_features:lightgbm_cpu": {
+      "mean_within_fold_spearman": 0.9467036232920234,
+      "fold_spearman": [
+        0.9466370272082665,
+        0.9477418453313988,
+        0.9458660225784201,
+        0.9469880961464067,
+        0.9462851251956252
+      ]
+    },
+    "v02_rowwise_features:catboost_gpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9722595762687132,
+      "fold_spearman": [
+        0.9719749290328368,
+        0.9724905885162228,
+        0.9717374819115593,
+        0.9729129378038308,
+        0.9721819440791166
+      ]
+    },
+    "v02_rowwise_features:catboost_gpu|v06_nested_te_xgboost:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9481939008441544,
+      "fold_spearman": [
+        0.9470321313586311,
+        0.9482871679364183,
+        0.9475191715842801,
+        0.9477907634236373,
+        0.9503402699178055
+      ]
+    },
+    "v02_rowwise_features:lightgbm_cpu|v02_rowwise_features:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9662756995166031,
+      "fold_spearman": [
+        0.9671252786096773,
+        0.9667578845221432,
+        0.9650175143090903,
+        0.9656874337294322,
+        0.9667903864126721
+      ]
+    },
+    "v02_rowwise_features:lightgbm_cpu|v06_nested_te_xgboost:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9508386906855144,
+      "fold_spearman": [
+        0.9509161212730126,
+        0.951796658530056,
+        0.948901602699876,
+        0.9497577846032725,
+        0.9528212863213543
+      ]
+    },
+    "v02_rowwise_features:xgboost_gpu|v06_nested_te_xgboost:xgboost_gpu": {
+      "mean_within_fold_spearman": 0.9673588151577317,
+      "fold_spearman": [
+        0.9681427378489667,
+        0.9680649753497295,
+        0.9656338326292513,
+        0.9664521252696912,
+        0.96850040469102
+      ]
+    }
+  },
+  "interpretation": "Fold means and paired fold deltas are primary. Pooled OOF AUC is also reported but can reflect score-scale differences across folds. The ensemble is a fixed equal-probability diagnostic, not a tuned blend."
+}

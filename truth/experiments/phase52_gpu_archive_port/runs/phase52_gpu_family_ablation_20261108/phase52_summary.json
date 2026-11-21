@@ -1,0 +1,470 @@
+{
+  "experiment": "Phase 52 GPU translation of v7-style label-free features",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "seed": 20261113,
+  "folds": 5,
+  "xgboost_version": "3.4.1",
+  "device": "CUDA (XGBoost hist)",
+  "feature_scope": "raw predictors versus raw predictors plus deterministic v7-style feature families; no 129.5/0.0132 constants, target encoding, train+test pooling, or external data",
+  "feature_groups": {
+    "clean_missingness": [
+      "AMT_REQ_CREDIT_BUREAU_YEAR_NA",
+      "CAR_AGE_OUT",
+      "DAYS_EMPLOYED_CLEAN",
+      "DE_SENT",
+      "EXT_SOURCE_1_NA",
+      "EXT_SOURCE_3_NA",
+      "MISS_CNT",
+      "ORG_XNA",
+      "OWN_CAR_AGE_NA"
+    ],
+    "external_score_geometry": [
+      "EXT_12_DIFF",
+      "EXT_12_PRODUCT",
+      "EXT_13_DIFF",
+      "EXT_13_PRODUCT",
+      "EXT_23_DIFF",
+      "EXT_23_PRODUCT",
+      "EXT_MAX",
+      "EXT_MEAN",
+      "EXT_MIN",
+      "EXT_NOBS",
+      "EXT_PRODUCT",
+      "EXT_RANGE",
+      "EXT_STD",
+      "EXT_WEIGHTED"
+    ],
+    "financial_ratios": [
+      "ANN_CREDIT",
+      "ANN_INC",
+      "ANN_PER_FAM",
+      "CREDIT_INC",
+      "CREDIT_MINUS_GOODS",
+      "CREDIT_PER_FAM",
+      "GOODS_CREDIT",
+      "GOODS_INC",
+      "INC_PER_FAM",
+      "LOG_AMT_ANNUITY",
+      "LOG_AMT_CREDIT",
+      "LOG_AMT_GOODS_PRICE",
+      "LOG_AMT_INCOME_TOTAL",
+      "TERM"
+    ],
+    "age_employment": [
+      "AGE_YEARS",
+      "CAR_AGE_RATIO",
+      "CREDIT_PER_AGE",
+      "EMP_AGE_RATIO",
+      "EMP_YEARS",
+      "ID_AGE_RATIO",
+      "INC_PER_AGE",
+      "PHONE_AGE_RATIO",
+      "REG_AGE_RATIO"
+    ],
+    "bureau_activity": [
+      "BUR_MON_YEAR",
+      "BUR_RECENT",
+      "BUR_SUM"
+    ]
+  },
+  "fold_results": [
+    {
+      "fold": 1,
+      "model": "raw_baseline",
+      "auc": 0.7550584220477158,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "only_clean_missingness",
+      "auc": 0.7544670764820495,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "only_external_score_geometry",
+      "auc": 0.754660766478839,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "only_financial_ratios",
+      "auc": 0.7645128018726098,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "only_age_employment",
+      "auc": 0.7540650302311104,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "only_bureau_activity",
+      "auc": 0.7548762489708908,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 134,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "v7_label_free_features",
+      "auc": 0.7629672990275628,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "raw_baseline",
+      "auc": 0.7598814803528944,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "only_clean_missingness",
+      "auc": 0.7601263409855369,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "only_external_score_geometry",
+      "auc": 0.7571528937803184,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "only_financial_ratios",
+      "auc": 0.766228088015393,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "only_age_employment",
+      "auc": 0.7587296512489667,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "only_bureau_activity",
+      "auc": 0.7576633949641473,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 134,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "v7_label_free_features",
+      "auc": 0.7642106262195347,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "raw_baseline",
+      "auc": 0.7501509833417288,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "only_clean_missingness",
+      "auc": 0.7499892815678001,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "only_external_score_geometry",
+      "auc": 0.7495248717282402,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "only_financial_ratios",
+      "auc": 0.7541887058322434,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "only_age_employment",
+      "auc": 0.7484022639443757,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "only_bureau_activity",
+      "auc": 0.7499036030759842,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 134,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "v7_label_free_features",
+      "auc": 0.7556090676396175,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "raw_baseline",
+      "auc": 0.7479781071338392,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "only_clean_missingness",
+      "auc": 0.7481303203653751,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "only_external_score_geometry",
+      "auc": 0.7468587982132897,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "only_financial_ratios",
+      "auc": 0.75753806359528,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "only_age_employment",
+      "auc": 0.7484279422044665,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "only_bureau_activity",
+      "auc": 0.7483186429317704,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 134,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "v7_label_free_features",
+      "auc": 0.7563724384039,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "raw_baseline",
+      "auc": 0.7490773182756199,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "only_clean_missingness",
+      "auc": 0.749947258416998,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "only_external_score_geometry",
+      "auc": 0.7477670833303448,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "only_financial_ratios",
+      "auc": 0.7570373835006994,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 145,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "only_age_employment",
+      "auc": 0.749049375638968,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 140,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "only_bureau_activity",
+      "auc": 0.7494429173887385,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 134,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "v7_label_free_features",
+      "auc": 0.754150924077132,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    }
+  ],
+  "models": {
+    "raw_baseline": {
+      "pooled_auc": 0.7524132838459663,
+      "log_loss": 0.24781330784505765,
+      "fold_auc": [
+        0.7550584220477158,
+        0.7598814803528944,
+        0.7501509833417288,
+        0.7479781071338392,
+        0.7490773182756199
+      ]
+    },
+    "only_clean_missingness": {
+      "pooled_auc": 0.7525262588379471,
+      "log_loss": 0.24778344239582836,
+      "fold_auc": [
+        0.7544670764820495,
+        0.7601263409855369,
+        0.7499892815678001,
+        0.7481303203653751,
+        0.749947258416998
+      ]
+    },
+    "only_external_score_geometry": {
+      "pooled_auc": 0.7511694693605603,
+      "log_loss": 0.24802675998700952,
+      "fold_auc": [
+        0.754660766478839,
+        0.7571528937803184,
+        0.7495248717282402,
+        0.7468587982132897,
+        0.7477670833303448
+      ]
+    },
+    "only_financial_ratios": {
+      "pooled_auc": 0.7598894472359083,
+      "log_loss": 0.24576091740712644,
+      "fold_auc": [
+        0.7645128018726098,
+        0.766228088015393,
+        0.7541887058322434,
+        0.75753806359528,
+        0.7570373835006994
+      ]
+    },
+    "only_age_employment": {
+      "pooled_auc": 0.7517077470009565,
+      "log_loss": 0.24800813916075964,
+      "fold_auc": [
+        0.7540650302311104,
+        0.7587296512489667,
+        0.7484022639443757,
+        0.7484279422044665,
+        0.749049375638968
+      ]
+    },
+    "only_bureau_activity": {
+      "pooled_auc": 0.7520351176693371,
+      "log_loss": 0.24787757793485882,
+      "fold_auc": [
+        0.7548762489708908,
+        0.7576633949641473,
+        0.7499036030759842,
+        0.7483186429317704,
+        0.7494429173887385
+      ]
+    },
+    "v7_label_free_features": {
+      "pooled_auc": 0.7586403959011067,
+      "log_loss": 0.24610215593585466,
+      "fold_auc": [
+        0.7629672990275628,
+        0.7642106262195347,
+        0.7556090676396175,
+        0.7563724384039,
+        0.754150924077132
+      ]
+    }
+  },
+  "elapsed_seconds": 163.37625649999245,
+  "delta_engineered_minus_baseline_auc": 0.006227112055140371,
+  "diagnostic_note": "Single-family variants are standalone additions to the same raw baseline. Their gains are not additive or causal, and comparing multiple variants is exploratory."
+}

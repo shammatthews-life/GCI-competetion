@@ -1,0 +1,59 @@
+{
+  "phase": "Phase 37 repeated-seed clean XGBoost",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seeds": [
+    20261113,
+    20261114,
+    20261115
+  ],
+  "outer_folds_per_seed": 5,
+  "feature_set": "Phase 33 constant-free keys with fold-fit frequencies",
+  "metrics": {
+    "xgboost_seed_20261113": {
+      "pooled_auc": 0.7647355382940828,
+      "pooled_log_loss": 0.24438171088695526,
+      "mean_auc_on_seed_20261113_folds": 0.7647537073983954
+    },
+    "xgboost_seed_20261114": {
+      "pooled_auc": 0.7644751288204841,
+      "pooled_log_loss": 0.24447445571422577,
+      "mean_auc_on_seed_20261113_folds": 0.7644783179734648
+    },
+    "xgboost_seed_20261115": {
+      "pooled_auc": 0.7637807433246924,
+      "pooled_log_loss": 0.24464794993400574,
+      "mean_auc_on_seed_20261113_folds": 0.7637854401055041
+    },
+    "xgboost_three_seed_average": {
+      "pooled_auc": 0.7658254957900964,
+      "pooled_log_loss": 0.24403852224349976,
+      "mean_auc_on_seed_20261113_folds": 0.7658365825480059
+    },
+    "equal_blend_lgbm_and_xgb_three_seeds": {
+      "pooled_auc": 0.7659681876381996,
+      "pooled_log_loss": 0.24406886100769043,
+      "mean_auc_on_seed_20261113_folds": 0.7659818497765217
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "seed_average": "each row is OOF in all three stratified seed runs",
+    "cross_model_blend": "fixed equal probability average; no blend weights fitted"
+  },
+  "runtime_seconds": 186.72277480000048,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_OOF_PREDICTIONS.csv": "adc206e9a2743627cfd5675e0f97ada1190e10a202bd2e0657238d3816cbb90a",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_OOF_PREDICTIONS.csv": "7e6ece0db0c6c28f2c8d8b237413c8c96fa7ad1c1d6b56417d63f7c508367073",
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\run_phase37_multiseed_xgboost_rules_first.py": "18ab070dfc2588448d53a4b768b1f9afceed88927003d539981a19edac99b7a7",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\phase37_multiseed_20261107T173127Z\\PHASE37_FOLD_RESULTS.csv": "7ea71f8e778d10572dbd85253c3b9ba21524ad8e12f4eaf4965fd8dd6512e29b",
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\phase37_multiseed_20261107T173127Z\\PHASE37_OOF_PREDICTIONS.csv": "33563509db7afb33d9876d8b6a8e8b862859adef54dacf0a94df821f0da9c44a"
+  }
+}

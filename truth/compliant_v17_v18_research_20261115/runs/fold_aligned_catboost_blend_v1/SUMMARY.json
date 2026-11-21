@@ -1,0 +1,60 @@
+{
+  "status": "exploratory fold-aligned OOF analysis on repeatedly examined labels; not independent confirmation",
+  "validation": "Phase 33, Phase 34, and clean CatBoost use identical five-fold partitions; all labels in an evaluated fold are excluded from all component models used for that fold",
+  "blend": "fixed 50/50 average of within-fold percentile ranks; no weight search",
+  "metrics": {
+    "same_fold_phase33_phase34_baseline": {
+      "pooled_auc": 0.7653350102045995,
+      "mean_fold_auc": 0.7653600918203,
+      "fold_auc": [
+        0.7704415904346946,
+        0.7709163352335727,
+        0.760208545173232,
+        0.7625862095283495,
+        0.7626477787316511
+      ]
+    },
+    "clean_constant_free_catboost": {
+      "pooled_auc": 0.7658771859440234,
+      "mean_fold_auc": 0.7659448928265805,
+      "fold_auc": [
+        0.7701542076503888,
+        0.7741041310041439,
+        0.7605264027226588,
+        0.7636757941961707,
+        0.7612639285595402
+      ]
+    },
+    "fixed_50_50_within_fold_rank_blend": {
+      "pooled_auc": 0.7674880605408074,
+      "mean_fold_auc": 0.7674920381838495,
+      "fold_auc": [
+        0.7721276180936008,
+        0.7743237995044073,
+        0.7622173690234022,
+        0.7649573910998093,
+        0.7638340131980279
+      ]
+    }
+  },
+  "mean_fold_auc_delta_blend_vs_aligned_baseline": 0.0021319463635495195,
+  "positive_fold_delta_count": 5,
+  "rule_notes": {
+    "inputs": "official training labels for model development and saved OOF component predictions",
+    "test_rows": "not read",
+    "label_transfer": "none",
+    "transductive_statistics": "none",
+    "fixed_fee_or_step_constants": "none in the new CatBoost feature builder",
+    "fold_alignment": "checked row-by-row, label-by-label, and fold-by-fold"
+  },
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_OOF_PREDICTIONS.csv": "adc206e9a2743627cfd5675e0f97ada1190e10a202bd2e0657238d3816cbb90a",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_OOF_PREDICTIONS.csv": "7e6ece0db0c6c28f2c8d8b237413c8c96fa7ad1c1d6b56417d63f7c508367073",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\analyze_clean_catboost_aligned_blend.py": "e4bd2c14da85989fa69b0b94c68688c3f3835885bae9af5ca3763c7beb0b16a4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\OOF_PREDICTIONS.csv": "960aeae7a02b56cd326b7c39d32f3b49424b3f7c509500acc043485be8e2023d",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\FOLD_METRICS.csv": "f74b236f339542b7c2cdef995c719457ec5ce16b35bb304a9ee6a4dc3f1625d0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\REGIME_FOLD_AUC.csv": "4504bfd47097e9ed9be7a0fe372230b4d91e922a9ac66a2b8ca00b8d1a1d191c"
+  }
+}

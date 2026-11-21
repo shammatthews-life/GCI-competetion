@@ -1,0 +1,90 @@
+{
+  "phase": "Phase 51 fold-local fingerprint label-statistic experiment",
+  "status": "exploratory; label-derived feature; rule interpretation unresolved",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "inner_target_statistic_folds": 5,
+  "smoothing": 10.0,
+  "fingerprint": "absolute DAYS_BIRTH-DAYS_REGISTRATION and DAYS_BIRTH-DAYS_ID_PUBLISH gaps, CODE_GENDER, NAME_EDUCATION_TYPE, REGION_RATING_CLIENT; incomplete date keys are row-unique and cannot match",
+  "features": [
+    "smoothed group default rate, cross-fitted for model-fit rows",
+    "log1p(group count), cross-fitted for model-fit rows",
+    "group-match indicator"
+  ],
+  "metrics": {
+    "phase49_xgb_pricing_global_reference": {
+      "pooled_auc": 0.7647714907754163,
+      "pooled_log_loss": 0.2442266196012497,
+      "mean_fold_auc": 0.7648322635531395,
+      "std_fold_auc": 0.0035179412485015146
+    },
+    "xgb_with_fold_local_twin_features": {
+      "pooled_auc": 0.7652350059658822,
+      "pooled_log_loss": 0.24409478902816772,
+      "mean_fold_auc": 0.7652830831115349,
+      "std_fold_auc": 0.00373139272836796
+    },
+    "fixed_50_50_twin_reference_blend": {
+      "pooled_auc": 0.7651924477720967,
+      "pooled_log_loss": 0.24410252273082733,
+      "mean_fold_auc": 0.7652449463229783,
+      "std_fold_auc": 0.0036148018114591693
+    }
+  },
+  "fold_iteration_counts": [
+    781,
+    821,
+    890,
+    1183,
+    761
+  ],
+  "validation_match_support": [
+    {
+      "fold": 1,
+      "validation_rows": 34241,
+      "rows_with_training_key_match": 656,
+      "matched_row_fraction": 0.01915831897432902
+    },
+    {
+      "fold": 2,
+      "validation_rows": 34241,
+      "rows_with_training_key_match": 669,
+      "matched_row_fraction": 0.019537980783271517
+    },
+    {
+      "fold": 3,
+      "validation_rows": 34240,
+      "rows_with_training_key_match": 679,
+      "matched_row_fraction": 0.019830607476635512
+    },
+    {
+      "fold": 4,
+      "validation_rows": 34240,
+      "rows_with_training_key_match": 672,
+      "matched_row_fraction": 0.019626168224299065
+    },
+    {
+      "fold": 5,
+      "validation_rows": 34240,
+      "rows_with_training_key_match": 713,
+      "matched_row_fraction": 0.02082359813084112
+    }
+  ],
+  "rule_controls": {
+    "input": "supplied training CSV and Phase 49 training OOF only",
+    "outer_validation_labels": "not used to fit features, model, or stopping",
+    "training_target_statistics": "each training row's group label rate/count is cross-fitted inside its applicable model-fit partition",
+    "test_rows": "not read; no test prediction or test-to-train matching performed",
+    "blend_weights": "fixed 0.5/0.5; no label-fitted weight search",
+    "manual_prediction_edits": "none",
+    "competition_rule_status": "training-label group statistics are not explicitly resolved in the supplied local rule text; organizer clarification is required"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase49_unified_contract_pricing_specialists\\runs\\phase49_pricing_experts_20261108T112704Z\\PHASE49_OOF_PREDICTIONS.csv": "b3f21afd01c86dcf60bc15227f8673ecbd2f64265834dc4120f5af31b74920dc"
+  },
+  "runner_sha256": "ae45ceb2f173dcce835d4d4a9944425c9ed6be03f654a700632c122818119597",
+  "oof_sha256": "357b192d9ad0a8b360f3e63bf30a437736b3ecd40a693732a8ffad10dd80d66b",
+  "runtime_seconds": 86.85909730001003
+}

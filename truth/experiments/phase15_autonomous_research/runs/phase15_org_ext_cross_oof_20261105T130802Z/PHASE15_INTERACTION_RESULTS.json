@@ -1,0 +1,52 @@
+{
+  "baseline_pooled_auc": 0.7675963430104651,
+  "cross_pooled_auc": 0.7676417467383859,
+  "eligibility": "The category cross is label-free; quantile cut points are fit only on the outer training fold. Product-key constants and CatBoost native CTR eligibility remain unresolved.",
+  "fold_deltas": [
+    {
+      "baseline_auc": 0.7732915281398812,
+      "cross_auc": 0.7738780232662013,
+      "cross_is_better": true,
+      "delta": 0.0005864951263200302,
+      "fold": 1
+    },
+    {
+      "baseline_auc": 0.7749190289820402,
+      "cross_auc": 0.7750739850127207,
+      "cross_is_better": true,
+      "delta": 0.00015495603068049757,
+      "fold": 2
+    },
+    {
+      "baseline_auc": 0.7613572794947805,
+      "cross_auc": 0.7615201536870302,
+      "cross_is_better": true,
+      "delta": 0.00016287419224969568,
+      "fold": 3
+    },
+    {
+      "baseline_auc": 0.7650544489459178,
+      "cross_auc": 0.7644807225922159,
+      "cross_is_better": false,
+      "delta": -0.0005737263537018977,
+      "fold": 4
+    },
+    {
+      "baseline_auc": 0.7634467185988213,
+      "cross_auc": 0.7634088219007373,
+      "cross_is_better": false,
+      "delta": -3.789669808396123e-05,
+      "fold": 5
+    }
+  ],
+  "paired_bootstrap": {
+    "bootstrap_repetitions": 400,
+    "paired_delta_ci95_high": 0.0005364435018214285,
+    "paired_delta_ci95_low": -0.0004900444633431256
+  },
+  "pooled_auc_delta": 4.5403727920834136e-05,
+  "positive_fold_count": 3,
+  "runtime_seconds": 280.51357209996786,
+  "spearman_correlation": 0.9934349886973528,
+  "status": "controlled development OOF on previously exposed labels"
+}

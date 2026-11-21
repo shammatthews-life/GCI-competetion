@@ -1,0 +1,65 @@
+{
+  "categorical_columns": [
+    "NAME_CONTRACT_TYPE",
+    "CODE_GENDER",
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "PRODUCT_KEY_Q3",
+    "PRODUCT_KEY_Q4",
+    "PRODUCT_KEY_Q5",
+    "PRODUCT_KEY_KQ3",
+    "PRODUCT_KEY_KQ4",
+    "PRODUCT_KEY_P4",
+    "PRODUCT_KEY_P5",
+    "PRODUCT_KEY_AG3"
+  ],
+  "categorical_count": 16,
+  "document_flag_columns_present": [],
+  "feature_count": 99,
+  "predictors": 32,
+  "rows": 171202,
+  "support": {
+    "contract_type": {
+      "0": {
+        "positives": 900,
+        "rows": 16214
+      },
+      "1": {
+        "positives": 12921,
+        "rows": 154988
+      }
+    },
+    "contract_x_external": {
+      "0": {
+        "positives": 735,
+        "rows": 12567
+      },
+      "1": {
+        "positives": 165,
+        "rows": 3647
+      },
+      "2": {
+        "positives": 10516,
+        "rows": 122471
+      },
+      "3": {
+        "positives": 2405,
+        "rows": 32517
+      }
+    },
+    "external_completeness": {
+      "0": {
+        "positives": 11251,
+        "rows": 135038
+      },
+      "1": {
+        "positives": 2570,
+        "rows": 36164
+      }
+    }
+  }
+}

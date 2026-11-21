@@ -1,0 +1,49 @@
+{
+  "categorical_schema_fit_on_fit_rows_only": true,
+  "eligibility": "The no-product-key model uses supplied columns and deterministic rowwise transforms only; this screen does not certify submission eligibility. The four-key model has unresolved constants.",
+  "fit_rows": 24000,
+  "no_test_external_or_submission_data": true,
+  "results": [
+    {
+      "auc": 0.7376579926764515,
+      "best_iteration": 157,
+      "categorical_feature_count": 8,
+      "competition_status": "Track A candidate without keys",
+      "device": "CPU",
+      "fit_category_support": "{\"CODE_GENDER\": 2, \"NAME_CONTRACT_TYPE\": 2, \"NAME_EDUCATION_TYPE\": 5, \"NAME_FAMILY_STATUS\": 5, \"NAME_HOUSING_TYPE\": 6, \"NAME_INCOME_TYPE\": 7, \"OCCUPATION_TYPE\": 19, \"ORGANIZATION_TYPE\": 57}",
+      "fit_rows": 24000,
+      "fit_seconds": 4.336561399977654,
+      "numeric_feature_count": 65,
+      "sample_rows": 30000,
+      "seed": 20261128,
+      "tree_method": "hist",
+      "validation_rows": 6000,
+      "variant": "xgboost_native_categories_no_product_keys",
+      "xgboost_version": "3.4.1"
+    },
+    {
+      "auc": 0.7230698898471165,
+      "best_iteration": 23,
+      "categorical_feature_count": 12,
+      "competition_status": "Research-only: key constants 130.5/0.0066 unresolved",
+      "device": "CPU",
+      "fit_category_support": "{\"CODE_GENDER\": 2, \"NAME_CONTRACT_TYPE\": 2, \"NAME_EDUCATION_TYPE\": 5, \"NAME_FAMILY_STATUS\": 5, \"NAME_HOUSING_TYPE\": 6, \"NAME_INCOME_TYPE\": 7, \"OCCUPATION_TYPE\": 19, \"ORGANIZATION_TYPE\": 57, \"PRODUCT_KEY_AG3\": 122, \"PRODUCT_KEY_Q3\": 93, \"PRODUCT_KEY_Q4\": 667, \"PRODUCT_KEY_Q5\": 3114}",
+      "fit_rows": 24000,
+      "fit_seconds": 2.3251593000022694,
+      "numeric_feature_count": 65,
+      "sample_rows": 30000,
+      "seed": 20261129,
+      "tree_method": "hist",
+      "validation_rows": 6000,
+      "variant": "xgboost_native_categories_four_constant_free_keys",
+      "xgboost_version": "3.4.1"
+    }
+  ],
+  "runtime_seconds": 8.125741599942558,
+  "sample_rows": 30000,
+  "sampled_row_indices_sha256": "7aab590ffb6d0ba3d90f43db9474cf42fb5d10b1a116a1e5f95a5847945b44d5",
+  "seed": 20261127,
+  "status": "single representative sample screen; not an OOF model result",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "validation_rows": 6000
+}

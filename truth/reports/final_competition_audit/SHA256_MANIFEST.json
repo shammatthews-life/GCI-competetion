@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "audit": "TRUTH_FINAL_COMPETITION_COMPLIANCE_AND_FRIEND_SOLUTION_AUDIT",
+  "created_utc": "2026-11-03",
+  "hash_algorithm": "SHA-256",
+  "self_hash": "omitted; a manifest cannot contain its own stable hash",
+  "scope_notes": [
+    "The friend notebook and archive are read-only inputs.",
+    "Only final_submission.rar README.md and reproduce_final_submission.py were read from the archive; submission_final.csv was not opened.",
+    "Competition Log.pdf was hashed for identity only; its contents were not extracted or used as a rule source.",
+    "Friend code was parsed and statically inspected, not executed."
+  ],
+  "audit_reports": {
+    "COMPETITION_COMPLIANCE_MATRIX.csv": "58AA530BD5DC1F8053FE15BDF08573535F6B491ED6656EB74DBA55CA7C148CA0",
+    "FEATURE_ENGINEERING_COMPARISON.md": "7FD999D3315853C7F32EB059FFC0934BA9AB2ECAC7EE13D65CC6143B5FD4E155",
+    "FINAL_AUDIT_DECISION.md": "7697D1A31FBD5D5ACFD6E68D45F6413A92EC5F6FD917D8655D00A2666FEBAA11",
+    "FRIEND_SOLUTION_CODE_AUDIT.md": "B3FAEFA9EC6B2A07952CEDFF747084EB53FB173B81386561632A3D22E4CAC5A7",
+    "OFFICIAL_RULES_AUDIT.md": "620F0E3076C4585B180518AE3FF2E42CB077FD5692071513399ABE30A2B90B91",
+    "TRUTH_SOURCE_AUDIT.md": "E5309923145DF40C681E88157F267679989FFAA8854CD1D8B64C5FF406D50AA1",
+    "WINNER_CLASS_CODE_AUDIT.md": "1BDBE9B2EC98477815FFFEC35B2B7111ECF4D3D0B3569D3607ED36D25A1E2E14"
+  },
+  "friend_artifacts": {
+    "C:/Users/SHARON/Downloads/GCI_UMAP_Research_Notebook%20(1).ipynb": "6470148AC0F24D37E8F6F7C5D24FB12EC31300B0DDD9D2081F254D85E030A13D",
+    "C:/Users/SHARON/Downloads/final_submission.rar": "3C61377F272D1230D80DE1E98BDD70401FDD1B57BAC2FC1CF39922512F0A3E51",
+    "C:/Users/SHARON/Downloads/Competition Log.pdf": {
+      "sha256": "7E4A7FD41499940D96C4749418447A430FC6E94555A62332A90C04E973E77ED3",
+      "content_reviewed": false
+    },
+    "final_submission.rar:final_submission/README.md": "C5716B71E642EFE1D806C82A535E72EF5EB45BED919810923020208CEB3B07AB",
+    "final_submission.rar:final_submission/reproduce_final_submission.py": "8A90D233723639297B1A433EE474B37EA1D00879FDB518AC39EE75A0FE575662",
+    "final_submission.rar:final_submission/submission_final.csv": {
+      "content_reviewed": false,
+      "sha256_verified": false
+    }
+  },
+  "official_course_materials": {
+    "D:/gci/rules and info/04. Competition (due Nov 20)/Competition/README.ipynb": "40DAB614A6B0A8841FBF5FCB95BFBFAE214A222A252C3B545C2151CC048F5C91",
+    "D:/gci/rules and info/04. Competition (due Nov 20)/Competition/tutorial.ipynb": "A0E1C9ACED3FD196617D06DC02EB3B544833600348D917E7009EF723AC3AB3B7",
+    "D:/gci/rules and info/04. Competition (due Nov 20)/Competition/HomeCredit_columns_description.xlsx": "4DCEC9310A82DBD7D65A8290BAD69BBAC34E632494568A96281E8A779A88C25B",
+    "D:/gci/rules and info/04. Competition (due Nov 20)/competition_tutorial.pdf": "EE4EEC85F9136F366F5E7C9803314DE1D9E6ED8C1881E423D2BB08FF21EEECD5",
+    "D:/gci/rules and info/past year winner class/tutorial_model_ensembling.ipynb": "16C5B68E0745C934788CB7DBFA784773A291E5E201BA7F7B6204BB2EC2F99F01"
+  },
+  "competition_data": {
+    "D:/gci/inpuy/train.csv": "B8DD5A61771D8EB2821972C1B7D3F2F747CC66471F4D34153036D2D9C458ECF1",
+    "D:/gci/inpuy/test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
+    "D:/gci/inpuy/sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
+  },
+  "truth_evidence": {
+    "D:/gci/truth/README.md": "2ADB14B924E806F14D32E9C15625E845A7B102505CEEB8AD02756DF56718BE99",
+    "D:/gci/truth/reports/COMPETITION_MATERIALS_REVIEW.md": "0E059A074324004FFE3598EEBFBDFC1191B16162DE352921E9D71790AD569EC4",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/EXP02_FINANCIAL_BEHAVIOUR.ipynb": "B3882DC3ED7A8B6A3370A2F65DA7232E91EE7F0D65BAF9DA3362810F6D13CD7C",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/EXPERIMENT_PROTOCOL.md": "1BFAEA57F7DDAFE46E3740C4636D6AACE5791F09B3B401809F8A6C2CC6E7CBD7",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/RESULTS.json": "AFA917E8A67AF4C0DC5CAB9ED035627622B2CBE5B843156E6DE495DA0A8AF3B9",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/FOLD_METRICS.csv": "9B0C3730FB15196C178B23EDDA8DF01043D0252D181E83B27143665CB748F2F5",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/FEATURE_MANIFEST.json": "B475F76E051D0343B1BC2F7BD7268396552EF546C06630CF5465E1BF34726B82",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/SHA256_MANIFEST.json": "14E4CD22599EB197AD8323D624D98D3BD1D0EFEBB937B0EBB520CF98A8F59F5C",
+    "D:/gci/truth/experiments/exp02_financial_behaviour/EXP02_REPORT.md": "1831F6D919A18BB5E7C803F82953411BAE41E5889BF4677831A909DE6B33B86B",
+    "D:/gci/truth/experiments/exp85_phase2_inner_early_stopping/run_experiment.py": "42272D537CEB632FEB9D20BBEE5D3D1EADBE3CE8E665F91DD9E28F1F2EADA86C",
+    "D:/gci/truth/research_archive/exp85_phase2_source_snapshot/project/experiments/phase_01_fee_product_features/run_experiment.py": "93713B018D3376BB35BBAD770D1213EB5E5F9595BB243BE635B531E3C99DDF9B",
+    "D:/gci/truth/research_archive/exp85_phase2_source_snapshot/project/experiments/phase_02_fold_safe_key_encodings/run_experiment.py": "CF45675C405588AAB8C9D38976254B670144AF1DEAF423E08309FC64A190A34E"
+  }
+}

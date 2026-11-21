@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-11-03T14:14:13.905304+00:00",
+  "finished_utc": "2026-11-03T14:17:49.247152+00:00",
+  "runtime_seconds": 215.34184789657593,
+  "source_sha256": "9ae0538a2bf63f7cebd40dddd2c6cd74509cddf4f467e58ed5dd98a320b9aa50",
+  "shared_feature_runner_sha256": "d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "outer_folds": 5,
+  "inner_stop_fraction": 0.1
+}

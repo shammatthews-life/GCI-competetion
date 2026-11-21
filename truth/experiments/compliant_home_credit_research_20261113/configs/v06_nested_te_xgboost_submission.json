@@ -1,0 +1,17 @@
+{
+  "candidate_id": "v06_nested_te_xgboost_submission",
+  "entry_script": "build_v06_submission.py",
+  "feature_set": "rowwise_v1",
+  "models": ["xgboost_gpu"],
+  "target_encoding": true,
+  "target_encoding_inner_folds": 5,
+  "target_encoding_smoothing": 30.0,
+  "seed": 314159,
+  "outer_folds": 5,
+  "export_submission": true,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false,
+  "test_prediction": "Average of five outer-fold models; each fold model predicts validation and test in one fit, with target encodings fitted only on that fold's training partition."
+}

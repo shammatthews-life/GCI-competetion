@@ -1,0 +1,98 @@
+{
+  "experiment": "V3 fold-local application-process feature family",
+  "status": "exploratory development evidence; not a leaderboard score",
+  "rows": 171202,
+  "positive_rate": 0.08072919708881905,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "features": {
+    "source": "deterministic row-wise values from supplied train columns",
+    "missingness_flags": [
+      "OWN_CAR_AGE",
+      "CNT_FAM_MEMBERS",
+      "EXT_SOURCE_1",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "AMT_REQ_CREDIT_BUREAU_HOUR",
+      "AMT_REQ_CREDIT_BUREAU_MON",
+      "AMT_REQ_CREDIT_BUREAU_QRT",
+      "AMT_REQ_CREDIT_BUREAU_YEAR"
+    ],
+    "interactions": "each missingness flag times age and cash-contract indicator",
+    "target_or_other_row_labels_used": false
+  },
+  "metrics": {
+    "application_process_xgb": {
+      "mean_fold_auc": 0.7649505227093856,
+      "fold_auc": [
+        0.7693133345657893,
+        0.7703919252350366,
+        0.7607835531410789,
+        0.7623919386631195,
+        0.7618718619419037
+      ]
+    },
+    "phase37_reference": {
+      "mean_fold_auc": 0.7659818497765217,
+      "fold_auc": [
+        0.7709087038352539,
+        0.7717595966225422,
+        0.7609305077316161,
+        0.7628796014660469,
+        0.7634308392271493
+      ]
+    },
+    "rank_blend_50_50": {
+      "mean_fold_auc": 0.766062299628387,
+      "fold_auc": [
+        0.7707085887304201,
+        0.7716643720856695,
+        0.7614003313851878,
+        0.7632114188395027,
+        0.7633267871011548
+      ]
+    },
+    "probability_blend_50_50": {
+      "mean_fold_auc": 0.7660807122170806,
+      "fold_auc": [
+        0.7707239848524687,
+        0.7716965329880775,
+        0.7614059635908479,
+        0.7632587983328303,
+        0.7633182813211783
+      ]
+    }
+  },
+  "rule_controls": {
+    "training_data": "official train.csv only; SHA-256 enforced",
+    "test_or_external_data_read": false,
+    "target_encoding_or_peer_label_transfer": false,
+    "train_test_covariate_pooling": false,
+    "outer_validation_used_for_fitting_or_stopping": false,
+    "blend_weights": "fixed equal weights; not fitted on labels",
+    "manual_prediction_adjustments": false,
+    "gpu_required": true
+  },
+  "limitations": [
+    "All historical training labels have prior project exposure; this is not an untouched holdout.",
+    "The Phase 37 reference has prior development exposure and is used only as a fixed OOF comparison component.",
+    "Mean-fold AUC is primary because the predictions come from fold-specific models.",
+    "No public or private leaderboard score is inferred."
+  ],
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "runtime_seconds": 139.81146440000157,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\phase37_multiseed_20261107T173127Z\\PHASE37_OOF_PREDICTIONS.csv": "33563509db7afb33d9876d8b6a8e8b862859adef54dacf0a94df821f0da9c44a",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\run_v3_application_process.py": "2d9098527276edf13b91cf02897060bc670f9e1a2afbf184557156da87cfa187",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v3_application_process_20261114T220000Z\\V3_OOF_PREDICTIONS.csv": "e235b6e40109b6d2699653f5072029155cf5d23b29fb3034c3c2a36684362f16",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v3_application_process_20261114T220000Z\\V3_FOLD_RESULTS.csv": "c7d952ebc8008df4ed5b20d9f3f5684c709104dcfa8f5f47e03eb41e989eb6d7"
+  }
+}

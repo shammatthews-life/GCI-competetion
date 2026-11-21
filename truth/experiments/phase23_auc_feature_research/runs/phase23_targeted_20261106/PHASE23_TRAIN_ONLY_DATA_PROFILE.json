@@ -1,0 +1,170 @@
+{
+  "exact_duplicate_predictor_rows": 0,
+  "external_score_availability": [
+    {
+      "available": 0,
+      "rows": 117,
+      "target_rate": 0.09401709401709402
+    },
+    {
+      "available": 1,
+      "rows": 38611,
+      "target_rate": 0.09059594416099039
+    },
+    {
+      "available": 2,
+      "rows": 96310,
+      "target_rate": 0.08038625272557366
+    },
+    {
+      "available": 3,
+      "rows": 36164,
+      "target_rate": 0.07106514766065701
+    }
+  ],
+  "id_decile_target_rates": [
+    {
+      "id_decile": 1,
+      "rows": 17121,
+      "target_rate": 0.07914257344781263
+    },
+    {
+      "id_decile": 2,
+      "rows": 17120,
+      "target_rate": 0.08329439252336449
+    },
+    {
+      "id_decile": 3,
+      "rows": 17120,
+      "target_rate": 0.07546728971962617
+    },
+    {
+      "id_decile": 4,
+      "rows": 17120,
+      "target_rate": 0.08218457943925234
+    },
+    {
+      "id_decile": 5,
+      "rows": 17120,
+      "target_rate": 0.07990654205607477
+    },
+    {
+      "id_decile": 6,
+      "rows": 17120,
+      "target_rate": 0.07955607476635514
+    },
+    {
+      "id_decile": 7,
+      "rows": 17120,
+      "target_rate": 0.08417056074766355
+    },
+    {
+      "id_decile": 8,
+      "rows": 17120,
+      "target_rate": 0.08089953271028037
+    },
+    {
+      "id_decile": 9,
+      "rows": 17120,
+      "target_rate": 0.07955607476635514
+    },
+    {
+      "id_decile": 10,
+      "rows": 17121,
+      "target_rate": 0.0831143040710239
+    }
+  ],
+  "interpretation": "Descriptive, post-hoc diagnostics on previously examined labels; not feature validation.",
+  "missing_columns": {
+    "AMT_REQ_CREDIT_BUREAU_HOUR": 23116,
+    "AMT_REQ_CREDIT_BUREAU_MON": 23116,
+    "AMT_REQ_CREDIT_BUREAU_QRT": 23116,
+    "AMT_REQ_CREDIT_BUREAU_YEAR": 23116,
+    "CNT_FAM_MEMBERS": 2,
+    "EXT_SOURCE_1": 118928,
+    "EXT_SOURCE_2": 369,
+    "EXT_SOURCE_3": 54586,
+    "OWN_CAR_AGE": 112992
+  },
+  "missing_profile_count": 26,
+  "predictors": 32,
+  "rows": 171202,
+  "target_rate": 0.08072919708881905,
+  "top_missing_profiles": [
+    {
+      "pattern": "101000000",
+      "rows": 53138,
+      "target_rate": 0.08342429146749972
+    },
+    {
+      "pattern": "001000000",
+      "rows": 27090,
+      "target_rate": 0.0725359911406423
+    },
+    {
+      "pattern": "100000000",
+      "rows": 22545,
+      "target_rate": 0.07531603459747173
+    },
+    {
+      "pattern": "101010000",
+      "rows": 14596,
+      "target_rate": 0.08241984105234311
+    },
+    {
+      "pattern": "000000000",
+      "rows": 13619,
+      "target_rate": 0.06402819590278287
+    },
+    {
+      "pattern": "101011111",
+      "rows": 11894,
+      "target_rate": 0.1101395661678157
+    },
+    {
+      "pattern": "001010000",
+      "rows": 7219,
+      "target_rate": 0.07161656739160549
+    },
+    {
+      "pattern": "100010000",
+      "rows": 6077,
+      "target_rate": 0.07849267730788217
+    },
+    {
+      "pattern": "001011111",
+      "rows": 4707,
+      "target_rate": 0.09730189080093478
+    },
+    {
+      "pattern": "100011111",
+      "rows": 4474,
+      "target_rate": 0.10147518998658918
+    },
+    {
+      "pattern": "000010000",
+      "rows": 3500,
+      "target_rate": 0.06685714285714285
+    },
+    {
+      "pattern": "000011111",
+      "rows": 1972,
+      "target_rate": 0.08671399594320486
+    },
+    {
+      "pattern": "101100000",
+      "rows": 127,
+      "target_rate": 0.07086614173228346
+    },
+    {
+      "pattern": "101110000",
+      "rows": 45,
+      "target_rate": 0.1111111111111111
+    },
+    {
+      "pattern": "001100000",
+      "rows": 38,
+      "target_rate": 0.02631578947368421
+    }
+  ]
+}

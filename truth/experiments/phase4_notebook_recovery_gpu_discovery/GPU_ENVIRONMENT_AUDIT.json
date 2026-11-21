@@ -1,0 +1,60 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "timestamp_utc": "2026-11-04T03:57:36.540104+00:00",
+  "packages": {
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "scikit-learn": "1.9.1",
+    "torch": "2.15.0",
+    "cupy": "NOT_INSTALLED"
+  },
+  "nvidia_smi_query": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,driver_version,memory.total,memory.free,utilization.gpu",
+      "--format=csv,noheader"
+    ],
+    "returncode": 0,
+    "stdout": "NVIDIA GeForce RTX 4050 Laptop GPU, 592.82, 6141 MiB, 5920 MiB, 0 %",
+    "stderr": ""
+  },
+  "nvidia_smi_list": {
+    "command": [
+      "nvidia-smi",
+      "-L"
+    ],
+    "returncode": 0,
+    "stdout": "GPU 0: NVIDIA GeForce RTX 4050 Laptop GPU (UUID: GPU-bd72c401-6e5c-728e-d054-57b916d3a7b5)",
+    "stderr": ""
+  },
+  "nvcc_path": null,
+  "torch_cuda_available": false,
+  "torch_cuda_build": null,
+  "torch_cuda_device_count": 0,
+  "xgboost_build_info": {
+    "BUILTIN_PREFETCH_PRESENT": false,
+    "CUDA_VERSION": [
+      13,
+      3
+    ],
+    "DEBUG": false,
+    "MM_PREFETCH_PRESENT": true,
+    "THRUST_VERSION": [
+      3,
+      3,
+      3
+    ],
+    "USE_CUDA": true,
+    "USE_DLOPEN_NCCL": false,
+    "USE_FEDERATED": false,
+    "USE_NCCL": false,
+    "USE_NVCOMP": false,
+    "USE_OPENMP": true,
+    "USE_RMM": false,
+    "libxgboost": "C:\\Users\\SHARON\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\xgboost\\lib\\xgboost.dll"
+  },
+  "lightgbm_version": "4.7.0",
+  "lightgbm_library_error_state": "b'Everything is fine'"
+}

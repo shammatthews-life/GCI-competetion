@@ -1,0 +1,143 @@
+{
+  "direct_oof_auc": {
+    "phase13_E_frequency_ohe": 0.7660376893324777,
+    "phase15_one_seed_time": 0.767510927794687,
+    "phase15_three_seed_average": 0.7688247083074312,
+    "phase2_nested_research": 0.7711026527434623,
+    "phase9_three_seed_oof_mean": 0.769839126630044
+  },
+  "fixed_blend_rows": 18,
+  "id_fold_auc": [
+    {
+      "fold": 1,
+      "id_auc": 0.5077176236966628,
+      "rows": 34241
+    },
+    {
+      "fold": 2,
+      "id_auc": 0.5010501528533351,
+      "rows": 34241
+    },
+    {
+      "fold": 3,
+      "id_auc": 0.4944984730055969,
+      "rows": 34240
+    },
+    {
+      "fold": 4,
+      "id_auc": 0.5051687096170854,
+      "rows": 34240
+    },
+    {
+      "fold": 5,
+      "id_auc": 0.5061254719328572,
+      "rows": 34240
+    }
+  ],
+  "id_only_pooled_auc": 0.5028965627295132,
+  "ids_equal_source_row_index": true,
+  "inputs_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\exp85_phase2_inner_early_stopping\\runs\\phase2_inner_stop_seed42\\oof_phase2_blend.npy": "3b553a60a08097d910e0c9d72b6bb6816f471f2c03c751f0037d8bd855b73a36",
+    "D:\\gci\\truth\\experiments\\phase13_matched_baseline\\runs\\phase13_20261105T075946Z\\OOF_PREDICTIONS.csv": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\runs\\phase15_native_catboost_multiseed_20261105T125826Z\\MULTISEED_OOF_PREDICTIONS.csv": "14e92b323a7c5255b506a33c0f8b3925e5f9d110d388c44becf0612aec37a2d6",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\runs\\phase15_native_catboost_oof_20261105T124238Z\\OOF_PREDICTIONS.csv": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+    "D:\\gci\\truth\\experiments\\phase9_product_mechanism_and_catboost\\runs\\phase9_20261104T181500LOCAL\\OOF_PREDICTIONS.csv": "aa0d4647477f70bf53ba5230b2dbc5fa6511eacdc60ed1a20dc5a600c1d6550a"
+  },
+  "method_warning": "Post-hoc blends and all same-label intervals are descriptive, not independent validation.",
+  "prediction_spearman_correlations": [
+    {
+      "left": "phase2_nested_research",
+      "right": "phase9_three_seed_oof_mean",
+      "spearman": 0.9777445928200995
+    },
+    {
+      "left": "phase2_nested_research",
+      "right": "phase13_E_frequency_ohe",
+      "spearman": 0.953918148758398
+    },
+    {
+      "left": "phase2_nested_research",
+      "right": "phase15_one_seed_time",
+      "spearman": 0.9686543053860714
+    },
+    {
+      "left": "phase2_nested_research",
+      "right": "phase15_three_seed_average",
+      "spearman": 0.974369196587845
+    },
+    {
+      "left": "phase9_three_seed_oof_mean",
+      "right": "phase13_E_frequency_ohe",
+      "spearman": 0.9601650219793948
+    },
+    {
+      "left": "phase9_three_seed_oof_mean",
+      "right": "phase15_one_seed_time",
+      "spearman": 0.9850978113666836
+    },
+    {
+      "left": "phase9_three_seed_oof_mean",
+      "right": "phase15_three_seed_average",
+      "spearman": 0.9908694149664065
+    },
+    {
+      "left": "phase13_E_frequency_ohe",
+      "right": "phase15_one_seed_time",
+      "spearman": 0.9571523696060366
+    },
+    {
+      "left": "phase13_E_frequency_ohe",
+      "right": "phase15_three_seed_average",
+      "spearman": 0.9598663424838408
+    },
+    {
+      "left": "phase15_one_seed_time",
+      "right": "phase15_three_seed_average",
+      "spearman": 0.9943141686499188
+    }
+  ],
+  "time_feature_paired_bootstrap": {
+    "bootstrap_repetitions": 300,
+    "bootstrap_seed": 20263114,
+    "comparison": "Phase 14 numeric enhancement + time vs numeric enhancement alone",
+    "fold_deltas": [
+      {
+        "fold": 1,
+        "numeric_auc": 0.7725087511350833,
+        "time_auc": 0.7728747811497858,
+        "time_delta": 0.00036603001470247865
+      },
+      {
+        "fold": 2,
+        "numeric_auc": 0.7748891833428816,
+        "time_auc": 0.7749196724298911,
+        "time_delta": 3.0489087009533122e-05
+      },
+      {
+        "fold": 3,
+        "numeric_auc": 0.7620041038319413,
+        "time_auc": 0.7612883941712695,
+        "time_delta": -0.0007157096606718039
+      },
+      {
+        "fold": 4,
+        "numeric_auc": 0.7637476278069304,
+        "time_auc": 0.7651414780176622,
+        "time_delta": 0.0013938502107317952
+      },
+      {
+        "fold": 5,
+        "numeric_auc": 0.7631170449118055,
+        "time_auc": 0.7634014368147445,
+        "time_delta": 0.0002843919029389408
+      }
+    ],
+    "paired_delta_ci95_high": 0.0008167115464568296,
+    "paired_delta_ci95_low": -0.0002528073587168167,
+    "pooled_auc_delta": 0.0002796374596515383,
+    "positive_folds": 4,
+    "scope": "Conditional on fitted OOF predictions; labels previously exposed."
+  },
+  "training_rows": 171202
+}

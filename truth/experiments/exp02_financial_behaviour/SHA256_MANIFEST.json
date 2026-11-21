@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "run_id": "financial_ratios_seed42",
+  "notebook_source_sha256": "dd4bcb77f05ee1820118d03e0dd965fd451e928c0fe45fb8a8847ebfae53bfa6",
+  "raw_input_sha256": {
+    "train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db"
+  },
+  "root_artifact_sha256": {
+    "EXPERIMENT_PROTOCOL.md": "1bfaea57f7ddafe46e3740c4636d6aace5791f09b3b401809f8a6c2cc6e7cbd7",
+    "RESULTS.json": "afa917e8a67af4c0dc5cab9ed035627622b2cbe5b843156e6de495da0a8af3b9",
+    "FOLD_METRICS.csv": "9b0c3730fb15196c178b23edda8df01043d0252d181e83b27143665cb748f2f5",
+    "FEATURE_MANIFEST.json": "b475f76e051d0343b1bc2f7bd7268396552ef546c06630cf5465e1bf34726b82",
+    "EXP02_REPORT.md": "1831f6d919a18bb5e7c803f82953411bae41e5889bf4677831a909de6b33b86b"
+  },
+  "run_artifact_sha256": {
+    "feature_manifest.json": "b475f76e051d0343b1bc2f7bd7268396552ef546c06630cf5465e1bf34726b82",
+    "fold_ids.npy": "98793d93ae477a8bdfb7818b2afb3dfffd138070a3441eef1b78178227cb399c",
+    "fold_metrics.csv": "9b0c3730fb15196c178b23edda8df01043d0252d181e83b27143665cb748f2f5",
+    "oof_financial_features.npy": "dce63d52838aad1e8e096a430242bfc54abe87c5fa0423c46b2ffd057adf4c0a",
+    "oof_raw_baseline.npy": "6b1c1f08b6715abec1ac36fa23639dbf065dd929c92bd85c44e2754242f7a421",
+    "results.json": "afa917e8a67af4c0dc5cab9ed035627622b2cbe5b843156e6de495da0a8af3b9",
+    "run_manifest.json": "a050f93dd04749700cf4e200e5f82f7c60bddbcec63ada880c322964b8d1ca68",
+    "test_financial_features.npy": "2e2377b40d90c83d0dbafbb260f186143c2f2939c813c08ff95815cf925245f1",
+    "test_ids.npy": "02324e097159ac5b382a79b33321dc0e997b77c761379e6e0f285228549b0c09",
+    "test_raw_baseline.npy": "5888938a72a755fefa596f17bf831e22269145e3c64b65317c1a940a9973791f"
+  },
+  "note": "Run arrays are local research artifacts ignored by Git; no submission CSV was created."
+}

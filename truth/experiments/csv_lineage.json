@@ -1,0 +1,1804 @@
+{
+  "A_lgb_product_only (1).csv": {
+    "size": 1615507,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "A_lgb_product_only.csv": {
+    "size": 1615507,
+    "creators": [
+      "GCI_product_decode_colab_v2.ipynb",
+      "GCI_product_decode_colab.ipynb",
+      "GCI_v4_diversity_colab.ipynb",
+      "GCI_qfingerprint_product_colab_top_24.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models v2 (adds decoded k = credit/goods ta",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v4: new algorithm diversity (CatBoost, XGBoost, all-families LightG",
+      "\"wrote /content/drive/MyDrive/gci_output/A_lgb_product_only.csv\\n\"",
+      "\"download(\\\"download_3ae81016-950f-41e8-91dc-5eb35e46cb47\\\", \\\"A_lgb_product_only.csv\\\", 1615507)\"",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models (Colab)\\nRun cells top to bottom. Ea"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "BASE.csv": {
+    "size": 1665272,
+    "creators": [
+      "GCI_v16_regulariser_screen_colab.ipynb",
+      "GCI_v19_research_rebuilt.ipynb",
+      "GCI_v18_evidence_driven (1).ipynb",
+      "GCI_v17_optimised_O.ipynb",
+      "GCI_v13_reweight_and_ET_colab_cc.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - FINAL END-TO-END notebook for the v15 champion (public AUC 0.77891)",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models v2 (adds decoded k = credit/goods ta",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v4: new algorithm diversity (CatBoost, XGBoost, all-families LightG",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v17.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models (Colab)\\nRun cells top to bottom. Ea"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "CA_EXT1_3pct_on_0.76835_champion.csv": {
+    "size": 1614591,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "FORMULA_FUSION_LAYER2_CA_RESIDUAL.csv": {
+    "size": 1666922,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_2ca_fingerprint_submission.csv": {
+    "size": 1612610,
+    "creators": [
+      "gci_2ca_fingerprint_submission.py"
+    ],
+    "blend_formulas": [
+      "out_path=os.path.join(ROOT,'GCI_2ca_fingerprint_submission.csv'); out.to_csv(out_path,index=False)"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_CADOWN_fingerprint_submission.csv": {
+    "size": 1613959,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_CAG5_current_0p76837_champion_gate97_submission.csv": {
+    "size": 1614676,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_CA_EXTQ_v3_submission.csv": {
+    "size": 1614079,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_CA_EXT_2pct_champion_blend_submission.csv": {
+    "size": 1615516,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_CA_fingerprint_v2_submission.csv": {
+    "size": 1614560,
+    "creators": [
+      "gci_CA_fingerprint_v2.py"
+    ],
+    "blend_formulas": [
+      "path=os.path.join(ROOT,'GCI_CA_fingerprint_v2_submission.csv'); out.to_csv(path,index=False)"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_DE_SENT_CA_residual_submission.csv": {
+    "size": 1614060,
+    "creators": [
+      "gci_DE_SENT_CA_residual_submission.py"
+    ],
+    "blend_formulas": [
+      "out.to_csv(out_path, index=False)",
+      "out_path = root / \"GCI_DE_SENT_CA_residual_submission.csv\""
+    ],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "GCI_FINAL_CANDIDATE_0p5pct_blend_NOT_model_only.csv": {
+    "size": 1587326,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_RangeStd_15pct_candidate.csv": {
+    "size": 1614708,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_micro_25pct_of_w01_gate93.csv": {
+    "size": 1596898,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_micro_50pct_of_w01_gate93 (1).csv": {
+    "size": 1595632,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_micro_50pct_of_w01_gate93.csv": {
+    "size": 1595632,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_micro_75pct_of_w01_gate93 (1).csv": {
+    "size": 1597265,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_micro_75pct_of_w01_gate93.csv": {
+    "size": 1597265,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_on_076858_gate95_w05.csv": {
+    "size": 1614219,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_micro_25pct_gate93 (1).csv": {
+    "size": 1596989,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_micro_25pct_gate93.csv": {
+    "size": 1596989,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m10_of_w01_gate93.csv": {
+    "size": 1352061,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m15_of_w01_gate93.csv": {
+    "size": 1352301,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m20_of_w01_gate93.csv": {
+    "size": 1352110,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m30_of_w01_gate93.csv": {
+    "size": 1351917,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m40_of_w01_gate93.csv": {
+    "size": 1352191,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_reverse_sweep_m50_of_w01_gate93.csv": {
+    "size": 1352115,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_transfer_w01_gate93.csv": {
+    "size": 1615052,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_RD3_transfer_w02_gate93.csv": {
+    "size": 1615027,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_Research_Progress_Results_2026-10-22.csv": {
+    "size": 2986,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_adaptive_shape_top30_w08_gate93_protected.csv": {
+    "size": 1614706,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt",
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_affordability_curve_residual_8pct_gate93.csv": {
+    "size": 1613931,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "GCI_allfam_transfer_v1_submission.csv": {
+    "size": 1615318,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_archived_XGB_0.77308_candidate.csv": {
+    "size": 1130421,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": [
+      "0.77308"
+    ]
+  },
+  "GCI_champion_catboost_rankblend_1pct.csv": {
+    "size": 1350044,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_champion_catboost_rankblend_3pct.csv": {
+    "size": 1350078,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_champion_catboost_rankblend_4pct.csv": {
+    "size": 1349941,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_exact_rate_ext_affordability_submission.csv": {
+    "size": 1615293,
+    "creators": [
+      "gci_exact_rate_ext_affordability_submission.py"
+    ],
+    "blend_formulas": [
+      "default=\"GCI_exact_rate_ext_affordability_submission.csv\"",
+      "out.to_csv(out_path, index=False)"
+    ],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_experimental_champion_catboost_rankblend_5pct (1).csv": {
+    "size": 1612792,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_experimental_champion_catboost_rankblend_5pct.csv": {
+    "size": 1612792,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_financial_fingerprint_submission.csv": {
+    "size": 1613943,
+    "creators": [
+      "gci_risk_gated_fingerprint_submission.py",
+      "gci_2ca_fingerprint_submission.py",
+      "gci_highres_lgb_submission.py",
+      "gci_financial_fingerprint_submission.py",
+      "gci_CA_fingerprint_v2.py"
+    ],
+    "blend_formulas": [
+      "out_path=os.path.join(ROOT,'GCI_2ca_fingerprint_submission.csv'); out.to_csv(out_path,index=False)",
+      "out_path=os.path.join(ROOT,'GCI_financial_fingerprint_submission.csv'); out.to_csv(out_path,index=False)",
+      "CH='/mnt/data/GCI_financial_fingerprint_submission/GCI_financial_fingerprint_submission.csv'",
+      "out.to_csv(OUT,index=False)",
+      "out.to_csv(output,index=False)"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_goss_v1_champion90_goss10.csv": {
+    "size": 1615444,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": [
+      "0.855700"
+    ]
+  },
+  "GCI_harmonic_transfer_v1_7pct.csv": {
+    "size": 1615408,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_highres_gated_CA_submission.csv": {
+    "size": 1613586,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_highres_lgb_submission.csv": {
+    "size": 1615573,
+    "creators": [
+      "gci_highres_lgb_submission.py"
+    ],
+    "blend_formulas": [
+      "out.to_csv(OUT,index=False)",
+      "OUT=os.path.join(ROOT,'GCI_highres_lgb_submission.csv')"
+    ],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_implied_rate_v3_submission.csv": {
+    "size": 1615277,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_ext2bin_micro05pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_ext2bin_micro10pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_ext2bin_micro20pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_extmean_micro025pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_extmean_micro05pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_extmean_micro10pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_qfingerprint_extmean_micro20pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_rate_geometry_residual_gate93_w05_submission.csv": {
+    "size": 1614371,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "GCI_rate_shape_residual_2pct_gate93.csv": {
+    "size": 1615045,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "GCI_rate_shape_residual_3pct_gate93.csv": {
+    "size": 1614687,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_rate_shape_residual_4pct_gate93 (1).csv": {
+    "size": 1614878,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_rate_shape_residual_4pct_gate93.csv": {
+    "size": 1614878,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_ratecurve_template_v1_submission.csv": {
+    "size": 1614544,
+    "creators": [
+      "gci_ratecurve_template_v1.py"
+    ],
+    "blend_formulas": [
+      "sub=pd.DataFrame({'SK_ID_CURR':sample.SK_ID_CURR,'TARGET':final}); out=OUT/'GCI_ratecurve_template_v1_submission.csv'; sub.to_csv(out,index=False)"
+    ],
+    "doc_mentions": [
+      "0011 second[music].txt",
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": [
+      "0.843154"
+    ]
+  },
+  "GCI_ratecurve_template_v2_submission.csv": {
+    "size": 1614674,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": [
+      "0.847670"
+    ]
+  },
+  "GCI_residual_ranking_5pct_v15_leaderboard_probe.csv": {
+    "size": 1611979,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_risk_gated_fingerprint_submission.csv": {
+    "size": 1613455,
+    "creators": [
+      "gci_risk_gated_fingerprint_submission.py"
+    ],
+    "blend_formulas": [
+      "out.to_csv(output,index=False)",
+      "output=os.path.join(ROOT,\"GCI_risk_gated_fingerprint_submission.csv\")"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_candidate_extmean_2pct.csv": {
+    "size": 1353018,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_catboost_product_blend.csv": {
+    "size": 1615463,
+    "creators": [
+      "GCI_catboost_product_step_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - CatBoost product-member step (reproduction of the 10% rank blend on"
+    ],
+    "doc_mentions": [
+      "GCI_experiment_report_catboost_product.md",
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md",
+      "GCI_MASTER_HANDOFF_2026-10-18.md",
+      "GCI_FULL_CHAT_RESEARCH_LOG_2026-10-18.md"
+    ],
+    "scores": [
+      "0.7787",
+      "0.77865"
+    ]
+  },
+  "GCI_submission_catboost_product_blend_reproduced.csv": {
+    "size": 1615490,
+    "creators": [
+      "GCI_catboost_product_step_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - CatBoost product-member step (reproduction of the 10% rank blend on"
+    ],
+    "doc_mentions": [
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md",
+      "GCI_FULL_CHAT_RESEARCH_LOG_2026-10-18.md"
+    ],
+    "scores": [
+      "0.7787"
+    ]
+  },
+  "GCI_submission_current_champion_0.76745 (1).csv": {
+    "size": 1615543,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_current_champion_0.76745.csv": {
+    "size": 1615543,
+    "creators": [
+      "gci_targeted_second_order_attack.py",
+      "gci_2ca_fingerprint_submission.py",
+      "gci_financial_fingerprint_submission.py"
+    ],
+    "blend_formulas": [
+      "'GCI_submission_current_champion_0.76745.csv',",
+      "out_path=os.path.join(ROOT,'GCI_2ca_fingerprint_submission.csv'); out.to_csv(out_path,index=False)",
+      "names=['submission_13_champion65_allfam15_allfamoh20.csv','GCI_submission_current_champion_0.76745.csv','submission_13_champion65_allfam15_allfamoh20(",
+      "out_path=os.path.join(ROOT,'GCI_financial_fingerprint_submission.csv'); out.to_csv(out_path,index=False)",
+      "champ=pd.read_csv('/mnt/data/GCI_submission_current_champion_0.76745.csv').TARGET.to_numpy(); rc=rk(champ); rb=rk(base_test); ri=rk(int_test); rblend="
+    ],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": [
+      "0.76745"
+    ]
+  },
+  "GCI_submission_product_blend30.csv": {
+    "size": 1615501,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_product_blend50.csv": {
+    "size": 1615306,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_qfingerprint_cl.csv": {
+    "size": 1614478,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_qmodels_only (1).csv": {
+    "size": 1615403,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_qmodels_only.csv": {
+    "size": 1615403,
+    "creators": [
+      "GCI_product_decode_colab.ipynb",
+      "GCI_q_fingerprint_colab.ipynb",
+      "GCI_qfingerprint_product_colab_top_24.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, name); out.to_csv(p, index=False); print(\\\"wrote\\\", p); return p\\n\",",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models (Colab)\\nRun cells top to bottom. Ea",
+      "\"    assert (out.SK_ID_CURR.values == sample.SK_ID_CURR.values).all(); out.to_csv(path, index=False); print(\\\"WROTE\\\", path, \\\"| rows\\\", len(out), \\\"|",
+      "\"    check_and_save(qm_test, \\\"output/GCI_submission_qmodels_only.csv\\\")\\n\","
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_reproduced.csv": {
+    "size": 1615335,
+    "creators": [
+      "GCI_v13_reweight_and_ET_colab_cc.ipynb",
+      "GCI_final_reproduction.ipynb",
+      "GCI_final_reproduction_v9.ipynb"
+    ],
+    "blend_formulas": [
+      "\"        o8 = pd.DataFrame({\\\"SK_ID_CURR\\\": sample.SK_ID_CURR, \\\"TARGET\\\": ct}); assert len(o8) == 61500 and o8.SK_ID_CURR.is_unique and np.isfinite(o",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - Reproduction notebook for the submitted file (v3_A, public AUC 0.77",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - FINAL reproduction notebook: rebuilds the submitted file `v9_E1_mul",
+      "\"    o7 = pd.DataFrame({\\\"SK_ID_CURR\\\": sample.SK_ID_CURR, \\\"TARGET\\\": apply_w(w_full, T)}); assert len(o7) == 61500 and o7.SK_ID_CURR.is_unique and n",
+      "\"source\": \"# cell 6 - final blend, held-out check and the submission file\\nids = sample.SK_ID_CURR\\nblend = lambda tag, i: sum(W[k] * (RESV[(tag, k)]["
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_reproduced_final.csv": {
+    "size": 1615405,
+    "creators": [
+      "GCI_v13_reweight_and_ET_colab_cc.ipynb",
+      "GCI_final_reproduction_v9.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - FINAL reproduction notebook: rebuilds the submitted file `v9_E1_mul",
+      "\"source\": \"# cell 6 - final blend, held-out check and the submission file\\nids = sample.SK_ID_CURR\\nblend = lambda tag, i: sum(W[k] * (RESV[(tag, k)][",
+      "\"        o8 = pd.DataFrame({\\\"SK_ID_CURR\\\": sample.SK_ID_CURR, \\\"TARGET\\\": ct}); assert len(o8) == 61500 and o8.SK_ID_CURR.is_unique and np.isfinite(o",
+      "\"    o7 = pd.DataFrame({\\\"SK_ID_CURR\\\": sample.SK_ID_CURR, \\\"TARGET\\\": apply_w(w_full, T)}); assert len(o7) == 61500 and o7.SK_ID_CURR.is_unique and n"
+    ],
+    "doc_mentions": [
+      "README_HONORS_FINAL.md",
+      "GCI_FULL_CHAT_RESEARCH_LOG_2026-10-18.md",
+      "README_HONORS_FINAL_2.md",
+      "GCI_MASTER_HANDOFF_2026-10-18.md",
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md"
+    ],
+    "scores": [
+      "0.77865"
+    ]
+  },
+  "GCI_submission_reproduced_final_oct_17.csv": {
+    "size": 1615405,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v14_G_B_plus_10pct_CatBoost.csv": {
+    "size": 1615783,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "GCI_v14G_submission_report_2026-10-17  score 77884.md",
+      "GCI_FULL_CHAT_RESEARCH_LOG_2026-10-18.md",
+      "GCI_MASTER_HANDOFF_2026-10-18.md",
+      "GCI_RESEARCH_STATUS_2026-10-17_evening.md",
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md"
+    ],
+    "scores": [
+      "0.77884"
+    ]
+  },
+  "GCI_submission_v15_rankspace_consistent_view.csv": {
+    "size": 1615628,
+    "creators": [
+      "GCI_v19_research_rebuilt.ipynb",
+      "GCI_v18_evidence_driven (1).ipynb",
+      "GCI_v17_optimised_O.ipynb",
+      "GCI_v18_alt_direction_probe.ipynb",
+      "GCI_v22_research_expansion_gated.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - FINAL END-TO-END notebook for the v15 champion (public AUC 0.77891)",
+      "os.makedirs(os.path.join(base_dir, \"gci_output_final\"), exist_ok=True); p = os.path.join(base_dir, \"gci_output_final\", \"GCI_submission_v15_rebuilt_fro",
+      "\"Upload GCI_submission_v15_rankspace_consistent_view.csv to /content to compare automatically.\\n\",",
+      "\"v15=pd.read_csv(ROOT+'/GCI_submission_v15_rankspace_consistent_view.csv')\\n\",",
+      "\"Place `train.csv`, `test.csv`, `sample_submission.csv`, and `GCI_submission_v15_rankspace_consistent_view.csv` in the same data directory. The code u"
+    ],
+    "doc_mentions": [
+      "GCI_FULL_CHAT_RESEARCH_LOG_2026-10-18.md",
+      "GCI_MASTER_HANDOFF_2026-10-18.md",
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md",
+      "README_HONORS_V15.md",
+      "GCI_v17_notebook_review_and_next_direction_2026-10-20.md"
+    ],
+    "scores": [
+      "0.77892",
+      "0.77882",
+      "0.77891"
+    ]
+  },
+  "GCI_submission_v15_reproduced.csv": {
+    "size": 1615597,
+    "creators": [
+      "GCI_FINAL_v15_end_to_end_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - FINAL END-TO-END notebook for the v15 champion (public AUC 0.77891)"
+    ],
+    "doc_mentions": [
+      "README_HONORS_V15.md"
+    ],
+    "scores": []
+  },
+  "GCI_submission_v16.csv": {
+    "size": 1615332,
+    "creators": [
+      "GCI_v16_everything_merged_o.ipynb",
+      "GCI_v16_everything_merged.ipynb",
+      "GCI_v19_research_candidate.ipynb"
+    ],
+    "blend_formulas": [
+      "\"download(\\\"download_8ac0823e-f8af-420c-a536-d4292d82ab51\\\", \\\"GCI_submission_v16.csv\\\", 1615332)\"",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v19_candidate.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v16.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"wrote /content/drive/MyDrive/gci_output_v16/GCI_submission_v16.csv\\n\","
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v17 (1).csv": {
+    "size": 1615454,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v17.csv": {
+    "size": 1615454,
+    "creators": [
+      "GCI_v17_optimised.ipynb",
+      "GCI_v17_optimised_O.ipynb"
+    ],
+    "blend_formulas": [
+      "\"download(\\\"download_bcba21b1-cb9f-46a2-a1b9-3713117788b5\\\", \\\"GCI_submission_v17.csv\\\", 1615454)\"",
+      "\"if not SMOKE and stk - fixed >= 0.0002: p2 = os.path.join(OUT_DIR, \\\"GCI_submission_v17_stack.csv\\\"); out2.to_csv(p2, index=False); print(\\\"gain >= 0",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v17.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"wrote /content/drive/MyDrive/gci_output_v17/GCI_submission_v17.csv\\n\",",
+      "\"Downloading \\\"GCI_submission_v17.csv\\\":\\n\","
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v18.csv": {
+    "size": 1615349,
+    "creators": [
+      "GCI_v18_evidence_driven (1).ipynb",
+      "GCI_v18_alt_direction_probe.ipynb",
+      "GCI_v22_research_expansion_gated.ipynb",
+      "GCI_v21_gated_research_candidate_o.ipynb",
+      "GCI_v25_block_tester.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v21_candidate.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"if not SMOKE and stk - fixed >= 0.0002: p2 = os.path.join(OUT_DIR, \\\"GCI_submission_v18_stack.csv\\\"); out2.to_csv(p2, index=False); print(\\\"gain >= 0",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v18.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v18_reproduced.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"wrote /content/drive/MyDrive/gci_output_v18/GCI_submission_v18.csv\\n\","
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v18_alt_direction_probe.csv": {
+    "size": 1615246,
+    "creators": [
+      "GCI_v18_alt_direction_probe.ipynb"
+    ],
+    "blend_formulas": [
+      "\"path=ROOT+'/GCI_submission_v18_alt_direction_probe.csv'\\n\",",
+      "\"The full-data models use the same engineered feature definitions and fixed hyperparameters as the v18 experiment. The candidate file is named `GCI_su",
+      "\"out.to_csv(path,index=False)\\n\","
+    ],
+    "doc_mentions": [
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md"
+    ],
+    "scores": []
+  },
+  "GCI_submission_v20_tariff_distance_probe.csv": {
+    "size": 1612541,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v21_candidate.csv": {
+    "size": 1615466,
+    "creators": [
+      "GCI_v21_gated_research_candidate_o.ipynb",
+      "GCI_v22_research_expansion_gated.ipynb",
+      "GCI_v21_gated_research_candidate.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v21_candidate.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"if not SMOKE and stk - fixed >= 0.0002: p2 = os.path.join(OUT_DIR, \\\"GCI_submission_v18_stack.csv\\\"); out2.to_csv(p2, index=False); print(\\\"gain >= 0",
+      "\"wrote /content/drive/MyDrive/gci_output_v21/GCI_submission_v21_candidate.csv\\n\",",
+      "\"Downloading \\\"GCI_submission_v21_candidate.csv\\\":\"",
+      "\"        if g_ >= 0.0002 and not SMOKE: o_ = pd.DataFrame({\\\"SK_ID_CURR\\\": sample.SK_ID_CURR.values, \\\"TARGET\\\": alt(0, cb_test_mean, (\\\"old\\\", \\\"e1\\\""
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v21_tariff_distance_1p5pct.csv": {
+    "size": 1612884,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v21_tariff_distance_2p5pct_sensitivity.csv": {
+    "size": 1612835,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_submission_v22_tariff_bureau_combo_10pct.csv": {
+    "size": 1612356,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_template_meta_local5_submission.csv": {
+    "size": 1615136,
+    "creators": [
+      "gci_template_meta_local5_submission.py"
+    ],
+    "blend_formulas": [
+      "out_path = ROOT / \"GCI_template_meta_local5_submission.csv\"",
+      "out.to_csv(out_path, index=False)"
+    ],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_testlike_specialist_submission.csv": {
+    "size": 1615529,
+    "creators": [
+      "gci_testlike_specialist_submission.py"
+    ],
+    "blend_formulas": [
+      "out=pd.DataFrame({'SK_ID_CURR':sample.SK_ID_CURR,'TARGET':final});outdir=ROOT;path=outdir/'GCI_testlike_specialist_submission.csv';out.to_csv(path,ind"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_v33_product_conditional_model_only.csv": {
+    "size": 1668177,
+    "creators": [
+      "GCI_v33_product_conditional_experiment.py",
+      "GCI_v33_product_conditional_experiment (1).py"
+    ],
+    "blend_formulas": [
+      "sm=sample.copy(); sm['TARGET']=p; sm.to_csv(OUT+'/GCI_v33_product_conditional_model_only.csv',index=False)",
+      "for f in [path,OUT+'/GCI_v33_product_conditional_model_only.csv']:",
+      "sub=sample.copy(); sub['TARGET']=out; path=OUT+'/GCI_v33_product_conditional_0p5pct_blend.csv'; sub.to_csv(path,index=False)"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_v5_champion95_CAG5_gate97_submission.csv": {
+    "size": 1614367,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_v6_champion93_CADOWN10_gate93_submission.csv": {
+    "size": 1613989,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_v7_champion67_xgbrich33.csv": {
+    "size": 1615671,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "GCI_v7_screening_results (1).csv": {
+    "size": 1826,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "GCI_v7_screening_results.csv": {
+    "size": 1826,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "GCI_top1_research_report.md"
+    ],
+    "scores": []
+  },
+  "GCI_v8_conditional_XGB_disagreement30_w20.csv": {
+    "size": 1615405,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "RANKBLEND_10.csv": {
+    "size": 1615471,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "RANKBLEND_15.csv": {
+    "size": 1615398,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "RANKBLEND_5.csv": {
+    "size": 1615562,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "ROUND1_CA_EXT2_RESID_submission.csv": {
+    "size": 1614213,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "TOP10_COMBINED.csv": {
+    "size": 1665470,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "best_submission (1).csv": {
+    "size": 1666283,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "best_submission.csv": {
+    "size": 1666283,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "brf_full_candidate.csv": {
+    "size": 1615216,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "ca_ext_ABCDE_results_fast2.csv": {
+    "size": 1633,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "candidate_balanced.csv": {
+    "size": 1659236,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "candidate_conservative.csv": {
+    "size": 1660938,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "candidate_rank.csv": {
+    "size": 1611494,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "candidate_validation.csv": {
+    "size": 627,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champ_lgb_domain_92_5_3.csv": {
+    "size": 1612537,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champ_lgb_domain_95_3_2.csv": {
+    "size": 1612744,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champ_lgb_domain_97_2_1.csv": {
+    "size": 1612805,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champion_80_rc_20.csv": {
+    "size": 1610803,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champion_90_rc_10.csv": {
+    "size": 1612246,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "champion_95_rc_5.csv": {
+    "size": 1613421,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "experiment_A_CA_EXT1_5fold_results.csv": {
+    "size": 1210,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "experminetbygeminioct22.csv": {
+    "size": 14794,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "fair_incremental_cv.csv": {
+    "size": 182,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "gbc_full_candidate.csv": {
+    "size": 1660890,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "gci_next_rank_tiebreak.csv": {
+    "size": 1609847,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "hard_error_oof_results.csv": {
+    "size": 2911,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt",
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "lgb_a.csv": {
+    "size": 1667568,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "marginal_drift.csv": {
+    "size": 2503,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "mlp_full_candidate.csv": {
+    "size": 1130789,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "model_benchmark.csv": {
+    "size": 946,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "oof_lgb_xgb.csv": {
+    "size": 7232886,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "peer_ablation_results.csv": {
+    "size": 990,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "peer_ablation_summary.csv": {
+    "size": 1087,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "phase4_domain_view_rank15.csv": {
+    "size": 1612011,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "q4_interaction_blend_screen.csv": {
+    "size": 882,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "rate_residual_3holdout_confirmation.csv": {
+    "size": 1771,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "rate_shape_strong_anchor_results.csv": {
+    "size": 1057,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt",
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "rc_xgb_beta125_prob.csv": {
+    "size": 1591159,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "residual_rate_geometry_screen.csv": {
+    "size": 3271,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "0011 second[music].txt"
+    ],
+    "scores": []
+  },
+  "results (1).csv": {
+    "size": 3943,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "results.csv": {
+    "size": 380,
+    "creators": [
+      "GCI_v18_evidence_driven (1).ipynb",
+      "GCI_v17_optimised_O.ipynb",
+      "Right_Customer_Right_Offer_Right_Time_v12.ipynb",
+      "Right_Customer_Right_Offer_Right_Time_v4.ipynb",
+      "Right_Customer_Right_Offer_Right_Time.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v21_candidate.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\",",
+      "\"pd.DataFrame({\\\"SK_ID_CURR\\\": ids, \\\"TARGET\\\": final}).to_csv(os.path.join(OUT_DIR, \\\"v9_tabicl_blend.csv\\\"), index=False)\\n\",",
+      "\"if not SMOKE and stk - fixed >= 0.0002: p2 = os.path.join(OUT_DIR, \\\"GCI_submission_v18_stack.csv\\\"); out2.to_csv(p2, index=False); print(\\\"gain >= 0",
+      "sub=sample.copy(); sub['TARGET']=out; path=OUT+'/GCI_v33_product_conditional_0p5pct_blend.csv'; sub.to_csv(path,index=False)",
+      "\"    p = os.path.join(OUT_DIR, \\\"GCI_submission_v18.csv\\\"); out.to_csv(p, index=False); print(\\\"wrote\\\", p)\\n\","
+    ],
+    "doc_mentions": [
+      "WHY_RESIDUAL_SUBMISSION_DROPPED.md",
+      "GCI_top1_research_report.md",
+      "0011 second[music].txt",
+      "GCI_COMPLETE_CROSS_CHAT_RESEARCH_ARCHIVE_2026-10-20.md",
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "sub_lgb_rich_full.csv": {
+    "size": 1666867,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "sub_xgb_rich_seedavg.csv": {
+    "size": 1130294,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission (1).csv": {
+    "size": 1614674,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_01_rank_equal.csv": {
+    "size": 1615615,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_03_best_single.csv": {
+    "size": 1667667,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_04_stack_LR.csv": {
+    "size": 1667435,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_blend_10.csv": {
+    "size": 1615287,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_blend_15.csv": {
+    "size": 1615695,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_blend_3.csv": {
+    "size": 1615740,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_blend_5.csv": {
+    "size": 1615619,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_blend_7.csv": {
+    "size": 1615476,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_10_xgb_onehot_no_extagg.csv": {
+    "size": 1130617,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_13_old_anchor_80_file12_20.csv": {
+    "size": 1615365,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_13_old_anchor_85_file12_15.csv": {
+    "size": 1615672,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_13_old_anchor_90_file12_10.csv": {
+    "size": 1615479,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_13_old_anchor_95_file12_5.csv": {
+    "size": 1615602,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_13_tri_85_10_5.csv": {
+    "size": 1615546,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_BEAT_CLAUDE_cat7_lgb3.csv": {
+    "size": 1615585,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_FINAL_76745_downsample7.csv": {
+    "size": 1615560,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_FINAL_BEAT_CLAUDE_maxbin25_cat5.csv": {
+    "size": 1615614,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_NEXT_BEAT_CLAUDE_oblique18.csv": {
+    "size": 1615577,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission__regime5.csv": {
+    "size": 1615671,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_archived_xgb_0.77308_candidate.csv": {
+    "size": 1130421,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_cat.csv": {
+    "size": 1666325,
+    "creators": [
+      "GCI_catboost_product_step_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - CatBoost product-member step (reproduction of the 10% rank blend on"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_lgb.csv": {
+    "size": 1667211,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_log_credit_term.csv": {
+    "size": 1130292,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_rf.csv": {
+    "size": 1620006,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_selected_lgb.csv": {
+    "size": 1666970,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_targeted_second_order_75_25.csv": {
+    "size": 1615618,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_te_xgb_97_champ_3.csv": {
+    "size": 1662583,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_te_xgb_seedavg.csv": {
+    "size": 1129937,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_xgb(1).csv": {
+    "size": 1130421,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "submission_xgb.csv": {
+    "size": 1130421,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "target_encoding_screen.csv": {
+    "size": 5300,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v11_A_v6B_plus_family_bagged (1).csv": {
+    "size": 1615133,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v11_A_v6B_plus_family_bagged (2).csv": {
+    "size": 1615133,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v11_A_v6B_plus_family_bagged.csv": {
+    "size": 1615133,
+    "creators": [
+      "GCI_v11_family_bagging_colab.ipynb",
+      "GCI_v11_family_bagging_colab (1).ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v11: feature-family-bagged members (E4)\\nIdea (from the family-subs"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v2_A_lgb_product_k.csv": {
+    "size": 1615383,
+    "creators": [
+      "GCI_product_decode_colab_v2.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models v2 (adds decoded k = credit/goods ta"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v2_D_lgb50_prevrun50.csv": {
+    "size": 1615540,
+    "creators": [
+      "GCI_product_decode_colab_v2.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - product-decode LightGBM models v2 (adds decoded k = credit/goods ta"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_A_greedy_oof_weights (1).csv": {
+    "size": 1615335,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_A_greedy_oof_weights.csv": {
+    "size": 1615335,
+    "creators": [
+      "GCI_v3_blend_colab.ipynb",
+      "GCI_final_reproduction.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - Reproduction notebook for the submitted file (v3_A, public AUC 0.77",
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v3: variance reduction + OOF-selected blend (built from the weaknes"
+    ],
+    "doc_mentions": [
+      "GCI_research_report_detailed.md"
+    ],
+    "scores": [
+      "0.77813",
+      "0.79169",
+      "0.77857",
+      "0.77746",
+      "0.77202"
+    ]
+  },
+  "v3_B_plain_average_all (1).csv": {
+    "size": 1615518,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_B_plain_average_all.csv": {
+    "size": 1615518,
+    "creators": [
+      "GCI_v3_blend_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v3: variance reduction + OOF-selected blend (built from the weaknes"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_C_average_lgb_members_only (1).csv": {
+    "size": 1615518,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_C_average_lgb_members_only.csv": {
+    "size": 1615518,
+    "creators": [
+      "GCI_v3_blend_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v3: variance reduction + OOF-selected blend (built from the weaknes"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v3_submission.csv": {
+    "size": 1613768,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [
+      "Pasted markdown(20261008-171218).md"
+    ],
+    "scores": []
+  },
+  "v4_A_greedy_all_members.csv": {
+    "size": 1615193,
+    "creators": [
+      "GCI_v4_diversity_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v4: new algorithm diversity (CatBoost, XGBoost, all-families LightG"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v4_B_greedy_old_members_only.csv": {
+    "size": 1615184,
+    "creators": [
+      "GCI_v4_diversity_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v4: new algorithm diversity (CatBoost, XGBoost, all-families LightG"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v5_A_new_members_same_weights (1).csv": {
+    "size": 1615314,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v5_A_new_members_same_weights.csv": {
+    "size": 1615314,
+    "creators": [
+      "GCI_v5_dropPF4_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v5 test: same 5 members and SAME weights, product x fee key removed"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v5_B_mix_old_and_new (1).csv": {
+    "size": 1615550,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v5_B_mix_old_and_new.csv": {
+    "size": 1615550,
+    "creators": [
+      "GCI_v5_dropPF4_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v5 test: same 5 members and SAME weights, product x fee key removed"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v6_A_new_members_same_weights.csv": {
+    "size": 1615501,
+    "creators": [
+      "GCI_v6_residual_features_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v6: learned-expectation (residual) features in every member\\nIdea: "
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v6_A_new_members_same_weights_modified.csv": {
+    "size": 1615501,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v6_B_mix_old_and_new (1).csv": {
+    "size": 1615314,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v6_B_mix_old_and_new (2).csv": {
+    "size": 1615314,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v6_B_mix_old_and_new.csv": {
+    "size": 1615314,
+    "creators": [
+      "GCI_v6_residual_features_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v6: learned-expectation (residual) features in every member\\nIdea: "
+    ],
+    "doc_mentions": [
+      "GCI_top1_research_report.md"
+    ],
+    "scores": [
+      "0.778302"
+    ]
+  },
+  "v6_B_mix_old_and_new_modified.csv": {
+    "size": 1615314,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v7_A_et_members_same_weights.csv": {
+    "size": 1615540,
+    "creators": [
+      "GCI_v7_extra_trees_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, name); out.to_csv(p, index=False); print(\\\"wrote\\\", p); return p\\n\",",
+      "\"    files = [write(\\\"v7_A_et_members_same_weights.csv\\\", blend(new, slice(None)) if False else sum(W[k] * new[k][1] for k in W)), write(\\\"v7_B_mix_v6"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v7_B_mix_v6_and_et.csv": {
+    "size": 1615719,
+    "creators": [
+      "GCI_v7_extra_trees_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "\"    p = os.path.join(OUT_DIR, name); out.to_csv(p, index=False); print(\\\"wrote\\\", p); return p\\n\",",
+      "\"    files = [write(\\\"v7_A_et_members_same_weights.csv\\\", blend(new, slice(None)) if False else sum(W[k] * new[k][1] for k in W)), write(\\\"v7_B_mix_v6"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "v8_A_v6B_plus_ranker.csv": {
+    "size": 1615266,
+    "creators": [
+      "GCI_v8_pairwise_ranker_colab.ipynb"
+    ],
+    "blend_formulas": [
+      "{\"cells\": [{\"cell_type\": \"markdown\", \"metadata\": {}, \"source\": \"# GCI World 2026 - v8: global-group pairwise ranker (XGBoost rank:pairwise) as one ext"
+    ],
+    "doc_mentions": [],
+    "scores": []
+  },
+  "xgb_scale2_seedavg.csv": {
+    "size": 1114736,
+    "creators": [],
+    "blend_formulas": [],
+    "doc_mentions": [],
+    "scores": []
+  }
+}

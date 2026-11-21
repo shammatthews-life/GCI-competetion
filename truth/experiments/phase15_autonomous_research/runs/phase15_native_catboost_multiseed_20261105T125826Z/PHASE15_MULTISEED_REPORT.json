@@ -1,0 +1,193 @@
+{
+  "eligibility": "Internal CTR target statistics and the constants in product keys remain unresolved. This remains research-only Track B.",
+  "fold_results": [
+    {
+      "feature_count": 99,
+      "fit_rows": 136961,
+      "fit_seconds": 21.276271200040355,
+      "fold": 1,
+      "fold_auc": 0.7663016829829163,
+      "iterations": 700,
+      "max_fit_category_count": 4907,
+      "model_seed": 20261214,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261114,
+      "validation_rows": 34241
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136961,
+      "fit_seconds": 21.0994134999346,
+      "fold": 2,
+      "fold_auc": 0.7662905024569366,
+      "iterations": 700,
+      "max_fit_category_count": 4914,
+      "model_seed": 20261314,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261114,
+      "validation_rows": 34241
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 20.955903200083412,
+      "fold": 3,
+      "fold_auc": 0.7669513873065075,
+      "iterations": 700,
+      "max_fit_category_count": 4895,
+      "model_seed": 20261414,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261114,
+      "validation_rows": 34240
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 20.830395399942063,
+      "fold": 4,
+      "fold_auc": 0.768143116046977,
+      "iterations": 700,
+      "max_fit_category_count": 4916,
+      "model_seed": 20261514,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261114,
+      "validation_rows": 34240
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 21.17251960001886,
+      "fold": 5,
+      "fold_auc": 0.7720923726785888,
+      "iterations": 700,
+      "max_fit_category_count": 4928,
+      "model_seed": 20261614,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261114,
+      "validation_rows": 34240
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136961,
+      "fit_seconds": 21.1882366000209,
+      "fold": 1,
+      "fold_auc": 0.7710544124124903,
+      "iterations": 700,
+      "max_fit_category_count": 4915,
+      "model_seed": 20261215,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261115,
+      "validation_rows": 34241
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136961,
+      "fit_seconds": 21.046014500083402,
+      "fold": 2,
+      "fold_auc": 0.7730069834774081,
+      "iterations": 700,
+      "max_fit_category_count": 4912,
+      "model_seed": 20261315,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261115,
+      "validation_rows": 34241
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 20.973503899993375,
+      "fold": 3,
+      "fold_auc": 0.7676036886763149,
+      "iterations": 700,
+      "max_fit_category_count": 4911,
+      "model_seed": 20261415,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261115,
+      "validation_rows": 34240
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 20.92391290003434,
+      "fold": 4,
+      "fold_auc": 0.7645822517199605,
+      "iterations": 700,
+      "max_fit_category_count": 4913,
+      "model_seed": 20261515,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261115,
+      "validation_rows": 34240
+    },
+    {
+      "feature_count": 99,
+      "fit_rows": 136962,
+      "fit_seconds": 21.418008499895222,
+      "fold": 5,
+      "fold_auc": 0.7595840714971037,
+      "iterations": 700,
+      "max_fit_category_count": 4913,
+      "model_seed": 20261615,
+      "paired_seed_across_variants": "single feature variant",
+      "seed": 20261115,
+      "validation_rows": 34240
+    }
+  ],
+  "independent_confirmation": false,
+  "integrity": {
+    "all_seed_predictions_finite": true,
+    "each_row_out_of_fold_in_all_three_seeds": true,
+    "id_order_exact": true,
+    "rows": 171202,
+    "target_order_exact": true,
+    "unique_ids": 171202
+  },
+  "model": {
+    "depth": 6,
+    "iterations": 700,
+    "learning_rate": 0.05,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 10,
+    "type": "CatBoost GPU native categories"
+  },
+  "no_test_external_or_submission_data": true,
+  "phase13_oof_sha256": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+  "primary_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "primary_seed": 20261113,
+  "results": [
+    {
+      "fold_auc_std": 0.006018337420453561,
+      "fold_aucs": "[0.7728747811497858, 0.7749196724298911, 0.7612883941712695, 0.7651414780176622, 0.7634014368147445]",
+      "mean_fold_auc": 0.7675251525166706,
+      "pooled_oof_auc": 0.767510927794687,
+      "seed": 20261113
+    },
+    {
+      "fold_auc_std": 0.0024323038841278146,
+      "fold_aucs": "[0.7663016829829162, 0.7662904967118666, 0.7669513873065074, 0.7681431160469768, 0.7720923611842914]",
+      "mean_fold_auc": 0.7679558088465116,
+      "pooled_oof_auc": 0.7679460554548165,
+      "seed": 20261114
+    },
+    {
+      "fold_auc_std": 0.005328928290272821,
+      "fold_aucs": "[0.7710544124124905, 0.7730069892224783, 0.7676036944234635, 0.764582245972812, 0.7595840714971036]",
+      "mean_fold_auc": 0.7671662827056697,
+      "pooled_oof_auc": 0.7670810696251881,
+      "seed": 20261115
+    },
+    {
+      "fold_auc_std": NaN,
+      "fold_aucs": "Not a single fold assignment; each component is OOF",
+      "mean_fold_auc": NaN,
+      "pooled_oof_auc": 0.7688247083074312,
+      "seed": "three_seed_oof_average"
+    }
+  ],
+  "runtime_seconds": 227.0676654999843,
+  "secondary_seeds": [
+    20261114,
+    20261115
+  ],
+  "status": "seed robustness/bagging experiment on exposed labels",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

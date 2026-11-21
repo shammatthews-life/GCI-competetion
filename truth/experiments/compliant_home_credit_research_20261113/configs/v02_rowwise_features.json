@@ -1,0 +1,11 @@
+{
+  "candidate_id": "v02_rowwise_features",
+  "feature_set": "rowwise_v1",
+  "models": ["catboost_gpu", "lightgbm_cpu", "xgboost_gpu"],
+  "seed": 314159,
+  "folds": 5,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false
+}

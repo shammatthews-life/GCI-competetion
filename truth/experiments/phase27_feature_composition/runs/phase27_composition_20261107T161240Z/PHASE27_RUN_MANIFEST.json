@@ -1,0 +1,75 @@
+{
+  "baseline_pooled_auc": 0.7602269642712598,
+  "candidates": [
+    "baseline",
+    "application_process",
+    "external_disagreement",
+    "financial_residual",
+    "applicant_consistency",
+    "formula_peer",
+    "context_interactions",
+    "origin_formula_geometry",
+    "origin_copula",
+    "composed_all_blocks"
+  ],
+  "data_scope": "training CSV only; no test rows or external data",
+  "empirical_pricing_constants": "excluded",
+  "excluded_prior_hypotheses": [
+    "target encoding and default-label-derived statistics",
+    "train/test identity pooling or score coupling",
+    "130.5 fee-offset and 0.0066/0.0132 tariff-step product keys",
+    "12-period income/annuity assumptions and Merton debt proxy",
+    "Alexander repayment horizons with unverified period units",
+    "bureau totals that sum counts across different time windows"
+  ],
+  "exploratory_formula_constants": {
+    "clayton_theta": [
+      1.2,
+      2.0
+    ],
+    "gumbel_theta": 1.5,
+    "status": "fixed prior hypotheses; tested only as a separate block"
+  },
+  "feature_protocol": "Raw numeric columns, fold-local one-hot categorical columns, and deterministic rowwise financial/time formulas; feature-family statistics are fit on outer training rows only.",
+  "folds": 5,
+  "included_origin_ledger_findings": [
+    "application-process missingness patterns",
+    "external-score disagreement and geometry",
+    "fold-local applicant profile frequencies",
+    "occupation-relative external-score percentile",
+    "temporal invariant fingerprints",
+    "credit/income nonlinear interaction",
+    "Archimedean score-copula transforms"
+  ],
+  "input_rows": 171202,
+  "model": {
+    "colsample_bytree": 0.8,
+    "deterministic": true,
+    "force_col_wise": true,
+    "learning_rate": 0.03,
+    "library": "LightGBM",
+    "max_bin": 255,
+    "min_child_samples": 80,
+    "n_estimators": 700,
+    "n_jobs": 8,
+    "num_leaves": 31,
+    "objective": "binary",
+    "reg_lambda": 5.0,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "verbosity": -1
+  },
+  "phase": "Phase 27 feature composition",
+  "pooled_train_test_statistics": "none",
+  "runtime_seconds": 665.0810197999817,
+  "seed": 20261113,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase27_feature_composition\\run_phase27_feature_composition.py": "62986f3161f0404e809d0c03649e26398e071e59052cff835503848cb230c1fd",
+    "D:\\gci\\truth\\experiments\\phase27_feature_composition\\runs\\phase27_composition_20261107T161240Z\\PHASE27_FOLD_RESULTS.csv": "8675fa4bbb8a4026684c3c314b4017a63af745e5ee9d9914f26a46c497e33d03",
+    "D:\\gci\\truth\\experiments\\phase27_feature_composition\\runs\\phase27_composition_20261107T161240Z\\PHASE27_OOF_PREDICTIONS.csv": "c259dab76a85b44ad9f832938117740ad2ff3d62aafc4f517e1f31c8b46c242b",
+    "D:\\gci\\truth\\experiments\\phase27_feature_composition\\runs\\phase27_composition_20261107T161240Z\\PHASE27_SUMMARY.csv": "b80dc3c3673fc298b10025feed664eecd3307e670b4c06976bd7dd9bd3319d5c"
+  },
+  "status": "exploratory; repeated-label selection risk applies",
+  "target_encoding": "none; categorical variables use fit-fold one-hot encoding"
+}

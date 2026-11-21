@@ -1,0 +1,119 @@
+{
+  "status": "fixed post-hoc ensemble of six fold-isolated OOF experts; exploratory",
+  "formula": "0.90*rank(TE20) + (0.10/6)*sum(rank(group-conditional, covariate-residual, model-view, category-TE, XGBoost-pairwise, cross-fitted-hard-example)); all ranks within outer fold",
+  "fixed_weights": {
+    "baseline": 0.9,
+    "each_expert": 0.016666666666666666,
+    "expert_count": 6
+  },
+  "outer_folds": 5,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "six_expert_blend_mean_fold_auc": 0.7680336766041553,
+  "six_expert_blend_mean_fold_gain": 0.0002781004469532,
+  "positive_folds": 5,
+  "minimum_promotion_gain": 0.005,
+  "promotion_gate_passed": false,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "fixed_six_expert_blend_auc": 0.7724845104322835,
+      "blend_delta": 0.0001087670794657214,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.7658051106343836,
+      "covariate_residual_expert_auc": 0.7659451584500608,
+      "crossfit_model_view_expert_auc": 0.7649847427246512,
+      "fold_local_category_te_expert_auc": 0.7664393055789201,
+      "xgboost_rank_pairwise_expert_auc": 0.7634245966101084,
+      "crossfit_hard_example_expert_auc": 0.7614638582270372
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "fixed_six_expert_blend_auc": 0.7749817823827196,
+      "blend_delta": 0.0001261962097705016,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.768536888060986,
+      "covariate_residual_expert_auc": 0.7692598419370353,
+      "crossfit_model_view_expert_auc": 0.7668697778749077,
+      "fold_local_category_te_expert_auc": 0.7679049935459882,
+      "xgboost_rank_pairwise_expert_auc": 0.7641931669515072,
+      "crossfit_hard_example_expert_auc": 0.7643110787701964
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "fixed_six_expert_blend_auc": 0.762730405487543,
+      "blend_delta": 0.00026931138492669593,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7581977730396752,
+      "covariate_residual_expert_auc": 0.7567880204686768,
+      "crossfit_model_view_expert_auc": 0.7559804024070713,
+      "fold_local_category_te_expert_auc": 0.7578172313401119,
+      "xgboost_rank_pairwise_expert_auc": 0.7560630061743687,
+      "crossfit_hard_example_expert_auc": 0.7536898360894819
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "fixed_six_expert_blend_auc": 0.7653516914731993,
+      "blend_delta": 0.0004597603963161223,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7610735427667858,
+      "covariate_residual_expert_auc": 0.764060295681142,
+      "crossfit_model_view_expert_auc": 0.7588405858670904,
+      "fold_local_category_te_expert_auc": 0.761881620600282,
+      "xgboost_rank_pairwise_expert_auc": 0.7604115861872754,
+      "crossfit_hard_example_expert_auc": 0.7575431728104145
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "fixed_six_expert_blend_auc": 0.7646199932450314,
+      "blend_delta": 0.0004264671642870699,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7596638534144224,
+      "covariate_residual_expert_auc": 0.7628067046327902,
+      "crossfit_model_view_expert_auc": 0.759689675353229,
+      "fold_local_category_te_expert_auc": 0.7602188555578789,
+      "xgboost_rank_pairwise_expert_auc": 0.7600116823439685,
+      "crossfit_hard_example_expert_auc": 0.757607029378872
+    }
+  ],
+  "input_oof_files": {
+    "group_conditional_rank_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv",
+    "covariate_residual_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv",
+    "crossfit_model_view_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv",
+    "fold_local_category_te_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv",
+    "xgboost_rank_pairwise_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\xgboost_rank_pairwise_v1\\OOF_PREDICTIONS.csv",
+    "crossfit_hard_example_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_hard_example_weights_v1\\OOF_PREDICTIONS.csv"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "official_train": "read only to verify ID/label alignment and calculate OOF metrics",
+    "expert_outputs": "pre-existing outer-fold OOF predictions only",
+    "weights": "fixed equal rank shares, not optimized",
+    "external_data": "none",
+    "label_transfer": "none",
+    "manual_row_edits": "none",
+    "test_predictions_or_submission": "none",
+    "validation_caveat": "post-hoc combination on repeatedly examined OOF folds; not an independent generalization estimate"
+  },
+  "runtime_seconds": 2.22786419998738,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv": "f1f00dce743bd24d9fb66e0af24986bab351a36eeecd04f51558c852a4e1b2c0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv": "4e31bb89637a6d2f09122ab42acc6a27b915e42113fcffe8496260b1ecc3f4c4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv": "4ad7bfc5e9e04457279b33c927a3a5007df9ec99ab17965b6f9a957c68163afb",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv": "70d9a69f735d88841f1fa2d40df88e2ce73291f24a844a68694561bde64a8332",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\xgboost_rank_pairwise_v1\\OOF_PREDICTIONS.csv": "85c0d4a655ff6a28449ec05e64d71cb27cb20f09eba5934c9ace059dd7509074",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_hard_example_weights_v1\\OOF_PREDICTIONS.csv": "59da9acaf9b455c80093698fe87a2d7b54d66d71009379aa6f91d6cf26796325",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\six_expert_blend_v1.py": "832f2ab645646b2e3a9f9bec7ed491d77724f863e7c9cbdac27bae29312fbc64",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\six_expert_blend_v1\\OOF_PREDICTIONS.csv": "05053e2826a4b5b55f7de1ec34fe6baaa6fb762695f68ffc327ece9dde28893d",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\six_expert_blend_v1\\FOLD_METRICS.csv": "b1aadd300c752fb1750dbf8a7418bd2147bb67ee226d4d48fe59ea89a52f0ba3"
+  }
+}

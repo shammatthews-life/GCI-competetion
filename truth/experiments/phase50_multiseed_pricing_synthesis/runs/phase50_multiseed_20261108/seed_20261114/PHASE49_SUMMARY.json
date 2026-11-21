@@ -1,0 +1,61 @@
+{
+  "phase": "Phase 49 unified contract pricing & cross-architecture specialist synthesis",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261114,
+  "outer_folds": 5,
+  "pricing_features_added": [
+    "Q0_FEE",
+    "TARIFF_STEP_0066_RESIDUAL",
+    "NEGATIVE_DOWNPAYMENT",
+    "EXT_PRODUCT",
+    "EXT_HARMONIC",
+    "EXT_MIN",
+    "MANIFOLD_SOLVENCY_CONSENSUS",
+    "INCOME_SURPLUS_TO_ANNUITY"
+  ],
+  "metrics": {
+    "lgb_pricing_global": {
+      "pooled_auc": 0.7655047591079138,
+      "pooled_log_loss": 0.2442009299993515,
+      "mean_fold_auc": 0.7655209462518404,
+      "std_fold_auc": 0.0019961365132599887
+    },
+    "lgb_pricing_contract_mix": {
+      "pooled_auc": 0.7659545077426139,
+      "pooled_log_loss": 0.24408401548862457,
+      "mean_fold_auc": 0.7659672383727653,
+      "std_fold_auc": 0.0020297899445796256
+    },
+    "xgb_pricing_global": {
+      "pooled_auc": 0.7653238317309747,
+      "pooled_log_loss": 0.24419178068637848,
+      "mean_fold_auc": 0.7653493153852342,
+      "std_fold_auc": 0.0014766281684843697
+    },
+    "xgb_pricing_contract_mix": {
+      "pooled_auc": 0.7659069423374163,
+      "pooled_log_loss": 0.2440570443868637,
+      "mean_fold_auc": 0.7659316354660318,
+      "std_fold_auc": 0.0014135708222736195
+    },
+    "cross_model_pricing_global_blend": {
+      "pooled_auc": 0.7662985647482117,
+      "pooled_log_loss": 0.2439185529947281,
+      "mean_fold_auc": 0.7663168365999643,
+      "std_fold_auc": 0.0017550758121417107
+    },
+    "cross_model_pricing_expert_blend": {
+      "pooled_auc": 0.7666124612527336,
+      "pooled_log_loss": 0.24385836720466614,
+      "mean_fold_auc": 0.7666333908358277,
+      "std_fold_auc": 0.001704840513005444
+    }
+  },
+  "runtime_seconds": 480.19170679998933,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase49_unified_contract_pricing_specialists\\run_phase49_unified_contract_pricing_specialists.py": "955e4f85e738bff0f0bb4dafb0bf7b38863a71a2a36b72a4b52c63c8621bafa2",
+    "experiments\\phase50_multiseed_pricing_synthesis\\runs\\phase50_multiseed_20261108\\seed_20261114\\PHASE49_OOF_PREDICTIONS.csv": "8ad9769adf945e149033b6dd3f6405bd62179de2cc04cf36e4878ea147435d38"
+  }
+}

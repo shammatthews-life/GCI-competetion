@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-11-03T14:02:14.568981+00:00",
+  "finished_utc": "2026-11-03T14:07:11.958387+00:00",
+  "runtime_seconds": 297.3894057273865,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scikit_learn": "1.9.1",
+  "lightgbm": "4.7.0",
+  "source_sha256": "8116132f51dfd537f790f04bfa611dbb1e73c07ee52a2366fd7a88ef82d7fdc7",
+  "shared_feature_runner_sha256": "d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "seed": 42,
+  "outer_folds": 5,
+  "inner_stop_fraction": 0.1,
+  "outer_validation_used_for_early_stopping": false
+}

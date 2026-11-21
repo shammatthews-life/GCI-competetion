@@ -1,0 +1,92 @@
+{
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "data_source": "provided course train.csv and test.csv only",
+  "features": [
+    {
+      "name": "FIN_CREDIT_TO_INCOME",
+      "formula": "AMT_CREDIT / AMT_INCOME_TOTAL",
+      "source_columns": [
+        "AMT_CREDIT",
+        "AMT_INCOME_TOTAL"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_ANNUITY_TO_INCOME",
+      "formula": "AMT_ANNUITY / AMT_INCOME_TOTAL",
+      "source_columns": [
+        "AMT_ANNUITY",
+        "AMT_INCOME_TOTAL"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_GOODS_TO_CREDIT",
+      "formula": "AMT_GOODS_PRICE / AMT_CREDIT",
+      "source_columns": [
+        "AMT_GOODS_PRICE",
+        "AMT_CREDIT"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_CREDIT_TO_ANNUITY",
+      "formula": "AMT_CREDIT / AMT_ANNUITY",
+      "source_columns": [
+        "AMT_CREDIT",
+        "AMT_ANNUITY"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_INCOME_PER_FAMILY_MEMBER",
+      "formula": "AMT_INCOME_TOTAL / CNT_FAM_MEMBERS",
+      "source_columns": [
+        "AMT_INCOME_TOTAL",
+        "CNT_FAM_MEMBERS"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_CREDIT_PER_FAMILY_MEMBER",
+      "formula": "AMT_CREDIT / CNT_FAM_MEMBERS",
+      "source_columns": [
+        "AMT_CREDIT",
+        "CNT_FAM_MEMBERS"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    },
+    {
+      "name": "FIN_ANNUITY_PER_FAMILY_MEMBER",
+      "formula": "AMT_ANNUITY / CNT_FAM_MEMBERS",
+      "source_columns": [
+        "AMT_ANNUITY",
+        "CNT_FAM_MEMBERS"
+      ],
+      "uses_target": false,
+      "uses_test_rows_to_fit": false,
+      "fit_policy": "deterministic rowwise formula; no learned state"
+    }
+  ],
+  "excluded": [
+    "SK_ID_CURR",
+    "TARGET",
+    "outside datasets",
+    "fee/product constants",
+    "pooled train/test statistics",
+    "manual prediction rules"
+  ],
+  "invalid_denominator_policy": "non-finite or denominator <= 0 yields NaN"
+}

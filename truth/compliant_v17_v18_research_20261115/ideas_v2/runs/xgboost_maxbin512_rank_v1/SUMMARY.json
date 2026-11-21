@@ -1,0 +1,105 @@
+{
+  "status": "fold-isolated exploratory experiment; not an independent estimate",
+  "hypothesis": "A finer histogram grid may preserve useful split thresholds in skewed financial ratios and bureau-score features.",
+  "max_bin": 512,
+  "n_estimators_cap": 3000,
+  "early_stopping_rounds": 120,
+  "outer_folds": 5,
+  "seed": 20261113,
+  "fixed_blend": "0.90 candidate TE20 within-fold rank + 0.10 XGBoost within-fold rank",
+  "minimum_promotion_gain": 0.005,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "expert_mean_fold_auc": 0.7642648651479091,
+  "blend_mean_fold_auc": 0.7677096799774017,
+  "blend_mean_fold_gain": -4.589617980044203e-05,
+  "positive_blend_folds": 2,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "xgboost_maxbin512_auc": 0.7691370808639961,
+      "fixed_90_10_rank_blend_auc": 0.7723557841397255,
+      "expert_delta": -0.003238662488821653,
+      "blend_delta": -1.995921309227988e-05,
+      "selected_rounds": 862,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 5159
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "xgboost_maxbin512_auc": 0.769752533403561,
+      "fixed_90_10_rank_blend_auc": 0.7746432426370606,
+      "expert_delta": -0.005103052769388161,
+      "blend_delta": -0.00021234353588850396,
+      "selected_rounds": 807,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 5161
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "xgboost_maxbin512_auc": 0.7597867849236751,
+      "fixed_90_10_rank_blend_auc": 0.7625026862172708,
+      "expert_delta": -0.002674309178941181,
+      "blend_delta": 4.159211465448731e-05,
+      "selected_rounds": 919,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5157
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "xgboost_maxbin512_auc": 0.7610391115993275,
+      "fixed_90_10_rank_blend_auc": 0.7647934996622515,
+      "expert_delta": -0.003852819477555669,
+      "blend_delta": -9.843141463161675e-05,
+      "selected_rounds": 666,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5125
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "xgboost_maxbin512_auc": 0.7616088149489864,
+      "fixed_90_10_rank_blend_auc": 0.7642531872307001,
+      "expert_delta": -0.002584711131757955,
+      "blend_delta": 5.9661149955814174e-05,
+      "selected_rounds": 1046,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5140
+    }
+  ],
+  "promotion_gate_passed": false,
+  "submission_generated": false,
+  "versions": {
+    "python": "3.12.10",
+    "xgboost": "3.4.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "model_data": "official train.csv only; test.csv not read",
+    "labels": "used only for fold-local training and AUC reporting",
+    "preprocessing": "one-hot/key-frequency matrices fit on each training partition",
+    "external_data": "none",
+    "label_transfer": "none",
+    "manual_test_adjustments": "none",
+    "test_covariate_pooling": "none",
+    "baseline_oof": "read only as a fold-aligned benchmark; never used as a model feature",
+    "gpu": "CUDA required; XGBoost configured with device=cuda"
+  },
+  "runtime_seconds": 100.80651080000098,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\xgboost_maxbin512_rank_v1.py": "9be474edb2b816c77e6cfaf295280a50a9c84e214fe30f86def6f427e632db42",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\xgboost_maxbin512_rank_v1\\OOF_PREDICTIONS.csv": "c188f6637a02f32adf296dff3906151ad5359f104617742af673b6fcafafd8e0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\xgboost_maxbin512_rank_v1\\FOLD_METRICS.csv": "b25ee2317a6642642055473d2f9a78c49caee5bf002113853ceb2ab270ecdfa2"
+  }
+}

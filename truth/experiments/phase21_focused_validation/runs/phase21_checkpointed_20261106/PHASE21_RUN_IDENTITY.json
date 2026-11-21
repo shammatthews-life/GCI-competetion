@@ -1,0 +1,42 @@
+{
+  "border_count": 128,
+  "depth": 6,
+  "feature_schema_sha256": "244ea65119c416ef848a660cef0efcf8709980decd1956d22729d2a8fbc93ed3",
+  "fold_count": 5,
+  "fold_seed": 20261113,
+  "gpu_ram_part": 0.78,
+  "iterations": 700,
+  "l2_leaf_reg": 5.0,
+  "learning_fractions": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "learning_rate": 0.05,
+  "max_ctr_complexity": 1,
+  "one_hot_max_size": 10,
+  "phase15_multiseed_oof_sha256": "14e92b323a7c5255b506a33c0f8b3925e5f9d110d388c44becf0612aec37a2d6",
+  "phase15_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "random_strength": 1.0,
+  "seed_counts": [
+    1,
+    3,
+    5,
+    10,
+    20
+  ],
+  "source_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase13_matched_baseline\\phase13_features.py": "a54563ccfaa7bbcb758f28d0bfc9036bba784273740038b403e734504c0deb2a",
+    "D:\\gci\\truth\\experiments\\phase14_label_free_model_development\\run_phase14.py": "fe014e934c5083f2248b6de1697c30de148d09b089d538890e686b6650664ba9",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\phase15_features.py": "9ee21c44d89d086e38cbab3f4691d21f55c301282bf1695bb40936f34954217f",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\run_phase15_catboost_preflight.py": "a29e87b0e2b7b79d776c554897b83d1eab0dc60f5e46242d1bd5062f4ea4c2fa",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\runs\\phase15_native_catboost_multiseed_20261105T125826Z\\MULTISEED_OOF_PREDICTIONS.csv": "14e92b323a7c5255b506a33c0f8b3925e5f9d110d388c44becf0612aec37a2d6",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\runs\\phase15_native_catboost_oof_20261105T124238Z\\OOF_PREDICTIONS.csv": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+    "D:\\gci\\truth\\experiments\\phase20_segmentation_expert_research\\run_phase20_segmentation_study.py": "fc1a7001419061b5703b7ba742f2b947b235b563c38b35ced59d5ecd7d33cad9",
+    "D:\\gci\\truth\\experiments\\phase21_focused_validation\\run_phase21_focused_gpu.py": "f48d295ae5a456834027c26bb0afcb54868282cb9832f011f70e93d5cfa9add3"
+  },
+  "task_type": "GPU",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

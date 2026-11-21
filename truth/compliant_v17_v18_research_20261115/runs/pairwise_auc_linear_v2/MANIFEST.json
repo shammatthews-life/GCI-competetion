@@ -1,0 +1,137 @@
+{
+  "status": "training-only exploratory OOF experiment",
+  "data_scope": "verified official train.csv only; no test or sample-submission rows read",
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\OOF_PREDICTIONS.csv": "960aeae7a02b56cd326b7c39d32f3b49424b3f7c509500acc043485be8e2023d"
+  },
+  "method": {
+    "objective": "pairwise logistic AUC surrogate",
+    "pair_sampling": "uniform positive and negative training-row sampling with replacement inside each outer fit fold",
+    "directed_examples": "each sampled positive-minus-negative difference is paired with its negation",
+    "preprocessing": "median imputation, missingness indicators, standardization, and one-hot encoding fit on each outer training fold only",
+    "pair_samples_per_fold": 100000,
+    "sgd_alpha": 0.0001,
+    "sgd_max_iter": 100,
+    "blend_rule": "90% within-fold rank of aligned reference + 10% within-fold rank of pairwise model",
+    "blend_weight_selected_on_current_folds": false
+  },
+  "validation": {
+    "type": "five-fold stratified OOF, seed 20261113",
+    "baseline_mean_fold_auc": 0.7674919876117505,
+    "candidate_mean_fold_auc": 0.7676964803683984,
+    "mean_fold_auc_gain": 0.00020449275664791156,
+    "fold_delta_sample_sd": 0.00010542173287435103,
+    "positive_fold_deltas": 5,
+    "model_fold_metrics": [
+      {
+        "fold": 1,
+        "fit_rows": 136961,
+        "valid_rows": 34241,
+        "positive_negative_pairs_sampled": 100000,
+        "directed_pair_examples": 200000,
+        "features_after_fold_local_encoding": 5357,
+        "pairwise_auc_surrogate": "mean logistic loss on uniformly sampled positive-negative feature differences",
+        "auc_pairwise_linear_model": 0.7625248056295624,
+        "training_pair_matrix_nnz": 14477900
+      },
+      {
+        "fold": 2,
+        "fit_rows": 136961,
+        "valid_rows": 34241,
+        "positive_negative_pairs_sampled": 100000,
+        "directed_pair_examples": 200000,
+        "features_after_fold_local_encoding": 5361,
+        "pairwise_auc_surrogate": "mean logistic loss on uniformly sampled positive-negative feature differences",
+        "auc_pairwise_linear_model": 0.7616138602803548,
+        "training_pair_matrix_nnz": 14481796
+      },
+      {
+        "fold": 3,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "positive_negative_pairs_sampled": 100000,
+        "directed_pair_examples": 200000,
+        "features_after_fold_local_encoding": 5363,
+        "pairwise_auc_surrogate": "mean logistic loss on uniformly sampled positive-negative feature differences",
+        "auc_pairwise_linear_model": 0.7525260442385157,
+        "training_pair_matrix_nnz": 14489134
+      },
+      {
+        "fold": 4,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "positive_negative_pairs_sampled": 100000,
+        "directed_pair_examples": 200000,
+        "features_after_fold_local_encoding": 5328,
+        "pairwise_auc_surrogate": "mean logistic loss on uniformly sampled positive-negative feature differences",
+        "auc_pairwise_linear_model": 0.7551555371524193,
+        "training_pair_matrix_nnz": 14488490
+      },
+      {
+        "fold": 5,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "positive_negative_pairs_sampled": 100000,
+        "directed_pair_examples": 200000,
+        "features_after_fold_local_encoding": 5341,
+        "pairwise_auc_surrogate": "mean logistic loss on uniformly sampled positive-negative feature differences",
+        "auc_pairwise_linear_model": 0.7547799897250177,
+        "training_pair_matrix_nnz": 14486890
+      }
+    ],
+    "blend_fold_metrics": [
+      {
+        "fold": 1,
+        "baseline_auc": 0.7721275031542798,
+        "fixed_90_10_blend_auc": 0.772342686804097,
+        "delta": 0.00021518364981720772
+      },
+      {
+        "fold": 2,
+        "baseline_auc": 0.7743237707790568,
+        "fixed_90_10_blend_auc": 0.7743523525027939,
+        "delta": 2.8581723737097775e-05
+      },
+      {
+        "fold": 3,
+        "baseline_auc": 0.7622172770690241,
+        "fixed_90_10_blend_auc": 0.7624234445319238,
+        "delta": 0.0002061674628996979
+      },
+      {
+        "fold": 4,
+        "baseline_auc": 0.7649573681112148,
+        "fixed_90_10_blend_auc": 0.7652405013886031,
+        "delta": 0.00028313327738827
+      },
+      {
+        "fold": 5,
+        "baseline_auc": 0.7638340189451767,
+        "fixed_90_10_blend_auc": 0.7641234166145745,
+        "delta": 0.0002893976693978395
+      }
+    ],
+    "selection_note": "Exploratory test on repeatedly examined labels; pairwise loss is a surrogate for AUC, not the AUC metric itself."
+  },
+  "rule_controls": {
+    "external_data": "none",
+    "matched_label_transfer": "none; pair examples are generated only from training labels within the current fit fold",
+    "manual_predictions": "none",
+    "cross_dataset_statistics": "none",
+    "validation_labels": "not used in preprocessing, pair generation, or fitting",
+    "cached_predictions": "aligned OOF used only as a comparator, never as model input"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1"
+  },
+  "runtime_seconds": 62.88246700000309,
+  "output_sha256": {
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\pairwise_auc_linear_v2\\OOF_PREDICTIONS.csv": "02e16616c8460a71545a0ac4a1c25bf219fd4975db93ee849971084f74ccc5b0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\pairwise_auc_linear_v2\\MODEL_FOLD_METRICS.csv": "fb1591784a6cfe0a4dab9c2b2713260f6d0d0e9850fc4a12a69d7f7f475eae26",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\pairwise_auc_linear_v2\\BLEND_FOLD_METRICS.csv": "239dc518bb64200e920b7d4ed9730e288bd683412beab7fc8d021145e3da1b11"
+  }
+}

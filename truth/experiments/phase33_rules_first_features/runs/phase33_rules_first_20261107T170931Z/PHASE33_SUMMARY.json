@@ -1,0 +1,111 @@
+{
+  "phase": "Phase 33 rules-first feature screen",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "model": {
+    "family": "LightGBM binary classifier",
+    "categorical_representation": "one-hot encoders fitted separately on each model-fit partition",
+    "parameters": {
+      "num_leaves": 63,
+      "min_child_samples": 100,
+      "learning_rate": 0.03,
+      "colsample_bytree": 0.8,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "reg_lambda": 1.0,
+      "max_bin": 127
+    },
+    "max_iterations": 1600,
+    "early_stopping_rounds": 100,
+    "inner_validation_fraction": 0.12
+  },
+  "metrics": {
+    "base": {
+      "pooled_auc": 0.7585149163278653,
+      "mean_fold_auc": 0.7585919571070272,
+      "log_loss": 0.2461043894290924
+    },
+    "financial": {
+      "pooled_auc": 0.7593645405487054,
+      "mean_fold_auc": 0.7594038047156254,
+      "log_loss": 0.2459460347890854
+    },
+    "peer": {
+      "pooled_auc": 0.7586620197997769,
+      "mean_fold_auc": 0.7586929870570795,
+      "log_loss": 0.24597705900669098
+    },
+    "keys": {
+      "pooled_auc": 0.7632213640453849,
+      "mean_fold_auc": 0.7632777626140496,
+      "log_loss": 0.24493101239204407
+    },
+    "keys_frequency": {
+      "pooled_auc": 0.7632839729222641,
+      "mean_fold_auc": 0.7633087308569567,
+      "log_loss": 0.24498482048511505
+    },
+    "all_safe": {
+      "pooled_auc": 0.7632510937741069,
+      "mean_fold_auc": 0.7632774017490845,
+      "log_loss": 0.24491716921329498
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "outer_validation_labels": "used only for final fold scoring; not feature fitting, stopping, or model selection",
+    "label_free_peer_feature": "fit-fold occupation percentile of rowwise external-score mean"
+  },
+  "feature_hypotheses": {
+    "financial": "seven guarded EXP02 formulas from supplied fields",
+    "keys": "rounded annuity/credit and annuity/goods ratios at fixed decimal precision",
+    "key_frequency": "fit-partition-only counts and one-hot rare grouping; no target values"
+  },
+  "metrics_by_variant": {
+    "base": {
+      "pooled_auc": 0.7585149163278653,
+      "mean_fold_auc": 0.7585919571070272,
+      "log_loss": 0.2461043894290924
+    },
+    "financial": {
+      "pooled_auc": 0.7593645405487054,
+      "mean_fold_auc": 0.7594038047156254,
+      "log_loss": 0.2459460347890854
+    },
+    "peer": {
+      "pooled_auc": 0.7586620197997769,
+      "mean_fold_auc": 0.7586929870570795,
+      "log_loss": 0.24597705900669098
+    },
+    "keys": {
+      "pooled_auc": 0.7632213640453849,
+      "mean_fold_auc": 0.7632777626140496,
+      "log_loss": 0.24493101239204407
+    },
+    "keys_frequency": {
+      "pooled_auc": 0.7632839729222641,
+      "mean_fold_auc": 0.7633087308569567,
+      "log_loss": 0.24498482048511505
+    },
+    "all_safe": {
+      "pooled_auc": 0.7632510937741069,
+      "mean_fold_auc": 0.7632774017490845,
+      "log_loss": 0.24491716921329498
+    }
+  },
+  "runtime_seconds": 385.27579849999165,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase13_matched_baseline\\phase13_features.py": "a54563ccfaa7bbcb758f28d0bfc9036bba784273740038b403e734504c0deb2a",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_FOLD_RESULTS.csv": "ed8a5db1fce602c59b1f098d760eb4f3cc5ae4af73a2cc97fccc0052ce484f5e",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_OOF_PREDICTIONS.csv": "adc206e9a2743627cfd5675e0f97ada1190e10a202bd2e0657238d3816cbb90a"
+  }
+}

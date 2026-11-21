@@ -1,0 +1,40 @@
+{
+  "fit_rows": 136961,
+  "fold": 1,
+  "fold_seed": 20261113,
+  "no_test_external_or_submission_data": true,
+  "phase13_oof_sha256": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+  "primary_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "results": {
+    "base_delta_vs_stored_primary": -0.0001036235448510503,
+    "base_variant": {
+      "auc": 0.7727711576049348,
+      "categorical_count": 16,
+      "feature_count": 99,
+      "fit_seconds": 20.9063015000429,
+      "max_fit_category_count": 4927
+    },
+    "cross_delta_vs_base": 0.0009026759575032628,
+    "cross_delta_vs_stored_primary": 0.0007990524126522125,
+    "cross_variant": {
+      "auc": 0.773673833562438,
+      "categorical_count": 17,
+      "feature_count": 100,
+      "fit_seconds": 14.301405999925919,
+      "max_fit_category_count": 4927
+    },
+    "eligibility": "Cross definition is label-free and quantiles fit on outer training covariates only; CatBoost CTR use and existing product-key constants remain unresolved.",
+    "fit_category_support": 255,
+    "fit_fold_external_score_quartile_cuts": [
+      0.4115062991523911,
+      0.5298001294853274,
+      0.6300335333889052
+    ],
+    "fit_seconds_total": 40.04729579994455,
+    "spearman_cross_vs_stored_primary": 0.9933788920623426,
+    "stored_primary_fold_auc": 0.7728747811497858
+  },
+  "status": "one-fold interaction preflight only",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "validation_rows": 34241
+}

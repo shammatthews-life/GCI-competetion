@@ -1,0 +1,41 @@
+{
+  "candidate": "D:\\gci\\truth\\v22_compliance_rework\\v1_no_label_transfer\\runs\\v1_gpu_final_20261114T2112\\submission_clean_v1.csv",
+  "candidate_sha256": "D5C6FB00732D2FBDE150667EB6846C51AB74A5C552BCA9C8F8920BDAD1D7F5D0",
+  "candidate_unique_targets": 61491,
+  "exact_normalized_rank_percentile_matches": 10,
+  "exact_target_numeric_matches": 0,
+  "exact_target_text_matches": 0,
+  "id_order_matches": true,
+  "interpretation": "This is a distinct raw-data-trained model, not a reconstruction of the historical V17/V18 predictions. Rank correlation is a descriptive comparison, not a leaderboard score.",
+  "kendall_rank_correlation": 0.8030996475022512,
+  "max_absolute_target_difference": 0.935295084781156,
+  "max_normalized_rank_percentile_difference": 0.7793785264801054,
+  "reference": "D:\\gci\\truth\\v22_compliance_rework\\v22_verified_reference.csv",
+  "reference_sha256": "0A239E36706620102717C8AE606B680C515F1A49EF31B7D70A7970B42BCD7CE0",
+  "reference_unique_targets": 60636,
+  "rows": 61500,
+  "scope_note": "V1 is a new clean raw-data-trained replacement and removes more than one historical risk at once. It is not a controlled single-feature ablation of the V17/V18 models; those model predictions must be regenerated to measure the isolated effect of removing partner-label features.",
+  "spearman_target_and_rank_correlation": 0.9423275738061092,
+  "target_match_percent": 0.0,
+  "validation": {
+    "gpu_requested": true,
+    "log_loss": 0.24542663991451263,
+    "mean_fold_auc": 0.760324207110327,
+    "pooled_oof_auc": 0.7603149266527016,
+    "rule_controls": {
+      "custom_target_encoding": "none",
+      "external_data": "none",
+      "id_predictor": "excluded",
+      "manual_prediction_edits": "none",
+      "test_statistics": "none; only rowwise transforms and fold-fit one-hot vocabularies"
+    },
+    "runtime_seconds": 81.72577149999779,
+    "std_fold_auc": 0.004429921742352252
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1"
+  },
+  "whole_file_byte_equal": false
+}

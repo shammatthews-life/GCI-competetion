@@ -1,0 +1,90 @@
+{
+  "category_cardinality_train": {
+    "CODE_GENDER": 3,
+    "NAME_CONTRACT_TYPE": 2,
+    "NAME_EDUCATION_TYPE": 5,
+    "NAME_FAMILY_STATUS": 6,
+    "NAME_HOUSING_TYPE": 6,
+    "NAME_INCOME_TYPE": 8,
+    "OCCUPATION_TYPE": 19,
+    "ORGANIZATION_TYPE": 58
+  },
+  "models": {
+    "catboost": {
+      "GPU": true,
+      "categorical_inputs": "numeric matrix only; categoricals one-hot encoded",
+      "depth": 7,
+      "iterations_max": 3000,
+      "learning_rate": 0.04
+    },
+    "lightgbm": {
+      "categorical_inputs": "numeric matrix with fold-fitted one-hot columns",
+      "device": "CPU",
+      "iterations_max": 3000,
+      "learning_rate": 0.025,
+      "num_leaves": 31
+    }
+  },
+  "oof_metrics": [
+    {
+      "mean_fold_auc": 0.7578578219546188,
+      "model": "catboost_onehot",
+      "pooled_auc": 0.7578286879226565,
+      "pooled_log_loss": 0.2462240308523178,
+      "std_fold_auc": 0.0041996367827006435
+    },
+    {
+      "mean_fold_auc": 0.7594740432879512,
+      "model": "lightgbm_onehot",
+      "pooled_auc": 0.7594441984942717,
+      "pooled_log_loss": 0.24575403332710266,
+      "std_fold_auc": 0.004116137310856594
+    },
+    {
+      "mean_fold_auc": NaN,
+      "model": "equal_blend",
+      "pooled_auc": 0.7599683489162428,
+      "pooled_log_loss": 0.2455769032239914,
+      "std_fold_auc": NaN
+    }
+  ],
+  "phase": "Phase 29 clean-scope scratch modeling",
+  "rules_scope": {
+    "external_data": "none",
+    "feature_values": "deterministic rowwise transforms of provided columns",
+    "identity_feature": "SK_ID_CURR excluded from predictors",
+    "inputs": "only supplied train.csv, test.csv, sample_submission.csv",
+    "manual_prediction_edits": "none",
+    "native_categorical_target_statistics": "none; categorical columns are one-hot encoded",
+    "target_encoding": "none",
+    "test_covariate_fitting": "none; category encoder is fit within training partitions only"
+  },
+  "runtime_seconds": 139.10984759998973,
+  "sha256": {
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\run_phase29_clean_scratch.py": "534e97bc76cc0679aacd9f95da56ff57c0622b06d161169553625e871e50ee56",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\PHASE29_FOLD_RESULTS.csv": "4147769b591fc15e36036945b45837580f5ceaa24e423172bb3464cdb1083bc0",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\PHASE29_OOF_PREDICTIONS.csv": "1673d02d9676d61c711723e86af8fae3538973bde21e3d94b303854621249ed6",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\PHASE29_SUMMARY.csv": "dd46aff14f191ccca212e42471caff66faf1baf98e5cc5c943d7c8e30e885fa4",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_catboost_onehot.csv": "45c419bf5e9615f739821aa17a947b01f3ae63d6cd7f78a5562b47a8de7b69e3",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_equal_blend.csv": "1c3d8fab97577f6990aedf0a50fc1925faf0b67df60929dd0884ba771a33c320",
+    "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_lightgbm_onehot.csv": "75cea34008f350f0a1e72d70f53e1fda72df69584657ade20a200615548aa235"
+  },
+  "status": "locally reproducible research; not organizer-certified",
+  "submission_files": {
+    "catboost_onehot": "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_catboost_onehot.csv",
+    "equal_blend": "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_equal_blend.csv",
+    "lightgbm_onehot": "D:\\gci\\truth\\experiments\\phase29_clean_scratch\\runs\\phase29_clean_20261107T163808Z\\submission_lightgbm_onehot.csv"
+  },
+  "test_rows": 61500,
+  "timestamp_utc": "2026-11-07T16:40:27.948287+00:00",
+  "train_rows": 171202,
+  "validation": {
+    "early_stopping": "inner stratified 12% split of each outer training fold; final fold model refit on all outer training rows",
+    "ensemble": "fixed 0.5 CatBoost + 0.5 LightGBM; no weight search",
+    "outer": "5-fold stratified",
+    "outer_seed": 20261113
+  }
+}

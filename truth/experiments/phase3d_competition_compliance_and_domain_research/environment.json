@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-11-03T17:43:18.890597+00:00",
+  "finished_utc": "2026-11-03T17:46:48.566550+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "scikit_learn": "1.9.1",
+  "lightgbm": "4.7.0",
+  "train_rows": 171202,
+  "train_columns_including_target": 34,
+  "target_rate": 0.08072919708881905,
+  "folds": 5,
+  "feature_generation": "row-wise formulas only; target excluded",
+  "elapsed_seconds": 209.7099043999915
+}

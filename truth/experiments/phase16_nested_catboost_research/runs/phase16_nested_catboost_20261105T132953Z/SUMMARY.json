@@ -1,0 +1,64 @@
+{
+  "bootstrap_repetitions": 1000,
+  "bootstrap_seed": 20261601,
+  "configurations": [
+    {
+      "depth": 6,
+      "iterations": 700,
+      "l2_leaf_reg": 5.0,
+      "learning_rate": 0.05,
+      "name": "historical_d6_lr005_i700",
+      "random_strength": 1.0
+    },
+    {
+      "depth": 5,
+      "iterations": 850,
+      "l2_leaf_reg": 5.0,
+      "learning_rate": 0.05,
+      "name": "shallower_d5_lr005_i850",
+      "random_strength": 1.0
+    },
+    {
+      "depth": 7,
+      "iterations": 800,
+      "l2_leaf_reg": 8.0,
+      "learning_rate": 0.04,
+      "name": "deeper_d7_lr004_i800",
+      "random_strength": 1.0
+    },
+    {
+      "depth": 6,
+      "iterations": 1000,
+      "l2_leaf_reg": 8.0,
+      "learning_rate": 0.035,
+      "name": "regularized_d6_lr0035_i1000",
+      "random_strength": 0.5
+    }
+  ],
+  "feature_scope": "Supplied train features, eight historical product keys, Phase 14 deterministic numeric block, and Phase 15 date-offset features. Product-key constants and CatBoost native CTR eligibility remain unresolved.",
+  "governance": "No test rows, external data, or submissions used. All results reuse previously exposed labels; this is not independent confirmation or an eligibility determination.",
+  "inner_folds": 3,
+  "outer_folds": 5,
+  "outer_seed": 20261113,
+  "paired_delta_ci95_high": 0.0006591630402749177,
+  "paired_delta_ci95_low": -0.0004421338540995662,
+  "phase13_oof_sha256": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+  "phase15_baseline_pooled_auc": 0.767510927794687,
+  "phase15_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "pooled_auc_delta_vs_phase15_baseline": 0.00014188110419044442,
+  "pooled_outer_auc": 0.7676528088988774,
+  "positive_outer_fold_count": 4,
+  "positives": 13821,
+  "rows": 171202,
+  "run_id": "phase16_nested_catboost_20261105T132953Z",
+  "runtime_seconds": 1427.0355026999023,
+  "selected_config_by_outer_fold": {
+    "1": "shallower_d5_lr005_i850",
+    "2": "regularized_d6_lr0035_i1000",
+    "3": "historical_d6_lr005_i700",
+    "4": "regularized_d6_lr0035_i1000",
+    "5": "deeper_d7_lr004_i800"
+  },
+  "status": "nested hyperparameter selection, exploratory development OOF",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

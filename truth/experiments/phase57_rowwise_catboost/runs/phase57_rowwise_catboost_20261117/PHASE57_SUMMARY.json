@@ -1,0 +1,165 @@
+{
+  "experiment": "Phase 57 row-local CatBoost feature ablation",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "iterations": 1000,
+  "one_hot_max_size": 256,
+  "category_cardinality": {
+    "NAME_CONTRACT_TYPE": 2,
+    "CODE_GENDER": 3,
+    "NAME_INCOME_TYPE": 8,
+    "NAME_EDUCATION_TYPE": 5,
+    "NAME_FAMILY_STATUS": 6,
+    "NAME_HOUSING_TYPE": 6,
+    "OCCUPATION_TYPE": 19,
+    "ORGANIZATION_TYPE": 58,
+    "R57_Q3_KEY": 96
+  },
+  "device": "GPU",
+  "baseline_feature_count": 32,
+  "candidate_feature_count": 65,
+  "candidate_added_feature_names": [
+    "R57_PAYMENT_TO_INCOME",
+    "R57_CREDIT_TO_INCOME",
+    "R57_GOODS_TO_CREDIT",
+    "R57_FINANCED_GAP_TO_CREDIT",
+    "R57_CREDIT_TO_ANNUITY",
+    "R57_INCOME_PER_PERSON",
+    "R57_CREDIT_PER_PERSON",
+    "R57_AGE_YEARS",
+    "R57_EMPLOYMENT_SENTINEL",
+    "R57_EMPLOYMENT_YEARS_VALID",
+    "R57_EMPLOYMENT_TO_AGE",
+    "R57_REGISTRATION_TO_AGE",
+    "R57_ID_PUBLICATION_TO_AGE",
+    "R57_PHONE_CHANGE_TO_AGE",
+    "R57_EXT_OBSERVED_COUNT",
+    "R57_EXT_MEAN",
+    "R57_EXT_STD",
+    "R57_EXT_MIN",
+    "R57_EXT_MAX",
+    "R57_EXT_RANGE",
+    "R57_EXT_1_MINUS_2",
+    "R57_EXT_1_MINUS_3",
+    "R57_EXT_2_MINUS_3",
+    "R57_EXT_1_TIMES_2",
+    "R57_EXT_1_TIMES_3",
+    "R57_EXT_2_TIMES_3",
+    "R57_BUREAU_TOTAL",
+    "R57_BUREAU_OBSERVED_COUNT",
+    "R57_BUREAU_MONTH_PLUS_YEAR",
+    "R57_BUREAU_MONTH_TO_YEAR",
+    "R57_ANNUITY_CREDIT_RATIO",
+    "R57_Q3_KEY",
+    "R57_RAW_MISSING_COUNT"
+  ],
+  "fold_records": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7555150759700637,
+      "candidate_auc": 0.7640669062707076,
+      "delta_auc": 0.008551830300643881
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7572225757355358,
+      "candidate_auc": 0.7672164813651756,
+      "delta_auc": 0.009993905629639865
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.750426357968463,
+      "candidate_auc": 0.7567558996549689,
+      "delta_auc": 0.006329541686505902
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7487865470376989,
+      "candidate_auc": 0.7570961538426172,
+      "delta_auc": 0.008309606804918324
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7497262862992207,
+      "candidate_auc": 0.7582084799775779,
+      "delta_auc": 0.00848219367835723
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "pooled_auc": 0.7523150806218665,
+      "mean_fold_auc": 0.7523353686021965,
+      "fold_auc": [
+        0.7555150759700637,
+        0.7572225757355358,
+        0.750426357968463,
+        0.7487865470376989,
+        0.7497262862992207
+      ],
+      "log_loss": 0.24785659440069482
+    },
+    "candidate": {
+      "pooled_auc": 0.7606156285126725,
+      "mean_fold_auc": 0.7606687842222094,
+      "fold_auc": [
+        0.7640669062707076,
+        0.7672164813651756,
+        0.7567558996549689,
+        0.7570961538426172,
+        0.7582084799775779
+      ],
+      "log_loss": 0.24544033016315112
+    }
+  },
+  "candidate_vs_baseline": {
+    "pooled_auc": 0.008300547890806032,
+    "log_loss": -0.0024162642375437082,
+    "positive_folds": 5,
+    "bootstrap": {
+      "replicates": 1000,
+      "ci_2_5": 0.006743060504830589,
+      "ci_97_5": 0.009835466563773834,
+      "fraction_positive": 1.0,
+      "conditional_on_fixed_oof_vectors": true
+    }
+  },
+  "feature_scope": {
+    "baseline": "official row predictors, with raw categorical fields passed to CatBoost",
+    "candidate": "baseline plus deterministic row-local financial, timing, EXT_SOURCE, inquiry, missingness, and Q3 features",
+    "cross_row_features": "none",
+    "custom_target_encoding": "none",
+    "train_test_pooling": "none",
+    "external_data_or_prediction_cache": "none",
+    "ID_as_predictor": "no",
+    "categorical_target_statistics": "disabled by one-hot threshold; all training-fold category cardinalities are checked against the threshold"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "29d3823e7f11ba5ba80906bc19b763f62a5665132bda406a2f7b43e2d9773940",
+  "runtime_seconds": 284.8658072000253,
+  "artifacts": {
+    "oof_predictions": "PHASE57_OOF.csv",
+    "submission": "submission.csv"
+  },
+  "limitations": [
+    "All labeled rows and these folds have prior project exposure.",
+    "Bootstrap interval is conditional on saved OOF vectors and does not include model or research-selection uncertainty.",
+    "Leaderboard score is unknown until evaluated; no score is guaranteed.",
+    "The public/private leaderboard split and target-encoding eligibility are not resolved by local materials."
+  ]
+}

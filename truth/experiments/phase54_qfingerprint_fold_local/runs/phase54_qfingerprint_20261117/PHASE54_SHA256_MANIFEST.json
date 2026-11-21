@@ -1,0 +1,22 @@
+{
+  "PHASE54_OOF_PREDICTIONS.csv": {
+    "bytes": 8854186,
+    "sha256": "460579368672e8ef046dc8e8068de72e6dd36a23c96fb3ff41fccb46252d70ab"
+  },
+  "submission.csv": {
+    "bytes": 1731879,
+    "sha256": "c66c8c31df73c85e190f7dd642c1c1fa7b3b8fa1b837af118ebbee2f782fe0f8"
+  },
+  "PHASE54_SUMMARY.json": {
+    "bytes": 7060,
+    "sha256": "0770b86261874d3f27306a714f684ec89defd093e691b974717e0fe1b9a855d6"
+  },
+  "PHASE54_REPORT.md": {
+    "bytes": 2089,
+    "sha256": "4bc9dfb0e0723841a5fae0407d139c040842eee86bda5083f848cacd6b21a94b"
+  },
+  "phase54_qfingerprint_fold_local.py": {
+    "bytes": 28760,
+    "sha256": "64e74b91f5110bb722d4f6237a29f206b8d8d1e9601b134cdc3561641de8a6e1"
+  }
+}

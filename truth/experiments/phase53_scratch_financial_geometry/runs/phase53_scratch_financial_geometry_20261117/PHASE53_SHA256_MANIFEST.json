@@ -1,0 +1,22 @@
+{
+  "PHASE53_OOF_PREDICTIONS.csv": {
+    "bytes": 8837322,
+    "sha256": "4ff706c2ebbb81ef9227afd7ef11ee5a999d45114aa4612605bc21e75dac4175"
+  },
+  "submission.csv": {
+    "bytes": 1728528,
+    "sha256": "01a9c82271c99c87f4180174cb1db73d38590a8b22b94b52db5abded21c962ca"
+  },
+  "PHASE53_SUMMARY.json": {
+    "bytes": 5105,
+    "sha256": "30501819ae395f28d0b0916757fa4b2f1cb13a253088ff6052296cce5a777607"
+  },
+  "PHASE53_REPORT.md": {
+    "bytes": 2343,
+    "sha256": "60a969a5b7cb410fb26e7592226691ab37ca4e72cecb1d470ce17e6f69e599d0"
+  },
+  "phase53_scratch_financial_geometry.py": {
+    "bytes": 26991,
+    "sha256": "10b98d608ca7a10a1d239443a4d219e3b8fba51024db4c9c44750ff60a81db2e"
+  }
+}

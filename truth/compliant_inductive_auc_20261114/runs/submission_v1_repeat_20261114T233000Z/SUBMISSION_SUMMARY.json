@@ -1,0 +1,75 @@
+{
+  "candidate": "strictly inductive Phase 37 plus application-process blend",
+  "status": "generated reproducible candidate; leaderboard score unknown",
+  "submission": {
+    "path": "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\submission_v1_repeat_20261114T233000Z\\submission_candidate_v1.csv",
+    "rows": 61500,
+    "columns": [
+      "SK_ID_CURR",
+      "TARGET"
+    ],
+    "ids_unique": true,
+    "ids_match_sample_in_order": true,
+    "prediction_min": 0.0020841097803315735,
+    "prediction_max": 0.8010190799704549
+  },
+  "fixed_ensemble": {
+    "phase37_probability_component": {
+      "definition": "equal average of three XGBoost seeds and one LightGBM model",
+      "xgboost_seeds": [
+        20261113,
+        20261114,
+        20261115
+      ],
+      "xgboost_rounds": {
+        "20261113": 1491,
+        "20261114": 1076,
+        "20261115": 966
+      },
+      "lightgbm_seed": 20261113,
+      "lightgbm_rounds": 326
+    },
+    "application_process_component": {
+      "model": "XGBoost CUDA; row-wise missingness and interactions",
+      "seed": 20261113,
+      "rounds": 1073
+    },
+    "final_weights": "0.5 Phase 37 probability average + 0.5 application-process probability",
+    "reason_for_probability_blend": "avoids fitting score transforms or statistics on the test prediction batch"
+  },
+  "training_boundary": {
+    "official_train_test_sample_hashes_enforced": true,
+    "external_data_or_prediction_cache_read": false,
+    "target_encoding_or_peer_label_transfer": false,
+    "learned_category_vocabulary_and_frequency_fit_rows": "training rows only",
+    "test_covariates_used_for_fitted_preprocessing": false,
+    "test_covariates_used_only_for_rowwise_features_and_inference": true,
+    "model_round_selection": "stratified inner holdout from training rows",
+    "manual_prediction_adjustments": false,
+    "xgboost_device": "CUDA required and checked after each fit",
+    "lightgbm_device": "CPU"
+  },
+  "validation_context": {
+    "development_oof_reference_mean_fold_auc": 0.7660807122170806,
+    "development_oof_reference": "V3 fixed 50/50 probability blend on seed-20261113 outer folds",
+    "note": "This OOF score is not a test AUC or leaderboard estimate; the public score is unknown until submitted."
+  },
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0"
+  },
+  "runtime_seconds": 171.4665438000011,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\build_submission_v1.py": "4a5a570a24126eeee7c1cead11dbda2bbc849ff395fa64c986178a7ecaf1fe5b",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\run_v3_application_process.py": "2d9098527276edf13b91cf02897060bc670f9e1a2afbf184557156da87cfa187",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\submission_v1_repeat_20261114T233000Z\\submission_candidate_v1.csv": "cb08aa3147c52c4ba992490ce9b6e3d2fe8e2aa0c58cc94682a26c87ce5e6ef5"
+  }
+}

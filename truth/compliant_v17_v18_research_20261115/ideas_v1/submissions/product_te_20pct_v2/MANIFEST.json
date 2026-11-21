@@ -1,0 +1,88 @@
+{
+  "status": "generated; local exploratory validation only; not organizer-certified",
+  "submission": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\submission_compliant_product_te20_v2.csv",
+  "data_scope": "official train.csv and test.csv; sample_submission.csv read only for schema and ID/order validation",
+  "rows": 61500,
+  "prediction_min": 1.626042699881299e-05,
+  "prediction_max": 0.9999934958292005,
+  "blend": {
+    "prior_model_views": "50% within-test rank of Phase 33/34 probability average + 50% within-test rank of clean CatBoost",
+    "nested_product_target_encoding_lightgbm_weight": 0.2,
+    "final_rule": "80% rank of prior blend + 20% rank of nested, fold-local product-key LightGBM",
+    "weights": "fixed and documented; no row-specific routing or prediction edits"
+  },
+  "validation": {
+    "type": "five-fold stratified OOF using seed 20261113; folds shared across components",
+    "baseline_mean_fold_auc": 0.7674503449256146,
+    "candidate_mean_fold_auc": 0.7677555761572021,
+    "mean_fold_auc_gain": 0.00030523123158754384,
+    "positive_fold_deltas": 5,
+    "fold_metrics": [
+      {
+        "fold": 1,
+        "baseline_auc": 0.7721276180936008,
+        "candidate_auc": 0.7723757433528178,
+        "delta": 0.00024812525921702466
+      },
+      {
+        "fold": 2,
+        "baseline_auc": 0.7743237133283558,
+        "candidate_auc": 0.7748555861729491,
+        "delta": 0.0005318728445933285
+      },
+      {
+        "fold": 3,
+        "baseline_auc": 0.7622174322420372,
+        "candidate_auc": 0.7624610941026163,
+        "delta": 0.0002436618605791141
+      },
+      {
+        "fold": 4,
+        "baseline_auc": 0.7647489879960916,
+        "candidate_auc": 0.7648919310768831,
+        "delta": 0.0001429430807915466
+      },
+      {
+        "fold": 5,
+        "baseline_auc": 0.7638339729679876,
+        "candidate_auc": 0.7641935260807443,
+        "delta": 0.0003595531127567053
+      }
+    ],
+    "weight_selection_caveat": "The 20% weight was the best of a small fixed-weight screen on repeatedly examined labels; reported OOF gain is exploratory and subject to selection optimism. The leaderboard score is unknown until submitted by the user."
+  },
+  "rule_controls": {
+    "external_data": "none",
+    "label_transfer": "none; only smoothed category target statistics from the official TARGET column, cross-fitted within training partitions",
+    "manual_test_predictions": "none",
+    "train_test_statistical_pooling": "none; row-wise features are built separately, CatBoost train/test frames remain separate, and encoders/counts/target maps fit only on training partitions",
+    "test_set_perturbation": "passed; changing/reordering test covariates did not change sampled training or validation matrices",
+    "validation_label_perturbation": "passed; changing only outer-validation labels did not change the fold-local target encodings",
+    "test_set_use": "model inference only; sample file used only to validate output schema and order",
+    "reproducibility": "fixed seeds; source/data hashes and package versions recorded"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10"
+  },
+  "runtime_seconds": 502.7201311000099,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\create_compliant_submission_te20_v2.py": "db7495363d7fb9000cb3e9a676da508ca9d8043afb2b016bfafc3bbf3b0b872e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\run_clean_v17v18_catboost_probe.py": "05278a67922c7008892a3c9d5bd2c8ad7ca08a75e022fd14244600b8bbf78c0e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_nested_product_te_lgbm_v1.py": "b3157e0d69908e8c74da3c993e3ab0fb883079525b0bca8846b2c23f0f9794c4",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\run_phase34_xgboost_rules_first.py": "9843ae2548dbeb87e1a4f4d346b9943fefbd91038610ff8afcc40f8c60459fb9",
+    "D:\\gci\\truth\\experiments\\phase13_matched_baseline\\phase13_features.py": "a54563ccfaa7bbcb758f28d0bfc9036bba784273740038b403e734504c0deb2a",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\submission_compliant_product_te20_v2.csv": "9a8ca9a97bd377830bb4f403a6fc1571a3064504e8ba187ed96d056ff82b39fb",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\FOLD_METRICS.csv": "ad8da0cbe1da0bf5f1dc884a34a9aa1515fe07386d17fe5edae556063d7dc47e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\TEST_COMPONENT_PREDICTIONS.csv": "10acd49936bf85fd6c43190174a0c4e884769bc8ce766441ab68ba07b4743f86"
+  }
+}

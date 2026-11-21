@@ -1,0 +1,89 @@
+{
+  "status": "exploratory fold-isolated AUC-surrogate experiment; not an independent estimate",
+  "objective": "CatBoost PairLogit over a capped set of generated positive-negative pairs in one global training-fold group",
+  "pair_cap_per_fold": 1000000,
+  "iterations": 500,
+  "outer_folds": 5,
+  "seed": 20261113,
+  "fixed_blend": "0.90 candidate TE20 rank + 0.10 PairLogit rank, normalized within each validation fold",
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "pairlogit_mean_fold_auc": 0.7586339646969912,
+  "fixed_blend_mean_fold_auc": 0.7677186925330617,
+  "fixed_blend_mean_fold_gain": -3.68836241404491e-05,
+  "positive_blend_fold_deltas": 3,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.7723757433528178,
+      "pairlogit_auc": 0.7623814935371688,
+      "blend_auc": 0.7722171155959003,
+      "pairlogit_delta_vs_baseline": -0.009994249815649003,
+      "blend_delta_vs_baseline": -0.0001586277569174399
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.7748555861729491,
+      "pairlogit_auc": 0.7660325143391205,
+      "blend_auc": 0.774863623526016,
+      "pairlogit_delta_vs_baseline": -0.008823071833828688,
+      "blend_delta_vs_baseline": 8.037353066869812e-06
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7624610941026163,
+      "pairlogit_auc": 0.7552032040031786,
+      "blend_auc": 0.762594790021258,
+      "pairlogit_delta_vs_baseline": -0.007257890099437669,
+      "blend_delta_vs_baseline": 0.00013369591864165198
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7648919310768831,
+      "pairlogit_auc": 0.7530970809266574,
+      "blend_auc": 0.7646179242715236,
+      "pairlogit_delta_vs_baseline": -0.011794850150225744,
+      "blend_delta_vs_baseline": -0.0002740068053594946
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7641935260807443,
+      "pairlogit_auc": 0.7564555306788311,
+      "blend_auc": 0.7643000092506105,
+      "pairlogit_delta_vs_baseline": -0.0077379954019132224,
+      "blend_delta_vs_baseline": 0.00010648316986616724
+    }
+  ],
+  "versions": {
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "data": "official train.csv only; test.csv not read",
+    "training_labels": "used only for model fitting inside each outer training fold",
+    "validation_labels": "used only for AUC reporting; excluded from all training pairs",
+    "pair_construction": "automatic from binary TARGET within the current training fold; no matched-applicant label transfer",
+    "test_statistics": "none",
+    "external_data": "none",
+    "manual_prediction_changes": "none",
+    "OOF_baseline": "read only to verify row/fold alignment and evaluate a pre-specified blend; not used as a model feature"
+  },
+  "runtime_seconds": 111.8373816000094,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_catboost_pairlogit_auc_v1.py": "4507ae16ed423f3dcbb87351cdf8ec617d789a065cf39cc4545089ea9754f6fe",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\catboost_pairlogit_auc_v1\\OOF_PREDICTIONS.csv": "ef72ae01e34ce29cb22b930b1d9ecaf27ed181db18bbc5b59685a1ada27aa400",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\catboost_pairlogit_auc_v1\\FOLD_METRICS.csv": "6f387fb4262c6d2e708f2e507343c5a8a1b914e1d359b7ed3e06869ea083b06e"
+  }
+}

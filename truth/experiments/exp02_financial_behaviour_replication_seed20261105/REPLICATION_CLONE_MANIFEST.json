@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "prepared_utc": "2026-11-04T04:16:00.409317+00:00",
+  "source_notebook": "D:\\gci\\truth\\experiments\\exp02_financial_behaviour\\EXP02_FINANCIAL_BEHAVIOUR.ipynb",
+  "source_notebook_sha256": "b3882dc3ed7a8b6a3370a2f65da7232e91ee7f0d65baf9da3362810f6d13cd7c",
+  "source_canonical_cell_sha256": "dd4bcb77f05ee1820118d03e0dd965fd451e928c0fe45fb8a8847ebfae53bfa6",
+  "replica_notebook": "D:\\gci\\truth\\experiments\\exp02_financial_behaviour_replication_seed20261105\\EXP02_FINANCIAL_BEHAVIOUR_SEED20261105.ipynb",
+  "replica_notebook_source_sha256": "d4f7c502d88e90f71b5875a46d3a1767b5c73083eec1ecee67b5f469b9cec9a3",
+  "replica_notebook_pre_execution_sha256": "539b7ac2e75c668439ad286eae2aeae38911e0cbe21ebeba1466038f2013a460",
+  "protocol_sha256": "c33c8006bf3628f80484c2ec0c520ba65ca9559177639851b74480464b908bb6",
+  "initial_protocol_sha256": "6f8cd06020e574bdf3278bb60a118451cac7e2eee38c59f855cd5eb987ec2313",
+  "protocol_correction": "Corrected the test.csv hash transcription before training; details are appended to EXPERIMENT_PROTOCOL.md.",
+  "data_directory": "D:\\gci\\inpuy",
+  "run_id": "financial_ratios_seed20261105",
+  "seeds": {
+    "outer_seed": 20261105,
+    "inner_stop_seed_base": 20262105,
+    "model_seed_base": 20263105
+  },
+  "training_started": true,
+  "training_completed": true,
+  "run_started_utc": "2026-11-04T04:18:35.651195+00:00",
+  "completed_utc": "2026-11-04T04:30:43.198365+00:00",
+  "replica_notebook_final_sha256": "a68ed9771d35d0e3f3c221c512edd8c0cc5352d0ea18b5722b0d80690e156523",
+  "execution_log_sha256": "ff8de281df406d7fc85859b3d6f1637b95519784776d5958c9d9533368157ea5"
+}

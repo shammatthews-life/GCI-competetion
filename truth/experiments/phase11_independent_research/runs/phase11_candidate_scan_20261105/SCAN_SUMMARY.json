@@ -1,0 +1,187 @@
+{
+  "started_at_utc": "2026-11-04T16:18:43.000299+00:00",
+  "completed_at_utc": "2026-11-04T16:30:45.968335+00:00",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "oof_predictions_path": "D:\\gci\\truth\\experiments\\phase11_independent_research\\runs\\phase11_gpu_cv_20261105\\oof_predictions.csv",
+  "oof_predictions_sha256": "483ec36819dbf2772846dcfe0e73607ef3316f75ab45cf36932a5df3d1e2bbbc",
+  "source_sha256": {
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\run_phase11_candidate_scan.py": "00b06a43ca93fae38e4016e39f129269930cd3646abd626fba0c4d6a32de215b",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_candidate_search.py": "fe2685f7f10163989ece07a3f5ca6403e7fffecf34e421beef75349fc9c3df2d",
+    "D:\\gci\\truth\\experiments\\phase10_catboost_product_robustness\\phase10_independent_feature_builder.py": "90ecbc99ffb1a106ae90f329a1ccce208f5ef75ec066d58a19e516b253238c44"
+  },
+  "train_rows": 171202,
+  "baseline_column": "raw_bagged",
+  "baseline_oof_auc": 0.7594556385575113,
+  "candidate_count": 1695,
+  "target_encoding_smoothing": 30.0,
+  "crossfit_fold_count": 5,
+  "frequency_preserving_null_repetitions_per_product_key": 10,
+  "all_data_source_is_train_csv": true,
+  "test_data_opened": false,
+  "locked_holdout_used": false,
+  "adaptive_search_is_exploratory_not_confirmatory": true,
+  "target_encoding_eligibility": "unresolved; do not promote for submission",
+  "best_target_rate_candidates": [
+    {
+      "candidate": "product_key:PRODUCT_KEY_P4",
+      "family": "predeclared_product_key",
+      "unique_categories": 775,
+      "target_rate_oof_auc": 0.6803341721454899,
+      "fixed_blend_0.10_auc": 0.7626334172492131,
+      "fixed_blend_0.10_delta": 0.0031777786917017714
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_P5",
+      "family": "predeclared_product_key",
+      "unique_categories": 4079,
+      "target_rate_oof_auc": 0.6751167509507257,
+      "fixed_blend_0.10_auc": 0.7625291639032585,
+      "fixed_blend_0.10_delta": 0.00307352534574723
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_Q4",
+      "family": "predeclared_product_key",
+      "unique_categories": 797,
+      "target_rate_oof_auc": 0.6745409917480472,
+      "fixed_blend_0.10_auc": 0.7621909731252341,
+      "fixed_blend_0.10_delta": 0.0027353345677227914
+    },
+    {
+      "candidate": "pair:AMT_CREDIT:ratio:AMT_ANNUITY:sig4",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 2754,
+      "target_rate_oof_auc": 0.6700664549476175,
+      "fixed_blend_0.10_auc": 0.7621160132188194,
+      "fixed_blend_0.10_delta": 0.0026603746613080848
+    },
+    {
+      "candidate": "pair:AMT_CREDIT:ratio:AMT_ANNUITY:sig3",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 409,
+      "target_rate_oof_auc": 0.6736492152800474,
+      "fixed_blend_0.10_auc": 0.7620067878312341,
+      "fixed_blend_0.10_delta": 0.002551149273722797
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_Q5",
+      "family": "predeclared_product_key",
+      "unique_categories": 5102,
+      "target_rate_oof_auc": 0.6613857410298734,
+      "fixed_blend_0.10_auc": 0.7618217423717335,
+      "fixed_blend_0.10_delta": 0.002366103814222198
+    },
+    {
+      "candidate": "pair:AMT_CREDIT:ratio:AMT_ANNUITY:sig5",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 11348,
+      "target_rate_oof_auc": 0.6522955998271507,
+      "fixed_blend_0.10_auc": 0.7614117040980051,
+      "fixed_blend_0.10_delta": 0.0019560655404937677
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_Q3",
+      "family": "predeclared_product_key",
+      "unique_categories": 96,
+      "target_rate_oof_auc": 0.6630087510401481,
+      "fixed_blend_0.10_auc": 0.7612261703991875,
+      "fixed_blend_0.10_delta": 0.0017705318416761928
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_KQ3",
+      "family": "predeclared_product_key",
+      "unique_categories": 1002,
+      "target_rate_oof_auc": 0.6449889062809511,
+      "fixed_blend_0.10_auc": 0.7611819891085017,
+      "fixed_blend_0.10_delta": 0.001726350550990352
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:ratio:AMT_GOODS_PRICE:sig4",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 6201,
+      "target_rate_oof_auc": 0.6408113615032349,
+      "fixed_blend_0.10_auc": 0.7610208009437175,
+      "fixed_blend_0.10_delta": 0.001565162386206187
+    },
+    {
+      "candidate": "product_key:PRODUCT_KEY_KQ4",
+      "family": "predeclared_product_key",
+      "unique_categories": 3576,
+      "target_rate_oof_auc": 0.6350817949649187,
+      "fixed_blend_0.10_auc": 0.7609803081125789,
+      "fixed_blend_0.10_delta": 0.0015246695550675815
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:ratio:AMT_GOODS_PRICE:sig5",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 19670,
+      "target_rate_oof_auc": 0.6342977150334229,
+      "fixed_blend_0.10_auc": 0.7609299116549209,
+      "fixed_blend_0.10_delta": 0.0014742730974095508
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:ratio:AMT_GOODS_PRICE:sig3",
+      "family": "numeric_pair_ratio",
+      "unique_categories": 803,
+      "target_rate_oof_auc": 0.6450788696620414,
+      "fixed_blend_0.10_auc": 0.7608744578746592,
+      "fixed_blend_0.10_delta": 0.0014188193171479346
+    },
+    {
+      "candidate": "pair:AMT_CREDIT:difference:AMT_ANNUITY:sig5",
+      "family": "numeric_pair_difference",
+      "unique_categories": 26927,
+      "target_rate_oof_auc": 0.6313496497221497,
+      "fixed_blend_0.10_auc": 0.7608265975490079,
+      "fixed_blend_0.10_delta": 0.0013709589914966402
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:sum:AMT_GOODS_PRICE:sig5",
+      "family": "numeric_pair_sum",
+      "unique_categories": 26940,
+      "target_rate_oof_auc": 0.6311484886873073,
+      "fixed_blend_0.10_auc": 0.7608070753321052,
+      "fixed_blend_0.10_delta": 0.0013514367745939282
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:difference:AMT_GOODS_PRICE:sig5",
+      "family": "numeric_pair_difference",
+      "unique_categories": 26829,
+      "target_rate_oof_auc": 0.6301707168170718,
+      "fixed_blend_0.10_auc": 0.7608041123354979,
+      "fixed_blend_0.10_delta": 0.0013484737779866363
+    },
+    {
+      "candidate": "pair:AMT_CREDIT:sum:AMT_ANNUITY:sig5",
+      "family": "numeric_pair_sum",
+      "unique_categories": 26813,
+      "target_rate_oof_auc": 0.6315613157178114,
+      "fixed_blend_0.10_auc": 0.7608001061985796,
+      "fixed_blend_0.10_delta": 0.0013444676410683254
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:difference:REGION_POPULATION_RELATIVE:sig5",
+      "family": "numeric_pair_difference",
+      "unique_categories": 12305,
+      "target_rate_oof_auc": 0.6141657325078539,
+      "fixed_blend_0.10_auc": 0.7606845833513314,
+      "fixed_blend_0.10_delta": 0.0012289447938200748
+    },
+    {
+      "candidate": "pair:AMT_ANNUITY:sum:REGION_POPULATION_RELATIVE:sig5",
+      "family": "numeric_pair_sum",
+      "unique_categories": 12306,
+      "target_rate_oof_auc": 0.6141634218762093,
+      "fixed_blend_0.10_auc": 0.7606845433543251,
+      "fixed_blend_0.10_delta": 0.0012289047968138123
+    },
+    {
+      "candidate": "numeric:AMT_ANNUITY:sig5",
+      "family": "numeric_single",
+      "unique_categories": 12240,
+      "target_rate_oof_auc": 0.61410370082915,
+      "fixed_blend_0.10_auc": 0.7606811486658924,
+      "fixed_blend_0.10_delta": 0.0012255101083811226
+    }
+  ]
+}

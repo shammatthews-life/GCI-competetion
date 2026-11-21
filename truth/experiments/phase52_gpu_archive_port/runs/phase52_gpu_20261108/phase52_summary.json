@@ -1,0 +1,128 @@
+{
+  "experiment": "Phase 52 GPU translation of v7-style label-free features",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "seed": 20261113,
+  "folds": 5,
+  "xgboost_version": "3.4.1",
+  "device": "CUDA (XGBoost hist)",
+  "feature_scope": "raw predictors versus raw predictors plus deterministic v7-style feature families; no 129.5/0.0132 constants, target encoding, train+test pooling, or external data",
+  "fold_results": [
+    {
+      "fold": 1,
+      "model": "raw_baseline",
+      "auc": 0.7550584220477158,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 1,
+      "model": "v7_label_free_features",
+      "auc": 0.7629672990275628,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "raw_baseline",
+      "auc": 0.7598814803528944,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 2,
+      "model": "v7_label_free_features",
+      "auc": 0.7642106262195347,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "raw_baseline",
+      "auc": 0.7501509833417288,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 3,
+      "model": "v7_label_free_features",
+      "auc": 0.7556090676396175,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "raw_baseline",
+      "auc": 0.7479781071338392,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 4,
+      "model": "v7_label_free_features",
+      "auc": 0.7563724384039,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "raw_baseline",
+      "auc": 0.7490773182756199,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 131,
+      "device": "cuda"
+    },
+    {
+      "fold": 5,
+      "model": "v7_label_free_features",
+      "auc": 0.754150924077132,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 180,
+      "device": "cuda"
+    }
+  ],
+  "models": {
+    "raw_baseline": {
+      "pooled_auc": 0.7524132838459663,
+      "log_loss": 0.24781330784505765,
+      "fold_auc": [
+        0.7550584220477158,
+        0.7598814803528944,
+        0.7501509833417288,
+        0.7479781071338392,
+        0.7490773182756199
+      ]
+    },
+    "v7_label_free_features": {
+      "pooled_auc": 0.7586403959011067,
+      "log_loss": 0.24610215593585466,
+      "fold_auc": [
+        0.7629672990275628,
+        0.7642106262195347,
+        0.7556090676396175,
+        0.7563724384039,
+        0.754150924077132
+      ]
+    }
+  },
+  "elapsed_seconds": 53.630473600002006,
+  "delta_engineered_minus_baseline_auc": 0.006227112055140371
+}

@@ -1,0 +1,9 @@
+{
+  "apply_rows": 2000,
+  "categorical_features": 16,
+  "features": 99,
+  "finite_predictions": true,
+  "fit_rows": 10000,
+  "fit_seconds": 33.78927819999808,
+  "gpu_catboost_smoke": "passed"
+}

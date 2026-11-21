@@ -1,0 +1,118 @@
+{
+  "status": "fold-isolated exploratory residual-feature experiment; not an independent estimate",
+  "hypothesis": "Fold-local residuals from covariate-only regressors may expose applicant deviations from demographic/financial expectation without using TARGET.",
+  "residual_targets": [
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "AMT_CREDIT",
+    "AMT_INCOME_TOTAL",
+    "DAYS_EMPLOYED"
+  ],
+  "residual_regressor": {
+    "family": "XGBoost CUDA regressor",
+    "trees": 160,
+    "max_depth": 3,
+    "max_bin": 256
+  },
+  "inner_crossfit_folds": 3,
+  "outer_folds": 5,
+  "seed": 20261113,
+  "fixed_blend": "0.90 candidate TE20 within-fold rank + 0.10 residual expert within-fold rank",
+  "minimum_promotion_gain": 0.005,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "expert_mean_fold_auc": 0.7637720042339046,
+  "blend_mean_fold_auc": 0.7681405974939169,
+  "blend_mean_fold_gain": 0.0003850213367148081,
+  "positive_blend_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "residual_expert_auc": 0.7659451641970269,
+      "fixed_90_10_rank_blend_auc": 0.7725021076423293,
+      "expert_delta": -0.0064305791557909275,
+      "blend_delta": 0.0001263642895115158,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 5171,
+      "runtime_seconds": 77.90667729999404
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "residual_expert_auc": 0.7692598419370356,
+      "fixed_90_10_rank_blend_auc": 0.7751261445041395,
+      "expert_delta": -0.00559574423591358,
+      "blend_delta": 0.00027055833119038475,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 5173,
+      "runtime_seconds": 68.66462759999558
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "residual_expert_auc": 0.7567880147215281,
+      "fixed_90_10_rank_blend_auc": 0.7626669512194898,
+      "expert_delta": -0.005673079381088186,
+      "blend_delta": 0.00020585711687348685,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5169,
+      "runtime_seconds": 77.01696530001936
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "residual_expert_auc": 0.7640603071754392,
+      "fixed_90_10_rank_blend_auc": 0.765594560227267,
+      "expert_delta": -0.0008316239014439786,
+      "blend_delta": 0.0007026291503838822,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5137,
+      "runtime_seconds": 77.73512599998503
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "residual_expert_auc": 0.762806693138493,
+      "fixed_90_10_rank_blend_auc": 0.764813223876359,
+      "expert_delta": -0.0013868329422512815,
+      "blend_delta": 0.0006196977956146599,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 5152,
+      "runtime_seconds": 72.82756659999723
+    }
+  ],
+  "promotion_gate_passed": false,
+  "submission_generated": false,
+  "versions": {
+    "python": "3.12.10",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "model_data": "official train.csv only; test.csv not read",
+    "target_for_residuals": "supplied covariate columns only; competition TARGET is not used to fit residual regressors",
+    "residual_fit": "each training row's residual is cross-fitted; outer-validation residual predictions use regressors trained only on outer-fit rows",
+    "external_data": "none",
+    "label_transfer": "none",
+    "manual_test_adjustments": "none",
+    "test_covariate_pooling": "none",
+    "baseline_oof": "read only as a fold-aligned benchmark; never used as a model feature",
+    "gpu": "CUDA required for residual regressors; no CPU fallback"
+  },
+  "runtime_seconds": 375.90152789998683,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\covariate_residual_expert_v1.py": "9d859b30baf369a45458288e6252316277e2859ee01fc46bc0c9d2efd316a463",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv": "4e31bb89637a6d2f09122ab42acc6a27b915e42113fcffe8496260b1ecc3f4c4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\FOLD_METRICS.csv": "a58e0dcaa0bfdf38012db50649e61abbf0577885c967927f3d25fb116b19f5fc"
+  }
+}

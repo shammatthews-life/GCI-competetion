@@ -1,0 +1,243 @@
+{
+  "phase": "Phase 47 fold-safe evidence-partition expert models",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "model": "Phase 38 XGBoost configuration; inner 12% stopping split; outer-fit refit",
+  "key_min_frequency": 50,
+  "gates": {
+    "contract_type": "NAME_CONTRACT_TYPE: cash=0, revolving=1",
+    "goods_credit_ratio": "AMT_GOODS_PRICE / AMT_CREDIT: >=0.90=0, <0.90 or missing=1",
+    "pensioner_status": "DAYS_EMPLOYED == 365243: employed=0, pensioner=1",
+    "contract_goods_bivariate": "revolving=0, cash goods>=0.90=1, cash goods<0.90 or missing=2"
+  },
+  "fixed_mixture_weight": 0.5,
+  "support_floors": {
+    "expert_training_rows": 5000,
+    "expert_validation_rows": 1000
+  },
+  "segment_counts_by_fold": {
+    "contract_type": {
+      "fold_1": {
+        "train_group_0": 123953,
+        "valid_group_0": 31035,
+        "train_group_1": 13008,
+        "valid_group_1": 3206
+      },
+      "fold_2": {
+        "train_group_0": 124054,
+        "valid_group_0": 30934,
+        "train_group_1": 12907,
+        "valid_group_1": 3307
+      },
+      "fold_3": {
+        "train_group_0": 124014,
+        "valid_group_0": 30974,
+        "train_group_1": 12948,
+        "valid_group_1": 3266
+      },
+      "fold_4": {
+        "train_group_0": 123930,
+        "valid_group_0": 31058,
+        "train_group_1": 13032,
+        "valid_group_1": 3182
+      },
+      "fold_5": {
+        "train_group_0": 124001,
+        "valid_group_0": 30987,
+        "train_group_1": 12961,
+        "valid_group_1": 3253
+      }
+    },
+    "goods_credit_ratio": {
+      "fold_1": {
+        "train_group_0": 64645,
+        "valid_group_0": 16058,
+        "train_group_1": 72316,
+        "valid_group_1": 18183
+      },
+      "fold_2": {
+        "train_group_0": 64435,
+        "valid_group_0": 16268,
+        "train_group_1": 72526,
+        "valid_group_1": 17973
+      },
+      "fold_3": {
+        "train_group_0": 64594,
+        "valid_group_0": 16109,
+        "train_group_1": 72368,
+        "valid_group_1": 18131
+      },
+      "fold_4": {
+        "train_group_0": 64608,
+        "valid_group_0": 16095,
+        "train_group_1": 72354,
+        "valid_group_1": 18145
+      },
+      "fold_5": {
+        "train_group_0": 64530,
+        "valid_group_0": 16173,
+        "train_group_1": 72432,
+        "valid_group_1": 18067
+      }
+    },
+    "pensioner_status": {
+      "fold_1": {
+        "train_group_0": 112263,
+        "valid_group_0": 28041,
+        "train_group_1": 24698,
+        "valid_group_1": 6200
+      },
+      "fold_2": {
+        "train_group_0": 112194,
+        "valid_group_0": 28110,
+        "train_group_1": 24767,
+        "valid_group_1": 6131
+      },
+      "fold_3": {
+        "train_group_0": 112341,
+        "valid_group_0": 27963,
+        "train_group_1": 24621,
+        "valid_group_1": 6277
+      },
+      "fold_4": {
+        "train_group_0": 112176,
+        "valid_group_0": 28128,
+        "train_group_1": 24786,
+        "valid_group_1": 6112
+      },
+      "fold_5": {
+        "train_group_0": 112242,
+        "valid_group_0": 28062,
+        "train_group_1": 24720,
+        "valid_group_1": 6178
+      }
+    },
+    "contract_goods_bivariate": {
+      "fold_1": {
+        "train_group_0": 13008,
+        "valid_group_0": 3206,
+        "train_group_1": 51667,
+        "valid_group_1": 12861,
+        "train_group_2": 72286,
+        "valid_group_2": 18174
+      },
+      "fold_2": {
+        "train_group_0": 12907,
+        "valid_group_0": 3307,
+        "train_group_1": 51560,
+        "valid_group_1": 12968,
+        "train_group_2": 72494,
+        "valid_group_2": 17966
+      },
+      "fold_3": {
+        "train_group_0": 12948,
+        "valid_group_0": 3266,
+        "train_group_1": 51678,
+        "valid_group_1": 12850,
+        "train_group_2": 72336,
+        "valid_group_2": 18124
+      },
+      "fold_4": {
+        "train_group_0": 13032,
+        "valid_group_0": 3182,
+        "train_group_1": 51606,
+        "valid_group_1": 12922,
+        "train_group_2": 72324,
+        "valid_group_2": 18136
+      },
+      "fold_5": {
+        "train_group_0": 12961,
+        "valid_group_0": 3253,
+        "train_group_1": 51601,
+        "valid_group_1": 12927,
+        "train_group_2": 72400,
+        "valid_group_2": 18060
+      }
+    }
+  },
+  "metrics": {
+    "global": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033,
+      "std_fold_auc": 0.004226171248110667
+    },
+    "contract_type_hard": {
+      "pooled_auc": 0.7640162654657314,
+      "pooled_log_loss": 0.24459077417850494,
+      "mean_fold_auc": 0.7640701420142851,
+      "std_fold_auc": 0.004999752989418953
+    },
+    "contract_type_mixture_50_50": {
+      "pooled_auc": 0.7651924668511284,
+      "pooled_log_loss": 0.2442401796579361,
+      "mean_fold_auc": 0.7652305624106586,
+      "std_fold_auc": 0.004607318805820694
+    },
+    "goods_credit_ratio_hard": {
+      "pooled_auc": 0.7596603030082805,
+      "pooled_log_loss": 0.2457883656024933,
+      "mean_fold_auc": 0.759713572508929,
+      "std_fold_auc": 0.004457122312325367
+    },
+    "goods_credit_ratio_mixture_50_50": {
+      "pooled_auc": 0.76397222922166,
+      "pooled_log_loss": 0.24457012116909027,
+      "mean_fold_auc": 0.7640132050777406,
+      "std_fold_auc": 0.004269357851038683
+    },
+    "pensioner_status_hard": {
+      "pooled_auc": 0.7616835690359895,
+      "pooled_log_loss": 0.24516616761684418,
+      "mean_fold_auc": 0.7617437797056681,
+      "std_fold_auc": 0.004392782907571441
+    },
+    "pensioner_status_mixture_50_50": {
+      "pooled_auc": 0.764475229502603,
+      "pooled_log_loss": 0.24441291391849518,
+      "mean_fold_auc": 0.7645245959765077,
+      "std_fold_auc": 0.004343873173736347
+    },
+    "contract_goods_bivariate_hard": {
+      "pooled_auc": 0.7598387620642286,
+      "pooled_log_loss": 0.2457474172115326,
+      "mean_fold_auc": 0.7598817383880053,
+      "std_fold_auc": 0.004307245893006419
+    },
+    "contract_goods_bivariate_mixture_50_50": {
+      "pooled_auc": 0.7643056212784138,
+      "pooled_log_loss": 0.2444673329591751,
+      "mean_fold_auc": 0.7643424671315124,
+      "std_fold_auc": 0.004305157450179025
+    },
+    "consensus_expert_mixture": {
+      "pooled_auc": 0.7650722321726575,
+      "pooled_log_loss": 0.2442653924226761,
+      "mean_fold_auc": 0.7651055992033104,
+      "std_fold_auc": 0.004434018937803247
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "gate_membership": "deterministic supplied covariates only; no TARGET-based routing",
+    "expert_training": "each expert fit only on its outer-training subgroup",
+    "iteration_selection": "inner split within the expert's outer-training subgroup",
+    "outer_validation": "never used for fitting, early stopping, or gate selection",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none"
+  },
+  "runtime_seconds": 368.30022880001343,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase47_evidence_partition_experts\\run_phase47_evidence_partition_experts.py": "aeee3ad3140a76fb5b9614540cdf14f0ce456fdea89cfe8f944e9d21dac48149",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase47_evidence_partition_experts\\runs\\phase47_experts_20261108T101803Z\\PHASE47_FOLD_RESULTS.csv": "0b0db74ca36b7a4711d46d5683cf3b8ca5bae982c54ae8fe98a1915e7ba5031a",
+    "D:\\gci\\truth\\experiments\\phase47_evidence_partition_experts\\runs\\phase47_experts_20261108T101803Z\\PHASE47_OOF_PREDICTIONS.csv": "8a56099273646f58987d65006cfdc131cb0022e6f3d1a0290aaadfefb827a97f"
+  }
+}

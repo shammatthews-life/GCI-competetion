@@ -1,0 +1,35 @@
+{
+  "data_scope": "existing training-only OOF artifacts",
+  "id_target_alignment": "exact",
+  "limits": [
+    "The blend was assessed on labels already used in prior research.",
+    "This is not independent validation and may overstate generalization.",
+    "No Phase 15 test predictions are available in these OOF artifacts.",
+    "Do not create a competition submission directly from OOF predictions."
+  ],
+  "metrics": {
+    "blend_delta_vs_phase15": 0.0014218788582528452,
+    "blend_delta_vs_v9": 0.0019068853136386954,
+    "blend_log_loss": 0.2428073028525338,
+    "blend_pooled_auc": 0.7702465871656841,
+    "component_prediction_correlation": 0.9660765375533881,
+    "phase15_three_seed_log_loss": 0.243228381571025,
+    "phase15_three_seed_pooled_auc": 0.7688247083074312,
+    "v9_log_loss": 0.24347216261495847,
+    "v9_pooled_auc": 0.7683397018520454
+  },
+  "phase15_oof_semantics": "Each row's component predictions are out-of-fold; the three seed vectors use different fold assignments.",
+  "rows": 171202,
+  "rule_status": "Not a compliance determination. V9 target encodings and empirical feature hypotheses, and Phase 15 native categorical statistics/product-key hypotheses, have unresolved local rule interpretation.",
+  "sha256": {
+    "D:\\gci\\oof_predictions_v9_ironclad_grade.csv": "30341c9fba32bf0767ec4f4371852e972f2439739d97af9c0371e7695a91a1cc",
+    "D:\\gci\\truth\\experiments\\phase15_autonomous_research\\runs\\phase15_native_catboost_multiseed_20261105T125826Z\\MULTISEED_OOF_PREDICTIONS.csv": "14e92b323a7c5255b506a33c0f8b3925e5f9d110d388c44becf0612aec37a2d6",
+    "D:\\gci\\truth\\experiments\\phase28_oof_blend_screen\\runs\\phase28_equal_blend_20261107\\PHASE28_OOF_BLEND.csv": "b248492f37153f8122e387245472aef69903e4eecb98917402490eee7519c093"
+  },
+  "status": "exploratory OOF diagnostic; post-hoc system comparison and repeated-label selection risk apply",
+  "use": "OOF analysis only; not a test submission",
+  "weights": {
+    "phase15_three_seed_average": 0.5,
+    "v9": 0.5
+  }
+}

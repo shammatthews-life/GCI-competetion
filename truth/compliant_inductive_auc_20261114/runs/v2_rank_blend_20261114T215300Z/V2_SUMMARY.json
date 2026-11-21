@@ -1,0 +1,67 @@
+{
+  "experiment": "V2 fixed rank and probability blending",
+  "status": "exploratory OOF ensemble comparison; not a leaderboard score",
+  "rows": 171202,
+  "fold_assignment": "shared seed-20261113 five-fold stratification",
+  "weights": "predeclared equal 0.5/0.5; not fitted on OOF labels",
+  "metrics": {
+    "phase37_reference": {
+      "mean_fold_auc": 0.7659818497765217,
+      "fold_auc": [
+        0.7709087038352539,
+        0.7717595966225422,
+        0.7609305077316161,
+        0.7628796014660469,
+        0.7634308392271493
+      ]
+    },
+    "v1_fixed_weight_2": {
+      "mean_fold_auc": 0.7649706450377035,
+      "fold_auc": [
+        0.7696630949196039,
+        0.7714515976695238,
+        0.7605224142015077,
+        0.7619012815957542,
+        0.7613148368021283
+      ]
+    },
+    "rank_blend_50_50": {
+      "mean_fold_auc": 0.7660273636031031,
+      "fold_auc": [
+        0.7708294301855576,
+        0.7721656524319915,
+        0.7612469514824793,
+        0.762953981063651,
+        0.7629408028518363
+      ]
+    },
+    "probability_blend_50_50": {
+      "mean_fold_auc": 0.7658588027344562,
+      "fold_auc": [
+        0.770613045419836,
+        0.772079642987556,
+        0.7611525718076337,
+        0.7628093770569045,
+        0.7626393764003503
+      ]
+    }
+  },
+  "rank_blend_definition": "Within each outer validation fold separately, rank each model's OOF predictions to [0,1] and average the two ranks.",
+  "rule_controls": {
+    "inputs": "two row-aligned OOF artifacts derived from supplied training data",
+    "test_or_external_data_read": false,
+    "OOF_labels_used_for_blend_weights": false,
+    "manual_prediction_adjustments": false,
+    "outer_validation_rows_used_to_fit_base_models": false
+  },
+  "limitations": [
+    "The historical Phase 37 model is retained as a fixed OOF component; this is a development comparison, not untouched confirmation.",
+    "Only mean-fold AUC is reported because the OOF components were produced by fold-specific models.",
+    "No test predictions or leaderboard result are generated."
+  ],
+  "sha256": {
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\phase37_multiseed_20261107T173127Z\\PHASE37_OOF_PREDICTIONS.csv": "33563509db7afb33d9876d8b6a8e8b862859adef54dacf0a94df821f0da9c44a",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v1_class_weight_verified_20261114T214500Z\\V1_OOF_PREDICTIONS.csv": "b18705d280c627c45a4d256b56ce71029ba042139e599e5bef6af05cf1a434c1",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v2_rank_blend_20261114T215300Z\\V2_OOF_PREDICTIONS.csv": "d60f21f912226216cf6c1f3738b0e28fa4442692c6ca9486bdc5dbdfc51f2953"
+  }
+}

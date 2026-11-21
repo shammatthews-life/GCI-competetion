@@ -1,0 +1,107 @@
+{
+  "started_at_utc": "2026-11-04T16:54:53.601424+00:00",
+  "completed_at_utc": "2026-11-04T17:08:19.096264+00:00",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "prediction_sha256": "85d81b513726725b7a2aaa95f559147e136b2a9d2e28ee67ca3c0f80192bde75",
+  "rows": 171202,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "seed": 2026,
+  "iterations": 400,
+  "smoke_run_only": false,
+  "catboost_gpu": {
+    "device": 0,
+    "candidate_configs": [
+      [
+        "depth5_lr005",
+        5,
+        0.05
+      ],
+      [
+        "depth6_lr003",
+        6,
+        0.03
+      ],
+      [
+        "depth6_lr005",
+        6,
+        0.05
+      ]
+    ],
+    "selected_per_outer_fold_using_inner_oof_only": true,
+    "categorical_feature_cardinality": {
+      "NAME_CONTRACT_TYPE": 2,
+      "CODE_GENDER": 3,
+      "NAME_INCOME_TYPE": 8,
+      "NAME_EDUCATION_TYPE": 5,
+      "NAME_FAMILY_STATUS": 6,
+      "NAME_HOUSING_TYPE": 6,
+      "OCCUPATION_TYPE": 19,
+      "ORGANIZATION_TYPE": 58,
+      "PRODUCT_KEY_Q3": 96,
+      "PRODUCT_KEY_Q4": 797,
+      "PRODUCT_KEY_Q5": 5102,
+      "PRODUCT_KEY_KQ3": 1002,
+      "PRODUCT_KEY_KQ4": 3576,
+      "PRODUCT_KEY_P4": 775,
+      "PRODUCT_KEY_P5": 4079,
+      "PRODUCT_KEY_AG3": 131
+    },
+    "effective_ctr_parameters_from_first_outer_model": {
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "FeatureFreq:CtrBorderCount=15:CtrBorderType=Median:Prior=0/1"
+      ],
+      "ctr_history_unit": "Sample",
+      "one_hot_max_size": 10,
+      "max_ctr_complexity": 1,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "FeatureFreq:CtrBorderCount=15:CtrBorderType=MinEntropy:Prior=0/1"
+      ],
+      "ctr_target_border_count": 1
+    },
+    "uses_internal_target_statistics_for_high_cardinality_categories": true,
+    "categorical_target_statistics_eligibility": "unresolved"
+  },
+  "lightgbm": {
+    "device_type": "cpu",
+    "categoricals": "fold-fitted OneHotEncoder; no target-rate encoding",
+    "min_frequency": 2,
+    "inner_only_preprocessing": true,
+    "raw_and_eight_key_models_use_identical_outer_folds": true
+  },
+  "nested_stacker": "LogisticRegression(C=1) fit on inner OOF logits only",
+  "test_data_opened": false,
+  "locked_holdout_used": false,
+  "submission_created": false,
+  "legacy_exp85_imported": false,
+  "versions": {
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "source_sha256": {
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_nested_ensemble.py": "fdca1e32be835606b31f80cc0c0e03b339941cf3c131c5e4c18dc87a005a53f8",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_independent_runner.py": "a78bea2854f7afeb3e2739493d86e56c242d463631f89d36806b8e102fff6226",
+    "D:\\gci\\truth\\experiments\\phase10_catboost_product_robustness\\phase10_independent_feature_builder.py": "90ecbc99ffb1a106ae90f329a1ccce208f5ef75ec066d58a19e516b253238c44"
+  },
+  "results": {
+    "catboost_nested_tuned_pooled_oof_auc": 0.7663163406590457,
+    "catboost_nested_tuned_correlation_vs_catboost": 1.0,
+    "lightgbm_onehot_raw_pooled_oof_auc": 0.7596867718316593,
+    "lightgbm_onehot_raw_correlation_vs_catboost": 0.9372338440590959,
+    "lightgbm_onehot_keys_pooled_oof_auc": 0.7644939515495144,
+    "lightgbm_onehot_keys_correlation_vs_catboost": 0.9564633504572431,
+    "fixed_blend_05_pooled_oof_auc": 0.7666714046568508,
+    "fixed_blend_05_correlation_vs_catboost": 0.9998921288411171,
+    "fixed_blend_10_pooled_oof_auc": 0.7669807536856639,
+    "fixed_blend_10_correlation_vs_catboost": 0.999571527023942,
+    "fixed_blend_20_pooled_oof_auc": 0.767457612245181,
+    "fixed_blend_20_correlation_vs_catboost": 0.9983023518117639,
+    "nested_logistic_stack_pooled_oof_auc": 0.7677689218169008,
+    "nested_logistic_stack_correlation_vs_catboost": 0.9936186357537107
+  }
+}

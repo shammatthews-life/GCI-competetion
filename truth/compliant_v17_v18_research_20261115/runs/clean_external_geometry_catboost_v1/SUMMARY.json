@@ -1,0 +1,70 @@
+{
+  "status": "exploratory rules-conscious OOF; repeated-label development",
+  "inputs": "official train.csv and row-alignment metadata from prior OOF; test.csv not read",
+  "feature_hypothesis": "row-wise pairwise ratios and score-order category for the three supplied external scores",
+  "outer_folds": 5,
+  "seed": 20261113,
+  "feature_count": 81,
+  "categorical_feature_count": 14,
+  "gpu": "CatBoost CUDA; no CPU fallback",
+  "versions": {
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "auc": 0.7696273602847037,
+      "iterations": 700
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "auc": 0.7733579842801095,
+      "iterations": 700
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7607113287242121,
+      "iterations": 700
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7642944804936258,
+      "iterations": 700
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "auc": 0.7609480767649861,
+      "iterations": 700
+    }
+  ],
+  "pooled_auc": 0.7657211773915399,
+  "mean_fold_auc": 0.7657878461095274,
+  "rule_controls": {
+    "label_transfer": "none",
+    "train_test_pooling": "none",
+    "external_data": "none",
+    "test_rows": "not read",
+    "manual_prediction_changes": "none",
+    "cross_row_feature_fitting": "none; added features are row-wise"
+  },
+  "runtime_seconds": 90.031072400001,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_clean_catboost_external_geometry_v1.py": "e06a7a89c87dd7d718476377e25a466c6a0ad3e507f0a2ff69491ebbf53ffe6c",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_external_geometry_catboost_v1\\OOF_PREDICTIONS.csv": "dd765e8ab9ad3f59312398f3d3161a85e01f60b746384347a06ebf33ab48c123",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_external_geometry_catboost_v1\\FOLD_METRICS.csv": "f3404763995c1062e1d5f1da7a86a8b8b314ba8e0ec44258170edaff2c2a8bec"
+  }
+}

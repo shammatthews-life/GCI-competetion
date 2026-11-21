@@ -1,0 +1,34 @@
+{
+  "baseline_auc": 0.767510927794687,
+  "baseline_error_pair_share_by_positive_risk_half": {
+    "bottom_half": {
+      "baseline_wrong_pairs": 234901340.5,
+      "positive_rows": 2256,
+      "share_of_all_baseline_wrong_pairs": 0.4645058451334901
+    },
+    "top_half": {
+      "baseline_wrong_pairs": 270800241.0,
+      "positive_rows": 11565,
+      "share_of_all_baseline_wrong_pairs": 0.53549415486651
+    }
+  },
+  "baseline_error_pairs": 505701581.5,
+  "candidate_aucs": {
+    "phase17_nested_te_lightgbm": 0.7652907530575226,
+    "phase18_catboost_component": 0.767510927794687,
+    "phase18_nested_blend": 0.7686688657195365
+  },
+  "fold_ids_match": true,
+  "independent_confirmation": false,
+  "models_trained": 0,
+  "negatives": 157381,
+  "phase15_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "phase18_oof_sha256": "bf80c8ca4a2e139a145174e7c5c6dde32c90625b977ac3584c592800906c37ac",
+  "positive_negative_pairs": 2175162801,
+  "positive_rate": 0.08072919708881905,
+  "positives": 13821,
+  "rows": 171202,
+  "score_deciles": 10,
+  "test_data_read": false,
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

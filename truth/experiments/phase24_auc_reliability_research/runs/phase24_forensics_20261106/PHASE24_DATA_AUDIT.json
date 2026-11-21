@@ -1,0 +1,127 @@
+{
+  "duplicate_profile_diagnostics": [
+    {
+      "columns": [
+        "NAME_CONTRACT_TYPE",
+        "CODE_GENDER",
+        "CNT_CHILDREN",
+        "AMT_INCOME_TOTAL",
+        "AMT_CREDIT",
+        "AMT_ANNUITY",
+        "AMT_GOODS_PRICE",
+        "NAME_INCOME_TYPE",
+        "NAME_EDUCATION_TYPE",
+        "NAME_FAMILY_STATUS",
+        "NAME_HOUSING_TYPE",
+        "REGION_POPULATION_RELATIVE",
+        "DAYS_BIRTH",
+        "DAYS_EMPLOYED",
+        "DAYS_REGISTRATION",
+        "DAYS_ID_PUBLISH",
+        "OWN_CAR_AGE",
+        "FLAG_MOBIL",
+        "FLAG_EMP_PHONE",
+        "FLAG_WORK_PHONE",
+        "OCCUPATION_TYPE",
+        "CNT_FAM_MEMBERS",
+        "REGION_RATING_CLIENT",
+        "ORGANIZATION_TYPE",
+        "EXT_SOURCE_1",
+        "EXT_SOURCE_2",
+        "EXT_SOURCE_3",
+        "DAYS_LAST_PHONE_CHANGE",
+        "AMT_REQ_CREDIT_BUREAU_HOUR",
+        "AMT_REQ_CREDIT_BUREAU_MON",
+        "AMT_REQ_CREDIT_BUREAU_QRT",
+        "AMT_REQ_CREDIT_BUREAU_YEAR"
+      ],
+      "duplicate_groups": 0,
+      "duplicate_groups_crossing_random_folds": 0,
+      "largest_group": 1,
+      "mixed_target_duplicate_groups": 0,
+      "profile": "all_predictors",
+      "rows_in_duplicate_groups": 0,
+      "rows_in_duplicate_groups_crossing_random_folds": 0,
+      "unique_groups": 171202
+    },
+    {
+      "columns": [
+        "NAME_CONTRACT_TYPE",
+        "AMT_CREDIT",
+        "AMT_ANNUITY",
+        "AMT_GOODS_PRICE",
+        "AMT_INCOME_TOTAL"
+      ],
+      "duplicate_groups": 20605,
+      "duplicate_groups_crossing_random_folds": 18317,
+      "largest_group": 509,
+      "mixed_target_duplicate_groups": 4867,
+      "profile": "financial_application",
+      "rows_in_duplicate_groups": 92162,
+      "rows_in_duplicate_groups_crossing_random_folds": 87412,
+      "unique_groups": 99645
+    },
+    {
+      "columns": [
+        "NAME_CONTRACT_TYPE",
+        "CODE_GENDER",
+        "NAME_INCOME_TYPE",
+        "NAME_EDUCATION_TYPE",
+        "NAME_FAMILY_STATUS",
+        "NAME_HOUSING_TYPE",
+        "OCCUPATION_TYPE",
+        "ORGANIZATION_TYPE"
+      ],
+      "duplicate_groups": 10894,
+      "duplicate_groups_crossing_random_folds": 10070,
+      "largest_group": 10235,
+      "mixed_target_duplicate_groups": 3805,
+      "profile": "categorical_applicant",
+      "rows_in_duplicate_groups": 156888,
+      "rows_in_duplicate_groups_crossing_random_folds": 155156,
+      "unique_groups": 25208
+    }
+  ],
+  "exact_duplicate_predictor_rows": 0,
+  "id_decile_count": 20,
+  "id_only_monotonic_auc": 0.5028965627295132,
+  "id_only_orientation_free_auc": 0.5028965627295132,
+  "id_target_rate_max": 0.08563084112149533,
+  "id_target_rate_min": 0.07324766355140187,
+  "interpretation": "Descriptive audit of previously exposed labels. OOF cross-fold comparisons and duplicate-group statistics do not establish independent generalization or data leakage.",
+  "oof_score_diagnostics": [
+    {
+      "cross_fold_pair_fraction": 0.8000000000919472,
+      "fold_auc_std": 0.005934641620643872,
+      "mean_fold_auc": 0.7670240893778091,
+      "pair_weighted_fold_auc": 0.7670246854626238,
+      "pooled_auc": 0.7670043192780769,
+      "pooled_minus_mean_fold_auc": -1.977009973219701e-05,
+      "prediction": "native_catboost_base_all8",
+      "row_weighted_fold_auc": 0.7670241626613004
+    },
+    {
+      "cross_fold_pair_fraction": 0.8000000000919472,
+      "fold_auc_std": 0.0059765978018659766,
+      "mean_fold_auc": 0.7672533422057285,
+      "pair_weighted_fold_auc": 0.7672539280737976,
+      "pooled_auc": 0.7672312903350355,
+      "pooled_minus_mean_fold_auc": -2.20518706930406e-05,
+      "prediction": "native_catboost_phase14_numeric",
+      "row_weighted_fold_auc": 0.7672534175042066
+    },
+    {
+      "cross_fold_pair_fraction": 0.8000000000919472,
+      "fold_auc_std": 0.006018337420453561,
+      "mean_fold_auc": 0.7675251525166706,
+      "pair_weighted_fold_auc": 0.7675257215230051,
+      "pooled_auc": 0.767510927794687,
+      "pooled_minus_mean_fold_auc": -1.422472198364666e-05,
+      "prediction": "native_catboost_phase14_plus_time",
+      "row_weighted_fold_auc": 0.7675252269559211
+    }
+  ],
+  "reference_fold_ids_verified": true,
+  "rows": 171202,
+  "target_rate": 0.08072919708881905
+}

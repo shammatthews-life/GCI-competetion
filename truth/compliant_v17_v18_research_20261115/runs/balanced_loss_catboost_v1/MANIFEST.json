@@ -1,0 +1,134 @@
+{
+  "status": "training-only exploratory OOF experiment",
+  "data_scope": "verified official train.csv only; no test or sample-submission rows read",
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\OOF_PREDICTIONS.csv": "960aeae7a02b56cd326b7c39d32f3b49424b3f7c509500acc043485be8e2023d"
+  },
+  "hypothesis": "Balancing total positive and negative Logloss weight may change tree splits and improve ranking under class imbalance.",
+  "loss_weight_formula": "negative_count / positive_count within each outer training fold",
+  "blend": {
+    "rule": "90% within-fold rank of aligned reference + 10% within-fold rank of weighted CatBoost",
+    "expert_weight": 0.1,
+    "weight_selected_on_current_folds": false
+  },
+  "validation": {
+    "type": "five-fold stratified OOF, seed 20261113",
+    "baseline_mean_fold_auc": 0.7674919876117505,
+    "candidate_mean_fold_auc": 0.7676317028091881,
+    "mean_fold_auc_gain": 0.00013971519743760652,
+    "fold_delta_sample_sd": 0.00017078603710562798,
+    "positive_fold_deltas": 4,
+    "model_fold_metrics": [
+      {
+        "fold": 1,
+        "fit_rows": 136961,
+        "valid_rows": 34241,
+        "fit_positive_count": 11057,
+        "fit_negative_count": 125904,
+        "positive_loss_weight": 11.386813783123813,
+        "auc_balanced_loss_catboost": 0.7666115593923425
+      },
+      {
+        "fold": 2,
+        "fit_rows": 136961,
+        "valid_rows": 34241,
+        "fit_positive_count": 11056,
+        "fit_negative_count": 125905,
+        "positive_loss_weight": 11.387934153400868,
+        "auc_balanced_loss_catboost": 0.7732116688348559
+      },
+      {
+        "fold": 3,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "fit_positive_count": 11057,
+        "fit_negative_count": 125905,
+        "positive_loss_weight": 11.38690422356878,
+        "auc_balanced_loss_catboost": 0.7580887553772621
+      },
+      {
+        "fold": 4,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "fit_positive_count": 11057,
+        "fit_negative_count": 125905,
+        "positive_loss_weight": 11.38690422356878,
+        "auc_balanced_loss_catboost": 0.7607041562827186
+      },
+      {
+        "fold": 5,
+        "fit_rows": 136962,
+        "valid_rows": 34240,
+        "fit_positive_count": 11057,
+        "fit_negative_count": 125905,
+        "positive_loss_weight": 11.38690422356878,
+        "auc_balanced_loss_catboost": 0.7604505461078563
+      }
+    ],
+    "blend_fold_metrics": [
+      {
+        "fold": 1,
+        "baseline_auc": 0.7721275031542798,
+        "candidate_auc": 0.7720653382225149,
+        "delta": -6.216493176491866e-05
+      },
+      {
+        "fold": 2,
+        "baseline_auc": 0.7743237707790568,
+        "candidate_auc": 0.774730291939184,
+        "delta": 0.0004065211601271823
+      },
+      {
+        "fold": 3,
+        "baseline_auc": 0.7622172770690241,
+        "candidate_auc": 0.7623183866549186,
+        "delta": 0.00010110958589448771
+      },
+      {
+        "fold": 4,
+        "baseline_auc": 0.7649573681112148,
+        "candidate_auc": 0.7650458856944551,
+        "delta": 8.851758324024406e-05
+      },
+      {
+        "fold": 5,
+        "baseline_auc": 0.7638340189451767,
+        "candidate_auc": 0.7639986115348675,
+        "delta": 0.00016459258969081514
+      }
+    ],
+    "selection_note": "The fixed 10% blend is an exploratory test on repeatedly examined labels; no leaderboard result is inferred."
+  },
+  "model": {
+    "family": "CatBoost GPU",
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "seed": 20261113,
+    "fold_seeds": [
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118
+    ],
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "external_data": "none",
+    "matched_label_transfer": "none",
+    "manual_predictions": "none",
+    "cross_dataset_statistics": "none; row-wise features are built from each training row independently",
+    "validation_labels": "not used in model fitting, feature building, or fold-specific loss weights",
+    "cached_predictions": "aligned OOF used only as a comparator, never as model input"
+  },
+  "runtime_seconds": 126.68838589999359,
+  "output_sha256": {
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\balanced_loss_catboost_v1\\OOF_PREDICTIONS.csv": "909ab73ddf0bf79adf67529e49bfd027f95da3a531841e6d244c630c0bef6b7b",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\balanced_loss_catboost_v1\\MODEL_FOLD_METRICS.csv": "7d457117be43993b6a190e4dfdcebbeb288243190392ba16962cbcf2ef58aa4a",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\balanced_loss_catboost_v1\\BLEND_FOLD_METRICS.csv": "3b52f7d75285986a8c2a571d23b20e68fde23184804f12fe3e9d792dd8b78649"
+  }
+}

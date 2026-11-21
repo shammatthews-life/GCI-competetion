@@ -1,0 +1,249 @@
+{
+  "experiment": "Phase 58 fold-local LightGBM ablation",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "iterations": 1400,
+  "top_fraction": 0.1,
+  "baseline_features": 32,
+  "candidate_features": 65,
+  "onehot_widths": [
+    {
+      "fold": 1,
+      "arm": "baseline",
+      "columns": 131
+    },
+    {
+      "fold": 1,
+      "arm": "candidate",
+      "columns": 259
+    },
+    {
+      "fold": 2,
+      "arm": "baseline",
+      "columns": 131
+    },
+    {
+      "fold": 2,
+      "arm": "candidate",
+      "columns": 257
+    },
+    {
+      "fold": 3,
+      "arm": "baseline",
+      "columns": 131
+    },
+    {
+      "fold": 3,
+      "arm": "candidate",
+      "columns": 259
+    },
+    {
+      "fold": 4,
+      "arm": "baseline",
+      "columns": 131
+    },
+    {
+      "fold": 4,
+      "arm": "candidate",
+      "columns": 259
+    },
+    {
+      "fold": 5,
+      "arm": "baseline",
+      "columns": 131
+    },
+    {
+      "fold": 5,
+      "arm": "candidate",
+      "columns": 259
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "roc_auc": 0.751397544702678,
+      "average_precision": 0.23577055151919177,
+      "log_loss": 0.24806339080878553,
+      "fold_auc": [
+        0.7544345314133073,
+        0.7576182616934583,
+        0.7478909918548652,
+        0.7476816117358798,
+        0.7494136873907927
+      ]
+    },
+    "candidate": {
+      "roc_auc": 0.7619072201115673,
+      "average_precision": 0.24622168174142484,
+      "log_loss": 0.24513329618143834,
+      "fold_auc": [
+        0.7657149752188525,
+        0.7691067358189265,
+        0.7572195911009496,
+        0.7596389222836538,
+        0.7580777898176709
+      ]
+    }
+  },
+  "candidate_vs_baseline": {
+    "roc_auc": 0.010509675408889252,
+    "average_precision": 0.010451130222233068,
+    "log_loss": -0.002930094627347196,
+    "positive_folds": 5,
+    "bootstrap": {
+      "replicates": 1000,
+      "ci_2_5": 0.008872683111869947,
+      "ci_97_5": 0.012100390537618414,
+      "fraction_positive": 1.0,
+      "conditional_on_fixed_oof_vectors": true
+    }
+  },
+  "fold_records": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "train_prevalence": 0.08073101101773497,
+      "baseline_auc": 0.7544345314133073,
+      "candidate_auc": 0.7657149752188525,
+      "delta_auc": 0.01128044380554516
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "train_prevalence": 0.0807237096691759,
+      "baseline_auc": 0.7576182616934583,
+      "candidate_auc": 0.7691067358189265,
+      "delta_auc": 0.011488474125468273
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "train_prevalence": 0.08073042157678773,
+      "baseline_auc": 0.7478909918548652,
+      "candidate_auc": 0.7572195911009496,
+      "delta_auc": 0.009328599246084424
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "train_prevalence": 0.08073042157678773,
+      "baseline_auc": 0.7476816117358798,
+      "candidate_auc": 0.7596389222836538,
+      "delta_auc": 0.011957310547774047
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "train_prevalence": 0.08073042157678773,
+      "baseline_auc": 0.7494136873907927,
+      "candidate_auc": 0.7580777898176709,
+      "delta_auc": 0.008664102426878206
+    }
+  ],
+  "classification": {
+    "baseline": {
+      "fixed_threshold_0.5": {
+        "tn": 157103,
+        "fp": 278,
+        "fn": 13513,
+        "tp": 308,
+        "precision": 0.5255972696245734,
+        "recall": 0.022284928731640258,
+        "specificity": 0.9982335860110179,
+        "f1": 0.042756993128340394,
+        "predicted_positive_rate": 0.0034228572096120374
+      },
+      "outer_train_prevalence": {
+        "tn": 110986,
+        "fp": 46395,
+        "fn": 4637,
+        "tp": 9184,
+        "precision": 0.16524226776300402,
+        "recall": 0.6644960567252731,
+        "specificity": 0.7052058380617736,
+        "f1": 0.26466858789625364,
+        "predicted_positive_rate": 0.3246398990665997
+      },
+      "top_10_percent_per_fold": {
+        "tn": 144821,
+        "fp": 12560,
+        "fn": 9259,
+        "tp": 4562,
+        "precision": 0.2664408363508936,
+        "recall": 0.33007741842124305,
+        "specificity": 0.9201936701380726,
+        "f1": 0.2948647513169376,
+        "predicted_positive_rate": 0.1000105138958657
+      }
+    },
+    "candidate": {
+      "fixed_threshold_0.5": {
+        "tn": 157066,
+        "fp": 315,
+        "fn": 13444,
+        "tp": 377,
+        "precision": 0.5447976878612717,
+        "recall": 0.02727733159684538,
+        "specificity": 0.9979984877462972,
+        "f1": 0.051953421070764144,
+        "predicted_positive_rate": 0.00404200885503674
+      },
+      "outer_train_prevalence": {
+        "tn": 111998,
+        "fp": 45383,
+        "fn": 4506,
+        "tp": 9315,
+        "precision": 0.17029873121503528,
+        "recall": 0.6739743868026915,
+        "specificity": 0.7116360933022411,
+        "f1": 0.27189538668106655,
+        "predicted_positive_rate": 0.3194939311456642
+      },
+      "top_10_percent_per_fold": {
+        "tn": 145007,
+        "fp": 12374,
+        "fn": 9073,
+        "tp": 4748,
+        "precision": 0.2773040532648055,
+        "recall": 0.3435352000578829,
+        "specificity": 0.9213755154688305,
+        "f1": 0.30688685647804026,
+        "predicted_positive_rate": 0.1000105138958657
+      }
+    }
+  },
+  "positive_prevalence": 0.08072919708881905,
+  "feature_scope": {
+    "baseline": "official raw predictors; categorical one-hot vocabularies fit inside each outer training fold",
+    "candidate": "baseline plus deterministic row-local finance, timeline, EXT_SOURCE, bureau, missingness, and Q3 features",
+    "custom_target_encoding": "none",
+    "cross_row_aggregation": "none",
+    "train_test_pooling": "none",
+    "external_data_or_prior_predictions": "none",
+    "ID_as_predictor": "no",
+    "thresholds": "0.5; outer-training-fold prevalence; and per-fold top 10% score rank, all diagnostic only"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "8dad43df1ea59408575ddd374e715eeeb4be03bf3c86f32cce9beacf52115342",
+  "runtime_seconds": 440.40813309996156,
+  "artifacts": {
+    "oof_predictions": "PHASE58_OOF.csv",
+    "submission": "submission.csv"
+  },
+  "limitations": [
+    "All training labels and folds have prior project exposure.",
+    "Confusion/precision/recall depend on a threshold; ROC-AUC is the competition metric.",
+    "The conditional bootstrap does not include model or research-selection uncertainty.",
+    "No leaderboard score is claimed or guaranteed."
+  ]
+}

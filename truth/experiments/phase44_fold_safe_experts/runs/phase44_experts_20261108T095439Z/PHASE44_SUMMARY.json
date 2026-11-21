@@ -1,0 +1,137 @@
+{
+  "phase": "Phase 44 fold-safe feature-routed experts",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "model": "Phase 38 XGBoost configuration; inner 12% stopping split; outer-fit refit",
+  "key_min_frequency": 50,
+  "gates": {
+    "contract_type": "NAME_CONTRACT_TYPE: cash=0, revolving=1",
+    "external_completeness": "all three supplied EXT_SOURCE fields finite=1; otherwise=0"
+  },
+  "fixed_mixture_weight": 0.5,
+  "support_floors": {
+    "expert_training_rows": 5000,
+    "expert_validation_rows": 1000
+  },
+  "segment_counts_by_fold": {
+    "contract_type": {
+      "fold_1": {
+        "train_group_0": 123953,
+        "valid_group_0": 31035,
+        "train_group_1": 13008,
+        "valid_group_1": 3206
+      },
+      "fold_2": {
+        "train_group_0": 124054,
+        "valid_group_0": 30934,
+        "train_group_1": 12907,
+        "valid_group_1": 3307
+      },
+      "fold_3": {
+        "train_group_0": 124014,
+        "valid_group_0": 30974,
+        "train_group_1": 12948,
+        "valid_group_1": 3266
+      },
+      "fold_4": {
+        "train_group_0": 123930,
+        "valid_group_0": 31058,
+        "train_group_1": 13032,
+        "valid_group_1": 3182
+      },
+      "fold_5": {
+        "train_group_0": 124001,
+        "valid_group_0": 30987,
+        "train_group_1": 12961,
+        "valid_group_1": 3253
+      }
+    },
+    "external_completeness": {
+      "fold_1": {
+        "train_group_0": 107936,
+        "valid_group_0": 27102,
+        "train_group_1": 29025,
+        "valid_group_1": 7139
+      },
+      "fold_2": {
+        "train_group_0": 108003,
+        "valid_group_0": 27035,
+        "train_group_1": 28958,
+        "valid_group_1": 7206
+      },
+      "fold_3": {
+        "train_group_0": 107958,
+        "valid_group_0": 27080,
+        "train_group_1": 29004,
+        "valid_group_1": 7160
+      },
+      "fold_4": {
+        "train_group_0": 108133,
+        "valid_group_0": 26905,
+        "train_group_1": 28829,
+        "valid_group_1": 7335
+      },
+      "fold_5": {
+        "train_group_0": 108122,
+        "valid_group_0": 26916,
+        "train_group_1": 28840,
+        "valid_group_1": 7324
+      }
+    }
+  },
+  "metrics": {
+    "global": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "contract_type_hard": {
+      "pooled_auc": 0.7640162654657314,
+      "pooled_log_loss": 0.24459077417850494,
+      "mean_fold_auc": 0.7640701420142851
+    },
+    "contract_type_mixture_50_50": {
+      "pooled_auc": 0.7651924668511284,
+      "pooled_log_loss": 0.2442401796579361,
+      "mean_fold_auc": 0.7652305624106586
+    },
+    "external_completeness_hard": {
+      "pooled_auc": 0.761118371111754,
+      "pooled_log_loss": 0.24533288180828094,
+      "mean_fold_auc": 0.7611707056548288
+    },
+    "external_completeness_mixture_50_50": {
+      "pooled_auc": 0.7643027520678899,
+      "pooled_log_loss": 0.2444341629743576,
+      "mean_fold_auc": 0.7643527938749238
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "gate_membership": "deterministic supplied covariates only; no TARGET-based routing",
+    "expert_training": "each expert fit only on its outer-training subgroup",
+    "iteration_selection": "inner split within the expert's outer-training subgroup",
+    "outer_validation": "never used for fitting, early stopping, or gate selection",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none"
+  },
+  "caveats": [
+    "Phase 20/21 previously found small and inconsistent segmentation effects; this is a matched XGBoost replication on the newer Phase 38 covariate representation.",
+    "A hard gate is only eligible if its pooled all-row OOF metric improves; segment-only AUC is not a promotion criterion.",
+    "Repeated reuse of the training labels creates selection bias; no candidate is independent confirmation or a leaderboard guarantee."
+  ],
+  "runtime_seconds": 171.6576999000099,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase44_fold_safe_experts\\run_phase44_fold_safe_experts.py": "4d60d539a89d85a2600a95d36643e48ad06e41ffb16fe863d56a25b130e50f6f",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase44_fold_safe_experts\\runs\\phase44_experts_20261108T095439Z\\PHASE44_FOLD_RESULTS.csv": "57eebf691af98b505a6e4210e5a83f86061177522a0b0cd22982665568e78118",
+    "D:\\gci\\truth\\experiments\\phase44_fold_safe_experts\\runs\\phase44_experts_20261108T095439Z\\PHASE44_OOF_PREDICTIONS.csv": "75c91c7d5cf321d76f5034efcc7aed638883dfb0ea817c0b68a319d61f22e96c"
+  }
+}

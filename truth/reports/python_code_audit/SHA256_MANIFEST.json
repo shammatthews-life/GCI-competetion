@@ -1,0 +1,3893 @@
+{
+  "manifest_version": 1,
+  "generated_utc": "2026-11-02T18:13:32.840302+00:00",
+  "truth_git_root": "D:\\gci\\truth",
+  "source_count": 637,
+  "sources": {
+    "D:\\gci\\5 independent\\build_precision_transductive_apex_champion.py": {
+      "sha256": "7b80c196bad395a2aaba478d08dc2087af4280d0f2b41ff75e36010a984b1fdc",
+      "size_bytes": 9645,
+      "source_group": "5 independent",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\5 independent\\train_catboost_and_deep_lgb.py": {
+      "sha256": "1c74ca4620ace7e927e8b9ec5c6bb0ecec9f6e4c577c9d01e44da1eff42f0290",
+      "size_bytes": 5077,
+      "source_group": "5 independent",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\5 independent\\train_exp15_gpu_xgboost.py": {
+      "sha256": "d025a59c47ee589b6e85c7d09723e401a5c0ba66940a97dedc457c7bdacb868a",
+      "size_bytes": 7347,
+      "source_group": "5 independent",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\5 independent\\train_full_v16_suite.py": {
+      "sha256": "eb20c21039c3a09f63367a538d9b46d2f34b8c04879b0b83fa4c29ef880bcec0",
+      "size_bytes": 10617,
+      "source_group": "5 independent",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\5 independent\\train_v58_clean_gpu_0783_champion.py": {
+      "sha256": "656a4de8802ef3dbb7d27da5046bfd67b5fee7f9e3dbad64a0de46283a71f584",
+      "size_bytes": 6841,
+      "source_group": "5 independent",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\01_EXP85_RECOVERY\\notebooks\\exp85_recovery_v5.ipynb": {
+      "sha256": "d7d16d00599061b041e2b85619eb4dbc3f3607d437766c9c1e72d928a913f7b7",
+      "size_bytes": 36967,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\01_EXP85_RECOVERY\\source\\evaluate_reproductions.py": {
+      "sha256": "878d1d8fddf9c32b49ed155e36f88cc23030a96432e31ef8443e41243ba60f91",
+      "size_bytes": 7463,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\01_EXP85_RECOVERY\\source\\reproduce_anchor74.py": {
+      "sha256": "08d7f5da963d2fb1b324dfd6884601e50b736ecc23313d2a25aa89a5a94ab79b",
+      "size_bytes": 8064,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\01_EXP85_RECOVERY\\source\\reproduce_exact_synthesis.py": {
+      "sha256": "a1c6c8f9562a9e0c395a7b551742f6e1e3b755857cab11ca268274921cec6f4b",
+      "size_bytes": 4683,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\notebooks\\exp85_recovery_v5.ipynb": {
+      "sha256": "d7d16d00599061b041e2b85619eb4dbc3f3607d437766c9c1e72d928a913f7b7",
+      "size_bytes": 36967,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\generate_anchor74_from_scratch.py": {
+      "sha256": "db3fa4148a681d6e0c7029bf908dca12dab8b0708329937daf59a94be1eed022",
+      "size_bytes": 31768,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\generate_v17_from_scratch.py": {
+      "sha256": "5cdf77eadcd7afb33edb83ccc4228d474d722416ab92358fec574f575853bb2c",
+      "size_bytes": 18440,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\generate_v55_from_scratch.py": {
+      "sha256": "f3c5e579ff1292b37550d9246ce4010f3022bf2795c05db15c7efa8603d38b0a",
+      "size_bytes": 15432,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\generate_xgb10_from_scratch.py": {
+      "sha256": "81a1db403d291e8dbd6b62cb25ff5dc9e376895faf3a66990a7051a2e6b99daf",
+      "size_bytes": 11929,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\reconstruct_transductive_pyramid.py": {
+      "sha256": "a99bd2ba02ed673a6660eb67c39fb16e80d9d01d4560e02ef3ba3ae0fefbd0f4",
+      "size_bytes": 17103,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\recreate_precision_anchor.py": {
+      "sha256": "db3fa4148a681d6e0c7029bf908dca12dab8b0708329937daf59a94be1eed022",
+      "size_bytes": 31768,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\recreate_v17_bundle.py": {
+      "sha256": "5cdf77eadcd7afb33edb83ccc4228d474d722416ab92358fec574f575853bb2c",
+      "size_bytes": 18440,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\recreate_v55_members.py": {
+      "sha256": "f3c5e579ff1292b37550d9246ce4010f3022bf2795c05db15c7efa8603d38b0a",
+      "size_bytes": 15432,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\recreate_xgb10_and_labels.py": {
+      "sha256": "81a1db403d291e8dbd6b62cb25ff5dc9e376895faf3a66990a7051a2e6b99daf",
+      "size_bytes": 11929,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\run_all_recreations.py": {
+      "sha256": "5042671e39d1f9a9892ed12c85b666604c95b474ca08eb11cf7817a2cae62ea7",
+      "size_bytes": 21414,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\run_hasan_600_builder.py": {
+      "sha256": "c48cef2ee03f67e9eb69dc46aa8c3ce49de85a72e933433cd0eb163b5fb01459",
+      "size_bytes": 18055,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\run_workstream2_screening.py": {
+      "sha256": "9db77087ac0f51eca9242a26beeffa25d444c5e59373675fd5115dff035ce6d9",
+      "size_bytes": 4729,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\02_EXP85_REBUILT\\source\\train_independent_zoo.py": {
+      "sha256": "e520f3fc41788128738817cb2fdfc030131061d80ae9529086b8b077814f83bf",
+      "size_bytes": 11607,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_1\\audit_historical_artifacts.py": {
+      "sha256": "b62c41d9f563d5e2a5808925880e57742305eefcdef1f11dfcd28bb648800bd3",
+      "size_bytes": 3442,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_1\\evaluate_reproductions.py": {
+      "sha256": "878d1d8fddf9c32b49ed155e36f88cc23030a96432e31ef8443e41243ba60f91",
+      "size_bytes": 7463,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_1\\inventory_scanner.py": {
+      "sha256": "1fd5eaadbefbaa1f3393ca81bd9dd7671aa73f92c9e1f9c92e04f43107208d8c",
+      "size_bytes": 5739,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_1\\reproduce_exact_synthesis.py": {
+      "sha256": "a1c6c8f9562a9e0c395a7b551742f6e1e3b755857cab11ca268274921cec6f4b",
+      "size_bytes": 4683,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_1\\run_branch_ablation.py": {
+      "sha256": "578e7edc94aee744aff2419977af6f3afbd6328ff81da37ab6429445eaf35d8f",
+      "size_bytes": 6313,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_2\\reproduce_anchor74.py": {
+      "sha256": "08d7f5da963d2fb1b324dfd6884601e50b736ecc23313d2a25aa89a5a94ab79b",
+      "size_bytes": 8064,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\create_builder.py": {
+      "sha256": "c2215454fc435037d61656a819a89eba10d1ad21b4f050f4c22b1e075ebbf6cb",
+      "size_bytes": 1112,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\reconstruct_hasan_features.py": {
+      "sha256": "dc8c61c19aa61ad055f16f45724f03ca4b2d7157a7ca3ce12560015da8999ea0",
+      "size_bytes": 14991,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\reconstruct_transductive_pyramid.py": {
+      "sha256": "bcd1536149241091b8dea26bfecdaae39edf9b6aad7bd7db5c24baa5cd4db70c",
+      "size_bytes": 17032,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\run_hasan_600_builder.py": {
+      "sha256": "c48cef2ee03f67e9eb69dc46aa8c3ce49de85a72e933433cd0eb163b5fb01459",
+      "size_bytes": 18055,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\run_workstream2_screening.py": {
+      "sha256": "9db77087ac0f51eca9242a26beeffa25d444c5e59373675fd5115dff035ce6d9",
+      "size_bytes": 4729,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\03_PHASE_HISTORY\\PHASE_3\\experiments\\train_independent_zoo.py": {
+      "sha256": "3fffb32c96151eeeb28864e545154858262ff2ded4bcc5ffa562fc367410b92d",
+      "size_bytes": 11499,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\04_MODEL_LINEAGE\\ANCHOR74\\generate_anchor74_from_scratch.py": {
+      "sha256": "db3fa4148a681d6e0c7029bf908dca12dab8b0708329937daf59a94be1eed022",
+      "size_bytes": 31768,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\04_MODEL_LINEAGE\\V17\\generate_v17_from_scratch.py": {
+      "sha256": "5cdf77eadcd7afb33edb83ccc4228d474d722416ab92358fec574f575853bb2c",
+      "size_bytes": 18440,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\04_MODEL_LINEAGE\\V55\\generate_v55_from_scratch.py": {
+      "sha256": "f3c5e579ff1292b37550d9246ce4010f3022bf2795c05db15c7efa8603d38b0a",
+      "size_bytes": 15432,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\04_MODEL_LINEAGE\\XGB10\\generate_xgb10_from_scratch.py": {
+      "sha256": "81a1db403d291e8dbd6b62cb25ff5dc9e376895faf3a66990a7051a2e6b99daf",
+      "size_bytes": 11929,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\05_FEATURE_ENGINEERING\\FEATURE_BUILDERS\\build_hasan_600_features.py": {
+      "sha256": "cafd70abd8da3cb6d544c26b668ed61f329cd89ef98ff61cec3983ffc1c08341",
+      "size_bytes": 17482,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\05_FEATURE_ENGINEERING\\FEATURE_BUILDERS\\screen_and_select_features.py": {
+      "sha256": "0a881c5bb2090e77e6cb3020e0134ba172650fe3ecfb1f7701ae57a5e8caafb7",
+      "size_bytes": 3636,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\05_FEATURE_ENGINEERING\\FEATURE_VALIDATION\\nested_cv_feature_screening_benchmark.py": {
+      "sha256": "f8e5970193cd1b7a02420512472779d3b822f8cbd62807636d4abcfb068dce98",
+      "size_bytes": 10469,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\06_REPRODUCIBILITY\\generate_inventory.py": {
+      "sha256": "e93cd9e1548899196f6c9457090427e7fa58de5268f6dc29c862b292bf0ea99f",
+      "size_bytes": 1333,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\create_exp85_submissions.py": {
+      "sha256": "52f6bbfee9e5944bb723db8787291db15e32ce3e8a0aa9fd9439a9cb774afc41",
+      "size_bytes": 17372,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\create_submission_recovery_v5.py": {
+      "sha256": "dc4dcdcb04d5aaae63271b97a1b1603e8fd4619f97e8d8428d12453449f0b8f3",
+      "size_bytes": 8340,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\create_submission_recovery_v5_rebuilt.py": {
+      "sha256": "fbeaecbf28c4ab96459d8cda32b1997b4788faf6674221942c889208087ba2ed",
+      "size_bytes": 10775,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\build_manifests.py": {
+      "sha256": "654cea043d7b6a60367c3cb5187f73b427cf2257fccbe689ed3ab4c9d27c96c8",
+      "size_bytes": 2024,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\correlation_gap_diagnostics.py": {
+      "sha256": "e3cf427c3b9bac8be1c6d9694ba1103f7c7401a2bf4ad1adc56850172c592255",
+      "size_bytes": 11337,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\gap_diagnostics.py": {
+      "sha256": "09122d35cdc93bc8f4662a42781434f024d72a99de7843fe7a8b13e4a52f8387",
+      "size_bytes": 8492,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\phase2_category_keys.py": {
+      "sha256": "7f3dbbe0a7d75506bc845f2dbbd44557a78761843d6396122b46c7adf77bf132",
+      "size_bytes": 1639,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\phase2_group_context.py": {
+      "sha256": "f3dd075efa2f7bef2bfa222b271f558c30e543215b052129da026b85fc6f9980",
+      "size_bytes": 8576,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\run_category_te_experiment.py": {
+      "sha256": "5eaf36a9e7723f35531bef4eb99a2bd49046ebaf949766a6f391e0932b18b52d",
+      "size_bytes": 15339,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\run_group_context_experiment.py": {
+      "sha256": "c838d3a7030b0a27b856007058e6f19ec5d0a18960dc3af856fa53cc9f1635cd",
+      "size_bytes": 22400,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\source\\verify_manifests.py": {
+      "sha256": "3997aa148072b4d9e51c08d8fa9583e5a32038259045a7dbb906ae0b51e01d6c",
+      "size_bytes": 1639,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\tests\\test_gap_diagnostics.py": {
+      "sha256": "29e4e3071c4e5db2f0dde5d1c9268fa3da413731d67fc155a6509f533159e613",
+      "size_bytes": 3242,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\tests\\test_phase2_category_keys.py": {
+      "sha256": "144b67c97781c9170d528fdb7f437fbefb1f59277f53a762a75517a940ae8b10",
+      "size_bytes": 1764,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_DEEP_RESEARCH_AND_IMPROVEMENT\\tests\\test_phase2_group_context.py": {
+      "sha256": "9d74875b8be2cfbbfe15b1155a1a90897c84a2ae4552df936a8593076554123c",
+      "size_bytes": 4065,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\correlation_failure_investigation\\analyze_existing_artifacts.py": {
+      "sha256": "ad54049367bf4738638a2ece6813d89b5114b4efb484f14ef27ee25cae438fe8",
+      "size_bytes": 21543,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\build_asymmetric_convex_gated_champion.py": {
+      "sha256": "23f14c6fd6f3f15e34efad05e805d6caa21a79702440110e8d31b5891a49fd64",
+      "size_bytes": 9167,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\build_hasan_600_features.py": {
+      "sha256": "cafd70abd8da3cb6d544c26b668ed61f329cd89ef98ff61cec3983ffc1c08341",
+      "size_bytes": 17482,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\build_level2_regime_meta_stacker.py": {
+      "sha256": "f1224d8f351daa8b8058fca99ed1f2eb5aa35b98408e2c306beddce5fd0a8490",
+      "size_bytes": 17756,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\build_optimal_transductive_apex_champion.py": {
+      "sha256": "e5d3febfc71e5194c05ce6db85358db5f9a93601619bea29ef3633dbd47e3011",
+      "size_bytes": 10528,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\build_precision_transductive_apex_champion.py": {
+      "sha256": "7b80c196bad395a2aaba478d08dc2087af4280d0f2b41ff75e36010a984b1fdc",
+      "size_bytes": 9645,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\cacherecreation\\recreate_precision_anchor.py": {
+      "sha256": "ad38e92988428f04a59f66ab9a3746cbaf01b633c6295b61f5876c6e03fc7dff",
+      "size_bytes": 30355,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\cacherecreation\\recreate_v17_bundle.py": {
+      "sha256": "f9c15e292161a4dd8c2d71419d1a95134a5ebba4b8d366e0a86885b79a7c65a6",
+      "size_bytes": 28820,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\cacherecreation\\recreate_v55_members.py": {
+      "sha256": "3c2979bc8941c61d9f2ebbd0de725d15f09bca32245d9dcd46812bbb9e0cf290",
+      "size_bytes": 18116,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\cacherecreation\\recreate_xgb10_and_labels.py": {
+      "sha256": "7fbeaa89fb7b4473aefa9dbdb2c83b6ee337389b1ffc783b442a1640f9c1c900",
+      "size_bytes": 10281,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\dependency_audit\\anchor74_audit\\reproduce_anchor74.py": {
+      "sha256": "08d7f5da963d2fb1b324dfd6884601e50b736ecc23313d2a25aa89a5a94ab79b",
+      "size_bytes": 8064,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\exp85_solo_runner.py": {
+      "sha256": "6c8a301c569dba3e879ad4a968e3e1c393a35583baf841eec7013edcadc07d68",
+      "size_bytes": 22498,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\create_builder.py": {
+      "sha256": "c2215454fc435037d61656a819a89eba10d1ad21b4f050f4c22b1e075ebbf6cb",
+      "size_bytes": 1112,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\reconstruct_hasan_features.py": {
+      "sha256": "dc8c61c19aa61ad055f16f45724f03ca4b2d7157a7ca3ce12560015da8999ea0",
+      "size_bytes": 14991,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\reconstruct_transductive_pyramid.py": {
+      "sha256": "a99bd2ba02ed673a6660eb67c39fb16e80d9d01d4560e02ef3ba3ae0fefbd0f4",
+      "size_bytes": 17103,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\run_hasan_600_builder.py": {
+      "sha256": "c48cef2ee03f67e9eb69dc46aa8c3ce49de85a72e933433cd0eb163b5fb01459",
+      "size_bytes": 18055,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\run_workstream2_screening.py": {
+      "sha256": "9db77087ac0f51eca9242a26beeffa25d444c5e59373675fd5115dff035ce6d9",
+      "size_bytes": 4729,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\champion\\phase3_reconstruction\\experiments\\train_independent_zoo.py": {
+      "sha256": "e520f3fc41788128738817cb2fdfc030131061d80ae9529086b8b077814f83bf",
+      "size_bytes": 11607,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\dependent\\exp85_solo_runner_independent.py": {
+      "sha256": "549872fd9ff59fa8ab46eb793a66ad5836b7bccf7f2660353112002c72d2fdcb",
+      "size_bytes": 41283,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\screen_and_select_features.py": {
+      "sha256": "0a881c5bb2090e77e6cb3020e0134ba172650fe3ecfb1f7701ae57a5e8caafb7",
+      "size_bytes": 3636,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\train_catboost_and_deep_lgb.py": {
+      "sha256": "1c74ca4620ace7e927e8b9ec5c6bb0ecec9f6e4c577c9d01e44da1eff42f0290",
+      "size_bytes": 5077,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\gemini_recovered\\train_hasan_master_zoo.py": {
+      "sha256": "bb8a2e8d8205fcbdc534854899ca46bf7ffeddbff16ade82c618c578f8a51009",
+      "size_bytes": 7849,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\historical_lineage_bridge\\source\\analyze_production_feature_capture.py": {
+      "sha256": "b3bb917bbc35a817ea440f633991f891446a30fd4066baf34458f51e48533f6b",
+      "size_bytes": 40493,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\historical_lineage_bridge\\source\\audit_historical_lineage.py": {
+      "sha256": "f3b71f5aba34f59052db9fdb9f56b67f8bea1aec0aca7a26496296316acea472",
+      "size_bytes": 34476,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\historical_lineage_bridge\\source\\capture_production_anchor_features.py": {
+      "sha256": "c85476cd68ceee7652ff0721687d8331b3bb9ecef80f855c755db3f5469d7f27",
+      "size_bytes": 8547,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\historical_lineage_bridge\\source\\finalize_production_feature_audit.py": {
+      "sha256": "4303bae2ad31c32116411816c59880c594466b3d77321c8bd8e8a68923c3e877",
+      "size_bytes": 27547,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\historical_lineage_bridge\\tests\\test_lineage_evidence.py": {
+      "sha256": "6014f5d079b0538c7494b0fd9fdde487a8f711dd8dac030c54273f7c4bb6610a",
+      "size_bytes": 9512,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\build_track1b.py": {
+      "sha256": "1147f27fbc9c6ee5f1c49652ac8dc6d42b6a5c185da87c4a6760219696e9ff11",
+      "size_bytes": 11197,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\common.py": {
+      "sha256": "bcaa02ef3bf94c310a74e5be4eeb8668cadc81b164a82fc72d961328fd6cb361",
+      "size_bytes": 4211,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_anchor74.py": {
+      "sha256": "8f85ed707322a39c893e9858b5c5a04922bffdce5a1501cf5a24c6d5091135ff",
+      "size_bytes": 7833,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_recovered_component.py": {
+      "sha256": "f2eb53ac0a6306894d864a49001ae41d1645b159e0653e9b5334e49917565123",
+      "size_bytes": 9637,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_v17.py": {
+      "sha256": "14b1716ecbef5fb6f370dc906c636ec6cd359f27667567f93d7e46540ba429a9",
+      "size_bytes": 8594,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_v55.py": {
+      "sha256": "2dc165180a45f7efadb4c34468de74c8fd9091b554c771b0dd6c712639b9d391",
+      "size_bytes": 8702,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_xgb10.py": {
+      "sha256": "f6932699a9aab7cd00227836436466b7352a1b6ff412e80e00f27c6912b67644",
+      "size_bytes": 7402,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\generate_xgb10_recovered.py": {
+      "sha256": "f00782f0cd569077482784e8652091d9fbda63f646faa2bfd35b9e88a0d7d049",
+      "size_bytes": 4271,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\src\\run_all.py": {
+      "sha256": "909bedcc02790181283e1f1168a6d3b087dc5341abf02adb874cf70fb121dc8a",
+      "size_bytes": 1618,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\tests\\__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\tests\\test_gpu_smoke.py": {
+      "sha256": "1946717870a6cd105d02c8711f7cfcd771d5c88579c3966ec79a5737b975d346",
+      "size_bytes": 588,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\validation\\__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\validation\\validate_artifacts.py": {
+      "sha256": "828fb333394a3811667dda4c48acf6e548e520b9adf351c378131eb6fff8584b",
+      "size_bytes": 883,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_FINAL_RECONSTRUCTION\\validation\\validate_gpu.py": {
+      "sha256": "c47e6473c556684dfcea0060777e9c6eb2a0640e78f3af42b6a8e3c227388d97",
+      "size_bytes": 536,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_ISOLATED_REPAIR\\scripts\\audit_prediction_correlations.py": {
+      "sha256": "0e1c7862c9974451d5e2ab539a6f05ba917421a57d7e2fb00e7621b97e529653",
+      "size_bytes": 9862,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_ISOLATED_REPAIR\\scripts\\create_verified_rebuild.py": {
+      "sha256": "e9d1f8cd3cedc115c9023e1577c87f06a46a40554f1203bd5f286472082a0e19",
+      "size_bytes": 4487,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_ISOLATED_REPAIR\\scripts\\test_prediction_correlations.py": {
+      "sha256": "78a5db39ac678404721a473f6b1eb3f478558973d4d22aa267a358ee2b6e08de",
+      "size_bytes": 5760,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\PHASE3_RAW_LINEAGE_RECOVERY\\runs\\v080200_transform_replay_20261031_213954\\source_snapshot\\build_v80200_apex.py": {
+      "sha256": "312e760a1f09c71620968cc80938cab6c612bf1576dfe2b474ba10f152053c28",
+      "size_bytes": 4645,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\PHASE3_RAW_LINEAGE_RECOVERY\\source\\catboost_controlled_experiment.py": {
+      "sha256": "b3243dd2083dc82b34173d77ef543ac332f6d63d57ede2021fdca0a23c2fbaf8",
+      "size_bytes": 18659,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\PHASE3_RAW_LINEAGE_RECOVERY\\source\\replay_v080200_transform.py": {
+      "sha256": "8d3cb08bf38c62a001bcf9fa05e80c0910d61039fcbae281f42a774a35409436",
+      "size_bytes": 11924,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\PHASE3_RAW_LINEAGE_RECOVERY\\tests\\test_replay_v080200_transform.py": {
+      "sha256": "e173317bd5e9a5b90bc196c2291802204cdab4525e78c9d9e04a8d188494b2e0",
+      "size_bytes": 1647,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\compare_historical_zoo.py": {
+      "sha256": "d2d078f0090e243fe962f697e5142d0ecf66294e623042abbaddb5c0f5b08c4a",
+      "size_bytes": 9217,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\HISTORICAL_FEATURE_BUILDER.py": {
+      "sha256": "f1cd10769613924320db77bcd16b477e7eaf5cacfc88e33c277cf0649f9b15c7",
+      "size_bytes": 20117,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\isolated_legacy\\build_asymmetric_convex_gated_champion.py": {
+      "sha256": "88a1c51f40a2b4ff3d7a5172ea07337520545c184e8412d8c41f69b3e3e9884d",
+      "size_bytes": 9307,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\isolated_legacy\\build_asymmetric_historical_zoo.py": {
+      "sha256": "f4eee27cc9f9ce4ba3b7f0bc83a626d855f166b8a461ec6063dab83111c42704",
+      "size_bytes": 9335,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\reconstruct_anchor74_only.py": {
+      "sha256": "53e421e64b938c2034c70172f41247e0a23d6c126f97f25d3e418c3ca8be50f0",
+      "size_bytes": 18747,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\reconstruct_historical_anchor74.py": {
+      "sha256": "cc8c2b57ee792b6b20f435e992deedff85f5c10dbf5ddd7060400970d239b051",
+      "size_bytes": 17314,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\replay_historical_selector.py": {
+      "sha256": "1b57bd666f836f16b8a296537bbe4b339c047ea411ae5d23d66ec96705284103",
+      "size_bytes": 7801,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\source\\train_historical_anchor_zoo.py": {
+      "sha256": "a1dd1aa87631ba79cd19a2138ca7400b10aec1509a87c088f55fcb5d8b19a1bc",
+      "size_bytes": 17220,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\tests\\test_historical_anchor74.py": {
+      "sha256": "df36b5925bc98e876c3ad213a9a9a76cb6e99956649ae2d7be704b9bd541e877",
+      "size_bytes": 3092,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_MASTER_RECOVERY\\tests\\test_historical_features.py": {
+      "sha256": "cc9096f59a2078998013c0d454eb9dd8855c254aae22d1650d9367228ff21710",
+      "size_bytes": 8021,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\REPRODUCTION\\test_verify_freeze.py": {
+      "sha256": "e2292019619a2109f2ec7def883dbfe231df8a5358eeaaf8ed01edc3f7d2b2bc",
+      "size_bytes": 3002,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\REPRODUCTION\\update_freeze_manifest.py": {
+      "sha256": "2207adefb5db19105f0b8ed282f19d806a18a290cc6283a6d450dfef2ca922b8",
+      "size_bytes": 5094,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\REPRODUCTION\\verify_freeze.py": {
+      "sha256": "f1d67087cf9705a0f8eb87e33734a713b7dc747357d9e5a2fba2641b7c15616e",
+      "size_bytes": 11652,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_01_fee_product_features\\run_experiment.py": {
+      "sha256": "93713b018d3376bb35bbad770d1213eb5e5f9595bb243be635b531e3c99ddf9b",
+      "size_bytes": 15844,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_01_fee_product_features\\test_decoded_loan_features.py": {
+      "sha256": "cef3ac27e838b2c696403af4df7ae9ceca9fff6e36a6c4e285bc6fa7fad5c358",
+      "size_bytes": 2599,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_02_fold_safe_key_encodings\\run_experiment.py": {
+      "sha256": "cf45675c405588aab8c9d38976254b670144af1deaf423e08309fc64a190a34e",
+      "size_bytes": 20360,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_02_fold_safe_key_encodings\\test_target_encodings.py": {
+      "sha256": "341ba464ed3ff470a01e4f3a4862273337d856a2f671ef4e5d1fb81468db4024",
+      "size_bytes": 2017,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_04_final_validation_gate\\run_final_gate.py": {
+      "sha256": "be8f705bf55f3ddd3ae16bcc09176901b88566081fd1bb1c89c01b7657bd404d",
+      "size_bytes": 41730,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_04_final_validation_gate\\run_frequency_ablation.py": {
+      "sha256": "c35f95c74887f075c9c6af9afd5233d706ba8552d4bee7abd246594fc5a28aa4",
+      "size_bytes": 22577,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_04_final_validation_gate\\test_final_gate.py": {
+      "sha256": "b0a34eebc819ea14e17f6a0a730177b2265ee9e529954e699903835e2225a596",
+      "size_bytes": 6162,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_04_final_validation_gate\\verify_final_gate.py": {
+      "sha256": "4a847060434aa16e10425a157cb9974fcc82339c4deae6ce681cd50ef45225b7",
+      "size_bytes": 26296,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\source\\run_independent_baseline.py": {
+      "sha256": "c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe",
+      "size_bytes": 39902,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\source\\validate_experiment_artifacts.py": {
+      "sha256": "c629f2d7ce7fadad2954015a0844ec7318e86a99eeffbc096e6776fadf3a6693",
+      "size_bytes": 24444,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\tests\\test_independent_features.py": {
+      "sha256": "c7279c9eb38661c08f87056a75c3cd4a2910451c254870530299822d392a49f4",
+      "size_bytes": 6062,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\exp85_solo.ipynb": {
+      "sha256": "d7d16d00599061b041e2b85619eb4dbc3f3607d437766c9c1e72d928a913f7b7",
+      "size_bytes": 36967,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\exp85_solo.pre_independent_wiring_backup.ipynb": {
+      "sha256": "1ccfab28ef8534fc176c757c79250547c03a041a922851d683c82d0df1241d23",
+      "size_bytes": 140963,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\exp85_solo_backup_pre_fix.ipynb": {
+      "sha256": "34b66ca02ca74f1c8ee80a24d80a519292f3d0d6f00e197e1900e16f94dfeb4b",
+      "size_bytes": 40022,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\exp85_solo_runner.py": {
+      "sha256": "d6e7a398ec4f08b1ff605da4886889d476e14ab9169baa81f00c3f04fede8be9",
+      "size_bytes": 23561,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\analyze_existing_artifacts.py": {
+      "sha256": "ad54049367bf4738638a2ece6813d89b5114b4efb484f14ef27ee25cae438fe8",
+      "size_bytes": 21543,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\build_manifests.py": {
+      "sha256": "20ba2cb90bb310eeab5bdd74570443266524e32a4a7cf0b162bd7d287b3ee4fe",
+      "size_bytes": 3681,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\correlation_runner.py": {
+      "sha256": "9925a3095f578ffd0f6108b4031c53d04e6c079be9b98ed07ef20fc9847fece0",
+      "size_bytes": 16784,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\create_submission_recovery_v5_rebuilt.py": {
+      "sha256": "fbeaecbf28c4ab96459d8cda32b1997b4788faf6674221942c889208087ba2ed",
+      "size_bytes": 10775,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\exp85_recovery_v5_original.ipynb": {
+      "sha256": "d7d16d00599061b041e2b85619eb4dbc3f3607d437766c9c1e72d928a913f7b7",
+      "size_bytes": 36967,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\original_isolated_audit\\audit_prediction_correlations.py": {
+      "sha256": "0e1c7862c9974451d5e2ab539a6f05ba917421a57d7e2fb00e7621b97e529653",
+      "size_bytes": 9862,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\original_isolated_audit\\test_prediction_correlations.py": {
+      "sha256": "78a5db39ac678404721a473f6b1eb3f478558973d4d22aa267a358ee2b6e08de",
+      "size_bytes": 5760,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\reconstruct_historical_v5.py": {
+      "sha256": "f9a794ad951348207d007c5f15254c5b6fbfe309cd03a7f62bfbc1d2018a9fed",
+      "size_bytes": 31967,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\reconstruct_transductive_pyramid.py": {
+      "sha256": "a99bd2ba02ed673a6660eb67c39fb16e80d9d01d4560e02ef3ba3ae0fefbd0f4",
+      "size_bytes": 17103,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\source\\verify_replication.py": {
+      "sha256": "a5089d4c395a82f4630a5d70fedae75d7a77e882aa7081351d54902aa4454f61",
+      "size_bytes": 2606,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\tests\\test_correlation_runner.py": {
+      "sha256": "a7840a98d34fa21773c6fc42a7451c94977768ced5e72febd9d12f6952886c6b",
+      "size_bytes": 5953,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\champion\\EXP85_SUBMISSION_CORRELATION_REPLICATION\\tests\\test_historical_v5_reconstruction.py": {
+      "sha256": "da27a5c963e8d5bebe8ccd9ef5e02a0f96b3baaa5520333581e21087e948a204",
+      "size_bytes": 4526,
+      "source_group": "champion",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\analyze_v15_ca_catboost_combinations.py": {
+      "sha256": "b4812b1a4373d64f6a2f6d805c122c00dc3cb8c41cba4f3f8f6b8d8114f8fc58",
+      "size_bytes": 2582,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\analyze_v15_ca_catboost_gate.py": {
+      "sha256": "dea2b14830008d826444ec8d2703480db4455c936f305c6bc138516bf966b022",
+      "size_bytes": 2504,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\analyze_v15_ca_catboost_seed_blend.py": {
+      "sha256": "6d1515db8dafb9080c809a1f3a00bb925409b234f1d6bc074055930a8d415e14",
+      "size_bytes": 2203,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\analyze_v15_ca_catboost_weights.py": {
+      "sha256": "d771da06f30f871ee0d3464281df355d00151001469e3f2b321eaf02590f13b1",
+      "size_bytes": 2984,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\analyze_v15_ca_ext_fresh_weight.py": {
+      "sha256": "e728c9f0af9dd39ba24ea0830bcad824e34958524e11954d79d39e937c84cfbb",
+      "size_bytes": 1751,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\assess_v4_v17_blend.py": {
+      "sha256": "3660a5eb14dc2a39311e26befd817591fbe83a3525a979870e6fc743d77dbaff",
+      "size_bytes": 4762,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\combine_v15_id_ca_candidates.py": {
+      "sha256": "678b47e7a4cc77386d6cc5c195f733697bd584893b7448dafcc48e2ca4c27a21",
+      "size_bytes": 2339,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\confirm_v15_annuity_income_gate.py": {
+      "sha256": "1213e2c2d97044f95d020ed400957f7c25beb70df3cc4a66780105ffb817f9f3",
+      "size_bytes": 2348,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\confirm_v15_id_ca_combination.py": {
+      "sha256": "a56668df7c493ff6e4fd49444c8f2afea51b8e8adf7aabd6c87d79955886d65e",
+      "size_bytes": 2321,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\profile_repeat_diagnostic.py": {
+      "sha256": "68a8278cfd93dd0b2859765c377e7a5f0319f7719aeb803a80b2e34718a301b5",
+      "size_bytes": 1919,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_claude_5_diversity_diagnostic.py": {
+      "sha256": "4b6ba556cfd25dc6a3ac47e5d7160b88ae14a4d30f23784774e8fe436b3abd0b",
+      "size_bytes": 4841,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_claude_5_feature_hypothesis_screen.py": {
+      "sha256": "8a4f98a7d053bdb6f4d80ceb5e8389072b20270ccea19cc752e67d8aa2f4a531",
+      "size_bytes": 15718,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_claude_6_fresh_diversity_confirmation.py": {
+      "sha256": "0f7f4f8beddc1f906b880bb58b3ccb672209594c3dfd669391f171ba6b983ae4",
+      "size_bytes": 4991,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_claude_7_matched_v15_specialists.py": {
+      "sha256": "898714ee445d82f7b0c79cb75f5bc87898f16c324d109eb9adfc448db2a21024",
+      "size_bytes": 7832,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_train_test_shift_audit.py": {
+      "sha256": "2e30d66c5741b99f802ca9f425ea10af8c7accd0a9fe1e3459a4e17581b0fa0c",
+      "size_bytes": 5191,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_applicant_profile_catboost.py": {
+      "sha256": "b4de4f0994817cc25b77c65bc288baca1e5ab7e4b5120a67080632542afdd07b",
+      "size_bytes": 9178,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_catboost_only.py": {
+      "sha256": "06d7f04288fb890f0b7e3f01d5e4af18041ea20dad86d6e0d5ec6262d27d253a",
+      "size_bytes": 7586,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_context_catboost.py": {
+      "sha256": "0fba2b37825857c94dee7e398668e1f9ee93b37150026ed1331d180411390a5e",
+      "size_bytes": 8438,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_ext_alpha50.py": {
+      "sha256": "329ee1bd84fc7ba0f305992fb49a959a48e2385c72f19482a209d00c9597363d",
+      "size_bytes": 11888,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_ext_catboost.py": {
+      "sha256": "1cf25a3a5b2a751972a068db9640cdcb220454701a3746cd14b0ea807e2946a1",
+      "size_bytes": 8178,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_ext_confirmation.py": {
+      "sha256": "10d67a2d7e191368ebaccecd3a6eeae1702171431def8fd9818c9a6e01594b28",
+      "size_bytes": 8412,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ca_ext_experiment.py": {
+      "sha256": "f9f4030a3c64e5427581a9fa06e0eb36cbd1dbc9a21512c5c097bac71b1660df",
+      "size_bytes": 11669,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_conditional_blend_diagnostic.py": {
+      "sha256": "a237653ab06211888f4cce0d16e9d2242b9c07dc116d83271462c6dd8b7d043e",
+      "size_bytes": 4075,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_dart_member.py": {
+      "sha256": "53b02d8740b1e1dfc7fec9eaf5bf2f64fd324a91148e21507f6a409b8b1f7436",
+      "size_bytes": 5132,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_driver_specialist.py": {
+      "sha256": "7c02eb6ba89c3ce821a4b282a96e45203b855e09d11043edd1a590302e320e61",
+      "size_bytes": 6655,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_employment_consistency_features.py": {
+      "sha256": "34bc6d3bc93e09a01b4edf9f265a30a7ffc554c777d376f675f78389478d2e75",
+      "size_bytes": 7945,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_ext3_normalization_features.py": {
+      "sha256": "238154f88206e9df7c69fe6caada041a96807dba4ec872df3dee297b68b536b8",
+      "size_bytes": 8271,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_financial_monotone.py": {
+      "sha256": "78d8c8076bca137efa8928bb9ed4de559a90ddb5c427a2f09707e1a1ffe81034",
+      "size_bytes": 6821,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_hierarchical_backoff_experiment.py": {
+      "sha256": "5d23160a15505f9a9c0cb792296ddfed9e736bbe843c158f5d82c537bc476c45",
+      "size_bytes": 15271,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_high_credit_specialist.py": {
+      "sha256": "7fcf3a10744d25edf57c30f42938ece13f896f2c21cd2aba49c3d3e7bbe2f9fd",
+      "size_bytes": 6678,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_id_context_experiment.py": {
+      "sha256": "c025f36300115e29cdba5927d2402a17b762aeb407437b85acfa872c9bb626df",
+      "size_bytes": 7476,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_missing_ext_specialist.py": {
+      "sha256": "c6113c94e2139191626dd20305f370ef2de44662f754f551484815fc82e45ffe",
+      "size_bytes": 6779,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_peer_knn_experiment.py": {
+      "sha256": "f9c2831ac202a363a83dd971fb2f5e7415be356163121d807862112947ed378b",
+      "size_bytes": 6205,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_peer_rank_experiment.py": {
+      "sha256": "0749c928ac95ccaf4e2167bf9aaa178cdf75c639aded42c91b39975dcda08a75",
+      "size_bytes": 7632,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_product_frequency_gate.py": {
+      "sha256": "2c2016332acf9503b8aff4def5ceebecb0e414e8909c423e79edf0a05ef65be7",
+      "size_bytes": 6119,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_profile_target_rate.py": {
+      "sha256": "cad35d2191710af461c75f0bb9d57572c81853a571c3fa0331de7a4455d967d3",
+      "size_bytes": 3722,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_region_population_catboost.py": {
+      "sha256": "b2d61aa79919599441e47259c9af0ac2690abb3241451cdf08e05bbd1695817f",
+      "size_bytes": 9425,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_region_population_target_rate.py": {
+      "sha256": "6b8375a09b2f3aeefc4f7f773fc35ab6e48064da7f8d7322871776fd8497b4e0",
+      "size_bytes": 7887,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_spline_scorecard.py": {
+      "sha256": "01aedb440e523c26f876b819d2ea55764a1000e64af5e1146ef30bf47f60af4e",
+      "size_bytes": 4054,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_temporal_consistency_features.py": {
+      "sha256": "b3133892fa9169a531ad196eb0b8b2ba7f260f3e4d7ede901e5365e130cd8fe0",
+      "size_bytes": 7402,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_winner_feature_combo.py": {
+      "sha256": "eae27ca0575dc1bcd8cf5f604e204c66ed24bda8821114247479d07fccb60883",
+      "size_bytes": 10620,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_winner_neighbor_feature.py": {
+      "sha256": "15a7a00101c54028e82a221d12c30126d7fb8ca49b997588392b0efac254cc20",
+      "size_bytes": 9697,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v15_young_applicant_specialist.py": {
+      "sha256": "7903c00000d1f5194efd8c5a5fb0e36c4883faa91da432a20bffc78c814ad11e",
+      "size_bytes": 6688,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v1_conditional_confirmation.py": {
+      "sha256": "865734659bc751dfa3b5c699947bb81fbb55448b5c29ef5270bc9ae373417ec7",
+      "size_bytes": 15577,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v2_submission.py": {
+      "sha256": "82877be5a9aa1541dae8db997090eee278a32549e7099dc3c7e4ea995bf0dcbb",
+      "size_bytes": 15200,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\codex\\run_v3_standalone_v17.py": {
+      "sha256": "dd7148157c0e0ae0aeadae77ef862255ec2ff27ccac9013a86157528e6ee6e6a",
+      "size_bytes": 26993,
+      "source_group": "codex",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\analyze_connected_components.py": {
+      "sha256": "4ff2c405e4432681a91192736d3c7d5aab0935eb33dee10096fb3678406e93e0",
+      "size_bytes": 3326,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\analyze_ext_conflicts.py": {
+      "sha256": "7014cead8bcf947eb4f75f08ac04334e57931d99a4af6b7dc71aaa46660b423c",
+      "size_bytes": 1492,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp64.py": {
+      "sha256": "9935cc4d9801da06ebc2279f6a13f93559bc9d4e3831643707a26f348af953cc",
+      "size_bytes": 1286,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp65.py": {
+      "sha256": "81acd59445201e1f8e309ad87e1e130c253e1e4838dd8d8bb10c90be3d2e8c32",
+      "size_bytes": 1467,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp66.py": {
+      "sha256": "56dae7612e237ab9e32feceacd69e806406a28a3a5a9c32866d12d61e2f5d17f",
+      "size_bytes": 1545,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp67.py": {
+      "sha256": "b7abecc93daf97018d40735bca7143e96784f3b64aeaa337e03dd563f6c7d501",
+      "size_bytes": 1546,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp68.py": {
+      "sha256": "d8d865eea45566962ca767cd1fa5710a1cd929444bfecd15eccb9f2bf9ca6ec0",
+      "size_bytes": 1489,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp69.py": {
+      "sha256": "cf0a806edb1acee5103656d9bfb2075dcefac49e2e004899835fe99e5c9df203",
+      "size_bytes": 1520,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp70.py": {
+      "sha256": "dc8c2af5899a2b599025169376a21e30d9c7189f84f65d3d3ce04e54ec1290e5",
+      "size_bytes": 1456,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp71.py": {
+      "sha256": "20af16af660e9323f9d66deaa5a107cf6eadd6739d64bde0e9d603b54c953f76",
+      "size_bytes": 1678,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp72.py": {
+      "sha256": "e8e65160a84298a70e1da4ccc4da9d88fa1c06a8cad13180f1e760493e8371f5",
+      "size_bytes": 1440,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp73.py": {
+      "sha256": "bf8e33697b05e9658b1c5ec2ff988ef974a5f70f49bb17fbb7cf2fd184ddcb30",
+      "size_bytes": 1602,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\append_exp74.py": {
+      "sha256": "d31af629f1bcbc4c120d977e2de3f3f8c608b5992a793e9dc6f652251d5fb27e",
+      "size_bytes": 1923,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\apply_audit_fixes_nb.py": {
+      "sha256": "fe9457a2bb3f8d449cef759a83472eaad6150f2f47cab0d699ee5adbfb3d35ab",
+      "size_bytes": 6282,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\apply_chatgpt_final_audit.py": {
+      "sha256": "778bfed67ba6246064266c0687d6cd3c31778a814615900e25e1bab9e4caa365",
+      "size_bytes": 8739,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\audit_notebook.py": {
+      "sha256": "cf950a63bc22a28c288f7ce41f1f03b0c24448e3baad324e212adde9813196b5",
+      "size_bytes": 1020,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\autonomous_loc_auc_optimization_cycle.py": {
+      "sha256": "aefd039cb5fa976fc25f38f4a5d921168cf06da660ec2a07f0c30dc9a7e0c622",
+      "size_bytes": 18071,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\benchmark_gpu_deep.py": {
+      "sha256": "463e54dbfa1a61366ff94c94e07b137566fba1169e39e641375ab7ea965fa2d7",
+      "size_bytes": 2414,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_asymmetric_convex_gated_champion.py": {
+      "sha256": "23f14c6fd6f3f15e34efad05e805d6caa21a79702440110e8d31b5891a49fd64",
+      "size_bytes": 9167,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_clean_champion_notebook.py": {
+      "sha256": "e32dc04d012de4c2ce7b476bb2a380fa7da39ca473323528ddb6a77786bf5d2e",
+      "size_bytes": 52295,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_contract_risk_contradiction.py": {
+      "sha256": "6ce2c20b79683a773822b6387c60a388fe2a4c0924e613eedc012018882988cb",
+      "size_bytes": 4739,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_dae_regime_metastack_champion.py": {
+      "sha256": "33cdd333963efed2b22e4b9887ab1ade7e99406d2dff196513a122e7b6b382ff",
+      "size_bytes": 15838,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_dae_regime_synthesis_champion.py": {
+      "sha256": "39dd2c0965a03bd1bce6ddde58634d288203a8946b122ddfd2c4155238b3cc04",
+      "size_bytes": 6283,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_domain_signal_pack.py": {
+      "sha256": "ad902efe6d46bc2935b9301b8e6a55eb4357d34636b207dabf2674018381afc6",
+      "size_bytes": 5340,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_dual_apex_harmonic_consensus_v83.py": {
+      "sha256": "e5702933e108dcec7303e112c452972083e8a9020235ac757f83994660ad8cae",
+      "size_bytes": 10608,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_exp84_chronological_product_apex.py": {
+      "sha256": "922d991bb533b29bb3725096ad0646a6e47d1db8bdd19c4edf0c3976489d6268",
+      "size_bytes": 10213,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_exp85_optimal_macro_apex.py": {
+      "sha256": "f4eeb19a5f3f161f186c318e5b942035e592cc001c710e18a679f589e39ed555",
+      "size_bytes": 10406,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_exp86_quadratic_apex_macro.py": {
+      "sha256": "8910a403da850293cc7f6248e6bc4d0798afd0040741e5805f3880101a89a595",
+      "size_bytes": 10051,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_global_honors_apex_champion.py": {
+      "sha256": "19d2c8df65012f1c8616c7d19bc7a3c94abf148d4090ab93a495c6ce79942031",
+      "size_bytes": 7098,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_grand_master_macro_stacker_apex.py": {
+      "sha256": "da4b04caab43a4e42c74fcecdc56956f96b3a00eda3c0a69a6f8e2d905ff44c8",
+      "size_bytes": 7034,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_grand_master_ultra_stacker_v82.py": {
+      "sha256": "1f1c6dfc7518df912c118b8ec5e6efca365e6b7d83cc6976c1f7837fcf4295cd",
+      "size_bytes": 10208,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_harmonic_consensus_apex_champion.py": {
+      "sha256": "a3416bece60a7581759b626187d9fc76696844ed2d62cbcaeb33b6f2834110e4",
+      "size_bytes": 9115,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_hasan_600_features.py": {
+      "sha256": "cafd70abd8da3cb6d544c26b668ed61f329cd89ef98ff61cec3983ffc1c08341",
+      "size_bytes": 17482,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_hierarchical_q4_features.py": {
+      "sha256": "639c8b0ad3a28ffdca1b7473fa0fcff171889496cea57c6cdb09be7f5fa7c708",
+      "size_bytes": 6560,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_level2_chain_reaction_apex_stacker.py": {
+      "sha256": "31ae41c712bbf7d0238e3d6d71f702634301d14a43907e901978d72ec6e882da",
+      "size_bytes": 17871,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_level2_regime_meta_stacker.py": {
+      "sha256": "f1224d8f351daa8b8058fca99ed1f2eb5aa35b98408e2c306beddce5fd0a8490",
+      "size_bytes": 17756,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_major_gpu_macro_synthesis.py": {
+      "sha256": "a160f866a9789de13cc0877f1b99b70a11c424b2cfb1f97f42e9b2c5edc81833",
+      "size_bytes": 10171,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_meta_top10_features.py": {
+      "sha256": "e2da659985617f7bed886a921d2a8f61c13431195bd636f8b47d9de91fa34f8b",
+      "size_bytes": 13179,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_optimal_transductive_apex_champion.py": {
+      "sha256": "e5d3febfc71e5194c05ce6db85358db5f9a93601619bea29ef3633dbd47e3011",
+      "size_bytes": 10528,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_origin_exp1.py": {
+      "sha256": "231b6d64944fa77f8d8cf8a951d0324a94c7bfc6d007ff5b87af14ea9caeae5e",
+      "size_bytes": 6180,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_origin_exp2.py": {
+      "sha256": "c90b546a94137b160324ac725fa9d265c735a6364a3d104c741bd936d5a51b30",
+      "size_bytes": 21314,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_origin_exp3.py": {
+      "sha256": "9c076ccc0df15a1b5b61ee6c4b8a0212369d80d30b46cbf4c3691e39b1a616d7",
+      "size_bytes": 24515,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_origin_exp4.py": {
+      "sha256": "b6092a5e58d71e18bdb80fa2996eff687d1a967cd870c0845aeec5c9534de9bb",
+      "size_bytes": 36007,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_precision_transductive_apex_champion.py": {
+      "sha256": "7b80c196bad395a2aaba478d08dc2087af4280d0f2b41ff75e36010a984b1fdc",
+      "size_bytes": 9645,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_pseudolabel_gpu_superlearner.py": {
+      "sha256": "aba1ef726b2ede3c0b690b67b34821313c9cfb80566cfcb5918c593ce38decb3",
+      "size_bytes": 12074,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_pure_champion.py": {
+      "sha256": "f7cfc7056f6f8cd872692649f41f93a7183a03125efc955ad9b56fcbbb0b8b64",
+      "size_bytes": 1416,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_reconstructed_ext_features.py": {
+      "sha256": "01ba3df047377b1d4b18ce193ef94bb12f73e49c3ad63ea6387abf7bea4fc4e3",
+      "size_bytes": 2321,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_regime_adaptive_macro_apex.py": {
+      "sha256": "c1dfcc2cd23a658ad7169481e1f95ae294cab3081a80287f676c170b5968f642",
+      "size_bytes": 8871,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_residual_product_champion.py": {
+      "sha256": "81b557011dc572ee72e3b3a4e5e9bd7d4dba9733e9f71002922457b995457fdf",
+      "size_bytes": 10739,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_standalone_package.py": {
+      "sha256": "2225829d4df095a5a1e9647b80a855c13496003e8c4a43b6dcb22f825813ef7f",
+      "size_bytes": 24057,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_top_domain_features.py": {
+      "sha256": "d3b63ecc41844654d41fb6d7ab957052c814e7be788691aec1d5949a30e2f479",
+      "size_bytes": 12683,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_transductive_equilibrium_apex_champion.py": {
+      "sha256": "abd04b86aa50d0dab1aa0b2aeea3ee629177958a269041f1bd3fd7c083eccc46",
+      "size_bytes": 9865,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_transductive_tail_apex_champion.py": {
+      "sha256": "dc4c4821e8cc8eba970fffc15a35c0ea59c14f248c9c72338820986627fe21a2",
+      "size_bytes": 9660,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_uid_and_ctg_blocks.py": {
+      "sha256": "6ec13cbf6cd2c6d9eadfe73124ccc1aa7a8f1fd8270df398f073cf38b5c2f167",
+      "size_bytes": 8312,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v16_encodings.py": {
+      "sha256": "83a5417934dc15197bb1e66b0347721b8de515f7a607ee1918aa3f81c98c8494",
+      "size_bytes": 6095,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v16_features.py": {
+      "sha256": "92b9dd08c928af737962b2c058150c213d5764f79ca49efdf4c730091f6a08aa",
+      "size_bytes": 7587,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v16_views.py": {
+      "sha256": "f1387e933bb97cd07db30cf8ce3cdb4ffc2e6d8518e71b46edebbc37d8842809",
+      "size_bytes": 3953,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v24_v25_submissions.py": {
+      "sha256": "32fd4f39a1d008400b5df1a5280c91b2ff4a836b870a1e653b537161b1992654",
+      "size_bytes": 4030,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v38_views.py": {
+      "sha256": "a96b77b332ad84adc423b62d1e75d04a2c11b0353a1180e9b2d3d174f40c42ce",
+      "size_bytes": 6069,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v65_solo_notebook.py": {
+      "sha256": "c491973de07a457ec367c74cafab3a4df731532edaba01b4883db923878dd103",
+      "size_bytes": 41728,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v80200_apex.py": {
+      "sha256": "312e760a1f09c71620968cc80938cab6c612bf1576dfe2b474ba10f152053c28",
+      "size_bytes": 4645,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_v80250_power_apex.py": {
+      "sha256": "01b7690f0c9d4a304e398387e206fbd77e532cd112202705fb4a9cfcffb67fc4",
+      "size_bytes": 6498,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\build_woe_scorecard.py": {
+      "sha256": "3fc2f48c65738898897078836ec11373e78cd4a163fc563701b40c8f95ba91f2",
+      "size_bytes": 3621,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\cascade_feature_distillation_pipeline.py": {
+      "sha256": "f74c845f4d055248a9854f0d788c6c0dcbdea0312a3cef24424e31c0f49acd76",
+      "size_bytes": 12198,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\apply_patch_v5_02.py": {
+      "sha256": "99fb461f5a6443c905b43a2b54e691c4657eaa037667f2d731114bf700b9ddae",
+      "size_bytes": 7309,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\apply_patch_v5_03.py": {
+      "sha256": "9d42fe6859dcaa0523494e3808da223a22f9e1ef827a795c8304b604411fa605",
+      "size_bytes": 3779,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\apply_patch_v5_04.py": {
+      "sha256": "03f3e18ef848d2d6a5442a8bf90f61c55e2d2e27e6ae00b34b0f46acc4aceb54",
+      "size_bytes": 6171,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\apply_patch_v5_05.py": {
+      "sha256": "ce32de12def12b97f6e830fa458cd5a7af6c29e35d167ba42ccddeb1075899b4",
+      "size_bytes": 2100,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\apply_patch_v5_06.py": {
+      "sha256": "27f012683752b12fe4ad31f589d612d9fb9c20c139470679ac9ff08deedabc74",
+      "size_bytes": 13356,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\build_exp85_recovery_nb.py": {
+      "sha256": "47314b5f72214b2637963e23b487fa8084ec3c33c560fe00572cca26368f8be7",
+      "size_bytes": 39000,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\build_exp85_recovery_v2_nb.py": {
+      "sha256": "550a2ad9a6c5b2aad7180fff74f0b88b3fa912762e8555692d55a36cc4b4e814",
+      "size_bytes": 40045,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\build_exp85_recovery_v3_nb.py": {
+      "sha256": "25486c79ae60d2cc3f1aa5edc9653425c4742856ff018224879b19580e44bba8",
+      "size_bytes": 39593,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\build_exp85_recovery_v4_nb.py": {
+      "sha256": "332c752f0b6ce234e23f67d9acdf04ad3890febc742b963193f643ca048623c8",
+      "size_bytes": 46721,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\check_cache_equivalence.py": {
+      "sha256": "bd90c4b884fd28fb7937f8f7feb146b1e3eb6a7d901da22a597939bd34f5371e",
+      "size_bytes": 2103,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\check_cols.py": {
+      "sha256": "a60b76275644f210defd12a45e365b64993922fec9101c11a86c0ef7d987b611",
+      "size_bytes": 971,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\check_historical_corrs.py": {
+      "sha256": "8865d3f0155b2e4db499ef48e58ff620458391052284d858d3aefd5a3cb9f438",
+      "size_bytes": 880,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\dump_nb.py": {
+      "sha256": "99130aeee39966e304c83c39cc3a5d0cda3c932f9af5656f34ed3d93cbf2158b",
+      "size_bytes": 187,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_exp85_recovery.py": {
+      "sha256": "b54e32d46c831402e3b0b6ca1b850285a1b88b5a73ae4adc32979c604b32d0f2",
+      "size_bytes": 4957,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_exp85_recovery_v2.py": {
+      "sha256": "e21382cdf77c85341e253aaca2123ee0756494af43cecf462222ed0e31aaf167",
+      "size_bytes": 4963,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_exp85_recovery_v3.py": {
+      "sha256": "f4d41a91b18bd1c8446e2e6881d3dd85bd0ea3f7ca5a5aa22df2250e10a8c88f",
+      "size_bytes": 3940,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_exp85_recovery_v4.py": {
+      "sha256": "9dd3746398873aab3eb76730f04e21fec0f3d4c7695485482afc4ccd4c07f3f2",
+      "size_bytes": 3906,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_exp85updated.py": {
+      "sha256": "cf506f910a038e37da8f0423495069446aaec7c6eb372a3a19ac2086110e596e",
+      "size_bytes": 4965,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\execute_notebook.py": {
+      "sha256": "bda69b60b82762dc37a16468aea91334860fa5e0068e6cc61befc2ed387b4774",
+      "size_bytes": 5970,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery.ipynb": {
+      "sha256": "3bf9b0024c4c794079cab20b77c8c9bbcaf9f30303e97efbcfbb8774a48fbb6e",
+      "size_bytes": 55049,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v2.ipynb": {
+      "sha256": "2d7ee13d76fd19ef2f0d1d8c793887e8306f33204dbd1d3e6d6492e59ffcdf99",
+      "size_bytes": 56676,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v3.ipynb": {
+      "sha256": "d61c1636c416f1c4e3f372c2420e4e3d8a0a8212fd0a054a2af2b244c55c4fd7",
+      "size_bytes": 58924,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v4.ipynb": {
+      "sha256": "b0b8e9bcbb5a4bb3a98cbac293d9eb88078b541c6fa3494cdb9a4966b2bced77",
+      "size_bytes": 67802,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v4_backup.ipynb": {
+      "sha256": "b0b8e9bcbb5a4bb3a98cbac293d9eb88078b541c6fa3494cdb9a4966b2bced77",
+      "size_bytes": 67802,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v5.ipynb": {
+      "sha256": "d7d16d00599061b041e2b85619eb4dbc3f3607d437766c9c1e72d928a913f7b7",
+      "size_bytes": 36967,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_recovery_v5_backup.ipynb": {
+      "sha256": "4febf85c10a17015be0f6a755396fdfc1ad136f52cb8a7e38810f815239033ff",
+      "size_bytes": 73032,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85_solo.ipynb": {
+      "sha256": "36fe863bdc9cf7cac2138d0b4e8b8c7eceae9f2cb1c480a7b40cf6f82bec9d08",
+      "size_bytes": 122877,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\exp85updated.ipynb": {
+      "sha256": "ee7fd9cd981225347fb21bb90a440825b84239b2347377da0596812b183aa8f0",
+      "size_bytes": 50093,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\fix_c10.py": {
+      "sha256": "fe2d710709cced397fde02c80c22193467074e44c7817c33b89976c7765fa951",
+      "size_bytes": 3944,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\fix_c11.py": {
+      "sha256": "5a1b1819028ca9e67b44736b4591291ae8938010dd2b6ddcbbf8b5960d85a0d9",
+      "size_bytes": 2780,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\fix_c14_15_16.py": {
+      "sha256": "08381d800886c1a13663c12ef10636878651548e934ef01ed901f99ca27f4b18",
+      "size_bytes": 3939,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\fix_cell5.py": {
+      "sha256": "edc1adf2abf1b1a60fd122e96d0b7e034e96ca6b21de168fd77af6b1464d9ef1",
+      "size_bytes": 2457,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\inspect_cell3.py": {
+      "sha256": "1f0b61c2923d52e07901c5680cb69a5d164bff0eedcfa9560181abb678e531ee",
+      "size_bytes": 347,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\inspect_cell3_pt2.py": {
+      "sha256": "f6e1bc33414d33b189b227f38df9ce80c4296a3faac34d3cf0c324fbb81e9957",
+      "size_bytes": 252,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\inspect_cell3_zchamp.py": {
+      "sha256": "87ec20bd882658497d8a03c82bb714ad0a5e45abdd702d541acbc0b0c2cfcf5c",
+      "size_bytes": 235,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\inspect_cell4.py": {
+      "sha256": "eb808d4d58cf1c543a53d8728e8558a429105517655bbb54d8135c4db848dab7",
+      "size_bytes": 306,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\inspect_nb.py": {
+      "sha256": "a900a4682718649ccbb9839351e56d9fbae877b93c63ef0f8b37856aade7fd01",
+      "size_bytes": 397,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\list_exp85_cells.py": {
+      "sha256": "5821364253cc8f81b3f2ac829bebd60d22b713666cdc52fdfa3ad13064af440b",
+      "size_bytes": 290,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\patch_nb_builder.py": {
+      "sha256": "d09392187fa8604031afe77f5939a863c1518039c76206d6faccdc60ce61efdd",
+      "size_bytes": 1461,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\patch_v5_cells.py": {
+      "sha256": "b15bdc06385bf64c2996d4bdb1db49c3776f043d57614d44cd41e94ba6a88257",
+      "size_bytes": 5001,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\read_cells12_13.py": {
+      "sha256": "7d26d0698a52ed3d4f5fd1346ecb374f3bcf3a904f0fd255e23314484d580425",
+      "size_bytes": 239,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\read_cells2_3.py": {
+      "sha256": "644990065af9f580492a3e994b0b11d7cd87d49ead887b3710e5e5328b3ac720",
+      "size_bytes": 244,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\read_exp85_cells.py": {
+      "sha256": "cea2c6b9d46ed2585b49b7c1f4590f500ef25bb20c95fb1ae98e2a6d71ad772a",
+      "size_bytes": 254,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\recreate_precision_anchor.py": {
+      "sha256": "ad38e92988428f04a59f66ab9a3746cbaf01b633c6295b61f5876c6e03fc7dff",
+      "size_bytes": 30355,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\recreate_v17_bundle.py": {
+      "sha256": "f9c15e292161a4dd8c2d71419d1a95134a5ebba4b8d366e0a86885b79a7c65a6",
+      "size_bytes": 28820,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\recreate_v55_members.py": {
+      "sha256": "3c2979bc8941c61d9f2ebbd0de725d15f09bca32245d9dcd46812bbb9e0cf290",
+      "size_bytes": 18116,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\recreate_xgb10_and_labels.py": {
+      "sha256": "7fbeaa89fb7b4473aefa9dbdb2c83b6ee337389b1ffc783b442a1640f9c1c900",
+      "size_bytes": 10281,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\run_all_recreations.py": {
+      "sha256": "7fd2dd427641c7d65b4daee7434b4306d3fa3ac813b6ff416880d6d99e471724",
+      "size_bytes": 2740,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\run_v5_pipeline.py": {
+      "sha256": "c0dd545dc9a8b164055f9c1b8995e9e0cf88dc04a28e8518ea53eac6ccd96abd",
+      "size_bytes": 8402,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_audit.py": {
+      "sha256": "0741093b0aea8f3b5f1158a00abaf9d9ff0313d1770650b3fa5a1cf3a9569ab7",
+      "size_bytes": 5084,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_audit_cells.py": {
+      "sha256": "e8ee92a961bf2081785c4a5ddd1813d1f9a4acb17febe8fe096fdd89e81aaf44",
+      "size_bytes": 600,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_cb.py": {
+      "sha256": "969d54672dfa3704daa1c571a2fab48e8913cc0609066147869d79951e8291ed",
+      "size_bytes": 346,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_cb_gpu.py": {
+      "sha256": "1348b1144ac50806a0101b22d592a0fdd727485ca518aef922864d5bc9c94b59",
+      "size_bytes": 2070,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_check_signatures.py": {
+      "sha256": "ce4b8934eca498944211bc596f392d32fc3cdf64032477e21b2b58774f9fb3af",
+      "size_bytes": 1085,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_corr.py": {
+      "sha256": "02f2d94e65cd63d800ee625bc60d1ca93cbc609d92c05e6168a6acb75ccc77e0",
+      "size_bytes": 714,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_dump_cells_part1.py": {
+      "sha256": "88e133b06e39ad57f37009f763bc5c251e7a7d864d5e2d5a617bf7d09cca96a9",
+      "size_bytes": 378,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_dump_cells_part2.py": {
+      "sha256": "be04033bb2b5f431e2032b737ce841467d10d4bdd50a74bf045a23ce73ae20b4",
+      "size_bytes": 366,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_et.py": {
+      "sha256": "f128e23341b2b1ab54b5e546180d77871c45887ea1d4e89d0a0020bf41450233",
+      "size_bytes": 2503,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_exact_historical.py": {
+      "sha256": "35b406e9df66edaa0515b89c8ab9c88ccf13e2b2af31998ed1076ca8c6ea4e7e",
+      "size_bytes": 4387,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_fine.py": {
+      "sha256": "253d4b16be76b932d14e0d437c37b2b5df1c33b154bbb40f566483a7a301209f",
+      "size_bytes": 5204,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_forensic_gap_analysis.py": {
+      "sha256": "803a22fcbf9ce54f3cb0f7bc4cf3bc0844e8d861a4dd260e14882979f63e6e7d",
+      "size_bytes": 4581,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_hypotheses.py": {
+      "sha256": "1f4e1e659932b4aa63473158562daeb6b4207c60a31b81fb8eec65b1868d5137",
+      "size_bytes": 2814,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_inter_corr.py": {
+      "sha256": "fa09452e0a7daf9d7e8b3b3f491dc83509fae73df9a58fcd8166bf4ce8e9d7af",
+      "size_bytes": 565,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_joint.py": {
+      "sha256": "8820d33598bb7abb8d2be4a3cd20823ce3f36efea594395ff7ef22ac26bc511c",
+      "size_bytes": 4826,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_meta_interactions.py": {
+      "sha256": "1bc9a6a16606fc436991d72c539085e6f8093d100b968afe985adfc4744667b1",
+      "size_bytes": 992,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_meta_log.py": {
+      "sha256": "40a72e15c1805eeda81edc48b9f8e4499ee01e0c18637841846992d90449220b",
+      "size_bytes": 1938,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_refine_calibration.py": {
+      "sha256": "9b985023f39b45f6976fc3bbc90e19d0b48ed735944c4793f4474304574e8481",
+      "size_bytes": 4500,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_refine_calibration_ext.py": {
+      "sha256": "a455497dbf62c571db48ab694b2498a67584cd25126a038d5b55b5f32044bb4e",
+      "size_bytes": 3585,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_suite.py": {
+      "sha256": "fe058ee4585a30565d4609c9189805412a0616ed96df6d43c247d2af0e6ce2aa",
+      "size_bytes": 383,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_tail.py": {
+      "sha256": "9cbc306433384bfc3641ac7f4593757702081b17c34bd8eef08ec1f82d51e166",
+      "size_bytes": 1492,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_cb_inner_es.py": {
+      "sha256": "6afc17b7f1e84cea3fd44085c9a637ee0daaa86430e480e88b1107ccd8abd662",
+      "size_bytes": 2315,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_ensemble_weights.py": {
+      "sha256": "96b7b2cfecd4181bfc503653daedba2e59836f066964bb95b3a044b97fc4685b",
+      "size_bytes": 2218,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_et_ensemble.py": {
+      "sha256": "60c1c8c84f3d802cae5ec1b79c0fa5a8d44de6fec4bd44c922ff56fbfa864a52",
+      "size_bytes": 7550,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_full_vs_inner.py": {
+      "sha256": "b90e94b1f508b0b81b21fca8d6ddfe34a94e3b48ce5204ab5efc177e6f2ae7e5",
+      "size_bytes": 1930,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_inner_es.py": {
+      "sha256": "f30aabfaf56693fe2ce24294a77496902f9d7c6c7fb975fd3db93750a4e98792",
+      "size_bytes": 1894,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_nested_stacker_dryrun.py": {
+      "sha256": "8d2f87703fddd740ed56f3e35e47a0776856270f7b311fad1886e14e0cc521c4",
+      "size_bytes": 5799,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_test_xgb_tuning.py": {
+      "sha256": "6d621bd13e2af7d43ee34f3cd649c57bcf26756bcbf31a9095fbdb3615d156c9",
+      "size_bytes": 3846,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_tier.py": {
+      "sha256": "8b2df0f19eafcb9564348eda58d96f0df94ff36c9eb1fad96e803991b0ad27e3",
+      "size_bytes": 4495,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_verify_baseline.py": {
+      "sha256": "19e594064cdd59f6c8b3e63f72f1e95c5e80db2a359eebd21414f47ac5a1e86a",
+      "size_bytes": 1661,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\scratch_xgb10.py": {
+      "sha256": "379eee25df55ef9dd3a0e1d612a923ddd9260f6957495677651656ad2e32cc07",
+      "size_bytes": 2749,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\test_cell30.py": {
+      "sha256": "8a635d363e07fa84e45d490caf36b315892c9d588da172d145550ce8552e7bef",
+      "size_bytes": 1028,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\test_cell30_safe.py": {
+      "sha256": "c8cf9c0eacafeb55fb3f348c9a5c5fdd026341d212acffed551dc7b0a98b10d4",
+      "size_bytes": 4797,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\test_clamp.py": {
+      "sha256": "6b38ed3e02ba7f700f5b2e3b54fa7c56c6e12d1c6452b95af7ab2c0fc98d6dd5",
+      "size_bytes": 1179,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\cacherecreation\\update_nb.py": {
+      "sha256": "967c6bde3e290d8e8f21f21cc2925531a57e8a7882c38b04f999fe7380056e24",
+      "size_bytes": 12610,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\anchor74_audit\\reproduce_anchor74.py": {
+      "sha256": "08d7f5da963d2fb1b324dfd6884601e50b736ecc23313d2a25aa89a5a94ab79b",
+      "size_bytes": 8064,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\audit_historical_artifacts.py": {
+      "sha256": "b62c41d9f563d5e2a5808925880e57742305eefcdef1f11dfcd28bb648800bd3",
+      "size_bytes": 3442,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\evaluate_reproductions.py": {
+      "sha256": "878d1d8fddf9c32b49ed155e36f88cc23030a96432e31ef8443e41243ba60f91",
+      "size_bytes": 7463,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\inventory_scanner.py": {
+      "sha256": "1fd5eaadbefbaa1f3393ca81bd9dd7671aa73f92c9e1f9c92e04f43107208d8c",
+      "size_bytes": 5739,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\reproduce_exact_synthesis.py": {
+      "sha256": "a1c6c8f9562a9e0c395a7b551742f6e1e3b755857cab11ca268274921cec6f4b",
+      "size_bytes": 4683,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\dependency_audit\\run_branch_ablation.py": {
+      "sha256": "578e7edc94aee744aff2419977af6f3afbd6328ff81da37ab6429445eaf35d8f",
+      "size_bytes": 6313,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\exp85_solo.ipynb": {
+      "sha256": "52996cf1a2c9b018195672ea00bc316cd6cf01bab8018f9956b55d8cae22c9a3",
+      "size_bytes": 68547,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\exp85_solo_runner.py": {
+      "sha256": "6c8a301c569dba3e879ad4a968e3e1c393a35583baf841eec7013edcadc07d68",
+      "size_bytes": 22498,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\create_builder.py": {
+      "sha256": "c2215454fc435037d61656a819a89eba10d1ad21b4f050f4c22b1e075ebbf6cb",
+      "size_bytes": 1112,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\reconstruct_hasan_features.py": {
+      "sha256": "dc8c61c19aa61ad055f16f45724f03ca4b2d7157a7ca3ce12560015da8999ea0",
+      "size_bytes": 14991,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\reconstruct_transductive_pyramid.py": {
+      "sha256": "a99bd2ba02ed673a6660eb67c39fb16e80d9d01d4560e02ef3ba3ae0fefbd0f4",
+      "size_bytes": 17103,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\run_hasan_600_builder.py": {
+      "sha256": "c48cef2ee03f67e9eb69dc46aa8c3ce49de85a72e933433cd0eb163b5fb01459",
+      "size_bytes": 18055,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\run_workstream2_screening.py": {
+      "sha256": "9db77087ac0f51eca9242a26beeffa25d444c5e59373675fd5115dff035ce6d9",
+      "size_bytes": 4729,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\phase3_reconstruction\\experiments\\train_independent_zoo.py": {
+      "sha256": "e520f3fc41788128738817cb2fdfc030131061d80ae9529086b8b077814f83bf",
+      "size_bytes": 11607,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\champion\\run_pipeline.py": {
+      "sha256": "39ca43fd9979568e8513a65bfe06bb4abef11a37b22a1bc904ff181eae93005d",
+      "size_bytes": 1325,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\check_id_properties.py": {
+      "sha256": "fc6a69bd87fcc85da945fc89b03d933c40d11f2baf91af04eabcd23bf4f1e5f4",
+      "size_bytes": 1474,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\clean_cell8_nb.py": {
+      "sha256": "b4be678ee76c07e1cc286a9e66bc7da423b3159509e13aac3ff074fa81363f4f",
+      "size_bytes": 6044,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_080.ipynb": {
+      "sha256": "d02b5e186774822636981b0a245a4810c0fb9b02cd6dec7201d08b9a11174368",
+      "size_bytes": 211585,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_080.py": {
+      "sha256": "7e792f4eb2727d4aa76264cd9111dfb11ec95e43d0887496ade00b69e4bb1e9c",
+      "size_bytes": 37185,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_080_backup.ipynb": {
+      "sha256": "08e03ffec662ca0b060404b7178e8ad5959d1c2ce2f8561d975e53fdeda4c790",
+      "size_bytes": 30940,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_080_with_embedded_anchor.py": {
+      "sha256": "bcc133a5399e97c63f47b37a52dff2fdeaeae770f950ae75225d1e892c4199b6",
+      "size_bytes": 198397,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_v88_audited.ipynb": {
+      "sha256": "d91be61bf1f58f560c4a5781d103d2ad388ec9f95b8ea6263457b4c95d01f14e",
+      "size_bytes": 61948,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\colab_champion_solution_v88_reproducible.ipynb": {
+      "sha256": "e2d8e71bc2fd696fe94f238e3dc9512de15363f6df52280929ed8cbf58a555d0",
+      "size_bytes": 60159,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\compute_residuals.py": {
+      "sha256": "970a664f9d39a7250f1357af00429fb5832af9341d7d6eecba47dd06886293f2",
+      "size_bytes": 3119,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\deep_applicant_linkage_analysis.py": {
+      "sha256": "b7566f2b5ea0626032b8b5528b6466d2f15f5369f46995a5c09441f72ce21922",
+      "size_bytes": 3364,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\deep_search_leak.py": {
+      "sha256": "2cf4d69129ffa77948eadbd3d38ff2d47bcad4a2d0d413d66098924bdec00044",
+      "size_bytes": 668,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\dependent\\build_precision_transductive_apex_independent.py": {
+      "sha256": "131122f05d7d4d7b3d77af7fe38a39a70c3dd0601732377bb1bc3e79b12b3c6a",
+      "size_bytes": 15093,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\dependent\\exp85_solo_runner_independent.py": {
+      "sha256": "549872fd9ff59fa8ab46eb793a66ad5836b7bccf7f2660353112002c72d2fdcb",
+      "size_bytes": 41283,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\dependent\\train_full_v16_suite_independent.py": {
+      "sha256": "3144d3c46ae39e161718f6e6809b3a11c839d665f5b7bd8094daeb1664a29f8d",
+      "size_bytes": 37622,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\diagnose_20pct_failure_categories.py": {
+      "sha256": "87d56a61236af603c9eb46a5d336084a062244876ed954ff0c6240d80df8a10b",
+      "size_bytes": 5497,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\distill_and_fuse_champion.py": {
+      "sha256": "1e70620578d4afaf4ac37f96bf3ac8cd445d40edcded7f9acb584851638079cb",
+      "size_bytes": 14596,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\eda_and_verify.py": {
+      "sha256": "afb50d3744c803e3cbd23d54f820a317c48257abbd0a149933168d67c2b40cf8",
+      "size_bytes": 1843,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\embed_creation_code_nb.py": {
+      "sha256": "6c15e68ee510827e4acd03f683dd897e5f8c1eefcadffc913c0bd0a5647693ed",
+      "size_bytes": 19294,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\eval_cache_and_post_v77.py": {
+      "sha256": "f22d97e9d2eda49a4b65de674395389e61e5652defabc0b4092cbafd8e07bf5c",
+      "size_bytes": 1354,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\eval_top_submissions.py": {
+      "sha256": "1840483cba37132915877c3e171a8a2990d2e4d62de0b8dfd54d931e8f5d5eb6",
+      "size_bytes": 1890,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\execute_exp85_solo_clean.py": {
+      "sha256": "97288b8f93cec23458c6fbfa7af040f138667fa1db0adb491af4810273364441",
+      "size_bytes": 1953,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\execute_origin_exp2.py": {
+      "sha256": "5f552824bc187bb00d0c51a25924a7e3e67e013e45b8f9cef84320fbc3341e73",
+      "size_bytes": 2282,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\execute_origin_exp3.py": {
+      "sha256": "15e3def829b5ff8cac741877c586384bd6a28aca3e55310fa7c19c2e581d406d",
+      "size_bytes": 2268,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\execute_origin_exp4.py": {
+      "sha256": "e216c5d9074dc61970dabbc56c150c746572723f45561a66feb9620bada7db43",
+      "size_bytes": 2268,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp09_build_and_validate_k1.py": {
+      "sha256": "65c259b8f21a94c068052d3860bef7d496c2603fed60de3186ef2c8fff055c87",
+      "size_bytes": 3071,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp09_fingerprint_analysis.py": {
+      "sha256": "0ff9be30fe5202cff896b6182dbd2161d0eaf5c2be6eccb613a8c5d25da7ff81",
+      "size_bytes": 2411,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp09_test_combo_tes.py": {
+      "sha256": "7b4f338162a238bb7f9ae8cf6d2d93d88c3d4b689faf8dada9b025b08c30c800",
+      "size_bytes": 1789,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp10_grand_meta_blend.py": {
+      "sha256": "f5e4ba6741c251111cee603eff41c036cc7a289ca2953456ef16db15982d87cb",
+      "size_bytes": 4110,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp11_v16_grand_fusion.py": {
+      "sha256": "f92bba131cff970ed22958f6db82a8b6fa64ee244632340d1dd61a96d91ca87c",
+      "size_bytes": 2166,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp14_partner_expansion_features.py": {
+      "sha256": "051630bc1fd7192f2b86905a77679c5d8aec0317e6ef99d07ce909f9b3d9b867",
+      "size_bytes": 3363,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp16_grand_stacking_optimizer.py": {
+      "sha256": "b8152a69884d47eefcf4f8bdbdff8d4bd724737113c33fc0fe1b6602c31f06d4",
+      "size_bytes": 5466,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\EXP85_LEGITIMATE_RECONSTRUCTION.ipynb": {
+      "sha256": "05086c2a109209ce7cf1d2c37ec05982ce43988f43a825cd0aaa81a7db772686",
+      "size_bytes": 47435,
+      "source_group": "gemini",
+      "syntax_status": "FAIL"
+    },
+    "D:\\gci\\gemini\\exp85_rebuilt\\EXP85_LEGITIMATE_RECONSTRUCTION.ipynb": {
+      "sha256": "05086c2a109209ce7cf1d2c37ec05982ce43988f43a825cd0aaa81a7db772686",
+      "size_bytes": 47435,
+      "source_group": "gemini",
+      "syntax_status": "FAIL"
+    },
+    "D:\\gci\\gemini\\exp85_rebuilt\\scripts\\feature_pipeline.py": {
+      "sha256": "2bcc17def14a5da9010735d4f4dff5e210f999f12890a5726256fff920aa9b3b",
+      "size_bytes": 18951,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp85_rebuilt\\scripts\\macro_synthesizer.py": {
+      "sha256": "c9265821e4b18cc86508555dbcebe2d7cac403afb4e9dc3d4ac3e911e1557daa",
+      "size_bytes": 9730,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp85_rebuilt\\scripts\\train_eight_engine_suite.py": {
+      "sha256": "f473d875516efb64d0dd935603de8b60dd972b54c18b47038c9adc59be3cda66",
+      "size_bytes": 17766,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\exp85_rebuilt\\tests\\test_exp85_pipeline.py": {
+      "sha256": "1bf028c252872eba772e69671d5b96d31d8346bed67f2a589593dee1996458ba",
+      "size_bytes": 6107,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\experiment_chain_reaction_deep_suite.py": {
+      "sha256": "88aa957a1a5f2fe1d39257281d8b6c73c5b20782257fed973dddc3e2e257ba41",
+      "size_bytes": 14689,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\explore_transductive_tail_apex.py": {
+      "sha256": "c21d2561d0e4c34a74824ee625816fa92776dd2635e8213ef6561291ab831891",
+      "size_bytes": 7857,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extract_resolve_paths.py": {
+      "sha256": "788e1dccaf01c9abe721c435a86d8d8f7329d0050f0bb7afa9a7d14f49149575",
+      "size_bytes": 385,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extract_solution.py": {
+      "sha256": "c60490795723844f496dc4de8091383870d4ecd1fcb9fd024362676a8b225fcd",
+      "size_bytes": 807,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extract_v15.py": {
+      "sha256": "ecf77c36e05518ac761fa77e8b6e74bd59be27324e3ba69ab6447dded964be31",
+      "size_bytes": 531,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extracted_community_solution.py": {
+      "sha256": "4cc0bb32a0071327a431512c47284f4f5b6a1fb5d3e6da0899aeda965e9893e2",
+      "size_bytes": 32503,
+      "source_group": "gemini",
+      "syntax_status": "FAIL"
+    },
+    "D:\\gci\\gemini\\extracted_v15.py": {
+      "sha256": "5fb262eed0cfae104bffaa889acbf2b5dd5eaf249bfdbb6c27d26b5f67aa4792",
+      "size_bytes": 26484,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extracted_v26\\run_gci_v26_optimize_five.py": {
+      "sha256": "0dc5ce7939eab2632987fddbef0b94968c6c64a3dc5042059fd5bc4b9147ef4a",
+      "size_bytes": 9623,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\extracted_v29\\GCI_v29_package\\run_gci_v29_fresh_confirmation.py": {
+      "sha256": "217e323c32b888a9ab24de4b55611736d185f290a2c73dfe90cc42e084c3b402",
+      "size_bytes": 11130,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\feature_builder.py": {
+      "sha256": "f3cd5c1cd5ed0a2a78d16f7b80c9cb4b8d73751a8e98a55cb70a04ee9d2b01f0",
+      "size_bytes": 10699,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\feature_builder_v2.py": {
+      "sha256": "e6b833b59e5c6c2fa4ecb69e0c64a25879200ecc7f0fedac57558228247a641c",
+      "size_bytes": 15107,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\final_submission\\reproduce_final_submission.py": {
+      "sha256": "8a90d233723639297b1a433ee474b37ea1d00879fdb518ac39ee75a0fe575662",
+      "size_bytes": 50722,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\find_dataset_ordering.py": {
+      "sha256": "de369a3ec0eb650745f2a397608849e4bd9325dd2992c5a05463830658de9187",
+      "size_bytes": 1265,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\GCI_CHAMPION_0801340_CLEAN_ROOM.ipynb": {
+      "sha256": "52f21f66bf3ed35bd47859136b33b3250c8ca7582b96151405ca17c38d047e34",
+      "size_bytes": 59988,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\GCI_CHAMPION_0801340_EXACT_REPRODUCIBLE.ipynb": {
+      "sha256": "d02b5e186774822636981b0a245a4810c0fb9b02cd6dec7201d08b9a11174368",
+      "size_bytes": 211585,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\GCI_CHAMPION_0801340_SELF_CONTAINED.ipynb": {
+      "sha256": "52f21f66bf3ed35bd47859136b33b3250c8ca7582b96151405ca17c38d047e34",
+      "size_bytes": 59988,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\gci_champion_solution_clean.ipynb": {
+      "sha256": "99396b43630447fd1e891529ee27ea386ed1c90809d0c200482d9c9e5460caf5",
+      "size_bytes": 45691,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\GCI_WORLD_2026_CHAMPION_080134_REPRODUCIBLE.ipynb": {
+      "sha256": "51c97fea9d165c4bb14bd7fbed9bfbbf8b07cc01b0384c9b74d79aad5850dcd7",
+      "size_bytes": 204538,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\grid_search_calibration.py": {
+      "sha256": "d374c0a4068ae327dcc2a4a4e72dd4a5db8944a39e29e5fc4cfd88113e5dfc33",
+      "size_bytes": 2815,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\idependentexperiments\\origin.ipynb": {
+      "sha256": "52996cf1a2c9b018195672ea00bc316cd6cf01bab8018f9956b55d8cae22c9a3",
+      "size_bytes": 68547,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\independentexperiments\\origin.ipynb": {
+      "sha256": "52996cf1a2c9b018195672ea00bc316cd6cf01bab8018f9956b55d8cae22c9a3",
+      "size_bytes": 68547,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\independentexperiments\\origin_exp1.ipynb": {
+      "sha256": "10e504e6f61ccec3fa32ea637a81e3563c1d6620559efd8db64dd2b316310863",
+      "size_bytes": 71525,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\independentexperiments\\origin_exp2.ipynb": {
+      "sha256": "12b3696504038400ce54304a2bcf02b8a087730e70ec37e0ce90cd26181722ea",
+      "size_bytes": 80776,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\independentexperiments\\origin_exp3.ipynb": {
+      "sha256": "85373b0ad3ccf7a077c25830df34c18c5b80a26988c145a4479632e2e9eef800",
+      "size_bytes": 90611,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\independentexperiments\\origin_exp4.ipynb": {
+      "sha256": "b0c80fed1a19a562c5e1e7abbcb07224ca7fd8b779e549865f1a3d306c8b6538",
+      "size_bytes": 107928,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_5_artifacts_deep.py": {
+      "sha256": "70f8e213bde1de6bb3f35e6e449c368d61b83d4636a12eaa7ce5f38e14e2657b",
+      "size_bytes": 3357,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_cache_candidates.py": {
+      "sha256": "2858349ddcaa368ba017ed387dd6591133b94ecb509ad339928e3658140830f6",
+      "size_bytes": 1798,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_gold.py": {
+      "sha256": "f9b37598798cc9b4206679fe34440beaec211d1ffc785a4579ba5727bcd11ed1",
+      "size_bytes": 420,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_notebook.py": {
+      "sha256": "6c7086ac2b2dcf3303cd16baee41db939c6d2665569816319f1a61c224f91fbd",
+      "size_bytes": 418,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_preinfo_nbs.py": {
+      "sha256": "481b4dd73ac7ba6c35cff7d30cadfbd5cf5ad5338ad97b88d8a82a85d810c59b",
+      "size_bytes": 551,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\inspect_test_pair_discrepancies.py": {
+      "sha256": "32dbc9be456ab5d0a782d3067b716ca61d235e2f2309ea0f76d649261f4fd530",
+      "size_bytes": 3407,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\patch_cell6_helpers.py": {
+      "sha256": "fc2595dab004e960e0107b5d5cccfa2351bc017a7ee74a97a370d0e87ee30abf",
+      "size_bytes": 1009,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\populate_clean_outputs.py": {
+      "sha256": "41a03980f1f84335466bb18177e7f0e13cf65ad34dcc262fdc7369cb4134a73b",
+      "size_bytes": 5002,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\populate_final_clean_outputs.py": {
+      "sha256": "3c21d391256f2cfaf79d626f4eef09e26e1a45e1003f058c3113087b160d6b7d",
+      "size_bytes": 3843,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\populate_final_outputs.py": {
+      "sha256": "6296eedc2de812091d57660675ae7ff2075421b3ba319a71004ca69a6a31cf9c",
+      "size_bytes": 4438,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\prepare_execution.py": {
+      "sha256": "c5c5a4a91b7143b21c6cd67a9a1a4f33c0035d4943e04c2aa1af232875fce4fa",
+      "size_bytes": 2175,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\read_v16_notebook.py": {
+      "sha256": "d7d83b487c4ad30396537133d81d2945eeb01c163ee68979cf64751b893f8509",
+      "size_bytes": 1075,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\rebuild_exp85_artifacts.py": {
+      "sha256": "baf87e82ae7e9897a15d0bb51b491701cd9e1e6874ce8557da39c41689cb270e",
+      "size_bytes": 20067,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\reproduce_honors_champion.py": {
+      "sha256": "0e364e02749fee828dfab3e394618620850f9cb268505e645215827b07342514",
+      "size_bytes": 17102,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\research_exp48_0783_breakthrough.py": {
+      "sha256": "79316872d6c5a93aab0bd3041e29eab9f8adcc38d235fb9aeb707b311e7ebf33",
+      "size_bytes": 10650,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\research_feature_formulas.py": {
+      "sha256": "08a60c11540b2d38a807567ef6abb066ed0df2b8f9cf77f94e180f4ce7a88f60",
+      "size_bytes": 6166,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\run_90min_honors_breakthrough.py": {
+      "sha256": "50c410dfcd5674535940f18189f8032e07c56d50dc9a3748794245006397e174",
+      "size_bytes": 30557,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\run_origin_exp1.py": {
+      "sha256": "1a2b4bd4ef11473ab5a6d6ac5b79e65a8205deb2dbaf34484bd74b1809a28cc1",
+      "size_bytes": 2287,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\append_exp90.py": {
+      "sha256": "a557237b5bff87907eb44340861b4a13fd8d3e9948f43b6251c15bb0402b69bd",
+      "size_bytes": 1035,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\apply_champion_to_scripts.py": {
+      "sha256": "857633062feae67cd3f2249f31b05fc8397d9eedb09fbd4c9a57d57b7ea0eca7",
+      "size_bytes": 2498,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\audit_and_sync_notebook.py": {
+      "sha256": "53923cef58b8ffaa9478d31db16b6212df6bc66598b539ffac3027d28bb2e181",
+      "size_bytes": 1614,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\audit_champion_comparison.py": {
+      "sha256": "c20da5ad03f969ac523bc991ded227c53c59d4b888fea8eacaa31031227ba99b",
+      "size_bytes": 3127,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\audit_clean_ensemble.py": {
+      "sha256": "cc270913a677570600dd1714b13a1ffdadc04f7890cc47efcb979ebdc24f7f95",
+      "size_bytes": 1956,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\audit_exp85_files.py": {
+      "sha256": "2e1d6e939edc32ce27e6ed4e56d32b3eb039484746d892c7619ad8e38e56253b",
+      "size_bytes": 2670,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_100pct_corr_nb.py": {
+      "sha256": "05975852e2b27d6dba642dd386a08791412025255c9295546005b0605d1b33a7",
+      "size_bytes": 13319,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_18cell_master_notebook.py": {
+      "sha256": "572a2bc05e5781f131cd46761acc7fd4d5d8c4a86a5b04a90def9f64842e39df",
+      "size_bytes": 38390,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_clean_exp85_solo_notebook.py": {
+      "sha256": "5504f009d42e809c4aa00e5728a04d1c1dafee29e8e3a63216644536d99e4dd2",
+      "size_bytes": 33112,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_clean_standalone_notebook.py": {
+      "sha256": "d826fa850e1e88bce66d76fa798c5275b2899f76767de8ec3b7da94fc25188a1",
+      "size_bytes": 25549,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_clean_suite_submission.py": {
+      "sha256": "4798cdcacd9bf76d1cb028a14d70490f02ec32049669b4fac1133a0e51d04552",
+      "size_bytes": 3403,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_exp85_legitimate_notebook.py": {
+      "sha256": "ff953beaa7557bc89d08f30125cd398ebe4e056dedfe45dc93b11b8b2618edb1",
+      "size_bytes": 40707,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_gci_champion_self_contained_nb.py": {
+      "sha256": "1ba9531b2b44b7bef53742e9462d418fd93c217b83f7f31bbd966b70a59b3f4a",
+      "size_bytes": 2215,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\build_master_colab_champion_nb.py": {
+      "sha256": "a7f008b0e92ba0f21c127c5cbdf8e3b73ba5b49fc76fbcf6d1007b9433385035",
+      "size_bytes": 18702,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_b64.py": {
+      "sha256": "9f64ddde75ad43de901f5587075c739434647875c4b37a7b8825aa61ce03c7e4",
+      "size_bytes": 572,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_colab_ipynb_ast.py": {
+      "sha256": "884879251831bc61f3a3f738130365f2163f11749bff2ff4e91aa3fe0fb860df",
+      "size_bytes": 545,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_column_access.py": {
+      "sha256": "c2a6ddc98b9ae055a5f090e85e5ebb17d2f4120faa4043e078d733d58a87b76a",
+      "size_bytes": 906,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_device.py": {
+      "sha256": "9c0e30101e268551fd9c0a0b2aa4b6dc4b3f614b216845534172a5d528e92c29",
+      "size_bytes": 398,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_diff.py": {
+      "sha256": "38ede41e0cfff27989345115fd7f80959b0136f9c2d4651632c05b02a0f7d4c1",
+      "size_bytes": 2406,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_log_code.py": {
+      "sha256": "7e56ea0e08a944de312e7f9a2cb30f4005cdba976eac3cda5ea622b9268c7f80",
+      "size_bytes": 604,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_model_corrs.py": {
+      "sha256": "159997df100833be4a8c6fe9c57dda590e645bad4910f4ef5eccee93bcd482c9",
+      "size_bytes": 982,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_nb_mapping.py": {
+      "sha256": "8c16eb0ac5dc9eba6cb14be94c16f831b2fc6ef49a90394e7980b1dc7a992b5f",
+      "size_bytes": 501,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_v85_code.py": {
+      "sha256": "ffa2e7d9b5c24f828c955706bcdc4d640d8cc0557becf15cd17724d027498160",
+      "size_bytes": 509,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\check_world_nb.py": {
+      "sha256": "03f17e067767aa65ba1bdc558c94e82cc05dd4e8f724423f019ef28a6008f2ab",
+      "size_bytes": 474,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\clean_cell18.py": {
+      "sha256": "3a2fd741728fc418d7550155baff7e5a27a5e8a7bafd749b35c5fa4d50d72588",
+      "size_bytes": 2807,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\compare_nb_to_script.py": {
+      "sha256": "7bbfdd10481b0fa3472fb4f7b001bc85c8623a536136805c3a9a6f741d55e261",
+      "size_bytes": 423,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\create_audited_notebook.py": {
+      "sha256": "540f0e6ece09aec118770997258a0076b87a6cc0b4c827b237acc9657f252bd0",
+      "size_bytes": 5833,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\create_champion_notebook.py": {
+      "sha256": "ef904e3b0b65597547b5d8ea406ab409f986106bf60fce249f28634a1d232285",
+      "size_bytes": 40709,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\deep_search_pillar.py": {
+      "sha256": "1af84a2f6d22f151266a7cd142927344d2c0876f35d86bde0a72c47bdbd2514b",
+      "size_bytes": 1345,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\embed_notebook_outputs.py": {
+      "sha256": "7980fdd402dd2e2a31e5b6b5e169ec46d94f0e4e44496ea7b9107f1990ebf2ea",
+      "size_bytes": 1352,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\final_sub\\final_submission\\reproduce_final_submission.py": {
+      "sha256": "8a90d233723639297b1a433ee474b37ea1d00879fdb518ac39ee75a0fe575662",
+      "size_bytes": 50722,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\finalize_exp85_rebuilt.py": {
+      "sha256": "6db4ef1fdba76a0649d0c812403e4ff0af362f635a8d7b63f9d0211df0590cac",
+      "size_bytes": 13217,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\generate_audit_and_manifest.py": {
+      "sha256": "6da4061f186675159c66ea5d9f38272d1d648a9f3ed5af67ca40d3938f678959",
+      "size_bytes": 22215,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\generate_exp85_solo_notebook.py": {
+      "sha256": "77607c0fd838b31828b154131c95de7a4557b7f85cc389b95944e119fce4e374",
+      "size_bytes": 29370,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\generate_manifest.py": {
+      "sha256": "c2b3605de18a04dd6506ecc3f0a18b2f2034c3cf526ee550f4384714d22a6702",
+      "size_bytes": 1098,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\generate_notebooks.py": {
+      "sha256": "24e4ef9e6c6a50d85928a0158bcda7e959b2797266d00007f6ac8666d3d9f379",
+      "size_bytes": 43331,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\greedy_ensemble_search.py": {
+      "sha256": "f686b6381d32bc1d7f36f3d927337f618f2582b626d1fd2909fc5280146432a6",
+      "size_bytes": 3011,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_all_cells.py": {
+      "sha256": "11f92a944dbd84c7d6dcdf3fd27216639e2eba2a965a638797a217b4feec6fab",
+      "size_bytes": 316,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_c4.py": {
+      "sha256": "642197d087bd191fff9c0db26cd1b09907ed3aee071c9d1b8b1db686cb2a4771",
+      "size_bytes": 293,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_cell18.py": {
+      "sha256": "a5507bdb3937f69b1553a86f1567c2ff149fa63479b04dae1d60a081c378f929",
+      "size_bytes": 144,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_colab_080.py": {
+      "sha256": "e39de8c8fc114a32637be1f041a94706631d3e9581fc1f58d981ccc6d7098e43",
+      "size_bytes": 326,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_exp60.py": {
+      "sha256": "d438231f06b87746b3e19e28a21f340c6fecc9738a52b974c6379e0774bbea7d",
+      "size_bytes": 330,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_nb.py": {
+      "sha256": "6b162f736df94e13e4be4a7d72f8a70a7dbfd1a51d044c3b4fcd89a04c9ff76d",
+      "size_bytes": 373,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_nb_detail.py": {
+      "sha256": "1f7205e9b7811809c506e70acf49953da3d055716ff23b659a07474ad80602d9",
+      "size_bytes": 392,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_notebooks.py": {
+      "sha256": "9af935d5cdfcfbf36fd904fce75d47984e7f633b3d0df883e4281f69fa50655b",
+      "size_bytes": 636,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_py_cells.py": {
+      "sha256": "ede8a0d86f435439f8155b70ccc30d540b803f0a59e0301a74d8d2ec55e0809e",
+      "size_bytes": 438,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_recent_files.py": {
+      "sha256": "9263472ee9602105ebb52327f3252e85beacea7e41f8978c17aa5a1ef50000d9",
+      "size_bytes": 816,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_self_contained_nb.py": {
+      "sha256": "d5d8b68abb5964b04b67b386abd01a20be15804a3938dffe9ddbc730f0031055",
+      "size_bytes": 307,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_v17_nb.py": {
+      "sha256": "cf5517fa47175ece582d8f471d0f11dfb919a0ab095fb8e3b44d634aedb443c2",
+      "size_bytes": 400,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_v21_nb.py": {
+      "sha256": "2761e9d70e1ca5caafdb659bda67f9a402d70b20477f9390c2b6d7cdf7b923dc",
+      "size_bytes": 346,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\inspect_world_nb.py": {
+      "sha256": "2b565a2445c946646aca0b0a68a786d8baff9fc4e93a1741451f2e1bb72c52a7",
+      "size_bytes": 375,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\make_colab_ipynb.py": {
+      "sha256": "68437368f9a4ab67bac66ca5d4c5d398197f69d17e88ced22b82bf16474314ee",
+      "size_bytes": 5260,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\populate_notebook_outputs.py": {
+      "sha256": "2dfebb06e12f58713d259aac2abb4453023534135bfc3363f08b461f0748c6c2",
+      "size_bytes": 4108,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\print_c2_c5.py": {
+      "sha256": "9e0b9bb4aac68e2e83d2bcb8df16ed4f867465a3eb08a4e79d1f885d64c94be8",
+      "size_bytes": 249,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\remove_b64.py": {
+      "sha256": "f76db6fff4812fcc325401d9e8ba40000df63694ed5f864ee60597ac9839b5cb",
+      "size_bytes": 1308,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\run_and_audit_ipynb.py": {
+      "sha256": "23a598abe1dc9d06178f327bffbf905d94c550afa845d4b27fa3c505c99028ae",
+      "size_bytes": 3153,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\run_controlled_experiments.py": {
+      "sha256": "42977296bdf654b5395f93a1c25319e48db2b7336cc39dced9d9349ba152ed3d",
+      "size_bytes": 43306,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\run_v85_dry.py": {
+      "sha256": "3378afd08b6e873c846d432cd37212e499adcee103ff22abcf6a3dc935fe40bc",
+      "size_bytes": 755,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\scan_anchor_sections.py": {
+      "sha256": "570e6792e259c5307d5946ffdff5f31c0afaaa582ddccc616166ded98ebd6b2c",
+      "size_bytes": 322,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\search_brain.py": {
+      "sha256": "c45baccb705f4bea128bfe3ac4dca8701246ccee153b14d59860b6b87a1d0d9e",
+      "size_bytes": 852,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\search_files.py": {
+      "sha256": "64f9099af4f40ceec153e7cc1cd162dfd2fb55cf33eabec9eb0551e375b880ad",
+      "size_bytes": 1205,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\static_smoke_test_and_audit.py": {
+      "sha256": "cbdddd34589bee16e4b47f4fa637fa102249b2f0b4d6e351728b7a8eca3dca61",
+      "size_bytes": 4351,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\sync_py_from_nb.py": {
+      "sha256": "25c1f4d1c25a37598205046d98330b58e609e783fb8c7068d06d85084101f724",
+      "size_bytes": 1301,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_b64_unpack.py": {
+      "sha256": "9d00bff8b5c068abbd1ff811211a4d1b1baf6c8ceeb09e20971ab0425cfd588b",
+      "size_bytes": 3213,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_complete_8engine_pipeline.py": {
+      "sha256": "6f8d2c1b0a2f084daa120a86905e8e8520eb758b3d861f797c3ff7d11de204d6",
+      "size_bytes": 21411,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_decomp_hash.py": {
+      "sha256": "3991443c78549e7806b901044c79e31ed851b0405d7a916c35a1189893f10b5e",
+      "size_bytes": 1638,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_exact_v85.py": {
+      "sha256": "fd925bdd1053d57c07f563bb8191713b1908c339dc540fb476c1839c6da16846",
+      "size_bytes": 2445,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_exp85_direct.py": {
+      "sha256": "e79b63e1798897fc6c379476ec95efd700652092e3ae383104c0e6019c980e46",
+      "size_bytes": 3109,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_exp85_solo_nb.py": {
+      "sha256": "5956b1fd96a8f8b42e8ae46776b888c877b3a7921db1ae3298937ab76f118ec0",
+      "size_bytes": 912,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_model_vs_champ.py": {
+      "sha256": "d330ccbe4a863317ca59a26a7401404f8d7be18e33b38020665bc01aff34db39",
+      "size_bytes": 469,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_real_reproducible_pipeline.py": {
+      "sha256": "1f854912b64c9a1ed2d9ef6c2187174d1fc0cd4941d372773a7681ee6bd48b73",
+      "size_bytes": 18560,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_run_notebook.py": {
+      "sha256": "469b4b74a861681ccddc83e1ec9d177d0e9879e43b72ada6a03976af95ca7c80",
+      "size_bytes": 913,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_run_option_b_nb.py": {
+      "sha256": "95b4e1a2e88cac10a9b532c152029195670f33973b0cc22d54b57b3edbbef0d6",
+      "size_bytes": 994,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\test_stepwise_exp85.py": {
+      "sha256": "c0fb9da974992f1b80b85cfa856f68557a6437cf08b863b03b2672db7feeccbf",
+      "size_bytes": 5070,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\trace_code_creators.py": {
+      "sha256": "6402af5e0012fd07a7088ff9ce1415fc2c54090b080ef4b53971e2af040c2a99",
+      "size_bytes": 1770,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\trace_oct22_progression.py": {
+      "sha256": "d4ec6663fd93efc43d5288f7c7782bb37933eb2ef6d03e30fa42f13189005ee6",
+      "size_bytes": 873,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\trace_variable_dependencies.py": {
+      "sha256": "5680b0137651fe23e1fb18d4d01eaa2ceace788f14cce46f3244e2b943dd502a",
+      "size_bytes": 1718,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\update_manifest.py": {
+      "sha256": "1c9879e0bc944a8cd9f8107f4bf7a8940dd6a8196196d9ee0d145988ff8d292a",
+      "size_bytes": 1198,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\verify_anchor_match.py": {
+      "sha256": "7634aad087b123c88779f5f37170e61cf9ca0e13cbae88198debc7f8ff06eb14",
+      "size_bytes": 1190,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\verify_ipynb.py": {
+      "sha256": "196365c4b6466f96c51a684c752455af89d458a99402570edb580d73b0fa8949",
+      "size_bytes": 331,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\verify_submission.py": {
+      "sha256": "a9316baea9d92e1650c130c5473328416f9a960894641abfd6b6a6f56ff62f7b",
+      "size_bytes": 928,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\view_cell_contents.py": {
+      "sha256": "614f99737da6c24287b6b37b3a6207033445d6a4bc93359b9917701d6b789585",
+      "size_bytes": 305,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\view_fe_cells.py": {
+      "sha256": "0451cf94f12d0684d1de62a297b3ac9d84798e09e9bf588a079416177cda92a0",
+      "size_bytes": 258,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch\\view_log_pillar.py": {
+      "sha256": "708731ea2e941295975fe6d0eb647d0ce23d1b5d9316b2e0b65ffb6057bc44f0",
+      "size_bytes": 486,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_cells.py": {
+      "sha256": "7371327177a309d35d304a63ac7c0bef8f12e16e4809160e7c77bd26ebfccfd1",
+      "size_bytes": 345,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_cells_15_17.py": {
+      "sha256": "ea951780ebf8865c031f1707aeac3d97555657605bceda521cd70ef591cbc3fe",
+      "size_bytes": 345,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_features_v17_v18.py": {
+      "sha256": "e197d142816367fa2631d5eb7c8081fb29c720c64ef63446566601782e07e596",
+      "size_bytes": 568,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_v17_v18.py": {
+      "sha256": "4a4de9766810aea908744819366628c327804dab2c8759c60a6edf8534ed9d1a",
+      "size_bytes": 613,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_v19.py": {
+      "sha256": "8196cf0d0f07cc2913ccdfe9f195986107f171c41415958101efa8bd573c62da",
+      "size_bytes": 456,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_inspect_v22.py": {
+      "sha256": "a247b71ee7ba0dee5290449ddd7a385e5ef6ed0663e0a0c74d7edcdf733b808d",
+      "size_bytes": 694,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\scratch_meta_weight_optimizer.py": {
+      "sha256": "e3931a0aa9c737a4eca183a6754cba5a81662ce1ae5aa627d24fca6dae5611b5",
+      "size_bytes": 1379,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\screen_and_select_features.py": {
+      "sha256": "0a881c5bb2090e77e6cb3020e0134ba172650fe3ecfb1f7701ae57a5e8caafb7",
+      "size_bytes": 3636,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\screen_chain_reaction_features.py": {
+      "sha256": "6c047d67504f0aac326d8eadf26c9c6054738207074af2ed94ee577f808b4808",
+      "size_bytes": 8149,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\search_hasan_secrets.py": {
+      "sha256": "5ab96eed57d761b1401266b97324a9c08de082f03013750d63f3efbb5c87c408",
+      "size_bytes": 903,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\search_triage.py": {
+      "sha256": "9ed783115fb9f3b1e8f504936455f6c4997d96a567e4f9a0cc98219e61cd1c45",
+      "size_bytes": 553,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\soften_leakage_wording.py": {
+      "sha256": "2bf9da74c24e9f2e5ee8a18163da6bd873ed69a8081695eaa28d42ef6d933ff3",
+      "size_bytes": 1136,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\solo_grand_master_apex_080.py": {
+      "sha256": "38917ee975beeb5abb1ff522490732d42e351ef161fc179e0b5bf6ad44871756",
+      "size_bytes": 8124,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\standalone_champion_pipeline.py": {
+      "sha256": "940248003549db01b64656a07aa17bf330d305b8328978cd2f7d967168b00dd5",
+      "size_bytes": 34490,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\synthesize_and_submit.py": {
+      "sha256": "651168749a4f8f83e50e64849489a12bcaebd7b20acaec36e408762600067a4b",
+      "size_bytes": 8150,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_calibrated_harmonic_gamma.py": {
+      "sha256": "9763e8278300eaefc0a12efd95bd34dd80f26a28b9c26c59bbc45144f4ac12f4",
+      "size_bytes": 2823,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_community_breakthrough_features.py": {
+      "sha256": "7e44eee3b4c832ef4a04b3dd447130a3de37f1b8a6fcceb8ea05c91c8307fbba",
+      "size_bytes": 7796,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_conflict_correction.py": {
+      "sha256": "998f8fa72f869c815a097e5ebdba598aefaba21d5b0fe03cc05addd10fdfc304",
+      "size_bytes": 2181,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_exp2_features.py": {
+      "sha256": "1afeaeba222bcfbcf0f93d4c1578495ad67fe27a5bb9de578f329417593552ed",
+      "size_bytes": 4377,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_exp4_specialists.py": {
+      "sha256": "338840f3ff0edf12a6313a5a1a0a5a0e365a66dd0ea8d728aeadc16925c7df91",
+      "size_bytes": 8876,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_expanded_partner_leakage.py": {
+      "sha256": "02b9fe631cf4c458a4e12ac5e6fc528903c57bfefe72f7d6ec0001ac04cafb92",
+      "size_bytes": 4659,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_intra_person_consensus.py": {
+      "sha256": "e59093ceaca1196bc450df1ef708db2ea9982abbd394c2e6aaeaec7c87b91d8f",
+      "size_bytes": 2433,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_joint_synthesis_oof.py": {
+      "sha256": "fe59ec10715b695283cf27a1ac94e75f8f0fe3a4863450a76cd241799b701a77",
+      "size_bytes": 3985,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_meta_models.py": {
+      "sha256": "ceace51b8a97e793bfed589f91c8d92e6f74777d469b7eb26a099c74d15b2b68",
+      "size_bytes": 3750,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_partner_enc.py": {
+      "sha256": "d68f3b4f7af1d61b696ba38730dd1d38d780524805c4b169d89d4f1dc29ca93a",
+      "size_bytes": 2533,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_partner_features.py": {
+      "sha256": "f688f27120a39a9d2e2e41a7a09f42b999f8534a2358e37aeb136d10815a1681",
+      "size_bytes": 2607,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_regime2_repair_weight.py": {
+      "sha256": "188a8753d38333d2ccf45619feb08e13714591da54b617cbc6b5fc69ac940fad",
+      "size_bytes": 3201,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_regime2_solvency.py": {
+      "sha256": "1dc9d81d8755dccb082e5960cbca713f3a8c0ea0d069b7d3acd542ba851e3738",
+      "size_bytes": 2047,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_run_clean_notebook.py": {
+      "sha256": "7cc1982c45aca5a7861bbbed847dc366050fceda69a228776614b5fee1c04957",
+      "size_bytes": 2815,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_true_champion_pipeline.py": {
+      "sha256": "977b5ba25af0a83e861b9df159f8c57bee2344d33fc36672e8f1d4ef47025a9a",
+      "size_bytes": 19342,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\test_views_and_resid.py": {
+      "sha256": "a11b012b66a88242155a5cdd3b02ffc8beaa31d9be4665eb7d42abb443060461",
+      "size_bytes": 20761,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\track_pipeline_and_score_gap_analysis.py": {
+      "sha256": "54743ff10de94fc1d13eb7e0be12a7d9c116c28bab55a0f18084ccd03584854c",
+      "size_bytes": 5144,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_and_evaluate_combinations.py": {
+      "sha256": "54f4a39d625245dbfe9844a280e7301c8c0845191c6bf30f22da27c4156f90f0",
+      "size_bytes": 9940,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_catboost_and_deep_lgb.py": {
+      "sha256": "1c74ca4620ace7e927e8b9ec5c6bb0ecec9f6e4c577c9d01e44da1eff42f0290",
+      "size_bytes": 5077,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_clean_honors.py": {
+      "sha256": "354dcfde694d92320ed6bea9f771bb03e037399c6bac1d4f93e06159cba4fec9",
+      "size_bytes": 23604,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_clean_honors_champion.py": {
+      "sha256": "fcc248cea1c7cc18e9277f676995e5578407ca7fc4493b34411ac9351697756a",
+      "size_bytes": 11756,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_exp15_gpu_xgboost.py": {
+      "sha256": "d025a59c47ee589b6e85c7d09723e401a5c0ba66940a97dedc457c7bdacb868a",
+      "size_bytes": 7347,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_full_v16_suite.py": {
+      "sha256": "eb20c21039c3a09f63367a538d9b46d2f34b8c04879b0b83fa4c29ef880bcec0",
+      "size_bytes": 10617,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_gpu_product_specialists.py": {
+      "sha256": "c24276b5a8960da09dc585a23566e44f0e97002eb405c4e84fd7834012a7fcc6",
+      "size_bytes": 7869,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_hasan_master_zoo.py": {
+      "sha256": "bb8a2e8d8205fcbdc534854899ca46bf7ffeddbff16ade82c618c578f8a51009",
+      "size_bytes": 7849,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_meta_top10_models.py": {
+      "sha256": "eba89d275f7223fbda9f224473506f509adcdd0b689efaa1e19c3bc63f265552",
+      "size_bytes": 8715,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models.py": {
+      "sha256": "32866ff3451e6c45ea5ab83be28610592c902670236cd511350785cc023c10e5",
+      "size_bytes": 11779,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v2.py": {
+      "sha256": "f274e405333fdf8af9f6f47e7af8fdbca8ee4fe7e37acc844ae2e608a4997559",
+      "size_bytes": 11618,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v3_gpu.py": {
+      "sha256": "c11a2534d47ab3e805d89ea6385b1835d6d6136fac1cfc09d605c8000c130311",
+      "size_bytes": 9805,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v4_pseudolabel.py": {
+      "sha256": "de422e95cf54675cd4035ae0f4d3d7c75311b1fad7e9bfa272a737969631930d",
+      "size_bytes": 10670,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v5_stacking.py": {
+      "sha256": "d687d44ec5a8c5ce4ffdb07ad86eb0c1f5ff77cff064a9aa8f7721e03f3d5002",
+      "size_bytes": 10125,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v6_multiseed.py": {
+      "sha256": "4e20e7d1baf72104c51839b839d1ac70ea39d67374d3fc3f4ca24976b307027f",
+      "size_bytes": 9638,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v7_signal_purified.py": {
+      "sha256": "2ee426236fa8dcfa4fe5a15d16b88a518e6a1255b1d33924803505b2045ccb25",
+      "size_bytes": 11836,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v8_knn.py": {
+      "sha256": "3b77f67fe242d241a463f8b2dfcb2cf8b2fc657c237a289f50a9ff0843ed45cc",
+      "size_bytes": 9934,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_models_v9_combos.py": {
+      "sha256": "535ac5e7d5c607610e20d5a4b4fdf9ad1e2941b86045109296f2c5b419d2103a",
+      "size_bytes": 12448,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_product_synergy_specialist.py": {
+      "sha256": "867c7edea4d10cd20d18797bd9cc85dda0c2bd5706ffa6c0d5c881493785f738",
+      "size_bytes": 12151,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_regime2_specialist.py": {
+      "sha256": "41a48646ca13d95f87cb52eef07e3c214b477416a8b7f4acd6c706762c5749d4",
+      "size_bytes": 2109,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_self_contained_zoo_and_transductive_apex.py": {
+      "sha256": "be47564449442599207d07d5ba8f6974e393dcb623962ef454ca8b2877a2e443",
+      "size_bytes": 11268,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v16_and_optimized.py": {
+      "sha256": "d8e1eebc5656a1f1fcfa557ac0838eaeb2d370c6d8b28efa67ae1cd16bc18cb8",
+      "size_bytes": 12068,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v29_full_synergy.py": {
+      "sha256": "dacd9a23d9b7aaee53579d6c6f82e68022559bb30ba547fdcd1d7d45cc7f6d62",
+      "size_bytes": 7856,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v30_formula_surrogate.py": {
+      "sha256": "62c89a724016f65801e496f17841e681800a341d54735e8edb8adae55322409c",
+      "size_bytes": 9989,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v31_hierarchical_product_champion.py": {
+      "sha256": "36fa8e82a9ab39a00e9ee685f80ea4c6b88a699aee939882dc7072f170f950f6",
+      "size_bytes": 9573,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v35_apex_master.py": {
+      "sha256": "367c71ba9d79659cc3c5d5f507b8ac18178eb39d434ef52e0905efde2551c115",
+      "size_bytes": 10714,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v58_clean_gpu_0783_champion.py": {
+      "sha256": "656a4de8802ef3dbb7d27da5046bfd67b5fee7f9e3dbad64a0de46283a71f584",
+      "size_bytes": 6841,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v59_clean_gpu_micro_apex.py": {
+      "sha256": "825c3f725fb792be544a207afea6d8f4580de0a9c3a99db87775d66d015dfec5",
+      "size_bytes": 5114,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v61_clean_contract_gap_apex.py": {
+      "sha256": "aa77e340220d5e091189d48d1dd7ce3c271d98dc9ee35b6a0ae6fdd8d70b19ac",
+      "size_bytes": 3940,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v62_clean_contract_gap_apex_from_scratch.py": {
+      "sha256": "6f61ebf8eeae01960c251eee88db5dee7659c0f8f57ff95aa744b94acf054b54",
+      "size_bytes": 5656,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v63_breakthrough_0783.py": {
+      "sha256": "cb6f2679f7fd7b6d7fa58fb26fe26b1377130af2563a4287d17c1668fd01ff8f",
+      "size_bytes": 13402,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v64_micro_gated_margin_calibration.py": {
+      "sha256": "4a6bb8549f6420a8f3d4c3189354c2e4b1d6cc4f4cd1e64190847daad0eed2f0",
+      "size_bytes": 7083,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v65_double_winning_gradient_apex.py": {
+      "sha256": "e6f06f0aead9755113af04f359721a2e951fd8ea85e20452df4390b2216848b9",
+      "size_bytes": 5778,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v68_clean_multiview_apex.py": {
+      "sha256": "0118722d3efcc84ef59ec4db5f3b22291426dbee75198bdff0424a5685b015ca",
+      "size_bytes": 25654,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v69_invariant_linkage_apex.py": {
+      "sha256": "fa321f35a078e4537d15a963ce2ad486c87bb400b4fba6bb1375527bfb19f196",
+      "size_bytes": 7562,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v70_multiview_decomposition_apex.py": {
+      "sha256": "6f3a8e00f0af3e73209d1d69ba19b8f302ffbac907b6807fc67ad49842619dde",
+      "size_bytes": 18816,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v71_income_tier_ordinal_apex.py": {
+      "sha256": "41b6f8d88699d68a7c6041eedb7e8e33b9c9a74cfd2b66697acf143332c35824",
+      "size_bytes": 13424,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v72_tri_anchor_convex_apex.py": {
+      "sha256": "d41d7ec74a96de580b48d8c4eea8bba8105bf7b24353fb18a78905c43c75b880",
+      "size_bytes": 8240,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v73_extreme_precision_invariant_apex.py": {
+      "sha256": "fe8f1f52e1c4bd65bcb5c7497c6eeaad372b8c5697d1233663bd58926e44acdd",
+      "size_bytes": 7738,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v74_omnibus_calibration_apex.py": {
+      "sha256": "2b0ec51c762b3a76535d454809f6afa12361ff3ebce97e9855b0aabf040074f7",
+      "size_bytes": 6250,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v75_expanded_identity_apex.py": {
+      "sha256": "39b821522e223203e099a2baa940df5660e7dde98d32a9146c4c0fe1514dd4c8",
+      "size_bytes": 11515,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v76_multiview_expanded_identity_apex.py": {
+      "sha256": "e0fc81b56c61782638030e87656adf0bddbf910dad4bf1fb66dbc98dae000f8c",
+      "size_bytes": 8981,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v77_quad_anchor_consensus_apex.py": {
+      "sha256": "ee3d99b4e23d1cfa9c10f2293d9f438edd6528cd68bde272c3bcd8df5c1508dc",
+      "size_bytes": 9562,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v78_standardized_cohort_multiview_apex.py": {
+      "sha256": "7cc0f6eacf8b196c81b0ed1153bf36c91a4c188f2d2cece9cf4b4789c05b0f89",
+      "size_bytes": 22203,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v79_discrepancy_repair_multiview_apex.py": {
+      "sha256": "eddbaa8d357ed92d64a398298736461792bd9f00e086771679be04e0f5f58abd",
+      "size_bytes": 10281,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v80_grand_synthesis_multiview_apex.py": {
+      "sha256": "635015a29b27efb8063555ad2b20a12704f6f95c155331b1e6a80392aba109b6",
+      "size_bytes": 10592,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v81_pure_ascent_apex.py": {
+      "sha256": "eae9f812cba05edf96155b13d20a6a76ef9854e7baff2e9c64fc49153c6151c0",
+      "size_bytes": 6687,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\train_v_gold_grand_master_apex.py": {
+      "sha256": "bcce858e3cba4f0d11fe727dec4e4f07c2fe6605322c588463d5c7b9b16c8edf",
+      "size_bytes": 12556,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\update_cell8_cell9_auditor.py": {
+      "sha256": "44525b27e73ad3ab03f3b09df74a675bb9b88721ef4c8f7da5f064c2d41abb59",
+      "size_bytes": 8352,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\update_cell9_assert.py": {
+      "sha256": "020f30673c292a00ab702909acbb4f037b8c55d6b2528189e5abfd9bdb48c7c3",
+      "size_bytes": 3738,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\update_exp69.py": {
+      "sha256": "e3aa0a75988848fb496a5e9c76d2c85dbeb2907f6962cf78a981066a76707576",
+      "size_bytes": 2940,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\v17_cells_dump.py": {
+      "sha256": "8fd24cfd54af539b648cf50c231b9c12abafab9ecd9ffca7fbe5937f6f521848",
+      "size_bytes": 27907,
+      "source_group": "gemini",
+      "syntax_status": "FAIL"
+    },
+    "D:\\gci\\gemini\\v62_champion_standalone.ipynb": {
+      "sha256": "3111a6092ae45dfa22a83ee972262279d8e5a3173f01b8376b29471db0833a8f",
+      "size_bytes": 321965,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\v62_champion_standalone.py": {
+      "sha256": "7e79595d61c84234e08a9fb305eabccf21f89985711fa8cb5e9bc7be0e3607a0",
+      "size_bytes": 313706,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\v65_multiview_apex_champion_submission.ipynb": {
+      "sha256": "32cabd5f39e21e995aa0906d1a76d20413ddf96f280e88b103a2e0a953b52e6c",
+      "size_bytes": 47110,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\v65_multiview_apex_champion_submission.py": {
+      "sha256": "8ccd6859fb85850aaf8c072cee661bc9c9ceef3aac88e00e958b8e7f69fb97a8",
+      "size_bytes": 27059,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\gemini\\verify_grand_master.py": {
+      "sha256": "2c4be0926c74d91bfc8731dba0ae4e483f1f43a3d71b8e2c0a8629edcc4f3567",
+      "size_bytes": 1934,
+      "source_group": "gemini",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\name5_dependent_code\\build_precision_transductive_apex_champion.py": {
+      "sha256": "49c08b193c4b556b4a7d52a92c4658d4bca77f540aa485c0dd0798fd2d5cfe47",
+      "size_bytes": 4517,
+      "source_group": "name5_dependent_code",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\name5_dependent_code\\train_catboost_and_deep_lgb.py": {
+      "sha256": "7d6c134d2ef1a0ba127893e729f97c27577b144755f7a30f29d29e33fc03e9cb",
+      "size_bytes": 3240,
+      "source_group": "name5_dependent_code",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\name5_dependent_code\\train_exp15_gpu_xgboost.py": {
+      "sha256": "200fbb7be8442b4d2cddbcd1e91c8c1221ad476141cd2f014c81f004525938c6",
+      "size_bytes": 3087,
+      "source_group": "name5_dependent_code",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\name5_dependent_code\\train_full_v16_suite.py": {
+      "sha256": "0d9fc2faf8cc0f4e6b94850cee38bbf6fb0bcdd3405371cd66ccea118f627db8",
+      "size_bytes": 3092,
+      "source_group": "name5_dependent_code",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\name5_dependent_code\\train_v58_clean_gpu_0783_champion.py": {
+      "sha256": "5746e15a73e3a39ea20e56158c646292e4640526bd27462b89a0da77647d05f7",
+      "size_bytes": 4631,
+      "source_group": "name5_dependent_code",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\colab_champion_solution_080.ipynb": {
+      "sha256": "d02b5e186774822636981b0a245a4810c0fb9b02cd6dec7201d08b9a11174368",
+      "size_bytes": 211585,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\colab_champion_solution_080_with_embedded_anchor.py": {
+      "sha256": "bcc133a5399e97c63f47b37a52dff2fdeaeae770f950ae75225d1e892c4199b6",
+      "size_bytes": 198397,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\exp85_solo with 90 percent correlation .ipynb": {
+      "sha256": "a0a93a5c20fa12eaa25d8b292b8281709228c058a0915c3ec5e39aac91755816",
+      "size_bytes": 86962,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\exp85_solo(2).ipynb": {
+      "sha256": "2640eaa9b828c9b9485497f9ce35060bd4d89db179820a5a42bb153039862312",
+      "size_bytes": 28611,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\exp85_solo(3).ipynb": {
+      "sha256": "34b66ca02ca74f1c8ee80a24d80a519292f3d0d6f00e197e1900e16f94dfeb4b",
+      "size_bytes": 40022,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\exp85_solo.ipynb": {
+      "sha256": "c7291a27a7d245b9431150fa57dc661c84540431182940dc77437aa748e88c3a",
+      "size_bytes": 104041,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\past_85\\GCI_CHAMPION_0801340_CLEAN_ROOM.ipynb": {
+      "sha256": "52f21f66bf3ed35bd47859136b33b3250c8ca7582b96151405ca17c38d047e34",
+      "size_bytes": 59988,
+      "source_group": "past_85",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\GCI_FINAL_v15_end_to_end_colab.ipynb": {
+      "sha256": "354737859f5c81831ac232d73b1e8ede99706aeb8746a46c2d37a31ffd63599a",
+      "size_bytes": 29292,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\GCI_v17_catboost_E1_stack_colab.ipynb": {
+      "sha256": "c1136dcf7eb1f32c3b2185202c087d7062095f0dba9b04529064353ad20e8b1f",
+      "size_bytes": 29338,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\GCI_v18_alt_direction_probe.ipynb": {
+      "sha256": "50558cafbdf040a7abd7bb31661e1c71ba5408ce6bf01a42dbf72cfc3206107b",
+      "size_bytes": 10117,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\GCI_v33_product_conditional_experiment.py": {
+      "sha256": "d383cd0952340fea6f64e6d1a0958faa1eb5d3583c1129ffeb58e4991dfbc240",
+      "size_bytes": 7951,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\extracted_files\\fast_screen.py": {
+      "sha256": "89ba1ee72c1b4c836d0ae429d50994fc768d0ed4f699acca5db9c3276760f3c2",
+      "size_bytes": 15324,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\extracted_files\\gci_core.py": {
+      "sha256": "d6cf0a7c9a928c58880e0546734822cd861690e932275a3b8af1334f70404a19",
+      "size_bytes": 25625,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v16_everything_merged_o.ipynb": {
+      "sha256": "ca77c6a6dbf6f5d1ea80b4f0f23de1f0f0c73ea7b4ac6fab937fd32ed8881306",
+      "size_bytes": 87903,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v16_everything_merged_o_78222 score.ipynb": {
+      "sha256": "ca77c6a6dbf6f5d1ea80b4f0f23de1f0f0c73ea7b4ac6fab937fd32ed8881306",
+      "size_bytes": 87903,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v17_optimised_O 78237 score.ipynb": {
+      "sha256": "39f931983604fe74899b61a1f116991e0e342c4509e2d7f80eeaf92117e5e6d3",
+      "size_bytes": 95828,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v18_evidence_driven_o 78235 score.ipynb": {
+      "sha256": "4c70a10af3306ad6f19a0967dff60d18e8aa3012bb395e285550df232c31b3ea",
+      "size_bytes": 111224,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v19_NN_entity_embeddings_colab_0.ipynb": {
+      "sha256": "a0b3fad94e7e94ce72b9895e24d71a14351e27f2f7656d823ee5d06efcd13688",
+      "size_bytes": 40241,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v21_gated_research_candidate_o 78197 score.ipynb": {
+      "sha256": "1da0a48cc190a12396174b5648eff96dcefc421ff9737306b166c5f7d972fd66",
+      "size_bytes": 99217,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v22_research_expansion_gated crashed.ipynb": {
+      "sha256": "0cc8bda2e9a2120d0644e00962ba279fddcab4ed319ad8394eacc7f8fb9bb774",
+      "size_bytes": 80894,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\GCI_v25_block_tester.ipynb": {
+      "sha256": "e0f5139aa07867a9f429cb92764fc6262e721faa91c3913056ee6f4d12e08109",
+      "size_bytes": 60400,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\gci_v25_raw_dump.py": {
+      "sha256": "e0ee005ab9f7738cb85bde95afd18f42da87485d2df33a5923d368608014c5fb",
+      "size_bytes": 52437,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\run_gci_v25_block_tester.py": {
+      "sha256": "d144787c39e1e7c44304503d3e1ded3765011bbd9161bf99877735c6a94d754b",
+      "size_bytes": 11497,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    },
+    "D:\\gci\\pre info\\oct22\\solution_v5_gci_research.py": {
+      "sha256": "4f0f1e9208f99ef2350af05f9c3da98eaae922de729295f2e0c410186924ae74",
+      "size_bytes": 140761,
+      "source_group": "pre info",
+      "syntax_status": "PASS"
+    }
+  },
+  "audit_tool": {
+    "path": "D:\\gci\\truth\\src\\audit_python_code.py",
+    "sha256": "db1fcd0229deceb44aeba16c1c5593d54bd8e84d6afcd48f60fc7e2e3fc33078",
+    "size_bytes": 65447
+  },
+  "outputs": {
+    "AUDIT_SCAN_SUMMARY.json": {
+      "sha256": "83e1d120e8f002f138dad747ffd2c561d426ada1348c68850d94a14abbf066f9",
+      "size_bytes": 635
+    },
+    "BLOCKED_COMPONENTS.csv": {
+      "sha256": "81eb0494b545524136cef741e5e3503a2284700fd6c31966e0795d8bdab4ed1c",
+      "size_bytes": 4233
+    },
+    "COMPETITION_COMPLIANCE_MATRIX.csv": {
+      "sha256": "8e4e615bf3b1c23e2384b0f1314d76fea209897035a7cae62cdd39fe0851bb3b",
+      "size_bytes": 7223
+    },
+    "EXECUTION_AND_REPRODUCIBILITY_AUDIT.md": {
+      "sha256": "031114ea8927d6898e2d2560459b935bb4f83973fd1fe3662c8fe09d739005b7",
+      "size_bytes": 6495
+    },
+    "FEATURE_ENGINEERING_AUDIT.csv": {
+      "sha256": "aa5b1841ba9020fd1a25fe949b1ba34a995f78211257ddf2da74de7e4a0ad61f",
+      "size_bytes": 1097367
+    },
+    "FINAL_AUDIT_REPORT.md": {
+      "sha256": "4b19c8b05e07a76560f91127a9e7ae34b89e29eca5ad9cfe3abc1fca3c17d1ea",
+      "size_bytes": 9908
+    },
+    "LEAKAGE_AND_VALIDATION_AUDIT.md": {
+      "sha256": "086ee13121a22f199dc68fbd6827203c1026c39f9fb4d692dac85ed1bcfe37c4",
+      "size_bytes": 26007
+    },
+    "PYTHON_DEPENDENCY_MAP.md": {
+      "sha256": "fd6aae3b3297c30819bb9c35d2f610df85b39c063b6f6f19da769cfb50d8ee65",
+      "size_bytes": 130243
+    },
+    "PYTHON_FILE_INVENTORY.csv": {
+      "sha256": "3ace7fc493cb5a81e4545f781ddbcbedd11109eaaf91bd4698fed8c070f6c7bc",
+      "size_bytes": 2559105
+    },
+    "PYTHON_FILE_INVENTORY.md": {
+      "sha256": "f937076d1b9e939b6123f3ba6d491c0d51b494ab9a9308a6e1562bbdc8c81435",
+      "size_bytes": 155358
+    },
+    "REUSABLE_COMPONENTS.csv": {
+      "sha256": "245d28a1930471864c797a626322ec8be0bcca7dd8694ed5b6d9ae4923cc0098",
+      "size_bytes": 432464
+    }
+  },
+  "references": {
+    "secondary_competition_rules_snapshot": {
+      "path": "D:\\gci\\champion\\07_COMPETITION_COMPLIANCE\\OFFICIAL_RULES_SNAPSHOT.md",
+      "sha256": "e366fd9180561a26698ba7928f153656428205b10fb9b0f23c46523ae7b0016e",
+      "authority": "unverified secondary local transcription"
+    }
+  },
+  "limitations": [
+    "Input source files remain outside TRUTH and were read only.",
+    "Manifest does not certify external data lineage or official competition compliance.",
+    "The manifest itself is not self-hashed."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "phase": "Phase 46 nested OOF selection of contract-expert mixture weight",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "inner_weight_folds": 3,
+  "candidate_expert_weights": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "gate": "NAME_CONTRACT_TYPE: cash=0, revolving=1",
+  "model": "Phase 38 XGBoost configuration with fold-fitted one-hot and key-frequency features",
+  "metrics": {
+    "global": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "contract_type_hard": {
+      "pooled_auc": 0.7640162654657314,
+      "pooled_log_loss": 0.24459077417850494,
+      "mean_fold_auc": 0.7640701420142851
+    },
+    "contract_type_mixture_50_50": {
+      "pooled_auc": 0.7651924668511284,
+      "pooled_log_loss": 0.2442401796579361,
+      "mean_fold_auc": 0.7652305624106586
+    },
+    "contract_type_mixture_nested_weight": {
+      "pooled_auc": 0.7652178943731394,
+      "pooled_log_loss": 0.2442321926355362,
+      "mean_fold_auc": 0.7652624317377945
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "routing": "feature-only contract gate; no target-based routing",
+    "inner_weight_selection": "selected separately per outer fold using only outer-training labels and nested OOF predictions",
+    "outer_validation": "never used for weight selection, fitting, or early stopping",
+    "target_encoding": "none",
+    "native_categorical_target_statistics": "none",
+    "manual_prediction_edits": "none",
+    "test_statistics": "none"
+  },
+  "caveats": [
+    "Nested selection avoids outer-fold label leakage, but the result remains subject to repeated project-wide model selection.",
+    "Weight selection maximizes inner OOF AUC over a fixed grid and can itself be noisy; the held-out pooled OOF metric is the decision criterion."
+  ],
+  "runtime_seconds": 362.5157848999952,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase46_nested_expert_weight\\run_phase46_nested_expert_weight.py": "cad34797abf7ead35b150f01707353ec48905088f7138b375d487c20c4e45ce6",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase44_fold_safe_experts\\run_phase44_fold_safe_experts.py": "4d60d539a89d85a2600a95d36643e48ad06e41ffb16fe863d56a25b130e50f6f",
+    "D:\\gci\\truth\\experiments\\phase46_nested_expert_weight\\runs\\phase46_nested_weight_20261108T100437Z\\PHASE46_FOLD_RESULTS.csv": "8a48b3da094045047f565005b40b1034c8652a5c0e0b51d03ab2f6372a195d6f",
+    "D:\\gci\\truth\\experiments\\phase46_nested_expert_weight\\runs\\phase46_nested_weight_20261108T100437Z\\PHASE46_WEIGHT_SELECTION.csv": "cd0305ccbbd7a8947be6ee025e2c6b351d437b229c6622aeff775f5513a5fd9d",
+    "D:\\gci\\truth\\experiments\\phase46_nested_expert_weight\\runs\\phase46_nested_weight_20261108T100437Z\\PHASE46_OOF_PREDICTIONS.csv": "3f1ff2e2add0871167284025b3ec2830225506451ba2ecb31272f87df6e6729d"
+  }
+}

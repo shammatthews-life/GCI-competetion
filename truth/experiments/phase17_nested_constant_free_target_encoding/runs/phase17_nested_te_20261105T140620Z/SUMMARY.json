@@ -1,0 +1,28 @@
+{
+  "bootstrap_repetitions": 1000,
+  "bootstrap_seed": 20261701,
+  "feature_scope": "Raw and rowwise application features; Q3/Q4/Q5/AG3 constant-free product keys; nested fold-local smoothed target rates and log counts. No 130.5 or 0.0066 hypotheses.",
+  "governance": "Target encoding uses training labels only and is cross-fitted within each outer training fold. Rule status remains unresolved. No test rows, external data, submissions, or champion changes.",
+  "inner_target_encoding_folds": 5,
+  "outer_folds": 5,
+  "outer_seed": 20261113,
+  "paired_delta_ci95_high": 0.0020139199916373585,
+  "paired_delta_ci95_low": -6.504580941470437e-05,
+  "pooled_auc_delta": 0.0009603037524547053,
+  "pooled_baseline_auc": 0.7643304493050679,
+  "pooled_target_encoded_auc": 0.7652907530575226,
+  "positive_fold_count": 3,
+  "positives": 13821,
+  "rows": 171202,
+  "run_id": "phase17_nested_te_20261105T140620Z",
+  "runtime_seconds": 300.22048330004327,
+  "status": "nested constant-free-key target encoding, exploratory OOF",
+  "target_encoded_keys": [
+    "PRODUCT_KEY_Q3",
+    "PRODUCT_KEY_Q4",
+    "PRODUCT_KEY_Q5",
+    "PRODUCT_KEY_AG3"
+  ],
+  "target_encoding_alpha": 30.0,
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

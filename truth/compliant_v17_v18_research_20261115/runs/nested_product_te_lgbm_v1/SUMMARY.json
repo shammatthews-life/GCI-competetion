@@ -1,0 +1,89 @@
+{
+  "status": "exploratory nested fold-local target-encoding OOF; repeated-label development",
+  "inputs": "official train.csv and row-alignment metadata from prior OOF; test.csv not read",
+  "outer_folds": 5,
+  "inner_target_encoding_folds": 5,
+  "seed": 20261113,
+  "target_encoding_keys": [
+    "CF_KEY_ANNUITY_CREDIT_3",
+    "CF_KEY_ANNUITY_CREDIT_4",
+    "CF_KEY_ANNUITY_CREDIT_5",
+    "CF_KEY_ANNUITY_GOODS_3"
+  ],
+  "target_encoding_smoothing": 30.0,
+  "target_encoding": "Training rows receive inner-OOF statistics; each map uses only disjoint rows from the same outer training partition. Outer validation statistics use outer training rows only.",
+  "model": {
+    "library": "LightGBM",
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "min_child_samples": 80,
+    "max_bin": 127,
+    "early_stopping_rounds": 120,
+    "early_stopping_split": "10% stratified split of each outer training partition"
+  },
+  "versions": {
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "selected_rounds": 306,
+      "features": 323,
+      "auc": 0.7695703158996896
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "selected_rounds": 289,
+      "features": 325,
+      "auc": 0.7728846824251641
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "selected_rounds": 446,
+      "features": 331,
+      "auc": 0.759279116296357
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "selected_rounds": 159,
+      "features": 328,
+      "auc": 0.760781466926125
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "selected_rounds": 372,
+      "features": 326,
+      "auc": 0.7617248728684746
+    }
+  ],
+  "pooled_auc": 0.7646966333900632,
+  "mean_fold_auc": 0.7648480908831621,
+  "rule_controls": {
+    "external_data": "none",
+    "label_transfer": "none; only supervised category statistics from the official TARGET column, fold-local and cross-fitted",
+    "train_test_pooling": "none",
+    "test_rows": "not read",
+    "manual_prediction_changes": "none",
+    "outer_validation_labels": "not used for target maps, preprocessing, or stopping-round selection"
+  },
+  "runtime_seconds": 106.33494889999565,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_nested_product_te_lgbm_v1.py": "b3157e0d69908e8c74da3c993e3ab0fb883079525b0bca8846b2c23f0f9794c4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\nested_product_te_lgbm_v1\\OOF_PREDICTIONS.csv": "18f41d94d87f13b6fd51b3111bf209343edbaa18b42076b11646cc5c4dff62e5",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\nested_product_te_lgbm_v1\\FOLD_METRICS.csv": "f77164fa956795b3916b4912361eb4b072ba55e8022c8e0ac4018229d46a691f"
+  }
+}

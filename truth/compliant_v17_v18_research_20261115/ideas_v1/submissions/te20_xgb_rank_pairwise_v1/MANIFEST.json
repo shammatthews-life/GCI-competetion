@@ -1,0 +1,95 @@
+{
+  "status": "generated; local exploratory validation only; not organizer-certified",
+  "submission": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\te20_xgb_rank_pairwise_v1\\submission_compliant_te20_xgb_rank_pairwise_v1.csv",
+  "data_scope": "official train.csv and test.csv; sample_submission.csv read only for schema and ID/order validation",
+  "rows": 61500,
+  "prediction_min": 1.626042699881299e-06,
+  "prediction_max": 0.9999951218719004,
+  "blend": {
+    "prior_model_views": "50% within-test rank of Phase 33/34 probability average + 50% within-test rank of clean CatBoost",
+    "nested_product_target_encoding_lightgbm_weight": 0.2,
+    "pairwise_rank_weight": 0.1,
+    "pairwise_ranker": {
+      "objective": "XGBoost rank:pairwise",
+      "pair_construction": "mean; 8 sampled pairs per sample in one global applicant group per training fold",
+      "iterations": 1000,
+      "feature_matrix": "Phase 33 key-frequency matrix fit on each training fold"
+    },
+    "final_rule": "90% rank of the fixed TE20 candidate + 10% rank of the pairwise ranker; the pairwise test rank is averaged across fold models",
+    "weights": "fixed and documented; no row-specific routing or prediction edits"
+  },
+  "validation": {
+    "type": "five-fold stratified OOF using seed 20261113; folds shared across components",
+    "te20_baseline_mean_fold_auc": 0.7677431575939353,
+    "candidate_mean_fold_auc": 0.767979354189387,
+    "mean_fold_auc_gain": 0.0002361965954517098,
+    "positive_fold_deltas": 5,
+    "fold_metrics": [
+      {
+        "fold": 1,
+        "te20_baseline_auc": 0.7723758410512406,
+        "candidate_auc": 0.7725228599367365,
+        "delta": 0.0001470188854959531
+      },
+      {
+        "fold": 2,
+        "te20_baseline_auc": 0.7746825618968108,
+        "candidate_auc": 0.7748881607204042,
+        "delta": 0.0002055988235933892
+      },
+      {
+        "fold": 3,
+        "te20_baseline_auc": 0.7624604791577126,
+        "candidate_auc": 0.7624950942339273,
+        "delta": 3.46150762146058e-05
+      },
+      {
+        "fold": 4,
+        "te20_baseline_auc": 0.7650037303592344,
+        "candidate_auc": 0.7654926287991181,
+        "delta": 0.0004888984398836449
+      },
+      {
+        "fold": 5,
+        "te20_baseline_auc": 0.7641931755046778,
+        "candidate_auc": 0.7644980272567489,
+        "delta": 0.00030485175207106696
+      }
+    ],
+    "weight_selection_caveat": "The TE20 baseline weight was selected on repeatedly examined labels. The 10% pairwise addition was pre-specified from prior pairwise screens, but this comparison is still exploratory and subject to model-selection optimism. The leaderboard score is unknown until submitted by the user."
+  },
+  "rule_controls": {
+    "external_data": "none",
+    "label_transfer": "none; only smoothed category target statistics from the official TARGET column, cross-fitted within training partitions",
+    "manual_test_predictions": "none",
+    "train_test_statistical_pooling": "none; row-wise features are built separately, CatBoost train/test frames remain separate, and encoders/counts/target maps fit only on training partitions",
+    "test_set_perturbation": "passed; changing/reordering test covariates did not change sampled training or validation matrices",
+    "validation_label_perturbation": "passed; changing only outer-validation labels did not change the fold-local target encodings",
+    "test_set_use": "model inference only; sample file used only to validate output schema and order",
+    "reproducibility": "fixed seeds; source/data hashes and package versions recorded"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10"
+  },
+  "runtime_seconds": 744.5917759000004,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\create_compliant_submission_te20_xgb_rank_pairwise_v1.py": "92f61cc596057b79a310e9840cd3a16b2288e304810b25f376f2e225802c7b05",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\run_clean_v17v18_catboost_probe.py": "05278a67922c7008892a3c9d5bd2c8ad7ca08a75e022fd14244600b8bbf78c0e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_nested_product_te_lgbm_v1.py": "b3157e0d69908e8c74da3c993e3ab0fb883079525b0bca8846b2c23f0f9794c4",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\run_phase34_xgboost_rules_first.py": "9843ae2548dbeb87e1a4f4d346b9943fefbd91038610ff8afcc40f8c60459fb9",
+    "D:\\gci\\truth\\experiments\\phase13_matched_baseline\\phase13_features.py": "a54563ccfaa7bbcb758f28d0bfc9036bba784273740038b403e734504c0deb2a",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\te20_xgb_rank_pairwise_v1\\submission_compliant_te20_xgb_rank_pairwise_v1.csv": "7cf21df3ba752d09ad487593fca8905c834f0e1d7334c97b6c953952d37a3023",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\te20_xgb_rank_pairwise_v1\\OOF_CANDIDATE_PREDICTIONS.csv": "550e53a4bf226525c533c8a988f455cecbaeee47bf4b6ef4808a0128bf8fa94e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\te20_xgb_rank_pairwise_v1\\FOLD_METRICS.csv": "723bff90863132d2f92aa81e838083b1c0dd0621c52ff954e525fc3665eb42d3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\te20_xgb_rank_pairwise_v1\\TEST_COMPONENT_PREDICTIONS.csv": "e0a1d3b58c1fdbd8f192a79fff74f228a4c8f0545ab205e1a78cabaa6a348bca"
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "status": "exploratory fold-isolated multi-view OOF; repeated-label development",
+  "inputs": "official train.csv and row-alignment metadata from prior OOF; test.csv not read",
+  "view_features": {
+    "external": [
+      "EXT_SOURCE_1",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "EXT_MISSING_COUNT",
+      "EXT_MEAN",
+      "EXT_MIN",
+      "EXT_MAX",
+      "EXT_RANGE",
+      "EXT_STD",
+      "EXT_PRODUCT",
+      "EXT_WEIGHTED_MEAN",
+      "EXT_12_PRODUCT",
+      "EXT_13_PRODUCT",
+      "EXT_23_PRODUCT",
+      "EXT_12_DIFF",
+      "EXT_13_DIFF",
+      "EXT_23_DIFF"
+    ],
+    "loan": [
+      "NAME_CONTRACT_TYPE",
+      "CNT_CHILDREN",
+      "AMT_INCOME_TOTAL",
+      "AMT_CREDIT",
+      "AMT_ANNUITY",
+      "AMT_GOODS_PRICE",
+      "CNT_FAM_MEMBERS",
+      "AMT_REQ_CREDIT_BUREAU_HOUR",
+      "AMT_REQ_CREDIT_BUREAU_MON",
+      "AMT_REQ_CREDIT_BUREAU_QRT",
+      "AMT_REQ_CREDIT_BUREAU_YEAR",
+      "CREDIT_TO_INCOME",
+      "ANNUITY_TO_INCOME",
+      "ANNUITY_TO_CREDIT",
+      "CREDIT_TO_ANNUITY",
+      "GOODS_TO_CREDIT",
+      "CREDIT_MINUS_GOODS",
+      "GOODS_TO_INCOME",
+      "INCOME_PER_FAMILY_MEMBER",
+      "CREDIT_PER_FAMILY_MEMBER",
+      "ANNUITY_PER_FAMILY_MEMBER",
+      "CREDIT_PER_AGE",
+      "AMT_REQ_CREDIT_BUREAU_HOUR_MISSING",
+      "AMT_REQ_CREDIT_BUREAU_MON_MISSING",
+      "AMT_REQ_CREDIT_BUREAU_QRT_MISSING",
+      "AMT_REQ_CREDIT_BUREAU_YEAR_MISSING",
+      "CF_KEY_ANNUITY_CREDIT_3",
+      "CF_KEY_ANNUITY_CREDIT_4",
+      "CF_KEY_ANNUITY_CREDIT_5",
+      "CF_KEY_ANNUITY_GOODS_3",
+      "CF_KEY_GOODS_CREDIT_3"
+    ],
+    "person": [
+      "CODE_GENDER",
+      "NAME_INCOME_TYPE",
+      "NAME_EDUCATION_TYPE",
+      "NAME_FAMILY_STATUS",
+      "NAME_HOUSING_TYPE",
+      "REGION_POPULATION_RELATIVE",
+      "DAYS_BIRTH",
+      "DAYS_EMPLOYED",
+      "DAYS_REGISTRATION",
+      "DAYS_ID_PUBLISH",
+      "OWN_CAR_AGE",
+      "FLAG_MOBIL",
+      "FLAG_EMP_PHONE",
+      "FLAG_WORK_PHONE",
+      "OCCUPATION_TYPE",
+      "REGION_RATING_CLIENT",
+      "ORGANIZATION_TYPE",
+      "DAYS_LAST_PHONE_CHANGE",
+      "DAYS_EMPLOYED_CLEAN",
+      "DAYS_EMPLOYED_SENTINEL",
+      "AGE_YEARS",
+      "EMPLOYMENT_YEARS",
+      "EMPLOYMENT_AGE_RATIO",
+      "REGISTRATION_AGE_RATIO",
+      "ID_PUBLISH_AGE_RATIO",
+      "PHONE_CHANGE_AGE_RATIO",
+      "INCOME_PER_AGE",
+      "MISSING_VALUE_COUNT",
+      "BUREAU_REQUEST_SUM"
+    ]
+  },
+  "outer_folds": 5,
+  "seed": 20261113,
+  "model": {
+    "family": "CatBoost GPU",
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.05
+  },
+  "versions": {
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "fold_metrics": [
+    {
+      "view": "external",
+      "fold": 1,
+      "rows": 34241,
+      "positives": 2764,
+      "auc": 0.7165344109706915,
+      "features": 17,
+      "categorical_features": 0
+    },
+    {
+      "view": "loan",
+      "fold": 1,
+      "rows": 34241,
+      "positives": 2764,
+      "auc": 0.6987150059766148,
+      "features": 31,
+      "categorical_features": 6
+    },
+    {
+      "view": "person",
+      "fold": 1,
+      "rows": 34241,
+      "positives": 2764,
+      "auc": 0.6763467566675266,
+      "features": 29,
+      "categorical_features": 7
+    },
+    {
+      "view": "external",
+      "fold": 2,
+      "rows": 34241,
+      "positives": 2765,
+      "auc": 0.7204123949197954,
+      "features": 17,
+      "categorical_features": 0
+    },
+    {
+      "view": "loan",
+      "fold": 2,
+      "rows": 34241,
+      "positives": 2765,
+      "auc": 0.7015492443279499,
+      "features": 31,
+      "categorical_features": 6
+    },
+    {
+      "view": "person",
+      "fold": 2,
+      "rows": 34241,
+      "positives": 2765,
+      "auc": 0.6719253591300769,
+      "features": 29,
+      "categorical_features": 7
+    },
+    {
+      "view": "external",
+      "fold": 3,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.709145422676575,
+      "features": 17,
+      "categorical_features": 0
+    },
+    {
+      "view": "loan",
+      "fold": 3,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.6805146684244665,
+      "features": 31,
+      "categorical_features": 6
+    },
+    {
+      "view": "person",
+      "fold": 3,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.674864123613167,
+      "features": 29,
+      "categorical_features": 7
+    },
+    {
+      "view": "external",
+      "fold": 4,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.7044219274226162,
+      "features": 17,
+      "categorical_features": 0
+    },
+    {
+      "view": "loan",
+      "fold": 4,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.6925506401955759,
+      "features": 31,
+      "categorical_features": 6
+    },
+    {
+      "view": "person",
+      "fold": 4,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.6681912587616431,
+      "features": 29,
+      "categorical_features": 7
+    },
+    {
+      "view": "external",
+      "fold": 5,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.7111358441568234,
+      "features": 17,
+      "categorical_features": 0
+    },
+    {
+      "view": "loan",
+      "fold": 5,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.6885697684993358,
+      "features": 31,
+      "categorical_features": 6
+    },
+    {
+      "view": "person",
+      "fold": 5,
+      "rows": 34240,
+      "positives": 2764,
+      "auc": 0.6693997806704173,
+      "features": 29,
+      "categorical_features": 7
+    }
+  ],
+  "mean_fold_auc": {
+    "external": 0.7123300000293001,
+    "loan": 0.6923798654847886,
+    "person": 0.6721454557685662
+  },
+  "rule_controls": {
+    "external_data": "none",
+    "test_rows": "not read",
+    "label_transfer": "none",
+    "train_test_pooling": "none",
+    "row_routing": "none; views are global models with fixed feature sets",
+    "manual_prediction_changes": "none"
+  },
+  "runtime_seconds": 177.96124040000723,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\clean_catboost_constant_free_v1\\OOF_PREDICTIONS.csv": "ba58b1f6832b2b62eb466a8437ac668c46df6baa1511934eb82ad145ae6ed0c3",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\run_compliant_multiview_catboost_v1.py": "d90a0c1b8fc5eff96284d9a4edc2d386712be230328e0b8fa55eddc9e8398722",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\compliant_multiview_catboost_v1\\OOF_PREDICTIONS.csv": "7ff13bbdcf8e76a9740522ff992df079b138708c7dfc67d3bfa9209e8d184a0f",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\compliant_multiview_catboost_v1\\FOLD_METRICS.csv": "8a66546dd8df3ca43efafc27d7ee514c431781abc37ee7dc77c18900e5ef8c0d"
+  }
+}

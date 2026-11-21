@@ -1,0 +1,71 @@
+{
+  "started_at_utc": "2026-11-04T16:18:48.112785+00:00",
+  "completed_at_utc": "2026-11-04T16:18:58.541292+00:00",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "prediction_sha256": "022f19eda21057e95289013235b9378d6589900134b75af3d9579b9f5131e659",
+  "rows": 2500,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "seed": 2026,
+  "iterations": 10,
+  "smoke_run_only": true,
+  "catboost_gpu": {
+    "device": 0,
+    "candidate_configs": [
+      [
+        "depth5_lr005",
+        5,
+        0.05
+      ],
+      [
+        "depth6_lr003",
+        6,
+        0.03
+      ],
+      [
+        "depth6_lr005",
+        6,
+        0.05
+      ]
+    ],
+    "selected_per_outer_fold_using_inner_oof_only": true,
+    "categorical_target_statistics_eligibility": "unresolved"
+  },
+  "lightgbm": {
+    "device_type": "cpu",
+    "categoricals": "fold-fitted OneHotEncoder; no target-rate encoding",
+    "min_frequency": 2,
+    "inner_only_preprocessing": true
+  },
+  "nested_stacker": "LogisticRegression(C=1) fit on inner OOF logits only",
+  "test_data_opened": false,
+  "locked_holdout_used": false,
+  "submission_created": false,
+  "legacy_exp85_imported": false,
+  "versions": {
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "source_sha256": {
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_nested_ensemble.py": "fab6d30507d73ac9bdffa369a0449da877f121485977788b6c720752b29ef971",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_independent_runner.py": "a78bea2854f7afeb3e2739493d86e56c242d463631f89d36806b8e102fff6226",
+    "D:\\gci\\truth\\experiments\\phase10_catboost_product_robustness\\phase10_independent_feature_builder.py": "90ecbc99ffb1a106ae90f329a1ccce208f5ef75ec066d58a19e516b253238c44"
+  },
+  "results": {
+    "catboost_nested_tuned_pooled_oof_auc": 0.6564920852398556,
+    "catboost_nested_tuned_correlation_vs_catboost": 1.0,
+    "lightgbm_onehot_pooled_oof_auc": 0.6860237916742067,
+    "lightgbm_onehot_correlation_vs_catboost": 0.6015620144034001,
+    "fixed_blend_05_pooled_oof_auc": 0.6584029160096165,
+    "fixed_blend_05_correlation_vs_catboost": 0.999845812839034,
+    "fixed_blend_10_pooled_oof_auc": 0.6605205559720462,
+    "fixed_blend_10_correlation_vs_catboost": 0.999367257945668,
+    "fixed_blend_20_pooled_oof_auc": 0.6648689346741463,
+    "fixed_blend_20_correlation_vs_catboost": 0.9971232612301985,
+    "nested_logistic_stack_pooled_oof_auc": 0.6880714181078682,
+    "nested_logistic_stack_correlation_vs_catboost": 0.8846689334757374
+  }
+}

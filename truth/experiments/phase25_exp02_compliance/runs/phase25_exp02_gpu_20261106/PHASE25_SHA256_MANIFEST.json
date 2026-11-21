@@ -1,0 +1,38 @@
+{
+  "train_csv": {
+    "path": "D:\\gci\\inpuy\\train.csv",
+    "sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+  },
+  "code_sha256": {
+    "phase25_runner": "25ff9fbd3ca77adadcfda3b2b34a006af9da2cda077a4ef96712ce34c4b2867a",
+    "phase21_model_helpers": "f48d295ae5a456834027c26bb0afcb54868282cb9832f011f70e93d5cfa9add3",
+    "phase13_features": "a54563ccfaa7bbcb758f28d0bfc9036bba784273740038b403e734504c0deb2a",
+    "phase14_features": "a1c02d0951ff495515bec7099ee058739a20529174e7efcd588c81bc6cd11d28",
+    "phase15_features": "9ee21c44d89d086e38cbab3f4691d21f55c301282bf1695bb40936f34954217f"
+  },
+  "protocol": {
+    "metric": "ROC-AUC",
+    "outer_seed": 20261113,
+    "outer_folds": 5,
+    "inner_target_encoding_folds": 5,
+    "catboost": {
+      "task_type": "GPU",
+      "iterations": 700,
+      "depth": 6,
+      "learning_rate": 0.05
+    },
+    "candidates": [
+      "baseline",
+      "formula_peer",
+      "ratio_target_encoding",
+      "combined"
+    ]
+  },
+  "gpu_free_before_run_mib": 5648.0,
+  "artifacts": {
+    "PHASE25_AUC_RESULTS.csv": "64ab074955c36b176005f4eddb238513fce61f96b39ab2fc4843e84f28177bd8",
+    "PHASE25_EXECUTION_REPORT.md": "2807e1712931713ed0402d83d588529f0e88ce12299936a795dffd752defccd0",
+    "PHASE25_FOLD_AUCS.csv": "66b814aaa9acfceee9eaf932f47744ab7ed0d6a9989dc8e052371034071e2897",
+    "PHASE25_OOF_PREDICTIONS.csv": "861b9bd6dad17bbdb80219e510b4f9a5887e1d3ed8782919c1c014651419a8ce"
+  }
+}

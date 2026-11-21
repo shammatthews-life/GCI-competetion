@@ -1,0 +1,774 @@
+{
+  "timestamp_utc": "2026-11-07T17:11:16Z",
+  "total_elapsed_seconds": 115.19,
+  "categorical_iv_metrics": {
+    "OCCUPATION_TYPE": {
+      "unique_categories": 19,
+      "information_value": 0.0836,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "Low-skill Laborers (16.2%)",
+      "distribution": {
+        "Accountants": {
+          "count": 5506,
+          "default_rate": 4.61,
+          "woe": 0.5965,
+          "iv": 0.0089
+        },
+        "Cleaning staff": {
+          "count": 2567,
+          "default_rate": 9.47,
+          "woe": -0.1745,
+          "iv": 0.0005
+        },
+        "Cooking staff": {
+          "count": 3353,
+          "default_rate": 10.38,
+          "woe": -0.2767,
+          "iv": 0.0017
+        },
+        "Core staff": {
+          "count": 15271,
+          "default_rate": 6.36,
+          "woe": 0.2572,
+          "iv": 0.0053
+        },
+        "Drivers": {
+          "count": 10353,
+          "default_rate": 11.74,
+          "woe": -0.4148,
+          "iv": 0.0124
+        },
+        "HR staff": {
+          "count": 309,
+          "default_rate": 7.12,
+          "woe": 0.136,
+          "iv": 0.0
+        },
+        "High skill tech staff": {
+          "count": 6385,
+          "default_rate": 6.01,
+          "woe": 0.3166,
+          "iv": 0.0033
+        },
+        "IT staff": {
+          "count": 306,
+          "default_rate": 7.19,
+          "woe": 0.1255,
+          "iv": 0.0
+        },
+        "Laborers": {
+          "count": 30723,
+          "default_rate": 10.4,
+          "woe": -0.2789,
+          "iv": 0.0157
+        },
+        "Low-skill Laborers": {
+          "count": 1158,
+          "default_rate": 16.23,
+          "woe": -0.7916,
+          "iv": 0.0059
+        },
+        "Managers": {
+          "count": 11855,
+          "default_rate": 6.12,
+          "woe": 0.2973,
+          "iv": 0.0054
+        },
+        "Medicine staff": {
+          "count": 4744,
+          "default_rate": 6.64,
+          "woe": 0.2109,
+          "iv": 0.0011
+        },
+        "Other": {
+          "count": 53745,
+          "default_rate": 6.55,
+          "woe": 0.225,
+          "iv": 0.0145
+        },
+        "Private service staff": {
+          "count": 1457,
+          "default_rate": 6.86,
+          "woe": 0.1754,
+          "iv": 0.0002
+        },
+        "Realty agents": {
+          "count": 416,
+          "default_rate": 7.45,
+          "woe": 0.0868,
+          "iv": 0.0
+        },
+        "Sales staff": {
+          "count": 17793,
+          "default_rate": 9.64,
+          "woe": -0.1944,
+          "iv": 0.0043
+        },
+        "Secretaries": {
+          "count": 762,
+          "default_rate": 8.27,
+          "woe": -0.026,
+          "iv": 0.0
+        },
+        "Security staff": {
+          "count": 3752,
+          "default_rate": 10.95,
+          "woe": -0.337,
+          "iv": 0.0029
+        },
+        "Waiters/barmen staff": {
+          "count": 747,
+          "default_rate": 12.85,
+          "woe": -0.5183,
+          "iv": 0.0015
+        }
+      }
+    },
+    "ORGANIZATION_TYPE": {
+      "unique_categories": 58,
+      "information_value": 0.0724,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "Transport: type 3 (16.2%)",
+      "distribution": {
+        "Advertising": {
+          "count": 243,
+          "default_rate": 7.41,
+          "woe": 0.0932,
+          "iv": 0.0
+        },
+        "Agriculture": {
+          "count": 1338,
+          "default_rate": 10.24,
+          "woe": -0.2616,
+          "iv": 0.0006
+        },
+        "Bank": {
+          "count": 1385,
+          "default_rate": 4.98,
+          "woe": 0.5158,
+          "iv": 0.0017
+        },
+        "Business Entity Type 1": {
+          "count": 3322,
+          "default_rate": 8.49,
+          "woe": -0.0548,
+          "iv": 0.0001
+        },
+        "Business Entity Type 2": {
+          "count": 5923,
+          "default_rate": 8.75,
+          "woe": -0.0874,
+          "iv": 0.0003
+        },
+        "Business Entity Type 3": {
+          "count": 37943,
+          "default_rate": 9.36,
+          "woe": -0.1622,
+          "iv": 0.0062
+        },
+        "Cleaning": {
+          "count": 146,
+          "default_rate": 10.96,
+          "woe": -0.3375,
+          "iv": 0.0001
+        },
+        "Construction": {
+          "count": 3700,
+          "default_rate": 10.86,
+          "woe": -0.3279,
+          "iv": 0.0027
+        },
+        "Culture": {
+          "count": 203,
+          "default_rate": 6.4,
+          "woe": 0.2496,
+          "iv": 0.0001
+        },
+        "Electricity": {
+          "count": 539,
+          "default_rate": 5.94,
+          "woe": 0.3303,
+          "iv": 0.0003
+        },
+        "Emergency": {
+          "count": 303,
+          "default_rate": 7.26,
+          "woe": 0.1148,
+          "iv": 0.0
+        },
+        "Government": {
+          "count": 5721,
+          "default_rate": 7.15,
+          "woe": 0.1315,
+          "iv": 0.0005
+        },
+        "Hotel": {
+          "count": 545,
+          "default_rate": 6.97,
+          "woe": 0.1584,
+          "iv": 0.0001
+        },
+        "Housing": {
+          "count": 1613,
+          "default_rate": 8.43,
+          "woe": -0.0474,
+          "iv": 0.0
+        },
+        "Industry: type 1": {
+          "count": 593,
+          "default_rate": 9.61,
+          "woe": -0.1914,
+          "iv": 0.0001
+        },
+        "Industry: type 10": {
+          "count": 63,
+          "default_rate": 6.35,
+          "woe": 0.2588,
+          "iv": 0.0
+        },
+        "Industry: type 11": {
+          "count": 1505,
+          "default_rate": 8.7,
+          "woe": -0.0822,
+          "iv": 0.0001
+        },
+        "Industry: type 12": {
+          "count": 215,
+          "default_rate": 1.86,
+          "woe": 1.5331,
+          "iv": 0.0016
+        },
+        "Industry: type 13": {
+          "count": 37,
+          "default_rate": 8.11,
+          "woe": -0.0047,
+          "iv": 0.0
+        },
+        "Industry: type 2": {
+          "count": 262,
+          "default_rate": 5.34,
+          "woe": 0.4419,
+          "iv": 0.0002
+        },
+        "Industry: type 3": {
+          "count": 1833,
+          "default_rate": 10.53,
+          "woe": -0.2927,
+          "iv": 0.001
+        },
+        "Industry: type 4": {
+          "count": 442,
+          "default_rate": 7.69,
+          "woe": 0.0524,
+          "iv": 0.0
+        },
+        "Industry: type 5": {
+          "count": 328,
+          "default_rate": 7.62,
+          "woe": 0.0624,
+          "iv": 0.0
+        },
+        "Industry: type 6": {
+          "count": 60,
+          "default_rate": 8.33,
+          "woe": -0.0346,
+          "iv": 0.0
+        },
+        "Industry: type 7": {
+          "count": 777,
+          "default_rate": 6.56,
+          "woe": 0.2232,
+          "iv": 0.0002
+        },
+        "Industry: type 8": {
+          "count": 8,
+          "default_rate": 12.5,
+          "woe": -0.4866,
+          "iv": 0.0
+        },
+        "Industry: type 9": {
+          "count": 1893,
+          "default_rate": 6.13,
+          "woe": 0.2966,
+          "iv": 0.0009
+        },
+        "Insurance": {
+          "count": 316,
+          "default_rate": 6.33,
+          "woe": 0.2621,
+          "iv": 0.0001
+        },
+        "Kindergarten": {
+          "count": 3866,
+          "default_rate": 6.96,
+          "woe": 0.1607,
+          "iv": 0.0005
+        },
+        "Legal Services": {
+          "count": 183,
+          "default_rate": 7.65,
+          "woe": 0.0584,
+          "iv": 0.0
+        },
+        "Medicine": {
+          "count": 6272,
+          "default_rate": 6.6,
+          "woe": 0.2172,
+          "iv": 0.0016
+        },
+        "Military": {
+          "count": 1452,
+          "default_rate": 4.96,
+          "woe": 0.5207,
+          "iv": 0.0019
+        },
+        "Mobile": {
+          "count": 175,
+          "default_rate": 8.57,
+          "woe": -0.0654,
+          "iv": 0.0
+        },
+        "Other": {
+          "count": 9272,
+          "default_rate": 7.75,
+          "woe": 0.0437,
+          "iv": 0.0001
+        },
+        "Police": {
+          "count": 1279,
+          "default_rate": 4.85,
+          "woe": 0.5445,
+          "iv": 0.0018
+        },
+        "Postal": {
+          "count": 1185,
+          "default_rate": 8.27,
+          "woe": -0.0263,
+          "iv": 0.0
+        },
+        "Realtor": {
+          "count": 242,
+          "default_rate": 12.4,
+          "woe": -0.4771,
+          "iv": 0.0004
+        },
+        "Religion": {
+          "count": 53,
+          "default_rate": 7.55,
+          "woe": 0.073,
+          "iv": 0.0
+        },
+        "Restaurant": {
+          "count": 1018,
+          "default_rate": 11.79,
+          "woe": -0.4198,
+          "iv": 0.0012
+        },
+        "School": {
+          "count": 4991,
+          "default_rate": 5.97,
+          "woe": 0.3243,
+          "iv": 0.0027
+        },
+        "Security": {
+          "count": 1816,
+          "default_rate": 10.46,
+          "woe": -0.2856,
+          "iv": 0.001
+        },
+        "Security Ministries": {
+          "count": 1105,
+          "default_rate": 5.7,
+          "woe": 0.3733,
+          "iv": 0.0008
+        },
+        "Self-employed": {
+          "count": 21340,
+          "default_rate": 10.1,
+          "woe": -0.2461,
+          "iv": 0.0084
+        },
+        "Services": {
+          "count": 872,
+          "default_rate": 6.54,
+          "woe": 0.2277,
+          "iv": 0.0002
+        },
+        "Telecom": {
+          "count": 310,
+          "default_rate": 8.06,
+          "woe": 0.0011,
+          "iv": 0.0
+        },
+        "Trade: type 1": {
+          "count": 187,
+          "default_rate": 7.49,
+          "woe": 0.0818,
+          "iv": 0.0
+        },
+        "Trade: type 2": {
+          "count": 1035,
+          "default_rate": 6.96,
+          "woe": 0.1609,
+          "iv": 0.0001
+        },
+        "Trade: type 3": {
+          "count": 1885,
+          "default_rate": 10.08,
+          "woe": -0.2441,
+          "iv": 0.0007
+        },
+        "Trade: type 4": {
+          "count": 37,
+          "default_rate": 2.7,
+          "woe": 1.151,
+          "iv": 0.0002
+        },
+        "Trade: type 5": {
+          "count": 26,
+          "default_rate": 7.69,
+          "woe": 0.0524,
+          "iv": 0.0
+        },
+        "Trade: type 6": {
+          "count": 354,
+          "default_rate": 5.37,
+          "woe": 0.4372,
+          "iv": 0.0003
+        },
+        "Trade: type 7": {
+          "count": 4336,
+          "default_rate": 9.52,
+          "woe": -0.1813,
+          "iv": 0.0009
+        },
+        "Transport: type 1": {
+          "count": 100,
+          "default_rate": 5.0,
+          "woe": 0.512,
+          "iv": 0.0001
+        },
+        "Transport: type 2": {
+          "count": 1212,
+          "default_rate": 7.59,
+          "woe": 0.0668,
+          "iv": 0.0
+        },
+        "Transport: type 3": {
+          "count": 662,
+          "default_rate": 16.16,
+          "woe": -0.7863,
+          "iv": 0.0033
+        },
+        "Transport: type 4": {
+          "count": 3004,
+          "default_rate": 9.49,
+          "woe": -0.177,
+          "iv": 0.0006
+        },
+        "University": {
+          "count": 779,
+          "default_rate": 4.88,
+          "woe": 0.5379,
+          "iv": 0.0011
+        },
+        "XNA": {
+          "count": 30898,
+          "default_rate": 5.42,
+          "woe": 0.426,
+          "iv": 0.0274
+        }
+      }
+    },
+    "NAME_EDUCATION_TYPE": {
+      "unique_categories": 5,
+      "information_value": 0.0508,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "Lower secondary (11.1%)",
+      "distribution": {
+        "Academic degree": {
+          "count": 101,
+          "default_rate": 0.99,
+          "woe": 2.1727,
+          "iv": 0.0012
+        },
+        "Higher education": {
+          "count": 41645,
+          "default_rate": 5.37,
+          "woe": 0.4368,
+          "iv": 0.0387
+        },
+        "Incomplete higher": {
+          "count": 5711,
+          "default_rate": 8.72,
+          "woe": -0.0842,
+          "iv": 0.0002
+        },
+        "Lower secondary": {
+          "count": 2133,
+          "default_rate": 11.06,
+          "woe": -0.3483,
+          "iv": 0.0017
+        },
+        "Secondary / secondary special": {
+          "count": 121612,
+          "default_rate": 8.92,
+          "woe": -0.1093,
+          "iv": 0.0089
+        }
+      }
+    },
+    "NAME_INCOME_TYPE": {
+      "unique_categories": 8,
+      "information_value": 0.0551,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "Working (9.5%)",
+      "distribution": {
+        "Businessman": {
+          "count": 3,
+          "default_rate": 0.0,
+          "woe": 0.6451,
+          "iv": 0.0
+        },
+        "Commercial associate": {
+          "count": 40007,
+          "default_rate": 7.52,
+          "woe": 0.0768,
+          "iv": 0.0013
+        },
+        "Maternity leave": {
+          "count": 3,
+          "default_rate": 33.33,
+          "woe": -1.7393,
+          "iv": 0.0001
+        },
+        "Pensioner": {
+          "count": 30895,
+          "default_rate": 5.42,
+          "woe": 0.4272,
+          "iv": 0.0276
+        },
+        "State servant": {
+          "count": 12007,
+          "default_rate": 5.89,
+          "woe": 0.339,
+          "iv": 0.007
+        },
+        "Student": {
+          "count": 9,
+          "default_rate": 0.0,
+          "woe": 1.7437,
+          "iv": 0.0001
+        },
+        "Unemployed": {
+          "count": 10,
+          "default_rate": 20.0,
+          "woe": -1.0462,
+          "iv": 0.0001
+        },
+        "Working": {
+          "count": 88268,
+          "default_rate": 9.55,
+          "woe": -0.184,
+          "iv": 0.0189
+        }
+      }
+    },
+    "NAME_HOUSING_TYPE": {
+      "unique_categories": 6,
+      "information_value": 0.0176,
+      "predictive_power": "Unpredictive (<0.02)",
+      "highest_risk_subgroup": "Rented apartment (12.9%)",
+      "distribution": {
+        "Co-op apartment": {
+          "count": 620,
+          "default_rate": 8.55,
+          "woe": -0.0624,
+          "iv": 0.0
+        },
+        "House / apartment": {
+          "count": 151916,
+          "default_rate": 7.78,
+          "woe": 0.0396,
+          "iv": 0.0014
+        },
+        "Municipal apartment": {
+          "count": 6225,
+          "default_rate": 8.35,
+          "woe": -0.0372,
+          "iv": 0.0001
+        },
+        "Office apartment": {
+          "count": 1444,
+          "default_rate": 6.51,
+          "woe": 0.2321,
+          "iv": 0.0004
+        },
+        "Rented apartment": {
+          "count": 2734,
+          "default_rate": 12.95,
+          "woe": -0.5269,
+          "iv": 0.0055
+        },
+        "With parents": {
+          "count": 8263,
+          "default_rate": 11.8,
+          "woe": -0.4209,
+          "iv": 0.0102
+        }
+      }
+    },
+    "CODE_GENDER": {
+      "unique_categories": 3,
+      "information_value": 0.0383,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "M (10.1%)",
+      "distribution": {
+        "F": {
+          "count": 112549,
+          "default_rate": 7.0,
+          "woe": 0.1539,
+          "iv": 0.0146
+        },
+        "M": {
+          "count": 58649,
+          "default_rate": 10.13,
+          "woe": -0.2494,
+          "iv": 0.0237
+        },
+        "XNA": {
+          "count": 4,
+          "default_rate": 0.0,
+          "woe": 0.9328,
+          "iv": 0.0
+        }
+      }
+    },
+    "NAME_FAMILY_STATUS": {
+      "unique_categories": 6,
+      "information_value": 0.0222,
+      "predictive_power": "Weak (0.02 - 0.10)",
+      "highest_risk_subgroup": "Civil marriage (9.9%)",
+      "distribution": {
+        "Civil marriage": {
+          "count": 16652,
+          "default_rate": 9.87,
+          "woe": -0.221,
+          "iv": 0.0052
+        },
+        "Married": {
+          "count": 109323,
+          "default_rate": 7.56,
+          "woe": 0.0717,
+          "iv": 0.0032
+        },
+        "Separated": {
+          "count": 10988,
+          "default_rate": 8.27,
+          "woe": -0.0266,
+          "iv": 0.0
+        },
+        "Single / not married": {
+          "count": 25285,
+          "default_rate": 9.86,
+          "woe": -0.2191,
+          "iv": 0.0078
+        },
+        "Unknown": {
+          "count": 2,
+          "default_rate": 0.0,
+          "woe": 0.2396,
+          "iv": 0.0
+        },
+        "Widow": {
+          "count": 8952,
+          "default_rate": 5.75,
+          "woe": 0.3637,
+          "iv": 0.0059
+        }
+      }
+    },
+    "NAME_CONTRACT_TYPE": {
+      "unique_categories": 2,
+      "information_value": 0.0141,
+      "predictive_power": "Unpredictive (<0.02)",
+      "highest_risk_subgroup": "Cash loans (8.3%)",
+      "distribution": {
+        "Cash loans": {
+          "count": 154988,
+          "default_rate": 8.34,
+          "woe": -0.035,
+          "iv": 0.0011
+        },
+        "Revolving loans": {
+          "count": 16214,
+          "default_rate": 5.55,
+          "woe": 0.4016,
+          "iv": 0.0129
+        }
+      }
+    }
+  },
+  "feature_block_ablation": {
+    "Block_01_Raw_Bureaus": {
+      "columns_in_block": 3,
+      "cumulative_columns": 3,
+      "pooled_oof_auc": 0.712461,
+      "marginal_lift_bps": 0.0
+    },
+    "Block_02_Bureau_Manifolds": {
+      "columns_in_block": 6,
+      "cumulative_columns": 9,
+      "pooled_oof_auc": 0.713284,
+      "marginal_lift_bps": 8.2
+    },
+    "Block_03_Loan_Terms_Tariffs": {
+      "columns_in_block": 10,
+      "cumulative_columns": 19,
+      "pooled_oof_auc": 0.748155,
+      "marginal_lift_bps": 348.7
+    },
+    "Block_04_Income_Solvency": {
+      "columns_in_block": 6,
+      "cumulative_columns": 25,
+      "pooled_oof_auc": 0.747666,
+      "marginal_lift_bps": -4.9
+    },
+    "Block_05_Demographics_Lifespan": {
+      "columns_in_block": 7,
+      "cumulative_columns": 32,
+      "pooled_oof_auc": 0.752774,
+      "marginal_lift_bps": 51.1
+    },
+    "Block_06_Administrative_Tenure": {
+      "columns_in_block": 5,
+      "cumulative_columns": 37,
+      "pooled_oof_auc": 0.753311,
+      "marginal_lift_bps": 5.4
+    },
+    "Block_07_Relational_Entity_Graph": {
+      "columns_in_block": 3,
+      "cumulative_columns": 40,
+      "pooled_oof_auc": 0.753898,
+      "marginal_lift_bps": 5.9
+    },
+    "Block_08_Credit_Inquiries": {
+      "columns_in_block": 5,
+      "cumulative_columns": 45,
+      "pooled_oof_auc": 0.754696,
+      "marginal_lift_bps": 8.0
+    }
+  },
+  "target_encoding_boost": {
+    "final_auc_with_te": 0.761778,
+    "net_te_lift_bps": 70.8,
+    "keys_encoded": [
+      "OCCUPATION_TYPE",
+      "ORGANIZATION_TYPE",
+      "NAME_EDUCATION_TYPE",
+      "NAME_INCOME_TYPE",
+      "Q3",
+      "CT1"
+    ]
+  }
+}

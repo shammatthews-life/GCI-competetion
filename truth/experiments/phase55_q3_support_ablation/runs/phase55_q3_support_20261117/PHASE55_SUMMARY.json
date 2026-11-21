@@ -1,0 +1,182 @@
+{
+  "experiment": "Phase 55 q3 support-count ablation",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "fold_records": [
+    {
+      "fold": 1,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7630263491037286,
+      "q3_only_auc": 0.765563887481393,
+      "q3_support_auc": 0.7661172398545014,
+      "q3_only_delta": 0.002537538377664461,
+      "q3_support_delta": 0.0030908907507728456,
+      "q3_train_category_count": 96,
+      "q3_fit_support_median": 3050.000000000001,
+      "q3_fit_rows_with_singleton_support": 2
+    },
+    {
+      "fold": 2,
+      "fit_rows": 136961,
+      "validation_rows": 34241,
+      "baseline_auc": 0.7647071956083765,
+      "q3_only_auc": 0.7693502693403764,
+      "q3_support_auc": 0.7685201296915104,
+      "q3_only_delta": 0.004643073731999903,
+      "q3_support_delta": 0.0038129340831338787,
+      "q3_train_category_count": 94,
+      "q3_fit_support_median": 3084.000000000001,
+      "q3_fit_rows_with_singleton_support": 1
+    },
+    {
+      "fold": 3,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7563791280849084,
+      "q3_only_auc": 0.7583062044929277,
+      "q3_support_auc": 0.7575846844649883,
+      "q3_only_delta": 0.001927076408019368,
+      "q3_support_delta": 0.0012055563800799085,
+      "q3_train_category_count": 96,
+      "q3_fit_support_median": 3030.0,
+      "q3_fit_rows_with_singleton_support": 2
+    },
+    {
+      "fold": 4,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.7560451727721615,
+      "q3_only_auc": 0.758863310092784,
+      "q3_support_auc": 0.7593117371119962,
+      "q3_only_delta": 0.002818137320622416,
+      "q3_support_delta": 0.0032665643398346322,
+      "q3_train_category_count": 96,
+      "q3_fit_support_median": 3024.0000000000014,
+      "q3_fit_rows_with_singleton_support": 3
+    },
+    {
+      "fold": 5,
+      "fit_rows": 136962,
+      "validation_rows": 34240,
+      "baseline_auc": 0.755550216837619,
+      "q3_only_auc": 0.7588804251014118,
+      "q3_support_auc": 0.7601158666543816,
+      "q3_only_delta": 0.003330208263792822,
+      "q3_support_delta": 0.0045656498167625514,
+      "q3_train_category_count": 96,
+      "q3_fit_support_median": 3040.9999999999995,
+      "q3_fit_rows_with_singleton_support": 2
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "pooled_auc": 0.7591055148795735,
+      "fold_auc": [
+        0.7630263491037286,
+        0.7647071956083765,
+        0.7563791280849084,
+        0.7560451727721615,
+        0.755550216837619
+      ],
+      "mean_fold_auc": 0.7591416124813588,
+      "std_fold_auc": 0.003903441449596087,
+      "log_loss": 0.2457855423340148
+    },
+    "q3_only": {
+      "pooled_auc": 0.7621438561922151,
+      "fold_auc": [
+        0.765563887481393,
+        0.7693502693403764,
+        0.7583062044929277,
+        0.758863310092784,
+        0.7588804251014118
+      ],
+      "mean_fold_auc": 0.7621928193017786,
+      "std_fold_auc": 0.004466689004406177,
+      "log_loss": 0.24502956526116312
+    },
+    "q3_support": {
+      "pooled_auc": 0.76229962706134,
+      "fold_auc": [
+        0.7661172398545014,
+        0.7685201296915104,
+        0.7575846844649883,
+        0.7593117371119962,
+        0.7601158666543816
+      ],
+      "mean_fold_auc": 0.7623299315554755,
+      "std_fold_auc": 0.004223534258175812,
+      "log_loss": 0.2449684228881739
+    }
+  },
+  "deltas": {
+    "q3_only_vs_baseline": {
+      "pooled_auc": 0.0030383413126416903,
+      "log_loss": -0.0007559770728516879,
+      "positive_folds": 5,
+      "paired_bootstrap": {
+        "replicates": 300,
+        "delta_mean": 0.003062239301630401,
+        "ci_2_5": 0.001713780112590299,
+        "ci_97_5": 0.004426083783509891,
+        "fraction_positive": 1.0,
+        "conditional_only": true
+      }
+    },
+    "q3_support_vs_baseline": {
+      "pooled_auc": 0.003194112181766573,
+      "log_loss": -0.0008171194458409248,
+      "positive_folds": 5,
+      "paired_bootstrap": {
+        "replicates": 300,
+        "delta_mean": 0.0032066181468317673,
+        "ci_2_5": 0.002065770995593727,
+        "ci_97_5": 0.004438303937784022,
+        "fraction_positive": 1.0,
+        "conditional_only": true
+      }
+    }
+  },
+  "model": {
+    "library": "LightGBM",
+    "version": "4.7.0",
+    "device": "CPU",
+    "iterations": 900,
+    "learning_rate": 0.04,
+    "num_leaves": 15,
+    "min_child_samples": 150,
+    "thread_count": 4,
+    "early_stopping": false
+  },
+  "feature_scope": {
+    "baseline": "supplied predictors plus deterministic row-local numeric formulas",
+    "q3_only": "baseline plus q=annuity/credit rounded to 3 decimals as a categorical predictor",
+    "q3_support": "q3-only plus log1p number of matching keys in the model-fit fold",
+    "fit_support": "leave-one-out count for fit rows; validation/test support counts use only fit rows",
+    "target_encoding": "none",
+    "external_data": "none",
+    "train_test_pooling": "none",
+    "cross_row_key_matching": "none; counts are used as scalar model inputs and never transfer labels"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "f54df005504e6a7be83705577749ee5b526cb4b7f009b3af6730dd92e60e2d73",
+  "runtime_seconds": 654.5511982999742,
+  "artifacts": {
+    "oof_predictions": "PHASE55_OOF_PREDICTIONS.csv",
+    "submission": "submission.csv"
+  },
+  "caveats": [
+    "All labels have prior project exposure; this is exploratory.",
+    "The same five folds have been used in prior research; the bootstrap is conditional on OOF predictions.",
+    "Q3 support is a training-fold-only, target-free frequency feature; no test rows contribute to its counts.",
+    "Submission is generated from the predeclared q3+support candidate, not selected by public leaderboard feedback.",
+    "The output is not an organizer-certified champion or a guaranteed leaderboard score."
+  ]
+}

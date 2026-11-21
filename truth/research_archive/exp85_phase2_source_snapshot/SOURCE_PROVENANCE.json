@@ -1,0 +1,26 @@
+{
+  "snapshot_type": "byte-for-byte copies of available frozen-release Python source",
+  "notebook": {
+    "filename": "EXP85_PHASE2_COMPLETE_SUBMISSION.ipynb",
+    "status": "NOT_FOUND_IN_AUDITED_WORKSPACE_ROOTS",
+    "reconstruction_attempted": false
+  },
+  "files": [
+    {
+      "original_path": "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\source\\run_independent_baseline.py",
+      "snapshot_path": "project/source/run_independent_baseline.py",
+      "sha256": "c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe"
+    },
+    {
+      "original_path": "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_01_fee_product_features\\run_experiment.py",
+      "snapshot_path": "project/experiments/phase_01_fee_product_features/run_experiment.py",
+      "sha256": "93713b018d3376bb35bbad770d1213eb5e5f9595bb243be635b531e3c99ddf9b"
+    },
+    {
+      "original_path": "D:\\gci\\champion\\EXP85_PHASE2_FROZEN_RELEASE\\SOURCE\\project\\experiments\\phase_02_fold_safe_key_encodings\\run_experiment.py",
+      "snapshot_path": "project/experiments/phase_02_fold_safe_key_encodings/run_experiment.py",
+      "sha256": "cf45675c405588aab8c9d38976254b670144af1deaf423e08309fc64a190a34e"
+    }
+  ],
+  "integrity": "Each snapshot SHA-256 was compared to its original source before use."
+}

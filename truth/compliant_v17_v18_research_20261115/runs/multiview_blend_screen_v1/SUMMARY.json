@@ -1,0 +1,72 @@
+{
+  "status": "exploratory multi-view blend screen on repeatedly examined labels",
+  "primary_metric": "mean-fold ROC-AUC; pooled cross-fold rank AUC is not used",
+  "blend_rule": "fixed equal average of three global view ranks; no row routing or optimized weights",
+  "candidates": [
+    {
+      "candidate": "previous_aligned_blend",
+      "mean_fold_auc": 0.7674919876117505,
+      "delta_vs_previous": 0.0,
+      "positive_folds": 0,
+      "fold_auc": [
+        0.7721275031542798,
+        0.7743237707790568,
+        0.7622172770690241,
+        0.7649573681112148,
+        0.7638340189451767
+      ]
+    },
+    {
+      "candidate": "prior_plus_three_views_10pct_total",
+      "mean_fold_auc": 0.7675697577480676,
+      "delta_vs_previous": 7.777013631704577e-05,
+      "positive_folds": 4,
+      "fold_auc": [
+        0.7723417730364951,
+        0.7743882362106254,
+        0.7623098923692395,
+        0.7649006150184672,
+        0.7639082721055106
+      ]
+    },
+    {
+      "candidate": "prior_plus_three_views_20pct_total",
+      "mean_fold_auc": 0.7673605146689157,
+      "delta_vs_previous": -0.00013147294283477606,
+      "positive_folds": 1,
+      "fold_auc": [
+        0.7722758323480352,
+        0.7741521885155128,
+        0.762103253640152,
+        0.7645307400267662,
+        0.7637405588141122
+      ]
+    },
+    {
+      "candidate": "prior_plus_three_views_30pct_total",
+      "mean_fold_auc": 0.7668474997548511,
+      "delta_vs_previous": -0.0006444878568994117,
+      "positive_folds": 0,
+      "fold_auc": [
+        0.7719071299941193,
+        0.7735849260391165,
+        0.7616023206710315,
+        0.7638725075995696,
+        0.7632706144704191
+      ]
+    }
+  ],
+  "spearman_correlation_to_prior": {
+    "external": 0.7963891436592987,
+    "loan": 0.6451517729107858,
+    "person": 0.6128066343046187
+  },
+  "selection_note": "All choices are exploratory on previously examined labels and require external leaderboard validation.",
+  "sha256": {
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\fold_aligned_catboost_blend_v1\\OOF_PREDICTIONS.csv": "960aeae7a02b56cd326b7c39d32f3b49424b3f7c509500acc043485be8e2023d",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\compliant_multiview_catboost_v1\\OOF_PREDICTIONS.csv": "7ff13bbdcf8e76a9740522ff992df079b138708c7dfc67d3bfa9209e8d184a0f",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\analyze_multiview_v1.py": "b45269b0c45981f5241c97755f0f4e0569de2ef80d725df47a0467e7432c6a30",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\multiview_blend_screen_v1\\FOLD_METRICS.csv": "a0b4ff0a1b821c34eec4af50e0c715351a29bbb319961f34ddd4637f6cdd16f7",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\runs\\multiview_blend_screen_v1\\CANDIDATE_METRICS.csv": "784a973cba54c28ccec24be6b5c44cda12a1f589a43a88450f858572f31cf9a0"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "phase": "Phase 50 multi-seed Phase 49 pricing synthesis",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seeds": [
+    20261113,
+    20261114,
+    20261115
+  ],
+  "outer_folds": 5,
+  "weight_selection": "fixed equal blends; no OOF-label-based weight tuning",
+  "phase49_model": "unchanged Phase 49 runner/configuration; seed varied only",
+  "metrics": {
+    "phase37_reference": {
+      "pooled_auc": 0.7659681876381996,
+      "pooled_log_loss": 0.24406886100769043,
+      "mean_fold_auc": 0.7659818497765217,
+      "std_fold_auc": 0.00445654362460933
+    },
+    "phase49_expert_seed_20261113": {
+      "pooled_auc": 0.7657090755387556,
+      "pooled_log_loss": 0.2440226823091507,
+      "mean_fold_auc": 0.7657449198218547,
+      "std_fold_auc": 0.004019184913449316
+    },
+    "phase49_expert_three_seed_average": {
+      "pooled_auc": 0.7668661128413624,
+      "pooled_log_loss": 0.2437298595905304,
+      "mean_fold_auc": 0.7668941546572916,
+      "std_fold_auc": 0.004297842397795972
+    },
+    "phase49_global_three_seed_average": {
+      "pooled_auc": 0.7667772725945949,
+      "pooled_log_loss": 0.24370747804641724,
+      "mean_fold_auc": 0.766816810319645,
+      "std_fold_auc": 0.004240956975935706
+    },
+    "equal_phase37_phase49_expert": {
+      "pooled_auc": 0.7670699975803787,
+      "pooled_log_loss": 0.24369385838508606,
+      "mean_fold_auc": 0.7670805957233819,
+      "std_fold_auc": 0.004377563571172088
+    },
+    "equal_phase37_phase49_global": {
+      "pooled_auc": 0.7669898670265096,
+      "pooled_log_loss": 0.2436896562576294,
+      "mean_fold_auc": 0.7670093230558848,
+      "std_fold_auc": 0.004357339056443731
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV plus prior OOF artifacts; no test or external data",
+    "base_predictions": "each component is OOF for every row in its own seed split",
+    "blend_weights": "fixed 0.5/0.5",
+    "target_encoding": "none",
+    "test_statistics": "none",
+    "manual_prediction_edits": "none",
+    "empirical_pricing_constants": "Phase 49 constants retained; rule interpretation requires organizer clarification"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\phase37_multiseed_20261107T173127Z\\PHASE37_OOF_PREDICTIONS.csv": "33563509db7afb33d9876d8b6a8e8b862859adef54dacf0a94df821f0da9c44a",
+    "D:\\gci\\truth\\experiments\\phase49_unified_contract_pricing_specialists\\runs\\phase49_pricing_experts_20261108T112704Z\\PHASE49_OOF_PREDICTIONS.csv": "b3f21afd01c86dcf60bc15227f8673ecbd2f64265834dc4120f5af31b74920dc"
+  },
+  "seed_runs": {
+    "20261114": {
+      "summary_path": "experiments\\phase50_multiseed_pricing_synthesis\\runs\\phase50_multiseed_20261108\\seed_20261114\\PHASE49_SUMMARY.json",
+      "metrics": {
+        "lgb_pricing_global": {
+          "pooled_auc": 0.7655047591079138,
+          "pooled_log_loss": 0.2442009299993515,
+          "mean_fold_auc": 0.7655209462518404,
+          "std_fold_auc": 0.0019961365132599887
+        },
+        "lgb_pricing_contract_mix": {
+          "pooled_auc": 0.7659545077426139,
+          "pooled_log_loss": 0.24408401548862457,
+          "mean_fold_auc": 0.7659672383727653,
+          "std_fold_auc": 0.0020297899445796256
+        },
+        "xgb_pricing_global": {
+          "pooled_auc": 0.7653238317309747,
+          "pooled_log_loss": 0.24419178068637848,
+          "mean_fold_auc": 0.7653493153852342,
+          "std_fold_auc": 0.0014766281684843697
+        },
+        "xgb_pricing_contract_mix": {
+          "pooled_auc": 0.7659069423374163,
+          "pooled_log_loss": 0.2440570443868637,
+          "mean_fold_auc": 0.7659316354660318,
+          "std_fold_auc": 0.0014135708222736195
+        },
+        "cross_model_pricing_global_blend": {
+          "pooled_auc": 0.7662985647482117,
+          "pooled_log_loss": 0.2439185529947281,
+          "mean_fold_auc": 0.7663168365999643,
+          "std_fold_auc": 0.0017550758121417107
+        },
+        "cross_model_pricing_expert_blend": {
+          "pooled_auc": 0.7666124612527336,
+          "pooled_log_loss": 0.24385836720466614,
+          "mean_fold_auc": 0.7666333908358277,
+          "std_fold_auc": 0.001704840513005444
+        }
+      }
+    },
+    "20261115": {
+      "summary_path": "experiments\\phase50_multiseed_pricing_synthesis\\runs\\phase50_multiseed_20261108\\seed_20261115\\PHASE49_SUMMARY.json",
+      "metrics": {
+        "lgb_pricing_global": {
+          "pooled_auc": 0.7642094797390755,
+          "pooled_log_loss": 0.24454163014888763,
+          "mean_fold_auc": 0.7642896075030591,
+          "std_fold_auc": 0.005553736066565321
+        },
+        "lgb_pricing_contract_mix": {
+          "pooled_auc": 0.7648518385544054,
+          "pooled_log_loss": 0.24437597393989563,
+          "mean_fold_auc": 0.7649076216557952,
+          "std_fold_auc": 0.005410496324374845
+        },
+        "xgb_pricing_global": {
+          "pooled_auc": 0.7642574460338061,
+          "pooled_log_loss": 0.24444860219955444,
+          "mean_fold_auc": 0.7643015077413274,
+          "std_fold_auc": 0.005193770538490287
+        },
+        "xgb_pricing_contract_mix": {
+          "pooled_auc": 0.7647024626089126,
+          "pooled_log_loss": 0.2443619668483734,
+          "mean_fold_auc": 0.7647673209538264,
+          "std_fold_auc": 0.005107969506986164
+        },
+        "cross_model_pricing_global_blend": {
+          "pooled_auc": 0.7651311925869957,
+          "pooled_log_loss": 0.24420806765556335,
+          "mean_fold_auc": 0.7651913587524888,
+          "std_fold_auc": 0.005391611752274578
+        },
+        "cross_model_pricing_expert_blend": {
+          "pooled_auc": 0.7654471744526676,
+          "pooled_log_loss": 0.24415773153305054,
+          "mean_fold_auc": 0.7655082320513299,
+          "std_fold_auc": 0.005265185806122379
+        }
+      }
+    }
+  },
+  "output_sha256": {
+    "experiments\\phase50_multiseed_pricing_synthesis\\runs\\phase50_multiseed_20261108\\PHASE50_OOF_PREDICTIONS.csv": "214e1080b89b776b115354b73b01189f296643949dfb24416704a74dec93e4ed"
+  },
+  "runtime_seconds": 894.5397196999984
+}

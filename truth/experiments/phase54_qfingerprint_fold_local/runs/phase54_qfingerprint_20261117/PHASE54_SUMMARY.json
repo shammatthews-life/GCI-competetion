@@ -1,0 +1,202 @@
+{
+  "experiment": "Phase 54 fold-local q-fingerprint categories",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "fold_records": [
+    {
+      "fold": 1,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.7630263491037286,
+      "candidate_auc": 0.7587112051631479,
+      "delta_auc": -0.004315143940580635,
+      "iterations": 900,
+      "candidate_category_cardinalities_fit_only": {
+        "NAME_CONTRACT_TYPE": 2,
+        "CODE_GENDER": 3,
+        "NAME_INCOME_TYPE": 8,
+        "NAME_EDUCATION_TYPE": 5,
+        "NAME_FAMILY_STATUS": 6,
+        "NAME_HOUSING_TYPE": 6,
+        "OCCUPATION_TYPE": 19,
+        "ORGANIZATION_TYPE": 58,
+        "ANN_CREDIT_KEY_3": 96,
+        "ANN_CREDIT_KEY_4": 791,
+        "ANN_CREDIT_KEY_5": 4927
+      }
+    },
+    {
+      "fold": 2,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.7647071956083765,
+      "candidate_auc": 0.7596909221228172,
+      "delta_auc": -0.0050162734855593305,
+      "iterations": 900,
+      "candidate_category_cardinalities_fit_only": {
+        "NAME_CONTRACT_TYPE": 2,
+        "CODE_GENDER": 3,
+        "NAME_INCOME_TYPE": 8,
+        "NAME_EDUCATION_TYPE": 5,
+        "NAME_FAMILY_STATUS": 6,
+        "NAME_HOUSING_TYPE": 6,
+        "OCCUPATION_TYPE": 19,
+        "ORGANIZATION_TYPE": 58,
+        "ANN_CREDIT_KEY_3": 94,
+        "ANN_CREDIT_KEY_4": 782,
+        "ANN_CREDIT_KEY_5": 4893
+      }
+    },
+    {
+      "fold": 3,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7563791280849084,
+      "candidate_auc": 0.7456476613518875,
+      "delta_auc": -0.010731466733020834,
+      "iterations": 900,
+      "candidate_category_cardinalities_fit_only": {
+        "NAME_CONTRACT_TYPE": 2,
+        "CODE_GENDER": 3,
+        "NAME_INCOME_TYPE": 8,
+        "NAME_EDUCATION_TYPE": 5,
+        "NAME_FAMILY_STATUS": 6,
+        "NAME_HOUSING_TYPE": 6,
+        "OCCUPATION_TYPE": 19,
+        "ORGANIZATION_TYPE": 58,
+        "ANN_CREDIT_KEY_3": 96,
+        "ANN_CREDIT_KEY_4": 788,
+        "ANN_CREDIT_KEY_5": 4901
+      }
+    },
+    {
+      "fold": 4,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7560451727721615,
+      "candidate_auc": 0.7514640861141717,
+      "delta_auc": -0.004581086657989841,
+      "iterations": 900,
+      "candidate_category_cardinalities_fit_only": {
+        "NAME_CONTRACT_TYPE": 2,
+        "CODE_GENDER": 3,
+        "NAME_INCOME_TYPE": 8,
+        "NAME_EDUCATION_TYPE": 5,
+        "NAME_FAMILY_STATUS": 6,
+        "NAME_HOUSING_TYPE": 6,
+        "OCCUPATION_TYPE": 19,
+        "ORGANIZATION_TYPE": 58,
+        "ANN_CREDIT_KEY_3": 96,
+        "ANN_CREDIT_KEY_4": 789,
+        "ANN_CREDIT_KEY_5": 4923
+      }
+    },
+    {
+      "fold": 5,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.755550216837619,
+      "candidate_auc": 0.7509716819136221,
+      "delta_auc": -0.0045785349239969575,
+      "iterations": 900,
+      "candidate_category_cardinalities_fit_only": {
+        "NAME_CONTRACT_TYPE": 2,
+        "CODE_GENDER": 3,
+        "NAME_INCOME_TYPE": 8,
+        "NAME_EDUCATION_TYPE": 5,
+        "NAME_FAMILY_STATUS": 6,
+        "NAME_HOUSING_TYPE": 6,
+        "OCCUPATION_TYPE": 19,
+        "ORGANIZATION_TYPE": 58,
+        "ANN_CREDIT_KEY_3": 96,
+        "ANN_CREDIT_KEY_4": 788,
+        "ANN_CREDIT_KEY_5": 4918
+      }
+    }
+  ],
+  "baseline_metrics": {
+    "pooled_auc": 0.7591055148795735,
+    "fold_auc": [
+      0.7630263491037286,
+      0.7647071956083765,
+      0.7563791280849084,
+      0.7560451727721615,
+      0.755550216837619
+    ],
+    "mean_fold_auc": 0.7591416124813588,
+    "std_fold_auc": 0.003903441449596087,
+    "log_loss": 0.2457855423340148
+  },
+  "candidate_metrics": {
+    "pooled_auc": 0.7532308635688185,
+    "fold_auc": [
+      0.7587112051631479,
+      0.7596909221228172,
+      0.7456476613518875,
+      0.7514640861141717,
+      0.7509716819136221
+    ],
+    "mean_fold_auc": 0.7532971113331293,
+    "std_fold_auc": 0.005243565902485428,
+    "log_loss": 0.24876984657405765
+  },
+  "delta_candidate_minus_baseline": {
+    "pooled_auc": -0.00587465131075493,
+    "log_loss": 0.00298430424004284,
+    "positive_folds": 0,
+    "paired_oof_bootstrap": {
+      "replicates": 300,
+      "delta_mean": -0.005816853673749457,
+      "delta_ci_2_5": -0.007954601440427927,
+      "delta_ci_97_5": -0.003712841917527746,
+      "fraction_positive": 0.0,
+      "interpretation": "Conditional on the OOF vectors; excludes model-fit uncertainty, prior exposure to these labels, and leaderboard sampling."
+    }
+  },
+  "model": {
+    "library": "LightGBM",
+    "version": "4.7.0",
+    "device": "CPU",
+    "iterations": 900,
+    "learning_rate": 0.04,
+    "num_leaves": 15,
+    "min_child_samples": 150,
+    "thread_count": 4,
+    "early_stopping": false,
+    "prediction_aggregation": "arithmetic mean of the five fold-model probabilities"
+  },
+  "feature_scope": {
+    "baseline": "supplied predictors plus deterministic row-local numeric formulas",
+    "candidate": "baseline plus q=AMT_ANNUITY/AMT_CREDIT rounded to 3, 4, and 5 decimal category keys",
+    "baseline_feature_count": 75,
+    "candidate_feature_count": 78,
+    "target_encoding": "none",
+    "cross_row_statistics": "none",
+    "train_test_pooling": "none",
+    "test_rows_used_for": "fold-model inference only",
+    "external_data": "none",
+    "manual_prediction_edits": "none",
+    "excluded_fee_correction": "no 129.5 or other empirical fee constants",
+    "category_code_fitting": "separate maps fit only on each model's training fold; unseen values map to missing"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "64e74b91f5110bb722d4f6237a29f206b8d8d1e9601b134cdc3561641de8a6e1",
+  "runtime_seconds": 410.3970363000408,
+  "artifacts": {
+    "oof_predictions": "PHASE54_OOF_PREDICTIONS.csv",
+    "submission": "submission.csv"
+  },
+  "caveats": [
+    "The same labeled dataset has extensive prior research exposure; this result is exploratory.",
+    "The paired bootstrap is conditional on saved OOF vectors and excludes model-fit and research-selection uncertainty.",
+    "The reported q-fingerprint source's highest fold is not its pooled OOF AUC; the local audit found pooled notebook OOF claims around 0.77070 for its best member.",
+    "This experiment tests only rounded ratio categories, not the source's target encodings, cross-row counts, train/test pooled statistics, or fee correction.",
+    "The submission is an experiment output, not an authorized champion or a guaranteed leaderboard score."
+  ]
+}

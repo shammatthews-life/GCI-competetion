@@ -1,0 +1,42 @@
+{
+  "bootstrap_repetitions": 300,
+  "bootstrap_seed": 20263114,
+  "comparison": "Phase 14 numeric enhancement + time vs numeric enhancement alone",
+  "fold_deltas": [
+    {
+      "fold": 1,
+      "numeric_auc": 0.7725087511350833,
+      "time_auc": 0.7728747811497858,
+      "time_delta": 0.00036603001470247865
+    },
+    {
+      "fold": 2,
+      "numeric_auc": 0.7748891833428816,
+      "time_auc": 0.7749196724298911,
+      "time_delta": 3.0489087009533122e-05
+    },
+    {
+      "fold": 3,
+      "numeric_auc": 0.7620041038319413,
+      "time_auc": 0.7612883941712695,
+      "time_delta": -0.0007157096606718039
+    },
+    {
+      "fold": 4,
+      "numeric_auc": 0.7637476278069304,
+      "time_auc": 0.7651414780176622,
+      "time_delta": 0.0013938502107317952
+    },
+    {
+      "fold": 5,
+      "numeric_auc": 0.7631170449118055,
+      "time_auc": 0.7634014368147445,
+      "time_delta": 0.0002843919029389408
+    }
+  ],
+  "paired_delta_ci95_high": 0.0008167115464568296,
+  "paired_delta_ci95_low": -0.0002528073587168167,
+  "pooled_auc_delta": 0.0002796374596515383,
+  "positive_folds": 4,
+  "scope": "Conditional on fitted OOF predictions; labels previously exposed."
+}

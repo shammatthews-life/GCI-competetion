@@ -1,0 +1,49 @@
+{
+  "phase": "Phase 34 rules-first XGBoost model-family comparison",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "feature_set": "Phase 33 constant-free ratio keys and fold-fit frequencies",
+  "parameters": {
+    "max_depth": 4,
+    "learning_rate": 0.035,
+    "min_child_weight": 40,
+    "subsample": 0.82,
+    "colsample_bytree": 0.82,
+    "reg_lambda": 5.0,
+    "max_iterations": 3000,
+    "early_stopping_rounds": 120,
+    "device": "CUDA"
+  },
+  "metrics": {
+    "xgboost": {
+      "pooled_auc": 0.7647355382940828,
+      "mean_fold_auc": 0.7647537073983954,
+      "log_loss": 0.24438171088695526
+    },
+    "fixed_equal_blend": {
+      "pooled_auc": 0.7653350102045995,
+      "mean_fold_auc": 0.7653600918203,
+      "log_loss": 0.24426394701004028
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical columns are one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "blend": "predeclared equal 50/50 probability average for OOF diagnosis only"
+  },
+  "runtime_seconds": 76.08900070001255,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\runs\\phase33_rules_first_20261107T170931Z\\PHASE33_OOF_PREDICTIONS.csv": "adc206e9a2743627cfd5675e0f97ada1190e10a202bd2e0657238d3816cbb90a",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\run_phase34_xgboost_rules_first.py": "9843ae2548dbeb87e1a4f4d346b9943fefbd91038610ff8afcc40f8c60459fb9",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_FOLD_RESULTS.csv": "cd609babd27d9eaba94c47ac090dfbeb953946946ae5f402d7129661277d0147",
+    "D:\\gci\\truth\\experiments\\phase34_xgboost_rules_first\\runs\\phase34_xgb_20261107T171823Z\\PHASE34_OOF_PREDICTIONS.csv": "7e6ece0db0c6c28f2c8d8b237413c8c96fa7ad1c1d6b56417d63f7c508367073"
+  }
+}

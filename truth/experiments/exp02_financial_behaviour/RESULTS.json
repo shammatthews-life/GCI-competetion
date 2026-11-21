@@ -1,0 +1,76 @@
+{
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "run_id": "financial_ratios_seed42",
+  "decision": "NEEDS_INDEPENDENT_SEED_REPLICATION",
+  "advancement_screen": {
+    "positive_pooled_auc_delta": true,
+    "minimum_mean_fold_delta": 0.0002,
+    "observed_mean_fold_delta": 0.0072845424514828006,
+    "required_positive_folds": 4,
+    "observed_positive_folds": 5,
+    "passed": true,
+    "independent_seed_replication_complete": false
+  },
+  "train_rows": 171202,
+  "test_rows": 61500,
+  "predictor_columns_including_id": 33,
+  "outer_folds": 5,
+  "outer_seed": 42,
+  "pooled_oof_auc": {
+    "raw_baseline": 0.75126490888348,
+    "financial_features": 0.7584937533142376
+  },
+  "pooled_oof_auc_delta": 0.007228844430757664,
+  "mean_paired_fold_auc_delta": 0.0072845424514828006,
+  "positive_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "raw_auc": 0.7478637837555522,
+      "financial_auc": 0.7575372494202117,
+      "paired_auc_delta": 0.009673465664659542
+    },
+    {
+      "fold": 2,
+      "raw_auc": 0.7509863940653886,
+      "financial_auc": 0.7585329113234643,
+      "paired_auc_delta": 0.007546517258075758
+    },
+    {
+      "fold": 3,
+      "raw_auc": 0.756694238497289,
+      "financial_auc": 0.7618923965039681,
+      "paired_auc_delta": 0.00519815800667911
+    },
+    {
+      "fold": 4,
+      "raw_auc": 0.7476748990662769,
+      "financial_auc": 0.7542361715328004,
+      "paired_auc_delta": 0.006561272466523493
+    },
+    {
+      "fold": 5,
+      "raw_auc": 0.7538253596013887,
+      "financial_auc": 0.7612686584628648,
+      "paired_auc_delta": 0.0074432988614761
+    }
+  ],
+  "official_leaderboard_score": "NOT_EVALUATED",
+  "submission_created": false,
+  "runtime_seconds": 792.7270366000012,
+  "started_utc": "2026-11-03T05:28:57.961787+00:00",
+  "completed_utc": "2026-11-03T05:42:10.689310+00:00",
+  "checks": {
+    "input_hashes_match_course_package": true,
+    "sample_test_id_alignment": true,
+    "train_test_ids_disjoint": true,
+    "fold_assignments_recomputed": true,
+    "inner_splits_inside_outer_training": true,
+    "outer_validation_not_used_for_early_stopping": true,
+    "feature_formulas_use_only_supplied_columns": true,
+    "target_and_id_excluded_from_features": true,
+    "prediction_arrays_finite_in_unit_interval": true,
+    "gpu_required_and_detected": true,
+    "in_training_gpu_telemetry_captured": true
+  }
+}

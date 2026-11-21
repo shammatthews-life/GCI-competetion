@@ -1,0 +1,59 @@
+{
+  "candidate_catboost_weights": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "delta_vs_catboost": 0.001157937924849528,
+  "delta_vs_phase17_te_lightgbm": 0.0033781126620139323,
+  "eligibility": "Research only. Phase 15 contains unresolved product constants and native CTRs; Phase 17 uses label-derived target statistics.",
+  "inner_folds": 3,
+  "nested_blend_auc": 0.7686688657195365,
+  "outer_folds": 5,
+  "outer_seed": 20261113,
+  "paired_interval_vs_catboost": {
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 20261801,
+    "paired_delta_ci95_high": 0.0015897542523761658,
+    "paired_delta_ci95_low": 0.000690214365476377
+  },
+  "paired_interval_vs_phase17": {
+    "bootstrap_repetitions": 1000,
+    "bootstrap_seed": 20261801,
+    "paired_delta_ci95_high": 0.004231288996285021,
+    "paired_delta_ci95_low": 0.0025906542017955477
+  },
+  "phase15_catboost_auc": 0.767510927794687,
+  "phase15_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "phase17_nested_te_lightgbm_auc": 0.7652907530575226,
+  "phase17_oof_sha256": "11a68c0f4535ba7e9674559aa364af0b3db9a20a9c35580f7d9509e9c96f97e8",
+  "rows": 171202,
+  "run_id": "phase18_nested_blend_20261105T142048Z",
+  "runtime_seconds": 723.3526333000045,
+  "selected_weights_by_fold": {
+    "1": {
+      "catboost": 0.5,
+      "te_lightgbm": 0.5
+    },
+    "2": {
+      "catboost": 0.75,
+      "te_lightgbm": 0.25
+    },
+    "3": {
+      "catboost": 0.5,
+      "te_lightgbm": 0.5
+    },
+    "4": {
+      "catboost": 0.75,
+      "te_lightgbm": 0.25
+    },
+    "5": {
+      "catboost": 0.75,
+      "te_lightgbm": 0.25
+    }
+  },
+  "status": "nested fold-local blend selection, exploratory outer OOF",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

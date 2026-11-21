@@ -1,0 +1,19 @@
+{
+  "candidate_id": "v03_nested_target_encoding",
+  "feature_set": "rowwise_v1",
+  "models": ["catboost_gpu", "lightgbm_cpu", "xgboost_gpu"],
+  "target_encoding": true,
+  "smoothing": 30.0,
+  "inner_folds": 5,
+  "seed": 314159,
+  "outer_folds": 5,
+  "train_test_covariate_pooling": false,
+  "partner_label_transfer": false,
+  "manual_test_overrides": false,
+  "outer_early_stopping": false,
+  "approved_input_sha256": {
+    "train.csv": "B8DD5A61771D8EB2821972C1B7D3F2F747CC66471F4D34153036D2D9C458ECF1",
+    "test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
+    "sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
+  }
+}

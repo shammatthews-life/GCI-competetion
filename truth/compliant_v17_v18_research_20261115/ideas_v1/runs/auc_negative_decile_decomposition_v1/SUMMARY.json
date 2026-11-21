@@ -1,0 +1,32 @@
+{
+  "status": "descriptive OOF decomposition; no fitting or weight selection",
+  "decomposition": "AUC delta = sum over baseline-score negative deciles of (negative-decile pair share * conditional AUC delta)",
+  "decile_definition": "Within each validation fold, split negatives into ten near-equal groups by ascending baseline candidate score; positives are compared against every negative in each group.",
+  "folds": 5,
+  "models": {
+    "catboost_pairlogit_10pct": {
+      "mean_fold_auc_delta": -3.68836241404491e-05,
+      "positive_fold_deltas": 3,
+      "sum_mean_decile_contribution": -3.688362414045791e-05
+    },
+    "xgboost_rank_pairwise_10pct": {
+      "mean_fold_auc_delta": 0.00030116262737249765,
+      "positive_fold_deltas": 5,
+      "sum_mean_decile_contribution": 0.00030116262737243786
+    }
+  },
+  "rule_controls": {
+    "training_data": "official train.csv labels and previously generated OOF predictions only",
+    "test_rows": "not read",
+    "model_fitting": "none",
+    "prediction_changes": "none"
+  },
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\catboost_pairlogit_auc_v1\\OOF_PREDICTIONS.csv": "ef72ae01e34ce29cb22b930b1d9ecaf27ed181db18bbc5b59685a1ada27aa400",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\xgboost_rank_pairwise_v1\\OOF_PREDICTIONS.csv": "85c0d4a655ff6a28449ec05e64d71cb27cb20f09eba5934c9ace059dd7509074",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\analyze_auc_negative_deciles_v1.py": "f251c8a05e8328b8885e02516d4759a891d054aa55d13f87075affee85ba1299",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\runs\\auc_negative_decile_decomposition_v1\\DECILE_CONTRIBUTIONS.csv": "288b93968abed80484a028a345f18c764b5f1f3cab576fbcf0e2f4c3c5c9e2a7"
+  }
+}

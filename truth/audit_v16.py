@@ -92,3 +92,4 @@ if "np.isfinite" in content and "sample_sub[\"SK_ID_CURR\"].equals(df_test[\"SK_
     print("[PASS] Finite Predictions & Exact ID Order Assertions Verified.")
 else:
     print("[FAIL] Missing schema assertions!")
+

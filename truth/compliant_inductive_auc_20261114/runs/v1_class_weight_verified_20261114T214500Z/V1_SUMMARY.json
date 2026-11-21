@@ -1,0 +1,182 @@
+{
+  "experiment": "V1 nested positive-class weighting",
+  "status": "exploratory development evidence; not a leaderboard score",
+  "rows": 171202,
+  "positive_rate": 0.08072919708881905,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "inner_selection": {
+    "method": "one stratified 12% split per outer training fold",
+    "selection_metric": "ROC-AUC",
+    "tie_break": "choose the smaller scale_pos_weight",
+    "candidate_weights": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ]
+  },
+  "matrix": {
+    "helper": "Phase 38 fold-fitted one-hot/key-frequency matrices",
+    "key_min_frequency": 50,
+    "feature_builder": "Phase 33 deterministic supplied-column features"
+  },
+  "metrics": {
+    "fixed_weight_1": {
+      "pooled_auc": 0.7648346246704686,
+      "mean_fold_auc": 0.7648733164663033,
+      "fold_auc": [
+        0.7697884937188189,
+        0.7701305417807925,
+        0.7600923378278794,
+        0.7624160881816738,
+        0.7619391208223516
+      ]
+    },
+    "fixed_weight_2": {
+      "pooled_auc": 0.7649236899578626,
+      "mean_fold_auc": 0.7649706450377035,
+      "fold_auc": [
+        0.7696630949196039,
+        0.7714515976695238,
+        0.7605224142015077,
+        0.7619012815957542,
+        0.7613148368021283
+      ]
+    },
+    "fixed_weight_4": {
+      "pooled_auc": 0.7645362775767698,
+      "mean_fold_auc": 0.7645797311577246,
+      "fold_auc": [
+        0.7692449858985545,
+        0.7700866437001744,
+        0.7604034769605548,
+        0.7613884290403696,
+        0.7617751201889698
+      ]
+    },
+    "fixed_weight_8": {
+      "pooled_auc": 0.7641896065139633,
+      "mean_fold_auc": 0.7642313159125408,
+      "fold_auc": [
+        0.7687407068685486,
+        0.7700529718443306,
+        0.7595242264383918,
+        0.7614050038170264,
+        0.7614336705944059
+      ]
+    },
+    "nested_weight_selection": {
+      "pooled_auc": 0.7117754663183025,
+      "mean_fold_auc": 0.7648198540033789,
+      "fold_auc": [
+        0.7697884937188189,
+        0.7714515976695238,
+        0.7595242264383918,
+        0.7619012815957542,
+        0.7614336705944059
+      ],
+      "pooled_auc_note": "Different weights may be selected in different outer folds, so this pooled score is sensitive to between-fold score-scale shifts; mean_fold_auc is the primary nested-selection metric."
+    }
+  },
+  "fold_selection": [
+    {
+      "fold": 1,
+      "selected_scale_pos_weight": 1.0,
+      "selected_inner_auc": 0.7598028553426113,
+      "selected_iterations": 958,
+      "outer_auc": 0.7697884937188189,
+      "inner_auc_by_weight": {
+        "1.0": 0.7598028553426113,
+        "2.0": 0.7594794081869687,
+        "4.0": 0.7589960329966973,
+        "8.0": 0.7585726089985743
+      }
+    },
+    {
+      "fold": 2,
+      "selected_scale_pos_weight": 2.0,
+      "selected_inner_auc": 0.7613279199036114,
+      "selected_iterations": 846,
+      "outer_auc": 0.7714515976695238,
+      "inner_auc_by_weight": {
+        "1.0": 0.7601236091834652,
+        "2.0": 0.7613279199036114,
+        "4.0": 0.7609692352128166,
+        "8.0": 0.7612792906088153
+      }
+    },
+    {
+      "fold": 3,
+      "selected_scale_pos_weight": 8.0,
+      "selected_inner_auc": 0.7511789611416024,
+      "selected_iterations": 803,
+      "outer_auc": 0.7595242264383918,
+      "inner_auc_by_weight": {
+        "1.0": 0.7511782878129052,
+        "2.0": 0.7510184096544761,
+        "4.0": 0.7508915744784084,
+        "8.0": 0.7511789611416024
+      }
+    },
+    {
+      "fold": 4,
+      "selected_scale_pos_weight": 2.0,
+      "selected_inner_auc": 0.7607044424681279,
+      "selected_iterations": 955,
+      "outer_auc": 0.7619012815957542,
+      "inner_auc_by_weight": {
+        "1.0": 0.7600980226929727,
+        "2.0": 0.7607044424681279,
+        "4.0": 0.7596096349446222,
+        "8.0": 0.7595189101372029
+      }
+    },
+    {
+      "fold": 5,
+      "selected_scale_pos_weight": 8.0,
+      "selected_inner_auc": 0.7605014712730795,
+      "selected_iterations": 786,
+      "outer_auc": 0.7614336705944059,
+      "inner_auc_by_weight": {
+        "1.0": 0.7595726018662776,
+        "2.0": 0.7596485383804589,
+        "4.0": 0.7601458539685719,
+        "8.0": 0.7605014712730795
+      }
+    }
+  ],
+  "rule_controls": {
+    "input": "supplied training CSV only",
+    "test_csv_read": false,
+    "external_data_or_prediction_cache": false,
+    "target_encoding_or_peer_label_transfer": false,
+    "train_test_covariate_pooling": false,
+    "outer_validation_used_for_selection_or_stopping": false,
+    "manual_prediction_adjustments": false,
+    "category_vocabularies_and_key_frequencies": "fit on the applicable model training partition",
+    "gpu_required": true
+  },
+  "limitations": [
+    "All historical training labels have prior project exposure; this is not an untouched holdout.",
+    "The fixed-weight OOF candidates are comparisons, not independent confirmations.",
+    "Only the nested-selection estimate evaluates the weight-selection procedure without using outer-fold labels for selection.",
+    "No public or private leaderboard score is inferred."
+  ],
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "runtime_seconds": 324.446351999999,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\run_v1_class_weight.py": "0662b91b289dc946879d729cfa6f8860caf9b1a2a247b57aeb2ebeeafc88f093",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v1_class_weight_verified_20261114T214500Z\\V1_OOF_PREDICTIONS.csv": "b18705d280c627c45a4d256b56ce71029ba042139e599e5bef6af05cf1a434c1",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v1_class_weight_verified_20261114T214500Z\\V1_FOLD_RESULTS.csv": "463994e2e9bec488bb5c66f2365083f6b62878b7f979d338402d2e5cbed40c13",
+    "D:\\gci\\truth\\compliant_inductive_auc_20261114\\runs\\v1_class_weight_verified_20261114T214500Z\\V1_WEIGHT_SELECTION.json": "6f4493d189f70292ab1e7a3e3779f52bc39fa59002095c3dc1e64fc868ecdcd2"
+  }
+}

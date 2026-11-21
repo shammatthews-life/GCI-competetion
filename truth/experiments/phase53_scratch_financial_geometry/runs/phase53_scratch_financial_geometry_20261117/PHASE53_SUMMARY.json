@@ -1,0 +1,149 @@
+{
+  "experiment": "Phase 53 independent scratch financial geometry",
+  "status": "exploratory; no untouched holdout available",
+  "training_rows": 171202,
+  "test_rows": 61500,
+  "target_rate": 0.08072919708881905,
+  "fold_seed": 20261113,
+  "fold_count": 5,
+  "fold_records": [
+    {
+      "fold": 1,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.7552849444615499,
+      "engineered_auc": 0.7626877378640513,
+      "delta_auc": 0.007402793402501384,
+      "iteration_count": 700
+    },
+    {
+      "fold": 2,
+      "train_rows": 136961,
+      "valid_rows": 34241,
+      "baseline_auc": 0.75768878817398,
+      "engineered_auc": 0.7665269235816055,
+      "delta_auc": 0.008838135407625458,
+      "iteration_count": 700
+    },
+    {
+      "fold": 3,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.750763221338418,
+      "engineered_auc": 0.7559078848856244,
+      "delta_auc": 0.005144663547206441,
+      "iteration_count": 700
+    },
+    {
+      "fold": 4,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7490230077210414,
+      "engineered_auc": 0.7555814813261809,
+      "delta_auc": 0.006558473605139503,
+      "iteration_count": 700
+    },
+    {
+      "fold": 5,
+      "train_rows": 136962,
+      "valid_rows": 34240,
+      "baseline_auc": 0.7488817083247585,
+      "engineered_auc": 0.7579225593331028,
+      "delta_auc": 0.009040851008344286,
+      "iteration_count": 700
+    }
+  ],
+  "baseline_metrics": {
+    "pooled_auc": 0.7523057360339622,
+    "fold_auc": [
+      0.7552849444615499,
+      0.75768878817398,
+      0.750763221338418,
+      0.7490230077210414,
+      0.7488817083247585
+    ],
+    "mean_fold_auc": 0.7523283340039496,
+    "std_fold_auc": 0.003542033381314711,
+    "log_loss": 0.24776843049559305
+  },
+  "engineered_metrics": {
+    "pooled_auc": 0.759685265047892,
+    "fold_auc": [
+      0.7626877378640513,
+      0.7665269235816055,
+      0.7559078848856244,
+      0.7555814813261809,
+      0.7579225593331028
+    ],
+    "mean_fold_auc": 0.7597253173981129,
+    "std_fold_auc": 0.004243392197564183,
+    "log_loss": 0.2457088201091025
+  },
+  "delta_engineered_minus_baseline": {
+    "pooled_auc": 0.0073795290139297975,
+    "log_loss": -0.0020596103864905513,
+    "folds_positive": 5,
+    "paired_oof_bootstrap": {
+      "replicates": 300,
+      "delta_mean": 0.00734288389478577,
+      "delta_ci_2_5": 0.00618992847055409,
+      "delta_ci_97_5": 0.008573897395829902,
+      "fraction_positive": 1.0,
+      "interpretation": "Conditional on these OOF vectors; does not include training-fold variability, earlier research selection, or leaderboard sampling."
+    }
+  },
+  "model": {
+    "library": "CatBoost",
+    "version": "1.2.10",
+    "device": "CPU",
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "thread_count": 4,
+    "one_hot_max_size": 255,
+    "max_ctr_complexity": 1,
+    "early_stopping": false,
+    "prediction_aggregation": "arithmetic mean of the five fold-model probabilities"
+  },
+  "feature_scope": {
+    "baseline": "original supplied predictors only",
+    "candidate": "same predictors plus applicant-local deterministic formulas",
+    "feature_count_baseline": 32,
+    "feature_count_engineered": 85,
+    "categorical_columns": [
+      "NAME_CONTRACT_TYPE",
+      "CODE_GENDER",
+      "NAME_INCOME_TYPE",
+      "NAME_EDUCATION_TYPE",
+      "NAME_FAMILY_STATUS",
+      "NAME_HOUSING_TYPE",
+      "OCCUPATION_TYPE",
+      "ORGANIZATION_TYPE"
+    ],
+    "maximum_training_category_cardinality": 58,
+    "target_encoding": "none; categorical inputs forced to one-hot route",
+    "cross_row_features": "none",
+    "test_covariate_statistics": "none",
+    "external_data": "none",
+    "test_labels": "none",
+    "manual_prediction_edits": "none"
+  },
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65"
+  },
+  "source_sha256": "10b98d608ca7a10a1d239443a4d219e3b8fba51024db4c9c44750ff60a81db2e",
+  "runtime_seconds": 632.2630973000196,
+  "artifacts": {
+    "oof_predictions": "PHASE53_OOF_PREDICTIONS.csv",
+    "submission": "submission.csv"
+  },
+  "caveats": [
+    "Validation rows were excluded from fitting their fold models.",
+    "No outer-fold early stopping or OOF-driven tuning was performed.",
+    "The same labeled dataset has prior research exposure; this is exploratory, not independent confirmation.",
+    "The paired bootstrap is conditional on saved OOF predictions and does not include training-fold variability.",
+    "The competition materials do not fully resolve every modeling eligibility question; this run deliberately avoids pooled test statistics, label propagation, and target encoding.",
+    "The submission is a research candidate, not an authorized champion or a guaranteed leaderboard score."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "status": "generated; public/private leaderboard performance unknown",
+  "rule_boundary": {
+    "phase37": "lower-ambiguity recipe from supplied train labels and columns; no target encoding, pooled test statistics, external data, or manual prediction edits. Not organizer-certified.",
+    "v22": "historical rank blend uses pre-existing V17/V18 test predictions; not represented as a clean-room or rule-certified submission."
+  },
+  "phase37_submission": {
+    "file": "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\submission_candidates_20261108T172855Z\\phase37_rules_first_submission.csv",
+    "rows": 61500,
+    "columns": [
+      "SK_ID_CURR",
+      "TARGET"
+    ],
+    "oof_auc_reference": 0.7659681876381996,
+    "model_components": [
+      {
+        "model": "LightGBM",
+        "seed": 20261113,
+        "iterations": 286
+      },
+      {
+        "model": "XGBoost",
+        "seed": 20261113,
+        "iterations": 939
+      },
+      {
+        "model": "XGBoost",
+        "seed": 20261114,
+        "iterations": 1107
+      },
+      {
+        "model": "XGBoost",
+        "seed": 20261115,
+        "iterations": 1159
+      }
+    ],
+    "fit_seconds": 22.658347100019455,
+    "sha256": "89e4db4d221ecb57ffde13e7571622af17b35013bf8cb9e3ae011ecf7ffb1b0c"
+  },
+  "v22_reproduction": {
+    "file": "D:\\gci\\truth\\experiments\\phase37_multiseed_xgboost_rules_first\\runs\\submission_candidates_20261108T172855Z\\v22_historical_rank_blend_reproduction.csv",
+    "rows": 61500,
+    "columns": [
+      "SK_ID_CURR",
+      "TARGET"
+    ],
+    "method": "rank((0.55 * rank(V17) + 0.45 * rank(V18)))",
+    "public_score_status": "historical claim not independently verified",
+    "source_predictions_regenerated": false,
+    "historical_output_comparison": {
+      "historical_file_available": true,
+      "exact_value_match": false,
+      "spearman_rank_correlation": 0.9999999999771978
+    },
+    "sha256": "0655ac25f7d91ce981373dff26f79c1f0ebb487683ac67872ba7d4a339b74b39"
+  },
+  "elapsed_seconds": 26.252566200011643,
+  "input_sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\inpuy\\test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "D:\\gci\\inpuy\\sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+    "D:\\gci\\pre info\\oct22\\GCI_submission_v17.csv": "078a14243f3625363cc9e084083aad2c16747897ccf066889ec84b4e23eaa88c",
+    "D:\\gci\\pre info\\oct22\\GCI_submission_v18.csv": "871fe745f373ffeebff77c1eb75373a50c0e0e3fddcbbaadd7a83bc884fea3d1"
+  }
+}

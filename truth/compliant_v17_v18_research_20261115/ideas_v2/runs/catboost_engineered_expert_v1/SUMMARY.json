@@ -1,0 +1,116 @@
+{
+  "status": "fold-isolated CatBoost expert; not an independent estimate",
+  "hypothesis": "CatBoost's native ordered categorical processing with established safe financial and external-score features may provide a complementary ranking stream.",
+  "outer_folds": 5,
+  "seed": 20261113,
+  "model": {
+    "family": "CatBoost GPU",
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5.0,
+    "border_count": 128,
+    "max_ctr_complexity": 1
+  },
+  "fixed_blend": "0.90 candidate TE20 within-fold rank + 0.10 CatBoost expert within-fold rank",
+  "minimum_promotion_gain": 0.005,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "expert_mean_fold_auc": 0.7659451043165099,
+  "blend_mean_fold_auc": 0.7677515873548545,
+  "blend_mean_fold_gain": -3.9888023476430945e-06,
+  "positive_blend_folds": 2,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "catboost_expert_auc": 0.7701548857923828,
+      "fixed_90_10_rank_blend_auc": 0.772324348235431,
+      "expert_delta": -0.0022208575604349967,
+      "blend_delta": -5.139511738683211e-05,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 77,
+      "categorical_feature_count": 13,
+      "runtime_seconds": 32.395831700006966
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "catboost_expert_auc": 0.7741041424942842,
+      "fixed_90_10_rank_blend_auc": 0.7749434110595357,
+      "expert_delta": -0.0007514436786649759,
+      "blend_delta": 8.782488658654053e-05,
+      "fit_rows": 136961,
+      "valid_rows": 34241,
+      "feature_count": 77,
+      "categorical_feature_count": 13,
+      "runtime_seconds": 32.278286999993725
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "catboost_expert_auc": 0.7605269831846707,
+      "fixed_90_10_rank_blend_auc": 0.7624410365538884,
+      "expert_delta": -0.0019341109179455973,
+      "blend_delta": -2.005754872791421e-05,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 77,
+      "categorical_feature_count": 13,
+      "runtime_seconds": 41.261854199983645
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "catboost_expert_auc": 0.7636758114376165,
+      "fixed_90_10_rank_blend_auc": 0.764964437104033,
+      "expert_delta": -0.0012161196392665996,
+      "blend_delta": 7.250602714981014e-05,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 77,
+      "categorical_feature_count": 13,
+      "runtime_seconds": 58.168709699995816
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "catboost_expert_auc": 0.7612636986735948,
+      "fixed_90_10_rank_blend_auc": 0.7640847038213849,
+      "expert_delta": -0.0029298274071495323,
+      "blend_delta": -0.00010882225935937573,
+      "fit_rows": 136962,
+      "valid_rows": 34240,
+      "feature_count": 77,
+      "categorical_feature_count": 13,
+      "runtime_seconds": 32.030790199991316
+    }
+  ],
+  "promotion_gate_passed": false,
+  "submission_generated": false,
+  "versions": {
+    "python": "3.12.10",
+    "catboost": "1.2.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "model_data": "official train.csv only; test.csv not read",
+    "features": "existing constant-free feature builder using supplied fields, guarded formulas, categorical native features, and ratio keys",
+    "labels": "used only for outer-fit CatBoost training and OOF scoring",
+    "external_data": "none",
+    "label_transfer": "none",
+    "manual_test_adjustments": "none",
+    "test_covariate_pooling": "none",
+    "baseline_oof": "read only for alignment, fold checks, and benchmark comparison",
+    "gpu": "CatBoost CUDA required; no CPU fallback"
+  },
+  "runtime_seconds": 200.46886480000103,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v1\\submissions\\product_te_20pct_v2\\OOF_CANDIDATE_PREDICTIONS.csv": "ce351477d1b4104788e7bbcb626253cfbf1b48144f27f554c7c8b2d86d74e6d1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\catboost_engineered_expert_v1.py": "5df935b55b2827f08d0ec47383f35cf5151ce279c183bdf03a3a4f7592739bdf",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\catboost_engineered_expert_v1\\OOF_PREDICTIONS.csv": "9eb70dce41e1886892fcd7fa4c1fabb6ed694859c00f4981c44d60e658fc92f5",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\catboost_engineered_expert_v1\\FOLD_METRICS.csv": "d376c5212dc7cb5938bf5d7baafd63d5ca5706a72119f66d85cfa09a16aa27e3"
+  }
+}

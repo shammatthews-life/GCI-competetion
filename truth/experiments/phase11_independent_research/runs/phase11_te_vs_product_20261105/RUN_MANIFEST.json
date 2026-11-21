@@ -1,0 +1,63 @@
+{
+  "started_at_utc": "2026-11-04T16:56:04.246297+00:00",
+  "completed_at_utc": "2026-11-04T16:56:26.075968+00:00",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "oof_predictions_path": "D:\\gci\\truth\\experiments\\phase11_independent_research\\runs\\phase11_gpu_cv_20261105\\oof_predictions.csv",
+  "oof_predictions_sha256": "483ec36819dbf2772846dcfe0e73607ef3316f75ab45cf36932a5df3d1e2bbbc",
+  "rows": 171202,
+  "baseline_column": "product_keys_bagged",
+  "baseline_oof_auc": 0.7673993184476126,
+  "candidate_count": 14,
+  "smoothing": 30.0,
+  "folds": 5,
+  "null_repetitions_per_key": 10,
+  "adaptive_selection_is_exploratory": true,
+  "target_encoding_eligibility": "unresolved; research-only",
+  "test_data_opened": false,
+  "locked_holdout_used": false,
+  "source_sha256": {
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_product_baseline_te.py": "3bee1eca2c95e7dd9c37f38a97fcda68e430da7c6837be0a28025fe04b3f3aab",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_candidate_search.py": "fe2685f7f10163989ece07a3f5ca6403e7fffecf34e421beef75349fc9c3df2d",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_independent_runner.py": "a78bea2854f7afeb3e2739493d86e56c242d463631f89d36806b8e102fff6226"
+  },
+  "best_fixed_blend_10": {
+    "candidate": "ratio:AMT_CREDIT:AMT_ANNUITY:sig5",
+    "family": "predeclared_numeric_ratio",
+    "unique_categories": 11348,
+    "target_rate_auc": 0.6522955998271507,
+    "target_rate_spearman_vs_product_model": 0.4810633613409555,
+    "blend_0.05_auc": 0.7674770597550321,
+    "blend_0.05_delta_vs_product_model": 7.774130741955432e-05,
+    "blend_0.10_auc": 0.7673556872306957,
+    "blend_0.10_delta_vs_product_model": -4.363121691686178e-05,
+    "blend_0.20_auc": 0.7664196432715659,
+    "blend_0.20_delta_vs_product_model": -0.0009796751760466904
+  },
+  "frequency_preserving_null_summary": [
+    {
+      "source_key": "PRODUCT_KEY_KQ4",
+      "mean": -0.0002023879,
+      "max": -3.07501e-05,
+      "count": 10
+    },
+    {
+      "source_key": "PRODUCT_KEY_P4",
+      "mean": -9.05466e-05,
+      "max": 1.0758e-05,
+      "count": 10
+    },
+    {
+      "source_key": "PRODUCT_KEY_P5",
+      "mean": -7.50196e-05,
+      "max": 2.826e-06,
+      "count": 10
+    },
+    {
+      "source_key": "PRODUCT_KEY_Q4",
+      "mean": -0.0001432419,
+      "max": -3.79521e-05,
+      "count": 10
+    }
+  ]
+}

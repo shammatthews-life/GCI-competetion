@@ -1,0 +1,83 @@
+{
+  "phase": "Phase 48 multi-architecture contract experts & cross-model synthesis",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "models": {
+    "lightgbm": "num_leaves=31, lr=0.03, colsample=0.8, subsample=0.8",
+    "xgboost": "max_depth=4, lr=0.035, colsample=0.82, subsample=0.82"
+  },
+  "key_min_frequency": 50,
+  "gate": "contract_type: Cash loans=0, Revolving loans=1",
+  "metrics": {
+    "lgb_global": {
+      "pooled_auc": 0.7648431428834462,
+      "pooled_log_loss": 0.24441276490688324,
+      "mean_fold_auc": 0.7649041560751155,
+      "std_fold_auc": 0.004001396286692767
+    },
+    "lgb_contract_hard": {
+      "pooled_auc": 0.7635830316868315,
+      "pooled_log_loss": 0.24483934044837952,
+      "mean_fold_auc": 0.7636338628617574,
+      "std_fold_auc": 0.004662045928457246
+    },
+    "lgb_contract_mixture_50_50": {
+      "pooled_auc": 0.7651257982781215,
+      "pooled_log_loss": 0.24436938762664795,
+      "mean_fold_auc": 0.7651884244650304,
+      "std_fold_auc": 0.0042629930431392175
+    },
+    "xgb_global": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033,
+      "std_fold_auc": 0.004226171248110667
+    },
+    "xgb_contract_hard": {
+      "pooled_auc": 0.7640162654657314,
+      "pooled_log_loss": 0.24459077417850494,
+      "mean_fold_auc": 0.7640701420142851,
+      "std_fold_auc": 0.004999752989418953
+    },
+    "xgb_contract_mixture_50_50": {
+      "pooled_auc": 0.7651924668511284,
+      "pooled_log_loss": 0.2442401796579361,
+      "mean_fold_auc": 0.7652305624106586,
+      "std_fold_auc": 0.004607318805820694
+    },
+    "cross_model_global_blend": {
+      "pooled_auc": 0.7657096474499703,
+      "pooled_log_loss": 0.24409255385398865,
+      "mean_fold_auc": 0.7657640943512847,
+      "std_fold_auc": 0.004107532125589875
+    },
+    "cross_model_expert_blend": {
+      "pooled_auc": 0.7658578889976153,
+      "pooled_log_loss": 0.24408169090747833,
+      "mean_fold_auc": 0.7659011306401093,
+      "std_fold_auc": 0.004411325595973997
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "gate_membership": "deterministic supplied covariates only; no TARGET-based routing",
+    "expert_training": "each expert fit only on its outer-training subgroup",
+    "iteration_selection": "inner split within the expert's outer-training subgroup",
+    "outer_validation": "never used for fitting, early stopping, or gate selection",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none"
+  },
+  "runtime_seconds": 336.72710570000345,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase48_cross_architecture_contract_experts\\run_phase48_cross_architecture_contract_experts.py": "60fe9a38e09b09e11b5127aae90cdac65f7b31b2200642789c7d921381d1a45d",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase48_cross_architecture_contract_experts\\runs\\phase48_cross_experts_20261108T111650Z\\PHASE48_OOF_PREDICTIONS.csv": "2d76f452959c96bb464d2852b1b41498b7e097fd37c811ac2c34f8ba78e15277"
+  }
+}

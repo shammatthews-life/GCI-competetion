@@ -1,0 +1,42 @@
+{
+  "algorithm": "SHA-256",
+  "manifest_excludes_itself": true,
+  "files": {
+    "BASELINE_RECOVERY_AUDIT.md": {
+      "sha256": "bd09b93afbb2834b78bedb107a33926274323c6a9232f78e1dfade1bdde3d958",
+      "size_bytes": 9383
+    },
+    "EXP85_PHASE2_COMPLETE_SUBMISSION.ipynb": {
+      "sha256": "ab73f6f39a0fee803fc946de5bd64a4219f9b59a35663c8510b9c002570069f0",
+      "size_bytes": 6706327
+    },
+    "FEATURE_MANIFEST.csv": {
+      "sha256": "3d588dc32c5f9194ae6ef5cb26278ccba5ff30b4d8463cdc02a2245cdaae5e5f",
+      "size_bytes": 9154
+    },
+    "IMPLEMENTATION_REPORT.json": {
+      "sha256": "0b84d97cf4350401ab3c7948eb636061620bd07f35c85203cbf239acfc97ccae",
+      "size_bytes": 85770
+    },
+    "IMPLEMENTATION_REPORT.md": {
+      "sha256": "36d892492a838331bcda1e908272967526bd7f25a28b765c3e919ac364a5c411",
+      "size_bytes": 4841
+    },
+    "MODEL_CARD.md": {
+      "sha256": "d4261a9ac0e39095bf5adb2d487fda41ba313c549c081af3628c659a52fafbee",
+      "size_bytes": 2633
+    },
+    "ORIGINAL_PACKAGE_SHA256_MANIFEST.json": {
+      "sha256": "9eaac97407a48c663df4288fca45efad03e7618d0f41854746f066198b9f7deb",
+      "size_bytes": 13442
+    },
+    "README.md": {
+      "sha256": "8c2fc77783ac15c11fa7557452c2eba1c13c75ff60178437a66742662e741762",
+      "size_bytes": 5275
+    },
+    "requirements.txt": {
+      "sha256": "27d1035ca553699aef962bde0c8b953a855db023a109bfa3f1ebff75e3958032",
+      "size_bytes": 100
+    }
+  }
+}

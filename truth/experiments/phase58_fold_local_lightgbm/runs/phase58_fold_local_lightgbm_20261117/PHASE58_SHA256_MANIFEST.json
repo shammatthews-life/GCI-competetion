@@ -1,0 +1,22 @@
+{
+  "PHASE58_OOF.csv": {
+    "bytes": 8850938,
+    "sha256": "12feeda9f2c7e42e4f45d750d207b7206df05e8d371b3557d57a95d896593c89"
+  },
+  "submission.csv": {
+    "bytes": 1730779,
+    "sha256": "4e0227b329fc215dfe21b934fab80a83c0ae548e27e07870577b765d1d6a2501"
+  },
+  "PHASE58_SUMMARY.json": {
+    "bytes": 7200,
+    "sha256": "0383cef01373943b2ee9581d5366d250e558abe292f6cbcacd50040551880bd1"
+  },
+  "PHASE58_REPORT.md": {
+    "bytes": 3071,
+    "sha256": "72bd4b0315851c058fbe12f4ad828d915be8d45ffd2f6a3d40b2eafcae79037b"
+  },
+  "phase58_fold_local_lightgbm.py": {
+    "bytes": 29251,
+    "sha256": "8dad43df1ea59408575ddd374e715eeeb4be03bf3c86f32cce9beacf52115342"
+  }
+}

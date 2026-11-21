@@ -1,0 +1,39 @@
+{
+  "phase": "Phase 32 CatBoost native-category depth screen",
+  "status": "exploratory; repeated-label model selection; not organizer-certified",
+  "rows": 171202,
+  "feature_count": 69,
+  "categorical_feature_count": 12,
+  "depths": [
+    6,
+    8
+  ],
+  "outer_folds": 5,
+  "seed": 20261113,
+  "metrics": {
+    "6": {
+      "pooled_auc": 0.7663285075644323,
+      "mean_fold_auc": 0.7663753432427904,
+      "log_loss": 0.24401351809501648
+    },
+    "8": {
+      "pooled_auc": 0.7648499545574933,
+      "mean_fold_auc": 0.7649131815719936,
+      "log_loss": 0.24450598657131195
+    }
+  },
+  "runtime_seconds": 387.4273077999824,
+  "rule_controls": {
+    "external_data": "none",
+    "custom_target_encoding": "none",
+    "manual_prediction_edits": "none",
+    "native_categorical_target_statistics": "model-internal behavior; local rule interpretation unresolved",
+    "validation": "five outer folds; early stopping uses an inner split"
+  },
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase32_catboost_depth_screen\\run_phase32_catboost_depth_screen.py": "59532b5276b2012d548702f4bfb01046b30c52028e9740a6eece8f31e2bedcb4",
+    "D:\\gci\\truth\\experiments\\phase32_catboost_depth_screen\\runs\\phase32_depth_20261107T165554Z\\PHASE32_FOLD_RESULTS.csv": "86d4a59c1b7aee652f2afb86c07f44f998be58bb6588966f8d052ad4f342b352",
+    "D:\\gci\\truth\\experiments\\phase32_catboost_depth_screen\\runs\\phase32_depth_20261107T165554Z\\PHASE32_OOF_PREDICTIONS.csv": "4879d595a42812896d644ed6650d16b7c1157533032371d31b609629cf15a13e"
+  }
+}

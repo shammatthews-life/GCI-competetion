@@ -1,0 +1,119 @@
+{
+  "status": "fixed post-hoc ensemble of fold-isolated OOF experts; exploratory",
+  "formula": "0.90*rank(TE20) + 0.025*rank(group-conditional) + 0.025*rank(covariate-residual) + 0.025*rank(cross-fitted-model-view) + 0.025*rank(fold-local-category-TE), all ranks within outer fold",
+  "fixed_weights": {
+    "baseline": 0.9,
+    "group_conditional_rank_expert": 0.025,
+    "covariate_residual_expert": 0.025,
+    "crossfit_model_view_expert": 0.025,
+    "fold_local_category_te_expert": 0.025
+  },
+  "outer_folds": 5,
+  "baseline_mean_fold_auc": 0.7677555761572021,
+  "four_expert_blend_mean_fold_auc": 0.7680245252386697,
+  "four_expert_blend_mean_fold_gain": 0.00026894908146757324,
+  "positive_folds": 5,
+  "minimum_promotion_gain": 0.005,
+  "promotion_gate_passed": false,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "baseline_auc": 0.7723757433528178,
+      "fixed_four_expert_blend_auc": 0.7724958434493345,
+      "blend_delta": 0.00012010009651675091,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.7658051106343836,
+      "covariate_residual_expert_auc": 0.7659451584500608,
+      "crossfit_model_view_expert_auc": 0.7649847427246512,
+      "fold_local_category_te_expert_auc": 0.7664393055789201
+    },
+    {
+      "fold": 2,
+      "baseline_auc": 0.7748555861729491,
+      "fixed_four_expert_blend_auc": 0.7750071123967812,
+      "blend_delta": 0.00015152622383207692,
+      "valid_rows": 34241,
+      "group_conditional_rank_expert_auc": 0.768536888060986,
+      "covariate_residual_expert_auc": 0.7692598419370353,
+      "crossfit_model_view_expert_auc": 0.7668697778749077,
+      "fold_local_category_te_expert_auc": 0.7679049935459882
+    },
+    {
+      "fold": 3,
+      "baseline_auc": 0.7624610941026163,
+      "fixed_four_expert_blend_auc": 0.7626978134076472,
+      "blend_delta": 0.00023671930503088578,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7581977730396752,
+      "covariate_residual_expert_auc": 0.7567880204686768,
+      "crossfit_model_view_expert_auc": 0.7559804024070713,
+      "fold_local_category_te_expert_auc": 0.7578172313401119
+    },
+    {
+      "fold": 4,
+      "baseline_auc": 0.7648919310768831,
+      "fixed_four_expert_blend_auc": 0.7653316224301739,
+      "blend_delta": 0.00043969135329080533,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7610735427667858,
+      "covariate_residual_expert_auc": 0.764060295681142,
+      "crossfit_model_view_expert_auc": 0.7588405858670904,
+      "fold_local_category_te_expert_auc": 0.761881620600282
+    },
+    {
+      "fold": 5,
+      "baseline_auc": 0.7641935260807443,
+      "fixed_four_expert_blend_auc": 0.7645902345094115,
+      "blend_delta": 0.0003967084286672362,
+      "valid_rows": 34240,
+      "group_conditional_rank_expert_auc": 0.7596638534144224,
+      "covariate_residual_expert_auc": 0.7628067046327902,
+      "crossfit_model_view_expert_auc": 0.759689675353229,
+      "fold_local_category_te_expert_auc": 0.7602188555578789
+    }
+  ],
+  "mean_pair_weighted_contribution_by_negative_decile": {
+    "1": -1.1118074639184011e-07,
+    "2": -4.7572330510879225e-06,
+    "3": 7.95396456808663e-06,
+    "4": 1.6326166364600968e-05,
+    "5": 1.9839193636779904e-05,
+    "6": 3.721390983724465e-05,
+    "7": 3.508512657573742e-05,
+    "8": 6.984611947113785e-05,
+    "9": 6.042580372764293e-05,
+    "10": 2.7127211083759222e-05
+  },
+  "input_oof_files": {
+    "group_conditional_rank_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv",
+    "covariate_residual_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv",
+    "crossfit_model_view_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv",
+    "fold_local_category_te_expert": "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv"
+  },
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  },
+  "rule_controls": {
+    "training_data": "official train.csv used only to verify row IDs/labels and calculate OOF metrics",
+    "expert_outputs": "pre-existing outer-fold OOF predictions; no test prediction or training-row label transfer",
+    "weights": "fixed equal 2.5% rank share per expert; not optimized",
+    "external_data": "none",
+    "manual_row_edits": "none",
+    "test_predictions_or_submission": "none",
+    "validation_caveat": "post-hoc combination on repeatedly examined OOF folds; not an independent generalization estimate"
+  },
+  "runtime_seconds": 3.2241244000033475,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\group_conditional_rank_v1\\OOF_PREDICTIONS.csv": "f1f00dce743bd24d9fb66e0af24986bab351a36eeecd04f51558c852a4e1b2c0",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\covariate_residual_expert_v1\\OOF_PREDICTIONS.csv": "4e31bb89637a6d2f09122ab42acc6a27b915e42113fcffe8496260b1ecc3f4c4",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\crossfit_model_views_v1\\OOF_PREDICTIONS.csv": "4ad7bfc5e9e04457279b33c927a3a5007df9ec99ab17965b6f9a957c68163afb",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\fold_local_category_te_v1\\OOF_PREDICTIONS.csv": "70d9a69f735d88841f1fa2d40df88e2ce73291f24a844a68694561bde64a8332",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\complementary_expert_blend_v1.py": "74477a45967e057d25022a5497f3e25185be30901cd76677c65f08cd8926005e",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\complementary_expert_blend_v1\\OOF_PREDICTIONS.csv": "ec417666c7f98f1e7e5db193f791cf3a063ad5443d5060d522fdadd68040ffd1",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\complementary_expert_blend_v1\\FOLD_METRICS.csv": "8ef2573fdf4f06959bdddb126c4287706e3dbb457dc05c573200a6eecc3e5d5f",
+    "D:\\gci\\truth\\compliant_v17_v18_research_20261115\\ideas_v2\\runs\\complementary_expert_blend_v1\\NEGATIVE_DECILE_DECOMPOSITION.csv": "bfd01eac7bf32dbde16c6d6863aa902438aaf4e039e573c6878fff70dd7b5445"
+  }
+}

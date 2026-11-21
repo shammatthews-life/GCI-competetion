@@ -1,0 +1,8 @@
+{
+  "all_seed_predictions_finite": true,
+  "each_row_out_of_fold_in_all_three_seeds": true,
+  "id_order_exact": true,
+  "rows": 171202,
+  "target_order_exact": true,
+  "unique_ids": 171202
+}

@@ -1,0 +1,22 @@
+{
+  "PHASE56_OOF_PREDICTIONS.csv": {
+    "bytes": 12303259,
+    "sha256": "a18c0fc91034418c9caa3183bb44ccfb9212ab438ee6095d395e0901866c8b8f"
+  },
+  "submission.csv": {
+    "bytes": 1730478,
+    "sha256": "d76f6b5e5dc9cb7992edea45762b27ca055140ad4db6fcd87bbb2d27ac9602ab"
+  },
+  "PHASE56_SUMMARY.json": {
+    "bytes": 6606,
+    "sha256": "e395c6d563fdec734ca6a4907cf1bcee1737027d7efb3c63db1d0b8678f88106"
+  },
+  "PHASE56_REPORT.md": {
+    "bytes": 2190,
+    "sha256": "b032f119c6fd8ad48dfdcda7ae09a7d8c3c6a46ee83cf6e530ccc8ac627de8dc"
+  },
+  "phase56_q3_contract_interaction.py": {
+    "bytes": 28585,
+    "sha256": "4712cdf54048965457a5cbf711e447a8996f7b43f08a10c5c4f78d21b40c04c0"
+  }
+}

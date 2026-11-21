@@ -1,0 +1,256 @@
+{
+  "status": "exploratory diagnostics on repeatedly examined labels; not an independent estimate",
+  "validation": "fixed five-fold OOF; seed 20261113; every included artifact checked for ID/target alignment and fold identity",
+  "interpretation": "AUC by feature-defined subgroup and fixed within-fold rank blend; confusion matrices are omitted because no probability threshold is specified by ROC-AUC",
+  "rule_notes": {
+    "phase18": "not a compliant candidate; includes Phase 15 features/constants with unresolved provenance",
+    "phase17": "nested label-derived target statistics on constant-free product keys; follows the user's stated fold-local TE recommendation, but official wording is not explicit",
+    "clean_catboost": "new fold-local GPU CatBoost model; constant-free row-wise features; no test rows or peer-label features",
+    "phase44_phase45": "feature-only fold-safe experts",
+    "phase52": "label-free rowwise feature model"
+  },
+  "models": {
+    "phase37_reference": {
+      "pooled_auc": 0.7659681876381996,
+      "mean_fold_auc": 0.7659818497765217,
+      "fold_auc": [
+        0.7709087038352539,
+        0.7717595966225422,
+        0.7609305077316161,
+        0.7628796014660469,
+        0.7634308392271493
+      ]
+    },
+    "phase52_label_free_feature_model": {
+      "pooled_auc": 0.7586403959011067,
+      "mean_fold_auc": 0.7586620710735495,
+      "fold_auc": [
+        0.7629672990275628,
+        0.7642106262195347,
+        0.7556090676396175,
+        0.7563724384039,
+        0.754150924077132
+      ]
+    },
+    "phase44_contract_expert_mix": {
+      "pooled_auc": 0.7651924668511284,
+      "mean_fold_auc": 0.7652305624106586,
+      "fold_auc": [
+        0.7702557852753259,
+        0.7713798359989311,
+        0.7605551499601194,
+        0.7617665741789532,
+        0.7621954666399631
+      ]
+    },
+    "phase44_external_completeness_mix": {
+      "pooled_auc": 0.7643027520678899,
+      "mean_fold_auc": 0.7643527938749238,
+      "fold_auc": [
+        0.7687773552710506,
+        0.7701701770193979,
+        0.7603805860675508,
+        0.7610616978934539,
+        0.761374153123166
+      ]
+    },
+    "phase45_contract_calibrated_mix": {
+      "pooled_auc": 0.7651977416287196,
+      "mean_fold_auc": 0.765221077697652,
+      "fold_auc": [
+        0.7702258378352383,
+        0.7713930841305767,
+        0.7605579373272062,
+        0.7617540913721231,
+        0.7621744378231161
+      ]
+    },
+    "phase17_nested_constant_free_te": {
+      "pooled_auc": 0.7652907530575226,
+      "mean_fold_auc": 0.7654955910500123,
+      "fold_auc": [
+        0.7708749461566751,
+        0.7725640960235612,
+        0.758560079036627,
+        0.7637390185782785,
+        0.7617398154549195
+      ]
+    },
+    "phase18_nested_mixed_expert": {
+      "pooled_auc": 0.7686688657195365,
+      "mean_fold_auc": 0.7687220773597149,
+      "fold_auc": [
+        0.7740780406726121,
+        0.7758689131269566,
+        0.762384059322344,
+        0.7662813042588302,
+        0.7649980694178313
+      ]
+    },
+    "clean_constant_free_catboost": {
+      "pooled_auc": 0.7658771859440234,
+      "mean_fold_auc": 0.7659448928265805,
+      "fold_auc": [
+        0.7701542076503888,
+        0.7741041310041439,
+        0.7605264027226588,
+        0.7636757941961707,
+        0.7612639285595402
+      ]
+    },
+    "phase37_plus_phase52_label_free_feature_model_rank_0.25": {
+      "pooled_auc": 0.7660043755042132,
+      "mean_fold_auc": 0.7660042790343765,
+      "fold_auc": [
+        0.7708069135725728,
+        0.7717466299993313,
+        0.7614665212959902,
+        0.7630887919291275,
+        0.7629125383748608
+      ]
+    },
+    "phase37_plus_phase52_label_free_feature_model_rank_0.50": {
+      "pooled_auc": 0.7647721677362392,
+      "mean_fold_auc": 0.7647708854535538,
+      "fold_auc": [
+        0.7694081250238212,
+        0.7704917630631979,
+        0.7607336276609068,
+        0.7620503626312856,
+        0.7611705488885566
+      ]
+    },
+    "phase37_plus_phase44_contract_expert_mix_rank_0.25": {
+      "pooled_auc": 0.7661745344917749,
+      "mean_fold_auc": 0.7661734244787407,
+      "fold_auc": [
+        0.7711243989650497,
+        0.7720528422355493,
+        0.761183106408319,
+        0.7629809926622246,
+        0.7635257821225608
+      ]
+    },
+    "phase37_plus_phase44_contract_expert_mix_rank_0.50": {
+      "pooled_auc": 0.7661091791538045,
+      "mean_fold_auc": 0.7661051439958245,
+      "fold_auc": [
+        0.7710788197773054,
+        0.7720694052726415,
+        0.7612036582118293,
+        0.7628221012439773,
+        0.7633517354733691
+      ]
+    },
+    "phase37_plus_phase44_external_completeness_mix_rank_0.25": {
+      "pooled_auc": 0.7660386448931369,
+      "mean_fold_auc": 0.7660410946876921,
+      "fold_auc": [
+        0.7708400965545467,
+        0.7718152835870011,
+        0.7612646699417137,
+        0.7629190786300049,
+        0.7633663447251935
+      ]
+    },
+    "phase37_plus_phase44_external_completeness_mix_rank_0.50": {
+      "pooled_auc": 0.7657820254806756,
+      "mean_fold_auc": 0.765782542053555,
+      "fold_auc": [
+        0.7704655437891917,
+        0.7715610182746084,
+        0.7612720090505177,
+        0.7626068762748326,
+        0.7630072628786245
+      ]
+    },
+    "phase37_plus_phase45_contract_calibrated_mix_rank_0.25": {
+      "pooled_auc": 0.7661710087786665,
+      "mean_fold_auc": 0.7661697886188646,
+      "fold_auc": [
+        0.7711153015177921,
+        0.7720565937663233,
+        0.7611842903209374,
+        0.7629724351579105,
+        0.7635203223313598
+      ]
+    },
+    "phase37_plus_phase45_contract_calibrated_mix_rank_0.50": {
+      "pooled_auc": 0.7661019426839673,
+      "mean_fold_auc": 0.7660978286467908,
+      "fold_auc": [
+        0.7710604294859449,
+        0.7720762476511281,
+        0.7612048708601908,
+        0.7628101471748212,
+        0.7633374480618684
+      ]
+    },
+    "phase37_plus_phase17_nested_constant_free_te_rank_0.25": {
+      "pooled_auc": 0.7670524195857651,
+      "mean_fold_auc": 0.7670556483979797,
+      "fold_auc": [
+        0.7719675363542728,
+        0.7730932169795776,
+        0.7616436139339573,
+        0.764203106577515,
+        0.7643707681445758
+      ]
+    },
+    "phase37_plus_phase17_nested_constant_free_te_rank_0.50": {
+      "pooled_auc": 0.7673252697373616,
+      "mean_fold_auc": 0.7673227853086498,
+      "fold_auc": [
+        0.772312670400417,
+        0.7736790187971799,
+        0.7614525787134074,
+        0.7647799823686676,
+        0.7643896762635773
+      ]
+    },
+    "phase37_plus_phase18_nested_mixed_expert_rank_0.25": {
+      "pooled_auc": 0.7677295891288092,
+      "mean_fold_auc": 0.7677278968654457,
+      "fold_auc": [
+        0.7726105586386622,
+        0.7739436654512396,
+        0.7622934037998124,
+        0.7648781379201648,
+        0.7649137185173497
+      ]
+    },
+    "phase37_plus_phase18_nested_mixed_expert_rank_0.50": {
+      "pooled_auc": 0.7687729367802847,
+      "mean_fold_auc": 0.7687716865481053,
+      "fold_auc": [
+        0.7737064820765691,
+        0.775364191483646,
+        0.7629910099422913,
+        0.7661091943987279,
+        0.7656875548392923
+      ]
+    },
+    "phase37_plus_clean_constant_free_catboost_rank_0.25": {
+      "pooled_auc": 0.7673178461550934,
+      "mean_fold_auc": 0.7673191052609833,
+      "fold_auc": [
+        0.7720775677662697,
+        0.7736461167807294,
+        0.7621858401660034,
+        0.7644264867505696,
+        0.7642595148413447
+      ]
+    },
+    "phase37_plus_clean_constant_free_catboost_rank_0.50": {
+      "pooled_auc": 0.7677538080056565,
+      "mean_fold_auc": 0.7677578003110359,
+      "fold_auc": [
+        0.7723323939879011,
+        0.774668670317314,
+        0.762538261067307,
+        0.7650692765893901,
+        0.7641803995932674
+      ]
+    }
+  }
+}

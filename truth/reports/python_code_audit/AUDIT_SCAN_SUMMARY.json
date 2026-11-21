@@ -1,0 +1,23 @@
+{
+  "generated_utc": "2026-11-02T18:13:32.568916+00:00",
+  "truth_git_root": "D:\\gci\\truth",
+  "source_roots": [
+    "D:\\gci\\champion",
+    "D:\\gci\\gemini",
+    "D:\\gci\\codex",
+    "D:\\gci\\past_85",
+    "D:\\gci\\5 independent",
+    "D:\\gci\\name5_dependent_code",
+    "D:\\gci\\pre info"
+  ],
+  "source_file_count": 637,
+  "python_file_count": 585,
+  "notebook_count": 52,
+  "syntax_status_counts": {
+    "PASS": 633,
+    "FAIL": 4
+  },
+  "unique_hash_count": 560,
+  "missing_source_roots": [],
+  "audit_method": "read-only syntax/AST/static signal analysis; no source execution or model training"
+}

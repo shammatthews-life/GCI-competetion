@@ -1,0 +1,79 @@
+{
+  "add_all_domain_flags": {
+    "both_correct": 749372,
+    "both_wrong": 216027,
+    "global_correct_candidate_wrong": 17204,
+    "global_wrong_candidate_correct": 17397,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "add_cash_flag": {
+    "both_correct": 749568,
+    "both_wrong": 215965,
+    "global_correct_candidate_wrong": 17008,
+    "global_wrong_candidate_correct": 17459,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "add_ext_complete_flag": {
+    "both_correct": 749496,
+    "both_wrong": 216421,
+    "global_correct_candidate_wrong": 17080,
+    "global_wrong_candidate_correct": 17003,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "add_goods_credit_flag": {
+    "both_correct": 749410,
+    "both_wrong": 216103,
+    "global_correct_candidate_wrong": 17166,
+    "global_wrong_candidate_correct": 17321,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_combined_fixed": {
+    "both_correct": 749679,
+    "both_wrong": 217417,
+    "global_correct_candidate_wrong": 16897,
+    "global_wrong_candidate_correct": 16007,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_combined_hard": {
+    "both_correct": 728753,
+    "both_wrong": 203290,
+    "global_correct_candidate_wrong": 37823,
+    "global_wrong_candidate_correct": 30134,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_contract_calibrated": {
+    "both_correct": 755093,
+    "both_wrong": 221924,
+    "global_correct_candidate_wrong": 11483,
+    "global_wrong_candidate_correct": 11500,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_contract_fixed": {
+    "both_correct": 754920,
+    "both_wrong": 221723,
+    "global_correct_candidate_wrong": 11656,
+    "global_wrong_candidate_correct": 11701,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_contract_hard": {
+    "both_correct": 741802,
+    "both_wrong": 211171,
+    "global_correct_candidate_wrong": 24774,
+    "global_wrong_candidate_correct": 22253,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_external_fixed": {
+    "both_correct": 752888,
+    "both_wrong": 220088,
+    "global_correct_candidate_wrong": 13688,
+    "global_wrong_candidate_correct": 13336,
+    "sampled_positive_negative_pairs": 1000000
+  },
+  "specialist_external_hard": {
+    "both_correct": 737443,
+    "both_wrong": 208057,
+    "global_correct_candidate_wrong": 29133,
+    "global_wrong_candidate_correct": 25367,
+    "sampled_positive_negative_pairs": 1000000
+  }
+}

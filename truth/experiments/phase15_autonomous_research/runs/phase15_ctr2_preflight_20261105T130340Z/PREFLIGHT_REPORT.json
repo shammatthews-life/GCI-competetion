@@ -1,0 +1,26 @@
+{
+  "eligibility": "CatBoost CTR uses training labels internally and remains unresolved; product-key constants remain unresolved.",
+  "no_test_external_or_submission_data": true,
+  "phase13_oof_sha256": "775f11742e2be8f1bfdf75d4a34c7da7603788fb0201ec3052990cf471e6c488",
+  "primary_oof_sha256": "ce53321d2b301a65636c6c129bf44e4ecfc9a5602f26948a5cbbafbace95cbc4",
+  "result": {
+    "auc": 0.7725442443974092,
+    "catboost_device": "GPU",
+    "ctr1_baseline_auc": 0.7728747811497858,
+    "eligibility": "native CTR eligibility unresolved; research-only",
+    "feature_count": 99,
+    "fit_rows": 136961,
+    "fit_seconds": 56.785258700023405,
+    "fold": 1,
+    "iterations": 700,
+    "max_ctr_complexity": 2,
+    "max_fit_category_count": 4927,
+    "paired_delta_vs_ctr1": -0.00033053675237659785,
+    "seed": 20261213,
+    "validation_rows": 34241,
+    "variant": "native_catboost_phase14_plus_time_ctr_complexity_2"
+  },
+  "runtime_seconds": 60.88755310000852,
+  "status": "one-fold model hyperparameter preflight only",
+  "training_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1"
+}

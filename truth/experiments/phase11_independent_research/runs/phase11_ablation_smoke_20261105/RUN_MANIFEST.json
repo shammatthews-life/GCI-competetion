@@ -1,0 +1,122 @@
+{
+  "started_at_utc": "2026-11-04T16:19:08.244753+00:00",
+  "completed_at_utc": "2026-11-04T16:19:22.729731+00:00",
+  "train_path": "D:\\gci\\inpuy\\train.csv",
+  "train_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "oof_sha256": "16610e100b8ea2aa3461bac5f619623237325ec7fcf2119f245853d03667ee66",
+  "rows": 1200,
+  "folds": 2,
+  "seed": 2026,
+  "iterations": 5,
+  "model": {
+    "task_type": "GPU",
+    "device": 0,
+    "depth": 6,
+    "learning_rate": 0.05
+  },
+  "features": {
+    "independent_builder": true,
+    "product_keys": [
+      "PRODUCT_KEY_Q3",
+      "PRODUCT_KEY_Q4",
+      "PRODUCT_KEY_Q5",
+      "PRODUCT_KEY_KQ3",
+      "PRODUCT_KEY_KQ4",
+      "PRODUCT_KEY_P4",
+      "PRODUCT_KEY_P5",
+      "PRODUCT_KEY_AG3"
+    ],
+    "target_excluded_from_feature_construction": true,
+    "identifier_excluded_from_model_features": true
+  },
+  "test_data_opened": false,
+  "locked_holdout_used": false,
+  "submission_created": false,
+  "legacy_exp85_imported": false,
+  "source_sha256": {
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_key_ablation.py": "8d5b202f96ef4b23296f2dba2c72be896657cfcd0b4db8ac2303df2c9e12460c",
+    "D:\\gci\\truth\\experiments\\phase11_independent_research\\phase11_independent_runner.py": "a78bea2854f7afeb3e2739493d86e56c242d463631f89d36806b8e102fff6226",
+    "D:\\gci\\truth\\experiments\\phase10_catboost_product_robustness\\phase10_independent_feature_builder.py": "90ecbc99ffb1a106ae90f329a1ccce208f5ef75ec066d58a19e516b253238c44"
+  },
+  "results": {
+    "rows": 1200,
+    "variant_count": 18,
+    "iterations": 5,
+    "smoke_run_only": true,
+    "folds": 2,
+    "seed": 2026,
+    "pooled_oof_auc": {
+      "raw": 0.6562000542101672,
+      "all_keys": 0.6562000542101672,
+      "single__PRODUCT_KEY_Q3": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_Q3": 0.6562000542101672,
+      "single__PRODUCT_KEY_Q4": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_Q4": 0.6562000542101672,
+      "single__PRODUCT_KEY_Q5": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_Q5": 0.6562000542101672,
+      "single__PRODUCT_KEY_KQ3": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_KQ3": 0.6562000542101672,
+      "single__PRODUCT_KEY_KQ4": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_KQ4": 0.6562000542101672,
+      "single__PRODUCT_KEY_P4": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_P4": 0.6562000542101672,
+      "single__PRODUCT_KEY_P5": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_P5": 0.6562000542101672,
+      "single__PRODUCT_KEY_AG3": 0.6562000542101672,
+      "leave_out__PRODUCT_KEY_AG3": 0.6562000542101672
+    },
+    "delta_vs_raw_baseline": {
+      "raw": 0.0,
+      "all_keys": 0.0,
+      "single__PRODUCT_KEY_Q3": 0.0,
+      "leave_out__PRODUCT_KEY_Q3": 0.0,
+      "single__PRODUCT_KEY_Q4": 0.0,
+      "leave_out__PRODUCT_KEY_Q4": 0.0,
+      "single__PRODUCT_KEY_Q5": 0.0,
+      "leave_out__PRODUCT_KEY_Q5": 0.0,
+      "single__PRODUCT_KEY_KQ3": 0.0,
+      "leave_out__PRODUCT_KEY_KQ3": 0.0,
+      "single__PRODUCT_KEY_KQ4": 0.0,
+      "leave_out__PRODUCT_KEY_KQ4": 0.0,
+      "single__PRODUCT_KEY_P4": 0.0,
+      "leave_out__PRODUCT_KEY_P4": 0.0,
+      "single__PRODUCT_KEY_P5": 0.0,
+      "leave_out__PRODUCT_KEY_P5": 0.0,
+      "single__PRODUCT_KEY_AG3": 0.0,
+      "leave_out__PRODUCT_KEY_AG3": 0.0
+    },
+    "key_unique_counts_full_train": {
+      "PRODUCT_KEY_Q3": 76,
+      "PRODUCT_KEY_Q4": 324,
+      "PRODUCT_KEY_Q5": 657,
+      "PRODUCT_KEY_KQ3": 318,
+      "PRODUCT_KEY_KQ4": 471,
+      "PRODUCT_KEY_P4": 232,
+      "PRODUCT_KEY_P5": 407,
+      "PRODUCT_KEY_AG3": 103
+    },
+    "key_unique_counts_by_fold_fit": {
+      "1": {
+        "PRODUCT_KEY_Q3": 68,
+        "PRODUCT_KEY_Q4": 233,
+        "PRODUCT_KEY_Q5": 391,
+        "PRODUCT_KEY_KQ3": 221,
+        "PRODUCT_KEY_KQ4": 285,
+        "PRODUCT_KEY_P4": 171,
+        "PRODUCT_KEY_P5": 267,
+        "PRODUCT_KEY_AG3": 92
+      },
+      "2": {
+        "PRODUCT_KEY_Q3": 71,
+        "PRODUCT_KEY_Q4": 225,
+        "PRODUCT_KEY_Q5": 380,
+        "PRODUCT_KEY_KQ3": 210,
+        "PRODUCT_KEY_KQ4": 279,
+        "PRODUCT_KEY_P4": 164,
+        "PRODUCT_KEY_P5": 257,
+        "PRODUCT_KEY_AG3": 99
+      }
+    },
+    "adaptive_ablation_selection_is_exploratory": true
+  }
+}

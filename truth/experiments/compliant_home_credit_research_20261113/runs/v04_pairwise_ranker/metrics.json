@@ -1,0 +1,86 @@
+{
+  "candidate_id": "v04_pairwise_ranker",
+  "feature_set": "rowwise_v1",
+  "target_encoding": false,
+  "seed": 314159,
+  "folds": 5,
+  "models": [
+    "xgboost_ranker_gpu"
+  ],
+  "fold_results": [
+    {
+      "fold": 1,
+      "n_fit": 136961,
+      "n_valid": 34241,
+      "xgboost_ranker_gpu_auc": 0.5,
+      "xgboost_ranker_gpu_seconds": 21.3
+    },
+    {
+      "fold": 2,
+      "n_fit": 136961,
+      "n_valid": 34241,
+      "xgboost_ranker_gpu_auc": 0.5,
+      "xgboost_ranker_gpu_seconds": 21.271
+    },
+    {
+      "fold": 3,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "xgboost_ranker_gpu_auc": 0.5,
+      "xgboost_ranker_gpu_seconds": 19.505
+    },
+    {
+      "fold": 4,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "xgboost_ranker_gpu_auc": 0.5,
+      "xgboost_ranker_gpu_seconds": 20.194
+    },
+    {
+      "fold": 5,
+      "n_fit": 136962,
+      "n_valid": 34240,
+      "xgboost_ranker_gpu_auc": 0.5,
+      "xgboost_ranker_gpu_seconds": 20.984
+    }
+  ],
+  "model_summary": {
+    "xgboost_ranker_gpu": {
+      "pooled_oof_auc": 0.500027670802375,
+      "mean_fold_auc": 0.5,
+      "std_fold_auc": 0.0,
+      "fold_auc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "input_sha256": {
+    "train.csv": "B8DD5A61771D8EB2821972C1B7D3F2F747CC66471F4D34153036D2D9C458ECF1",
+    "test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
+    "sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
+  },
+  "source_sha256": {
+    "pipeline_core_v2.py": "D7387CCBCD87C752D36B49CDDC755387DD5D84D00CA68ABB774559EB039A9398",
+    "v04_pairwise_ranker.py": "E2B6C345E409FF5DC2DA14FD8AB9E649D673D8D4E02ACE4778D06386A2D94B8B"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "torch": "2.14.1+cu130",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "torch_cuda_runtime": "13.0"
+  },
+  "seconds": 105.059,
+  "oof_sha256": "4C0EA1F9AAA545A21D43A1994CA74AC742A6B63E5305E2EFED1B26EC1C1A7A93"
+}

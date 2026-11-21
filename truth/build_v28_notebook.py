@@ -69,7 +69,7 @@ for idx_c, (a, b) in enumerate(chunks):
     else:
         code_block = code_block.replace(
             'if __name__ == "__main__":\n    main()',
-            'if __name__ == "__main__":\n    sys.argv = ["solo_champion_v28_certified.py"]\n    main()'
+            'if __name__ == "__main__":\n    import sys\n    if not any(arg.startswith("--data_dir") for arg in sys.argv):\n        # Preserve existing CLI args if provided; otherwise default cleanly\n        pass\n    main()'
         )
     cells.append({
         "cell_type": "code",

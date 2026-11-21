@@ -1,0 +1,51 @@
+{
+  "phase": "Phase 42 information-availability profile ablation",
+  "status": "exploratory; repeated-label research; not organizer-certified",
+  "rows": 171202,
+  "seed": 20261113,
+  "outer_folds": 5,
+  "key_min_frequency": 50,
+  "profile_inputs": [
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "OCCUPATION_TYPE",
+    "ORGANIZATION_TYPE",
+    "NAME_INCOME_TYPE",
+    "AMT_REQ_CREDIT_BUREAU_YEAR",
+    "AMT_REQ_CREDIT_BUREAU_QRT",
+    "DAYS_EMPLOYED sentinel"
+  ],
+  "profile_encoding": "A fold-fitted one-hot category built from the joint missingness/sentinel bit pattern; numerical missing-count feature is deterministic.",
+  "metrics": {
+    "keys_frequency_50_baseline": {
+      "pooled_auc": 0.7648346246704686,
+      "pooled_log_loss": 0.24433554708957672,
+      "mean_fold_auc": 0.7648733164663033
+    },
+    "keys_frequency_50_plus_info_profile": {
+      "pooled_auc": 0.7644952988049927,
+      "pooled_log_loss": 0.24441324174404144,
+      "mean_fold_auc": 0.7645299639702919
+    }
+  },
+  "rule_controls": {
+    "input": "supplied training CSV only; no test or external data read",
+    "custom_target_encoding": "none",
+    "native_categorical_target_statistics": "none; categorical inputs one-hot encoded",
+    "test_statistics": "none",
+    "unverified_empirical_constants": "none",
+    "manual_prediction_edits": "none",
+    "category_vocabularies_and_frequencies": "fit on each model training partition only"
+  },
+  "runtime_seconds": 79.80251839998527,
+  "sha256": {
+    "D:\\gci\\inpuy\\train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\runs\\phase38_thresholds_20261107T173546Z\\PHASE38_OOF_PREDICTIONS.csv": "b7dd64efa160bec9ab3c99a01cd1597a12a673cf37a76a24abda25f4eafa7c76",
+    "D:\\gci\\truth\\experiments\\phase42_information_profile_xgb\\run_phase42_information_profile_xgb.py": "77e65a27766de642e7ce80a9be4e46a699f2326bd1ade20aac89ec6ae9514557",
+    "D:\\gci\\truth\\experiments\\phase33_rules_first_features\\run_phase33_rules_first_features.py": "44540012a947b94c875ba5b87f1eb3bba0b4b1689ea8b7d70935ba164c41085b",
+    "D:\\gci\\truth\\experiments\\phase38_key_frequency_thresholds\\run_phase38_key_frequency_thresholds.py": "4bf7bcaaca70b9c450fd4257fb566335437aa9f58aea510a3eb28895bf40f3aa",
+    "D:\\gci\\truth\\experiments\\phase42_information_profile_xgb\\runs\\phase42_profile_20261107T175304Z\\PHASE42_FOLD_RESULTS.csv": "d967f3534af465d9815fb504f4720c92e549fd3768c2586d6d8bd4f3d4d10bcb",
+    "D:\\gci\\truth\\experiments\\phase42_information_profile_xgb\\runs\\phase42_profile_20261107T175304Z\\PHASE42_OOF_PREDICTIONS.csv": "dbab1d2c8789ec6ef0389f41c48193523d74a5d5406a8d6f19c18463c2086814"
+  }
+}
