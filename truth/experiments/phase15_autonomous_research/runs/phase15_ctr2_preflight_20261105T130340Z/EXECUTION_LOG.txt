@@ -1,0 +1,3 @@
+2026-11-05 13:03:40,785Z INFO Starting matched-fold CatBoost CTR-complexity-2 preflight
+2026-11-05 13:03:44,398Z INFO fit_rows=136961 valid_rows=34241 feature_count=99 categorical_count=16 seed=20261213
+2026-11-05 13:04:41,694Z INFO fold_auc=0.772544 ctr1_auc=0.772875 delta=-0.000331 runtime_seconds=60.9

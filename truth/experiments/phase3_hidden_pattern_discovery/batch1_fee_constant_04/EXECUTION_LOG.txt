@@ -1,0 +1,9 @@
+started_utc=2026-11-03T14:14:13.905304+00:00
+finished_utc=2026-11-03T14:17:49.247152+00:00
+runtime_seconds=215.342
+families=3
+p_keys_fold_estimated_fee_pooled_auc=0.762184076630
+p_keys_fixed_v17_fee_129_5_pooled_auc=0.761655665607
+q_keys_unadjusted_control_pooled_auc=0.760939121081
+source_sha256=9ae0538a2bf63f7cebd40dddd2c6cd74509cddf4f467e58ed5dd98a320b9aa50
+status=SUCCESS

@@ -1,0 +1,6 @@
+2026-11-05 09:53:45,342Z INFO Starting Phase 14 label-free model development
+2026-11-05 09:53:45,342Z INFO train=D:\gci\inpuy\train.csv
+2026-11-05 09:53:45,343Z INFO phase13_oof=D:\gci\truth\experiments\phase13_matched_baseline\runs\phase13_20261105T075946Z\OOF_PREDICTIONS.csv
+2026-11-05 09:53:45,343Z INFO test, submissions, and external data are out of scope and not opened
+2026-11-05 09:55:13,369Z INFO lgbm_all8_e fold=1 selected=leaves31_child80 inner_auc=0.761954 rounds=405 features=12224 fit_seconds=8.7
+2026-11-05 09:57:08,667Z INFO lgbm_all8_augmented fold=1 selected=leaves31_child80 inner_auc=0.761927 rounds=515 features=12257 fit_seconds=15.1

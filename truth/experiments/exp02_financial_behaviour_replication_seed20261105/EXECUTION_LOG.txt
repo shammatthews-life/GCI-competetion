@@ -1,0 +1,178 @@
+timestamp_utc=2026-11-04T04:18:35.651195+00:00
+command=python D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\run_exp02_seed_replication.py
+source_notebook_sha256=b3882dc3ed7a8b6a3370a2f65da7232e91ee7f0d65baf9da3362810f6d13cd7c
+replica_notebook_source_sha256=d4f7c502d88e90f71b5875a46d3a1767b5c73083eec1ecee67b5f469b9cec9a3
+protocol_sha256=c33c8006bf3628f80484c2ec0c520ba65ca9559177639851b74480464b908bb6
+seeds={"inner_stop_seed_base": 20262105, "model_seed_base": 20263105, "outer_seed": 20261105}
+execution_mode=sequential Python execution of notebook code cells
+notebook_execution=STARTED
+training_status=NOT_STARTED
+
+--- code cell 2 start ---
+TRUTH root: D:\gci\truth
+Data directory: D:\gci\inpuy
+Run directory: D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\runs\financial_ratios_seed20261105
+GPU before training: [{'index': 0, 'name': 'NVIDIA GeForce RTX 4050 Laptop GPU', 'memory_used_mib': 95, 'memory_total_mib': 6141, 'utilization_gpu_pct': 0}]
+Python: 3.12.10
+NumPy: 2.5.4 pandas: 3.1.0 scikit-learn: 1.9.1 CatBoost: 1.2.10
+
+--- code cell 4 start ---
+Train: (171202, 34); test: (61500, 33); predictors (including ID): 33
+Class counts: {0: 157381, 1: 13821}
+Input SHA-256: {
+  "train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+  "sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db"
+}
+
+--- code cell 6 start ---
+D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\EXP02_FINANCIAL_BEHAVIOUR_SEED20261105.ipynb#cell-6:78: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\EXP02_FINANCIAL_BEHAVIOUR_SEED20261105.ipynb#cell-6:78: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\EXP02_FINANCIAL_BEHAVIOUR_SEED20261105.ipynb#cell-6:78: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\EXP02_FINANCIAL_BEHAVIOUR_SEED20261105.ipynb#cell-6:78: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+Feature unit tests: PASS
+Raw predictors excluding ID: 32
+Financial features: ['FIN_CREDIT_TO_INCOME', 'FIN_ANNUITY_TO_INCOME', 'FIN_GOODS_TO_CREDIT', 'FIN_CREDIT_TO_ANNUITY', 'FIN_INCOME_PER_FAMILY_MEMBER', 'FIN_CREDIT_PER_FAMILY_MEMBER', 'FIN_ANNUITY_PER_FAMILY_MEMBER']
+Added feature missing counts: {'FIN_CREDIT_TO_INCOME': 0, 'FIN_ANNUITY_TO_INCOME': 0, 'FIN_GOODS_TO_CREDIT': 0, 'FIN_CREDIT_TO_ANNUITY': 0, 'FIN_INCOME_PER_FAMILY_MEMBER': 2, 'FIN_CREDIT_PER_FAMILY_MEMBER': 2, 'FIN_ANNUITY_PER_FAMILY_MEMBER': 2}
+
+--- code cell 8 start ---
+Outer folds: 5 seed: 20261105
+Inner stopping fraction: 0.1 seed rule: 20261102 + 1-based fold
+CatBoost GPU parameters: {
+  "depth": 7,
+  "learning_rate": 0.045,
+  "loss_function": "Logloss",
+  "eval_metric": "AUC",
+  "l2_leaf_reg": 5.0,
+  "random_strength": 0.5,
+  "bootstrap_type": "Bernoulli",
+  "subsample": 0.8,
+  "border_count": 128,
+  "task_type": "GPU",
+  "devices": "0",
+  "thread_count": 8,
+  "allow_writing_files": false,
+  "max_iterations": 2500,
+  "early_stopping_rounds": 150
+}
+Fold/inner split isolation checks: PASS
+training_status=STARTED
+
+--- code cell 10 start ---
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Fold 1/5: raw=0.74979512, financial=0.75670954, delta=+0.00691442, iterations=613/699, seconds=56.3/79.5
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Fold 2/5: raw=0.75445683, financial=0.76087749, delta=+0.00642066, iterations=676/606, seconds=91.7/83.9
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Fold 3/5: raw=0.75561479, financial=0.76014279, delta=+0.00452800, iterations=399/418, seconds=59.0/56.6
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Fold 4/5: raw=0.75040178, financial=0.75646123, delta=+0.00605945, iterations=272/588, seconds=43.4/80.5
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Default metric period is 5 because AUC is/are not implemented for GPU
+Fold 5/5: raw=0.74866441, financial=0.75622599, delta=+0.00756158, iterations=515/676, seconds=72.6/90.8
+Total training runtime: 714.6 seconds
+GPU samples captured during training: 668
+
+--- code cell 12 start ---
+{
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "run_id": "financial_ratios_seed20261105",
+  "decision": "NEEDS_INDEPENDENT_SEED_REPLICATION",
+  "advancement_screen": {
+    "positive_pooled_auc_delta": true,
+    "minimum_mean_fold_delta": 0.0002,
+    "observed_mean_fold_delta": 0.006296821541723063,
+    "required_positive_folds": 4,
+    "observed_positive_folds": 5,
+    "passed": true,
+    "independent_seed_replication_complete": false
+  },
+  "train_rows": 171202,
+  "test_rows": 61500,
+  "predictor_columns_including_id": 33,
+  "outer_folds": 5,
+  "outer_seed": 20261105,
+  "pooled_oof_auc": {
+    "raw_baseline": 0.7517077237843034,
+    "financial_features": 0.7580438653796194
+  },
+  "pooled_oof_auc_delta": 0.006336141595316036,
+  "mean_paired_fold_auc_delta": 0.006296821541723063,
+  "positive_folds": 5,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "raw_auc": 0.7497951206603107,
+      "financial_auc": 0.7567095368878671,
+      "paired_auc_delta": 0.006914416227556397
+    },
+    {
+      "fold": 2,
+      "raw_auc": 0.7544568300495662,
+      "financial_auc": 0.7608774859205566,
+      "paired_auc_delta": 0.006420655870990388
+    },
+    {
+      "fold": 3,
+      "raw_auc": 0.7556147860525071,
+      "financial_auc": 0.7601427862985769,
+      "paired_auc_delta": 0.004528000246069808
+    },
+    {
+      "fold": 4,
+      "raw_auc": 0.750401777413761,
+      "financial_auc": 0.7564612318502747,
+      "paired_auc_delta": 0.006059454436513678
+    },
+    {
+      "fold": 5,
+      "raw_auc": 0.7486644086349574,
+      "financial_auc": 0.7562259895624425,
+      "paired_auc_delta": 0.007561580927485045
+    }
+  ],
+  "official_leaderboard_score": "NOT_EVALUATED",
+  "submission_created": false,
+  "runtime_seconds": 714.5752086000284,
+  "started_utc": "2026-11-04T04:18:47.989032+00:00",
+  "completed_utc": "2026-11-04T04:30:42.563719+00:00",
+  "checks": {
+    "input_hashes_match_course_package": true,
+    "sample_test_id_alignment": true,
+    "train_test_ids_disjoint": true,
+    "fold_assignments_recomputed": true,
+    "inner_splits_inside_outer_training": true,
+    "outer_validation_not_used_for_early_stopping": true,
+    "feature_formulas_use_only_supplied_columns": true,
+    "target_and_id_excluded_from_features": true,
+    "prediction_arrays_finite_in_unit_interval": true,
+    "gpu_required_and_detected": true,
+    "in_training_gpu_telemetry_captured": true
+  }
+}
+
+--- code cell 14 start ---
+Decision: NEEDS_INDEPENDENT_SEED_REPLICATION
+Results report: D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\EXP02_REPORT.md
+Hash manifest: D:\gci\truth\experiments\exp02_financial_behaviour_replication_seed20261105\SHA256_MANIFEST.json
+Root/run/input artifacts hashed: 18
+
+execution_status=PASS

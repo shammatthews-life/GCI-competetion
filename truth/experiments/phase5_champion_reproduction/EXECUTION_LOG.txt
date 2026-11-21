@@ -1,0 +1,179 @@
+PHASE 5 STATIC SOURCE / DATA / ARTIFACT AUDIT
+UTC timestamp: 2026-11-04T05:01:01.737414+00:00
+Python: 3.12.10 (CPython)
+Command: python -B D:\gci\truth\experiments\phase5_champion_reproduction\audit_phase5_static.py
+Model training: NOT RUN (pre-run comparator gate blocked)
+INPUT D:\gci\inpuy\train.csv: rows=171202, columns=34, sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+INPUT D:\gci\inpuy\test.csv: rows=61500, columns=33, sha256=dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65
+V16 executed notebook: D:\gci\pre info\oct22\GCI_v16_everything_merged_o_78222 score.ipynb sha256=ca77c6a6dbf6f5d1ea80b4f0f23de1f0f0c73ea7b4ac6fab937fd32ed8881306
+V16 source-only notebook: D:\exp colab\GCI_v16_everything_merged.ipynb sha256=a1b3aec64c6730d58ad2d22f1c3a49dd0d3a9b66f05ab22054514add61f9dec3
+V16 canonical source hash (both copies): 0d6a0cc7be62873b66a759ffcd05d3d64e0b8e6b4dc8550990dbd829f9d09ef1
+V16 code cells=11; cells with execution counts=11
+EXP85 frozen submission: D:\gci\champion\submission_exp85_solo_champion.csv sha256=78c31bb4e4534330479faa26861a49559dcadc40c7eac45620b92d7d9e6ea947
+Historical reference: D:\gci\champion\00_HISTORICAL_REFERENCE\EXP85_HISTORICAL_CHAMPION.csv sha256=78c31bb4e4534330479faa26861a49559dcadc40c7eac45620b92d7d9e6ea947
+EXP85 source runner: D:\gci\champion\exp85_solo_runner.py sha256=d6e7a398ec4f08b1ff605da4886889d476e14ab9169baa81f00c3f04fede8be9
+Exact final anchor+suite OOF file exists: False
+Recovered Anchor74 OOF array exists at expected run path: False
+V17 component bundle exists: True
+V55 component bundle exists: False
+Saved V16 output lines matching metric/score diagnostics: 143
+  notebook cell 10: old_qf_shallow fold 1/5: AUC 0.77027 (61s)
+  notebook cell 10: old_qf_shallow fold 2/5: AUC 0.77318 (122s)
+  notebook cell 10: old_qf_shallow fold 3/5: AUC 0.77620 (181s)
+  notebook cell 10: old_qf_shallow fold 4/5: AUC 0.76980 (241s)
+  notebook cell 10: old_qf_shallow fold 5/5: AUC 0.77341 (279s)
+  notebook cell 10: old_qf_shallow: held-out AUC 0.77252
+  notebook cell 10: old_qf_reg fold 1/5: AUC 0.76994 (91s)
+  notebook cell 10: old_qf_reg fold 2/5: AUC 0.77380 (150s)
+  notebook cell 10: old_qf_reg fold 3/5: AUC 0.77646 (241s)
+  notebook cell 10: old_qf_reg fold 4/5: AUC 0.76910 (331s)
+  notebook cell 10: old_qf_reg fold 5/5: AUC 0.77209 (422s)
+  notebook cell 10: old_qf_reg: held-out AUC 0.77223
+  notebook cell 10: old_v1_allfam_oh fold 1/5: AUC 0.77040 (62s)
+  notebook cell 10: old_v1_allfam_oh fold 2/5: AUC 0.77424 (98s)
+  notebook cell 10: old_v1_allfam_oh fold 3/5: AUC 0.77767 (160s)
+  notebook cell 10: old_v1_allfam_oh fold 4/5: AUC 0.77060 (223s)
+  notebook cell 10: old_v1_allfam_oh fold 5/5: AUC 0.77193 (286s)
+  notebook cell 10: old_v1_allfam_oh: held-out AUC 0.77289
+  notebook cell 10: old_v2_allfam_oh fold 1/5: AUC 0.77004 (63s)
+  notebook cell 10: old_v2_allfam_oh fold 2/5: AUC 0.77542 (125s)
+  notebook cell 10: old_v2_allfam_oh fold 3/5: AUC 0.77704 (187s)
+  notebook cell 10: old_v2_allfam_oh fold 4/5: AUC 0.77063 (249s)
+  notebook cell 10: old_v2_allfam_oh fold 5/5: AUC 0.77200 (312s)
+  notebook cell 10: old_v2_allfam_oh: held-out AUC 0.77298
+  notebook cell 10: old_v2_mono fold 1/5: AUC 0.77059 (58s)
+  notebook cell 10: old_v2_mono fold 2/5: AUC 0.77386 (115s)
+  notebook cell 10: old_v2_mono fold 3/5: AUC 0.77623 (171s)
+  notebook cell 10: old_v2_mono fold 4/5: AUC 0.77070 (228s)
+  notebook cell 10: old_v2_mono fold 5/5: AUC 0.77241 (284s)
+  notebook cell 10: old_v2_mono: held-out AUC 0.77272
+  notebook cell 10: e1_qf_shallow fold 1/5: AUC 0.77227 (79s)
+  notebook cell 10: e1_qf_shallow fold 2/5: AUC 0.77522 (124s)
+  notebook cell 10: e1_qf_shallow fold 3/5: AUC 0.77807 (203s)
+  notebook cell 10: e1_qf_shallow fold 4/5: AUC 0.77185 (282s)
+  notebook cell 10: e1_qf_shallow fold 5/5: AUC 0.77503 (360s)
+  notebook cell 10: e1_qf_shallow: held-out AUC 0.77444
+  notebook cell 10: e1_qf_reg fold 1/5: AUC 0.77028 (117s)
+  notebook cell 10: e1_qf_reg fold 2/5: AUC 0.77508 (186s)
+  notebook cell 10: e1_qf_reg fold 3/5: AUC 0.77762 (302s)
+  notebook cell 10: e1_qf_reg fold 4/5: AUC 0.77034 (417s)
+  notebook cell 10: e1_qf_reg fold 5/5: AUC 0.77466 (486s)
+  notebook cell 10: e1_qf_reg: held-out AUC 0.77355
+  notebook cell 10: e1_v1_allfam_oh fold 1/5: AUC 0.77054 (75s)
+  notebook cell 10: e1_v1_allfam_oh fold 2/5: AUC 0.77637 (116s)
+  notebook cell 10: e1_v1_allfam_oh fold 3/5: AUC 0.77781 (156s)
+  notebook cell 10: e1_v1_allfam_oh fold 4/5: AUC 0.77161 (196s)
+  notebook cell 10: e1_v1_allfam_oh fold 5/5: AUC 0.77300 (235s)
+  notebook cell 10: e1_v1_allfam_oh: held-out AUC 0.77380
+  notebook cell 10: e1_v2_allfam_oh fold 1/5: AUC 0.77167 (41s)
+  notebook cell 10: e1_v2_allfam_oh fold 2/5: AUC 0.77537 (82s)
+  notebook cell 10: e1_v2_allfam_oh fold 3/5: AUC 0.77801 (122s)
+  notebook cell 10: e1_v2_allfam_oh fold 4/5: AUC 0.77100 (161s)
+  notebook cell 10: e1_v2_allfam_oh fold 5/5: AUC 0.77328 (203s)
+  notebook cell 10: e1_v2_allfam_oh: held-out AUC 0.77382
+  notebook cell 10: e1_v2_mono fold 1/5: AUC 0.77180 (68s)
+  notebook cell 10: e1_v2_mono fold 2/5: AUC 0.77501 (136s)
+  notebook cell 10: e1_v2_mono fold 3/5: AUC 0.77826 (205s)
+  notebook cell 10: e1_v2_mono fold 4/5: AUC 0.77206 (274s)
+  notebook cell 10: e1_v2_mono fold 5/5: AUC 0.77413 (343s)
+  notebook cell 10: e1_v2_mono: held-out AUC 0.77419
+  notebook cell 10: e1et_qf_shallow fold 1/5: AUC 0.77309 (79s)
+  notebook cell 10: e1et_qf_shallow fold 2/5: AUC 0.77619 (156s)
+  notebook cell 10: e1et_qf_shallow fold 3/5: AUC 0.77923 (235s)
+  notebook cell 10: e1et_qf_shallow fold 4/5: AUC 0.77362 (279s)
+  notebook cell 10: e1et_qf_shallow fold 5/5: AUC 0.77500 (324s)
+  notebook cell 10: e1et_qf_shallow: held-out AUC 0.77538
+  notebook cell 10: e1et_qf_reg fold 1/5: AUC 0.77192 (120s)
+  notebook cell 10: e1et_qf_reg fold 2/5: AUC 0.77676 (238s)
+  notebook cell 10: e1et_qf_reg fold 3/5: AUC 0.77897 (356s)
+  notebook cell 10: e1et_qf_reg fold 4/5: AUC 0.77229 (424s)
+  notebook cell 10: e1et_qf_reg fold 5/5: AUC 0.77560 (543s)
+  notebook cell 10: e1et_qf_reg: held-out AUC 0.77507
+  notebook cell 10: e1et_v1_allfam_oh fold 1/5: AUC 0.77223 (75s)
+  notebook cell 10: e1et_v1_allfam_oh fold 2/5: AUC 0.77662 (115s)
+  notebook cell 10: e1et_v1_allfam_oh fold 3/5: AUC 0.77877 (155s)
+  notebook cell 10: e1et_v1_allfam_oh fold 4/5: AUC 0.77210 (195s)
+  notebook cell 10: e1et_v1_allfam_oh fold 5/5: AUC 0.77495 (235s)
+  notebook cell 10: e1et_v1_allfam_oh: held-out AUC 0.77489
+  notebook cell 10: e1et_v2_allfam_oh fold 1/5: AUC 0.77253 (76s)
+  notebook cell 10: e1et_v2_allfam_oh fold 2/5: AUC 0.77656 (124s)
+  notebook cell 10: e1et_v2_allfam_oh fold 3/5: AUC 0.77954 (164s)
+  notebook cell 10: e1et_v2_allfam_oh fold 4/5: AUC 0.77323 (204s)
+  notebook cell 10: e1et_v2_allfam_oh fold 5/5: AUC 0.77483 (245s)
+  notebook cell 10: e1et_v2_allfam_oh: held-out AUC 0.77529
+  notebook cell 10: e1et_v2_mono fold 1/5: AUC 0.77257 (63s)
+  notebook cell 10: e1et_v2_mono fold 2/5: AUC 0.77684 (125s)
+  notebook cell 10: e1et_v2_mono fold 3/5: AUC 0.77964 (189s)
+  notebook cell 10: e1et_v2_mono fold 4/5: AUC 0.77313 (252s)
+  notebook cell 10: e1et_v2_mono fold 5/5: AUC 0.77496 (314s)
+  notebook cell 10: e1et_v2_mono: held-out AUC 0.77538
+  notebook cell 10: e1Aet_qf_shallow fold 1/5: AUC 0.77312 (48s)
+  notebook cell 10: e1Aet_qf_shallow fold 2/5: AUC 0.77642 (92s)
+  notebook cell 10: e1Aet_qf_shallow fold 3/5: AUC 0.77950 (169s)
+  notebook cell 10: e1Aet_qf_shallow fold 4/5: AUC 0.77352 (246s)
+  notebook cell 10: e1Aet_qf_shallow fold 5/5: AUC 0.77522 (291s)
+  notebook cell 10: e1Aet_qf_shallow: held-out AUC 0.77551
+  notebook cell 10: e1Aet_qf_reg fold 1/5: AUC 0.77217 (117s)
+  notebook cell 10: e1Aet_qf_reg fold 2/5: AUC 0.77660 (235s)
+  notebook cell 10: e1Aet_qf_reg fold 3/5: AUC 0.77925 (303s)
+  notebook cell 10: e1Aet_qf_reg fold 4/5: AUC 0.77222 (421s)
+  notebook cell 10: e1Aet_qf_reg fold 5/5: AUC 0.77568 (539s)
+  notebook cell 10: e1Aet_qf_reg: held-out AUC 0.77515
+  notebook cell 10: e1Aet_v1_allfam_oh fold 1/5: AUC 0.77231 (74s)
+  notebook cell 10: e1Aet_v1_allfam_oh fold 2/5: AUC 0.77674 (114s)
+  notebook cell 10: e1Aet_v1_allfam_oh fold 3/5: AUC 0.77907 (153s)
+  notebook cell 10: e1Aet_v1_allfam_oh fold 4/5: AUC 0.77180 (193s)
+  notebook cell 10: e1Aet_v1_allfam_oh fold 5/5: AUC 0.77516 (233s)
+  notebook cell 10: e1Aet_v1_allfam_oh: held-out AUC 0.77496
+  notebook cell 10: e1Aet_v2_allfam_oh fold 1/5: AUC 0.77272 (76s)
+  notebook cell 10: e1Aet_v2_allfam_oh fold 2/5: AUC 0.77642 (115s)
+  notebook cell 10: e1Aet_v2_allfam_oh fold 3/5: AUC 0.77995 (155s)
+  notebook cell 10: e1Aet_v2_allfam_oh fold 4/5: AUC 0.77269 (194s)
+  notebook cell 10: e1Aet_v2_allfam_oh fold 5/5: AUC 0.77519 (234s)
+  notebook cell 10: e1Aet_v2_allfam_oh: held-out AUC 0.77534
+  notebook cell 10: e1Aet_v2_mono fold 1/5: AUC 0.77279 (63s)
+  notebook cell 10: e1Aet_v2_mono fold 2/5: AUC 0.77700 (125s)
+  notebook cell 10: e1Aet_v2_mono fold 3/5: AUC 0.78003 (188s)
+  notebook cell 10: e1Aet_v2_mono fold 4/5: AUC 0.77301 (250s)
+  notebook cell 10: e1Aet_v2_mono fold 5/5: AUC 0.77529 (312s)
+  notebook cell 10: e1Aet_v2_mono: held-out AUC 0.77557
+  notebook cell 12: CatBoost-product fold 1/5: AUC 0.77035 (534s)
+  notebook cell 12: CatBoost-product fold 2/5: AUC 0.77315 (1068s)
+  notebook cell 12: CatBoost-product fold 3/5: AUC 0.77599 (1603s)
+  notebook cell 12: CatBoost-product fold 4/5: AUC 0.76990 (2133s)
+  notebook cell 12: CatBoost-product fold 5/5: AUC 0.77135 (2663s)
+  notebook cell 15: held-out AUC of the champion formula (weights fixed in advance): 0.77649   [v15 reference without partner/community keys: 0.77404]
+  notebook cell 15: old    blend held-out AUC 0.77412
+  notebook cell 15: e1     blend held-out AUC 0.77512
+  notebook cell 15: e1et   blend held-out AUC 0.77608
+  notebook cell 15: e1Aet  blend held-out AUC 0.77618
+  notebook cell 17: fold 1 {'base (no label blocks)': np.float64(0.75874), '+ v15 product keys': np.float64(0.76929), '+ community CT keys': np.float64(0.76955), '+ community CT keys + partner': np.float64(0.77098)}
+  notebook cell 17: fold 2 {'base (no label blocks)': np.float64(0.76169), '+ v15 product keys': np.float64(0.77405), '+ community CT keys': np.float64(0.77401), '+ community CT keys + partner': np.float64(0.77438)}
+  notebook cell 17: fold 3 {'base (no label blocks)': np.float64(0.76721), '+ v15 product keys': np.float64(0.77654), '+ community CT keys': np.float64(0.77674), '+ community CT keys + partner': np.float64(0.77755)}
+  notebook cell 17: fold 4 {'base (no label blocks)': np.float64(0.75694), '+ v15 product keys': np.float64(0.76895), '+ community CT keys': np.float64(0.76919), '+ community CT keys + partner': np.float64(0.77092)}
+  notebook cell 17: fold 5 {'base (no label blocks)': np.float64(0.76166), '+ v15 product keys': np.float64(0.77042), '+ community CT keys': np.float64(0.7708), '+ community CT keys + partner': np.float64(0.77153)}
+  notebook cell 17: base (no label blocks)             mean AUC 0.76125 | delta vs base +0.00000 | folds improved by >=0.0002: 0/5
+  notebook cell 17: + v15 product keys                 mean AUC 0.77185 | delta vs base +0.01060 | folds improved by >=0.0002: 5/5
+  notebook cell 17: + community CT keys                mean AUC 0.77206 | delta vs base +0.01081 | folds improved by >=0.0002: 5/5
+  notebook cell 17: + community CT keys + partner      mean AUC 0.77307 | delta vs base +0.01182 | folds improved by >=0.0002: 5/5
+  notebook cell 19: (a) permutation test held-out AUC = 0.5014  (expect ~0.50)
+  notebook cell 19: (b) adversarial AUC = 0.6856  (0.50 = identical)
+  notebook cell 19: (c) full champion held-out AUC 0.77649
+  notebook cell 21: cross-fitted regime-aware blend OOF AUC 0.77648  vs fixed-weight 0.9/0.1 blend 0.77649
+Output files created and non-empty:
+  D:\gci\truth\experiments\phase5_champion_reproduction\SOURCE_CODE_AUDIT.md
+  D:\gci\truth\experiments\phase5_champion_reproduction\CHAMPION_SOURCE_AUDIT.md
+  D:\gci\truth\experiments\phase5_champion_reproduction\V16_VALIDATION_AUDIT.md
+  D:\gci\truth\experiments\phase5_champion_reproduction\V16_FEATURE_EXTRACTION.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\V16_MODEL_CONFIGURATION.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\V16_SAVED_OUTPUT_EVIDENCE.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\FEATURE_ALIAS_AUDIT.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\MISSING_ARTIFACTS.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\FOLD_LEVEL_CV_RESULTS.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\BASELINE_VS_FEATURES_RESULTS.csv
+  D:\gci\truth\experiments\phase5_champion_reproduction\FINAL_AUDIT_REPORT.md
+  D:\gci\truth\experiments\phase5_champion_reproduction\ENVIRONMENT.txt
+  D:\gci\truth\experiments\phase5_champion_reproduction\requirements.txt
+STATUS: STATIC AUDIT PASS; MODEL EXPERIMENT BLOCKED; NO AUC CLAIM.
+
+Execution status: PASS (static audit); timestamp 2026-11-04T05:01:02.413608+00:00

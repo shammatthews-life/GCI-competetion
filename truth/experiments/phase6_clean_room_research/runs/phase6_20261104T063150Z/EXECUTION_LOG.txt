@@ -1,0 +1,24 @@
+status=COMPLETED
+run_id=20261104T063150Z
+started_utc=2026-11-04T06:31:53.233525+00:00
+finished_utc=2026-11-04T06:33:38.940790+00:00
+runtime_seconds=105.700
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+numpy=2.5.4; pandas=3.1.0; scipy=1.18.1; sklearn=1.9.1
+cpu_count=12
+train_shape=(171202, 34); train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+test_sha256=dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65; test predictors read=no; header/id checks only=yes
+official_rules_sha256=620f0e3076c4585b180518ae3ff2e42cb077fd5692071513399abe30a2b90b91
+dictionary_sha256=4dcec9310a82dbd7d65a8290bad69bbac34e632494568a96281e8a779a88c25b
+ledger_latest_before_run=2026-11-04 Phase 5 Task 3 V16 cache provenance investigation
+phase6_source_sha256=eacd3cd8c9be333fb234f8fc788853fa6a401d5efc6d1642397b2634d1f050f7
+fold_sha256=a8455332203da5234e3eb180cc1852b95b5dccdc627ceb7f6d22e8d0f5cd5cfb; saved_seed42_fold_map_match=True
+baseline_pooled_auc=0.760658451; baseline_runtime_seconds=80.398
+baseline_oof_sha256=03a88fc40fa8071cce342bc26eda221bc0359993c8688311a43e8c36521e8de3
+process_peak_working_set_bytes=None
+eligibility_rows=14; validation_failure_rows=8; experiments_planned=12
+large_model_training_sweeps=NOT RUN
+test_TARGET_read=NO; external_data=NO; pooled_train_test_fit=NO; target_encoding=NO; test_to_test_coupling=NO
+submission_created=NO; champion_modified=NO; historical_artifacts_modified=NO
+outputs=D:\gci\truth\experiments\phase6_clean_room_research\runs\phase6_20261104T063150Z

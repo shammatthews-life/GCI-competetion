@@ -1,0 +1,28 @@
+command: python D:\gci\truth\experiments\phase3d_competition_compliance_and_domain_research\phase3d_formula_experiment.py
+started_utc: 2026-11-03T17:43:18.890597+00:00
+finished_utc: 2026-11-03T17:46:48.566550+00:00
+train_shape: (171202, 34)
+target_rate: 0.08072920
+official_train_sha256: b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+working_train_sha256: b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+fold_sizes: {"1": 34241, "2": 34241, "3": 34240, "4": 34240, "5": 34240}
+elapsed_seconds: 209.71
+status: SUCCESS
+errors: none
+warnings: v5 saved scores are notebook output only and were not reconstructed from raw caches; fixed folds are previously examined discovery folds.
+verified_outputs: [
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\SOURCE_CODE_AUDIT.md",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\phase3d_formula_experiment.py",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\FORMULA_CORRECTNESS_AUDIT.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\FORMULA_DISTRIBUTIONS.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\FOLD_LEVEL_CV_RESULTS.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\FORMULA_OOF_PREDICTIONS.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\BASELINE_VS_FORMULAS_RESULTS.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\V5_NOTEBOOK_CELL_INVENTORY.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\V5_NOTEBOOK_SAVED_OUTPUT.txt",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\V5_SCORE_CLAIMS.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\INPUT_SHA256_MANIFEST.csv",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\environment.json",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\FINAL_AUDIT_REPORT.md",
+  "D:\\gci\\truth\\experiments\\phase3d_competition_compliance_and_domain_research\\OUTPUT_FILE_MANIFEST.csv"
+]

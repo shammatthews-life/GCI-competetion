@@ -1,0 +1,79 @@
+2026-11-05 13:29:53,815Z INFO Starting nested GPU CatBoost hyperparameter comparison
+2026-11-05 13:29:53,815Z INFO Outer folds are frozen to Phase 13 seed 20261113
+2026-11-05 13:29:53,816Z INFO Four fixed parameter sets; 3 inner folds per outer fold
+2026-11-05 13:29:56,576Z INFO Outer fold 1/5: fit=136961 validation=34241
+2026-11-05 13:30:18,920Z INFO outer=1 config=historical_d6_lr005_i700 inner=1 auc=0.761287 features=99 cat=16
+2026-11-05 13:30:40,240Z INFO outer=1 config=historical_d6_lr005_i700 inner=2 auc=0.763541 features=99 cat=16
+2026-11-05 13:31:01,157Z INFO outer=1 config=historical_d6_lr005_i700 inner=3 auc=0.764677 features=99 cat=16
+2026-11-05 13:31:24,729Z INFO outer=1 config=shallower_d5_lr005_i850 inner=1 auc=0.761489 features=99 cat=16
+2026-11-05 13:31:47,005Z INFO outer=1 config=shallower_d5_lr005_i850 inner=2 auc=0.764461 features=99 cat=16
+2026-11-05 13:32:09,592Z INFO outer=1 config=shallower_d5_lr005_i850 inner=3 auc=0.764768 features=99 cat=16
+2026-11-05 13:32:35,241Z INFO outer=1 config=deeper_d7_lr004_i800 inner=1 auc=0.761297 features=99 cat=16
+2026-11-05 13:33:00,816Z INFO outer=1 config=deeper_d7_lr004_i800 inner=2 auc=0.763975 features=99 cat=16
+2026-11-05 13:33:26,286Z INFO outer=1 config=deeper_d7_lr004_i800 inner=3 auc=0.765092 features=99 cat=16
+2026-11-05 13:33:54,546Z INFO outer=1 config=regularized_d6_lr0035_i1000 inner=1 auc=0.760977 features=99 cat=16
+2026-11-05 13:34:22,693Z INFO outer=1 config=regularized_d6_lr0035_i1000 inner=2 auc=0.765235 features=99 cat=16
+2026-11-05 13:34:47,921Z INFO outer=1 config=regularized_d6_lr0035_i1000 inner=3 auc=0.763854 features=99 cat=16
+2026-11-05 13:34:48,000Z INFO outer=1 selected=shallower_d5_lr005_i850 pooled_inner_auc=0.763563
+2026-11-05 13:35:02,031Z INFO outer=1 auc=0.773427 baseline=0.772875 delta=+0.000552
+2026-11-05 13:35:02,052Z INFO Outer fold 2/5: fit=136961 validation=34241
+2026-11-05 13:35:22,682Z INFO outer=2 config=historical_d6_lr005_i700 inner=1 auc=0.759855 features=99 cat=16
+2026-11-05 13:35:43,445Z INFO outer=2 config=historical_d6_lr005_i700 inner=2 auc=0.762535 features=99 cat=16
+2026-11-05 13:36:03,975Z INFO outer=2 config=historical_d6_lr005_i700 inner=3 auc=0.766594 features=99 cat=16
+2026-11-05 13:36:29,002Z INFO outer=2 config=shallower_d5_lr005_i850 inner=1 auc=0.759879 features=99 cat=16
+2026-11-05 13:36:51,149Z INFO outer=2 config=shallower_d5_lr005_i850 inner=2 auc=0.761567 features=99 cat=16
+2026-11-05 13:37:11,458Z INFO outer=2 config=shallower_d5_lr005_i850 inner=3 auc=0.766625 features=99 cat=16
+2026-11-05 13:37:35,481Z INFO outer=2 config=deeper_d7_lr004_i800 inner=1 auc=0.760627 features=99 cat=16
+2026-11-05 13:38:02,204Z INFO outer=2 config=deeper_d7_lr004_i800 inner=2 auc=0.761948 features=99 cat=16
+2026-11-05 13:38:28,122Z INFO outer=2 config=deeper_d7_lr004_i800 inner=3 auc=0.766814 features=99 cat=16
+2026-11-05 13:38:54,521Z INFO outer=2 config=regularized_d6_lr0035_i1000 inner=1 auc=0.761847 features=99 cat=16
+2026-11-05 13:39:23,439Z INFO outer=2 config=regularized_d6_lr0035_i1000 inner=2 auc=0.762262 features=99 cat=16
+2026-11-05 13:39:52,686Z INFO outer=2 config=regularized_d6_lr0035_i1000 inner=3 auc=0.767085 features=99 cat=16
+2026-11-05 13:39:52,763Z INFO outer=2 selected=regularized_d6_lr0035_i1000 pooled_inner_auc=0.763698
+2026-11-05 13:40:22,271Z INFO outer=2 auc=0.775155 baseline=0.774920 delta=+0.000235
+2026-11-05 13:40:22,286Z INFO Outer fold 3/5: fit=136962 validation=34240
+2026-11-05 13:40:43,591Z INFO outer=3 config=historical_d6_lr005_i700 inner=1 auc=0.771719 features=99 cat=16
+2026-11-05 13:41:00,917Z INFO outer=3 config=historical_d6_lr005_i700 inner=2 auc=0.765728 features=99 cat=16
+2026-11-05 13:41:10,226Z INFO outer=3 config=historical_d6_lr005_i700 inner=3 auc=0.764151 features=99 cat=16
+2026-11-05 13:41:20,318Z INFO outer=3 config=shallower_d5_lr005_i850 inner=1 auc=0.772359 features=99 cat=16
+2026-11-05 13:41:30,255Z INFO outer=3 config=shallower_d5_lr005_i850 inner=2 auc=0.764805 features=99 cat=16
+2026-11-05 13:41:41,626Z INFO outer=3 config=shallower_d5_lr005_i850 inner=3 auc=0.764052 features=99 cat=16
+2026-11-05 13:42:02,374Z INFO outer=3 config=deeper_d7_lr004_i800 inner=1 auc=0.771173 features=99 cat=16
+2026-11-05 13:42:20,484Z INFO outer=3 config=deeper_d7_lr004_i800 inner=2 auc=0.763573 features=99 cat=16
+2026-11-05 13:42:38,057Z INFO outer=3 config=deeper_d7_lr004_i800 inner=3 auc=0.763823 features=99 cat=16
+2026-11-05 13:42:58,068Z INFO outer=3 config=regularized_d6_lr0035_i1000 inner=1 auc=0.771840 features=99 cat=16
+2026-11-05 13:43:17,598Z INFO outer=3 config=regularized_d6_lr0035_i1000 inner=2 auc=0.764476 features=99 cat=16
+2026-11-05 13:43:37,134Z INFO outer=3 config=regularized_d6_lr0035_i1000 inner=3 auc=0.764866 features=99 cat=16
+2026-11-05 13:43:37,190Z INFO outer=3 selected=historical_d6_lr005_i700 pooled_inner_auc=0.767129
+2026-11-05 13:43:52,359Z INFO outer=3 auc=0.760986 baseline=0.761288 delta=-0.000303
+2026-11-05 13:43:52,372Z INFO Outer fold 4/5: fit=136962 validation=34240
+2026-11-05 13:44:06,965Z INFO outer=4 config=historical_d6_lr005_i700 inner=1 auc=0.759962 features=99 cat=16
+2026-11-05 13:44:21,882Z INFO outer=4 config=historical_d6_lr005_i700 inner=2 auc=0.771032 features=99 cat=16
+2026-11-05 13:44:36,953Z INFO outer=4 config=historical_d6_lr005_i700 inner=3 auc=0.766504 features=99 cat=16
+2026-11-05 13:44:54,081Z INFO outer=4 config=shallower_d5_lr005_i850 inner=1 auc=0.760057 features=99 cat=16
+2026-11-05 13:45:11,642Z INFO outer=4 config=shallower_d5_lr005_i850 inner=2 auc=0.770875 features=99 cat=16
+2026-11-05 13:45:28,997Z INFO outer=4 config=shallower_d5_lr005_i850 inner=3 auc=0.766786 features=99 cat=16
+2026-11-05 13:45:46,949Z INFO outer=4 config=deeper_d7_lr004_i800 inner=1 auc=0.759956 features=99 cat=16
+2026-11-05 13:46:06,340Z INFO outer=4 config=deeper_d7_lr004_i800 inner=2 auc=0.768559 features=99 cat=16
+2026-11-05 13:46:24,421Z INFO outer=4 config=deeper_d7_lr004_i800 inner=3 auc=0.766326 features=99 cat=16
+2026-11-05 13:46:44,343Z INFO outer=4 config=regularized_d6_lr0035_i1000 inner=1 auc=0.760261 features=99 cat=16
+2026-11-05 13:47:04,275Z INFO outer=4 config=regularized_d6_lr0035_i1000 inner=2 auc=0.770587 features=99 cat=16
+2026-11-05 13:47:24,873Z INFO outer=4 config=regularized_d6_lr0035_i1000 inner=3 auc=0.767308 features=99 cat=16
+2026-11-05 13:47:24,933Z INFO outer=4 selected=regularized_d6_lr0035_i1000 pooled_inner_auc=0.765926
+2026-11-05 13:47:46,225Z INFO outer=4 auc=0.765226 baseline=0.765141 delta=+0.000084
+2026-11-05 13:47:46,240Z INFO Outer fold 5/5: fit=136962 validation=34240
+2026-11-05 13:48:01,144Z INFO outer=5 config=historical_d6_lr005_i700 inner=1 auc=0.770384 features=99 cat=16
+2026-11-05 13:48:17,721Z INFO outer=5 config=historical_d6_lr005_i700 inner=2 auc=0.762387 features=99 cat=16
+2026-11-05 13:48:33,588Z INFO outer=5 config=historical_d6_lr005_i700 inner=3 auc=0.765672 features=99 cat=16
+2026-11-05 13:48:50,662Z INFO outer=5 config=shallower_d5_lr005_i850 inner=1 auc=0.769951 features=99 cat=16
+2026-11-05 13:49:08,163Z INFO outer=5 config=shallower_d5_lr005_i850 inner=2 auc=0.763419 features=99 cat=16
+2026-11-05 13:49:25,121Z INFO outer=5 config=shallower_d5_lr005_i850 inner=3 auc=0.765355 features=99 cat=16
+2026-11-05 13:49:43,522Z INFO outer=5 config=deeper_d7_lr004_i800 inner=1 auc=0.770834 features=99 cat=16
+2026-11-05 13:50:01,882Z INFO outer=5 config=deeper_d7_lr004_i800 inner=2 auc=0.763896 features=99 cat=16
+2026-11-05 13:50:20,363Z INFO outer=5 config=deeper_d7_lr004_i800 inner=3 auc=0.766198 features=99 cat=16
+2026-11-05 13:50:41,515Z INFO outer=5 config=regularized_d6_lr0035_i1000 inner=1 auc=0.770345 features=99 cat=16
+2026-11-05 13:51:02,008Z INFO outer=5 config=regularized_d6_lr0035_i1000 inner=2 auc=0.763352 features=99 cat=16
+2026-11-05 13:51:25,030Z INFO outer=5 config=regularized_d6_lr0035_i1000 inner=3 auc=0.766130 features=99 cat=16
+2026-11-05 13:51:25,084Z INFO outer=5 selected=deeper_d7_lr004_i800 pooled_inner_auc=0.766911
+2026-11-05 13:51:45,490Z INFO outer=5 auc=0.763927 baseline=0.763401 delta=+0.000525
+2026-11-05 13:53:40,851Z INFO Completed: pooled_auc=0.767653 baseline=0.767511 delta=+0.000142 CI=[-0.000442, 0.000659]

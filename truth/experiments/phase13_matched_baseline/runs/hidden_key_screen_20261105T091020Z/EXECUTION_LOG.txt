@@ -1,0 +1,6 @@
+Started UTC: 2026-11-05T09:10:20.168640+00:00
+Screened 50 candidates
+Screened 100 candidates
+Screened 150 candidates
+Screened 200 candidates
+Screened 250 candidates

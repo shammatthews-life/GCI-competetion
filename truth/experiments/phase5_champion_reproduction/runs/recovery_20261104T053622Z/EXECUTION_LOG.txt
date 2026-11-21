@@ -1,0 +1,24 @@
+STATUS: COMPLETED
+UTC start: 2026-11-04T05:36:24.661279+00:00
+UTC end: 2026-11-04T05:36:27.051785+00:00
+Command: python -B "D:\gci\truth\experiments\phase5_champion_reproduction\recover_phase5_evidence.py" --run-id 20261104T053622Z
+Train dimensions: 171202 x 34
+Test dimensions: 61500 x 33
+Train SHA-256: b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+Test SHA-256: dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65
+Model training: NOT RUN (OOF comparator gate remains blocked).
+Candidate fixed-formula diagnostic AUC: 0.77404329 (not a reproduced result)
+Separate bundle recomputed AUC: 0.79467683; stored final_auc=0.782000
+Exact duplicate OOF arrays in separate bundle: True
+Errors: none.
+Warnings: none.
+Outputs:
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\ENVIRONMENT.txt
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\FINAL_RECOVERY_REPORT.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\OOF_READINESS_MATRIX.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\recover_phase5_evidence.py
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\RECOVERED_ARTIFACT_INVENTORY.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\SOURCE_CODE_AUDIT.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\V16_CACHE_SCORE_COMPARISON.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\EXECUTION_LOG.txt
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\recovery_20261104T053622Z\TERMINAL_OUTPUT.txt

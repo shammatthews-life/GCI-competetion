@@ -1,0 +1,14 @@
+Execution timestamp UTC: 2026-11-03T09:58:03Z
+Train shape: (171202, 34); Test shape: (61500, 33)
+Command: python D:\gci\truth\experiments\phase2b_feature_intelligence\run_feature_intelligence.py
+Runtime seconds: 4157.9
+Status: successful
+Outer fold stopping leakage: none; iteration selection used inner training split.
+Peer group fit scope: fit partition only.
+External data: none.
+
+                    experiment  mean_fold_auc  std_fold_auc  pooled_oof_auc  delta_pooled_vs_baseline  folds_improved_vs_baseline
+                  raw_baseline       0.760729      0.003770        0.760658                  0.000000                           0
+         external_interactions       0.760178      0.003202        0.760058                 -0.000600                           1
+               peer_deviations       0.760800      0.003309        0.760693                  0.000034                           3
+combined_peer_and_interactions       0.759994      0.003633        0.759909                 -0.000750                           1

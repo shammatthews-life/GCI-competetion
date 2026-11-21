@@ -1,0 +1,255 @@
+status=RUNNING
+run_id=20261104T181500LOCAL
+started_utc=2026-11-04T12:50:39.645765+00:00
+gpu_device_info=NVIDIA GeForce RTX 4050 Laptop GPU, 592.82, 6141 MiB
+LGBM seed=42; fold=1/5; prepare
+LGBM seed=42; fold=1; variant=product_baseline; auc=0.75950079
+LGBM seed=42; fold=1; variant=te_q3; auc=0.76121773
+LGBM seed=42; fold=1; variant=te_q4; auc=0.76193226
+LGBM seed=42; fold=1; variant=te_q5; auc=0.76234161
+LGBM seed=42; fold=1; variant=te_q4_cash; auc=0.76185561
+LGBM seed=42; fold=1; variant=te_amount_ca; auc=0.75927384
+LGBM seed=42; fold=1; variant=te_amount_gc; auc=0.75943300
+LGBM seed=42; fold=1; variant=te_exact_gca; auc=0.75976066
+LGBM seed=42; fold=1; variant=te_k_only; auc=0.75953989
+LGBM seed=42; fold=1; variant=te_q4_plus_k; auc=0.76060238
+LGBM seed=42; fold=1; variant=ordinal_q4; auc=0.75992167
+LGBM seed=42; fold=2/5; prepare
+LGBM seed=42; fold=2; variant=product_baseline; auc=0.76119914
+LGBM seed=42; fold=2; variant=te_q3; auc=0.76412019
+LGBM seed=42; fold=2; variant=te_q4; auc=0.76571844
+LGBM seed=42; fold=2; variant=te_q5; auc=0.76374965
+LGBM seed=42; fold=2; variant=te_q4_cash; auc=0.76559368
+LGBM seed=42; fold=2; variant=te_amount_ca; auc=0.76132816
+LGBM seed=42; fold=2; variant=te_amount_gc; auc=0.76041847
+LGBM seed=42; fold=2; variant=te_exact_gca; auc=0.76155785
+LGBM seed=42; fold=2; variant=te_k_only; auc=0.76093851
+LGBM seed=42; fold=2; variant=te_q4_plus_k; auc=0.76405358
+LGBM seed=42; fold=2; variant=ordinal_q4; auc=0.76069443
+LGBM seed=42; fold=3/5; prepare
+LGBM seed=42; fold=3; variant=product_baseline; auc=0.76852736
+LGBM seed=42; fold=3; variant=te_q3; auc=0.77020024
+LGBM seed=42; fold=3; variant=te_q4; auc=0.77228351
+LGBM seed=42; fold=3; variant=te_q5; auc=0.77087800
+LGBM seed=42; fold=3; variant=te_q4_cash; auc=0.77252791
+LGBM seed=42; fold=3; variant=te_amount_ca; auc=0.76904715
+LGBM seed=42; fold=3; variant=te_amount_gc; auc=0.76798828
+LGBM seed=42; fold=3; variant=te_exact_gca; auc=0.76930848
+LGBM seed=42; fold=3; variant=te_k_only; auc=0.76834031
+LGBM seed=42; fold=3; variant=te_q4_plus_k; auc=0.76936686
+LGBM seed=42; fold=3; variant=ordinal_q4; auc=0.76808152
+LGBM seed=42; fold=4/5; prepare
+LGBM seed=42; fold=4; variant=product_baseline; auc=0.75781915
+LGBM seed=42; fold=4; variant=te_q3; auc=0.76200723
+LGBM seed=42; fold=4; variant=te_q4; auc=0.76157806
+LGBM seed=42; fold=4; variant=te_q5; auc=0.76134899
+LGBM seed=42; fold=4; variant=te_q4_cash; auc=0.76189325
+LGBM seed=42; fold=4; variant=te_amount_ca; auc=0.75995023
+LGBM seed=42; fold=4; variant=te_amount_gc; auc=0.75834887
+LGBM seed=42; fold=4; variant=te_exact_gca; auc=0.75984684
+LGBM seed=42; fold=4; variant=te_k_only; auc=0.75728295
+LGBM seed=42; fold=4; variant=te_q4_plus_k; auc=0.75916178
+LGBM seed=42; fold=4; variant=ordinal_q4; auc=0.75797098
+LGBM seed=42; fold=5/5; prepare
+LGBM seed=42; fold=5; variant=product_baseline; auc=0.76334782
+LGBM seed=42; fold=5; variant=te_q3; auc=0.76640555
+LGBM seed=42; fold=5; variant=te_q4; auc=0.76615594
+LGBM seed=42; fold=5; variant=te_q5; auc=0.76441384
+LGBM seed=42; fold=5; variant=te_q4_cash; auc=0.76659364
+LGBM seed=42; fold=5; variant=te_amount_ca; auc=0.76308002
+LGBM seed=42; fold=5; variant=te_amount_gc; auc=0.76184071
+LGBM seed=42; fold=5; variant=te_exact_gca; auc=0.76368082
+LGBM seed=42; fold=5; variant=te_k_only; auc=0.76178017
+LGBM seed=42; fold=5; variant=te_q4_plus_k; auc=0.76296976
+LGBM seed=42; fold=5; variant=ordinal_q4; auc=0.76208781
+LGBM seed=7; fold=1/5; prepare
+LGBM seed=7; fold=1; variant=product_baseline; auc=0.76195125
+LGBM seed=7; fold=1; variant=te_q3; auc=0.76471128
+LGBM seed=7; fold=1; variant=te_q4; auc=0.76438920
+LGBM seed=7; fold=1; variant=te_q5; auc=0.76397293
+LGBM seed=7; fold=1; variant=te_q4_cash; auc=0.76501745
+LGBM seed=7; fold=1; variant=te_amount_ca; auc=0.76269702
+LGBM seed=7; fold=1; variant=te_amount_gc; auc=0.76164812
+LGBM seed=7; fold=1; variant=te_exact_gca; auc=0.76229256
+LGBM seed=7; fold=1; variant=te_k_only; auc=0.76167321
+LGBM seed=7; fold=1; variant=te_q4_plus_k; auc=0.76394843
+LGBM seed=7; fold=1; variant=ordinal_q4; auc=0.76179875
+LGBM seed=7; fold=2/5; prepare
+LGBM seed=7; fold=2; variant=product_baseline; auc=0.76362262
+LGBM seed=7; fold=2; variant=te_q3; auc=0.76773461
+LGBM seed=7; fold=2; variant=te_q4; auc=0.76800570
+LGBM seed=7; fold=2; variant=te_q5; auc=0.76595232
+LGBM seed=7; fold=2; variant=te_q4_cash; auc=0.76683901
+LGBM seed=7; fold=2; variant=te_amount_ca; auc=0.76365546
+LGBM seed=7; fold=2; variant=te_amount_gc; auc=0.76293220
+LGBM seed=7; fold=2; variant=te_exact_gca; auc=0.76385511
+LGBM seed=7; fold=2; variant=te_k_only; auc=0.76400457
+LGBM seed=7; fold=2; variant=te_q4_plus_k; auc=0.76460342
+LGBM seed=7; fold=2; variant=ordinal_q4; auc=0.76435328
+LGBM seed=7; fold=3/5; prepare
+LGBM seed=7; fold=3; variant=product_baseline; auc=0.76390212
+LGBM seed=7; fold=3; variant=te_q3; auc=0.76406561
+LGBM seed=7; fold=3; variant=te_q4; auc=0.76606106
+LGBM seed=7; fold=3; variant=te_q5; auc=0.76683310
+LGBM seed=7; fold=3; variant=te_q4_cash; auc=0.76641756
+LGBM seed=7; fold=3; variant=te_amount_ca; auc=0.76448769
+LGBM seed=7; fold=3; variant=te_amount_gc; auc=0.76280404
+LGBM seed=7; fold=3; variant=te_exact_gca; auc=0.76360506
+LGBM seed=7; fold=3; variant=te_k_only; auc=0.76274308
+LGBM seed=7; fold=3; variant=te_q4_plus_k; auc=0.76474502
+LGBM seed=7; fold=3; variant=ordinal_q4; auc=0.76475626
+LGBM seed=7; fold=4/5; prepare
+LGBM seed=7; fold=4; variant=product_baseline; auc=0.76100750
+LGBM seed=7; fold=4; variant=te_q3; auc=0.76292927
+LGBM seed=7; fold=4; variant=te_q4; auc=0.76373112
+LGBM seed=7; fold=4; variant=te_q5; auc=0.76218221
+LGBM seed=7; fold=4; variant=te_q4_cash; auc=0.76368762
+LGBM seed=7; fold=4; variant=te_amount_ca; auc=0.76346463
+LGBM seed=7; fold=4; variant=te_amount_gc; auc=0.76079924
+LGBM seed=7; fold=4; variant=te_exact_gca; auc=0.76267660
+LGBM seed=7; fold=4; variant=te_k_only; auc=0.76128334
+LGBM seed=7; fold=4; variant=te_q4_plus_k; auc=0.75964176
+LGBM seed=7; fold=4; variant=ordinal_q4; auc=0.76152758
+LGBM seed=7; fold=5/5; prepare
+LGBM seed=7; fold=5; variant=product_baseline; auc=0.76370979
+LGBM seed=7; fold=5; variant=te_q3; auc=0.76599189
+LGBM seed=7; fold=5; variant=te_q4; auc=0.76759675
+LGBM seed=7; fold=5; variant=te_q5; auc=0.76580296
+LGBM seed=7; fold=5; variant=te_q4_cash; auc=0.76719474
+LGBM seed=7; fold=5; variant=te_amount_ca; auc=0.76331498
+LGBM seed=7; fold=5; variant=te_amount_gc; auc=0.76462784
+LGBM seed=7; fold=5; variant=te_exact_gca; auc=0.76323491
+LGBM seed=7; fold=5; variant=te_k_only; auc=0.76380375
+LGBM seed=7; fold=5; variant=te_q4_plus_k; auc=0.76293798
+LGBM seed=7; fold=5; variant=ordinal_q4; auc=0.76480226
+LGBM seed=2026; fold=1/5; prepare
+LGBM seed=2026; fold=1; variant=product_baseline; auc=0.76154467
+LGBM seed=2026; fold=1; variant=te_q3; auc=0.76353431
+LGBM seed=2026; fold=1; variant=te_q4; auc=0.76397766
+LGBM seed=2026; fold=1; variant=te_q5; auc=0.76322965
+LGBM seed=2026; fold=1; variant=te_q4_cash; auc=0.76391440
+LGBM seed=2026; fold=1; variant=te_amount_ca; auc=0.76150545
+LGBM seed=2026; fold=1; variant=te_amount_gc; auc=0.76109852
+LGBM seed=2026; fold=1; variant=te_exact_gca; auc=0.76118175
+LGBM seed=2026; fold=1; variant=te_k_only; auc=0.76192021
+LGBM seed=2026; fold=1; variant=te_q4_plus_k; auc=0.76173547
+LGBM seed=2026; fold=1; variant=ordinal_q4; auc=0.76247422
+LGBM seed=2026; fold=2/5; prepare
+LGBM seed=2026; fold=2; variant=product_baseline; auc=0.75469003
+LGBM seed=2026; fold=2; variant=te_q3; auc=0.75709782
+LGBM seed=2026; fold=2; variant=te_q4; auc=0.75802196
+LGBM seed=2026; fold=2; variant=te_q5; auc=0.75705753
+LGBM seed=2026; fold=2; variant=te_q4_cash; auc=0.75823400
+LGBM seed=2026; fold=2; variant=te_amount_ca; auc=0.75547012
+LGBM seed=2026; fold=2; variant=te_amount_gc; auc=0.75425564
+LGBM seed=2026; fold=2; variant=te_exact_gca; auc=0.75552106
+LGBM seed=2026; fold=2; variant=te_k_only; auc=0.75445543
+LGBM seed=2026; fold=2; variant=te_q4_plus_k; auc=0.75553714
+LGBM seed=2026; fold=2; variant=ordinal_q4; auc=0.75412858
+LGBM seed=2026; fold=3/5; prepare
+LGBM seed=2026; fold=3; variant=product_baseline; auc=0.76292921
+LGBM seed=2026; fold=3; variant=te_q3; auc=0.76483488
+LGBM seed=2026; fold=3; variant=te_q4; auc=0.76663482
+LGBM seed=2026; fold=3; variant=te_q5; auc=0.76621042
+LGBM seed=2026; fold=3; variant=te_q4_cash; auc=0.76679487
+LGBM seed=2026; fold=3; variant=te_amount_ca; auc=0.76470376
+LGBM seed=2026; fold=3; variant=te_amount_gc; auc=0.76307371
+LGBM seed=2026; fold=3; variant=te_exact_gca; auc=0.76502562
+LGBM seed=2026; fold=3; variant=te_k_only; auc=0.76298581
+LGBM seed=2026; fold=3; variant=te_q4_plus_k; auc=0.76514091
+LGBM seed=2026; fold=3; variant=ordinal_q4; auc=0.76257738
+LGBM seed=2026; fold=4/5; prepare
+LGBM seed=2026; fold=4; variant=product_baseline; auc=0.76800484
+LGBM seed=2026; fold=4; variant=te_q3; auc=0.76832734
+LGBM seed=2026; fold=4; variant=te_q4; auc=0.77063841
+LGBM seed=2026; fold=4; variant=te_q5; auc=0.76801202
+LGBM seed=2026; fold=4; variant=te_q4_cash; auc=0.77085689
+LGBM seed=2026; fold=4; variant=te_amount_ca; auc=0.76578685
+LGBM seed=2026; fold=4; variant=te_amount_gc; auc=0.76593125
+LGBM seed=2026; fold=4; variant=te_exact_gca; auc=0.76548684
+LGBM seed=2026; fold=4; variant=te_k_only; auc=0.76658196
+LGBM seed=2026; fold=4; variant=te_q4_plus_k; auc=0.76559509
+LGBM seed=2026; fold=4; variant=ordinal_q4; auc=0.76662252
+LGBM seed=2026; fold=5/5; prepare
+LGBM seed=2026; fold=5; variant=product_baseline; auc=0.76685432
+LGBM seed=2026; fold=5; variant=te_q3; auc=0.76833205
+LGBM seed=2026; fold=5; variant=te_q4; auc=0.76793403
+LGBM seed=2026; fold=5; variant=te_q5; auc=0.76870614
+LGBM seed=2026; fold=5; variant=te_q4_cash; auc=0.76922279
+LGBM seed=2026; fold=5; variant=te_amount_ca; auc=0.76674518
+LGBM seed=2026; fold=5; variant=te_amount_gc; auc=0.76720112
+LGBM seed=2026; fold=5; variant=te_exact_gca; auc=0.76772498
+LGBM seed=2026; fold=5; variant=te_k_only; auc=0.76680965
+LGBM seed=2026; fold=5; variant=te_q4_plus_k; auc=0.76809397
+LGBM seed=2026; fold=5; variant=ordinal_q4; auc=0.76682901
+CatBoost seed=42; fold=1; variant=cat_product_baseline; auc=0.76020878; iterations=465
+CatBoost seed=42; fold=1; variant=cat_native_q4; auc=0.76446565; iterations=465
+CatBoost seed=42; fold=1; variant=cat_native_8_keys; auc=0.76615157; iterations=465
+CatBoost seed=42; fold=1; variant=cat_native_8_keys_plus_crosses; auc=0.76686468; iterations=465
+CatBoost seed=42; fold=2; variant=cat_product_baseline; auc=0.76130837; iterations=401
+CatBoost seed=42; fold=2; variant=cat_native_q4; auc=0.76668160; iterations=401
+CatBoost seed=42; fold=2; variant=cat_native_8_keys; auc=0.76832826; iterations=401
+CatBoost seed=42; fold=2; variant=cat_native_8_keys_plus_crosses; auc=0.76861228; iterations=401
+CatBoost seed=42; fold=3; variant=cat_product_baseline; auc=0.76726203; iterations=406
+CatBoost seed=42; fold=3; variant=cat_native_q4; auc=0.77144816; iterations=406
+CatBoost seed=42; fold=3; variant=cat_native_8_keys; auc=0.77197268; iterations=406
+CatBoost seed=42; fold=3; variant=cat_native_8_keys_plus_crosses; auc=0.77148949; iterations=406
+CatBoost seed=42; fold=4; variant=cat_product_baseline; auc=0.75778440; iterations=472
+CatBoost seed=42; fold=4; variant=cat_native_q4; auc=0.76233712; iterations=472
+CatBoost seed=42; fold=4; variant=cat_native_8_keys; auc=0.76559173; iterations=472
+CatBoost seed=42; fold=4; variant=cat_native_8_keys_plus_crosses; auc=0.76440481; iterations=472
+CatBoost seed=42; fold=5; variant=cat_product_baseline; auc=0.76146545; iterations=439
+CatBoost seed=42; fold=5; variant=cat_native_q4; auc=0.76696934; iterations=439
+CatBoost seed=42; fold=5; variant=cat_native_8_keys; auc=0.76801899; iterations=439
+CatBoost seed=42; fold=5; variant=cat_native_8_keys_plus_crosses; auc=0.76830422; iterations=439
+CatBoost seed=7; fold=1; variant=cat_product_baseline; auc=0.76292532; iterations=867
+CatBoost seed=7; fold=1; variant=cat_native_q4; auc=0.76604920; iterations=867
+CatBoost seed=7; fold=1; variant=cat_native_8_keys; auc=0.76826367; iterations=867
+CatBoost seed=7; fold=1; variant=cat_native_8_keys_plus_crosses; auc=0.76808184; iterations=867
+CatBoost seed=7; fold=2; variant=cat_product_baseline; auc=0.76414820; iterations=600
+CatBoost seed=7; fold=2; variant=cat_native_q4; auc=0.76869496; iterations=600
+CatBoost seed=7; fold=2; variant=cat_native_8_keys; auc=0.77079291; iterations=600
+CatBoost seed=7; fold=2; variant=cat_native_8_keys_plus_crosses; auc=0.77128330; iterations=600
+CatBoost seed=7; fold=3; variant=cat_product_baseline; auc=0.76120034; iterations=314
+CatBoost seed=7; fold=3; variant=cat_native_q4; auc=0.76541300; iterations=314
+CatBoost seed=7; fold=3; variant=cat_native_8_keys; auc=0.76664000; iterations=314
+CatBoost seed=7; fold=3; variant=cat_native_8_keys_plus_crosses; auc=0.76592537; iterations=314
+CatBoost seed=7; fold=4; variant=cat_product_baseline; auc=0.75722829; iterations=1152
+CatBoost seed=7; fold=4; variant=cat_native_q4; auc=0.76316361; iterations=1152
+CatBoost seed=7; fold=4; variant=cat_native_8_keys; auc=0.76582865; iterations=1152
+CatBoost seed=7; fold=4; variant=cat_native_8_keys_plus_crosses; auc=0.76549152; iterations=1152
+CatBoost seed=7; fold=5; variant=cat_product_baseline; auc=0.76393011; iterations=727
+CatBoost seed=7; fold=5; variant=cat_native_q4; auc=0.76794344; iterations=727
+CatBoost seed=7; fold=5; variant=cat_native_8_keys; auc=0.76892525; iterations=727
+CatBoost seed=7; fold=5; variant=cat_native_8_keys_plus_crosses; auc=0.76930475; iterations=727
+CatBoost seed=2026; fold=1; variant=cat_product_baseline; auc=0.76242840; iterations=927
+CatBoost seed=2026; fold=1; variant=cat_native_q4; auc=0.76569840; iterations=927
+CatBoost seed=2026; fold=1; variant=cat_native_8_keys; auc=0.76836953; iterations=927
+CatBoost seed=2026; fold=1; variant=cat_native_8_keys_plus_crosses; auc=0.76600354; iterations=927
+CatBoost seed=2026; fold=2; variant=cat_product_baseline; auc=0.75627250; iterations=646
+CatBoost seed=2026; fold=2; variant=cat_native_q4; auc=0.76035127; iterations=646
+CatBoost seed=2026; fold=2; variant=cat_native_8_keys; auc=0.76274661; iterations=646
+CatBoost seed=2026; fold=2; variant=cat_native_8_keys_plus_crosses; auc=0.76275679; iterations=646
+CatBoost seed=2026; fold=3; variant=cat_product_baseline; auc=0.76171199; iterations=431
+CatBoost seed=2026; fold=3; variant=cat_native_q4; auc=0.76659081; iterations=431
+CatBoost seed=2026; fold=3; variant=cat_native_8_keys; auc=0.76820666; iterations=431
+CatBoost seed=2026; fold=3; variant=cat_native_8_keys_plus_crosses; auc=0.76799269; iterations=431
+CatBoost seed=2026; fold=4; variant=cat_product_baseline; auc=0.76576130; iterations=692
+CatBoost seed=2026; fold=4; variant=cat_native_q4; auc=0.77143037; iterations=692
+CatBoost seed=2026; fold=4; variant=cat_native_8_keys; auc=0.77297939; iterations=692
+CatBoost seed=2026; fold=4; variant=cat_native_8_keys_plus_crosses; auc=0.77250826; iterations=692
+CatBoost seed=2026; fold=5; variant=cat_product_baseline; auc=0.76786521; iterations=771
+CatBoost seed=2026; fold=5; variant=cat_native_q4; auc=0.77166227; iterations=771
+CatBoost seed=2026; fold=5; variant=cat_native_8_keys; auc=0.77183336; iterations=771
+CatBoost seed=2026; fold=5; variant=cat_native_8_keys_plus_crosses; auc=0.77257065; iterations=771
+status=COMPLETED
+finished_utc=2026-11-04T14:32:40.236823+00:00
+runtime_seconds=6120.591
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+packages={"catboost": "1.2.10", "lightgbm": "4.7.0", "numpy": "2.5.4", "pandas": "3.1.0", "scikit-learn": "1.9.1"}
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+test_file_opened=NO; external_data=NO; submission_created=NO
+holdout_scored=NO; champion_modified=NO
+lgbm_variants=11; lgbm_device=CPU (installed build lacks GPU learner); catboost_variants=4; catboost_device=GPU:0; seeds=(42, 7, 2026); folds=5
+output_directory=D:\gci\truth\experiments\phase9_product_mechanism_and_catboost\runs\phase9_20261104T181500LOCAL

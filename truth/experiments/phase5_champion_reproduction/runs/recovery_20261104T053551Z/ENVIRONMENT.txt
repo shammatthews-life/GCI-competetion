@@ -1,0 +1,10 @@
+Python: 3.12.10
+Platform: win32
+UTC audit time: 2026-11-04T05:35:53.266344+00:00
+No dependency installation or model training performed.
+
+Installed package versions:
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+scikit-learn==1.9.1

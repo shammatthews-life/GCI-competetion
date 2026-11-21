@@ -1,0 +1,15 @@
+started_utc=2026-11-03T15:00:59.990096+00:00
+finished_utc=2026-11-03T15:02:35.076695+00:00
+runtime_seconds=95.087
+source_sha256=84d33b0d7a7b182e3b4eb218cf86f09485144624f6d58851db69b77a1c6db7c6
+baseline_source_sha256=c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe
+ablation_builder_sha256=1470a412ab42aa6015f94af01859615a96fb127b7fc124d045acf8c9a81cf8ae
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+individual_formula_count=4
+outer_folds=5
+status=SUCCESS
+                  feature_name  pooled_oof_auc  pooled_delta_vs_refit_baseline  pooled_delta_vs_saved_baseline  mean_fold_auc  std_fold_auc  mean_paired_fold_delta  std_paired_fold_delta  folds_improved                                                                                                                                      fold_deltas                                          validation_status
+NEW_CREDIT_GOODS_GAP_TO_INCOME        0.760468                       -0.000191                       -0.000191       0.760541      0.003031               -0.000188               0.000910               2 {"1": 0.00030655466304907453, "2": -0.0009164535820169739, "3": -0.0009702796093556953, "4": 0.0011595906853156812, "5": -0.0005203698257960632} OOF discovery on reused folds; individual feature ablation
+           NEW_GOODS_TO_INCOME        0.760643                       -0.000015                       -0.000015       0.760707      0.002991               -0.000022               0.000785               2 {"1": 0.0008226207204239389, "2": -0.0003072808192563503, "3": -0.0011189238615908481, "4": 0.0006489105521142458, "5": -0.00015500059862294524} OOF discovery on reused folds; individual feature ablation
+          NEW_ANNUITY_TO_GOODS        0.760633                       -0.000026                       -0.000026       0.760702      0.003445               -0.000027               0.000509               2 {"1": 0.0004382406431231445, "2": -2.562301263830946e-06, "3": -0.00027198955618945586, "4": 0.0004548983085727043, "5": -0.0007526580792311943} OOF discovery on reused folds; individual feature ablation
+    NEW_CREDIT_GOODS_LOG_RATIO        0.760317                       -0.000341                       -0.000341       0.760385      0.003414               -0.000344               0.000598               2  {"1": -0.0005851216014338689, "2": 6.273616546903504e-05, "3": -0.0010841766009578313, "4": 0.0004411511290434156, "5": -0.0005532090330832018} OOF discovery on reused folds; individual feature ablation

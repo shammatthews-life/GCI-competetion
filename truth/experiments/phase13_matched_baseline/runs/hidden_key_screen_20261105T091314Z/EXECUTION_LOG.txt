@@ -1,0 +1,45 @@
+Started UTC: 2026-11-05T09:13:14.736994+00:00
+Screened 50 candidates
+Screened 100 candidates
+Screened 150 candidates
+Screened 200 candidates
+Screened 250 candidates
+Screened 300 candidates
+Screened 350 candidates
+Screened 400 candidates
+Screened 450 candidates
+Screened 500 candidates
+Screened 550 candidates
+Screened 600 candidates
+Screened 650 candidates
+Screened 700 candidates
+Screened 750 candidates
+Screened 800 candidates
+Screened 850 candidates
+Screened 900 candidates
+Screened 950 candidates
+Screened 1000 candidates
+Screened 1050 candidates
+Screened 1100 candidates
+Screened 1150 candidates
+Screened 1200 candidates
+Screened 1250 candidates
+Screened 1300 candidates
+Screened 1350 candidates
+Screened 1400 candidates
+Screened 1450 candidates
+Screened 1500 candidates
+Screened 1550 candidates
+Screened 1600 candidates
+Screened 1650 candidates
+Screened 1700 candidates
+Screened 1750 candidates
+Screened 1800 candidates
+Screened 1850 candidates
+Screened 1900 candidates
+Screened 1950 candidates
+Completed UTC: 2026-11-05T09:25:32.228107+00:00
+Generated candidates: 1960; including explicit keys: 1968
+Elapsed candidate screen seconds: 737.393
+Baseline C pooled OOF AUC: 0.759619220336
+All candidate target rates were cross-fitted on the five fixed outer folds.

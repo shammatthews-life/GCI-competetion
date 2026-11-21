@@ -1,0 +1,140 @@
+
+started_utc=2026-11-03T14:33:40.127891+00:00
+finished_utc=2026-11-03T14:36:56.184765+00:00
+runtime_seconds=196.057
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_folds_sha256=c19920148ae021e3f2070dffa7d43f2b030f2e19b29e24f0aceec21e22ebe1db
+shared_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+analysis_source_sha256=ec7631dbe84e620c0e24c33c98294987bc481926563caef059b5be335e3156c2
+outer_fold_validation_features_fit_on_outer_train_only=True
+TARGET_passed_to_feature_builder=False
+status=SUCCESS
+product_feature_count=38
+lattice_rows=240
+fee_rows=30
+group_rows=584
+
+started_utc=2026-11-03T14:44:59.569554+00:00
+finished_utc=2026-11-03T14:47:29.983126+00:00
+runtime_seconds=150.414
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_folds_sha256=c19920148ae021e3f2070dffa7d43f2b030f2e19b29e24f0aceec21e22ebe1db
+shared_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+analysis_source_sha256=5b6fd63d73287fb1477f19caad3908e4f8805bfeefa132f3ff9855baca251fa3
+outer_fold_validation_features_fit_on_outer_train_only=True
+TARGET_passed_to_feature_builder=False
+status=SUCCESS
+product_feature_count=38
+lattice_rows=240
+fee_rows=35
+group_rows=584
+
+started_utc=2026-11-03T14:47:57.295167+00:00
+finished_utc=2026-11-03T14:57:38.013355+00:00
+runtime_seconds=580.718
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_source_sha256=c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe
+shared_feature_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+ablation_source_sha256=1470a412ab42aa6015f94af01859615a96fb127b7fc124d045acf8c9a81cf8ae
+outer_folds=5
+raw_baseline_refit_pooled_oof_auc=0.7606584505947516
+saved_baseline_pooled_oof_auc=0.7606584505947516
+variant_count=18
+fit_count=95
+status=SUCCESS
+outer_validation_used_for_early_stopping=False
+same_inner_raw_baseline_boosting_rounds_for_all_variants=True
+target_encoding=False
+pooled_train_test_statistics=False
+
+                 variant  pooled_oof_auc  delta_vs_baseline  mean_fold_auc  std_fold_auc  folds_improved
+saved_baseline_reference        0.760658           0.000000       0.760729      0.003770               0
+      raw_baseline_refit        0.760658           0.000000       0.760729      0.003770               0
+                       K        0.761059           0.000400       0.761130      0.003634               4
+                       Q        0.761158           0.000499       0.761234      0.003737               4
+                       P        0.762075           0.001416       0.762139      0.003575               4
+                     K+Q        0.760985           0.000326       0.761043      0.003880               3
+                     K+P        0.761687           0.001028       0.761751      0.003520               5
+                     Q+P        0.761912           0.001253       0.761986      0.003933               5
+             all_product        0.762444           0.001786       0.762508      0.004160               5
+            no_redundant        0.762059           0.001401       0.762117      0.004138               5
+               stable_QK        0.760985           0.000326       0.761043      0.003880               3
+               rare_drop        0.762026           0.001367       0.762091      0.003993               5
+              rare_group        0.761765           0.001107       0.761841      0.003953               4
+         random_permuted        0.758833          -0.001825       0.758906      0.003446               0
+             random_keys        0.758805          -0.001853       0.758855      0.003718               0
+            random_fee_P        0.761290           0.000632       0.761346      0.004092               4
+           random_step_K        0.760938           0.000280       0.761004      0.003466               4
+                 q_floor        0.761188           0.000529       0.761249      0.003712               3
+       annuity_perturbed        0.762145           0.001487       0.762216      0.004002               4
+            new_formulas        0.760656          -0.000003       0.760728      0.004022               2
+
+started_utc=2026-11-03T14:58:02.776128+00:00
+finished_utc=2026-11-03T15:00:40.985299+00:00
+runtime_seconds=158.209
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_folds_sha256=c19920148ae021e3f2070dffa7d43f2b030f2e19b29e24f0aceec21e22ebe1db
+shared_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+analysis_source_sha256=c1131888ed9e04addd24410ab983b4e5371a2d25364f668a872d6cd838a4aba8
+outer_fold_validation_features_fit_on_outer_train_only=True
+TARGET_passed_to_feature_builder=False
+status=SUCCESS
+product_feature_count=38
+lattice_rows=240
+fee_rows=35
+group_rows=584
+
+started_utc=2026-11-03T15:00:59.990096+00:00
+finished_utc=2026-11-03T15:02:35.076695+00:00
+runtime_seconds=95.087
+source_sha256=84d33b0d7a7b182e3b4eb218cf86f09485144624f6d58851db69b77a1c6db7c6
+baseline_source_sha256=c49aab451d1500e1bd7e0d618a764efeb1815c172f74e1bc5174e38a793ff3fe
+ablation_builder_sha256=1470a412ab42aa6015f94af01859615a96fb127b7fc124d045acf8c9a81cf8ae
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+individual_formula_count=4
+outer_folds=5
+status=SUCCESS
+                  feature_name  pooled_oof_auc  pooled_delta_vs_refit_baseline  pooled_delta_vs_saved_baseline  mean_fold_auc  std_fold_auc  mean_paired_fold_delta  std_paired_fold_delta  folds_improved                                                                                                                                      fold_deltas                                          validation_status
+NEW_CREDIT_GOODS_GAP_TO_INCOME        0.760468                       -0.000191                       -0.000191       0.760541      0.003031               -0.000188               0.000910               2 {"1": 0.00030655466304907453, "2": -0.0009164535820169739, "3": -0.0009702796093556953, "4": 0.0011595906853156812, "5": -0.0005203698257960632} OOF discovery on reused folds; individual feature ablation
+           NEW_GOODS_TO_INCOME        0.760643                       -0.000015                       -0.000015       0.760707      0.002991               -0.000022               0.000785               2 {"1": 0.0008226207204239389, "2": -0.0003072808192563503, "3": -0.0011189238615908481, "4": 0.0006489105521142458, "5": -0.00015500059862294524} OOF discovery on reused folds; individual feature ablation
+          NEW_ANNUITY_TO_GOODS        0.760633                       -0.000026                       -0.000026       0.760702      0.003445               -0.000027               0.000509               2 {"1": 0.0004382406431231445, "2": -2.562301263830946e-06, "3": -0.00027198955618945586, "4": 0.0004548983085727043, "5": -0.0007526580792311943} OOF discovery on reused folds; individual feature ablation
+    NEW_CREDIT_GOODS_LOG_RATIO        0.760317                       -0.000341                       -0.000341       0.760385      0.003414               -0.000344               0.000598               2  {"1": -0.0005851216014338689, "2": 6.273616546903504e-05, "3": -0.0010841766009578313, "4": 0.0004411511290434156, "5": -0.0005532090330832018} OOF discovery on reused folds; individual feature ablation
+
+finalized_utc=2026-11-03T15:02:50.819656+00:00
+finalization_status=SUCCESS
+ablation_first_attempt=FAILED_AND_FIXED
+ablation_first_error=Keyed boolean Series index alignment in q_floor transform; aborted before output files were written.
+ablation_rerun=completed; see PHASE3B_ABLATION_LOG.txt
+overall_claim=partial_phase3b_milestone_only; no independent confirmation or promotion
+
+started_utc=2026-11-03T15:03:58.379362+00:00
+finished_utc=2026-11-03T15:06:34.750788+00:00
+runtime_seconds=156.371
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_folds_sha256=c19920148ae021e3f2070dffa7d43f2b030f2e19b29e24f0aceec21e22ebe1db
+shared_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+analysis_source_sha256=95b8b4c71c1b352348f1469209155bf5a3c017b5d48efeb4400cea722da8229c
+outer_fold_validation_features_fit_on_outer_train_only=True
+TARGET_passed_to_feature_builder=False
+status=SUCCESS
+product_feature_count=38
+lattice_rows=240
+fee_rows=35
+group_rows=584
+
+finalized_utc=2026-11-03T15:06:38.608727+00:00
+finalization_status=SUCCESS
+ablation_first_attempt=FAILED_AND_FIXED
+ablation_first_error=Keyed boolean Series index alignment in q_floor transform; aborted before output files were written.
+ablation_rerun=completed; see PHASE3B_ABLATION_LOG.txt
+overall_claim=partial_phase3b_milestone_only; no independent confirmation or promotion

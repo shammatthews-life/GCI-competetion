@@ -1,0 +1,28 @@
+STATUS: COMPLETED
+UTC start: 2026-11-04T05:47:41.552079+00:00
+UTC end: 2026-11-04T05:47:47.351407+00:00
+Command: python -B "D:\gci\truth\experiments\phase5_champion_reproduction\investigate_phase5_task3.py" --run-id 20261104T054739Z
+Train shape: (171202, 34); SHA-256: b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+Test shape: (61500, 33); SHA-256: dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65
+V15 archive: D:\gci\codex\gci_cache_final-20261021T075423Z-1-001.zip; members=49; SHA-256=a6261b5ca5a90dceb793bf2f50ca16a4437114375c718e0a89313295afd15999
+V16 cache folder located: False
+Candidate fixed blend diagnostic: 0.77404329 (V15 archive only; not V16 reproduction)
+Anomalous bundle recomputed AUC: 0.7946768339; stored scalar: 0.782000
+Training: NOT RUN.
+Test TARGET: NOT read.
+Submission/champion changes: none.
+Errors: none.
+Warnings: see reports; unresolved data/cache provenance and competition-rule scope remain.
+Outputs:
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\V16_CACHE_GENERATION_TRACE.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\V16_CACHE_PROVENANCE_MATRIX.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\V16_SCORE_DISCREPANCY_REPORT.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\V16_SCORE_DISCREPANCY_REPORT.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\ANOMALOUS_BUNDLE_INVESTIGATION.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\OOF_ARRAY_IDENTITY_AUDIT.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\EXP85_CHAMPION_RECOVERY_UPDATE.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\VALIDATION_INTEGRITY_AUDIT.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\COMMON_FOLD_READINESS_UPDATE.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\SHA256_MANIFEST.csv
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\NEXT_PHASE_RECOMMENDATION.md
+D:\gci\truth\experiments\phase5_champion_reproduction\runs\phase5_task3_20261104T054739Z\investigate_phase5_task3.py

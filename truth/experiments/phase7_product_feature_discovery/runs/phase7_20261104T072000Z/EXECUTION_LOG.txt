@@ -1,0 +1,12 @@
+status=FAILED_DURING_FIRST_DEVELOPMENT_FOLD_PREFLIGHT
+run_id=20261104T072000Z
+failure_stage=derived_feature_column_count_assertion
+error=AssertionError: stale hard-coded expectation of 47 derived columns; Phase 3 source has 51 registered definitions and returned 51 columns
+inner_round_selection_models_trained=1
+development_ablation_models_trained=0
+predictions_created=NO
+submission_created=NO
+champion_modified=NO
+cause=An earlier summary incorrectly stated the Phase 3 derived feature count as 47.
+correction=Assertion now compares the returned frame width with len(phase3.FEATURE_DEFINITIONS); source/catalog count is recorded dynamically.
+preservation=This failed attempt and its pre-run manifests are retained; no existing artifact was overwritten.

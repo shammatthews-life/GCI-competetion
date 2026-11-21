@@ -1,0 +1,5 @@
+2026-11-04 17:34:40,047Z INFO Starting Phase 12; output=D:\gci\truth\experiments\phase12_label_free_product_representation\runs\phase12_20261104T173440Z
+2026-11-04 17:34:40,057Z INFO Clock UTC=2026-11-04T17:34:40.028435+00:00 local=2026-11-04T23:04:40.028435+05:30; Phase 11 primary manifest records started_at_utc=2026-11-04T16:18:30.309282+00:00 although its folder suffix is 20261105; the timestamp confirms Phase 11 preceded this run and the suffix is only a folder label.
+2026-11-04 17:34:42,190Z INFO Loaded permitted training data only: rows=171202 predictors=32 numeric=24 input_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+2026-11-04 17:34:42,190Z INFO Dependencies: Python=3.12.10 pandas=3.1.0 numpy=2.5.4 sklearn=1.9.1 LightGBM=4.7.0 scipy=1.18.1; device=CPU; n_jobs=4
+2026-11-04 17:34:42,208Z INFO Primary config grid=[{"min_child_samples": 80, "name": "leaves31_child80", "num_leaves": 31}, {"min_child_samples": 100, "name": "leaves63_child100", "num_leaves": 63}]; outer=5 inner=3; max_iterations=1200 early_stopping_rounds=80

@@ -1,0 +1,9 @@
+timestamp_utc=2026-11-04T03:59:24.781640+00:00
+command=python D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\audit_phase4_inputs.py
+status=PASS
+train_shape=(171202, 34)
+test_shape=(61500, 33)
+sample_shape=(61500, 2)
+target_mean=0.0807291971
+model_training=NOT_RUN
+outputs=D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\INPUT_HASH_MANIFEST.csv; D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\DATA_DICTIONARY_AND_INPUT_AUDIT.md; D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\INPUT_AUDIT_LOG.txt

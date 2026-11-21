@@ -1,0 +1,345 @@
+2026-11-04 17:35:34,990Z INFO Starting Phase 12; output=D:\gci\truth\experiments\phase12_label_free_product_representation\runs\phase12_20261104T173534Z
+2026-11-04 17:35:34,990Z INFO Clock UTC=2026-11-04T17:35:34.990669+00:00 local=2026-11-04T23:05:34.990669+05:30; Phase 11 primary manifest records started_at_utc=2026-11-04T16:18:30.309282+00:00 although its folder suffix is 20261105; the timestamp confirms Phase 11 preceded this run and the suffix is only a folder label.
+2026-11-04 17:35:36,866Z INFO Loaded permitted training data only: rows=171202 predictors=32 numeric=24 input_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+2026-11-04 17:35:36,866Z INFO Dependencies: Python=3.12.10 pandas=3.1.0 numpy=2.5.4 sklearn=1.9.1 LightGBM=4.7.0 scipy=1.18.1; device=CPU; n_jobs=4
+2026-11-04 17:35:36,883Z INFO Primary config grid=[{"min_child_samples": 80, "name": "leaves31_child80", "num_leaves": 31}, {"min_child_samples": 100, "name": "leaves63_child100", "num_leaves": 63}]; outer=5 inner=3; max_iterations=1200 early_stopping_rounds=80
+2026-11-04 17:35:45,798Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 17:35:57,097Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 17:36:05,417Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 17:36:08,978Z INFO outer fit seed=20261105 fold=1/5 variant=raw_numeric auc=0.741754 rounds=284 features=24 runtime=3.2s
+2026-11-04 17:36:25,768Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_keys_ohe features=13775
+2026-11-04 17:36:45,588Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_keys_ohe features=13713
+2026-11-04 17:36:58,620Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_keys_ohe features=13718
+2026-11-04 17:37:07,329Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_keys_ohe auc=0.757411 rounds=469 features=14942 runtime=7.0s
+2026-11-04 17:37:25,448Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_keys_frequency_ohe features=10735
+2026-11-04 17:37:44,412Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_keys_frequency_ohe features=10841
+2026-11-04 17:37:59,326Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_keys_frequency_ohe features=10782
+2026-11-04 17:38:09,989Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_keys_frequency_ohe auc=0.757215 rounds=442 features=12096 runtime=7.2s
+2026-11-04 17:38:20,668Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:38:33,059Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:38:41,947Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:38:46,654Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_decompositions auc=0.752401 rounds=366 features=29 runtime=4.3s
+2026-11-04 17:38:56,348Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_interactions features=28
+2026-11-04 17:39:07,550Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_interactions features=28
+2026-11-04 17:39:15,896Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_interactions features=28
+2026-11-04 17:39:20,029Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_interactions auc=0.740928 rounds=319 features=28 runtime=3.7s
+2026-11-04 17:39:37,195Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_keys_decompositions_interactions features=10736
+2026-11-04 17:39:56,507Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_keys_decompositions_interactions features=10842
+2026-11-04 17:40:11,417Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_keys_decompositions_interactions features=10783
+2026-11-04 17:40:20,952Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_keys_decompositions_interactions auc=0.756167 rounds=409 features=12097 runtime=7.0s
+2026-11-04 17:40:39,079Z INFO tuned seed=20261105 outer=1/5 inner=1/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:40:57,712Z INFO tuned seed=20261105 outer=1/5 inner=2/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:41:11,249Z INFO tuned seed=20261105 outer=1/5 inner=3/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:41:20,358Z INFO outer fit seed=20261105 fold=1/5 variant=raw_plus_keys_hash auc=0.756816 rounds=427 features=65560 runtime=6.6s
+2026-11-04 17:41:29,614Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 17:41:38,602Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 17:41:48,807Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 17:41:52,410Z INFO outer fit seed=20261105 fold=2/5 variant=raw_numeric auc=0.744910 rounds=301 features=24 runtime=3.2s
+2026-11-04 17:42:08,641Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_keys_ohe features=13766
+2026-11-04 17:42:21,504Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_keys_ohe features=13747
+2026-11-04 17:42:36,895Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_keys_ohe features=13778
+2026-11-04 17:42:44,100Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_keys_ohe auc=0.761762 rounds=377 features=14964 runtime=5.7s
+2026-11-04 17:43:00,490Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_keys_frequency_ohe features=10750
+2026-11-04 17:43:14,508Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_keys_frequency_ohe features=10817
+2026-11-04 17:43:35,324Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_keys_frequency_ohe features=10740
+2026-11-04 17:43:44,802Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_keys_frequency_ohe auc=0.763682 rounds=399 features=12075 runtime=6.2s
+2026-11-04 17:43:54,555Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:44:06,727Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:44:17,800Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:44:22,586Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_decompositions auc=0.756877 rounds=364 features=29 runtime=4.4s
+2026-11-04 17:44:31,126Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_interactions features=28
+2026-11-04 17:44:38,546Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_interactions features=28
+2026-11-04 17:44:51,257Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_interactions features=28
+2026-11-04 17:44:56,304Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_interactions auc=0.745391 rounds=459 features=28 runtime=4.6s
+2026-11-04 17:45:07,308Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_keys_decompositions_interactions features=10751
+2026-11-04 17:45:16,049Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_keys_decompositions_interactions features=10818
+2026-11-04 17:45:27,455Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_keys_decompositions_interactions features=10741
+2026-11-04 17:45:33,504Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_keys_decompositions_interactions auc=0.762442 rounds=388 features=12076 runtime=4.4s
+2026-11-04 17:45:50,431Z INFO tuned seed=20261105 outer=2/5 inner=1/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:46:02,620Z INFO tuned seed=20261105 outer=2/5 inner=2/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:46:15,741Z INFO tuned seed=20261105 outer=2/5 inner=3/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:46:23,659Z INFO outer fit seed=20261105 fold=2/5 variant=raw_plus_keys_hash auc=0.763106 rounds=434 features=65560 runtime=5.3s
+2026-11-04 17:46:34,799Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 17:46:44,645Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 17:46:54,840Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 17:46:59,011Z INFO outer fit seed=20261105 fold=3/5 variant=raw_numeric auc=0.748290 rounds=367 features=24 runtime=3.8s
+2026-11-04 17:47:15,883Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_keys_ohe features=13801
+2026-11-04 17:47:31,029Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_keys_ohe features=13691
+2026-11-04 17:47:43,202Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_keys_ohe features=13740
+2026-11-04 17:47:50,161Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_keys_ohe auc=0.762345 rounds=340 features=14950 runtime=5.6s
+2026-11-04 17:48:09,371Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_keys_frequency_ohe features=10822
+2026-11-04 17:48:26,599Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_keys_frequency_ohe features=10792
+2026-11-04 17:48:45,219Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_keys_frequency_ohe features=10807
+2026-11-04 17:48:54,954Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_keys_frequency_ohe auc=0.763754 rounds=368 features=12105 runtime=6.2s
+2026-11-04 17:49:06,592Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:49:13,680Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:49:20,825Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:49:24,112Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_decompositions auc=0.758562 rounds=401 features=29 runtime=3.0s
+2026-11-04 17:49:31,324Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_interactions features=28
+2026-11-04 17:49:42,046Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_interactions features=28
+2026-11-04 17:49:51,822Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_interactions features=28
+2026-11-04 17:49:56,447Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_interactions auc=0.747193 rounds=365 features=28 runtime=4.2s
+2026-11-04 17:50:12,073Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_keys_decompositions_interactions features=10823
+2026-11-04 17:50:22,377Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_keys_decompositions_interactions features=10793
+2026-11-04 17:50:32,346Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_keys_decompositions_interactions features=10808
+2026-11-04 17:50:37,825Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_keys_decompositions_interactions auc=0.762032 rounds=330 features=12106 runtime=4.0s
+2026-11-04 17:50:54,043Z INFO tuned seed=20261105 outer=3/5 inner=1/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:51:14,076Z INFO tuned seed=20261105 outer=3/5 inner=2/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:51:31,554Z INFO tuned seed=20261105 outer=3/5 inner=3/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:51:41,408Z INFO outer fit seed=20261105 fold=3/5 variant=raw_plus_keys_hash auc=0.764555 rounds=416 features=65560 runtime=7.2s
+2026-11-04 17:51:52,382Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 17:52:03,008Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 17:52:11,234Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 17:52:14,017Z INFO outer fit seed=20261105 fold=4/5 variant=raw_numeric auc=0.740864 rounds=385 features=24 runtime=2.5s
+2026-11-04 17:52:24,143Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_keys_ohe features=13773
+2026-11-04 17:52:34,485Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_keys_ohe features=13785
+2026-11-04 17:52:45,483Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_keys_ohe features=13714
+2026-11-04 17:52:51,790Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_keys_ohe auc=0.754326 rounds=476 features=14928 runtime=5.5s
+2026-11-04 17:53:08,549Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_keys_frequency_ohe features=10799
+2026-11-04 17:53:25,437Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_keys_frequency_ohe features=10706
+2026-11-04 17:53:43,297Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_keys_frequency_ohe features=10833
+2026-11-04 17:53:52,538Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_keys_frequency_ohe auc=0.755242 rounds=382 features=12135 runtime=6.0s
+2026-11-04 17:54:04,618Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:54:15,175Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:54:27,412Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_decompositions features=29
+2026-11-04 17:54:32,320Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_decompositions auc=0.749069 rounds=402 features=29 runtime=4.5s
+2026-11-04 17:54:43,666Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_interactions features=28
+2026-11-04 17:54:53,366Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_interactions features=28
+2026-11-04 17:55:04,168Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_interactions features=28
+2026-11-04 17:55:08,407Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_interactions auc=0.740572 rounds=356 features=28 runtime=3.9s
+2026-11-04 17:55:25,751Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_keys_decompositions_interactions features=10800
+2026-11-04 17:55:41,445Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_keys_decompositions_interactions features=10707
+2026-11-04 17:55:59,509Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_keys_decompositions_interactions features=10834
+2026-11-04 17:56:08,722Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_keys_decompositions_interactions auc=0.753643 rounds=395 features=12136 runtime=6.7s
+2026-11-04 17:56:25,773Z INFO tuned seed=20261105 outer=4/5 inner=1/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:56:41,062Z INFO tuned seed=20261105 outer=4/5 inner=2/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:56:57,198Z INFO tuned seed=20261105 outer=4/5 inner=3/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 17:57:05,753Z INFO outer fit seed=20261105 fold=4/5 variant=raw_plus_keys_hash auc=0.753845 rounds=363 features=65560 runtime=6.1s
+2026-11-04 17:57:16,253Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 17:57:27,220Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 17:57:36,627Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 17:57:40,530Z INFO outer fit seed=20261105 fold=5/5 variant=raw_numeric auc=0.740608 rounds=361 features=24 runtime=3.6s
+2026-11-04 17:57:57,225Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_keys_ohe features=13799
+2026-11-04 17:58:12,705Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_keys_ohe features=13797
+2026-11-04 17:58:27,384Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_keys_ohe features=13781
+2026-11-04 17:58:34,496Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_keys_ohe auc=0.758234 rounds=380 features=14981 runtime=5.6s
+2026-11-04 17:58:52,372Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_keys_frequency_ohe features=10812
+2026-11-04 17:59:08,380Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_keys_frequency_ohe features=10841
+2026-11-04 17:59:25,843Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_keys_frequency_ohe features=10752
+2026-11-04 17:59:35,019Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_keys_frequency_ohe auc=0.759414 rounds=373 features=12147 runtime=5.8s
+2026-11-04 17:59:48,561Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_decompositions features=29
+2026-11-04 18:00:01,679Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_decompositions features=29
+2026-11-04 18:00:13,695Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_decompositions features=29
+2026-11-04 18:00:19,492Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_decompositions auc=0.752346 rounds=523 features=29 runtime=5.4s
+2026-11-04 18:00:29,080Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_interactions features=28
+2026-11-04 18:00:38,816Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_interactions features=28
+2026-11-04 18:00:48,054Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_interactions features=28
+2026-11-04 18:00:51,791Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_interactions auc=0.740078 rounds=295 features=28 runtime=3.4s
+2026-11-04 18:01:08,972Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_keys_decompositions_interactions features=10813
+2026-11-04 18:01:25,050Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_keys_decompositions_interactions features=10842
+2026-11-04 18:01:41,575Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_keys_decompositions_interactions features=10753
+2026-11-04 18:01:50,456Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_keys_decompositions_interactions auc=0.758113 rounds=363 features=12148 runtime=6.3s
+2026-11-04 18:02:08,316Z INFO tuned seed=20261105 outer=5/5 inner=1/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 18:02:26,066Z INFO tuned seed=20261105 outer=5/5 inner=2/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 18:02:43,133Z INFO tuned seed=20261105 outer=5/5 inner=3/3 variant=raw_plus_keys_hash features=65560
+2026-11-04 18:02:52,353Z INFO outer fit seed=20261105 fold=5/5 variant=raw_plus_keys_hash auc=0.758251 rounds=456 features=65560 runtime=6.8s
+2026-11-04 18:03:00,500Z INFO ablation fold=1/5 variant=all_eight auc=0.757094
+2026-11-04 18:03:06,024Z INFO ablation fold=1/5 variant=single_Q3 auc=0.752280
+2026-11-04 18:03:11,857Z INFO ablation fold=1/5 variant=single_Q4 auc=0.751303
+2026-11-04 18:03:17,652Z INFO ablation fold=1/5 variant=single_Q5 auc=0.746125
+2026-11-04 18:03:23,513Z INFO ablation fold=1/5 variant=single_KQ3 auc=0.748145
+2026-11-04 18:03:29,218Z INFO ablation fold=1/5 variant=single_KQ4 auc=0.743967
+2026-11-04 18:03:34,961Z INFO ablation fold=1/5 variant=single_P4 auc=0.753440
+2026-11-04 18:03:40,711Z INFO ablation fold=1/5 variant=single_P5 auc=0.750919
+2026-11-04 18:03:46,326Z INFO ablation fold=1/5 variant=single_AG3 auc=0.745693
+2026-11-04 18:03:54,729Z INFO ablation fold=1/5 variant=leave_out_Q3 auc=0.756659
+2026-11-04 18:04:02,525Z INFO ablation fold=1/5 variant=leave_out_Q4 auc=0.757762
+2026-11-04 18:04:10,213Z INFO ablation fold=1/5 variant=leave_out_Q5 auc=0.757072
+2026-11-04 18:04:17,851Z INFO ablation fold=1/5 variant=leave_out_KQ3 auc=0.757557
+2026-11-04 18:04:25,526Z INFO ablation fold=1/5 variant=leave_out_KQ4 auc=0.757151
+2026-11-04 18:04:33,321Z INFO ablation fold=1/5 variant=leave_out_P4 auc=0.757541
+2026-11-04 18:04:41,360Z INFO ablation fold=1/5 variant=leave_out_P5 auc=0.757023
+2026-11-04 18:04:49,355Z INFO ablation fold=1/5 variant=leave_out_AG3 auc=0.757269
+2026-11-04 18:04:56,077Z INFO ablation fold=1/5 variant=preregistered_Q3_Q4_Q5 auc=0.754150
+2026-11-04 18:05:02,467Z INFO ablation fold=1/5 variant=preregistered_P4_P5_Q4 auc=0.755606
+2026-11-04 18:05:08,788Z INFO ablation fold=1/5 variant=preregistered_P4_Q4_AG3 auc=0.755195
+2026-11-04 18:05:15,810Z INFO ablation fold=2/5 variant=all_eight auc=0.763192
+2026-11-04 18:05:20,503Z INFO ablation fold=2/5 variant=single_Q3 auc=0.758278
+2026-11-04 18:05:25,453Z INFO ablation fold=2/5 variant=single_Q4 auc=0.756921
+2026-11-04 18:05:30,449Z INFO ablation fold=2/5 variant=single_Q5 auc=0.750328
+2026-11-04 18:05:35,410Z INFO ablation fold=2/5 variant=single_KQ3 auc=0.750128
+2026-11-04 18:05:40,299Z INFO ablation fold=2/5 variant=single_KQ4 auc=0.747390
+2026-11-04 18:05:45,154Z INFO ablation fold=2/5 variant=single_P4 auc=0.757594
+2026-11-04 18:05:50,114Z INFO ablation fold=2/5 variant=single_P5 auc=0.753696
+2026-11-04 18:05:54,837Z INFO ablation fold=2/5 variant=single_AG3 auc=0.750118
+2026-11-04 18:06:01,653Z INFO ablation fold=2/5 variant=leave_out_Q3 auc=0.761990
+2026-11-04 18:06:08,328Z INFO ablation fold=2/5 variant=leave_out_Q4 auc=0.761476
+2026-11-04 18:06:14,948Z INFO ablation fold=2/5 variant=leave_out_Q5 auc=0.761630
+2026-11-04 18:06:21,563Z INFO ablation fold=2/5 variant=leave_out_KQ3 auc=0.761464
+2026-11-04 18:06:28,381Z INFO ablation fold=2/5 variant=leave_out_KQ4 auc=0.762738
+2026-11-04 18:06:33,007Z INFO ablation fold=2/5 variant=leave_out_P4 auc=0.761488
+2026-11-04 18:06:38,081Z INFO ablation fold=2/5 variant=leave_out_P5 auc=0.761741
+2026-11-04 18:06:42,204Z INFO ablation fold=2/5 variant=leave_out_AG3 auc=0.762199
+2026-11-04 18:06:45,674Z INFO ablation fold=2/5 variant=preregistered_Q3_Q4_Q5 auc=0.760497
+2026-11-04 18:06:50,358Z INFO ablation fold=2/5 variant=preregistered_P4_P5_Q4 auc=0.761518
+2026-11-04 18:06:55,914Z INFO ablation fold=2/5 variant=preregistered_P4_Q4_AG3 auc=0.761564
+2026-11-04 18:07:02,613Z INFO ablation fold=3/5 variant=all_eight auc=0.762566
+2026-11-04 18:07:07,172Z INFO ablation fold=3/5 variant=single_Q3 auc=0.759914
+2026-11-04 18:07:11,870Z INFO ablation fold=3/5 variant=single_Q4 auc=0.755961
+2026-11-04 18:07:16,479Z INFO ablation fold=3/5 variant=single_Q5 auc=0.751907
+2026-11-04 18:07:19,899Z INFO ablation fold=3/5 variant=single_KQ3 auc=0.753618
+2026-11-04 18:07:22,765Z INFO ablation fold=3/5 variant=single_KQ4 auc=0.749162
+2026-11-04 18:07:25,560Z INFO ablation fold=3/5 variant=single_P4 auc=0.759893
+2026-11-04 18:07:28,367Z INFO ablation fold=3/5 variant=single_P5 auc=0.756447
+2026-11-04 18:07:31,034Z INFO ablation fold=3/5 variant=single_AG3 auc=0.751565
+2026-11-04 18:07:34,989Z INFO ablation fold=3/5 variant=leave_out_Q3 auc=0.762335
+2026-11-04 18:07:39,206Z INFO ablation fold=3/5 variant=leave_out_Q4 auc=0.761775
+2026-11-04 18:07:45,522Z INFO ablation fold=3/5 variant=leave_out_Q5 auc=0.762384
+2026-11-04 18:07:51,898Z INFO ablation fold=3/5 variant=leave_out_KQ3 auc=0.763714
+2026-11-04 18:07:58,434Z INFO ablation fold=3/5 variant=leave_out_KQ4 auc=0.762730
+2026-11-04 18:08:04,821Z INFO ablation fold=3/5 variant=leave_out_P4 auc=0.762199
+2026-11-04 18:08:11,156Z INFO ablation fold=3/5 variant=leave_out_P5 auc=0.762496
+2026-11-04 18:08:17,477Z INFO ablation fold=3/5 variant=leave_out_AG3 auc=0.763042
+2026-11-04 18:08:22,594Z INFO ablation fold=3/5 variant=preregistered_Q3_Q4_Q5 auc=0.762195
+2026-11-04 18:08:27,733Z INFO ablation fold=3/5 variant=preregistered_P4_P5_Q4 auc=0.761390
+2026-11-04 18:08:32,891Z INFO ablation fold=3/5 variant=preregistered_P4_Q4_AG3 auc=0.761409
+2026-11-04 18:08:41,350Z INFO ablation fold=4/5 variant=all_eight auc=0.754380
+2026-11-04 18:08:46,989Z INFO ablation fold=4/5 variant=single_Q3 auc=0.751521
+2026-11-04 18:08:52,817Z INFO ablation fold=4/5 variant=single_Q4 auc=0.750043
+2026-11-04 18:08:59,323Z INFO ablation fold=4/5 variant=single_Q5 auc=0.745193
+2026-11-04 18:09:05,174Z INFO ablation fold=4/5 variant=single_KQ3 auc=0.746959
+2026-11-04 18:09:11,076Z INFO ablation fold=4/5 variant=single_KQ4 auc=0.745159
+2026-11-04 18:09:16,907Z INFO ablation fold=4/5 variant=single_P4 auc=0.751464
+2026-11-04 18:09:22,813Z INFO ablation fold=4/5 variant=single_P5 auc=0.749589
+2026-11-04 18:09:28,351Z INFO ablation fold=4/5 variant=single_AG3 auc=0.744400
+2026-11-04 18:09:36,350Z INFO ablation fold=4/5 variant=leave_out_Q3 auc=0.753674
+2026-11-04 18:09:44,152Z INFO ablation fold=4/5 variant=leave_out_Q4 auc=0.754162
+2026-11-04 18:09:51,832Z INFO ablation fold=4/5 variant=leave_out_Q5 auc=0.754414
+2026-11-04 18:09:59,588Z INFO ablation fold=4/5 variant=leave_out_KQ3 auc=0.755831
+2026-11-04 18:10:07,409Z INFO ablation fold=4/5 variant=leave_out_KQ4 auc=0.755610
+2026-11-04 18:10:15,399Z INFO ablation fold=4/5 variant=leave_out_P4 auc=0.753694
+2026-11-04 18:10:23,263Z INFO ablation fold=4/5 variant=leave_out_P5 auc=0.754023
+2026-11-04 18:10:31,276Z INFO ablation fold=4/5 variant=leave_out_AG3 auc=0.755269
+2026-11-04 18:10:37,913Z INFO ablation fold=4/5 variant=preregistered_Q3_Q4_Q5 auc=0.753255
+2026-11-04 18:10:44,240Z INFO ablation fold=4/5 variant=preregistered_P4_P5_Q4 auc=0.754685
+2026-11-04 18:10:50,734Z INFO ablation fold=4/5 variant=preregistered_P4_Q4_AG3 auc=0.753489
+2026-11-04 18:10:57,806Z INFO ablation fold=5/5 variant=all_eight auc=0.758460
+2026-11-04 18:11:02,498Z INFO ablation fold=5/5 variant=single_Q3 auc=0.754466
+2026-11-04 18:11:07,514Z INFO ablation fold=5/5 variant=single_Q4 auc=0.749946
+2026-11-04 18:11:12,488Z INFO ablation fold=5/5 variant=single_Q5 auc=0.745197
+2026-11-04 18:11:15,612Z INFO ablation fold=5/5 variant=single_KQ3 auc=0.744596
+2026-11-04 18:11:18,650Z INFO ablation fold=5/5 variant=single_KQ4 auc=0.741960
+2026-11-04 18:11:21,670Z INFO ablation fold=5/5 variant=single_P4 auc=0.753216
+2026-11-04 18:11:24,726Z INFO ablation fold=5/5 variant=single_P5 auc=0.749455
+2026-11-04 18:11:27,555Z INFO ablation fold=5/5 variant=single_AG3 auc=0.745101
+2026-11-04 18:11:31,813Z INFO ablation fold=5/5 variant=leave_out_Q3 auc=0.757441
+2026-11-04 18:11:35,973Z INFO ablation fold=5/5 variant=leave_out_Q4 auc=0.757641
+2026-11-04 18:11:40,195Z INFO ablation fold=5/5 variant=leave_out_Q5 auc=0.757296
+2026-11-04 18:11:44,322Z INFO ablation fold=5/5 variant=leave_out_KQ3 auc=0.758113
+2026-11-04 18:11:48,395Z INFO ablation fold=5/5 variant=leave_out_KQ4 auc=0.757732
+2026-11-04 18:11:52,591Z INFO ablation fold=5/5 variant=leave_out_P4 auc=0.756296
+2026-11-04 18:11:56,687Z INFO ablation fold=5/5 variant=leave_out_P5 auc=0.757211
+2026-11-04 18:12:00,889Z INFO ablation fold=5/5 variant=leave_out_AG3 auc=0.757749
+2026-11-04 18:12:06,101Z INFO ablation fold=5/5 variant=preregistered_Q3_Q4_Q5 auc=0.755319
+2026-11-04 18:12:11,609Z INFO ablation fold=5/5 variant=preregistered_P4_P5_Q4 auc=0.756276
+2026-11-04 18:12:17,098Z INFO ablation fold=5/5 variant=preregistered_P4_Q4_AG3 auc=0.756851
+2026-11-04 18:12:25,252Z INFO negative control=frequency_preserving_shuffle repetition=1 fold=1/5 auc=0.741139
+2026-11-04 18:12:32,192Z INFO negative control=frequency_preserving_shuffle repetition=1 fold=2/5 auc=0.743955
+2026-11-04 18:12:38,775Z INFO negative control=frequency_preserving_shuffle repetition=1 fold=3/5 auc=0.746372
+2026-11-04 18:12:46,865Z INFO negative control=frequency_preserving_shuffle repetition=1 fold=4/5 auc=0.738177
+2026-11-04 18:12:53,888Z INFO negative control=frequency_preserving_shuffle repetition=1 fold=5/5 auc=0.737095
+2026-11-04 18:13:01,999Z INFO negative control=frequency_preserving_shuffle repetition=2 fold=1/5 auc=0.739887
+2026-11-04 18:13:09,041Z INFO negative control=frequency_preserving_shuffle repetition=2 fold=2/5 auc=0.743137
+2026-11-04 18:13:15,623Z INFO negative control=frequency_preserving_shuffle repetition=2 fold=3/5 auc=0.746184
+2026-11-04 18:13:23,740Z INFO negative control=frequency_preserving_shuffle repetition=2 fold=4/5 auc=0.738187
+2026-11-04 18:13:30,670Z INFO negative control=frequency_preserving_shuffle repetition=2 fold=5/5 auc=0.736196
+2026-11-04 18:13:38,844Z INFO negative control=frequency_preserving_shuffle repetition=3 fold=1/5 auc=0.739661
+2026-11-04 18:13:45,836Z INFO negative control=frequency_preserving_shuffle repetition=3 fold=2/5 auc=0.743341
+2026-11-04 18:13:52,448Z INFO negative control=frequency_preserving_shuffle repetition=3 fold=3/5 auc=0.746480
+2026-11-04 18:14:00,549Z INFO negative control=frequency_preserving_shuffle repetition=3 fold=4/5 auc=0.737801
+2026-11-04 18:14:07,687Z INFO negative control=frequency_preserving_shuffle repetition=3 fold=5/5 auc=0.737828
+2026-11-04 18:14:15,949Z INFO negative control=frequency_preserving_shuffle repetition=4 fold=1/5 auc=0.739309
+2026-11-04 18:14:22,822Z INFO negative control=frequency_preserving_shuffle repetition=4 fold=2/5 auc=0.742841
+2026-11-04 18:14:29,919Z INFO negative control=frequency_preserving_shuffle repetition=4 fold=3/5 auc=0.746180
+2026-11-04 18:14:38,100Z INFO negative control=frequency_preserving_shuffle repetition=4 fold=4/5 auc=0.740544
+2026-11-04 18:14:45,108Z INFO negative control=frequency_preserving_shuffle repetition=4 fold=5/5 auc=0.739145
+2026-11-04 18:14:53,228Z INFO negative control=frequency_preserving_shuffle repetition=5 fold=1/5 auc=0.739194
+2026-11-04 18:15:00,310Z INFO negative control=frequency_preserving_shuffle repetition=5 fold=2/5 auc=0.743833
+2026-11-04 18:15:07,459Z INFO negative control=frequency_preserving_shuffle repetition=5 fold=3/5 auc=0.746734
+2026-11-04 18:15:16,020Z INFO negative control=frequency_preserving_shuffle repetition=5 fold=4/5 auc=0.738845
+2026-11-04 18:15:23,029Z INFO negative control=frequency_preserving_shuffle repetition=5 fold=5/5 auc=0.739096
+2026-11-04 18:15:31,353Z INFO negative control=randomized_assignment repetition=1 fold=1/5 auc=0.740236
+2026-11-04 18:15:38,715Z INFO negative control=randomized_assignment repetition=1 fold=2/5 auc=0.744041
+2026-11-04 18:15:45,411Z INFO negative control=randomized_assignment repetition=1 fold=3/5 auc=0.746740
+2026-11-04 18:15:53,753Z INFO negative control=randomized_assignment repetition=1 fold=4/5 auc=0.739619
+2026-11-04 18:16:00,819Z INFO negative control=randomized_assignment repetition=1 fold=5/5 auc=0.737819
+2026-11-04 18:16:09,160Z INFO negative control=randomized_assignment repetition=2 fold=1/5 auc=0.740347
+2026-11-04 18:16:16,241Z INFO negative control=randomized_assignment repetition=2 fold=2/5 auc=0.742784
+2026-11-04 18:16:23,250Z INFO negative control=randomized_assignment repetition=2 fold=3/5 auc=0.746265
+2026-11-04 18:16:31,493Z INFO negative control=randomized_assignment repetition=2 fold=4/5 auc=0.739217
+2026-11-04 18:16:38,486Z INFO negative control=randomized_assignment repetition=2 fold=5/5 auc=0.737204
+2026-11-04 18:16:46,424Z INFO negative control=randomized_assignment repetition=3 fold=1/5 auc=0.739689
+2026-11-04 18:16:52,064Z INFO negative control=randomized_assignment repetition=3 fold=2/5 auc=0.743252
+2026-11-04 18:16:57,791Z INFO negative control=randomized_assignment repetition=3 fold=3/5 auc=0.746441
+2026-11-04 18:17:05,242Z INFO negative control=randomized_assignment repetition=3 fold=4/5 auc=0.739002
+2026-11-04 18:17:11,720Z INFO negative control=randomized_assignment repetition=3 fold=5/5 auc=0.738039
+2026-11-04 18:17:19,296Z INFO negative control=randomized_assignment repetition=4 fold=1/5 auc=0.739959
+2026-11-04 18:17:25,843Z INFO negative control=randomized_assignment repetition=4 fold=2/5 auc=0.742661
+2026-11-04 18:17:31,835Z INFO negative control=randomized_assignment repetition=4 fold=3/5 auc=0.745819
+2026-11-04 18:17:39,428Z INFO negative control=randomized_assignment repetition=4 fold=4/5 auc=0.739874
+2026-11-04 18:17:45,806Z INFO negative control=randomized_assignment repetition=4 fold=5/5 auc=0.737939
+2026-11-04 18:17:53,522Z INFO negative control=randomized_assignment repetition=5 fold=1/5 auc=0.739834
+2026-11-04 18:18:00,220Z INFO negative control=randomized_assignment repetition=5 fold=2/5 auc=0.743096
+2026-11-04 18:18:06,196Z INFO negative control=randomized_assignment repetition=5 fold=3/5 auc=0.746635
+2026-11-04 18:18:13,699Z INFO negative control=randomized_assignment repetition=5 fold=4/5 auc=0.740594
+2026-11-04 18:18:20,011Z INFO negative control=randomized_assignment repetition=5 fold=5/5 auc=0.738838
+2026-11-04 18:18:20,094Z INFO Primary comparison, ablations, and controls are complete.
+2026-11-04 18:18:29,971Z INFO tuned seed=20261106 outer=1/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 18:18:37,429Z INFO tuned seed=20261106 outer=1/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 18:18:46,732Z INFO tuned seed=20261106 outer=1/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 18:18:50,358Z INFO outer fit seed=20261106 fold=1/5 variant=raw_numeric auc=0.749176 rounds=280 features=24 runtime=3.3s
+2026-11-04 18:19:06,305Z INFO tuned seed=20261106 outer=1/5 inner=1/3 variant=raw_plus_keys_ohe features=13824
+2026-11-04 18:19:20,695Z INFO tuned seed=20261106 outer=1/5 inner=2/3 variant=raw_plus_keys_ohe features=13789
+2026-11-04 18:19:35,722Z INFO tuned seed=20261106 outer=1/5 inner=3/3 variant=raw_plus_keys_ohe features=13810
+2026-11-04 18:19:43,407Z INFO outer fit seed=20261106 fold=1/5 variant=raw_plus_keys_ohe auc=0.765752 rounds=480 features=14993 runtime=6.3s
+2026-11-04 18:19:50,846Z INFO tuned seed=20261106 outer=2/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 18:20:00,830Z INFO tuned seed=20261106 outer=2/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 18:20:09,185Z INFO tuned seed=20261106 outer=2/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 18:20:12,531Z INFO outer fit seed=20261106 fold=2/5 variant=raw_numeric auc=0.742313 rounds=312 features=24 runtime=3.1s
+2026-11-04 18:20:27,447Z INFO tuned seed=20261106 outer=2/5 inner=1/3 variant=raw_plus_keys_ohe features=13743
+2026-11-04 18:20:42,101Z INFO tuned seed=20261106 outer=2/5 inner=2/3 variant=raw_plus_keys_ohe features=13719
+2026-11-04 18:20:55,130Z INFO tuned seed=20261106 outer=2/5 inner=3/3 variant=raw_plus_keys_ohe features=13755
+2026-11-04 18:21:02,400Z INFO outer fit seed=20261106 fold=2/5 variant=raw_plus_keys_ohe auc=0.760176 rounds=434 features=14926 runtime=5.8s
+2026-11-04 18:21:10,098Z INFO tuned seed=20261106 outer=3/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 18:21:20,594Z INFO tuned seed=20261106 outer=3/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 18:21:29,595Z INFO tuned seed=20261106 outer=3/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 18:21:32,861Z INFO outer fit seed=20261106 fold=3/5 variant=raw_numeric auc=0.739858 rounds=292 features=24 runtime=2.9s
+2026-11-04 18:21:46,852Z INFO tuned seed=20261106 outer=3/5 inner=1/3 variant=raw_plus_keys_ohe features=13789
+2026-11-04 18:22:02,381Z INFO tuned seed=20261106 outer=3/5 inner=2/3 variant=raw_plus_keys_ohe features=13735
+2026-11-04 18:22:17,568Z INFO tuned seed=20261106 outer=3/5 inner=3/3 variant=raw_plus_keys_ohe features=13696
+2026-11-04 18:22:24,815Z INFO outer fit seed=20261106 fold=3/5 variant=raw_plus_keys_ohe auc=0.756505 rounds=450 features=14947 runtime=5.9s
+2026-11-04 18:22:34,017Z INFO tuned seed=20261106 outer=4/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 18:22:41,766Z INFO tuned seed=20261106 outer=4/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 18:22:49,382Z INFO tuned seed=20261106 outer=4/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 18:22:52,665Z INFO outer fit seed=20261106 fold=4/5 variant=raw_numeric auc=0.739135 rounds=319 features=24 runtime=3.0s
+2026-11-04 18:23:07,033Z INFO tuned seed=20261106 outer=4/5 inner=1/3 variant=raw_plus_keys_ohe features=13685
+2026-11-04 18:23:19,354Z INFO tuned seed=20261106 outer=4/5 inner=2/3 variant=raw_plus_keys_ohe features=13738
+2026-11-04 18:23:32,299Z INFO tuned seed=20261106 outer=4/5 inner=3/3 variant=raw_plus_keys_ohe features=13855
+2026-11-04 18:23:38,631Z INFO outer fit seed=20261106 fold=4/5 variant=raw_plus_keys_ohe auc=0.754128 rounds=368 features=14932 runtime=5.0s
+2026-11-04 18:23:46,991Z INFO tuned seed=20261106 outer=5/5 inner=1/3 variant=raw_numeric features=24
+2026-11-04 18:23:55,610Z INFO tuned seed=20261106 outer=5/5 inner=2/3 variant=raw_numeric features=24
+2026-11-04 18:24:03,580Z INFO tuned seed=20261106 outer=5/5 inner=3/3 variant=raw_numeric features=24
+2026-11-04 18:24:07,175Z INFO outer fit seed=20261106 fold=5/5 variant=raw_numeric auc=0.748018 rounds=354 features=24 runtime=3.3s
+2026-11-04 18:24:21,293Z INFO tuned seed=20261106 outer=5/5 inner=1/3 variant=raw_plus_keys_ohe features=13740
+2026-11-04 18:24:33,574Z INFO tuned seed=20261106 outer=5/5 inner=2/3 variant=raw_plus_keys_ohe features=13724
+2026-11-04 18:24:47,483Z INFO tuned seed=20261106 outer=5/5 inner=3/3 variant=raw_plus_keys_ohe features=13806
+2026-11-04 18:24:54,014Z INFO outer fit seed=20261106 fold=5/5 variant=raw_plus_keys_ohe auc=0.761493 rounds=392 features=14955 runtime=5.2s
+2026-11-04 18:24:54,532Z INFO Secondary-seed robustness replication is complete.
+2026-11-04 18:25:59,593Z INFO summary variant=raw_numeric pooled_auc=0.743257 delta=+0.000000
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_keys_ohe pooled_auc=0.758729 delta=+0.015473
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_keys_frequency_ohe pooled_auc=0.759816 delta=+0.016559
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_decompositions pooled_auc=0.753826 delta=+0.010569
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_interactions pooled_auc=0.742791 delta=-0.000466
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_keys_decompositions_interactions pooled_auc=0.758422 delta=+0.015165
+2026-11-04 18:25:59,595Z INFO summary variant=raw_plus_keys_hash pooled_auc=0.759298 delta=+0.016042
+2026-11-04 18:25:59,724Z INFO All Phase 12 model, validation, report, and integrity artifacts are written; finalizing hashes. elapsed=0:50:24.733550 raw_auc=0.743257 all_key_auc=0.759051

@@ -1,0 +1,15 @@
+2026-11-05 12:58:26,247Z INFO Starting two-secondary-seed bagging experiment
+2026-11-05 12:58:26,248Z INFO This reuses no saved validation predictions for fitting
+2026-11-05 12:58:28,763Z INFO seed=20261114
+2026-11-05 12:58:51,179Z INFO seed=20261114 fold=1 auc=0.766302 runtime_seconds=21.3
+2026-11-05 12:59:13,497Z INFO seed=20261114 fold=2 auc=0.766291 runtime_seconds=21.1
+2026-11-05 12:59:35,610Z INFO seed=20261114 fold=3 auc=0.766951 runtime_seconds=21.0
+2026-11-05 12:59:57,600Z INFO seed=20261114 fold=4 auc=0.768143 runtime_seconds=20.8
+2026-11-05 13:00:19,931Z INFO seed=20261114 fold=5 auc=0.772092 runtime_seconds=21.2
+2026-11-05 13:00:19,978Z INFO seed=20261115
+2026-11-05 13:00:42,245Z INFO seed=20261115 fold=1 auc=0.771054 runtime_seconds=21.2
+2026-11-05 13:01:04,397Z INFO seed=20261115 fold=2 auc=0.773007 runtime_seconds=21.0
+2026-11-05 13:01:26,527Z INFO seed=20261115 fold=3 auc=0.767604 runtime_seconds=21.0
+2026-11-05 13:01:48,591Z INFO seed=20261115 fold=4 auc=0.764582 runtime_seconds=20.9
+2026-11-05 13:02:11,160Z INFO seed=20261115 fold=5 auc=0.759584 runtime_seconds=21.4
+2026-11-05 13:02:13,317Z INFO Completed multi-seed experiment in 227.1 seconds; bagged_auc=0.768825

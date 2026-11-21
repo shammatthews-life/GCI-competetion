@@ -1,0 +1,5 @@
+2026-11-05 12:39:15,670Z INFO Starting one-fold native-category GPU CatBoost preflight
+2026-11-05 12:39:15,670Z INFO train=D:\gci\inpuy\train.csv
+2026-11-05 12:39:15,670Z INFO reference=D:\gci\truth\experiments\phase13_matched_baseline\runs\phase13_20261105T075946Z\OOF_PREDICTIONS.csv
+2026-11-05 12:39:15,670Z INFO Only the supplied train file and saved Phase 13 OOF are read
+2026-11-05 12:39:18,321Z INFO fold=1 fit_rows=136961 valid_rows=34241 seed=20261113 GPU CatBoost iterations=700

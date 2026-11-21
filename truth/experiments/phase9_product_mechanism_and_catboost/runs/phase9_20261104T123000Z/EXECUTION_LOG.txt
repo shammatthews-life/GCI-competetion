@@ -1,0 +1,14 @@
+status=RUNNING
+run_id=20261104T123000Z
+started_utc=2026-11-04T08:20:23.011663+00:00
+LGBM seed=42; fold=1/5; prepare
+LGBM seed=42; fold=1; variant=product_baseline; auc=0.75950079
+LGBM seed=42; fold=1; variant=te_q3; auc=0.76121773
+LGBM seed=42; fold=1; variant=te_q4; auc=0.76193226
+LGBM seed=42; fold=1; variant=te_q5; auc=0.76234161
+LGBM seed=42; fold=1; variant=te_q4_cash; auc=0.76185561
+LGBM seed=42; fold=1; variant=te_amount_ca; auc=0.75927384
+LGBM seed=42; fold=1; variant=te_amount_gc; auc=0.75943300
+LGBM seed=42; fold=1; variant=te_exact_gca; auc=0.75976066
+LGBM seed=42; fold=1; variant=te_k_only; auc=0.75953989
+LGBM seed=42; fold=1; variant=te_q4_plus_k; auc=0.76060238

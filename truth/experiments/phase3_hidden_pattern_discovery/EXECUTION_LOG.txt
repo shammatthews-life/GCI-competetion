@@ -1,0 +1,14 @@
+execution_started_utc=2026-11-03T13:57:44.871820+00:00
+execution_finished_utc=2026-11-03T13:59:27.328469+00:00
+runtime_seconds=102.457
+train_shape=(171202, 34)
+test_shape=(61500, 33)
+v17_reuse_register_rows=23
+formulas_registered=51
+model_features_added=38
+baseline_pooled_auc=0.760658450595
+product_family_pooled_auc=0.761352773337
+delta_vs_baseline=0.000694322742
+code_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+warnings=RuntimeWarning ignored for vectorized missing-value arithmetic; no other warnings recorded
+status=SUCCESS

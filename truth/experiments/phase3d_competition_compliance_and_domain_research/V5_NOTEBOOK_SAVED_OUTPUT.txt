@@ -1,0 +1,97 @@
+--- cell 1 saved stdout ---
+Mounted at /content/drive
+train: /content/train.csv 
+test: /content/test.csv 
+sample: /content/sample_submission.csv 
+hgb oof: None 
+hgb npy: None 
+cache: /content/drive/MyDrive/gci_cache_v5 | threads: 2
+
+--- cell 2 saved stdout ---
+train.csv files found:
+  /content/drive/MyDrive/Competition/input/train.csv  rows=171202  TARGET NaN=0  mean=0.0807  <-- VALID
+  /content/train.csv  rows=97524  TARGET NaN=1  mean=0.0799  x
+
+Using: /content/drive/MyDrive/Competition/input
+
+--- cell 3 saved stdout ---
+decoded products: 1047 (q5 distinct: 5335 ) | fee share of cash loans: 0.75 | features core/all: 67 130
+
+--- cell 4 saved stdout ---
+  qf_shallow fold 1/5: AUC 0.76787 (68s)
+  qf_shallow fold 2/5: AUC 0.77239 (138s)
+  qf_shallow fold 3/5: AUC 0.77472 (204s)
+  qf_shallow fold 4/5: AUC 0.76834 (273s)
+  qf_shallow fold 5/5: AUC 0.77033 (343s)
+  qf_shallow full-data seed 42 done (431s)
+  qf_shallow full-data seed 7 done (487s)
+  qf_shallow full-data seed 2024 done (545s)
+  qf_shallow full-data seed 11 done (634s)
+  qf_shallow full-data seed 99 done (721s)
+qf_shallow: held-out AUC 0.77070
+
+--- cell 5 saved stdout ---
+  qf_reg fold 1/5: AUC 0.76737 (110s)
+  qf_reg fold 2/5: AUC 0.77271 (217s)
+  qf_reg fold 3/5: AUC 0.77607 (324s)
+  qf_reg fold 4/5: AUC 0.76710 (400s)
+  qf_reg fold 5/5: AUC 0.76939 (510s)
+  qf_reg full-data seed 42 done (648s)
+  qf_reg full-data seed 7 done (786s)
+  qf_reg full-data seed 2024 done (922s)
+  qf_reg full-data seed 11 done (1060s)
+  qf_reg full-data seed 99 done (1202s)
+qf_reg: held-out AUC 0.77049
+
+--- cell 6 saved stdout ---
+  v1_allfam_oh fold 1/5: AUC 0.76737 (48s)
+  v1_allfam_oh fold 2/5: AUC 0.77227 (98s)
+  v1_allfam_oh fold 3/5: AUC 0.77624 (148s)
+  v1_allfam_oh fold 4/5: AUC 0.76770 (198s)
+  v1_allfam_oh fold 5/5: AUC 0.76902 (247s)
+  v1_allfam_oh full-data seed 42 done (310s)
+  v1_allfam_oh full-data seed 7 done (365s)
+  v1_allfam_oh full-data seed 2024 done (422s)
+v1_allfam_oh: held-out AUC 0.77047
+
+--- cell 7 saved stdout ---
+  v2_allfam_oh fold 1/5: AUC 0.76713 (51s)
+  v2_allfam_oh fold 2/5: AUC 0.77271 (101s)
+  v2_allfam_oh fold 3/5: AUC 0.77602 (152s)
+  v2_allfam_oh fold 4/5: AUC 0.76879 (202s)
+  v2_allfam_oh fold 5/5: AUC 0.76838 (250s)
+  v2_allfam_oh full-data seed 42 done (312s)
+  v2_allfam_oh full-data seed 7 done (368s)
+  v2_allfam_oh full-data seed 2024 done (428s)
+v2_allfam_oh: held-out AUC 0.77055
+
+--- cell 8 saved stdout ---
+  v2_mono fold 1/5: AUC 0.76725 (72s)
+  v2_mono fold 2/5: AUC 0.77259 (150s)
+  v2_mono fold 3/5: AUC 0.77529 (221s)
+  v2_mono fold 4/5: AUC 0.76831 (291s)
+  v2_mono fold 5/5: AUC 0.76955 (362s)
+  v2_mono full-data seed 42 done (457s)
+  v2_mono full-data seed 7 done (549s)
+  v2_mono full-data seed 2024 done (643s)
+v2_mono: held-out AUC 0.77056
+
+--- cell 9 saved stdout ---
+member held-out AUC  (old -> new):
+  qf_shallow     0.77068 -> 0.77070
+  qf_reg         0.77046 -> 0.77049
+  v1_allfam_oh   0.77070 -> 0.77047
+  v2_allfam_oh   0.77036 -> 0.77055
+  v2_mono        0.77057 -> 0.77056
+  fold 1: old blend 0.76901 | new blend 0.76889 (-0.00012) | 50/50 old+new 0.76906 (+0.00005)
+  fold 2: old blend 0.77426 | new blend 0.77393 (-0.00033) | 50/50 old+new 0.77423 (-0.00003)
+  fold 3: old blend 0.77708 | new blend 0.77711 (+0.00003) | 50/50 old+new 0.77722 (+0.00014)
+  fold 4: old blend 0.76959 | new blend 0.76946 (-0.00013) | 50/50 old+new 0.76964 (+0.00005)
+  fold 5: old blend 0.77049 | new blend 0.77079 (+0.00030) | 50/50 old+new 0.77077 (+0.00027)
+
+new minus old: mean -0.00005, folds positive 2/5 | 50/50 mix minus old: mean +0.00010, folds positive 4/5
+pooled held-out AUC: old 0.77202 | new 0.77198 | mix 0.77213
+wrote /content/drive/MyDrive/gci_output_v5/v5_A_new_members_same_weights.csv
+wrote /content/drive/MyDrive/gci_output_v5/v5_B_mix_old_and_new.csv
+
+Rule set in advance: submit a v5 file only if its 'minus old' mean is >= +0.0002 AND positive on >= 4 of 5 folds. Otherwise keep v3_A (0.77746).

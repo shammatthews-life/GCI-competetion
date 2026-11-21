@@ -1,0 +1,8 @@
+started_utc=2026-11-03T14:02:14.568981+00:00
+finished_utc=2026-11-03T14:07:11.958387+00:00
+runtime_seconds=297.389
+train_shape=(171202, 34)
+family_count=4
+baseline_pooled_auc=0.760658450595
+source_sha256=8116132f51dfd537f790f04bfa611dbb1e73c07ee52a2366fd7a88ef82d7fdc7
+status=SUCCESS

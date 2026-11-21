@@ -1,0 +1,30 @@
+Phase 3 Batch 1 execution attempts
+
+Attempt 1: Failed before feature analysis. pandas could not parse the existing
+V17_FEATURE_REUSE_REGISTER.csv because several comma-containing fields are
+unquoted. No source or historical experiment was modified. The runner was
+changed to count/read the audited register's physical rows only; the register
+is not an experiment input.
+
+Attempt 2: Failed at LightGBM category-frame construction. Candidate features
+retained original row indexes while the preserved baseline builder reset them,
+causing mixed category values after concatenation. Candidate feature frames
+were changed to reset their index; an alignment and LightGBM-frame smoke test
+passed before the full run.
+
+Attempt 3: Completed successfully. See EXECUTION_LOG.txt for command timing,
+output paths, and initial family-level discovery metrics.
+
+The first two failed experiment attempts occurred before successful artifact
+generation. A later unittest command passed a Windows absolute path where
+unittest expected a module name; the test file was then run directly and all
+five tests passed. Successful run outputs are preserved in this folder.
+
+A post-run integrity command initially pointed at a nonexistent
+`phase3_advanced_feature_engineering` folder; it was corrected to the actual
+`phase2_advanced_feature_engineering` path, and the historical OOF/fold
+hashes matched the Phase 3 copies. No experiment was affected.
+
+An optional PowerShell runner-hash display command had a pipeline syntax
+error; an equivalent Python SHA-256 check then matched all four execution
+hashes. No experiment or output was affected.

@@ -1,0 +1,46 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Temporary files and local run outputs
+*.tmp
+*.temp
+*.log
+experiments/exp85_phase2_inner_early_stopping/runs/
+experiments/exp02_financial_behaviour/runs/
+.ipynb_checkpoints/
+tmp/
+temp/
+
+# Local data and model artifacts
+data/
+datasets/
+*.csv
+!reports/python_code_audit/*.csv
+!experiments/exp02_financial_behaviour/FOLD_METRICS.csv
+*.parquet
+*.feather
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+*.cbm
+*.pt
+*.pth
+*.onnx
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*credential*
+*secret*
+*token*

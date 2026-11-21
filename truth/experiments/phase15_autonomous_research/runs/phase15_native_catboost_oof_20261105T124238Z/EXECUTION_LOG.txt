@@ -1,0 +1,31 @@
+2026-11-05 12:42:38,758Z INFO Starting matched 5-fold native-category GPU CatBoost OOF
+2026-11-05 12:42:38,758Z INFO train=D:\gci\inpuy\train.csv
+2026-11-05 12:42:38,758Z INFO reference=D:\gci\truth\experiments\phase13_matched_baseline\runs\phase13_20261105T075946Z\OOF_PREDICTIONS.csv
+2026-11-05 12:42:38,758Z INFO Only the supplied train file and saved Phase 13 OOF are read
+2026-11-05 12:42:41,363Z INFO rows=171202 positives=13821 folds=5 seed=20261113 iterations=700
+2026-11-05 12:42:41,363Z INFO fold=1 fit_rows=136961 valid_rows=34241
+2026-11-05 12:43:02,940Z INFO native_catboost_base_all8 fold=1 auc=0.771747 runtime_seconds=20.5
+2026-11-05 12:43:24,849Z INFO native_catboost_phase14_numeric fold=1 auc=0.772509 runtime_seconds=20.7
+2026-11-05 12:43:46,701Z INFO native_catboost_phase14_plus_time fold=1 auc=0.772875 runtime_seconds=20.7
+2026-11-05 12:43:46,714Z INFO fold=1 completed runtime_seconds=65.4
+2026-11-05 12:43:46,714Z INFO fold=2 fit_rows=136961 valid_rows=34241
+2026-11-05 12:44:08,125Z INFO native_catboost_base_all8 fold=2 auc=0.774848 runtime_seconds=20.3
+2026-11-05 12:44:22,658Z INFO native_catboost_phase14_numeric fold=2 auc=0.774889 runtime_seconds=13.4
+2026-11-05 12:44:32,690Z INFO native_catboost_phase14_plus_time fold=2 auc=0.774920 runtime_seconds=9.5
+2026-11-05 12:44:32,698Z INFO fold=2 completed runtime_seconds=46.0
+2026-11-05 12:44:32,698Z INFO fold=3 fit_rows=136962 valid_rows=34240
+2026-11-05 12:44:41,983Z INFO native_catboost_base_all8 fold=3 auc=0.761427 runtime_seconds=8.8
+2026-11-05 12:44:51,815Z INFO native_catboost_phase14_numeric fold=3 auc=0.762004 runtime_seconds=9.3
+2026-11-05 12:45:07,947Z INFO native_catboost_phase14_plus_time fold=3 auc=0.761288 runtime_seconds=15.6
+2026-11-05 12:45:07,963Z INFO fold=3 completed runtime_seconds=35.3
+2026-11-05 12:45:07,963Z INFO fold=4 fit_rows=136962 valid_rows=34240
+2026-11-05 12:45:29,292Z INFO native_catboost_base_all8 fold=4 auc=0.764522 runtime_seconds=20.2
+2026-11-05 12:45:51,173Z INFO native_catboost_phase14_numeric fold=4 auc=0.763748 runtime_seconds=20.7
+2026-11-05 12:46:13,320Z INFO native_catboost_phase14_plus_time fold=4 auc=0.765141 runtime_seconds=21.0
+2026-11-05 12:46:13,331Z INFO fold=4 completed runtime_seconds=65.4
+2026-11-05 12:46:13,336Z INFO fold=5 fit_rows=136962 valid_rows=34240
+2026-11-05 12:46:34,970Z INFO native_catboost_base_all8 fold=5 auc=0.762577 runtime_seconds=20.5
+2026-11-05 12:46:56,730Z INFO native_catboost_phase14_numeric fold=5 auc=0.763117 runtime_seconds=20.6
+2026-11-05 12:47:18,917Z INFO native_catboost_phase14_plus_time fold=5 auc=0.763401 runtime_seconds=21.0
+2026-11-05 12:47:18,933Z INFO fold=5 completed runtime_seconds=65.6
+2026-11-05 12:54:35,722Z INFO Completed five-fold OOF in 717.1 seconds; results=D:\gci\truth\experiments\phase15_autonomous_research\runs\phase15_native_catboost_oof_20261105T124238Z\MODEL_RESULTS.csv

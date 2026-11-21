@@ -1,0 +1,25 @@
+started_utc=2026-11-03T14:31:34.471337+00:00
+finished_utc=2026-11-03T14:31:35.678940+00:00
+runtime_seconds=1.208
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_file=D:\gci\inpuy\train.csv
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+train_dimensions=171202 rows; 2 selected columns (ID,TARGET)
+fold_file=D:\gci\truth\experiments\phase2_advanced_feature_engineering\FOLD_ASSIGNMENTS.csv
+source_sha256=4d1c5f855b5a85d0745c0dd914590df24f92ee6c84425db98038492e3177ce19
+status=SUCCESS
+validated_prediction_sets=9
+all_ID_TARGET_fold_prediction_checks=PASS
+results=D:\gci\truth\experiments\phase3b_deep_validation\CURRENT_SCORE_REPRODUCTION.csv
+
+                       variant  pooled_oof_auc  mean_fold_auc  std_fold_auc
+            corrected_baseline        0.760658       0.760729      0.003770
+           product_decoder_all        0.762826       0.762902      0.003929
+product_decoder_all_components        0.762826       0.762902      0.003929
+                k_lattice_only        0.761012       0.761097      0.003699
+     q_rounded_ratio_keys_only        0.760939       0.761049      0.003169
+      p_fee_adjusted_keys_only        0.762184       0.762280      0.003591
+           p_fee_fit_estimated        0.762184       0.762280      0.003591
+             p_fee_fixed_129_5        0.761656       0.761768      0.003426
+          q_unadjusted_control        0.760939       0.761049      0.003169

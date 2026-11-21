@@ -1,0 +1,11 @@
+status=FAILED_BEFORE_MODEL_FITS
+run_id=20261104T071500Z
+failure_stage=first_development_fold_inner_round_selection
+error=AttributeError: imported Phase 2 wrapper does not expose build_rowwise_features
+models_trained=0
+predictions_created=NO
+submission_created=NO
+champion_modified=NO
+cause=Phase 7 runner bound the Phase 2 validation wrapper as the baseline API instead of importing its preserved baseline source module.
+correction=Phase 7 runner now imports D:\gci\truth\research_archive\exp85_phase2_source_snapshot\project\source\run_independent_baseline.py directly, while retaining the wrapper in source provenance.
+preservation=This failed attempt and its pre-run manifests are retained; no existing artifact was overwritten.

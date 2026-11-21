@@ -1,0 +1,26 @@
+2026-11-05 14:20:51,084Z INFO outer=1/5 fit=136961 validation=34241
+2026-11-05 14:21:26,644Z INFO outer=1 inner=1 CatBoost_auc=0.766197 TE_LGBM_auc=0.766837 rounds=371
+2026-11-05 14:21:58,597Z INFO outer=1 inner=2 CatBoost_auc=0.759860 TE_LGBM_auc=0.756949 rounds=399
+2026-11-05 14:22:34,560Z INFO outer=1 inner=3 CatBoost_auc=0.762003 TE_LGBM_auc=0.760284 rounds=601
+2026-11-05 14:22:34,856Z INFO outer=1 selected_weight_cat=0.50 blend_auc=0.774078 CatBoost=0.772875 TE_LGBM=0.770875
+2026-11-05 14:22:34,856Z INFO outer=2/5 fit=136961 validation=34241
+2026-11-05 14:23:07,336Z INFO outer=2 inner=1 CatBoost_auc=0.764881 TE_LGBM_auc=0.762346 rounds=385
+2026-11-05 14:23:38,742Z INFO outer=2 inner=2 CatBoost_auc=0.762088 TE_LGBM_auc=0.760824 rounds=272
+2026-11-05 14:24:12,262Z INFO outer=2 inner=3 CatBoost_auc=0.761416 TE_LGBM_auc=0.757649 rounds=385
+2026-11-05 14:24:12,564Z INFO outer=2 selected_weight_cat=0.75 blend_auc=0.775869 CatBoost=0.774920 TE_LGBM=0.772564
+2026-11-05 14:24:12,564Z INFO outer=3/5 fit=136962 validation=34240
+2026-11-05 14:24:42,352Z INFO outer=3 inner=1 CatBoost_auc=0.771670 TE_LGBM_auc=0.768718 rounds=309
+2026-11-05 14:25:16,148Z INFO outer=3 inner=2 CatBoost_auc=0.762752 TE_LGBM_auc=0.762419 rounds=452
+2026-11-05 14:25:46,127Z INFO outer=3 inner=3 CatBoost_auc=0.767267 TE_LGBM_auc=0.764310 rounds=242
+2026-11-05 14:25:46,449Z INFO outer=3 selected_weight_cat=0.50 blend_auc=0.762384 CatBoost=0.761288 TE_LGBM=0.758560
+2026-11-05 14:25:46,449Z INFO outer=4/5 fit=136962 validation=34240
+2026-11-05 14:26:22,429Z INFO outer=4 inner=1 CatBoost_auc=0.764554 TE_LGBM_auc=0.760492 rounds=536
+2026-11-05 14:26:52,152Z INFO outer=4 inner=2 CatBoost_auc=0.763508 TE_LGBM_auc=0.762046 rounds=295
+2026-11-05 14:27:21,314Z INFO outer=4 inner=3 CatBoost_auc=0.768336 TE_LGBM_auc=0.765043 rounds=302
+2026-11-05 14:27:21,590Z INFO outer=4 selected_weight_cat=0.75 blend_auc=0.766281 CatBoost=0.765141 TE_LGBM=0.763739
+2026-11-05 14:27:21,590Z INFO outer=5/5 fit=136962 validation=34240
+2026-11-05 14:27:49,660Z INFO outer=5 inner=1 CatBoost_auc=0.772780 TE_LGBM_auc=0.770942 rounds=289
+2026-11-05 14:28:19,575Z INFO outer=5 inner=2 CatBoost_auc=0.765550 TE_LGBM_auc=0.762168 rounds=315
+2026-11-05 14:28:51,177Z INFO outer=5 inner=3 CatBoost_auc=0.760414 TE_LGBM_auc=0.758654 rounds=395
+2026-11-05 14:28:51,450Z INFO outer=5 selected_weight_cat=0.75 blend_auc=0.764998 CatBoost=0.763401 TE_LGBM=0.761740
+2026-11-05 14:32:52,846Z INFO Completed: nested_blend=0.768669 Phase15=0.767511 Phase17=0.765291

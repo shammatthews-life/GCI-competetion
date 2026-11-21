@@ -1,0 +1,12 @@
+2026-11-05 13:08:02,795Z INFO Starting matched five-fold organization x external-risk-bin OOF
+2026-11-05 13:08:27,707Z INFO catboost_ctr1_time_base fold=1 auc=0.773292 runtime_seconds=20.9
+2026-11-05 13:08:49,556Z INFO catboost_ctr1_time_plus_org_external_cross fold=1 auc=0.773878 runtime_seconds=20.7
+2026-11-05 13:09:11,798Z INFO catboost_ctr1_time_base fold=2 auc=0.774919 runtime_seconds=20.6
+2026-11-05 13:09:31,014Z INFO catboost_ctr1_time_plus_org_external_cross fold=2 auc=0.775074 runtime_seconds=18.1
+2026-11-05 13:09:50,626Z INFO catboost_ctr1_time_base fold=3 auc=0.761357 runtime_seconds=18.8
+2026-11-05 13:10:12,565Z INFO catboost_ctr1_time_plus_org_external_cross fold=3 auc=0.761520 runtime_seconds=20.8
+2026-11-05 13:10:36,095Z INFO catboost_ctr1_time_base fold=4 auc=0.765054 runtime_seconds=21.8
+2026-11-05 13:10:58,669Z INFO catboost_ctr1_time_plus_org_external_cross fold=4 auc=0.764481 runtime_seconds=21.4
+2026-11-05 13:11:21,577Z INFO catboost_ctr1_time_base fold=5 auc=0.763447 runtime_seconds=21.2
+2026-11-05 13:11:44,128Z INFO catboost_ctr1_time_plus_org_external_cross fold=5 auc=0.763409 runtime_seconds=21.4
+2026-11-05 13:12:44,005Z INFO completed pooled_delta=0.000045 positive_folds=3/5 runtime_seconds=281.2

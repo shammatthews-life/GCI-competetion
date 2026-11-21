@@ -1,0 +1,11 @@
+started_utc=2026-11-03T16:44:15.645321+00:00
+finished_utc=2026-11-03T17:05:54.760293+00:00
+runtime_seconds=1299.114
+train_rows=171202
+outer_folds=5
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+source_sha256=a2344ebc2dd7e40f06cd9c060acd9058c86e24b80784a7b0288d74c6a2d8e4a8
+outer_validation_labels_used_for_clustering_or_cutpoints=False
+outer_validation_labels_used_for_ensemble_weights=False
+ensemble_weights=fixed equal weight
+status=SUCCESS

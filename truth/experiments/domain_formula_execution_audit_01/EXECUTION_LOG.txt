@@ -1,0 +1,16 @@
+Execution timestamp UTC: 2026-11-03T08:10:36Z
+Command: python D:\gci\truth\experiments\domain_formula_execution_audit_01\run_domain_formula_audit.py
+Train shape: (171202, 34)
+Status: executed successfully
+Output files:
+- BASELINE_VS_FEATURES_RESULTS.csv (271 bytes)
+- D_SINGLE_FEATURE_CV_RESULTS.csv (2675 bytes)
+- environment.json (404 bytes)
+- FINAL_AUDIT_REPORT.md (2197 bytes)
+- FOLD_LEVEL_CV_RESULTS.csv (623 bytes)
+- FORMULA_CORRECTNESS_AUDIT.csv (1913 bytes)
+- FORMULA_DISTRIBUTION_REPORT.csv (2109 bytes)
+- FORMULA_REPRODUCTION_RESULTS.csv (2453 bytes)
+- requirements.txt (39 bytes)
+- run_domain_formula_audit.py (20666 bytes)
+- SOURCE_CODE_AUDIT.md (1874 bytes)

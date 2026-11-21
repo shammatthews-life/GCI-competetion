@@ -1,0 +1,12 @@
+verification_utc: 2026-11-03T18:05:28.216052+00:00
+main_experiment_started_utc: 2026-11-03T17:55:05.271788+00:00
+main_experiment_finished_utc: 2026-11-03T18:01:56.073858+00:00
+train_shape: (171202, 34)
+target_rate: 0.08072920
+term_pattern_top_candidate: snapped_paid_ratio
+term_pattern_pooled_delta: +0.000557257
+status: SUCCESS
+OOF AUCs independently recalculated: yes
+claude solution source / vectors: unavailable locally
+warnings: reused folds and multiple probes make results exploratory; inferred contract variables are not observed loan terms.
+manifest_entries: 23

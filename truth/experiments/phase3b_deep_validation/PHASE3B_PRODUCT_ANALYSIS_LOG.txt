@@ -1,0 +1,16 @@
+started_utc=2026-11-03T15:03:58.379362+00:00
+finished_utc=2026-11-03T15:06:34.750788+00:00
+runtime_seconds=156.371
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+baseline_folds_sha256=c19920148ae021e3f2070dffa7d43f2b030f2e19b29e24f0aceec21e22ebe1db
+shared_runner_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+analysis_source_sha256=95b8b4c71c1b352348f1469209155bf5a3c017b5d48efeb4400cea722da8229c
+outer_fold_validation_features_fit_on_outer_train_only=True
+TARGET_passed_to_feature_builder=False
+status=SUCCESS
+product_feature_count=38
+lattice_rows=240
+fee_rows=35
+group_rows=584

@@ -1,0 +1,6 @@
+2026-11-05 13:06:27,534Z INFO Starting fit-fold organization x external-risk-bin interaction preflight
+2026-11-05 13:06:31,610Z INFO training catboost_ctr1_time_base features=99 cat=16
+2026-11-05 13:06:52,516Z INFO catboost_ctr1_time_base auc=0.772771 runtime_seconds=20.9
+2026-11-05 13:06:53,178Z INFO training catboost_ctr1_time_plus_org_external_cross features=100 cat=17
+2026-11-05 13:07:07,484Z INFO catboost_ctr1_time_plus_org_external_cross auc=0.773674 runtime_seconds=14.3
+2026-11-05 13:07:08,084Z INFO completed cross_delta=0.000903 in 40.6 seconds

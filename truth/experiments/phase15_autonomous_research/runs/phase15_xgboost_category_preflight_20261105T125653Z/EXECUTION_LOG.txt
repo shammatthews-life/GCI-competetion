@@ -1,0 +1,5 @@
+2026-11-05 18:26:53,459Z INFO Starting native-categorical XGBoost representative preflight
+2026-11-05 18:26:53,459Z INFO Only the supplied train file is read; test/submission excluded
+2026-11-05 18:26:58,867Z INFO xgboost_native_categories_no_product_keys auc=0.737658 best_iteration=157 fit_seconds=4.3
+2026-11-05 18:27:01,447Z INFO xgboost_native_categories_four_constant_free_keys auc=0.723070 best_iteration=23 fit_seconds=2.3
+2026-11-05 18:27:01,585Z INFO Completed in 8.1 seconds; run=D:\gci\truth\experiments\phase15_autonomous_research\runs\phase15_xgboost_category_preflight_20261105T125653Z

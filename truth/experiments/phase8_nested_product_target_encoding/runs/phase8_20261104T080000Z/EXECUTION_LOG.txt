@@ -1,0 +1,120 @@
+status=RUNNING
+run_id=20261104T080000Z
+started_utc=2026-11-04T07:49:30.090096+00:00
+seed=42; fold=1/5; selecting_shared_rounds
+seed=42; fold=1/5; variant=raw_baseline; auc=0.75916939; rounds=709
+seed=42; fold=1/5; variant=raw_plus_phase3_product; auc=0.75805510; rounds=709
+seed=42; fold=1/5; variant=product_plus_te_q4; auc=0.76167724; rounds=709
+seed=42; fold=1/5; variant=product_plus_te8; auc=0.76473678; rounds=709
+seed=42; fold=1/5; variant=product_plus_te8_and_counts; auc=0.76459255; rounds=709
+seed=42; fold=1/5; variant=product_plus_te10; auc=0.76325362; rounds=709
+seed=42; fold=2/5; selecting_shared_rounds
+seed=42; fold=2/5; variant=raw_baseline; auc=0.75966551; rounds=255
+seed=42; fold=2/5; variant=raw_plus_phase3_product; auc=0.76084465; rounds=255
+seed=42; fold=2/5; variant=product_plus_te_q4; auc=0.76581462; rounds=255
+seed=42; fold=2/5; variant=product_plus_te8; auc=0.76935896; rounds=255
+seed=42; fold=2/5; variant=product_plus_te8_and_counts; auc=0.76841382; rounds=255
+seed=42; fold=2/5; variant=product_plus_te10; auc=0.76946760; rounds=255
+seed=42; fold=3/5; selecting_shared_rounds
+seed=42; fold=3/5; variant=raw_baseline; auc=0.76636521; rounds=460
+seed=42; fold=3/5; variant=raw_plus_phase3_product; auc=0.76848849; rounds=460
+seed=42; fold=3/5; variant=product_plus_te_q4; auc=0.77187136; rounds=460
+seed=42; fold=3/5; variant=product_plus_te8; auc=0.77284209; rounds=460
+seed=42; fold=3/5; variant=product_plus_te8_and_counts; auc=0.77286140; rounds=460
+seed=42; fold=3/5; variant=product_plus_te10; auc=0.77310833; rounds=460
+seed=42; fold=4/5; selecting_shared_rounds
+seed=42; fold=4/5; variant=raw_baseline; auc=0.75725897; rounds=449
+seed=42; fold=4/5; variant=raw_plus_phase3_product; auc=0.75886108; rounds=449
+seed=42; fold=4/5; variant=product_plus_te_q4; auc=0.76281090; rounds=449
+seed=42; fold=4/5; variant=product_plus_te8; auc=0.76585873; rounds=449
+seed=42; fold=4/5; variant=product_plus_te8_and_counts; auc=0.76715305; rounds=449
+seed=42; fold=4/5; variant=product_plus_te10; auc=0.76692310; rounds=449
+seed=42; fold=5/5; selecting_shared_rounds
+seed=42; fold=5/5; variant=raw_baseline; auc=0.76229528; rounds=665
+seed=42; fold=5/5; variant=raw_plus_phase3_product; auc=0.76158971; rounds=665
+seed=42; fold=5/5; variant=product_plus_te_q4; auc=0.76626992; rounds=665
+seed=42; fold=5/5; variant=product_plus_te8; auc=0.76735532; rounds=665
+seed=42; fold=5/5; variant=product_plus_te8_and_counts; auc=0.76705036; rounds=665
+seed=42; fold=5/5; variant=product_plus_te10; auc=0.76727163; rounds=665
+seed=7; fold=1/5; selecting_shared_rounds
+seed=7; fold=1/5; variant=raw_baseline; auc=0.76044295; rounds=435
+seed=7; fold=1/5; variant=raw_plus_phase3_product; auc=0.76208932; rounds=435
+seed=7; fold=1/5; variant=product_plus_te_q4; auc=0.76481449; rounds=435
+seed=7; fold=1/5; variant=product_plus_te8; auc=0.76860579; rounds=435
+seed=7; fold=1/5; variant=product_plus_te8_and_counts; auc=0.76900465; rounds=435
+seed=7; fold=1/5; variant=product_plus_te10; auc=0.76877115; rounds=435
+seed=7; fold=2/5; selecting_shared_rounds
+seed=7; fold=2/5; variant=raw_baseline; auc=0.76093867; rounds=603
+seed=7; fold=2/5; variant=raw_plus_phase3_product; auc=0.76258999; rounds=603
+seed=7; fold=2/5; variant=product_plus_te_q4; auc=0.76670738; rounds=603
+seed=7; fold=2/5; variant=product_plus_te8; auc=0.76854751; rounds=603
+seed=7; fold=2/5; variant=product_plus_te8_and_counts; auc=0.76928356; rounds=603
+seed=7; fold=2/5; variant=product_plus_te10; auc=0.76822680; rounds=603
+seed=7; fold=3/5; selecting_shared_rounds
+seed=7; fold=3/5; variant=raw_baseline; auc=0.76096158; rounds=805
+seed=7; fold=3/5; variant=raw_plus_phase3_product; auc=0.76318892; rounds=805
+seed=7; fold=3/5; variant=product_plus_te_q4; auc=0.76708085; rounds=805
+seed=7; fold=3/5; variant=product_plus_te8; auc=0.76766747; rounds=805
+seed=7; fold=3/5; variant=product_plus_te8_and_counts; auc=0.76843191; rounds=805
+seed=7; fold=3/5; variant=product_plus_te10; auc=0.76861035; rounds=805
+seed=7; fold=4/5; selecting_shared_rounds
+seed=7; fold=4/5; variant=raw_baseline; auc=0.75835004; rounds=536
+seed=7; fold=4/5; variant=raw_plus_phase3_product; auc=0.76045482; rounds=536
+seed=7; fold=4/5; variant=product_plus_te_q4; auc=0.76270072; rounds=536
+seed=7; fold=4/5; variant=product_plus_te8; auc=0.76510825; rounds=536
+seed=7; fold=4/5; variant=product_plus_te8_and_counts; auc=0.76542086; rounds=536
+seed=7; fold=4/5; variant=product_plus_te10; auc=0.76462764; rounds=536
+seed=7; fold=5/5; selecting_shared_rounds
+seed=7; fold=5/5; variant=raw_baseline; auc=0.76065632; rounds=380
+seed=7; fold=5/5; variant=raw_plus_phase3_product; auc=0.76396577; rounds=380
+seed=7; fold=5/5; variant=product_plus_te_q4; auc=0.76727956; rounds=380
+seed=7; fold=5/5; variant=product_plus_te8; auc=0.76875614; rounds=380
+seed=7; fold=5/5; variant=product_plus_te8_and_counts; auc=0.76850537; rounds=380
+seed=7; fold=5/5; variant=product_plus_te10; auc=0.76859503; rounds=380
+seed=2026; fold=1/5; selecting_shared_rounds
+seed=2026; fold=1/5; variant=raw_baseline; auc=0.75961720; rounds=437
+seed=2026; fold=1/5; variant=raw_plus_phase3_product; auc=0.76128442; rounds=437
+seed=2026; fold=1/5; variant=product_plus_te_q4; auc=0.76426669; rounds=437
+seed=2026; fold=1/5; variant=product_plus_te8; auc=0.76474922; rounds=437
+seed=2026; fold=1/5; variant=product_plus_te8_and_counts; auc=0.76412712; rounds=437
+seed=2026; fold=1/5; variant=product_plus_te10; auc=0.76379489; rounds=437
+seed=2026; fold=2/5; selecting_shared_rounds
+seed=2026; fold=2/5; variant=raw_baseline; auc=0.75194748; rounds=593
+seed=2026; fold=2/5; variant=raw_plus_phase3_product; auc=0.75558308; rounds=593
+seed=2026; fold=2/5; variant=product_plus_te_q4; auc=0.75949152; rounds=593
+seed=2026; fold=2/5; variant=product_plus_te8; auc=0.76188712; rounds=593
+seed=2026; fold=2/5; variant=product_plus_te8_and_counts; auc=0.76133478; rounds=593
+seed=2026; fold=2/5; variant=product_plus_te10; auc=0.76044669; rounds=593
+seed=2026; fold=3/5; selecting_shared_rounds
+seed=2026; fold=3/5; variant=raw_baseline; auc=0.75947616; rounds=808
+seed=2026; fold=3/5; variant=raw_plus_phase3_product; auc=0.76310564; rounds=808
+seed=2026; fold=3/5; variant=product_plus_te_q4; auc=0.76633147; rounds=808
+seed=2026; fold=3/5; variant=product_plus_te8; auc=0.76932633; rounds=808
+seed=2026; fold=3/5; variant=product_plus_te8_and_counts; auc=0.77009504; rounds=808
+seed=2026; fold=3/5; variant=product_plus_te10; auc=0.76969664; rounds=808
+seed=2026; fold=4/5; selecting_shared_rounds
+seed=2026; fold=4/5; variant=raw_baseline; auc=0.76383025; rounds=437
+seed=2026; fold=4/5; variant=raw_plus_phase3_product; auc=0.76654096; rounds=437
+seed=2026; fold=4/5; variant=product_plus_te_q4; auc=0.77053639; rounds=437
+seed=2026; fold=4/5; variant=product_plus_te8; auc=0.77189414; rounds=437
+seed=2026; fold=4/5; variant=product_plus_te8_and_counts; auc=0.77232381; rounds=437
+seed=2026; fold=4/5; variant=product_plus_te10; auc=0.77181949; rounds=437
+seed=2026; fold=5/5; selecting_shared_rounds
+seed=2026; fold=5/5; variant=raw_baseline; auc=0.76496716; rounds=705
+seed=2026; fold=5/5; variant=raw_plus_phase3_product; auc=0.76761723; rounds=705
+seed=2026; fold=5/5; variant=product_plus_te_q4; auc=0.77045731; rounds=705
+seed=2026; fold=5/5; variant=product_plus_te8; auc=0.76883753; rounds=705
+seed=2026; fold=5/5; variant=product_plus_te8_and_counts; auc=0.76909058; rounds=705
+seed=2026; fold=5/5; variant=product_plus_te10; auc=0.76806300; rounds=705
+status=COMPLETED
+finished_utc=2026-11-04T08:04:07.959049+00:00
+runtime_seconds=877.871
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+phase3_source_sha256=d823590ea596f03ca7794755fc711bb55536bc4ab10c5bf8826560a7b803b575
+phase7_runner_sha256=887f762901eb823d692e08db153fb17f1bdc9c1af47f38474717b099c38d2105
+variants=6; seeds=(42, 7, 2026); folds=5
+test_file_opened=NO; external_data=NO; target_maps_outer_validation_labels=NO
+submission_created=NO; champion_modified=NO; holdout_scored=NO
+output_directory=D:\gci\truth\experiments\phase8_nested_product_target_encoding\runs\phase8_20261104T080000Z

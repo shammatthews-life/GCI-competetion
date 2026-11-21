@@ -1,0 +1,11 @@
+2026-11-05 14:06:22,545Z INFO fold=1/5 fit=136961 validation=34241
+2026-11-05 14:06:55,368Z INFO fold=1 rounds=383 baseline_auc=0.768388 te_auc=0.770875 delta=+0.002487
+2026-11-05 14:06:55,369Z INFO fold=2/5 fit=136961 validation=34241
+2026-11-05 14:07:18,192Z INFO fold=2 rounds=383 baseline_auc=0.770014 te_auc=0.772564 delta=+0.002550
+2026-11-05 14:07:18,192Z INFO fold=3/5 fit=136962 validation=34240
+2026-11-05 14:07:46,296Z INFO fold=3 rounds=593 baseline_auc=0.759420 te_auc=0.758560 delta=-0.000860
+2026-11-05 14:07:46,296Z INFO fold=4/5 fit=136962 validation=34240
+2026-11-05 14:08:17,343Z INFO fold=4 rounds=354 baseline_auc=0.761901 te_auc=0.763739 delta=+0.001838
+2026-11-05 14:08:17,343Z INFO fold=5/5 fit=136962 validation=34240
+2026-11-05 14:09:11,200Z INFO fold=5 rounds=863 baseline_auc=0.762811 te_auc=0.761740 delta=-0.001071
+2026-11-05 14:11:21,463Z INFO Completed baseline=0.764330 nested_te=0.765291 delta=+0.000960 CI=[-0.000065, 0.002014]

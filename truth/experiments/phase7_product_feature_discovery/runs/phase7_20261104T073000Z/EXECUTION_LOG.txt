@@ -1,0 +1,25 @@
+status=COMPLETED
+run_id=20261104T073000Z
+started_utc=2026-11-04T07:04:49.007450+00:00
+finished_utc=2026-11-04T07:21:44.154121+00:00
+runtime_seconds=1015.158
+python=3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+platform=Windows-11-10.0.26300-SP0
+train_sha256=b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1
+test_sha256=dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65
+phase6_baseline_oof_sha256=03a88fc40fa8071cce342bc26eda221bc0359993c8688311a43e8c36521e8de3
+baseline_oof_matches_manifest=True
+partition_manifest_sha256=5f61f347650639d47bda74779046e1f7ab9b5397ad4b314cb43a30588fa7f56b
+development_rows=136961; holdout_rows=34241
+development_seed=20261113; holdout_seed=20261112; holdout_fraction=0.2
+primary_candidate=raw_plus_all_product
+variant_count=29; development_fold_model_fits=145
+primary_dev_auc=0.759320302; primary_dev_delta=+0.002441424
+primary_holdout_auc=0.762763150; primary_holdout_delta=+0.000919365
+holdout_is_independent_confirmation=NO; all labels appeared in earlier project OOF work
+process_peak_working_set_bytes=None
+test_predictors_read=NO; test_TARGET_read=NO; external_data=NO; pooled_train_test_fit=NO
+target_encoding=NO; test_to_test_coupling=NO; broad_model_sweeps=NO
+submission_created=NO; champion_modified=NO; historical_files_modified=NO
+decision=RESEARCH CANDIDATE ONLY — independent confirmation unavailable
+outputs=D:\gci\truth\experiments\phase7_product_feature_discovery\runs\phase7_20261104T073000Z

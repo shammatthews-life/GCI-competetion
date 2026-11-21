@@ -1,0 +1,15 @@
+timestamp_utc=2026-11-04T04:10:31.170153+00:00
+command=python D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\verify_exp02_artifacts.py
+status=PASS
+training=NOT_RUN; metrics_recomputed_from_existing_OOF_arrays=YES
+notebook_source_sha256=dd4bcb77f05ee1820118d03e0dd965fd451e928c0fe45fb8a8847ebfae53bfa6
+verifier_sha256=a3fff8aca7c90723f36262758c76d41c05675cd4a7bbd74a0412bf95a587f143
+input_and_artifact_hashes=PASS
+test_id_order_and_prediction_bounds=PASS
+pooled_raw_auc=0.751264908883
+pooled_financial_auc=0.758493753314
+pooled_delta=+0.007228844431
+mean_paired_fold_delta=+0.007284542451
+fold_deltas=+0.009673465665,+0.007546517258,+0.005198158007,+0.006561272467,+0.007443298861
+saved_decision=NEEDS_INDEPENDENT_SEED_REPLICATION
+log_path=D:\gci\truth\experiments\phase4_notebook_recovery_gpu_discovery\EXP02_ARTIFACT_RECHECK_LOG.txt

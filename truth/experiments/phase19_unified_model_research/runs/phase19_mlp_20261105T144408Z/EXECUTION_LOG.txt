@@ -1,0 +1,11 @@
+2026-11-05 14:44:10,508Z INFO Starting outer fold 1/5
+2026-11-05 14:46:19,596Z INFO outer=1 best_epochs=12 auc=0.742212 refit_seconds=52.5
+2026-11-05 14:46:19,601Z INFO Starting outer fold 2/5
+2026-11-05 14:47:58,908Z INFO outer=2 best_epochs=8 auc=0.751729 refit_seconds=37.6
+2026-11-05 14:47:58,908Z INFO Starting outer fold 3/5
+2026-11-05 14:49:29,933Z INFO outer=3 best_epochs=9 auc=0.739720 refit_seconds=38.8
+2026-11-05 14:49:29,938Z INFO Starting outer fold 4/5
+2026-11-05 14:50:51,297Z INFO outer=4 best_epochs=7 auc=0.744160 refit_seconds=29.4
+2026-11-05 14:50:51,303Z INFO Starting outer fold 5/5
+2026-11-05 14:52:20,990Z INFO outer=5 best_epochs=8 auc=0.736262 refit_seconds=32.9
+2026-11-05 14:52:21,611Z INFO Completed MLP pooled OOF AUC=0.742694
