@@ -646,9 +646,12 @@ def main():
     t_all = time.time()
     set_all_seeds(SEED)
 
+    default_data_dir = Path("inpuy") if Path("inpuy").exists() else (Path("input") if Path("input").exists() else Path(r"D:\gci\inpuy"))
+    default_out_csv = Path("LEADERBOARD_SUBMISSION_V28_CERTIFIED.csv") if Path("LEADERBOARD_SUBMISSION_V28_CERTIFIED.csv").parent.exists() else Path(r"D:\gci\LEADERBOARD_SUBMISSION_V28_CERTIFIED.csv")
+
     parser = argparse.ArgumentParser(description="Solo Champion V28 Two-Level Outer-Nested Clean-Room Pipeline")
-    parser.add_argument("--data_dir", type=str, default=r"D:\gci\inpuy", help="Competition raw input folder")
-    parser.add_argument("--output_csv", type=str, default=r"D:\gci\LEADERBOARD_SUBMISSION_V28_CERTIFIED.csv", help="Output submission CSV")
+    parser.add_argument("--data_dir", type=str, default=str(default_data_dir), help="Competition raw input folder")
+    parser.add_argument("--output_csv", type=str, default=str(default_out_csv), help="Output submission CSV")
     args, _ = parser.parse_known_args()
 
     data_dir = Path(args.data_dir)

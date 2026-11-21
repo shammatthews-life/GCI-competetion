@@ -1,5 +1,36 @@
+# Data & large inputs
 inpuy/
 input/
+
+# Python cache
 __pycache__/
 *.pyc
 
+# User requested exclusions
+friend code/
+past_85/
+pre info/
+rules and info/
+
+# Large binaries and archives exceeding GitHub limits
+*.zip
+*.rar
+*.mp4
+*.avi
+*.mkv
+*.feather
+*.pkl
+
+# Massive debug dumps (>90MB)
+truth/zip/
+truth/zip_extracted/
+truth/experiments/phase3c_model_intelligence/OOF_ERROR_ANALYSIS.csv
+truth/experiments/phase9_product_mechanism_and_catboost/runs/phase9_20261104T181500LOCAL/OOF_PREDICTIONS.csv
+truth/experiments/phase21_focused_validation/runs/phase21_checkpointed_20261106/PHASE21_OOF_PREDICTIONS.csv
+truth/experiments/phase13_matched_baseline/runs/phase13_20261105T075946Z/OOF_PREDICTIONS.csv
+truth/experiments/phase12_label_free_product_representation/runs/phase12_20261104T173534Z/OOF_PREDICTIONS.csv
+truth/experiments/phase3c_model_intelligence/PHASE3C_ADVANCED_OOF_PREDICTIONS.csv
+
+# Intermediate large OOF debug dumps
+oof_predictions_*.csv
+*.npz
