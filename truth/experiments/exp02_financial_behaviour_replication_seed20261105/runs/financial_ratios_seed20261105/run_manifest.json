@@ -1,0 +1,4817 @@
+{
+  "experiment": "EXP02_FINANCIAL_BEHAVIOUR",
+  "run_id": "financial_ratios_seed20261105",
+  "raw_input_sha256": {
+    "train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+    "test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+    "sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db"
+  },
+  "notebook_source_sha256": "d4f7c502d88e90f71b5875a46d3a1767b5c73083eec1ecee67b5f469b9cec9a3",
+  "outer_folds": 5,
+  "outer_seed": 20261105,
+  "inner_stopping_fraction": 0.1,
+  "inner_seed_rule": "20261102 + 1-based outer fold number",
+  "model_seed_rule": "20261103 + 1-based fold; same for paired variants",
+  "model": {
+    "depth": 7,
+    "learning_rate": 0.045,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "l2_leaf_reg": 5.0,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "border_count": 128,
+    "task_type": "GPU",
+    "devices": "0",
+    "thread_count": 8,
+    "allow_writing_files": false,
+    "max_iterations": 2500,
+    "early_stopping_rounds": 150
+  },
+  "libraries": {
+    "python": "3.12.10",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit_learn": "1.9.1",
+    "catboost": "1.2.10"
+  },
+  "gpu_before": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 95,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 0
+    }
+  ],
+  "gpu_during_samples": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 95,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 0
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 55
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 47
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 47
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 46
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 48
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 47
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 54
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4998,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 7
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 55
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 56
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 48
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 33
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 54
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 55
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 56
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 178,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 0
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 31
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 47
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 55
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 46
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 50
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 48
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 48
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 48
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4996,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5012,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5114,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5116,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5116,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5058,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5086,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5029,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5019,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 201,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 5
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5019,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 10
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5017,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5053,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5067,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5058,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 45
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5053,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5053,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5059,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5059,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5041,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5041,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5041,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 212,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5029,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 96
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5049,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5082,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5036,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5036,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5036,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5036,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 34
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 34
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5034,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 209,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 9
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 2015,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 9
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 213,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 31
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 45
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5049,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5050,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 232,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5048,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5061,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 46
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5058,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5058,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5049,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5049,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5049,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5087,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5042,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 34
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 221,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 22
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 9
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5039,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 213,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 4
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 29
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5053,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5053,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5051,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 45
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 33
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 53
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 52
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 29
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 51
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 55
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 25
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5114,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 47
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5126,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 49
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5103,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5103,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5043,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5041,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5041,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 213,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 4
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 11
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 213,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 4629,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 4
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 10
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 207,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 12
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 209,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 8
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5035,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5024,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5054,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 13
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 33
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 83
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 36
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 11
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5036,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5044,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 35
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5040,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5031,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 37
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 209,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 11
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 44
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5027,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5070,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 39
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5025,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 41
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 42
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 40
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 5023,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 43
+    },
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 38
+    }
+  ],
+  "gpu_during_max_utilization_pct": 96,
+  "gpu_during_max_memory_used_mib": 5126,
+  "gpu_after": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memory_used_mib": 205,
+      "memory_total_mib": 6141,
+      "utilization_gpu_pct": 6
+    }
+  ],
+  "fold_training_records": [
+    {
+      "fold": 1,
+      "outer_fit_rows": 136961,
+      "outer_valid_rows": 34241,
+      "inner_fit_rows": 123264,
+      "inner_stop_rows": 13697,
+      "outer_validation_used_for_early_stopping": false,
+      "raw_selected_iterations": 613,
+      "financial_selected_iterations": 699,
+      "raw_auc": 0.7497951206603107,
+      "financial_auc": 0.7567095368878671,
+      "paired_auc_delta": 0.006914416227556397,
+      "raw_fit_seconds": 56.34087159996852,
+      "financial_fit_seconds": 79.52875219995622
+    },
+    {
+      "fold": 2,
+      "outer_fit_rows": 136961,
+      "outer_valid_rows": 34241,
+      "inner_fit_rows": 123264,
+      "inner_stop_rows": 13697,
+      "outer_validation_used_for_early_stopping": false,
+      "raw_selected_iterations": 676,
+      "financial_selected_iterations": 606,
+      "raw_auc": 0.7544568300495662,
+      "financial_auc": 0.7608774859205566,
+      "paired_auc_delta": 0.006420655870990388,
+      "raw_fit_seconds": 91.68509769998491,
+      "financial_fit_seconds": 83.92486490000738
+    },
+    {
+      "fold": 3,
+      "outer_fit_rows": 136962,
+      "outer_valid_rows": 34240,
+      "inner_fit_rows": 123265,
+      "inner_stop_rows": 13697,
+      "outer_validation_used_for_early_stopping": false,
+      "raw_selected_iterations": 399,
+      "financial_selected_iterations": 418,
+      "raw_auc": 0.7556147860525071,
+      "financial_auc": 0.7601427862985769,
+      "paired_auc_delta": 0.004528000246069808,
+      "raw_fit_seconds": 59.013986800040584,
+      "financial_fit_seconds": 56.60957889998099
+    },
+    {
+      "fold": 4,
+      "outer_fit_rows": 136962,
+      "outer_valid_rows": 34240,
+      "inner_fit_rows": 123265,
+      "inner_stop_rows": 13697,
+      "outer_validation_used_for_early_stopping": false,
+      "raw_selected_iterations": 272,
+      "financial_selected_iterations": 588,
+      "raw_auc": 0.750401777413761,
+      "financial_auc": 0.7564612318502747,
+      "paired_auc_delta": 0.006059454436513678,
+      "raw_fit_seconds": 43.436627899995074,
+      "financial_fit_seconds": 80.49122000002535
+    },
+    {
+      "fold": 5,
+      "outer_fit_rows": 136962,
+      "outer_valid_rows": 34240,
+      "inner_fit_rows": 123265,
+      "inner_stop_rows": 13697,
+      "outer_validation_used_for_early_stopping": false,
+      "raw_selected_iterations": 515,
+      "financial_selected_iterations": 676,
+      "raw_auc": 0.7486644086349574,
+      "financial_auc": 0.7562259895624425,
+      "paired_auc_delta": 0.007561580927485045,
+      "raw_fit_seconds": 72.61246119998395,
+      "financial_fit_seconds": 90.78513480001129
+    }
+  ],
+  "external_data_or_prediction_cache_used": false,
+  "manual_predictions_used": false,
+  "submission_created": false
+}

@@ -1,0 +1,74 @@
+{
+  "created": "2026-11-18 13:15:35",
+  "preset": "full",
+  "smoke": false,
+  "streams": [
+    "v18"
+  ],
+  "members": [
+    "qf_shallow",
+    "qf_reg",
+    "allfam",
+    "mono"
+  ],
+  "catboost": true,
+  "catboost_device": "GPU",
+  "refit_on_all_rows": false,
+  "refit_seeds": 0,
+  "refit_mix_fold_average": 0.5,
+  "refit_round_factor": 1.1,
+  "weights": {
+    "member": {
+      "qf_shallow": 0.25,
+      "qf_reg": 0.15,
+      "allfam": 0.35,
+      "mono": 0.25
+    },
+    "stream": {
+      "v18": 1.0
+    },
+    "catboost": 0.15
+  },
+  "input_sha256": {
+    "train.csv": "B8DD5A61771D8EB2821972C1B7D3F2F747CC66471F4D34153036D2D9C458ECF1",
+    "test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
+    "sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
+  },
+  "output_sha256": "ED8BBEAAEA65BAF051B14B2E7DB69C3747A249930D24FB3AE251B8336804A73A",
+  "pooled_oof_auc": 0.7733925682374706,
+  "fold_auc": [
+    0.7704872155981671,
+    0.7754689643270213,
+    0.7782613620208925,
+    0.769851329540767,
+    0.7732466759871623
+  ],
+  "fee_per_fold": [
+    127.0,
+    126.5,
+    127.0,
+    128.0,
+    128.0
+  ],
+  "fee_flag_share_per_fold": [
+    0.7464676279879996,
+    0.7527787405192355,
+    0.7468809012702358,
+    0.7523126678549249,
+    0.7524680603948897
+  ],
+  "seeds": {
+    "global_seed": 42,
+    "outer_fold": 42,
+    "inner_te": 7,
+    "views": 11,
+    "residual": 0
+  },
+  "versions": {
+    "python": "3.14.5",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "lightgbm": "4.7.0"
+  },
+  "runtime_minutes": 15.7
+}

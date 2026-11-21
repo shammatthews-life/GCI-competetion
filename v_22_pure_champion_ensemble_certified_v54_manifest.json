@@ -1,5 +1,5 @@
 {
-  "created": "2026-11-19 20:35:08",
+  "created": "2026-11-19 21:06:19",
   "preset": "full",
   "smoke": false,
   "streams": [
@@ -35,15 +35,15 @@
     "test.csv": "DFB7AEB96E5AF3D8616ACAABA6B23CEC8680845CFD525F7C08DE15C6D2D42C65",
     "sample_submission.csv": "6E5AD587B7C0B3D9FA39C90CE03E161FF5EF292193E117A6A02B11075DFFE7DB"
   },
-  "output_sha256": "D7B8F5C6DFEEADCAB8AACB22280FAB47496869A5CB5242DC827356C876998A12",
-  "pooled_oof_auc": 0.7732971084861799,
-  "pooled_pr_auc": 0.2539137148563767,
+  "output_sha256": "F51313E9CF884F5CBCD15816E9F848C3E2FE974634BA6C3EB29F7D6078F2A206",
+  "pooled_oof_auc": 0.7733016476866461,
+  "pooled_pr_auc": 0.2538729105125234,
   "fold_auc": [
-    0.7700376361910267,
-    0.7756103562472006,
-    0.7784608570442295,
-    0.7698645709712166,
-    0.7729211804772027
+    0.7700382338754961,
+    0.7756099885627145,
+    0.7784609145157158,
+    0.7698915653283444,
+    0.7729204333478805
   ],
   "fee_per_fold": [
     127.0,
@@ -72,5 +72,5 @@
     "pandas": "3.1.0",
     "lightgbm": "4.7.0"
   },
-  "runtime_minutes": 35.8
+  "runtime_minutes": 27.3
 }

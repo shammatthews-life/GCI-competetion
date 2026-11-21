@@ -84,3 +84,4 @@ for name, path in BENCHMARKS:
         r, _ = pearsonr(sub13["TARGET"], b_df["TARGET"])
         print(f"{name:55s} | {rho*100:10.4f}%   | {r*100:8.4f}%")
 print("-" * 80)
+
