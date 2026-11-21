@@ -1,0 +1,51 @@
+{
+  "hypothesis": "Combinations of declared income type, employment sentinel, occupation availability, tenure versus age, and work-phone availability expose employment consistency risk beyond raw individual fields.",
+  "feature_groups": [
+    "working-income/employment",
+    "nonworking-income/employment",
+    "occupation availability",
+    "work-phone/sentinel",
+    "tenure-age consistency"
+  ],
+  "features_added_to_one_member": 7,
+  "feature_formula": "seven label-free indicator combinations; work-phone availability is treated only as a separate contact field, not as proof of employment",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740433342396058,
+  "delta_auc": 1.8938812296198648e-06,
+  "positive_folds": 1,
+  "folds": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "candidate_auc": 0.7712898023949399,
+      "delta_auc": -7.758404168001221e-07
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "candidate_auc": 0.7764438854874245,
+      "delta_auc": -2.3095181792553987e-06
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_auc": 0.778964761289193,
+      "delta_auc": 8.139111893579187e-05
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "candidate_auc": 0.7711387655474162,
+      "delta_auc": -2.952310252624102e-05
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_auc": 0.7726789841395248,
+      "delta_auc": -5.3149630555027194e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9913460209502952,
+  "elapsed_seconds": 223.8,
+  "note": "Same 5 seed-42 folds and exact fixed v15 formula; transforms use covariates only; no submission created."
+}

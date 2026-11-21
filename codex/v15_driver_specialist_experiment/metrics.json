@@ -1,0 +1,71 @@
+{
+  "hypothesis": "A model trained only on Drivers can learn an occupation-specific risk regime that the global v15 blend under-ranks.",
+  "segment": "OCCUPATION_TYPE == Drivers",
+  "segment_rows": 10353,
+  "segment_fraction": 0.06047242438756557,
+  "segment_target_rate": 0.11735728774268328,
+  "features": "v15 label-free Xa one-hot features plus nested fold-safe Q/P target encodings",
+  "model": "v15 v1_allfam_oh LightGBM ExtraTrees member fixed parameters, 881 rounds",
+  "outer_folds": "StratifiedKFold(5, shuffle=True, random_state=20261022); discovery seed 42",
+  "rank_correction": "10% within-segment ordering replacement; correction magnitude scaled by full segment share",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740410429168608,
+  "delta_auc": -3.9744151536513783e-07,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_segment_rows": 8286,
+      "valid_segment_rows": 2067,
+      "specialist_auc": 0.70721146573892,
+      "elapsed_seconds": 9.4,
+      "v15_full_auc": 0.77822982135625,
+      "candidate_full_auc": 0.77822453989445,
+      "delta_auc": -5.281461800010767e-06
+    },
+    {
+      "fold": 2,
+      "fit_segment_rows": 8261,
+      "valid_segment_rows": 2092,
+      "specialist_auc": 0.7169831460074504,
+      "elapsed_seconds": 10.8,
+      "v15_full_auc": 0.7733534801451526,
+      "candidate_full_auc": 0.7733593860772133,
+      "delta_auc": 5.905932060734642e-06
+    },
+    {
+      "fold": 3,
+      "fit_segment_rows": 8241,
+      "valid_segment_rows": 2112,
+      "specialist_auc": 0.7283498041310541,
+      "elapsed_seconds": 12.1,
+      "v15_full_auc": 0.7762174690697656,
+      "candidate_full_auc": 0.7762105782385551,
+      "delta_auc": -6.890831210526471e-06
+    },
+    {
+      "fold": 4,
+      "fit_segment_rows": 8312,
+      "valid_segment_rows": 2041,
+      "specialist_auc": 0.7090153343572492,
+      "elapsed_seconds": 13.5,
+      "v15_full_auc": 0.7747067505915886,
+      "candidate_full_auc": 0.7747078597912747,
+      "delta_auc": 1.1091996861001263e-06
+    },
+    {
+      "fold": 5,
+      "fit_segment_rows": 8312,
+      "valid_segment_rows": 2041,
+      "specialist_auc": 0.6924855352555638,
+      "elapsed_seconds": 14.9,
+      "v15_full_auc": 0.7676199473597967,
+      "candidate_full_auc": 0.7676219186317776,
+      "delta_auc": 1.9712719809827917e-06
+    }
+  ],
+  "segment_specialist_spearman_vs_v15": 0.8481133711492098,
+  "promotion_gate_delta_auc": 0.002,
+  "submission_written": false,
+  "elapsed_seconds": 15.3
+}

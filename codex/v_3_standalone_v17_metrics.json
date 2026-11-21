@@ -1,0 +1,66 @@
+{
+  "version": "v_3",
+  "description": "standalone CatBoost-E1 probe from v17 research",
+  "submission": "D:\\gci\\codex\\v_3_standalone_v17_catboost_e1.csv",
+  "submission_sha256": "c915ce79344e81114ca2729c7020739a9c57f40a0d1f7285a1b2720aee5d03fb",
+  "rows": 61500,
+  "columns": [
+    "SK_ID_CURR",
+    "TARGET"
+  ],
+  "pooled_oof_auc": 0.7700506855072868,
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "valid_auc": 0.7675236373863038,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "fold": 2,
+      "valid_auc": 0.7726912688952483,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "fold": 3,
+      "valid_auc": 0.7742297832322662,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "fold": 4,
+      "valid_auc": 0.7662895571642668,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "fold": 5,
+      "valid_auc": 0.7698024328002003,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    }
+  ],
+  "outer_folds": 5,
+  "outer_seed": 42,
+  "feature_count": 177,
+  "catboost_version": "1.2.10",
+  "lightgbm_version": "4.7.0",
+  "catboost_params": {
+    "iterations": 900,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "l2_leaf_reg": 8,
+    "random_seed": 42,
+    "thread_count": 8,
+    "verbose": 100,
+    "allow_writing_files": false,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8
+  },
+  "runtime_seconds": 1735.7,
+  "warning": "Standalone branch only. The v17 matched full-ensemble comparison reported no accepted improvement; no v15 blend was possible because the v15 prediction/cache bundle is missing."
+}

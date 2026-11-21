@@ -1,0 +1,80 @@
+{
+  "hypothesis": "Native CatBoost categories for rounded exact credit-annuity fingerprints conditioned on all external scores, income and age deciles provide more contextual product risk than CA\u00d7EXT1/3 alone.",
+  "added_native_categories": [
+    "PROD_CA",
+    "PROD_CA_X_EXT_SOURCE_1_DECILE",
+    "PROD_CA_X_EXT_SOURCE_2_DECILE",
+    "PROD_CA_X_EXT_SOURCE_3_DECILE",
+    "PROD_CA_X_INCOME_DECILE",
+    "PROD_CA_X_AGE_DECILE"
+  ],
+  "catboost_settings": {
+    "iterations": 900,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "l2_leaf_reg": 8,
+    "random_seed": 42,
+    "thread_count": 10,
+    "verbose": false,
+    "allow_writing_files": false,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8
+  },
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740845612686624,
+  "delta_auc": 4.3120910286242875e-05,
+  "positive_folds": 5,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.7673758024316286,
+      "elapsed_seconds": 341.0,
+      "v15_full_auc": 0.7712905782353567,
+      "candidate_full_auc": 0.7713670875943829,
+      "delta_auc": 7.650935902614453e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.7725146999108595,
+      "elapsed_seconds": 685.4,
+      "v15_full_auc": 0.7764461950056037,
+      "candidate_full_auc": 0.7764879042145145,
+      "delta_auc": 4.170920891077845e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7752105571350253,
+      "elapsed_seconds": 1027.6,
+      "v15_full_auc": 0.7788833701702572,
+      "candidate_full_auc": 0.7789410083238942,
+      "delta_auc": 5.763815363701852e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.76751661937453,
+      "elapsed_seconds": 1378.7,
+      "v15_full_auc": 0.7711682886499425,
+      "candidate_full_auc": 0.771197616349415,
+      "delta_auc": 2.9327699472503355e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7679288738402483,
+      "elapsed_seconds": 1731.4,
+      "v15_full_auc": 0.7727321337700799,
+      "candidate_full_auc": 0.7727475533698613,
+      "delta_auc": 1.5419599781463234e-05
+    }
+  ],
+  "rank_correlation_candidate_vs_original_catboost": 0.9864773356972721,
+  "elapsed_seconds": 1732.8,
+  "submission_written": false
+}

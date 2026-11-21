@@ -1,0 +1,22 @@
+{
+  "data_rows": 171202,
+  "features_before_target_encodings": 61,
+  "outer_folds": 3,
+  "inner_folds_for_target_encoding": 3,
+  "seeds": [
+    20261051,
+    20261052
+  ],
+  "variants": [
+    "bureau_profile",
+    "household",
+    "group_te",
+    "pair_te",
+    "risk_band_te"
+  ],
+  "target_encodings_are_nested_and_fold_safe": true,
+  "runtime_seconds": 766.86,
+  "v15_oof_cache_available": false,
+  "submission_created": false,
+  "interpretation": "Feature-block screen against the compact product-aware LightGBM reference, not a matched comparison against the v15 ensemble."
+}

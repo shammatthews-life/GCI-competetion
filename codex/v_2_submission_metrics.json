@@ -1,0 +1,117 @@
+{
+  "version": "v_2",
+  "status": "standalone challenger; not matched against the v15 OOF",
+  "submission": "D:\\gci\\codex\\v_2_submission_hierarchical_product.csv",
+  "submission_sha256": "6a2ed527d4889f0f6a54b4e0b403c98ca5217188c2ae01ace61fae65b73747be",
+  "rows": 61500,
+  "columns": [
+    "SK_ID_CURR",
+    "TARGET"
+  ],
+  "pooled_oof_auc_two_seed_average": 0.7661382601954492,
+  "seed_oof_auc": {
+    "42": 0.7645426913495658,
+    "117": 0.7651817191498578
+  },
+  "fold_results": [
+    {
+      "seed": 42,
+      "fold": 1,
+      "valid_auc": 0.7619174375225481,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "seed": 42,
+      "fold": 2,
+      "valid_auc": 0.7680989930730541,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "seed": 42,
+      "fold": 3,
+      "valid_auc": 0.7692580973646059,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "seed": 42,
+      "fold": 4,
+      "valid_auc": 0.7605094428870438,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "seed": 42,
+      "fold": 5,
+      "valid_auc": 0.7633497067299019,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "seed": 117,
+      "fold": 1,
+      "valid_auc": 0.7677613548900037,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "seed": 117,
+      "fold": 2,
+      "valid_auc": 0.7637000618399346,
+      "train_rows": 136961,
+      "valid_rows": 34241
+    },
+    {
+      "seed": 117,
+      "fold": 3,
+      "valid_auc": 0.7641595374437309,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "seed": 117,
+      "fold": 4,
+      "valid_auc": 0.7663003962865879,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    },
+    {
+      "seed": 117,
+      "fold": 5,
+      "valid_auc": 0.7640536060001335,
+      "train_rows": 136962,
+      "valid_rows": 34240
+    }
+  ],
+  "all_fold_auc_min": 0.7605094428870438,
+  "all_fold_auc_max": 0.7692580973646059,
+  "feature_count": 78,
+  "outer_seeds": [
+    42,
+    117
+  ],
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "target_encoding_alpha": 250,
+  "lightgbm_version": "4.7.0",
+  "model_params": {
+    "n_estimators": 400,
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "min_child_samples": 120,
+    "max_bin": 127,
+    "subsample": 0.85,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.85,
+    "reg_lambda": 3,
+    "reg_alpha": 0.05,
+    "objective": "binary",
+    "verbosity": -1,
+    "n_jobs": 4
+  },
+  "runtime_seconds": 301.5,
+  "important_limit": "The v15 submission and aligned OOF/member cache were unavailable. This OOF score is from a standalone compact challenger and must not be interpreted as an improvement over the public v15 score 0.77891.",
+  "oof_archive": "D:\\gci\\codex\\v_2_submission_oof.npz"
+}

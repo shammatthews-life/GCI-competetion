@@ -1,0 +1,84 @@
+{
+  "hypothesis": "The exact REGION_POPULATION_RELATIVE values behave as regional identifiers; adding this native category to the matched CA/EXT CatBoost candidate improves its complementary ranking signal.",
+  "added_native_category": "REGION_POPULATION_RELATIVE_CAT",
+  "distinct_region_values": 81,
+  "catboost_settings": {
+    "iterations": 900,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "l2_leaf_reg": 8,
+    "random_seed": 42,
+    "thread_count": 10,
+    "verbose": false,
+    "allow_writing_files": false,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8
+  },
+  "v15_oof_auc": 0.7740414403583762,
+  "ca_ext_oof_auc": 0.7741287312958236,
+  "candidate_oof_auc": 0.7740568601237311,
+  "delta_vs_v15": 1.5419765354907078e-05,
+  "delta_vs_ca_ext": -7.187117209250804e-05,
+  "positive_folds_vs_v15": 4,
+  "positive_folds_vs_ca_ext": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.7672750006471084,
+      "elapsed_seconds": 313.1,
+      "v15_full_auc": 0.7712905782353567,
+      "candidate_full_auc": 0.771335818352104,
+      "delta_vs_v15": 4.5240116747224945e-05,
+      "delta_vs_ca_ext": -0.00014809356814726726
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.7714593650042961,
+      "elapsed_seconds": 625.2,
+      "v15_full_auc": 0.7764461950056037,
+      "candidate_full_auc": 0.7763803565022819,
+      "delta_vs_v15": -6.583850332186891e-05,
+      "delta_vs_ca_ext": -0.00012491505913847512
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7752701665606433,
+      "elapsed_seconds": 931.8,
+      "v15_full_auc": 0.7788833701702572,
+      "candidate_full_auc": 0.778937399114553,
+      "delta_vs_v15": 5.402894429573646e-05,
+      "delta_vs_ca_ext": 1.0994295334354476e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7677021948038787,
+      "elapsed_seconds": 1245.2,
+      "v15_full_auc": 0.7711682886499425,
+      "candidate_full_auc": 0.7711940761058571,
+      "delta_vs_v15": 2.5787455914638713e-05,
+      "delta_vs_ca_ext": 2.485641783633863e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7681093458016114,
+      "elapsed_seconds": 1556.7,
+      "v15_full_auc": 0.7727321337700799,
+      "candidate_full_auc": 0.7727449039343416,
+      "delta_vs_v15": 1.2770164261710626e-05,
+      "delta_vs_ca_ext": -0.00014221894006394287
+    }
+  ],
+  "rank_correlation_to_original_catboost": 0.986770632820033,
+  "rank_correlation_to_ca_ext_catboost": 0.9878911162034717,
+  "elapsed_seconds": 1558.5,
+  "submission_written": false,
+  "external_data_used": false
+}

@@ -1,0 +1,142 @@
+{
+  "experiment": "matched feature additions to one E1Aet v1_allfam_oh member",
+  "candidate_scope": "replace only E1Aet v1_allfam_oh member in full v15 rank-space formula",
+  "outer_folds": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+  "hierarchical_features": [
+    "HIER_Q3_TE",
+    "HIER_Q4_TE",
+    "HIER_Q4_CONTRACT_TE",
+    "HIER_Q3_LOGCOUNT",
+    "HIER_Q4_LOGCOUNT",
+    "HIER_Q4_CONTRACT_LOGCOUNT",
+    "HIER_Q4_MINUS_Q3",
+    "HIER_Q4_CONTRACT_MINUS_Q4"
+  ],
+  "shrinkage": {
+    "q3_to_global": 100,
+    "q4_to_q3": 30,
+    "q4_contract_to_q4": 30
+  },
+  "control_auc": 0.774037596967897,
+  "cached_v15_auc": 0.7740414403583762,
+  "control_vs_cached_v15_auc_delta": -3.843390479207898e-06,
+  "comparisons": {
+    "hierarchical_backoff": {
+      "candidate_auc": 0.7740248919418699,
+      "delta_auc": -1.2705026027126642e-05,
+      "fold_deltas": [
+        -6.19637879532009e-05,
+        9.256456941753033e-05,
+        -3.0212760361858493e-05,
+        -3.2344952504703706e-05,
+        -1.6356385008631236e-05
+      ],
+      "positive_folds": 1,
+      "paired_stratified_bootstrap_95_ci": [
+        -5.402594460796051e-05,
+        -1.3604613864459658e-05,
+        2.249635060762034e-05
+      ],
+      "passes_development_gate": false
+    },
+    "household_adult_equivalent": {
+      "candidate_auc": 0.7740385254041497,
+      "delta_auc": 9.28436252767284e-07,
+      "fold_deltas": [
+        3.770009728953916e-06,
+        -4.847115641604116e-05,
+        2.1706980385838293e-05,
+        -5.505768389979515e-06,
+        4.856340594616704e-05
+      ],
+      "positive_folds": 3,
+      "paired_stratified_bootstrap_95_ci": [
+        -3.7845954547530145e-05,
+        2.3069537589126554e-06,
+        3.772878515678479e-05
+      ],
+      "passes_development_gate": false
+    }
+  },
+  "folds": [
+    {
+      "variant": "hierarchical_backoff",
+      "fold": 1,
+      "control_auc": 0.7713015664344448,
+      "candidate_auc": 0.7712396026464916,
+      "delta_auc": -6.19637879532009e-05
+    },
+    {
+      "variant": "hierarchical_backoff",
+      "fold": 2,
+      "control_auc": 0.7764280348390242,
+      "candidate_auc": 0.7765205994084418,
+      "delta_auc": 9.256456941753033e-05
+    },
+    {
+      "variant": "hierarchical_backoff",
+      "fold": 3,
+      "control_auc": 0.7789181691552278,
+      "candidate_auc": 0.778887956394866,
+      "delta_auc": -3.0212760361858493e-05
+    },
+    {
+      "variant": "hierarchical_backoff",
+      "fold": 4,
+      "control_auc": 0.7711855473372863,
+      "candidate_auc": 0.7711532023847816,
+      "delta_auc": -3.2344952504703706e-05
+    },
+    {
+      "variant": "hierarchical_backoff",
+      "fold": 5,
+      "control_auc": 0.7726594036041334,
+      "candidate_auc": 0.7726430472191248,
+      "delta_auc": -1.6356385008631236e-05
+    },
+    {
+      "variant": "household_adult_equivalent",
+      "fold": 1,
+      "control_auc": 0.7713015664344448,
+      "candidate_auc": 0.7713053364441738,
+      "delta_auc": 3.770009728953916e-06
+    },
+    {
+      "variant": "household_adult_equivalent",
+      "fold": 2,
+      "control_auc": 0.7764280348390242,
+      "candidate_auc": 0.7763795636826082,
+      "delta_auc": -4.847115641604116e-05
+    },
+    {
+      "variant": "household_adult_equivalent",
+      "fold": 3,
+      "control_auc": 0.7789181691552278,
+      "candidate_auc": 0.7789398761356137,
+      "delta_auc": 2.1706980385838293e-05
+    },
+    {
+      "variant": "household_adult_equivalent",
+      "fold": 4,
+      "control_auc": 0.7711855473372863,
+      "candidate_auc": 0.7711800415688963,
+      "delta_auc": -5.505768389979515e-06
+    },
+    {
+      "variant": "household_adult_equivalent",
+      "fold": 5,
+      "control_auc": 0.7726594036041334,
+      "candidate_auc": 0.7727079670100796,
+      "delta_auc": 4.856340594616704e-05
+    }
+  ],
+  "control_member_spearman_vs_cached_member": 0.9916433602260396,
+  "promotion_gate": {
+    "min_delta": 0.00015,
+    "min_positive_folds": 4,
+    "ci_lower_above_zero": true
+  },
+  "fresh_confirmation_required": true,
+  "submission_written": false,
+  "runtime_seconds": 309.27
+}

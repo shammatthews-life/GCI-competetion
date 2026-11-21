@@ -1,0 +1,54 @@
+{
+  "hypothesis": "ID order may encode collection cohorts whose effects on external-score and affordability features drift; test explicit ID interactions, not ID-only trend.",
+  "feature_groups": [
+    "ID order and 10k blocks"
+  ],
+  "raw_variables": [
+    "EXT_SOURCE_1/2/3",
+    "credit/income",
+    "annuity/income",
+    "age",
+    "employment years"
+  ],
+  "features_added_to_one_member": 9,
+  "feature_formula": "normalized sequential ID, 10,000-ID block, and ID-position interactions with external-score and affordability/age/employment variables; label-free covariate transform",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740613648440193,
+  "delta_auc": 1.992448564314131e-05,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "candidate_auc": 0.7713363643138786,
+      "delta_auc": 4.5786078521903306e-05
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "candidate_auc": 0.7764428915902976,
+      "delta_auc": -3.303415306188384e-06
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_auc": 0.7789402956774636,
+      "delta_auc": 5.692550720637346e-05
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "candidate_auc": 0.7712051795970154,
+      "delta_auc": 3.6890947072931723e-05
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_auc": 0.7726872370449615,
+      "delta_auc": -4.489672511842624e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9907061672230234,
+  "elapsed_seconds": 208.5,
+  "note": "Same 5 seed-42 folds and exact fixed v15 formula; transforms use covariates only; no submission created."
+}

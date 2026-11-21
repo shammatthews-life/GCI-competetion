@@ -1,0 +1,78 @@
+{
+  "hypothesis": "A properly cross-fitted replica of the Home Aloan winner's 500-nearest-applicant target mean adds complementary signal to the v15 E1Aet LightGBM member.",
+  "source_definition": [
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "AMT_CREDIT / AMT_ANNUITY"
+  ],
+  "distance": "raw Euclidean after NaN/inf -> 0, matching the published reference implementation",
+  "neighbors": 500,
+  "crossfit": "outer seed 42; within each outer training fold, 5-fold seed 20261022+outer_fold; validation labels are never searched",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.774051588104554,
+  "delta_auc": 1.014774617780212e-05,
+  "positive_folds": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "v15_member_auc": 0.7700376821667552,
+      "candidate_member_auc": 0.770815275408176,
+      "neighbor_feature_auc": 0.7297500306543169,
+      "elapsed_seconds": 102.5,
+      "v15_auc": 0.7712905782353567,
+      "candidate_full_v15_auc": 0.7713599268746846,
+      "delta_auc": 6.934863932783752e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "v15_member_auc": 0.7752613260035431,
+      "candidate_member_auc": 0.7749040171138745,
+      "neighbor_feature_auc": 0.7284698097715371,
+      "elapsed_seconds": 160.7,
+      "v15_auc": 0.7764461950056037,
+      "candidate_full_v15_auc": 0.776433360519005,
+      "delta_auc": -1.2834486598722883e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "v15_member_auc": 0.7769840697315796,
+      "candidate_member_auc": 0.7777135955375644,
+      "neighbor_feature_auc": 0.7293377592814612,
+      "elapsed_seconds": 217.8,
+      "v15_auc": 0.7788833701702572,
+      "candidate_full_v15_auc": 0.7789492497350335,
+      "delta_auc": 6.587956477632773e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "v15_member_auc": 0.768939739813248,
+      "candidate_member_auc": 0.7685990948194925,
+      "neighbor_feature_auc": 0.7304217634679601,
+      "elapsed_seconds": 275.3,
+      "v15_auc": 0.7711682886499425,
+      "candidate_full_v15_auc": 0.7711618058662848,
+      "delta_auc": -6.482783657668634e-06
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "v15_member_auc": 0.7721291774184323,
+      "candidate_member_auc": 0.7710355754937169,
+      "neighbor_feature_auc": 0.7268446174688674,
+      "elapsed_seconds": 329.5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_full_v15_auc": 0.772660599011049,
+      "delta_auc": -7.153475903087791e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9912025694486597,
+  "neighbor_feature_oof_auc": 0.7289263106058423,
+  "elapsed_seconds": 331.0,
+  "submission_written": false,
+  "external_data_used": false
+}

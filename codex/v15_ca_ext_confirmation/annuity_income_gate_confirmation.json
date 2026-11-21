@@ -1,0 +1,20 @@
+{
+  "baseline_auc": 0.7740414403583762,
+  "fixed_10pct_candidate_auc": 0.7740591992589891,
+  "fixed_10pct_candidate_delta": 1.7758900612951933e-05,
+  "frozen_gate": "increase CA candidate weight by 5 percentage points in lowest annuity/income quintile; reduce outside to preserve mean 10%",
+  "gate_prevalence": 0.20000350463195524,
+  "weight_in_group": 0.13999982476840223,
+  "weight_outside": 0.08999982476840224,
+  "gated_auc": 0.7740562803970092,
+  "gated_delta_vs_v15": 1.4840038633057162e-05,
+  "positive_folds": 4,
+  "fold_deltas": [
+    4.89066810873684e-05,
+    1.4839516062847835e-05,
+    8.704056604158517e-05,
+    3.889670194578976e-05,
+    -0.00014021893233995275
+  ],
+  "note": "Candidate CA CatBoost OOF used a different outer-fold seed (20261021) and model seed (2024); the gate was selected from prior seed-42 analysis."
+}

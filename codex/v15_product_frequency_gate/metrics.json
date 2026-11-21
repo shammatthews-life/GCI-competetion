@@ -1,0 +1,44 @@
+{
+  "hypothesis": "The native product CatBoost branch is more useful for repeated tariff keys; gate its global 10% weight by fold-local Q4 key frequency.",
+  "rows": 171202,
+  "v15_oof_auc": 0.7740414403583762,
+  "common_products_more_catboost_auc": 0.774041003839326,
+  "common_products_more_catboost_delta": -4.365190502397809e-07,
+  "rare_products_more_catboost_auc": 0.7740399098982201,
+  "rare_products_more_catboost_delta": -1.5304601560517384e-06,
+  "gate": "CatBoost weight = 0.10 +/- 0.05 * (within-fold percentile(log1p(train Q4 count)) - 0.5); mean held near 10%.",
+  "fold_metrics": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "common_catboost_auc": 0.7712944057147463,
+      "rare_catboost_auc": 0.7712921529040546
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "common_catboost_auc": 0.7764359400554791,
+      "rare_catboost_auc": 0.7764622409863872
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "common_catboost_auc": 0.7789074449758795,
+      "rare_catboost_auc": 0.778858887317082
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "common_catboost_auc": 0.7711767024755406,
+      "rare_catboost_auc": 0.7711508977781799
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "common_catboost_auc": 0.7727056509091805,
+      "rare_catboost_auc": 0.7727553292619613
+    }
+  ],
+  "elapsed_seconds": 3.5,
+  "note": "Same seed-42 OOF folds; count gates use no labels and are fit using outer-fold training rows only; no submission created. A positive selected-fold result requires a fresh confirmation."
+}

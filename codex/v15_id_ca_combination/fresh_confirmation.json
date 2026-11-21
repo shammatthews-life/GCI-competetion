@@ -1,0 +1,47 @@
+{
+  "baseline_auc": 0.7740414403583762,
+  "candidate_ca_cv_seed": 20261021,
+  "candidate_ca_model_seed": 2024,
+  "variants": [
+    {
+      "variant": "ID_context_only",
+      "auc": 0.7740613682920371,
+      "delta_vs_v15": 1.992793366090151e-05,
+      "positive_folds": 3,
+      "fold_deltas": [
+        4.5774584589874934e-05,
+        -3.3378857270394136e-06,
+        5.687378286889366e-05,
+        3.691393566751522e-05,
+        -4.4890977969780366e-05
+      ]
+    },
+    {
+      "variant": "fresh_CA_CatBoost_only",
+      "auc": 0.7740591992589891,
+      "delta_vs_v15": 1.7758900612951933e-05,
+      "positive_folds": 4,
+      "fold_deltas": [
+        3.126349531312744e-05,
+        1.0794986713857924e-05,
+        7.941409980616321e-05,
+        6.527611416973222e-05,
+        -0.00012819015025178349
+      ]
+    },
+    {
+      "variant": "ID_plus_fresh_CA",
+      "auc": 0.7740763234944638,
+      "delta_vs_v15": 3.488313608757121e-05,
+      "positive_folds": 4,
+      "fold_deltas": [
+        6.879693058681191e-05,
+        1.6166627255564947e-05,
+        0.00013160970368808478,
+        0.00010252338445793097,
+        -0.00017637424438787797
+      ]
+    }
+  ],
+  "note": "CA CatBoost candidate predictions are out-of-fold under new split seed; ID member remains seed-42 matched; no submission."
+}

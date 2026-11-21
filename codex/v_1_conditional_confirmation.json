@@ -1,0 +1,34 @@
+{
+  "experiment": "v_1 fresh confirmation of conditional product encodings",
+  "dataset": {
+    "train_rows": 171202,
+    "positive_rate": 0.08072919708881905
+  },
+  "outer_seeds": [
+    20261041,
+    20261042
+  ],
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "target_encoding_alpha": 250,
+  "lightgbm_version": "4.7.0",
+  "parameters": {
+    "n_estimators": 300,
+    "learning_rate": 0.035,
+    "num_leaves": 31,
+    "min_child_samples": 120,
+    "max_bin": 127,
+    "subsample": 0.85,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.85,
+    "reg_lambda": 3,
+    "reg_alpha": 0.05,
+    "objective": "binary",
+    "verbosity": -1,
+    "n_jobs": 4
+  },
+  "results_csv": "D:\\gci\\codex\\v_1_conditional_confirmation.csv",
+  "oof_archive": "D:\\gci\\codex\\v_1_conditional_confirmation_oof.npz",
+  "warning": "This is a compact-model feature confirmation, not a matched comparison against the v15 ensemble or its public score.",
+  "runtime_seconds": 315.1
+}

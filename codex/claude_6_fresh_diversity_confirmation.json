@@ -1,0 +1,17 @@
+{
+  "seed": 20261053,
+  "folds": 3,
+  "fixed_blend_weights": {
+    "baseline": 0.3333333333333333,
+    "household": 0.3333333333333333,
+    "bureau_profile": 0.3333333333333333
+  },
+  "positive_fold_deltas": 3,
+  "mean_fold_delta": 0.0010409700705212115,
+  "min_fold_delta": 0.0006496417086797601,
+  "max_fold_delta": 0.0013032989865889855,
+  "mean_household_bureau_spearman": 0.9852811621238815,
+  "runtime_seconds": 225.12,
+  "validation_scope": "Fresh third split for a pre-fixed OLD/NEW-inspired equal-rank blend. This is still a compact-model result, not a matched v15 comparison.",
+  "submission_created": false
+}

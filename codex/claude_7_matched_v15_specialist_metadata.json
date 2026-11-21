@@ -1,0 +1,12 @@
+{
+  "v15_cache_dir": "D:\\gci\\codex\\v15_cache\\gci_cache_final",
+  "outer_folds": 5,
+  "fold_seed": 42,
+  "specialist_model": "compact formula/product-aware LightGBM screen",
+  "locked_rank_blend_weight": 0.01,
+  "all_predictions_are_fold_aligned": true,
+  "v15_rebuilt_from_all_member_oof_caches": true,
+  "submission_created": false,
+  "runtime_seconds": 724.41,
+  "interpretation": "Matched v15 OOF comparison using the notebook's cached member predictions. Candidate branches are compact specialist models, not retrained full v15 members. Treat this as a component screen; do not extrapolate to leaderboard."
+}

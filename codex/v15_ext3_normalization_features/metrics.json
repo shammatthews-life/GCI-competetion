@@ -1,0 +1,88 @@
+{
+  "hypothesis": "Dividing application financial, household, timing, region, bureau-enquiry, and other external-score values by EXT_SOURCE_3 exposes the winner-reported normalized risk relationships missing from v15.",
+  "features_added": [
+    "EXT3_DIV_AMT_INCOME_TOTAL",
+    "EXT3_DIV_AMT_CREDIT",
+    "EXT3_DIV_AMT_ANNUITY",
+    "EXT3_DIV_AMT_GOODS_PRICE",
+    "EXT3_DIV_DAYS_BIRTH",
+    "EXT3_DIV_DAYS_EMPLOYED_CLEAN",
+    "EXT3_DIV_DAYS_REGISTRATION",
+    "EXT3_DIV_DAYS_ID_PUBLISH",
+    "EXT3_DIV_DAYS_LAST_PHONE_CHANGE",
+    "EXT3_DIV_OWN_CAR_AGE",
+    "EXT3_DIV_CNT_CHILDREN",
+    "EXT3_DIV_CNT_FAM_MEMBERS",
+    "EXT3_DIV_REGION_POPULATION_RELATIVE",
+    "EXT3_DIV_REGION_RATING_CLIENT",
+    "EXT3_DIV_AMT_REQ_CREDIT_BUREAU_HOUR",
+    "EXT3_DIV_AMT_REQ_CREDIT_BUREAU_MON",
+    "EXT3_DIV_AMT_REQ_CREDIT_BUREAU_QRT",
+    "EXT3_DIV_AMT_REQ_CREDIT_BUREAU_YEAR",
+    "EXT3_DIV_EXT_SOURCE_1",
+    "EXT3_DIV_EXT_SOURCE_2"
+  ],
+  "feature_count": 20,
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740654863745989,
+  "delta_auc": 2.404601622274516e-05,
+  "positive_folds": 4,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "v15_member_auc": 0.7700376821667552,
+      "candidate_member_auc": 0.7702100739073627,
+      "elapsed_seconds": 34.9,
+      "v15_auc": 0.7712905782353567,
+      "candidate_full_v15_auc": 0.7713226060771544,
+      "delta_auc": 3.202784179767715e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "v15_member_auc": 0.7752613260035431,
+      "candidate_member_auc": 0.7753166912440764,
+      "elapsed_seconds": 60.4,
+      "v15_auc": 0.7764461950056037,
+      "candidate_full_v15_auc": 0.7764774769122869,
+      "delta_auc": 3.128190668311159e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "v15_member_auc": 0.7769840697315796,
+      "candidate_member_auc": 0.7774781865824217,
+      "elapsed_seconds": 84.3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_full_v15_auc": 0.7789463416778254,
+      "delta_auc": 6.297150756817693e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "v15_member_auc": 0.768939739813248,
+      "candidate_member_auc": 0.7691180106166847,
+      "elapsed_seconds": 109.2,
+      "v15_auc": 0.7711682886499425,
+      "candidate_full_v15_auc": 0.7712017887793223,
+      "delta_auc": 3.35001293798598e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "v15_member_auc": 0.7721291774184323,
+      "candidate_member_auc": 0.7714450368451997,
+      "elapsed_seconds": 133.6,
+      "v15_auc": 0.7727321337700799,
+      "candidate_full_v15_auc": 0.7726938520130378,
+      "delta_auc": -3.8281757042124553e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9906970333466847,
+  "ext3_missing_fraction": 0.31883973318068715,
+  "ext3_min_nonmissing": 0.0005272652387098,
+  "elapsed_seconds": 135.0,
+  "submission_written": false,
+  "external_data_used": false
+}

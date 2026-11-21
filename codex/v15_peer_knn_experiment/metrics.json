@@ -1,0 +1,92 @@
+{
+  "hypothesis": "Local peer default rates in a mixed numeric and categorical borrower space add risk signal beyond v15.",
+  "features_numeric": [
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "DAYS_BIRTH",
+    "DAYS_EMPLOYED",
+    "AMT_INCOME_TOTAL",
+    "AMT_CREDIT",
+    "AMT_ANNUITY",
+    "AMT_GOODS_PRICE",
+    "CNT_FAM_MEMBERS",
+    "REGION_RATING_CLIENT",
+    "OWN_CAR_AGE",
+    "CREDIT_INCOME",
+    "ANNUITY_INCOME",
+    "ANNUITY_CREDIT",
+    "EMPLOYMENT_AGE",
+    "AGE_YEARS",
+    "EMPLOYMENT_YEARS"
+  ],
+  "features_categorical": [
+    "CODE_GENDER",
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "NAME_CONTRACT_TYPE",
+    "OCCUPATION_TYPE"
+  ],
+  "reference_rows_per_fold": 25000,
+  "neighbors": 100,
+  "kernel": "exp(-cosine_distance/0.15)",
+  "smoothing": "2 prior pseudo-observations at training-fold base rate",
+  "fixed_v15_blend_weight": 0.01,
+  "v15_oof_auc": 0.7740414403583762,
+  "peer_oof_auc": 0.641269729952503,
+  "candidate_oof_auc": 0.7740235051491211,
+  "delta_auc": -1.7935209255082185e-05,
+  "positive_folds": 1,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "peer_auc": 0.6393893972706141,
+      "elapsed_seconds": 34.3,
+      "v15_auc": 0.7712905782353567,
+      "candidate_auc": 0.771274118924589,
+      "delta_auc": -1.6459310767769075e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "peer_auc": 0.6443665795943843,
+      "elapsed_seconds": 67.9,
+      "v15_auc": 0.7764461950056037,
+      "candidate_auc": 0.776416745776282,
+      "delta_auc": -2.9449229321798498e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "peer_auc": 0.6424847226996186,
+      "elapsed_seconds": 101.3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_auc": 0.7788542148852435,
+      "delta_auc": -2.9155285013682253e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "peer_auc": 0.6336758495986836,
+      "elapsed_seconds": 134.9,
+      "v15_auc": 0.7711682886499425,
+      "candidate_auc": 0.7710887308714204,
+      "delta_auc": -7.955777852208801e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "peer_auc": 0.6478993643009932,
+      "elapsed_seconds": 168.3,
+      "v15_auc": 0.7727321337700799,
+      "candidate_auc": 0.7728029099054912,
+      "delta_auc": 7.077613541128791e-05
+    }
+  ],
+  "peer_vs_v15_spearman": 0.4741579321793886,
+  "elapsed_seconds": 168.9,
+  "submission_written": false
+}

@@ -1,0 +1,73 @@
+{
+  "hypothesis": "Exact REGION_POPULATION_RELATIVE values act as regional identifiers; a nested-cross-fitted regional default-rate prior adds context beyond existing numeric population and group-deviation features.",
+  "feature": "smoothed TARGET mean grouped by exact REGION_POPULATION_RELATIVE",
+  "smoothing_pseudo_count": 100.0,
+  "outer_folds": 5,
+  "inner_folds": 5,
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740576524782156,
+  "delta_auc": 1.6212119839376093e-05,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "v15_member_auc": 0.7700376821667552,
+      "candidate_member_auc": 0.7700150793492797,
+      "regional_te_auc": 0.5705148941360579,
+      "elapsed_seconds": 32.4,
+      "v15_auc": 0.7712905782353567,
+      "candidate_full_v15_auc": 0.7713039686662538,
+      "delta_auc": 1.3390430897097794e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "v15_member_auc": 0.7752613260035431,
+      "candidate_member_auc": 0.7742792579759382,
+      "regional_te_auc": 0.5638880405335378,
+      "elapsed_seconds": 55.2,
+      "v15_auc": 0.7764461950056037,
+      "candidate_full_v15_auc": 0.7763943744733207,
+      "delta_auc": -5.1820532283031184e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "v15_member_auc": 0.7769840697315796,
+      "candidate_member_auc": 0.7779512516278223,
+      "regional_te_auc": 0.5723195839009217,
+      "elapsed_seconds": 75.6,
+      "v15_auc": 0.7788833701702572,
+      "candidate_full_v15_auc": 0.778975652135852,
+      "delta_auc": 9.228196559474267e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "v15_member_auc": 0.768939739813248,
+      "candidate_member_auc": 0.7696234263617386,
+      "regional_te_auc": 0.5629196510460086,
+      "elapsed_seconds": 98.1,
+      "v15_auc": 0.7711682886499425,
+      "candidate_full_v15_auc": 0.7712220647196982,
+      "delta_auc": 5.37760697557621e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "v15_member_auc": 0.7721291774184323,
+      "candidate_member_auc": 0.7717300839230827,
+      "regional_te_auc": 0.5671535179722074,
+      "elapsed_seconds": 120.5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_full_v15_auc": 0.7727144382994399,
+      "delta_auc": -1.76954706400112e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.991226556469948,
+  "distinct_region_values": 81,
+  "elapsed_seconds": 121.8,
+  "submission_written": false,
+  "external_data_used": false
+}

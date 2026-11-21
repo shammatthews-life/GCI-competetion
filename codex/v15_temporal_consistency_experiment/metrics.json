@@ -1,0 +1,51 @@
+{
+  "hypothesis": "Explicit elapsed time and ordering between application identity, registration, employment, and phone-change dates capture timeline consistency beyond age-normalized ratios.",
+  "feature_groups": [
+    "registration-ID gap",
+    "registration-phone gap",
+    "employment-registration gap",
+    "employment-ID gap",
+    "event ordering"
+  ],
+  "features_added_to_one_member": 7,
+  "feature_formula": "four pairwise day gaps in years, with three signed event-order indicators; label-free covariate transform",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740193208646179,
+  "delta_auc": -2.2119493758299136e-05,
+  "positive_folds": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "candidate_auc": 0.7712666363747918,
+      "delta_auc": -2.3941860564979933e-05
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "candidate_auc": 0.7764672449424425,
+      "delta_auc": 2.1049936838712924e-05
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_auc": 0.7788494964762162,
+      "delta_auc": -3.387369404106444e-05
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "candidate_auc": 0.7711738116597784,
+      "delta_auc": 5.5230098359171365e-06
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_auc": 0.7726552369213747,
+      "delta_auc": -7.689684870515467e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9910551454697263,
+  "elapsed_seconds": 207.5,
+  "note": "Same 5 seed-42 folds and exact fixed v15 formula; transforms use covariates only; no submission created."
+}

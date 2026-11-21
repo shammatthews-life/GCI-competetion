@@ -1,0 +1,21 @@
+{
+  "hypothesis": "The complementary OLD/NEW member gain can be partly reproduced by equal rank blending a compact reference, household features, and bureau inquiry profile features.",
+  "blend_weights": {
+    "baseline": 0.3333333333333333,
+    "household": 0.3333333333333333,
+    "bureau_profile": 0.3333333333333333
+  },
+  "folds": 6,
+  "positive_fold_deltas": 6,
+  "mean_fold_delta": 0.0014292031756184171,
+  "median_fold_delta": 0.0014051328286385778,
+  "min_fold_delta": 0.000938416411366938,
+  "max_fold_delta": 0.001984771636193816,
+  "mean_household_bureau_spearman": 0.9849502869055692,
+  "mean_of_fold_specific_paired_bootstrap_bounds": [
+    0.0007329982740150361,
+    0.0021497780297451007
+  ],
+  "validation_scope": "Exploratory fold-local rank blend on the same two seed partitions used to screen the feature blocks. It is not a fresh v15 comparison and not an unbiased confirmation after screening.",
+  "submission_created": false
+}

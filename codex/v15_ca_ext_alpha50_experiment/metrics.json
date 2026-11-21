@@ -1,0 +1,53 @@
+{
+  "source_screen": "pre info/GCI_CA_EXT_promising_research.zip compact 3-fold screen reported +0.004862; not previously matched to v15",
+  "hypothesis": "Rounded exact credit-annuity pairs plus conditional EXT_SOURCE_1/3 decile TE expose applicant risk within repeated financing bundles.",
+  "encoding": "Nested five-fold target encoding inside each outer train split; alpha=50; validation and test use outer-train statistics; EXT decile boundaries fitted from outer-train covariates only.",
+  "features_added": [
+    "TE_CA",
+    "LOGN_CA",
+    "TE_CAxEXT_SOURCE_1",
+    "LOGN_CAxEXT_SOURCE_1",
+    "TE_CAxEXT_SOURCE_3",
+    "LOGN_CAxEXT_SOURCE_3"
+  ],
+  "alpha": 50.0,
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740470512027665,
+  "delta_auc": 5.610844390324665e-06,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "candidate_auc": 0.7712885208215109,
+      "delta_auc": -2.0574138458462343e-06
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "candidate_auc": 0.776472036330904,
+      "delta_auc": 2.5841325300257623e-05
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "candidate_auc": 0.7788777552060432,
+      "delta_auc": -5.614964214029072e-06
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "candidate_auc": 0.771180748468178,
+      "delta_auc": 1.2459818235499576e-05
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_auc": 0.7727343176865604,
+      "delta_auc": 2.1839164805470546e-06
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9901978448004832,
+  "elapsed_seconds": 11.2,
+  "submission_written": false
+}

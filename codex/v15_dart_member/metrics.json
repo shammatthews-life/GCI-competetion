@@ -1,0 +1,48 @@
+{
+  "hypothesis": "DART dropout creates a useful ranking different from the incumbent E1Aet v1 all-family ExtraTrees member.",
+  "candidate_member": "E1Aet/v1_allfam_oh",
+  "boosting_type": "dart",
+  "drop_rate": 0.1,
+  "skip_drop": 0.5,
+  "rounds": 1500,
+  "full_rounds": 1650,
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740409914264619,
+  "delta_auc": -4.489319143097248e-07,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "v15_auc": 0.7712905782353567,
+      "dart_auc": 0.7713672829912287,
+      "delta_auc": 7.670475587195913e-05
+    },
+    {
+      "fold": 2,
+      "v15_auc": 0.7764461950056037,
+      "dart_auc": 0.7763778056911586,
+      "delta_auc": -6.838931444519414e-05
+    },
+    {
+      "fold": 3,
+      "v15_auc": 0.7788833701702572,
+      "dart_auc": 0.7788999794298056,
+      "delta_auc": 1.6609259548383548e-05
+    },
+    {
+      "fold": 4,
+      "v15_auc": 0.7711682886499425,
+      "dart_auc": 0.7712427889376677,
+      "delta_auc": 7.45002877252654e-05
+    },
+    {
+      "fold": 5,
+      "v15_auc": 0.7727321337700799,
+      "dart_auc": 0.7726553173814557,
+      "delta_auc": -7.681638862422346e-05
+    }
+  ],
+  "member_rank_spearman": 0.9859609501813024,
+  "elapsed_seconds": 1316.2,
+  "submission_written": false
+}

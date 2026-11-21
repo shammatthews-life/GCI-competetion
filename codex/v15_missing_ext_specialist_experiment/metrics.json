@@ -1,0 +1,71 @@
+{
+  "hypothesis": "A model trained only on applicants with at least two missing external scores can learn the thin-file risk regime more directly than the global v15 blend.",
+  "segment": "count_missing(EXT_SOURCE_1, EXT_SOURCE_2, EXT_SOURCE_3) >= 2",
+  "segment_rows": 38728,
+  "segment_fraction": 0.22621231060384808,
+  "segment_target_rate": 0.09060627969427804,
+  "features": "v15 label-free Xa one-hot features plus nested fold-safe Q/P target encodings",
+  "model": "v15 v1_allfam_oh LightGBM ExtraTrees member fixed parameters, 881 rounds",
+  "outer_folds": "StratifiedKFold(5, shuffle=True, random_state=42)",
+  "rank_correction": "10% within-segment ordering replacement; correction magnitude scaled by full segment share",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740346344310253,
+  "delta_auc": -6.805927350916896e-06,
+  "positive_folds": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_segment_rows": 31079,
+      "valid_segment_rows": 7649,
+      "specialist_auc": 0.7261907064182554,
+      "elapsed_seconds": 11.3,
+      "v15_full_auc": 0.7712905782353567,
+      "candidate_full_auc": 0.7712544470597993,
+      "delta_auc": -3.6131175557452266e-05
+    },
+    {
+      "fold": 2,
+      "fit_segment_rows": 30938,
+      "valid_segment_rows": 7790,
+      "specialist_auc": 0.7541539879904987,
+      "elapsed_seconds": 14.3,
+      "v15_full_auc": 0.7764461950056037,
+      "candidate_full_auc": 0.7764365662681196,
+      "delta_auc": -9.628737484113081e-06
+    },
+    {
+      "fold": 3,
+      "fit_segment_rows": 31159,
+      "valid_segment_rows": 7569,
+      "specialist_auc": 0.7427480656804253,
+      "elapsed_seconds": 17.4,
+      "v15_full_auc": 0.7788833701702572,
+      "candidate_full_auc": 0.7788839391379718,
+      "delta_auc": 5.689677146092365e-07
+    },
+    {
+      "fold": 4,
+      "fit_segment_rows": 30853,
+      "valid_segment_rows": 7875,
+      "specialist_auc": 0.7505537962719904,
+      "elapsed_seconds": 20.4,
+      "v15_full_auc": 0.7711682886499425,
+      "candidate_full_auc": 0.7711796507627892,
+      "delta_auc": 1.1362112846691197e-05
+    },
+    {
+      "fold": 5,
+      "fit_segment_rows": 30883,
+      "valid_segment_rows": 7845,
+      "specialist_auc": 0.743507992202729,
+      "elapsed_seconds": 23.4,
+      "v15_full_auc": 0.7727321337700799,
+      "candidate_full_auc": 0.7727284211120631,
+      "delta_auc": -3.712658016796766e-06
+    }
+  ],
+  "segment_specialist_spearman_vs_v15": 0.9363137120134454,
+  "promotion_gate_delta_auc": 0.002,
+  "submission_written": false,
+  "elapsed_seconds": 23.9
+}

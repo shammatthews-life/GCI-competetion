@@ -1,0 +1,85 @@
+{
+  "hypothesis": "The winner's nearest-peer target rate, exact-region risk prior, and EXT_SOURCE_3-normalized application values add complementary signal when used together in the same matched v15 member.",
+  "features": {
+    "neighbor_inputs": [
+      "EXT_SOURCE_1",
+      "EXT_SOURCE_2",
+      "EXT_SOURCE_3",
+      "AMT_CREDIT / AMT_ANNUITY"
+    ],
+    "neighbors": 500,
+    "region_key": "REGION_POPULATION_RELATIVE",
+    "region_smoothing": 100.0,
+    "ext3_quotient_count": 20
+  },
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740382325525068,
+  "delta_auc": -3.207805869376301e-06,
+  "positive_folds": 2,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "v15_member_auc": 0.7700376821667552,
+      "candidate_member_auc": 0.7694573995107356,
+      "neighbor_feature_auc": 0.7297500306543169,
+      "region_feature_auc": 0.5705148941360579,
+      "elapsed_seconds": 64.2,
+      "v15_auc": 0.7712905782353567,
+      "candidate_full_v15_auc": 0.7712804808160066,
+      "delta_auc": -1.0097419350096892e-05
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "v15_member_auc": 0.7752613260035431,
+      "candidate_member_auc": 0.7743241212283327,
+      "neighbor_feature_auc": 0.7284698097715371,
+      "region_feature_auc": 0.5638880405335378,
+      "elapsed_seconds": 118.9,
+      "v15_auc": 0.7764461950056037,
+      "candidate_full_v15_auc": 0.7764241109561474,
+      "delta_auc": -2.208404945636122e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "v15_member_auc": 0.7769840697315796,
+      "candidate_member_auc": 0.7768520577274873,
+      "neighbor_feature_auc": 0.7293377592814612,
+      "region_feature_auc": 0.5723195839009217,
+      "elapsed_seconds": 179.5,
+      "v15_auc": 0.7788833701702572,
+      "candidate_full_v15_auc": 0.7789117036130163,
+      "delta_auc": 2.833344275909866e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "v15_member_auc": 0.768939739813248,
+      "candidate_member_auc": 0.769214413287849,
+      "neighbor_feature_auc": 0.7304217634679601,
+      "region_feature_auc": 0.5629196510460086,
+      "elapsed_seconds": 235.3,
+      "v15_auc": 0.7711682886499425,
+      "candidate_full_v15_auc": 0.7712096106486113,
+      "delta_auc": 4.132199866879738e-05
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "v15_member_auc": 0.7721291774184323,
+      "candidate_member_auc": 0.7711955531230557,
+      "neighbor_feature_auc": 0.7268446174688674,
+      "region_feature_auc": 0.5671535179722074,
+      "elapsed_seconds": 293.5,
+      "v15_auc": 0.7727321337700799,
+      "candidate_full_v15_auc": 0.772686369225518,
+      "delta_auc": -4.5764544561843756e-05
+    }
+  ],
+  "candidate_member_spearman_to_v15_member": 0.9903714721938173,
+  "elapsed_seconds": 294.8,
+  "submission_written": false,
+  "external_data_used": false
+}

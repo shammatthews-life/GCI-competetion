@@ -1,0 +1,77 @@
+{
+  "hypothesis": "Native CatBoost category statistics over exact rounded credit-annuity fingerprints, conditional on EXT_SOURCE_1/3 deciles, add signal beyond Q/P tariff categories.",
+  "added_native_categories": [
+    "PROD_CA",
+    "PROD_CA_X_EXT_SOURCE_1_DECILE",
+    "PROD_CA_X_EXT_SOURCE_3_DECILE"
+  ],
+  "catboost_settings": {
+    "iterations": 900,
+    "depth": 7,
+    "learning_rate": 0.05,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "l2_leaf_reg": 8,
+    "random_seed": 42,
+    "thread_count": 10,
+    "verbose": false,
+    "allow_writing_files": false,
+    "random_strength": 0.5,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8
+  },
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7741287312958236,
+  "delta_auc": 8.729093744741512e-05,
+  "positive_folds": 5,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.768626031907983,
+      "elapsed_seconds": 9.5,
+      "v15_full_auc": 0.7712905782353567,
+      "candidate_full_auc": 0.7714839119202512,
+      "delta_auc": 0.0001933336848944922
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "candidate_catboost_auc": 0.7725262360116161,
+      "elapsed_seconds": 9.6,
+      "v15_full_auc": 0.7764461950056037,
+      "candidate_full_auc": 0.7765052715614204,
+      "delta_auc": 5.90765558166062e-05
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.775134775233155,
+      "elapsed_seconds": 9.6,
+      "v15_full_auc": 0.7788833701702572,
+      "candidate_full_auc": 0.7789264048192186,
+      "delta_auc": 4.303464896138198e-05
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7672812161665361,
+      "elapsed_seconds": 9.6,
+      "v15_full_auc": 0.7711682886499425,
+      "candidate_full_auc": 0.7711692196880208,
+      "delta_auc": 9.310380783000838e-07
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "candidate_catboost_auc": 0.7693846840603891,
+      "elapsed_seconds": 9.6,
+      "v15_full_auc": 0.7727321337700799,
+      "candidate_full_auc": 0.7728871228744055,
+      "delta_auc": 0.0001549891043256535
+    }
+  ],
+  "rank_correlation_candidate_vs_original_catboost": 0.9867109506754793,
+  "elapsed_seconds": 11.0,
+  "submission_written": false
+}

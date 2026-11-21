@@ -1,0 +1,40 @@
+{
+  "candidate": "5-knot quantile spline + additive logistic scorecard",
+  "rows": 171202,
+  "features_raw": 61,
+  "spline_knots": 5,
+  "logistic_C": 0.03,
+  "standalone_oof_auc": 0.7619830365055973,
+  "v15_oof_auc": 0.7740414403583762,
+  "fixed_1pct_blend_oof_auc": 0.7740397264636744,
+  "fixed_1pct_blend_delta": -1.7138947018269235e-06,
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 34241,
+      "scorecard_auc": 0.7589481410794651
+    },
+    {
+      "fold": 2,
+      "rows": 34241,
+      "scorecard_auc": 0.7632687219769843
+    },
+    {
+      "fold": 3,
+      "rows": 34240,
+      "scorecard_auc": 0.7666264320285191
+    },
+    {
+      "fold": 4,
+      "rows": 34240,
+      "scorecard_auc": 0.758259825003462
+    },
+    {
+      "fold": 5,
+      "rows": 34240,
+      "scorecard_auc": 0.7629210039247967
+    }
+  ],
+  "elapsed_seconds": 360.2,
+  "note": "Reused v15 seed-42 folds; development comparison only; no submission created."
+}

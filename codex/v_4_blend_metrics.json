@@ -1,0 +1,29 @@
+{
+  "version": "v_4",
+  "experiment": "fixed 10% LightGBM rank blend into standalone v17 CatBoost-E1",
+  "weight_lgb": 0.1,
+  "reference_catboost_oof_auc": 0.7700506855072868,
+  "candidate_oof_auc": 0.7706680130927819,
+  "delta_auc": 0.0006173275854950422,
+  "fold_gains": [
+    0.0006377408225893832,
+    0.0007390687976740473,
+    0.0007095774530808674,
+    0.0005436457777584502,
+    0.0004948065086779474
+  ],
+  "positive_folds": 5,
+  "paired_bootstrap_95pct_ci": [
+    0.00048795816548173057,
+    0.0007615354580532751
+  ],
+  "acceptance_rule": {
+    "minimum_gain": 0.00015,
+    "minimum_positive_folds": 4,
+    "bootstrap_lower_bound_above_zero": true
+  },
+  "passed": true,
+  "important_limit": "This compares two standalone branches, not the established v15 full ensemble. A pass would only justify a diagnostic probe, not claim an improvement over public 0.77891.",
+  "submission": "D:\\gci\\codex\\v_4_v17_lgb_rank_blend.csv",
+  "submission_sha256": "c272bce6a9498b3972546d5945bd02f6be18987d650ce51f1554036a59771433"
+}

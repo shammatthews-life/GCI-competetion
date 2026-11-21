@@ -1,0 +1,71 @@
+{
+  "hypothesis": "A model trained only on large-credit applications can learn loan-size and affordability regimes that the global v15 blend under-ranks.",
+  "segment": "AMT_CREDIT >= 900000",
+  "segment_rows": 36198,
+  "segment_fraction": 0.21143444585927734,
+  "segment_target_rate": 0.059395546715288135,
+  "features": "v15 label-free Xa one-hot features plus nested fold-safe Q/P target encodings",
+  "model": "v15 v1_allfam_oh LightGBM ExtraTrees member fixed parameters, 881 rounds",
+  "outer_folds": "StratifiedKFold(5, shuffle=True, random_state=20261023); discovery seed 42",
+  "rank_correction": "10% within-segment ordering replacement; correction magnitude scaled by full segment share",
+  "v15_oof_auc": 0.7740414403583762,
+  "candidate_oof_auc": 0.7740399250694983,
+  "delta_auc": -1.5152888779290663e-06,
+  "positive_folds": 3,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_segment_rows": 29015,
+      "valid_segment_rows": 7183,
+      "specialist_auc": 0.7295335593350556,
+      "elapsed_seconds": 11.1,
+      "v15_full_auc": 0.7693462416933928,
+      "candidate_full_auc": 0.7693319030130976,
+      "delta_auc": -1.4338680295211681e-05
+    },
+    {
+      "fold": 2,
+      "fit_segment_rows": 28898,
+      "valid_segment_rows": 7300,
+      "specialist_auc": 0.7424086343932944,
+      "elapsed_seconds": 14.3,
+      "v15_full_auc": 0.7841746299083293,
+      "candidate_full_auc": 0.7841771519941023,
+      "delta_auc": 2.522085773004612e-06
+    },
+    {
+      "fold": 3,
+      "fit_segment_rows": 28997,
+      "valid_segment_rows": 7201,
+      "specialist_auc": 0.7257162823200559,
+      "elapsed_seconds": 17.5,
+      "v15_full_auc": 0.7662690513379453,
+      "candidate_full_auc": 0.7662988215678627,
+      "delta_auc": 2.9770229917347457e-05
+    },
+    {
+      "fold": 4,
+      "fit_segment_rows": 28908,
+      "valid_segment_rows": 7290,
+      "specialist_auc": 0.7237905575291101,
+      "elapsed_seconds": 20.6,
+      "v15_full_auc": 0.7779413205549852,
+      "candidate_full_auc": 0.777909935376302,
+      "delta_auc": -3.138517868317425e-05
+    },
+    {
+      "fold": 5,
+      "fit_segment_rows": 28974,
+      "valid_segment_rows": 7224,
+      "specialist_auc": 0.7124550237356457,
+      "elapsed_seconds": 23.8,
+      "v15_full_auc": 0.7724672764253434,
+      "candidate_full_auc": 0.7724778511788275,
+      "delta_auc": 1.0574753484093868e-05
+    }
+  ],
+  "segment_specialist_spearman_vs_v15": 0.9003345138224949,
+  "promotion_gate_delta_auc": 0.002,
+  "submission_written": false,
+  "elapsed_seconds": 24.3
+}
